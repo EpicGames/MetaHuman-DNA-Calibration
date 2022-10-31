@@ -1,0 +1,2 @@
+class DNAViewerError(Exception):
+    pass

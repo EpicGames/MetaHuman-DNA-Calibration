@@ -1,0 +1,64 @@
+#include "winres.h"
+
+#define VER_APPLICATION_TYPE 0
+#define VER_SHARED_LIBRARY_TYPE 1
+#define VER_STATIC_LIBRARY_TYPE 2
+
+#define VER_TARGET_TYPE @VI_TARGET_TYPE@
+#if VER_TARGET_TYPE == VER_APPLICATION_TYPE
+    #define VER_FILETYPE VFT_APP
+    #define VER_FILEEXT ".exe\0"
+#elif VER_TARGET_TYPE == VER_SHARED_LIBRARY_TYPE
+    #define VER_FILETYPE VFT_DLL
+    #define VER_FILEEXT ".dll\0"
+#elif VER_TARGET_TYPE == VER_STATIC_LIBRARY_TYPE
+    #define VER_FILETYPE VFT_STATIC_LIB
+    #define VER_FILEEXT ".lib\0"
+#else
+    #define VER_FILETYPE VFT_UNKNOWN
+    #define VER_FILEEXT "\0"
+#endif
+
+#define VER_NAME_STR    "@VI_NAME@\0"
+#define VER_FILENAME_STR    "@VI_FILENAME@" VER_FILEEXT
+#define VER_VERSION          @VI_MAJOR_VERSION@, @VI_MINOR_VERSION@, @VI_PATCH_VERSION@, 0
+#define VER_VERSION_STR      "@VI_MAJOR_VERSION@.@VI_MINOR_VERSION@.@VI_PATCH_VERSION@\0"
+#define VER_DESCRIPTION_STR    "@VI_NAME@ v@VI_MAJOR_VERSION@.@VI_MINOR_VERSION@.@VI_PATCH_VERSION@\0"
+#define VER_COMPANY_NAME_STR    "@VI_COMPANY_NAME@\0"
+#define VER_COPYRIGHT_STR    "@VI_COPYRIGHT@\0"
+
+#ifndef DEBUG
+    #define VER_DEBUG                   0
+#else
+    #define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+    FILEVERSION VER_VERSION
+    PRODUCTVERSION VER_VERSION
+    FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+    FILEFLAGS VER_DEBUG
+    FILEOS VOS__WINDOWS32
+    FILETYPE VFT_DLL
+    FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", VER_COMPANY_NAME_STR
+            VALUE "FileDescription", VER_DESCRIPTION_STR
+            VALUE "FileVersion", VER_VERSION_STR
+            VALUE "InternalName", VER_FILENAME_STR
+            VALUE "LegalCopyright", VER_COPYRIGHT_STR
+            VALUE "OriginalFilename", VER_FILENAME_STR
+            VALUE "ProductName", VER_NAME_STR
+            VALUE "ProductVersion", VER_VERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END

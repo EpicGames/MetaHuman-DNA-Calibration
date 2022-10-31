@@ -1,0 +1,22 @@
+GEOMETRY_HOLDER_PREFIX = "geometry_"
+RIG_HOLDER_PREFIX = "rig_"
+LOD_HOLDER_PREFIX = "lod_"
+LOD_HOLDER_PREFIX_UPPER = "LOD_"
+
+ANALOG_GUI_HOLDER = "analog_gui"
+
+GUI_HOLDER = "gui"
+FRM_MULTIPLIERS_NAME = "FRM_WMmultipliers"
+
+BLEND_SHAPE_GROUP_PREFIX = "BlendshapeGroup_"
+BLEND_SHAPE_NAME_POSTFIX = "_blendShapes"
+
+SKIN_CLUSTER_AFFIX = "skinCluster"
+
+RIG_LOGIC_PREFIX = "rl4Embedded_"
+
+FACIAL_ROOT_JOINT = "FACIAL_C_FacialRoot"
+
+MESH_NAME = "<mesh_name>"
+DERIVED_MESH_NAME = "<derived_mesh_name}>"
+BLEND_SHAPE_NAMING = f"{MESH_NAME}__{DERIVED_MESH_NAME}"

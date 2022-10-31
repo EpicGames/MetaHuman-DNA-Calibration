@@ -1,0 +1,27 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#if defined(_WIN32) || defined(__CYGWIN__)
+    #if defined(__GNUC__)
+        #define DLL_EXPORT __attribute__((dllexport))
+        #define DLL_IMPORT __attribute__((dllimport))
+    #else
+        #define DLL_EXPORT __declspec(dllexport)
+        #define DLL_IMPORT __declspec(dllimport)
+    #endif
+#elif defined(__GNUC__)
+    #define DLL_EXPORT __attribute__((visibility("default")))
+    #define DLL_IMPORT DLL_EXPORT
+#endif
+
+#if defined(@DEF_BUILD_SHARED_NAME@)
+    // Build shared library
+    #define @DEF_EXPORT_ATTR_NAME@ DLL_EXPORT
+#elif defined(@DEF_USE_SHARED_NAME@)
+    // Use shared library
+    #define @DEF_EXPORT_ATTR_NAME@ DLL_IMPORT
+#else
+    // Build or use static library
+    #define @DEF_EXPORT_ATTR_NAME@
+#endif
