@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.util.character_creator &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.util.character_creator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.util.character_creator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">maya.api.OpenMaya</span> <span class="kn">import</span> <span class="n">MObject</span>
+
+<span class="kn">from</span> <span class="nn">..builder.analog_gui</span> <span class="kn">import</span> <span class="n">AnalogGui</span>
+<span class="kn">from</span> <span class="nn">..builder.gui</span> <span class="kn">import</span> <span class="n">Gui</span>
+<span class="kn">from</span> <span class="nn">..builder.joint</span> <span class="kn">import</span> <span class="n">Joint</span> <span class="k">as</span> <span class="n">JointBuilder</span>
+<span class="kn">from</span> <span class="nn">..builder.mesh</span> <span class="kn">import</span> <span class="n">Mesh</span>
+<span class="kn">from</span> <span class="nn">..config.character</span> <span class="kn">import</span> <span class="n">Character</span>
+<span class="kn">from</span> <span class="nn">..const.naming</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">ANALOG_GUI_HOLDER</span><span class="p">,</span>
+    <span class="n">FACIAL_ROOT_JOINT</span><span class="p">,</span>
+    <span class="n">FRM_MULTIPLIERS_NAME</span><span class="p">,</span>
+    <span class="n">GEOMETRY_HOLDER_PREFIX</span><span class="p">,</span>
+    <span class="n">GUI_HOLDER</span><span class="p">,</span>
+    <span class="n">LOD_HOLDER_PREFIX</span><span class="p">,</span>
+    <span class="n">LOD_HOLDER_PREFIX_UPPER</span><span class="p">,</span>
+    <span class="n">RIG_HOLDER_PREFIX</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">..model.joint</span> <span class="kn">import</span> <span class="n">Joint</span> <span class="k">as</span> <span class="n">JointModel</span>
+<span class="kn">from</span> <span class="nn">..util.additional_assembly_script</span> <span class="kn">import</span> <span class="n">AdditionalAssemblyScript</span>
+<span class="kn">from</span> <span class="nn">..util.maya_util</span> <span class="kn">import</span> <span class="n">Maya</span>
+<span class="kn">from</span> <span class="nn">..util.rig_logic</span> <span class="kn">import</span> <span class="n">RigLogic</span>
+<span class="kn">from</span> <span class="nn">..util.shader</span> <span class="kn">import</span> <span class="n">Shader</span> <span class="k">as</span> <span class="n">ShaderUtil</span>
+
+
+<div class="viewcode-block" id="CharacterCreator"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator">[docs]</a><span class="k">class</span> <span class="nc">CharacterCreator</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used for creating the character in the maya scene</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type config: Character</span>
+<span class="sd">    @param config: The character configuration containing build options</span>
+
+<span class="sd">    @type dna: DNA</span>
+<span class="sd">    @param dna: The DNA object read from the DNA file</span>
+
+<span class="sd">    @type character_name: str</span>
+<span class="sd">    @param character_name: The name of the character</span>
+
+<span class="sd">    @type meshes: Dict[int, List[MObject]]</span>
+<span class="sd">    @param meshes: A mapping of lod number to a list of meshes created for that lod</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Character</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">character_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_character_name</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meshes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MObject</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="CharacterCreator.add_mesh_to_display_layer"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_mesh_to_display_layer">[docs]</a>    <span class="k">def</span> <span class="nf">add_mesh_to_display_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Add the mesh with the given name to an already created display layer.</span>
+
+<span class="sd">        @type mesh_name: str</span>
+<span class="sd">        @param mesh_name: The name of the mesh that should be added to a display layer.</span>
+
+<span class="sd">        @type lod: int</span>
+<span class="sd">        @param lod: The lod value, this is needed for determining the name of the display layer that the mesh should be added to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">cmds</span><span class="o">.</span><span class="n">editDisplayLayerMembers</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">LOD_HOLDER_PREFIX_UPPER</span><span class="si">}{</span><span class="n">lod</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_joints"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_joints">[docs]</a>    <span class="k">def</span> <span class="nf">add_joints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">JointModel</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Reads and adds the joints to the scene, also returns a list model objects of joints that were added.</span>
+
+<span class="sd">        @rtype: List[JointModel]</span>
+<span class="sd">        @returns: The list containing model objects representing the joints that were added to the scene.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">joints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">JointModel</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">read_all_neutral_joints</span><span class="p">()</span>
+        <span class="n">builder</span> <span class="o">=</span> <span class="n">JointBuilder</span><span class="p">(</span>
+            <span class="n">joints</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">modifiers</span><span class="o">.</span><span class="n">linear_modifier</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">modifiers</span><span class="o">.</span><span class="n">angle_modifier</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">builder</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">joints</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_joints_to_character"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_joints_to_character">[docs]</a>    <span class="k">def</span> <span class="nf">add_joints_to_character</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Starts adding the joints the character, if the character configuration options have add_joints set to False,</span>
+<span class="sd">        this step will be skipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding joints to character...&quot;</span><span class="p">)</span>
+            <span class="n">joints</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_joints</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span><span class="n">joints</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_character_node"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_character_node">[docs]</a>    <span class="k">def</span> <span class="nf">create_character_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a Maya transform which will hold the character, if the character configuration options have</span>
+<span class="sd">        create_character_node set to False, this step will be skipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;building character node...&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">):</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_geometry_node"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_geometry_node">[docs]</a>    <span class="k">def</span> <span class="nf">create_geometry_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a Maya transform which will hold the geometry of the character. If the character configuration</span>
+<span class="sd">        options have create_character_node set to False, this step will be skipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding geometry node&quot;</span><span class="p">)</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GEOMETRY_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_rig_node"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_rig_node">[docs]</a>    <span class="k">def</span> <span class="nf">create_rig_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a Maya transform which will hold the rig of the character. If the character configuration options</span>
+<span class="sd">        have create_character_node set to False, this step will be skipped.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding rig node&quot;</span><span class="p">)</span>
+            <span class="n">char_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RIG_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="n">char_name</span><span class="p">):</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">char_name</span><span class="p">)</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span><span class="n">char_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_lod_node"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_lod_node">[docs]</a>    <span class="k">def</span> <span class="nf">create_lod_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">obj_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a Maya transform which will hold the meshes of the character for a given lod.</span>
+
+<span class="sd">        @type lod: str</span>
+<span class="sd">        @param lod: The lod number.</span>
+
+<span class="sd">        @type obj_name: str @param obj_name: The full path name of the object in the scene, if it is not found a new</span>
+<span class="sd">        lod holder will be created.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="n">obj_name</span><span class="p">):</span>
+            <span class="n">parent_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GEOMETRY_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">LOD_HOLDER_PREFIX</span><span class="si">}{</span><span class="n">lod</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">createNode</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">parent_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.attach_mesh_to_lod"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.attach_mesh_to_lod">[docs]</a>    <span class="k">def</span> <span class="nf">attach_mesh_to_lod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Attaches the mesh called mesh_name to a given lod.</span>
+
+<span class="sd">        @type mesh_name: str</span>
+<span class="sd">        @param mesh_name: The mesh that needs to be attached to a lod holder object.</span>
+
+<span class="sd">        @type lod: str</span>
+<span class="sd">        @param lod: The name of the mesh that should be added to a display layer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">parent_node</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GEOMETRY_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">LOD_HOLDER_PREFIX</span><span class="si">}{</span><span class="n">lod</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_node_fullpath_on_root</span><span class="p">(</span><span class="n">mesh_name</span><span class="o">=</span><span class="n">mesh_name</span><span class="p">),</span> <span class="n">parent_node</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.get_mesh_node_fullpath_on_root"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.get_mesh_node_fullpath_on_root">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_node_fullpath_on_root</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the full path in the scene of a mesh.</span>
+
+<span class="sd">        @type mesh_name: str</span>
+<span class="sd">        @param mesh_name: The mesh thats path is needed.</span>
+
+<span class="sd">        @rtype: str</span>
+<span class="sd">        @returns: The full path of the mesh object in the scene</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">Maya</span><span class="o">.</span><span class="n">get_element</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;|</span><span class="si">{</span><span class="n">mesh_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fullPathName</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_ctrl_attributes"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_ctrl_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">create_ctrl_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and sets the raw gui control attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">gui_control_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_raw_control_names</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">gui_control_names</span><span class="p">:</span>
+            <span class="n">ctrl_and_attr_names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span>
+                <span class="n">ctrl_and_attr_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">longName</span><span class="o">=</span><span class="n">ctrl_and_attr_names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">keyable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">attributeType</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="n">minValue</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">maxValue</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_frm_attributes"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_frm_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">create_frm_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and sets the animated map attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">frm_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_animated_map_names</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">frm_names</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span>
+                <span class="n">FRM_MULTIPLIERS_NAME</span><span class="p">,</span>
+                <span class="n">longName</span><span class="o">=</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">),</span>
+                <span class="n">keyable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">attributeType</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="n">minValue</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">maxValue</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_ctrl_attributes_on_joint"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_ctrl_attributes_on_joint">[docs]</a>    <span class="k">def</span> <span class="nf">create_ctrl_attributes_on_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates control attributes on the root joint from the raw control names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_ctrl_attributes_on_root_joint</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span>
+        <span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding ctrl attributes on root joint...&quot;</span><span class="p">)</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_raw_control_names</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_attribute_on_joint</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_animated_map_attributes"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_animated_map_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">create_animated_map_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates animated map attributes on the root joint from the animated map names.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_animated_map_attributes_on_root_joint</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span>
+        <span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding animated map attributes on root joint...&quot;</span><span class="p">)</span>
+            <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_animated_map_names</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_attribute_on_joint</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_attribute_on_joint"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_attribute_on_joint">[docs]</a>    <span class="k">def</span> <span class="nf">create_attribute_on_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create attributes from a provided list of names on the facial root joint.</span>
+
+<span class="sd">        @type names: List[str]</span>
+<span class="sd">        @param names: List of names that are added as attributes to the facial root joint.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">addAttr</span><span class="p">(</span>
+                <span class="n">FACIAL_ROOT_JOINT</span><span class="p">,</span>
+                <span class="n">longName</span><span class="o">=</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">),</span>
+                <span class="n">keyable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">attributeType</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="n">minValue</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">maxValue</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_key_frames"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_key_frames">[docs]</a>    <span class="k">def</span> <span class="nf">add_key_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a starting key frame to the facial root joint if joints are added and the add_key_frames option is set</span>
+<span class="sd">        to True.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_key_frames</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;setting keyframe on the root joint...&quot;</span><span class="p">)</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">currentTime</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">FACIAL_ROOT_JOINT</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">setKeyframe</span><span class="p">(</span><span class="n">inTangentType</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">,</span> <span class="n">outTangentType</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_character_meshes"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_character_meshes">[docs]</a>    <span class="k">def</span> <span class="nf">create_character_meshes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Builds the meshes of the character. If specified in the character options they get parented to a created</span>
+<span class="sd">        character node transform, otherwise the meshes get put to the root level of the scene.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;building character meshes...&quot;</span><span class="p">)</span>
+        <span class="n">meshes</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">MObject</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">lod</span><span class="p">,</span> <span class="n">meshes_per_lod</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_meshes_by_lods</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">meshes</span><span class="p">)</span>
+        <span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span> <span class="ow">and</span> <span class="n">meshes_per_lod</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;building LOD for </span><span class="si">{</span><span class="n">lod</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">obj_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">GEOMETRY_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">|</span><span class="si">{</span><span class="n">LOD_HOLDER_PREFIX</span><span class="si">}{</span><span class="n">lod</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">create_lod_node</span><span class="p">(</span><span class="n">lod</span><span class="o">=</span><span class="n">lod</span><span class="p">,</span> <span class="n">obj_name</span><span class="o">=</span><span class="n">obj_name</span><span class="p">)</span>
+
+            <span class="n">meshes</span><span class="p">[</span><span class="n">lod</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_meshes</span><span class="p">(</span>
+                <span class="n">lod</span><span class="o">=</span><span class="n">lod</span><span class="p">,</span>
+                <span class="n">meshes_per_lod</span><span class="o">=</span><span class="n">meshes_per_lod</span><span class="p">,</span>
+            <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meshes</span> <span class="o">=</span> <span class="n">meshes</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.create_meshes"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.create_meshes">[docs]</a>    <span class="k">def</span> <span class="nf">create_meshes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">meshes_per_lod</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">MObject</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Builds the meshes from the provided mesh ids and then attaches them to a given lod if specified in the</span>
+<span class="sd">        character configuration.</span>
+
+<span class="sd">        @type lod: int</span>
+<span class="sd">        @param lod: The lod number representing the display layer the meshes to the display layer.</span>
+
+<span class="sd">        @type meshes_per_lod: List[int]</span>
+<span class="sd">        @param meshes_per_lod: List of mesh indices that are being built.</span>
+
+<span class="sd">        @rtype: List[MObject]</span>
+<span class="sd">        @returns: The list of maya objects that represent the meshes added to the scene.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">meshes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MObject</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">mesh_index</span> <span class="ow">in</span> <span class="n">meshes_per_lod</span><span class="p">:</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">Mesh</span><span class="p">(</span>
+                <span class="n">character_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span>
+                <span class="n">dna</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">,</span>
+                <span class="n">mesh_index</span><span class="o">=</span><span class="n">mesh_index</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+
+            <span class="n">mesh_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_name</span><span class="p">(</span><span class="n">mesh_index</span><span class="o">=</span><span class="n">mesh_index</span><span class="p">)</span>
+            <span class="n">meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_display_layers</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_mesh_to_display_layer</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">,</span> <span class="n">lod</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">attach_mesh_to_lod</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">,</span> <span class="n">lod</span><span class="p">)</span>
+            <span class="n">ShaderUtil</span><span class="o">.</span><span class="n">default_lambert_shader</span><span class="p">(</span>
+                <span class="n">mesh_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_character_node</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">meshes</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_gui"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_gui">[docs]</a>    <span class="k">def</span> <span class="nf">add_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a gui according to the specified gui options. If none is specified no gui will be added.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_options</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding gui...&quot;</span><span class="p">)</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_options</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">import_gui</span><span class="p">(</span>
+                <span class="n">gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_options</span><span class="o">.</span><span class="n">gui_path</span><span class="p">,</span> <span class="n">group_name</span><span class="o">=</span><span class="n">GUI_HOLDER</span>
+            <span class="p">)</span>
+            <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_ctrl_attributes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">create_frm_attributes</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_analog_gui"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_analog_gui">[docs]</a>    <span class="k">def</span> <span class="nf">add_analog_gui</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">add_to_character_node</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds an analog gui according to the specified analog gui options. If none is specified no analog gui will be</span>
+<span class="sd">        added.</span>
+
+<span class="sd">        @type add_to_character_node: bool @param add_to_character_node: A flag that specifies if the imported analog</span>
+<span class="sd">        gui should be parented to the character node transform (default value is None).</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_options</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding analog gui...&quot;</span><span class="p">)</span>
+            <span class="n">builder</span> <span class="o">=</span> <span class="n">AnalogGui</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_options</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">import_gui</span><span class="p">(</span>
+                <span class="n">gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_options</span><span class="o">.</span><span class="n">gui_path</span><span class="p">,</span>
+                <span class="n">group_name</span><span class="o">=</span><span class="n">ANALOG_GUI_HOLDER</span><span class="p">,</span>
+                <span class="n">add_to_character_node</span><span class="o">=</span><span class="n">add_to_character_node</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.import_gui"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.import_gui">[docs]</a>    <span class="k">def</span> <span class="nf">import_gui</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">gui_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">group_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">add_to_character_node</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Imports a gui using the provided parameters.</span>
+
+<span class="sd">        @type gui_path: str</span>
+<span class="sd">        @param gui_path: The path of the gui file that needs to be imported.</span>
+
+<span class="sd">        @type group_name: str</span>
+<span class="sd">        @param group_name: The name of the transform that holds the imported asset.</span>
+
+<span class="sd">        @type add_to_character_node: bool @param add_to_character_node: A flag representing if the gui holder should</span>
+<span class="sd">        be attached to the character node or be on the root of the scene (default value is False)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">gui_path</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupReference</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="n">group_name</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">add_to_character_node</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">parent</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RIG_HOLDER_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.add_rig_logic_node"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.add_rig_logic_node">[docs]</a>    <span class="k">def</span> <span class="nf">add_rig_logic_node</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a rig logic node specified in the character configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">RigLogic</span><span class="o">.</span><span class="n">add_rig_logic</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">character_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">character_name</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="CharacterCreator.run_additional_assembly_script"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.character_creator.CharacterCreator.run_additional_assembly_script">[docs]</a>    <span class="k">def</span> <span class="nf">run_additional_assembly_script</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Runs an additional assembly script if specified in the character configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">AdditionalAssemblyScript</span><span class="o">.</span><span class="n">run_additional_assembly_script</span><span class="p">(</span><span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.model.dna &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.model.dna</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.model.dna</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span> <span class="nn">..config.units</span> <span class="kn">import</span> <span class="n">AngleUnit</span><span class="p">,</span> <span class="n">LinearUnit</span>
+<span class="kn">from</span> <span class="nn">..model.behavior</span> <span class="kn">import</span> <span class="n">Behavior</span>
+<span class="kn">from</span> <span class="nn">..model.definition</span> <span class="kn">import</span> <span class="n">Definition</span>
+<span class="kn">from</span> <span class="nn">..model.descriptor</span> <span class="kn">import</span> <span class="n">Descriptor</span>
+<span class="kn">from</span> <span class="nn">..model.geometry</span> <span class="kn">import</span> <span class="n">UV</span><span class="p">,</span> <span class="n">BlendShape</span><span class="p">,</span> <span class="n">Geometry</span><span class="p">,</span> <span class="n">Layout</span><span class="p">,</span> <span class="n">Mesh</span><span class="p">,</span> <span class="n">Point3</span>
+<span class="kn">from</span> <span class="nn">..model.joint</span> <span class="kn">import</span> <span class="n">Joint</span>
+<span class="kn">from</span> <span class="nn">..util.conversion</span> <span class="kn">import</span> <span class="n">Conversion</span>
+<span class="kn">from</span> <span class="nn">..util.error</span> <span class="kn">import</span> <span class="n">DNAViewerError</span>
+
+
+<div class="viewcode-block" id="BaseDNA"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.BaseDNA">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">BaseDNA</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding data about the DNA</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type descriptor: Descriptor</span>
+<span class="sd">    @param descriptor: Data representing the descriptor part of the DNA</span>
+
+<span class="sd">    @type definition: Definition</span>
+<span class="sd">    @param definition: Data representing the definition part of the DNA</span>
+
+<span class="sd">    @type behavior: Behavior</span>
+<span class="sd">    @param behavior: Data representing the behavior part of the DNA</span>
+
+<span class="sd">    @type geometry: Geometry</span>
+<span class="sd">    @param geometry: Data representing the geometry part of the DNA</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">descriptor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Descriptor</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">definition</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Definition</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">behavior</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Behavior</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">geometry</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Geometry</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DNA"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA">[docs]</a><span class="k">class</span> <span class="nc">DNA</span><span class="p">(</span><span class="n">BaseDNA</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Used for getting data stored in the models</span>
+
+<span class="sd">    @type path: str</span>
+<span class="sd">    @param path: The path to the DNA file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+
+<div class="viewcode-block" id="DNA.read_all_neutral_joints"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.read_all_neutral_joints">[docs]</a>    <span class="k">def</span> <span class="nf">read_all_neutral_joints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Joint</span><span class="p">]:</span>
+        <span class="n">joints</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">joints</span><span class="o">.</span><span class="n">names</span><span class="p">):</span>
+            <span class="n">translation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">neutral_joint_translations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">orientation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">neutral_joint_rotations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">parent_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">joints</span><span class="o">.</span><span class="n">names</span><span class="p">[</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">joints</span><span class="o">.</span><span class="n">parent_index</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="p">]</span>
+
+            <span class="n">joint</span> <span class="o">=</span> <span class="n">Joint</span><span class="p">(</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                <span class="n">translation</span><span class="o">=</span><span class="n">translation</span><span class="p">,</span>
+                <span class="n">orientation</span><span class="o">=</span><span class="n">orientation</span><span class="p">,</span>
+                <span class="n">parent_name</span><span class="o">=</span><span class="n">parent_name</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">joints</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">joint</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">joints</span></div>
+
+<div class="viewcode-block" id="DNA.get_all_skin_weights_joint_indices_for_mesh"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_all_skin_weights_joint_indices_for_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_skin_weights_joint_indices_for_mesh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">skin_weights</span><span class="o">.</span><span class="n">joint_indices</span></div>
+
+<div class="viewcode-block" id="DNA.get_blend_shape_target_deltas_with_vertex_id"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_blend_shape_target_deltas_with_vertex_id">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shape_target_deltas_with_vertex_id</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">blend_shape_target_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Point3</span><span class="p">]]:</span>
+        <span class="n">blend_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">blend_shapes</span><span class="p">[</span>
+            <span class="n">blend_shape_target_index</span>
+        <span class="p">]</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">blend_shape</span><span class="o">.</span><span class="n">deltas</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+        <span class="n">deltas</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Point3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">:</span>
+            <span class="n">deltas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">blend_shape</span><span class="o">.</span><span class="n">deltas</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">deltas</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">deltas</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="DNA.get_all_skin_weights_values_for_mesh"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_all_skin_weights_values_for_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_skin_weights_values_for_mesh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]:</span>
+        <span class="n">skin_weight_values</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">mesh</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">positions</span><span class="p">)):</span>
+            <span class="n">skin_weight_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh</span><span class="o">.</span><span class="n">skin_weights</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">skin_weight_values</span></div>
+
+<div class="viewcode-block" id="DNA.get_skin_weight_matrix_for_mesh"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_skin_weight_matrix_for_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">get_skin_weight_matrix_for_mesh</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+        <span class="n">vertex_position_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">positions</span><span class="p">)</span>
+
+        <span class="n">joint_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_skin_weights_joint_indices_for_mesh</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">joint_indices</span><span class="p">)</span> <span class="o">!=</span> <span class="n">vertex_position_count</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                <span class="s2">&quot;Number of joint indices and vertex count don&#39;t match!&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">skin_weight_values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_all_skin_weights_values_for_mesh</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">skin_weight_values</span><span class="p">)</span> <span class="o">!=</span> <span class="n">vertex_position_count</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                <span class="s2">&quot;Number of skin weight values and vertex count don&#39;t match!&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">joint_indices</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">skin_weight_values</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                <span class="s2">&quot;Number of skin weight values and joint indices count don&#39;t match for vertex!&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">weight_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">indices</span><span class="p">,</span> <span class="n">values</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">joint_indices</span><span class="p">,</span> <span class="n">skin_weight_values</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">indices</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                    <span class="s2">&quot;JointIndexArray for vertex can&#39;t be less than one!&quot;</span>
+                <span class="p">)</span>
+            <span class="n">vertex_weights</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">joint_index</span><span class="p">,</span> <span class="n">skin_weight_value</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">values</span><span class="p">):</span>
+                <span class="n">vertex_weights</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">joint_index</span><span class="p">,</span> <span class="n">skin_weight_value</span><span class="p">))</span>
+            <span class="n">weight_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vertex_weights</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">weight_matrix</span></div>
+
+<div class="viewcode-block" id="DNA.get_vertex_texture_coordinates_for_mesh"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_vertex_texture_coordinates_for_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">get_vertex_texture_coordinates_for_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">UV</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">texture_coordinates</span></div>
+
+<div class="viewcode-block" id="DNA.get_vertex_normals_for_mesh"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_vertex_normals_for_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">get_vertex_normals_for_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Point3</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">normals</span></div>
+
+<div class="viewcode-block" id="DNA.get_raw_control_names"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_raw_control_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_raw_control_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">raw_control_names</span></div>
+
+<div class="viewcode-block" id="DNA.get_animated_map_names"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_animated_map_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">animated_maps</span><span class="o">.</span><span class="n">names</span></div>
+
+<div class="viewcode-block" id="DNA.get_vertex_positions_for_mesh_index"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_vertex_positions_for_mesh_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_vertex_positions_for_mesh_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Point3</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">positions</span></div>
+
+<div class="viewcode-block" id="DNA.get_vertex_layout_positions_for_mesh_index"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_vertex_layout_positions_for_mesh_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_vertex_layout_positions_for_mesh_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span>
+            <span class="n">item</span><span class="o">.</span><span class="n">position_index</span>
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">layouts</span>
+        <span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_faces"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_faces">[docs]</a>    <span class="k">def</span> <span class="nf">get_faces</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">face_vertex_layouts</span></div>
+
+<div class="viewcode-block" id="DNA.get_polygon_faces_and_connects"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_polygon_faces_and_connects">[docs]</a>    <span class="k">def</span> <span class="nf">get_polygon_faces_and_connects</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">dna_faces</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">dna_vertex_layout_positions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="k">if</span> <span class="n">mesh_index</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="kc">None</span> <span class="ow">in</span> <span class="p">(</span><span class="n">dna_faces</span><span class="p">,</span> <span class="n">dna_vertex_layout_positions</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                    <span class="s2">&quot;get_polygon_faces_and_connects -&gt; Must provide either mesh_index or dna_faces and dna_vertex_layout_positions&quot;</span>
+                <span class="p">)</span>
+        <span class="k">if</span> <span class="n">dna_faces</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dna_faces</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_faces</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dna_vertex_layout_positions</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">dna_vertex_layout_positions</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">get_vertex_layout_positions_for_mesh_index</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">polygon_faces</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">polygon_connects</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">vertices_layout_index_array</span> <span class="ow">in</span> <span class="n">dna_faces</span><span class="p">:</span>
+            <span class="n">polygon_faces</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vertices_layout_index_array</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">vertex_layout_index_array</span> <span class="ow">in</span> <span class="n">vertices_layout_index_array</span><span class="p">:</span>
+                <span class="n">polygon_connects</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="n">dna_vertex_layout_positions</span><span class="p">[</span><span class="n">vertex_layout_index_array</span><span class="p">]</span>
+                <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">polygon_faces</span><span class="p">,</span> <span class="n">polygon_connects</span></div>
+
+<div class="viewcode-block" id="DNA.get_layouts_for_mesh_index"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_layouts_for_mesh_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_layouts_for_mesh_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Layout</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">layouts</span></div>
+
+<div class="viewcode-block" id="DNA.get_texture_coordinate_index"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_texture_coordinate_index">[docs]</a>    <span class="k">def</span> <span class="nf">get_texture_coordinate_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">layout_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">layouts</span><span class="p">[</span><span class="n">layout_id</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">texture_coordinate_index</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DNA.get_normal_for_mesh_index_and_layout"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_normal_for_mesh_index_and_layout">[docs]</a>    <span class="k">def</span> <span class="nf">get_normal_for_mesh_index_and_layout</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">layout</span><span class="p">:</span> <span class="n">Layout</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">topology</span><span class="o">.</span><span class="n">normals</span><span class="p">[</span><span class="n">layout</span><span class="o">.</span><span class="n">normal_index</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.has_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.has_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">has_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="nb">len</span><span class="p">([</span><span class="n">bs</span><span class="o">.</span><span class="n">channel</span> <span class="k">for</span> <span class="n">bs</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">blend_shapes</span><span class="p">])</span>
+            <span class="o">&gt;</span> <span class="mi">0</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DNA.get_maximum_influence_per_vertex"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_maximum_influence_per_vertex">[docs]</a>    <span class="k">def</span> <span class="nf">get_maximum_influence_per_vertex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span>
+            <span class="n">mesh_index</span>
+        <span class="p">]</span><span class="o">.</span><span class="n">skin_weights</span><span class="o">.</span><span class="n">maximum_influence_per_vertex</span></div>
+
+<div class="viewcode-block" id="DNA.get_blend_shape_name"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_blend_shape_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shape_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">blend_shape_channel</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">blend_shape_channels</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="n">blend_shape_channel</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_geometry"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_geometry">[docs]</a>    <span class="k">def</span> <span class="nf">get_geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Geometry</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_name"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">names</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_names"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">names</span></div>
+
+<div class="viewcode-block" id="DNA.get_translation_unit_int"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_translation_unit_int">[docs]</a>    <span class="k">def</span> <span class="nf">get_translation_unit_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">translation_unit</span></div>
+
+<div class="viewcode-block" id="DNA.get_linear_unit"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_linear_unit">[docs]</a>    <span class="k">def</span> <span class="nf">get_linear_unit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LinearUnit</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Conversion</span><span class="o">.</span><span class="n">get_linear_unit_from_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_translation_unit_int</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DNA.get_angle_unit_int"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_angle_unit_int">[docs]</a>    <span class="k">def</span> <span class="nf">get_angle_unit_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">rotation_unit</span></div>
+
+<div class="viewcode-block" id="DNA.get_angle_unit"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_angle_unit">[docs]</a>    <span class="k">def</span> <span class="nf">get_angle_unit</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AngleUnit</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">Conversion</span><span class="o">.</span><span class="n">get_angle_unit_from_int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_angle_unit_int</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DNA.get_lod_count"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_lod_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_lod_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">lod_count</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_indices_for_lod"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_indices_for_lod">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_indices_for_lod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">indices_for_lod</span><span class="p">[</span><span class="n">lod</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_joint_indices_for_lod"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_joint_indices_for_lod">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_indices_for_lod</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lod</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">joints</span><span class="o">.</span><span class="n">indices_for_lod</span><span class="p">[</span><span class="n">lod</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_lowest_lod_containing_meshes"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_lowest_lod_containing_meshes">[docs]</a>    <span class="k">def</span> <span class="nf">get_lowest_lod_containing_meshes</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">mesh_indices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">unique_mesh_indices</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">mesh_indices</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">lod</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lod_count</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">unique_mesh_indices</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_indices_for_lod</span><span class="p">(</span><span class="n">lod</span><span class="p">)))):</span>
+                <span class="k">return</span> <span class="n">lod</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DNA.get_character_name"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_character_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_character_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">name</span></div>
+
+<div class="viewcode-block" id="DNA.get_meshes_by_lods"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_meshes_by_lods">[docs]</a>    <span class="k">def</span> <span class="nf">get_meshes_by_lods</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_indices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="n">result_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">lod</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lod_count</span><span class="p">()):</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">mesh_indices</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_indices_for_lod</span><span class="p">(</span><span class="n">lod</span><span class="p">)))</span>
+            <span class="n">result_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">result_list</span></div>
+
+<div class="viewcode-block" id="DNA.get_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">BlendShape</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="o">.</span><span class="n">blend_shapes</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_data"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mesh</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_id_from_mesh_name"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_id_from_mesh_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_id_from_mesh_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">for</span> <span class="n">mesh_id</span><span class="p">,</span> <span class="n">mesh</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">values</span><span class="p">()):</span>
+            <span class="k">if</span> <span class="n">mesh</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">mesh_name</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">mesh_id</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="DNA.get_mesh_count"><a class="viewcode-back" href="../../../dna_viewer.model.html#dna_viewer.model.dna.DNA.get_mesh_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

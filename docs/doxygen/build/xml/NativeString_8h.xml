@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="NativeString_8h" kind="file" language="C++">
+    <compoundname>NativeString.h</compoundname>
+    <includes refid="include_2pma_2TypeDefs_8h" local="no">pma/TypeDefs.h</includes>
+    <includes local="no">clocale</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">cwchar</includes>
+    <includedby refid="FileStreamImpl_8cpp" local="yes">FileStreamImpl.cpp</includedby>
+    <includedby refid="FileStreamImpl_8h" local="yes">FileStreamImpl.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="4">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>NativeString.h</label>
+        <link refid="NativeString_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cassert</label>
+      </node>
+      <node id="20">
+        <label>clocale</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="21">
+        <label>cstring</label>
+      </node>
+      <node id="22">
+        <label>cwchar</label>
+      </node>
+      <node id="13">
+        <label>list</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="15">
+        <label>set</label>
+      </node>
+      <node id="16">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>type_traits</label>
+      </node>
+      <node id="17">
+        <label>unordered_map</label>
+      </node>
+      <node id="18">
+        <label>unordered_set</label>
+      </node>
+      <node id="12">
+        <label>utility</label>
+      </node>
+      <node id="19">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>FileStreamImpl.cpp</label>
+        <link refid="FileStreamImpl_8cpp"/>
+      </node>
+      <node id="3">
+        <label>FileStreamImpl.h</label>
+        <link refid="FileStreamImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>NativeString.h</label>
+        <link refid="NativeString_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structtrio_1_1StringConverter_3_01char_01_4" prot="public">trio::StringConverter&lt; char &gt;</innerclass>
+    <innerclass refid="structtrio_1_1StringConverter_3_01wchar__t_01_4" prot="public">trio::StringConverter&lt; wchar_t &gt;</innerclass>
+    <innernamespace refid="namespacetrio">trio</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;<ref refid="PlatformWindows_8h" kindref="compound">trio/utils/PlatformWindows.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="include_2pma_2TypeDefs_8h" kindref="compound">pma/TypeDefs.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;clocale&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cwchar&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetrio" kindref="compound">trio</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TCharacter&gt;</highlight></codeline>
+<codeline lineno="26" refid="structtrio_1_1StringConverter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter" kindref="compound">StringConverter</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="29" refid="structtrio_1_1StringConverter_3_01char_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter" kindref="compound">StringConverter</ref>&lt;char&gt;<sp/>{</highlight></codeline>
+<codeline lineno="30" refid="structtrio_1_1StringConverter_3_01char_01_4_1a111d69136a1ae2aa40406f9a572cfe89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter_3_01char_01_4_1a111d69136a1ae2aa40406f9a572cfe89" kindref="member">CharacterType</ref><sp/>=<sp/>char;</highlight></codeline>
+<codeline lineno="31" refid="structtrio_1_1StringConverter_3_01char_01_4_1ad7beef7e467a76d6feaa4e35bd965335" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter_3_01char_01_4_1ad7beef7e467a76d6feaa4e35bd965335" kindref="member">StringType</ref><sp/>=<sp/><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">pma::String&lt;CharacterType&gt;</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structtrio_1_1StringConverter_3_01char_01_4_1a82197b1d94867a0e7ad30166918acb39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structtrio_1_1StringConverter_3_01char_01_4_1ad7beef7e467a76d6feaa4e35bd965335" kindref="member">StringType</ref><sp/><ref refid="structtrio_1_1StringConverter_3_01char_01_4_1a82197b1d94867a0e7ad30166918acb39" kindref="member">from</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">pma::MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structtrio_1_1StringConverter_3_01char_01_4_1ad7beef7e467a76d6feaa4e35bd965335" kindref="member">StringType</ref>{source,<sp/>memRes};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="40" refid="structtrio_1_1StringConverter_3_01wchar__t_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter" kindref="compound">StringConverter</ref>&lt;wchar_t&gt;<sp/>{</highlight></codeline>
+<codeline lineno="41" refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1a227e270ffd43db0dbf76c156583013aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1a227e270ffd43db0dbf76c156583013aa" kindref="member">CharacterType</ref><sp/>=<sp/>wchar_t;</highlight></codeline>
+<codeline lineno="42" refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1af5680bcecc207c955ca111b10f39a2c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1af5680bcecc207c955ca111b10f39a2c6" kindref="member">StringType</ref><sp/>=<sp/><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">pma::String&lt;CharacterType&gt;</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1a8635df969e0bb53a35eb017245d6959d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1af5680bcecc207c955ca111b10f39a2c6" kindref="member">StringType</ref><sp/><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1a8635df969e0bb53a35eb017245d6959d" kindref="member">from</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">pma::MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="namespacetdm_1aa46734d11a9299f44130a29409c2963f" kindref="member">length</ref><sp/>=<sp/>std::strlen(source);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>neededSize<sp/>=<sp/>MultiByteToWideChar(CP_UTF8,<sp/>0,<sp/>source,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacetdm_1aa46734d11a9299f44130a29409c2963f" kindref="member">length</ref>),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1af5680bcecc207c955ca111b10f39a2c6" kindref="member">StringType</ref><sp/>result{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(neededSize),<sp/>0,<sp/>memRes};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MultiByteToWideChar(CP_UTF8,<sp/>0,<sp/>source,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacetdm_1aa46734d11a9299f44130a29409c2963f" kindref="member">length</ref>),<sp/>&amp;result[0],<sp/>neededSize);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>current<sp/>=<sp/>std::setlocale(LC_ALL,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::setlocale(LC_ALL,<sp/></highlight><highlight class="stringliteral">&quot;en_US.utf8&quot;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>Any<sp/>UTF-8<sp/>locale<sp/>will<sp/>work</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::mbstate_t<sp/>state{};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>neededSize<sp/>=<sp/>std::mbsrtowcs(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>&amp;source,<sp/>0,<sp/>&amp;state)<sp/>+<sp/>1ul;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1af5680bcecc207c955ca111b10f39a2c6" kindref="member">StringType</ref><sp/>result{neededSize,<sp/>0,<sp/>memRes};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::mbsrtowcs(&amp;result[0],<sp/>&amp;source,<sp/>result.size(),<sp/>&amp;state);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::setlocale(LC_ALL,<sp/>current);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_WIN32)<sp/>&amp;&amp;<sp/>defined(UNICODE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" kindref="member">NativeCharacter</ref><sp/>=<sp/>wchar_t;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" kindref="member">NativeCharacter</ref><sp/>=<sp/>char;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="namespacetrio_1add2affebde5ca4fa798a3855cadd339b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespacetrio_1add2affebde5ca4fa798a3855cadd339b" kindref="member">NativeString</ref><sp/>=<sp/><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">pma::String&lt;NativeCharacter&gt;</ref>;</highlight></codeline>
+<codeline lineno="77" refid="namespacetrio_1a40b2e50fccab9373724e079b4a1da7a0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structtrio_1_1StringConverter" kindref="compound">NativeStringConverter</ref><sp/>=<sp/><ref refid="structtrio_1_1StringConverter" kindref="compound">StringConverter&lt;NativeCharacter&gt;</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>trio</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h"/>
+  </compounddef>
+</doxygen>

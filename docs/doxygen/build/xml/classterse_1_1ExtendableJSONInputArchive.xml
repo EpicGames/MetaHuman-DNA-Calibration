@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classterse_1_1ExtendableJSONInputArchive" kind="class" language="C++" prot="public">
+    <compoundname>terse::ExtendableJSONInputArchive</compoundname>
+    <basecompoundref refid="classterse_1_1Archive" prot="public" virt="non-virtual">terse::Archive&lt; TExtender &gt;</basecompoundref>
+    <includes refid="json_2InputArchive_8h" local="no">InputArchive.h</includes>
+    <innerclass refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState" prot="private">terse::ExtendableJSONInputArchive::SerializationState</innerclass>
+    <templateparamlist>
+      <param>
+        <type>class TExtender</type>
+      </param>
+      <param>
+        <type>class TStream</type>
+      </param>
+      <param>
+        <type>typename TSize</type>
+      </param>
+      <param>
+        <type>typename TOffset</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" prot="public" static="no">
+        <type>TSize</type>
+        <definition>using terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SizeType =  TSize</definition>
+        <argsstring></argsstring>
+        <name>SizeType</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::SizeType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="43" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" prot="public" static="no">
+        <type>TOffset</type>
+        <definition>using terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::OffsetType =  TOffset</definition>
+        <argsstring></argsstring>
+        <name>OffsetType</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::OffsetType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="44" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classterse_1_1ExtendableJSONInputArchive_1a55808c1876da7300b79c6c08e6111a00" prot="private" static="no">
+        <type><ref refid="classterse_1_1Archive" kindref="compound">Archive</ref>&lt; TExtender &gt;</type>
+        <definition>using terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::BaseArchive =  Archive&lt;TExtender&gt;</definition>
+        <argsstring></argsstring>
+        <name>BaseArchive</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::BaseArchive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="47" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classterse_1_1ExtendableJSONInputArchive_1a32a2cb5a88a30fe6665807f6deb56198" prot="private" static="no" mutable="no">
+        <type><ref refid="classterse_1_1CharInputStreamBuf" kindref="compound">CharInputStreamBuf</ref>&lt; TStream &gt;</type>
+        <definition>CharInputStreamBuf&lt;TStream&gt; terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::streamBuf</definition>
+        <argsstring></argsstring>
+        <name>streamBuf</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::streamBuf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="529" column="28" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="529" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" prot="private" static="no" mutable="no">
+        <type>std::istream</type>
+        <definition>std::istream terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="530" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="530" bodyend="-1"/>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a62d3c97a85a53625b478c7099802d674" compoundref="json_2InputArchive_8h" startline="228" endline="233">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" prot="private" static="no" mutable="no">
+        <type><ref refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState" kindref="compound">SerializationState</ref></type>
+        <definition>SerializationState terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::state</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="531" column="28" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="531" bodyend="-1"/>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1add3ac7122d0d7cf9c39f6405be7b5719" compoundref="json_2InputArchive_8h" startline="54" endline="56">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::isOk</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" compoundref="json_2InputArchive_8h" startline="61" endline="98">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::label</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" compoundref="json_2InputArchive_8h" startline="151" endline="166">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a840923cda19f36f5f70c68f20e331956" compoundref="json_2InputArchive_8h" startline="511" endline="513">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::pushTransparency</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a14a4b04ddac793779adca34267a9343b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::ExtendableJSONInputArchive</definition>
+        <argsstring>(TExtender *extender, TStream *stream_)</argsstring>
+        <name>ExtendableJSONInputArchive</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::ExtendableJSONInputArchive</qualifiedname>
+        <param>
+          <type>TExtender *</type>
+          <declname>extender</declname>
+        </param>
+        <param>
+          <type>TStream *</type>
+          <declname>stream_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="50" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1add3ac7122d0d7cf9c39f6405be7b5719" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::isOk</definition>
+        <argsstring>() const</argsstring>
+        <name>isOk</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::isOk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="54" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="54" bodyend="56"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a5712e3134eea2752dd3bae3183148b95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::sync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="58" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="58" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::label</definition>
+        <argsstring>(const char *value)</argsstring>
+        <name>label</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::label</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="61" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="61" bodyend="98"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a64a5a23c63fd467a467d9313789fe040" compoundref="json_2InputArchive_8h" startline="524">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::firstMember</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(Transparent&lt; T &gt; &amp;&amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1Transparent" kindref="compound">Transparent</ref>&lt; T &gt; &amp;&amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="102" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="102" bodyend="105"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a840923cda19f36f5f70c68f20e331956" compoundref="json_2InputArchive_8h" startline="511" endline="513">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::pushTransparency</references>
+        <referencedby refid="classterse_1_1JSONInputArchive_1ae3fdf14fecb04e3d9306f5dbd0bc8765" compoundref="json_2InputArchive_8h" startline="546" endline="548">terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ad66c4c9bd5a2cb7e5ecbc9438e198147" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(Anchor&lt; OffsetType &gt; &amp;)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1Anchor" kindref="compound">Anchor</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt; &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="107" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a42d57d03595e8880807bf580b325ba7a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(ArchiveOffset&lt; OffsetType &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="111" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="111" bodyend="113"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</references>
+        <references refid="structterse_1_1ArchiveOffset_1a142797b061f46c5cd9f064d9c5ddfe1f" compoundref="ArchiveOffset_8h" startline="66">terse::ArchiveOffset&lt; TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a1bea01ef3058027492597841759729ef" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(typename ArchiveOffset&lt; OffsetType &gt;::Proxy &amp;)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt;::Proxy &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="115" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="115" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a0f9836333c52adb3bf6611ca3b198ab2" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(typename ArchiveOffset&lt; OffsetType &gt;::Proxy &amp;&amp;)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt;::Proxy &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="119" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="119" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1abae9ea0410c361566d49faef3a9a4b70" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(ArchiveSize&lt; SizeType, OffsetType &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="123" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="123" bodyend="125"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</references>
+        <references refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" compoundref="ArchiveSize_8h" startline="88">terse::ArchiveSize&lt; TSize, TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a714b2df3b2df5a936e827fff6a3a94ee" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(typename ArchiveSize&lt; SizeType, OffsetType &gt;::Proxy &amp;)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt;::Proxy &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="127" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1adeb86c2c69641590c62c5c7aa248ce96" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(typename ArchiveSize&lt; SizeType, OffsetType &gt;::Proxy &amp;&amp;)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" kindref="member">OffsetType</ref> &gt;::Proxy &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="131" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="131" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a4cd4401d71333f4ec67cd0325f3c15a4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(Blob&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1Blob" kindref="compound">Blob</ref>&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="136" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="136" bodyend="147"/>
+        <references refid="namespaceterse_1a8463eac7d23e67677dcd94074404dc09" compoundref="Base64_8h" startline="52" endline="54">terse::base64decode</references>
+        <references refid="namespaceterse_1a86f9ab8fb558bf7219b4ee1d04f7bba9" compoundref="Base64_8h" startline="19" endline="21">terse::base64encode</references>
+        <references refid="classterse_1_1Blob_1ac0650cbe35b02e1d3541951ffe6eb082" compoundref="Blob_8h" startline="35" endline="37">terse::Blob&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1Blob_1a9d143779c4cf73254ea6845c9d3ee4cf" compoundref="Blob_8h" startline="31" endline="33">terse::Blob&lt; T, TAllocator &gt;::get_allocator</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</references>
+        <references refid="classterse_1_1Blob_1a7cf202e916939e6b9c12a6adc76af444" compoundref="Blob_8h" startline="43" endline="45">terse::Blob&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__load__member" kindref="compound">traits::has_load_member</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_load_member&lt; T &gt;::value, void &gt;::type terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="151" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="151" bodyend="166"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" compoundref="Transparent_8h" startline="20" endline="22">terse::transparent</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ad9af18460ed4443121ec96da94b06188" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">traits::has_serialize_member</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_serialize_member&lt; T &gt;::value, void &gt;::type terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="170" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="170" bodyend="185"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" compoundref="Transparent_8h" startline="20" endline="22">terse::transparent</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a80b7af82085cc9c7e6c7b92d8c211fef" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__load__function" kindref="compound">traits::has_load_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_load_function&lt; T &gt;::value, void &gt;::type terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="189" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="189" bodyend="204"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" compoundref="Transparent_8h" startline="20" endline="22">terse::transparent</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a987a0cbdb59d2daaa34f90340127eb83" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">traits::has_serialize_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_serialize_function&lt; T &gt;::value, void &gt;::type terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="208" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="208" bodyend="223"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" compoundref="Transparent_8h" startline="20" endline="22">terse::transparent</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a62d3c97a85a53625b478c7099802d674" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="structterse_1_1traits_1_1has__load__member" kindref="compound">traits::has_load_member</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">traits::has_serialize_member</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__load__function" kindref="compound">traits::has_load_function</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">traits::has_serialize_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;!traits::has_load_member&lt; T &gt;::value &amp;&amp;!traits::has_serialize_member&lt; T &gt;::value &amp;&amp;!traits::has_load_function&lt; T &gt;::value &amp;&amp;!traits::has_serialize_function&lt; T &gt;::value, void &gt;::type terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="228" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="228" bodyend="233"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1abda3dc26d85bd0e15151dad14c798efb" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(char &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>char &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="235" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="235" bodyend="247"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a8fe1114d3420a17b24fae42f07752e58" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::uint8_t &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::uint8_t &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="249" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="249" bodyend="253"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a38066d5b323b5bd54bd828428c43764c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::int8_t &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::int8_t &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="255" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="255" bodyend="259"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a05c488ce317e0f97ab96ae9e0dbb4926" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::array&lt; T, N &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::array&lt; T, N &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="262" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="262" bodyend="297"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1aec72229c1dbdd3727b82f9609c3e58e4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::vector&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::vector&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="300" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="300" bodyend="337"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(DynArray&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="340" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="340" bodyend="384"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+        <references refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</references>
+        <references refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a7c11e5bb78260fb4c890f917bd2b95d6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::basic_string&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::basic_string&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="387" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="387" bodyend="408"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a2cc009f84b69996dc572707c2c23944e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::pair&lt; K, V &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::pair&lt; K, V &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="411" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="411" bodyend="437"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a9095bed4eeeb509c9460f9ad641cc1d4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(std::tuple&lt; K, V &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::process</qualifiedname>
+        <param>
+          <type>std::tuple&lt; K, V &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="440" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="440" bodyend="466"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</definition>
+        <argsstring>(char *dest)</argsstring>
+        <name>readChar</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::readChar</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="469" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="469" bodyend="475"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1abda3dc26d85bd0e15151dad14c798efb" compoundref="json_2InputArchive_8h" startline="235" endline="247">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</definition>
+        <argsstring>(char expected)</argsstring>
+        <name>expectChar</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::expectChar</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>expected</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="477" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="477" bodyend="487"/>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a5040657abb1bd5343ea7a42442d306ae" compoundref="json_2InputArchive_8h" startline="523">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::malformed</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" compoundref="json_2InputArchive_8h" startline="469" endline="475">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::readChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" compoundref="json_2InputArchive_8h" startline="61" endline="98">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::label</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1abda3dc26d85bd0e15151dad14c798efb" compoundref="json_2InputArchive_8h" startline="235" endline="247">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</definition>
+        <argsstring>()</argsstring>
+        <name>skipWhiteSpace</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::skipWhiteSpace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="489" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="489" bodyend="491"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" compoundref="json_2InputArchive_8h" startline="530">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::stream</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" compoundref="json_2InputArchive_8h" startline="61" endline="98">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::label</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" compoundref="json_2InputArchive_8h" startline="503" endline="509">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" compoundref="json_2InputArchive_8h" startline="493" endline="501">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a05c488ce317e0f97ab96ae9e0dbb4926" compoundref="json_2InputArchive_8h" startline="262" endline="297">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::preStructInput</definition>
+        <argsstring>()</argsstring>
+        <name>preStructInput</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::preStructInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="493" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="493" bodyend="501"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a64a5a23c63fd467a467d9313789fe040" compoundref="json_2InputArchive_8h" startline="524">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::firstMember</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" compoundref="json_2InputArchive_8h" startline="151" endline="166">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::postStructInput</definition>
+        <argsstring>()</argsstring>
+        <name>postStructInput</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::postStructInput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="503" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="503" bodyend="509"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" compoundref="json_2InputArchive_8h" startline="477" endline="487">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::expectChar</references>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" compoundref="json_2InputArchive_8h" startline="489" endline="491">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::skipWhiteSpace</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" compoundref="json_2InputArchive_8h" startline="151" endline="166">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1a840923cda19f36f5f70c68f20e331956" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::pushTransparency</definition>
+        <argsstring>()</argsstring>
+        <name>pushTransparency</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::pushTransparency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="511" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="511" bodyend="513"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a6032912567817dca166ebda65d0911f5" compoundref="json_2InputArchive_8h" startline="525">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::transparent</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</definition>
+        <argsstring>()</argsstring>
+        <name>popTransparency</name>
+        <qualifiedname>terse::ExtendableJSONInputArchive::popTransparency</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="515" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="515" bodyend="519"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" compoundref="json_2InputArchive_8h" startline="531">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::state</references>
+        <references refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState_1a6032912567817dca166ebda65d0911f5" compoundref="json_2InputArchive_8h" startline="525">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState::transparent</references>
+        <references refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" compoundref="Transparent_8h" startline="20" endline="22">terse::transparent</references>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" compoundref="json_2InputArchive_8h" startline="151" endline="166">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>terse::ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>terse::ExtendableJSONInputArchive&lt; JSONInputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>terse::JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>terse::JSONInputArchive&lt; trio::BoundedIOStream &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream &gt;</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>terse::JSONInputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="1">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>std::basic_ios&lt; Char &gt;</label>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::basic_istream&lt; Char &gt;</label>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>std::ios_base</label>
+      </node>
+      <node id="4">
+        <label>std::istream</label>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="8">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState</label>
+        <link refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState"/>
+      </node>
+      <node id="1">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-state</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="40" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="40" bodyend="532"/>
+    <listofallmembers>
+      <member refid="classterse_1_1Archive_1a42458df7d5e4e87755c88dd01f866640" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>Archive</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a55808c1876da7300b79c6c08e6111a00" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>BaseArchive</name></member>
+      <member refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1Archive_1ab765e22c9a8bcab4e98d9b593577de82" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>expectChar</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a14a4b04ddac793779adca34267a9343b" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>ExtendableJSONInputArchive</name></member>
+      <member refid="classterse_1_1Archive_1a7a9fc12b40284867ff4969c6c48c8982" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>getUserData</name></member>
+      <member refid="classterse_1_1Archive_1a462e059ee44f6ab246bfff8d444144c3" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>impl</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1add3ac7122d0d7cf9c39f6405be7b5719" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>isOk</name></member>
+      <member refid="classterse_1_1Archive_1a72e39f25db3b5c693cecff9ce48429c2" prot="public" virt="non-virtual" ambiguityscope="Archive&lt; TExtender &gt;::"><scope>terse::ExtendableJSONInputArchive</scope><name>isOk</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>label</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>OffsetType</name></member>
+      <member refid="classterse_1_1Archive_1a4df3e8d790c6bb1e74763f2952c9ad65" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>operator()</name></member>
+      <member refid="classterse_1_1Archive_1a06b33e08fd4d274553a8717f5da84c22" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classterse_1_1Archive_1a2be0b456566c72d32680de9b9a6f2904" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>popTransparency</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>postStructInput</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>preStructInput</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad66c4c9bd5a2cb7e5ecbc9438e198147" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a42d57d03595e8880807bf580b325ba7a" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a1bea01ef3058027492597841759729ef" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a0f9836333c52adb3bf6611ca3b198ab2" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1abae9ea0410c361566d49faef3a9a4b70" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a714b2df3b2df5a936e827fff6a3a94ee" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1adeb86c2c69641590c62c5c7aa248ce96" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a4cd4401d71333f4ec67cd0325f3c15a4" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad9af18460ed4443121ec96da94b06188" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a80b7af82085cc9c7e6c7b92d8c211fef" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a987a0cbdb59d2daaa34f90340127eb83" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a62d3c97a85a53625b478c7099802d674" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1abda3dc26d85bd0e15151dad14c798efb" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a8fe1114d3420a17b24fae42f07752e58" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a38066d5b323b5bd54bd828428c43764c" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a05c488ce317e0f97ab96ae9e0dbb4926" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1aec72229c1dbdd3727b82f9609c3e58e4" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a7c11e5bb78260fb4c890f917bd2b95d6" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a2cc009f84b69996dc572707c2c23944e" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a9095bed4eeeb509c9460f9ad641cc1d4" prot="protected" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a840923cda19f36f5f70c68f20e331956" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>pushTransparency</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>readChar</name></member>
+      <member refid="classterse_1_1Archive_1ac64d0bb1ad778cb392e026d002e74f33" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>setUserData</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>SizeType</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>skipWhiteSpace</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>state</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>stream</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a32a2cb5a88a30fe6665807f6deb56198" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>streamBuf</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a5712e3134eea2752dd3bae3183148b95" prot="public" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>sync</name></member>
+      <member refid="classterse_1_1Archive_1a0e9b96481b56e7de196e700cf5ffe5cb" prot="private" virt="non-virtual"><scope>terse::ExtendableJSONInputArchive</scope><name>userData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

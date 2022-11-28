@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['negate_0',['negate',['../structtdm_1_1mat.html#aa145e30a3c416cfaa04181a28e69eeed',1,'tdm::mat::negate()'],['../structtdm_1_1vec.html#a3f3ea73401edb017414292df5c64d4a8',1,'tdm::vec::negate()'],['../namespacetdm.html#a7e856a88d452831ae93e3f22c03b3e83',1,'tdm::negate(vec&lt; L, T &gt; v)'],['../namespacetdm.html#ad2984aa9fe011508721b2582fd533cbd',1,'tdm::negate(const mat&lt; R, C, T &gt; &amp;m)']]],
+  ['networktohost_1',['networkToHost',['../namespaceterse.html#a0ccb75b9c1709902c8e9048ad6efcc29',1,'terse']]],
+  ['networktohost128_2',['networkToHost128',['../namespaceterse.html#a5732cba33629964669368c0e26797c50',1,'terse']]],
+  ['newobject_3',['newObject',['../classpma_1_1impl_1_1PolyAllocator.html#af6623d1adb7eec221a20670e78c4420f',1,'pma::impl::PolyAllocator']]],
+  ['normalize_4',['normalize',['../structtdm_1_1vec.html#acd44cca051bda523e42cbfcbd26f49c9',1,'tdm::vec::normalize()'],['../namespacetdm.html#a19d3e09b0d8eea38abc06732ed3775a7',1,'tdm::normalize()']]],
+  ['ntoh_5',['ntoh',['../Endianness_8h.html#aa652c33b65cc585232c204eec6dab0a5',1,'ntoh(std::uint8_t x):&#160;Endianness.h'],['../Endianness_8h.html#ad404c17f53a950a41f9602eb93aaa834',1,'ntoh(std::uint16_t x):&#160;Endianness.h'],['../Endianness_8h.html#a5f77ccbe7c30704098a3cdff8c09d54b',1,'ntoh(std::uint32_t x):&#160;Endianness.h'],['../Endianness_8h.html#a451ae1d592cda278849d3651261409de',1,'ntoh(std::uint64_t x):&#160;Endianness.h'],['../Endianness_8h.html#a22259a6da08dc89a7466fc63dc5f4247',1,'ntoh(std::uint8_t *x):&#160;Endianness.h'],['../Endianness_8h.html#ad116a46dfd66843f461292550a72dc53',1,'ntoh(std::uint16_t *x):&#160;Endianness.h'],['../Endianness_8h.html#a35fcdaf164b42392cb7726600557a67c',1,'ntoh(std::uint32_t *x):&#160;Endianness.h'],['../Endianness_8h.html#a13575a8cffaad42253e8a562cc810a58',1,'ntoh(std::uint64_t *x):&#160;Endianness.h']]]
+];

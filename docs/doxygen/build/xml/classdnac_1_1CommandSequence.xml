@@ -1,0 +1,478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1CommandSequence" kind="class" language="C++" prot="public">
+    <compoundname>dnac::CommandSequence</compoundname>
+    <basecompoundref refid="classdnac_1_1Command" prot="public" virt="non-virtual">dnac::Command</basecompoundref>
+    <includes refid="CommandSequence_8h" local="no">CommandSequence.h</includes>
+    <innerclass refid="classdnac_1_1CommandSequence_1_1Impl" prot="public">dnac::CommandSequence::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; <ref refid="classdnac_1_1CommandSequence_1_1Impl" kindref="compound">Impl</ref> &gt;</type>
+        <definition>ScopedPtr&lt;Impl&gt; dnac::CommandSequence::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <qualifiedname>dnac::CommandSequence::pImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="94" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1CommandSequence_1a7e2bf1058ffc1a08d79b646ccce97417" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="61" endline="63">add</referencedby>
+        <referencedby refid="classdnac_1_1CommandSequence_1ac8d9d693c76e72251f228fd51a54db4a" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="81" endline="83">contains</referencedby>
+        <referencedby refid="classdnac_1_1CommandSequence_1ab2cda7bc8e1668d53e4dba56ae1039c4" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="71" endline="73">remove</referencedby>
+        <referencedby refid="classdnac_1_1CommandSequence_1a76e18e4c9004bc24f6ede391788f1a1f" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="57" endline="59">run</referencedby>
+        <referencedby refid="classdnac_1_1CommandSequence_1acbbc0456e87f449dc387328f5234b05c" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="85" endline="87">size</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a691db66ea3539dfca8eef213c9f1e55e" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::CommandSequence::CommandSequence</definition>
+        <argsstring>(MemoryResource *memRes=nullptr)</argsstring>
+        <name>CommandSequence</name>
+        <qualifiedname>dnac::CommandSequence::CommandSequence</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="22" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a0db0ede8772d264e00c451f0a964fc7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::CommandSequence::~CommandSequence</definition>
+        <argsstring>()</argsstring>
+        <name>~CommandSequence</name>
+        <qualifiedname>dnac::CommandSequence::~CommandSequence</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="24" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a3f83aeac2351aa7bb3d46d95e02be360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::CommandSequence::CommandSequence</definition>
+        <argsstring>(const CommandSequence &amp;)=delete</argsstring>
+        <name>CommandSequence</name>
+        <qualifiedname>dnac::CommandSequence::CommandSequence</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="26" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a8a819a372836e95c1d661b537042d032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;</type>
+        <definition>CommandSequence &amp; dnac::CommandSequence::operator=</definition>
+        <argsstring>(const CommandSequence &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::CommandSequence::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="27" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a14d4f8e11f265e31233fab097ee39a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::CommandSequence::CommandSequence</definition>
+        <argsstring>(CommandSequence &amp;&amp;)</argsstring>
+        <name>CommandSequence</name>
+        <qualifiedname>dnac::CommandSequence::CommandSequence</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="29" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a8be387ac8021857f96fc631173f8a73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> <ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;</type>
+        <definition>CommandSequence &amp; dnac::CommandSequence::operator=</definition>
+        <argsstring>(CommandSequence &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::CommandSequence::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="30" column="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a76e18e4c9004bc24f6ede391788f1a1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::CommandSequence::run</definition>
+        <argsstring>(DNACalibDNAReader *output) override</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::CommandSequence::run</qualifiedname>
+        <reimplements refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee">run</reimplements>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="32" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="57" bodyend="59"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+        <referencedby refid="examples_2CommandSequence_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="examples_2CommandSequence_8cpp" startline="10" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a7e2bf1058ffc1a08d79b646ccce97417" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::CommandSequence::add</definition>
+        <argsstring>(Command *command)</argsstring>
+        <name>add</name>
+        <qualifiedname>dnac::CommandSequence::add</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1Command" kindref="compound">Command</ref> *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Method for adding a command to a sequence of commands to run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="39" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="61" bodyend="63"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+        <referencedby refid="classdnac_1_1CommandSequence_1a3dc2876f24f1b6c7e931591d63f9d1f5" compoundref="CommandSequence_8h" startline="49" endline="55">add</referencedby>
+        <referencedby refid="examples_2CommandSequence_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="examples_2CommandSequence_8cpp" startline="10" endline="65">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a8d67ac9f249a77129b2991cf9d929996" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::CommandSequence::add</definition>
+        <argsstring>(ArrayView&lt; Command &gt; commands)</argsstring>
+        <name>add</name>
+        <qualifiedname>dnac::CommandSequence::add</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1a5148d42e4beb52913b9bc82dde4ff20d" kindref="member">ArrayView</ref>&lt; <ref refid="classdnac_1_1Command" kindref="compound">Command</ref> &gt;</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+<para>Method for adding multiple commands to a sequence of commands to run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The commands to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="46" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="65" bodyend="69"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a3dc2876f24f1b6c7e931591d63f9d1f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ...</type>
+            <declname>Commands</declname>
+            <defname>Commands</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dnac::CommandSequence::add</definition>
+        <argsstring>(Commands... commands)</argsstring>
+        <name>add</name>
+        <qualifiedname>dnac::CommandSequence::add</qualifiedname>
+        <param>
+          <type>Commands...</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="49" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" bodystart="49" bodyend="55"/>
+        <references refid="classdnac_1_1CommandSequence_1a7e2bf1058ffc1a08d79b646ccce97417" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="61" endline="63">add</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1ab2cda7bc8e1668d53e4dba56ae1039c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::CommandSequence::remove</definition>
+        <argsstring>(Command *command)</argsstring>
+        <name>remove</name>
+        <qualifiedname>dnac::CommandSequence::remove</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1Command" kindref="compound">Command</ref> *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Method for removing a command from the sequence of commands to run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="62" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="71" bodyend="73"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+        <referencedby refid="examples_2CommandSequence_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="examples_2CommandSequence_8cpp" startline="10" endline="65">main</referencedby>
+        <referencedby refid="classdnac_1_1CommandSequence_1a651d3d2719ea9ab39b0fe838aaf5bcfa" compoundref="CommandSequence_8h" startline="72" endline="78">remove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1af0e4a3b8f8d78ba0f39cfde27c94db1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::CommandSequence::remove</definition>
+        <argsstring>(ArrayView&lt; Command &gt; commands)</argsstring>
+        <name>remove</name>
+        <qualifiedname>dnac::CommandSequence::remove</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1a5148d42e4beb52913b9bc82dde4ff20d" kindref="member">ArrayView</ref>&lt; <ref refid="classdnac_1_1Command" kindref="compound">Command</ref> &gt;</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+<para>Method for removing an array of commands from the sequence of commands to run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>commands</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The commands to remove. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="69" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="75" bodyend="79"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1a651d3d2719ea9ab39b0fe838aaf5bcfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ...</type>
+            <declname>Commands</declname>
+            <defname>Commands</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dnac::CommandSequence::remove</definition>
+        <argsstring>(Commands... commands)</argsstring>
+        <name>remove</name>
+        <qualifiedname>dnac::CommandSequence::remove</qualifiedname>
+        <param>
+          <type>Commands...</type>
+          <declname>commands</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="72" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" bodystart="72" bodyend="78"/>
+        <references refid="classdnac_1_1CommandSequence_1ab2cda7bc8e1668d53e4dba56ae1039c4" compoundref="src_2dnacalib_2commands_2CommandSequence_8cpp" startline="71" endline="73">remove</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1ac8d9d693c76e72251f228fd51a54db4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> bool</type>
+        <definition>bool dnac::CommandSequence::contains</definition>
+        <argsstring>(Command *command) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>dnac::CommandSequence::contains</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1Command" kindref="compound">Command</ref> *</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>Method for checking if the provided command is part of the command sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command to check. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="85" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="81" bodyend="83"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1CommandSequence_1acbbc0456e87f449dc387328f5234b05c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> std::size_t</type>
+        <definition>std::size_t dnac::CommandSequence::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>dnac::CommandSequence::size</qualifiedname>
+        <briefdescription>
+<para>Number of commands in command sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="90" column="29" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/CommandSequence.cpp" bodystart="85" bodyend="87"/>
+        <references refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" compoundref="CommandSequence_8h" startline="94">pImpl</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> is used to run a sequence of commands on the same <ref refid="structdnac_1_1DNA" kindref="compound">DNA</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Commands will be run in the order in which they were added to the sequence. </para>
+</simplesect>
+<simplesect kind="note"><para><ref refid="classdnac_1_1CommandSequence" kindref="compound">CommandSequence</ref> holds pointers to commands, but does not own them. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::CommandSequence</label>
+        <link refid="classdnac_1_1CommandSequence"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>pma::ScopedPtr&lt; dnac::CommandSequence::Impl &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; dnac::CommandSequence::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::CommandSequence</label>
+        <link refid="classdnac_1_1CommandSequence"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; T &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; dnac::CommandSequence::Impl &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; dnac::CommandSequence::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="8" relation="private-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; U &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+      </node>
+      <node id="8">
+        <label>typename DefaultInstanceDestroyer&lt;T&gt;::type</label>
+      </node>
+      <node id="4">
+        <label>typename DefaultInstanceDestroyer&lt;dnac::CommandSequence::Impl &gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" line="20" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h" bodystart="20" bodyend="96"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1CommandSequence_1a7e2bf1058ffc1a08d79b646ccce97417" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>add</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a8d67ac9f249a77129b2991cf9d929996" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>add</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a3dc2876f24f1b6c7e931591d63f9d1f5" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>add</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a691db66ea3539dfca8eef213c9f1e55e" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>CommandSequence</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a3f83aeac2351aa7bb3d46d95e02be360" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>CommandSequence</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a14d4f8e11f265e31233fab097ee39a7d" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>CommandSequence</name></member>
+      <member refid="classdnac_1_1CommandSequence_1ac8d9d693c76e72251f228fd51a54db4a" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>contains</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a8a819a372836e95c1d661b537042d032" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a8be387ac8021857f96fc631173f8a73c" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1CommandSequence_1ad3fa0c0506823e533b1ebd9c81df4d0d" prot="private" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>pImpl</name></member>
+      <member refid="classdnac_1_1CommandSequence_1ab2cda7bc8e1668d53e4dba56ae1039c4" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>remove</name></member>
+      <member refid="classdnac_1_1CommandSequence_1af0e4a3b8f8d78ba0f39cfde27c94db1b" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>remove</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a651d3d2719ea9ab39b0fe838aaf5bcfa" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>remove</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a76e18e4c9004bc24f6ede391788f1a1f" prot="public" virt="virtual"><scope>dnac::CommandSequence</scope><name>run</name></member>
+      <member refid="classdnac_1_1CommandSequence_1acbbc0456e87f449dc387328f5234b05c" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>size</name></member>
+      <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::CommandSequence</scope><name>~Command</name></member>
+      <member refid="classdnac_1_1CommandSequence_1a0db0ede8772d264e00c451f0a964fc7d" prot="public" virt="non-virtual"><scope>dnac::CommandSequence</scope><name>~CommandSequence</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpma_1_1AlignedMemoryResource" kind="class" language="C++" prot="public">
+    <compoundname>pma::AlignedMemoryResource</compoundname>
+    <basecompoundref refid="classpma_1_1MemoryResource" prot="public" virt="non-virtual">pma::MemoryResource</basecompoundref>
+    <includes refid="AlignedMemoryResource_8h" local="no">AlignedMemoryResource.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpma_1_1AlignedMemoryResource_1ac88cd6ae3def23f46a66e60500ca8542" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * pma::AlignedMemoryResource::allocate</definition>
+        <argsstring>(std::size_t size, std::size_t alignment) override</argsstring>
+        <name>allocate</name>
+        <qualifiedname>pma::AlignedMemoryResource::allocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ad43f9c740450042025424135a15497bc">allocate</reimplements>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/AlignedMemoryResource.h" line="18" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="83" bodyend="87"/>
+        <references refid="AlignedMemoryResource_8cpp_1acb861b2c4ec0c3344f25e69b667d9810" compoundref="AlignedMemoryResource_8cpp" startline="77">ALIGNED_ALLOC</references>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1AlignedMemoryResource_1a98349fccd4981bca15bfc7887e0d52cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void pma::AlignedMemoryResource::deallocate</definition>
+        <argsstring>(void *ptr, std::size_t size, std::size_t alignment) override</argsstring>
+        <name>deallocate</name>
+        <qualifiedname>pma::AlignedMemoryResource::deallocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ae775e6f871764336db8dc4d95ba95b2b">deallocate</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/AlignedMemoryResource.h" line="19" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="89" bodyend="92"/>
+        <references refid="AlignedMemoryResource_8cpp_1a2018dcdf31f7fd4efa685ecff3137b05" compoundref="AlignedMemoryResource_8cpp" startline="78">ALIGNED_FREE</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> that honors alignment requirements. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pma::AlignedMemoryResource</label>
+        <link refid="classpma_1_1AlignedMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pma::AlignedMemoryResource</label>
+        <link refid="classpma_1_1AlignedMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/AlignedMemoryResource.h" line="16" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/AlignedMemoryResource.h" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classpma_1_1AlignedMemoryResource_1ac88cd6ae3def23f46a66e60500ca8542" prot="public" virt="virtual"><scope>pma::AlignedMemoryResource</scope><name>allocate</name></member>
+      <member refid="classpma_1_1AlignedMemoryResource_1a98349fccd4981bca15bfc7887e0d52cf" prot="public" virt="virtual"><scope>pma::AlignedMemoryResource</scope><name>deallocate</name></member>
+      <member refid="classpma_1_1MemoryResource_1a2f1214ba97985f9728633a518fb62578" prot="public" virt="virtual"><scope>pma::AlignedMemoryResource</scope><name>~MemoryResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,450 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpma_1_1ArenaMemoryResource" kind="class" language="C++" prot="public">
+    <compoundname>pma::ArenaMemoryResource</compoundname>
+    <basecompoundref refid="classpma_1_1MemoryResource" prot="public" virt="non-virtual">pma::MemoryResource</basecompoundref>
+    <includes refid="ArenaMemoryResource_8h" local="no">ArenaMemoryResource.h</includes>
+    <innerclass refid="classpma_1_1ArenaMemoryResource_1_1Impl" prot="public">pma::ArenaMemoryResource::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpma_1_1ArenaMemoryResource_1af5f1e7154cf6d5a0963f4d0af9213916" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; <ref refid="classpma_1_1ArenaMemoryResource_1_1Impl" kindref="compound">Impl</ref>, <ref refid="structpma_1_1FactoryDestroy" kindref="compound">FactoryDestroy</ref>&lt; <ref refid="classpma_1_1ArenaMemoryResource_1_1Impl" kindref="compound">Impl</ref> &gt; &gt;</type>
+        <definition>ScopedPtr&lt;Impl, FactoryDestroy&lt;Impl&gt; &gt; pma::ArenaMemoryResource::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <qualifiedname>pma::ArenaMemoryResource::pImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="89" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1aef2cb6cd6b6bb1f53787976e2503a271" compoundref="ArenaMemoryResource_8cpp" startline="141" endline="143">allocate</referencedby>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1a3932222b28da74089edd8a6243efdb16" compoundref="ArenaMemoryResource_8cpp" startline="149" endline="151">getUpstreamMemoryResource</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1abc607be8d16966da05e83fe687444a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref></type>
+        <definition>pma::ArenaMemoryResource::ArenaMemoryResource</definition>
+        <argsstring>(std::size_t initialSize, std::size_t regionSize, float growthFactor, MemoryResource *upstream)</argsstring>
+        <name>ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::ArenaMemoryResource</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>initialSize</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>regionSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>growthFactor</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>upstream</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>initialSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of the first allocated region from which allocation requests are served. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regionSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When a memory region backing allocation requests has not enough free space to serve an allocation, an additional region is allocated for both the current and all subsequent allocations. This parameter denotes the size of these additionally allocated regions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>growthFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It describes by which factor should each subsequently allocated region be scaled, relative to the previous region. A list of possible region allocation would look like:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+regions = {initialSize, regionSize, regions[1] * growthFactor, regions[2] * growthFactor, ... , regions[n - 1] * growthFactor}</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>upstream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backing memory region will be allocated using the given upstream <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="36" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a8e1304547bec00e123f0892d40e72312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref></type>
+        <definition>pma::ArenaMemoryResource::ArenaMemoryResource</definition>
+        <argsstring>(std::size_t regionSize, float growthFactor, MemoryResource *upstream)</argsstring>
+        <name>ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::ArenaMemoryResource</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>regionSize</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>growthFactor</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>upstream</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>regionSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When a memory region backing allocation requests has not enough free space to serve an allocation, an additional region is allocated for both the current and all subsequent allocations. This parameter denotes the size of the initial and all subsequently allocated regions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>growthFactor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>It describes by which factor should each subsequently allocated region be scaled, relative to the previous region. A list of possible region allocation would look like:</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+regions = {initialSize, regionSize, regions[1] * growthFactor, regions[2] * growthFactor, ... , regions[n - 1] * growthFactor}</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>upstream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backing memory region will be allocated using the given upstream <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="52" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a20b70c4a605f0c4b2e26786b1e367982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref></type>
+        <definition>pma::ArenaMemoryResource::ArenaMemoryResource</definition>
+        <argsstring>(std::size_t regionSize, MemoryResource *upstream)</argsstring>
+        <name>ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::ArenaMemoryResource</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>regionSize</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>upstream</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>regionSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When a memory region backing allocation requests has not enough free space to serve an allocation, an additional region is allocated for both the current and all subsequent allocations. This parameter denotes the size of the initial and all subsequently allocated regions. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The growth factor in this case will be 1.0, i.e. no growth. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>upstream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The backing memory region will be allocated using the given upstream <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="64" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a3a79b567cf0e0d05908e9dab3470b059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref></type>
+        <definition>pma::ArenaMemoryResource::~ArenaMemoryResource</definition>
+        <argsstring>()</argsstring>
+        <name>~ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::~ArenaMemoryResource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="66" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a75a3742c01a227ed6f79bee641c902be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pma::ArenaMemoryResource::ArenaMemoryResource</definition>
+        <argsstring>(const ArenaMemoryResource &amp;)=delete</argsstring>
+        <name>ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::ArenaMemoryResource</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="68" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a9dfd32e6040802fb26422cb68af29bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;</type>
+        <definition>ArenaMemoryResource &amp; pma::ArenaMemoryResource::operator=</definition>
+        <argsstring>(const ArenaMemoryResource &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>pma::ArenaMemoryResource::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="69" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a3c98c490f0f642bd2e3b19bcd25dc32d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref></type>
+        <definition>pma::ArenaMemoryResource::ArenaMemoryResource</definition>
+        <argsstring>(ArenaMemoryResource &amp;&amp;)</argsstring>
+        <name>ArenaMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::ArenaMemoryResource</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="71" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a0fec1d930db3c67643e74ffb04432c00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref> <ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;</type>
+        <definition>ArenaMemoryResource &amp; pma::ArenaMemoryResource::operator=</definition>
+        <argsstring>(ArenaMemoryResource &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>pma::ArenaMemoryResource::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1ArenaMemoryResource" kindref="compound">ArenaMemoryResource</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="72" column="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1aef2cb6cd6b6bb1f53787976e2503a271" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref> void *</type>
+        <definition>void * pma::ArenaMemoryResource::allocate</definition>
+        <argsstring>(std::size_t size, std::size_t alignment) override</argsstring>
+        <name>allocate</name>
+        <qualifiedname>pma::ArenaMemoryResource::allocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ad43f9c740450042025424135a15497bc">allocate</reimplements>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+<para>All allocations will be served from the currently active memory region. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="77" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="141" bodyend="143"/>
+        <references refid="classpma_1_1ArenaMemoryResource_1af5f1e7154cf6d5a0963f4d0af9213916" compoundref="ArenaMemoryResource_8h" startline="89">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1ad8f3c6e40a851df95b8ccee6d4e02022" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref> void</type>
+        <definition>void pma::ArenaMemoryResource::deallocate</definition>
+        <argsstring>(void *ptr, std::size_t size, std::size_t alignment) override</argsstring>
+        <name>deallocate</name>
+        <qualifiedname>pma::ArenaMemoryResource::deallocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ae775e6f871764336db8dc4d95ba95b2b">deallocate</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+<para>This is a no-op, and the regions are only freed when the arena itself is destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="81" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1ArenaMemoryResource_1a3932222b28da74089edd8a6243efdb16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="pma_2Defs_8h_1adc5b78871eef4c421dea15a19d1f7144" kindref="member">PMAAPI</ref> <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource * pma::ArenaMemoryResource::getUpstreamMemoryResource</definition>
+        <argsstring>() const</argsstring>
+        <name>getUpstreamMemoryResource</name>
+        <qualifiedname>pma::ArenaMemoryResource::getUpstreamMemoryResource</qualifiedname>
+        <briefdescription>
+<para>The upstream memory resource was passed through the constructor and is backing all arena allocations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="85" column="31" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="149" bodyend="151"/>
+        <references refid="classpma_1_1ArenaMemoryResource_1af5f1e7154cf6d5a0963f4d0af9213916" compoundref="ArenaMemoryResource_8h" startline="89">pImpl</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Serves allocations from a preallocated memory region. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pma::ArenaMemoryResource</label>
+        <link refid="classpma_1_1ArenaMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>pma::FactoryDestroy&lt; pma::ArenaMemoryResource::Impl &gt;</label>
+        <link refid="structpma_1_1FactoryDestroy"/>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; pma::ArenaMemoryResource::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pma::ScopedPtr&lt; pma::ArenaMemoryResource::Impl, pma::FactoryDestroy&lt; pma::ArenaMemoryResource::Impl &gt; &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; pma::ArenaMemoryResource::Impl, pma::FactoryDestroy&lt; pma::ArenaMemoryResource::Impl &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; T &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; pma::ArenaMemoryResource::Impl &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; pma::ArenaMemoryResource::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pma::ArenaMemoryResource</label>
+        <link refid="classpma_1_1ArenaMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pma::FactoryDestroy&lt; T, B &gt;</label>
+        <link refid="structpma_1_1FactoryDestroy"/>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+      <node id="8">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="9" relation="private-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; U &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+      </node>
+      <node id="9">
+        <label>typename DefaultInstanceDestroyer&lt;T&gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" line="17" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/ArenaMemoryResource.h" bodystart="17" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classpma_1_1ArenaMemoryResource_1aef2cb6cd6b6bb1f53787976e2503a271" prot="public" virt="virtual"><scope>pma::ArenaMemoryResource</scope><name>allocate</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1abc607be8d16966da05e83fe687444a3c" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a8e1304547bec00e123f0892d40e72312" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a20b70c4a605f0c4b2e26786b1e367982" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a75a3742c01a227ed6f79bee641c902be" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a3c98c490f0f642bd2e3b19bcd25dc32d" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1ad8f3c6e40a851df95b8ccee6d4e02022" prot="public" virt="virtual"><scope>pma::ArenaMemoryResource</scope><name>deallocate</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a3932222b28da74089edd8a6243efdb16" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>getUpstreamMemoryResource</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a9dfd32e6040802fb26422cb68af29bb8" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>operator=</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a0fec1d930db3c67643e74ffb04432c00" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>operator=</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1af5f1e7154cf6d5a0963f4d0af9213916" prot="private" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>pImpl</name></member>
+      <member refid="classpma_1_1ArenaMemoryResource_1a3a79b567cf0e0d05908e9dab3470b059" prot="public" virt="non-virtual"><scope>pma::ArenaMemoryResource</scope><name>~ArenaMemoryResource</name></member>
+      <member refid="classpma_1_1MemoryResource_1a2f1214ba97985f9728633a518fb62578" prot="public" virt="virtual"><scope>pma::ArenaMemoryResource</scope><name>~MemoryResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

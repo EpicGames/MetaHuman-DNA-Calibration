@@ -1,0 +1,1006 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1BehaviorReader" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dna::BehaviorReader</compoundname>
+    <basecompoundref refid="classdna_1_1DefinitionReader" prot="public" virt="virtual">dna::DefinitionReader</basecompoundref>
+    <derivedcompoundref refid="classdna_1_1Reader" prot="public" virt="non-virtual">dna::Reader</derivedcompoundref>
+    <includes refid="BehaviorReader_8h" local="no">BehaviorReader.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a24c179c876baca38502aeef6bb3208d0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>dna::BehaviorReader::~BehaviorReader</definition>
+        <argsstring>()</argsstring>
+        <name>~BehaviorReader</name>
+        <qualifiedname>dna::BehaviorReader::~BehaviorReader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="21" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a6cf853f5d537e6b8e2634ebf3388b529" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getGUIToRawInputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawInputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a961913b02703cc298339618d1592a98e">getGUIToRawInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a961913b02703cc298339618d1592a98e">getGUIToRawInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1ab210231c0d48136f28c137a114e18e20">getGUIToRawInputIndices</reimplementedby>
+        <briefdescription>
+<para>Input indices used for mapping gui to raw controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of input indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="29" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a8e6d36a27afd3a08e565fb0fe55f22b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getGUIToRawOutputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawOutputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1abfda7e1c6270ddcf7c0187730ae5ff64">getGUIToRawOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1abfda7e1c6270ddcf7c0187730ae5ff64">getGUIToRawOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a84abe0bb2fa9e4e30e8c23a216444150">getGUIToRawOutputIndices</reimplementedby>
+        <briefdescription>
+<para>Output indices used for mapping gui to raw controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of output indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="35" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a4fd0213dcb2856b64280454228729855" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getGUIToRawFromValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawFromValues</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawFromValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a71a6574ae85c319336d22d41837dfdd9">getGUIToRawFromValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a71a6574ae85c319336d22d41837dfdd9">getGUIToRawFromValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a522186dca1c692ed70ac798c8c3fce5f">getGUIToRawFromValues</reimplementedby>
+        <briefdescription>
+<para>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of filter values. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="42" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1abe4d1ce29676b07d805e685199a1ef0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getGUIToRawToValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawToValues</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawToValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5ec36eb78da0f61715a4a64ac622e031">getGUIToRawToValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5ec36eb78da0f61715a4a64ac622e031">getGUIToRawToValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1ae642d36ff8ed489220035ad8098b1429">getGUIToRawToValues</reimplementedby>
+        <briefdescription>
+<para>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of filter values. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="49" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a05f06e0f08a8f2676f0286300d880d12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getGUIToRawSlopeValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawSlopeValues</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawSlopeValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a9d65ae0fee6395114ef5d85fa98b6034">getGUIToRawSlopeValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a9d65ae0fee6395114ef5d85fa98b6034">getGUIToRawSlopeValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1ac8048540778e5cfc3a908514e13d4742">getGUIToRawSlopeValues</reimplementedby>
+        <briefdescription>
+<para>Computational values(slope/gradient) used for calculating the output value during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of computational values. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="56" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a68f381f520ebfd68f02020ce8f5b0a69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getGUIToRawCutValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getGUIToRawCutValues</name>
+        <qualifiedname>dna::BehaviorReader::getGUIToRawCutValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5f2637eff4ec68e522f6908b63f8aedf">getGUIToRawCutValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5f2637eff4ec68e522f6908b63f8aedf">getGUIToRawCutValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1abb4c5bf86e2fe63f315b18912e39c082">getGUIToRawCutValues</reimplementedby>
+        <briefdescription>
+<para>Computational values(vertical intercept) used for calculating the output value during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of computational values. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="63" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a651c99df2bd266b16efb83ff1fedac7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint16_t</type>
+        <definition>virtual std::uint16_t dna::BehaviorReader::getPSDCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPSDCount</name>
+        <qualifiedname>dna::BehaviorReader::getPSDCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aa5df124ca7a6fe8c8ba9b8975468191a">getPSDCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aa5df124ca7a6fe8c8ba9b8975468191a">getPSDCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1afeeb523e499320335a43d2c5e92b734f">getPSDCount</reimplementedby>
+        <briefdescription>
+<para>The number of distinct PSD expressions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="67" column="31"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a09f89a0f76798571d7f619f19d19787e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getPSDRowIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPSDRowIndices</name>
+        <qualifiedname>dna::BehaviorReader::getPSDRowIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a82cd06debfa6eb79741484fedf7177aa">getPSDRowIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a82cd06debfa6eb79741484fedf7177aa">getPSDRowIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a4873a216f4578f806fc3fbcc16e3716f">getPSDRowIndices</reimplementedby>
+        <briefdescription>
+<para>PSD(input) indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of PSD indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="73" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a35f70e12a860c73d452e27fed9b75f42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getPSDColumnIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPSDColumnIndices</name>
+        <qualifiedname>dna::BehaviorReader::getPSDColumnIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aa6946964b70a90e89d4c6a4e2acfad07">getPSDColumnIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aa6946964b70a90e89d4c6a4e2acfad07">getPSDColumnIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a2205e39ea5cac706bdda03e3269bc642">getPSDColumnIndices</reimplementedby>
+        <briefdescription>
+<para>Control(input) indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of control indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="79" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1ab177725a27c3664055a86aa8e9eaae3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getPSDValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getPSDValues</name>
+        <qualifiedname>dna::BehaviorReader::getPSDValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ad510393fa0877f6af7ac3dd2993e4fe5">getPSDValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ad510393fa0877f6af7ac3dd2993e4fe5">getPSDValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a93a0aba565d1c637476c48f075e639bc">getPSDValues</reimplementedby>
+        <briefdescription>
+<para>Weights associated with each PSD row and column pair. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of weights. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="85" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a6121d56124f208317bd3a719a5885da7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint16_t</type>
+        <definition>virtual std::uint16_t dna::BehaviorReader::getJointRowCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getJointRowCount</name>
+        <qualifiedname>dna::BehaviorReader::getJointRowCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a579bf8df63397ee31d233b41f1734090">getJointRowCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a579bf8df63397ee31d233b41f1734090">getJointRowCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a52ff5d18220583de57f3c6f5682294fe">getJointRowCount</reimplementedby>
+        <briefdescription>
+<para>Number of rows in the entire, uncompressed joint matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="90" column="31"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1ad8f0c4104ae71e2cae20de68ca7dac7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint16_t</type>
+        <definition>virtual std::uint16_t dna::BehaviorReader::getJointColumnCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getJointColumnCount</name>
+        <qualifiedname>dna::BehaviorReader::getJointColumnCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1af626c72e8a7abd61bbc9b4ab7bf1ba26">getJointColumnCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1af626c72e8a7abd61bbc9b4ab7bf1ba26">getJointColumnCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a63f9da44e4ed5220c859b1773610c2b1">getJointColumnCount</reimplementedby>
+        <briefdescription>
+<para>Number of columns in the entire, uncompressed joint matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="95" column="31"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a550aeba81792469e24ae52b2bc014fe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getJointVariableAttributeIndices</definition>
+        <argsstring>(std::uint16_t lod) const =0</argsstring>
+        <name>getJointVariableAttributeIndices</name>
+        <qualifiedname>dna::BehaviorReader::getJointVariableAttributeIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a4f1fa96cd0ead2ee3ed97b66065d9784">getJointVariableAttributeIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a4f1fa96cd0ead2ee3ed97b66065d9784">getJointVariableAttributeIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a55fbfcfa8ce0c466dd21c69b18681480">getJointVariableAttributeIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <briefdescription>
+<para>Joint attribute indices (output indices) for the requested LOD. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of joint indices. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="100" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1ac543cf35eccf547b45d37c4c7abd0dc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint16_t</type>
+        <definition>virtual std::uint16_t dna::BehaviorReader::getJointGroupCount</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getJointGroupCount</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a820a661617acca86d5472f4e6efc339d">getJointGroupCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a820a661617acca86d5472f4e6efc339d">getJointGroupCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a75c9bb26249d92c81c2a16247f8c4f5e">getJointGroupCount</reimplementedby>
+        <briefdescription>
+<para>Number of joint groups present in the entire joint matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="105" column="31"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+        <referencedby refid="structdnac_1_1DenormalizedData_1a1031b652c6d7b7237b0006b8a5581358" compoundref="dnacalib_2dna_2DenormalizedData_8h" startline="30" endline="46">dnac::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+        <referencedby refid="structdna_1_1DenormalizedData_1a656949ddde3d14b03a0ecb52f0ba6478" compoundref="dna_2DenormalizedData_8h" startline="30" endline="46">dna::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1afe6a30955afbef5d10bb84b1f643bf43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getJointGroupLODs</definition>
+        <argsstring>(std::uint16_t jointGroupIndex) const =0</argsstring>
+        <name>getJointGroupLODs</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a8f39e5b86f5779b9470d4d7c9360e11f">getJointGroupLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a8f39e5b86f5779b9470d4d7c9360e11f">getJointGroupLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1ace0cee61d7b90f17d4c87bd7a8d35685">getJointGroupLODs</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Number of rows per each level of detail for the requested joint group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself, while the value denotes the number of rows within the joint group belonging to that level. e.g.: [12, 9, 3] | | + LOD-2 contains first 3 rows | + LOD-1 contains first 9 rows<itemizedlist>
+<listitem><para>LOD-0 contains first 12 rows </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of LOD bounds. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="122" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+        <referencedby refid="structdnac_1_1DenormalizedData_1a1031b652c6d7b7237b0006b8a5581358" compoundref="dnacalib_2dna_2DenormalizedData_8h" startline="30" endline="46">dnac::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+        <referencedby refid="structdna_1_1DenormalizedData_1a656949ddde3d14b03a0ecb52f0ba6478" compoundref="dna_2DenormalizedData_8h" startline="30" endline="46">dna::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a028bfd1ba3ccbf52ef3cd1aedacaabfb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getJointGroupInputIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex) const =0</argsstring>
+        <name>getJointGroupInputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a4fd0b0de2f0d7d462da784e11e0b99db">getJointGroupInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a4fd0b0de2f0d7d462da784e11e0b99db">getJointGroupInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a1433abc3344a820826f2a2e887e6220d">getJointGroupInputIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Column indices that the requested joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The column indices point into the entire, uncompressed joint matrix. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of column indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="134" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a81721b4cb25b90c76458f7b42e93db2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getJointGroupOutputIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex) const =0</argsstring>
+        <name>getJointGroupOutputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a269a2542860a3dbd2c18eeb71ddfca48">getJointGroupOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a269a2542860a3dbd2c18eeb71ddfca48">getJointGroupOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a0dcf65e478fcaeb6683c963f8b599f01">getJointGroupOutputIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Row indices that the requested joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The row indices point into the entire, uncompressed joint matrix. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of row indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="146" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+        <referencedby refid="structdnac_1_1DenormalizedData_1a1031b652c6d7b7237b0006b8a5581358" compoundref="dnacalib_2dna_2DenormalizedData_8h" startline="30" endline="46">dnac::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+        <referencedby refid="structdna_1_1DenormalizedData_1a656949ddde3d14b03a0ecb52f0ba6478" compoundref="dna_2DenormalizedData_8h" startline="30" endline="46">dna::DenormalizedData&lt; Reader &gt;::populateJointVariableAttributeIndices</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1add58838dd0bffad6ac9d66887e969e5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getJointGroupValues</definition>
+        <argsstring>(std::uint16_t jointGroupIndex) const =0</argsstring>
+        <name>getJointGroupValues</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ab523ed4332ef007b9368d2ecf03ab572">getJointGroupValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ab523ed4332ef007b9368d2ecf03ab572">getJointGroupValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1aafb275f39c9e45429fab9cba05a418a6">getJointGroupValues</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Values that the requested joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of values. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="156" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1af2c5860e22023c82b41ad7a36caae3c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getJointGroupJointIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex) const =0</argsstring>
+        <name>getJointGroupJointIndices</name>
+        <qualifiedname>dna::BehaviorReader::getJointGroupJointIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ab802650f9ec38e3bdfb403bd1fec4915">getJointGroupJointIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ab802650f9ec38e3bdfb403bd1fec4915">getJointGroupJointIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a084934ddef76f46a3ccbe1d6803bc924">getJointGroupJointIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Joint indices that the requested joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>These joint indices can be used to get the joint names through <ref refid="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45" kindref="member">DefinitionReader::getJointName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of joint indices. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1DefinitionReader" kindref="compound">DefinitionReader</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="169" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1ad585141fe808b93db5479c8cb21b7e82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getBlendShapeChannelLODs</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getBlendShapeChannelLODs</name>
+        <qualifiedname>dna::BehaviorReader::getBlendShapeChannelLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aac54b695f6d3f2e2d2fcecb3d933d1d1">getBlendShapeChannelLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1aac54b695f6d3f2e2d2fcecb3d933d1d1">getBlendShapeChannelLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a3dc92e632b87818feed5c55e555d7cef">getBlendShapeChannelLODs</reimplementedby>
+        <briefdescription>
+<para>Input index count per each level of detail for blend shape channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of input indices belonging to that level. </para>
+</simplesect>
+<simplesect kind="warning"><para>These LOD values are not interchangeable with the LOD indices from <ref refid="classdna_1_1DefinitionReader_1a052f479fb9782af634667a2c7d86dd7d" kindref="member">DefinitionReader::getBlendShapeChannelIndicesForLOD</ref>. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of LOD bounds. </para>
+</simplesect>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="180" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1ae34d90ae469e1080ff1cc93d5e1b6cad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getBlendShapeChannelInputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getBlendShapeChannelInputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getBlendShapeChannelInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a7b7335431d32e8530cb38db817c907dc">getBlendShapeChannelInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a7b7335431d32e8530cb38db817c907dc">getBlendShapeChannelInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a9c13392d509017c7c07374f95c9e3ec3">getBlendShapeChannelInputIndices</reimplementedby>
+        <briefdescription>
+<para>Input indices used to index into the input vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of input indices. </para>
+</simplesect>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="186" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a2cf4f15450f8589b29e240208748eb3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getBlendShapeChannelOutputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getBlendShapeChannelOutputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getBlendShapeChannelOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a7ede6b0475651224b6b7bef5fa405f4f">getBlendShapeChannelOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a7ede6b0475651224b6b7bef5fa405f4f">getBlendShapeChannelOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a9195ae58d486481b765733ea41e45254">getBlendShapeChannelOutputIndices</reimplementedby>
+        <briefdescription>
+<para>Output indices specify the positions of blend shape channel output values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of output indices. </para>
+</simplesect>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="192" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a50c651d7e7400e17ff7da31036b5c352" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getAnimatedMapLODs</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapLODs</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1afc68f9759453440236a84c53ec89299a">getAnimatedMapLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1afc68f9759453440236a84c53ec89299a">getAnimatedMapLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a3fc16888b937bdbdfd1865e79c96752b">getAnimatedMapLODs</reimplementedby>
+        <briefdescription>
+<para>Row count per each level of detail for animated maps. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of rows (within the conditional table), belonging to that level. </para>
+</simplesect>
+<simplesect kind="return"><para>View over the array of LOD bounds. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="202" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a504220b3ead3f11ea5888d208f8055bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getAnimatedMapInputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapInputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ac9552675b375d9105ccfdce063041fdd">getAnimatedMapInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ac9552675b375d9105ccfdce063041fdd">getAnimatedMapInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a120d3ed1199fce1abe97972f18f63da0">getAnimatedMapInputIndices</reimplementedby>
+        <briefdescription>
+<para>Input indices used to index into the array of input values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of input indices. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="208" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a5ca7158ed4146d09935548ece05b7f94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+        <definition>virtual ConstArrayView&lt; std::uint16_t &gt; dna::BehaviorReader::getAnimatedMapOutputIndices</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapOutputIndices</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5221c9e68ce8ed44d1ec83d0eb16a5a8">getAnimatedMapOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5221c9e68ce8ed44d1ec83d0eb16a5a8">getAnimatedMapOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a8610182358cc0bffb5728f3ce8c5daea">getAnimatedMapOutputIndices</reimplementedby>
+        <briefdescription>
+<para>Output indices that specify the computed output value&apos;s position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of output indices. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="214" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1af7eb657428d974ccc5c1ae9c2516a772" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getAnimatedMapFromValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapFromValues</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapFromValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a0b8cab7471ca3831ad8ec27b71ce365d">getAnimatedMapFromValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a0b8cab7471ca3831ad8ec27b71ce365d">getAnimatedMapFromValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a00e009aa4c2566c809b83098e85de32e">getAnimatedMapFromValues</reimplementedby>
+        <briefdescription>
+<para>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of filter values. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="221" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a21057f6c94895629229021b20133c007" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getAnimatedMapToValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapToValues</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapToValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5f7b41aed62ed8907026647f98f108dc">getAnimatedMapToValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a5f7b41aed62ed8907026647f98f108dc">getAnimatedMapToValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a600078aac3e67df3fccd717e7896d75f">getAnimatedMapToValues</reimplementedby>
+        <briefdescription>
+<para>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of filter values. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="228" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a59ef8f6885a33b102fb938b7a12da16b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getAnimatedMapSlopeValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapSlopeValues</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapSlopeValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ae83dce702042ab7a5fee8a9b94ff81a4">getAnimatedMapSlopeValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1ae83dce702042ab7a5fee8a9b94ff81a4">getAnimatedMapSlopeValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1ad84991b7d84998ae469b7d90bce7cd85">getAnimatedMapSlopeValues</reimplementedby>
+        <briefdescription>
+<para>Computational values(slope/gradient) used for calculating the output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of computational values. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="234" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorReader_1a7ab5ba50c829ea9b5ef63495608fbffe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+        <definition>virtual ConstArrayView&lt; float &gt; dna::BehaviorReader::getAnimatedMapCutValues</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getAnimatedMapCutValues</name>
+        <qualifiedname>dna::BehaviorReader::getAnimatedMapCutValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a024d2a434ee21d7ee8674eb6eb98a8fa">getAnimatedMapCutValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1ReaderImpl_1a024d2a434ee21d7ee8674eb6eb98a8fa">getAnimatedMapCutValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ReaderImpl_1a99c5068a32677952c7e836a5c7b9e970">getAnimatedMapCutValues</reimplementedby>
+        <briefdescription>
+<para>Computational values(vertical intercept) used for calculating the output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>View over the array of computational values. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="240" column="32"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Read-only accessors for <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> attributes that define the rig&apos;s evaluation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Implementors should inherit from <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> itself and not this class. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>dna::ReaderImpl&lt; BinaryStreamReader &gt;</label>
+        <link refid="classdna_1_1ReaderImpl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dnac::ReaderImpl&lt; DNACalibDNAReader &gt;</label>
+        <link refid="classdnac_1_1ReaderImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::ReaderImpl&lt; JSONStreamReader &gt;</label>
+        <link refid="classdna_1_1ReaderImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::BehaviorReader</label>
+        <link refid="classdna_1_1BehaviorReader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna::BinaryStreamReader</label>
+        <link refid="classdna_1_1BinaryStreamReader"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::BinaryStreamReaderImpl</label>
+        <link refid="classdna_1_1BinaryStreamReaderImpl"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DefinitionReader</label>
+        <link refid="classdna_1_1DefinitionReader"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DescriptorReader</label>
+        <link refid="classdna_1_1DescriptorReader"/>
+      </node>
+      <node id="9">
+        <label>dna::JSONStreamReader</label>
+        <link refid="classdna_1_1JSONStreamReader"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::JSONStreamReaderImpl</label>
+        <link refid="classdna_1_1JSONStreamReaderImpl"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::Reader</label>
+        <link refid="classdna_1_1Reader"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::StreamReader</label>
+        <link refid="classdna_1_1StreamReader"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dnac::DNACalibDNAReader</label>
+        <link refid="classdnac_1_1DNACalibDNAReader"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dna::BehaviorReader</label>
+        <link refid="classdna_1_1BehaviorReader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DefinitionReader</label>
+        <link refid="classdna_1_1DefinitionReader"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DescriptorReader</label>
+        <link refid="classdna_1_1DescriptorReader"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" line="19" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorReader.h" bodystart="19" bodyend="241"/>
+    <listofallmembers>
+      <member refid="classdna_1_1DescriptorReader_1adf37388277858ed1880f4587dc3c17bb" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAge</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a817e01dd0c8c013ddeb87200a77f444e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapCount</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a7ab5ba50c829ea9b5ef63495608fbffe" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapCutValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1af7eb657428d974ccc5c1ae9c2516a772" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapFromValues</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a9407e62b3a9dd9dd8835e4b00ca00c7c" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapIndexListCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1aeb215a0f41d4d5b38bb331e14c937155" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapIndicesForLOD</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a504220b3ead3f11ea5888d208f8055bc" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a50c651d7e7400e17ff7da31036b5c352" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapLODs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a057aa04a10d076a1569995339d95533d" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapName</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a5ca7158ed4146d09935548ece05b7f94" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a59ef8f6885a33b102fb938b7a12da16b" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a21057f6c94895629229021b20133c007" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getAnimatedMapToValues</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a27bdf08bcbc0ffc73be4c6d1c4242f87" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getArchetype</name></member>
+      <member refid="classdna_1_1DefinitionReader_1abbfe6ca7c250868c9b5690c9e6dd73f2" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1aa03bd161fb6e82ceb88cf4ccbaf56e3d" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelIndexListCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a052f479fb9782af634667a2c7d86dd7d" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelIndicesForLOD</name></member>
+      <member refid="classdna_1_1BehaviorReader_1ae34d90ae469e1080ff1cc93d5e1b6cad" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1ad585141fe808b93db5479c8cb21b7e82" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelLODs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a9162ea692bf3c45f65b7a569d5061623" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelName</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a2cf4f15450f8589b29e240208748eb3b" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getBlendShapeChannelOutputIndices</name></member>
+      <member refid="classdna_1_1DescriptorReader_1aec61b30a983756b0b42523b1fd1b4bcc" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getCoordinateSystem</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a43466c9804dda58f1ff3694c94213b97" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getDBComplexity</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a17d3855616540f144aa35f3a2afe08b2" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getDBMaxLOD</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a7007f41a06776604bd636040eb780e59" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getDBName</name></member>
+      <member refid="classdna_1_1DescriptorReader_1ae41de3dc5c2dbaced840dcac773b16a2" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGender</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a70c2f16889d2aa1f6c55ffaed75aa8d7" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIControlCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1acc5b028b9f5d8d936b6d99682906c8b1" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIControlName</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a68f381f520ebfd68f02020ce8f5b0a69" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawCutValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a4fd0213dcb2856b64280454228729855" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawFromValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a6cf853f5d537e6b8e2634ebf3388b529" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a8e6d36a27afd3a08e565fb0fe55f22b4" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a05f06e0f08a8f2676f0286300d880d12" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1abe4d1ce29676b07d805e685199a1ef0c" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getGUIToRawToValues</name></member>
+      <member refid="classdna_1_1BehaviorReader_1ad8f0c4104ae71e2cae20de68ca7dac7e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointColumnCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1acb077a6f51c59fcfc8a2e6dd2de6cf2e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointCount</name></member>
+      <member refid="classdna_1_1BehaviorReader_1ac543cf35eccf547b45d37c4c7abd0dc2" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupCount</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a028bfd1ba3ccbf52ef3cd1aedacaabfb" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1af2c5860e22023c82b41ad7a36caae3c1" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupJointIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1afe6a30955afbef5d10bb84b1f643bf43" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupLODs</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a81721b4cb25b90c76458f7b42e93db2c" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1add58838dd0bffad6ac9d66887e969e5e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointGroupValues</name></member>
+      <member refid="classdna_1_1DefinitionReader_1ae93fd7e42b8b0bb7bebb26761a682cda" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointIndexListCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a066b94bddd1f346c695eb7dd8a6dbc64" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointIndicesForLOD</name></member>
+      <member refid="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointName</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a82bfc19b2253282dd790133139d82019" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointParentIndex</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a6121d56124f208317bd3a719a5885da7" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointRowCount</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a550aeba81792469e24ae52b2bc014fe3" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getJointVariableAttributeIndices</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a5049f3e40b919fd15476ff24ea46ec32" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getLODCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a391df62515b035a3a53dea3f6a31a0a5" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DefinitionReader_1aa653c8e3f7fa43344f2855eba8ef91c6" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshBlendShapeChannelMappingCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a158686d4ea9cc9872c5381a5375d25c6" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshBlendShapeChannelMappingIndicesForLOD</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a7fa8d1c480f84b2af00902dcb220925e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a60c4e3b46f4094d3dccba05568cc0df1" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshIndexListCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a65511704aa8c9721359e3913dab1f023" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshIndicesForLOD</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a10353a0640d78d4ede523391293b9b30" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMeshName</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a883464cf9ef0e733eae4c52e20c8e997" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMetaDataCount</name></member>
+      <member refid="classdna_1_1DescriptorReader_1ac0a59511e545c660a9e5d1336ae6fc3c" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMetaDataKey</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a141c0d87063cd15317bc91a13e73dcf8" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getMetaDataValue</name></member>
+      <member refid="classdna_1_1DescriptorReader_1a421dc8eaebfd2940ebf7a7b42987a247" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getName</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a1779ee479199ca32799e8b93fb15bb18" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointRotation</name></member>
+      <member refid="classdna_1_1DefinitionReader_1aba2498d6f46b5a41f1cb4c007b6b93ae" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointRotationXs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a464c821267e2d38471e86cb966c1eb02" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointRotationYs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1acfe6841550455404a0233dde751d582a" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointRotationZs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1ac77468257dabbf2e1376c6a932fe6a51" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointTranslation</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a700d65fd83f6288bbc4fe2b27104e309" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointTranslationXs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1ac07c46f5959d3f9b75ca89b5ef5ea401" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointTranslationYs</name></member>
+      <member refid="classdna_1_1DefinitionReader_1ab43975b04fe2e9df1633deb104b413fd" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getNeutralJointTranslationZs</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a35f70e12a860c73d452e27fed9b75f42" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getPSDColumnIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a651c99df2bd266b16efb83ff1fedac7d" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getPSDCount</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a09f89a0f76798571d7f619f19d19787e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getPSDRowIndices</name></member>
+      <member refid="classdna_1_1BehaviorReader_1ab177725a27c3664055a86aa8e9eaae3d" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getPSDValues</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a0a8fa3d33f47640520f5cc676788470e" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getRawControlCount</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a4c39e828758f6249408fca4fbc4b89c0" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getRawControlName</name></member>
+      <member refid="classdna_1_1DescriptorReader_1aa8ea617301975ab2eaf42510ba470b1a" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getRotationUnit</name></member>
+      <member refid="classdna_1_1DescriptorReader_1aadfe5c13952fbbdbf8fea0a862817e00" prot="public" virt="pure-virtual"><scope>dna::BehaviorReader</scope><name>getTranslationUnit</name></member>
+      <member refid="classdna_1_1BehaviorReader_1a24c179c876baca38502aeef6bb3208d0" prot="protected" virt="virtual"><scope>dna::BehaviorReader</scope><name>~BehaviorReader</name></member>
+      <member refid="classdna_1_1DefinitionReader_1a8180cf1254cff7ce9af2826fdf5314fe" prot="protected" virt="virtual"><scope>dna::BehaviorReader</scope><name>~DefinitionReader</name></member>
+      <member refid="classdna_1_1DescriptorReader_1af22f474adbf54d027e2321d2bb4e44ae" prot="protected" virt="virtual"><scope>dna::BehaviorReader</scope><name>~DescriptorReader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

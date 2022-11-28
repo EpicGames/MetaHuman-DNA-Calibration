@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1Command" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dnac::Command</compoundname>
+    <derivedcompoundref refid="classdnac_1_1CalculateMeshLowerLODsCommand" prot="public" virt="non-virtual">dnac::CalculateMeshLowerLODsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1ClearBlendShapesCommand" prot="public" virt="non-virtual">dnac::ClearBlendShapesCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1CommandSequence" prot="public" virt="non-virtual">dnac::CommandSequence</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1ConditionalCommand" prot="public" virt="non-virtual">dnac::ConditionalCommand&lt; TCommand, TCondition &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1PruneBlendShapeTargetsCommand" prot="public" virt="non-virtual">dnac::PruneBlendShapeTargetsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RemoveJointAnimationCommand" prot="public" virt="non-virtual">dnac::RemoveJointAnimationCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RemoveJointCommand" prot="public" virt="non-virtual">dnac::RemoveJointCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RemoveMeshCommand" prot="public" virt="non-virtual">dnac::RemoveMeshCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RenameAnimatedMapCommand" prot="public" virt="non-virtual">dnac::RenameAnimatedMapCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RenameBlendShapeCommand" prot="public" virt="non-virtual">dnac::RenameBlendShapeCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RenameJointCommand" prot="public" virt="non-virtual">dnac::RenameJointCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RenameMeshCommand" prot="public" virt="non-virtual">dnac::RenameMeshCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1RotateCommand" prot="public" virt="non-virtual">dnac::RotateCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1ScaleCommand" prot="public" virt="non-virtual">dnac::ScaleCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand" prot="public" virt="non-virtual">dnac::SetBlendShapeTargetDeltasCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetLODsCommand" prot="public" virt="non-virtual">dnac::SetLODsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetNeutralJointRotationsCommand" prot="public" virt="non-virtual">dnac::SetNeutralJointRotationsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetNeutralJointTranslationsCommand" prot="public" virt="non-virtual">dnac::SetNeutralJointTranslationsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetSkinWeightsCommand" prot="public" virt="non-virtual">dnac::SetSkinWeightsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1SetVertexPositionsCommand" prot="public" virt="non-virtual">dnac::SetVertexPositionsCommand</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1TranslateCommand" prot="public" virt="non-virtual">dnac::TranslateCommand</derivedcompoundref>
+    <includes refid="Command_8h" local="no">Command.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>dnac::Command::~Command</definition>
+        <argsstring>()</argsstring>
+        <name>~Command</name>
+        <qualifiedname>dnac::Command::~Command</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/Command.h" line="17" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dnac::Command::run</definition>
+        <argsstring>(DNACalibDNAReader *output)=0</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::Command::run</qualifiedname>
+        <reimplementedby refid="classdnac_1_1CalculateMeshLowerLODsCommand_1a6080f7c1da01366b1e1445b4c7c784ff">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ClearBlendShapesCommand_1ae3a171cfec4e345465f6148f7e8b068a">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1CommandSequence_1a76e18e4c9004bc24f6ede391788f1a1f">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ConditionalCommand_1aeffefec94ab5bad0780992b3240e59af">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1PruneBlendShapeTargetsCommand_1a277167b4cdf33c3ed2dcd3de48ba2bc3">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RemoveJointAnimationCommand_1af97c76535800a9636174cf7bfe08cb13">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RemoveMeshCommand_1ab8feb2fdf9499e52255bf759223e3dd8">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameAnimatedMapCommand_1a68a25ff750e991cfbdf28faab5de2976">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameBlendShapeCommand_1a50c4e55e655fc3cb4dcffef9da5a18ef">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameJointCommand_1a714190bf6cf18c7cfd6b2f175b67e20c">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameMeshCommand_1a239774708e111b10de2a33e3ddb34df0">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa929c4b449ec5d0e7fc42cfb7b8569fa">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetLODsCommand_1a8e430b6494e4beec2812269541c9e3ac">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetNeutralJointRotationsCommand_1ae1f0b5bbdc6ac21f283cf666e62a34ce">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetNeutralJointTranslationsCommand_1a6e30e6bbb5f88876f8228608d019c062">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetSkinWeightsCommand_1a2a83baba612bc8df9676b9a938affffc">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1SetVertexPositionsCommand_1a0d15bb58023eeaa13a8465d50aedd8d1">run</reimplementedby>
+        <reimplementedby refid="classdnac_1_1TranslateCommand_1ad0d58b5f3b6787a7105b6f851c95dcbf">run</reimplementedby>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/Command.h" line="18" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdnac_1_1Command" kindref="compound">Command</ref> is an abstract class whose implementations are expected to modify the <ref refid="structdnac_1_1DNA" kindref="compound">DNA</ref> provided in the <ref refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee" kindref="member">run()</ref> method in some way. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::CalculateMeshLowerLODsCommand</label>
+        <link refid="classdnac_1_1CalculateMeshLowerLODsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dnac::ClearBlendShapesCommand</label>
+        <link refid="classdnac_1_1ClearBlendShapesCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="4">
+        <label>dnac::CommandSequence</label>
+        <link refid="classdnac_1_1CommandSequence"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::ConditionalCommand&lt; TCommand, TCondition &gt;</label>
+        <link refid="classdnac_1_1ConditionalCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::PruneBlendShapeTargetsCommand</label>
+        <link refid="classdnac_1_1PruneBlendShapeTargetsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dnac::RemoveJointAnimationCommand</label>
+        <link refid="classdnac_1_1RemoveJointAnimationCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dnac::RemoveJointCommand</label>
+        <link refid="classdnac_1_1RemoveJointCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dnac::RemoveMeshCommand</label>
+        <link refid="classdnac_1_1RemoveMeshCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dnac::RenameAnimatedMapCommand</label>
+        <link refid="classdnac_1_1RenameAnimatedMapCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dnac::RenameBlendShapeCommand</label>
+        <link refid="classdnac_1_1RenameBlendShapeCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dnac::RenameJointCommand</label>
+        <link refid="classdnac_1_1RenameJointCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dnac::RenameMeshCommand</label>
+        <link refid="classdnac_1_1RenameMeshCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dnac::RotateCommand</label>
+        <link refid="classdnac_1_1RotateCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dnac::ScaleCommand</label>
+        <link refid="classdnac_1_1ScaleCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dnac::SetBlendShapeTargetDeltasCommand</label>
+        <link refid="classdnac_1_1SetBlendShapeTargetDeltasCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>dnac::SetLODsCommand</label>
+        <link refid="classdnac_1_1SetLODsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>dnac::SetNeutralJointRotationsCommand</label>
+        <link refid="classdnac_1_1SetNeutralJointRotationsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dnac::SetNeutralJointTranslationsCommand</label>
+        <link refid="classdnac_1_1SetNeutralJointTranslationsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dnac::SetSkinWeightsCommand</label>
+        <link refid="classdnac_1_1SetSkinWeightsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dnac::SetVertexPositionsCommand</label>
+        <link refid="classdnac_1_1SetVertexPositionsCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>dnac::TranslateCommand</label>
+        <link refid="classdnac_1_1TranslateCommand"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/Command.h" line="15" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/Command.h" bodystart="15" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee" prot="public" virt="pure-virtual"><scope>dnac::Command</scope><name>run</name></member>
+      <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::Command</scope><name>~Command</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

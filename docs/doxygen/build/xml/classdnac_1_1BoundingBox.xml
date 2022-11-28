@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1BoundingBox" kind="class" language="C++" prot="public">
+    <compoundname>dnac::BoundingBox</compoundname>
+    <includes refid="BoundingBox_8h" local="no">BoundingBox.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classdnac_1_1BoundingBox_1a628812eed4526299fd00883e688c9ae3" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename TIter</type>
+          </param>
+        </templateparamlist>
+        <type>typename std::remove_cv&lt; typename std::iterator_traits&lt; TIter &gt;::value_type &gt;::type</type>
+        <definition>using dnac::BoundingBox::unqualified_iter_value_type =  typename std::remove_cv&lt;typename std::iterator_traits&lt;TIter&gt;::value_type&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>unqualified_iter_value_type</name>
+        <qualifiedname>dnac::BoundingBox::unqualified_iter_value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="19" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classdnac_1_1BoundingBox_1a8b138575d1346bd1181c13d8be92fa3a" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr float</type>
+        <definition>constexpr float dnac::BoundingBox::defaultAlpha</definition>
+        <argsstring></argsstring>
+        <name>defaultAlpha</name>
+        <qualifiedname>dnac::BoundingBox::defaultAlpha</qualifiedname>
+        <initializer>= 0.0003f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="15" column="32" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1BoundingBox_1a862e27ee3774419f0f430e53119073f8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref></type>
+        <definition>fvec2 dnac::BoundingBox::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <qualifiedname>dnac::BoundingBox::min</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="59" column="15" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1BoundingBox_1a635a0255d9c7e28ac00da23b00b73a17" compoundref="BoundingBox_8h" startline="25" endline="38">BoundingBox</referencedby>
+        <referencedby refid="classdnac_1_1BoundingBox_1afa6f9a290cff035df02943e0e9bdd0c5" compoundref="BoundingBox_8h" startline="45" endline="48">contains</referencedby>
+        <referencedby refid="classdnac_1_1BoundingBox_1a2b523dc0c7dba7f89cdef3b2044e6f53" compoundref="BoundingBox_8h" startline="50" endline="52">getMin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1BoundingBox_1aa0a7d2d93ec83c22059dcd92bc4ff098" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref></type>
+        <definition>fvec2 dnac::BoundingBox::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <qualifiedname>dnac::BoundingBox::max</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="60" column="15" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1BoundingBox_1a635a0255d9c7e28ac00da23b00b73a17" compoundref="BoundingBox_8h" startline="25" endline="38">BoundingBox</referencedby>
+        <referencedby refid="classdnac_1_1BoundingBox_1afa6f9a290cff035df02943e0e9bdd0c5" compoundref="BoundingBox_8h" startline="45" endline="48">contains</referencedby>
+        <referencedby refid="classdnac_1_1BoundingBox_1a50074fb199b67bd972fc7124efc1fd40" compoundref="BoundingBox_8h" startline="54" endline="56">getMax</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1BoundingBox_1a635a0255d9c7e28ac00da23b00b73a17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TIter</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; std::is_same&lt; <ref refid="classdnac_1_1BoundingBox_1a628812eed4526299fd00883e688c9ae3" kindref="member">unqualified_iter_value_type</ref>&lt; TIter &gt;, <ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref> &gt;::value, void &gt;::type *</type>
+            <defval>nullptr</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dnac::BoundingBox::BoundingBox</definition>
+        <argsstring>(TIter begin, TIter end, float alpha)</argsstring>
+        <name>BoundingBox</name>
+        <qualifiedname>dnac::BoundingBox::BoundingBox</qualifiedname>
+        <param>
+          <type>TIter</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>TIter</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="25" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="25" bodyend="38"/>
+        <references refid="classdnac_1_1BoundingBox_1aa0a7d2d93ec83c22059dcd92bc4ff098" compoundref="BoundingBox_8h" startline="60">max</references>
+        <references refid="classdnac_1_1BoundingBox_1a862e27ee3774419f0f430e53119073f8" compoundref="BoundingBox_8h" startline="59">min</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BoundingBox_1a6596fe2b5a31b1eeca82123ce1ec35a2" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TContainer</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>dnac::BoundingBox::BoundingBox</definition>
+        <argsstring>(TContainer container, float alpha=defaultAlpha)</argsstring>
+        <name>BoundingBox</name>
+        <qualifiedname>dnac::BoundingBox::BoundingBox</qualifiedname>
+        <param>
+          <type>TContainer</type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha</declname>
+          <defval><ref refid="classdnac_1_1BoundingBox_1a8b138575d1346bd1181c13d8be92fa3a" kindref="member">defaultAlpha</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="41" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BoundingBox_1afa6f9a290cff035df02943e0e9bdd0c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dnac::BoundingBox::contains</definition>
+        <argsstring>(const fvec2 &amp;point) const</argsstring>
+        <name>contains</name>
+        <qualifiedname>dnac::BoundingBox::contains</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="45" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="45" bodyend="48"/>
+        <references refid="classdnac_1_1BoundingBox_1aa0a7d2d93ec83c22059dcd92bc4ff098" compoundref="BoundingBox_8h" startline="60">max</references>
+        <references refid="classdnac_1_1BoundingBox_1a862e27ee3774419f0f430e53119073f8" compoundref="BoundingBox_8h" startline="59">min</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BoundingBox_1a2b523dc0c7dba7f89cdef3b2044e6f53" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref></type>
+        <definition>fvec2 dnac::BoundingBox::getMin</definition>
+        <argsstring>() const</argsstring>
+        <name>getMin</name>
+        <qualifiedname>dnac::BoundingBox::getMin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="50" column="15" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="50" bodyend="52"/>
+        <references refid="classdnac_1_1BoundingBox_1a862e27ee3774419f0f430e53119073f8" compoundref="BoundingBox_8h" startline="59">min</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BoundingBox_1a50074fb199b67bd972fc7124efc1fd40" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref></type>
+        <definition>fvec2 dnac::BoundingBox::getMax</definition>
+        <argsstring>() const</argsstring>
+        <name>getMax</name>
+        <qualifiedname>dnac::BoundingBox::getMax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="54" column="15" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="54" bodyend="56"/>
+        <references refid="classdnac_1_1BoundingBox_1aa0a7d2d93ec83c22059dcd92bc4ff098" compoundref="BoundingBox_8h" startline="60">max</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dnac::BoundingBox</label>
+        <link refid="classdnac_1_1BoundingBox"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-max</edgelabel>
+          <edgelabel>-min</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tdm::vec&lt; L, T &gt;</label>
+        <link refid="structtdm_1_1vec"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+values</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>tdm::vec&lt; 2 &gt;</label>
+        <link refid="structtdm_1_1vec"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; 2 &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" line="13" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/BoundingBox.h" bodystart="13" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1BoundingBox_1a635a0255d9c7e28ac00da23b00b73a17" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>BoundingBox</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a6596fe2b5a31b1eeca82123ce1ec35a2" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>BoundingBox</name></member>
+      <member refid="classdnac_1_1BoundingBox_1afa6f9a290cff035df02943e0e9bdd0c5" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>contains</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a8b138575d1346bd1181c13d8be92fa3a" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>defaultAlpha</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a50074fb199b67bd972fc7124efc1fd40" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>getMax</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a2b523dc0c7dba7f89cdef3b2044e6f53" prot="public" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>getMin</name></member>
+      <member refid="classdnac_1_1BoundingBox_1aa0a7d2d93ec83c22059dcd92bc4ff098" prot="private" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>max</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a862e27ee3774419f0f430e53119073f8" prot="private" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>min</name></member>
+      <member refid="classdnac_1_1BoundingBox_1a628812eed4526299fd00883e688c9ae3" prot="private" virt="non-virtual"><scope>dnac::BoundingBox</scope><name>unqualified_iter_value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

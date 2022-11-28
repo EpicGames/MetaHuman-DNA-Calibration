@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1Bounded" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>trio::Bounded</compoundname>
+    <derivedcompoundref refid="classtrio_1_1BoundedIOStream" prot="public" virt="non-virtual">trio::BoundedIOStream</derivedcompoundref>
+    <includes refid="Concepts_8h" local="no">Concepts.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1Bounded_1af35254c3e5f016117885d7234c80d9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint64_t</type>
+        <definition>virtual std::uint64_t trio::Bounded::size</definition>
+        <argsstring>()=0</argsstring>
+        <name>size</name>
+        <qualifiedname>trio::Bounded::size</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a886f87940390609350ebac7d3e34e225">size</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1a651ebe3cb84509f772a714cdf2397a67">size</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f">size</reimplementedby>
+        <briefdescription>
+<para>Obtain size of stream in bytes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Size in bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="127" column="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrio_1_1Bounded_1a7ea3df0afdd14896c30ae7502dffe2ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::Bounded::~Bounded</definition>
+        <argsstring>()</argsstring>
+        <name>~Bounded</name>
+        <qualifiedname>trio::Bounded::~Bounded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="130" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+      <node id="2">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="120" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" bodystart="120" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1Bounded_1af35254c3e5f016117885d7234c80d9a7" prot="public" virt="pure-virtual"><scope>trio::Bounded</scope><name>size</name></member>
+      <member refid="classtrio_1_1Bounded_1a7ea3df0afdd14896c30ae7502dffe2ff" prot="protected" virt="virtual"><scope>trio::Bounded</scope><name>~Bounded</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

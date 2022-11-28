@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="CharInputStreamBuf_8h" kind="file" language="C++">
+    <compoundname>CharInputStreamBuf.h</compoundname>
+    <includes local="no">array</includes>
+    <includes local="no">streambuf</includes>
+    <includedby refid="json_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>CharInputStreamBuf.h</label>
+        <link refid="CharInputStreamBuf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>array</label>
+      </node>
+      <node id="3">
+        <label>streambuf</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="3">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CharInputStreamBuf.h</label>
+        <link refid="CharInputStreamBuf_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classterse_1_1CharInputStreamBuf" prot="public">terse::CharInputStreamBuf</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;streambuf&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TStream,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>BufferSize<sp/>=<sp/>4096ul&gt;</highlight></codeline>
+<codeline lineno="18" refid="classterse_1_1CharInputStreamBuf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf" kindref="compound">CharInputStreamBuf</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::streambuf<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classterse_1_1CharInputStreamBuf_1a1b2fb77e398124ad95d9f1a0c1ade8e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1a1b2fb77e398124ad95d9f1a0c1ade8e8" kindref="member">PosType</ref><sp/>=<sp/>std::streambuf::pos_type;</highlight></codeline>
+<codeline lineno="21" refid="classterse_1_1CharInputStreamBuf_1aa04b0d748d1f31acbc1c4a3df951b369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1aa04b0d748d1f31acbc1c4a3df951b369" kindref="member">OffType</ref><sp/>=<sp/>std::streambuf::off_type;</highlight></codeline>
+<codeline lineno="22" refid="classterse_1_1CharInputStreamBuf_1ac208478bc0955f98b1741c7cd7421d3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1ac208478bc0955f98b1741c7cd7421d3c" kindref="member">CharType</ref><sp/>=<sp/>std::streambuf::char_type;</highlight></codeline>
+<codeline lineno="23" refid="classterse_1_1CharInputStreamBuf_1a19d18674161a3671a96b51cf4bbf64f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1a19d18674161a3671a96b51cf4bbf64f4" kindref="member">IntType</ref><sp/>=<sp/>std::streambuf::int_type;</highlight></codeline>
+<codeline lineno="24" refid="classterse_1_1CharInputStreamBuf_1a3d50202ad71124f48c0f344631aac3d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1a3d50202ad71124f48c0f344631aac3d9" kindref="member">TraitsType</ref><sp/>=<sp/>std::streambuf::traits_type;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27" refid="classterse_1_1CharInputStreamBuf_1a28b270e690df7bc0aadbd037b6b6096e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1CharInputStreamBuf_1a28b270e690df7bc0aadbd037b6b6096e" kindref="member">CharInputStreamBuf</ref>(TStream*<sp/>stream_)<sp/>:<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>{stream_},<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>bufferEnd<sp/>=<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>.data()<sp/>+<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>.size();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setg(bufferEnd,<sp/>bufferEnd,<sp/>bufferEnd);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classterse_1_1CharInputStreamBuf_1a4a6e1c0a2f6bacd36ad96b6aebb49bf0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::streamsize<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a4a6e1c0a2f6bacd36ad96b6aebb49bf0" kindref="member">xsgetn</ref>(<ref refid="classterse_1_1CharInputStreamBuf_1ac208478bc0955f98b1741c7cd7421d3c" kindref="member">CharType</ref>*<sp/>destination,<sp/>std::streamsize<sp/>size)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::streamsize<sp/>bytesNeeded<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Exhaust<sp/>buffer<sp/>contents<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gptr()<sp/>&lt;<sp/>egptr())<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesInBuffer<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(egptr()<sp/>-<sp/>gptr());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesToCopy<sp/>=<sp/>std::min(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bytesNeeded),<sp/>bytesInBuffer);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(destination,<sp/>gptr(),<sp/>bytesToCopy);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination<sp/>+=<sp/>bytesToCopy;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytesNeeded<sp/>-=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::streamsize</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bytesToCopy);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gbump(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1CharInputStreamBuf_1a19d18674161a3671a96b51cf4bbf64f4" kindref="member">IntType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bytesToCopy));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>are<sp/>still<sp/>bytes<sp/>needed<sp/>(more<sp/>data<sp/>than<sp/>buffer<sp/>contained),<sp/>read<sp/>the<sp/>rest<sp/>directly<sp/>from<sp/>the<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytesNeeded<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bytesRead<sp/>=</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::streamsize</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>-&gt;read(destination,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(bytesNeeded)));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bytesNeeded<sp/>-=<sp/>bytesRead;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Refill<sp/>buffer<sp/>for<sp/>subsequent<sp/>accesses<sp/>(if<sp/>possible)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1CharInputStreamBuf_1a6a57d2e11fad7b2ccb5f85f9a8f910c5" kindref="member">underflow</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size<sp/>-<sp/>bytesNeeded;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classterse_1_1CharInputStreamBuf_1a6a57d2e11fad7b2ccb5f85f9a8f910c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1CharInputStreamBuf_1a19d18674161a3671a96b51cf4bbf64f4" kindref="member">IntType</ref><sp/><ref refid="classterse_1_1CharInputStreamBuf_1a6a57d2e11fad7b2ccb5f85f9a8f910c5" kindref="member">underflow</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gptr()<sp/>&lt;<sp/>egptr())<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TraitsType::to_int_type(*gptr());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>base<sp/>=<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>.data();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>start<sp/>=<sp/>base;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initially<sp/>eback()<sp/>==<sp/>buffer.end()<sp/>,<sp/>but<sp/>if<sp/>that&apos;s<sp/>not<sp/>the<sp/>case,<sp/>buffer<sp/>has<sp/>already<sp/>been</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>filled<sp/>before,<sp/>in<sp/>which<sp/>case<sp/>first<sp/>copy<sp/>the<sp/>data<sp/>from<sp/>the<sp/>put-back<sp/>area<sp/>(located<sp/>at<sp/>the<sp/>end<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>buffer)<sp/>into<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>buffer,<sp/>making<sp/>them<sp/>the<sp/>next<sp/>characters<sp/>to<sp/>be<sp/>read<sp/>from<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Put-back<sp/>area<sp/>is<sp/>just<sp/>one<sp/>byte<sp/>in<sp/>this<sp/>implementation<sp/>currently.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(eback()<sp/>==<sp/>base)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(base,<sp/>egptr()<sp/>-<sp/>1ul,<sp/>1ul);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++start;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>fill<sp/>the<sp/>rest<sp/>of<sp/>the<sp/>buffer<sp/>after<sp/>the<sp/>put-back<sp/>area<sp/>is<sp/>moved<sp/>to<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesRead<sp/>=<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>-&gt;read(start,<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>.size()<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(start<sp/>-<sp/>base));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bytesRead<sp/>==<sp/>0ul)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TraitsType::eof();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setg(base,<sp/>start,<sp/>start<sp/>+<sp/>bytesRead);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TraitsType::to_int_type(*gptr());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classterse_1_1CharInputStreamBuf_1a9c67a9dd75892970c30f93ba9a451091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::streamsize<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a9c67a9dd75892970c30f93ba9a451091" kindref="member">showmanyc</ref>()</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::streamsize</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>-&gt;size()<sp/>-<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>-&gt;tell());</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93" refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TStream*<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a758cedd800e26fd5067ac13a436ee98a" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="94" refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::array&lt;char,<sp/>BufferSize&gt;<sp/><ref refid="classterse_1_1CharInputStreamBuf_1a88b86c210001968a1db43834ffe2c15f" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/CharInputStreamBuf.h"/>
+  </compounddef>
+</doxygen>

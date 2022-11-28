@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1BoundedIOStream" kind="class" language="C++" prot="public">
+    <compoundname>trio::BoundedIOStream</compoundname>
+    <basecompoundref refid="classtrio_1_1Controllable" prot="public" virt="non-virtual">trio::Controllable</basecompoundref>
+    <basecompoundref refid="classtrio_1_1Readable" prot="public" virt="non-virtual">trio::Readable</basecompoundref>
+    <basecompoundref refid="classtrio_1_1Writable" prot="public" virt="non-virtual">trio::Writable</basecompoundref>
+    <basecompoundref refid="classtrio_1_1Seekable" prot="public" virt="non-virtual">trio::Seekable</basecompoundref>
+    <basecompoundref refid="classtrio_1_1Bounded" prot="public" virt="non-virtual">trio::Bounded</basecompoundref>
+    <derivedcompoundref refid="classtrio_1_1FileStream" prot="public" virt="non-virtual">trio::FileStream</derivedcompoundref>
+    <derivedcompoundref refid="classtrio_1_1MemoryMappedFileStream" prot="public" virt="non-virtual">trio::MemoryMappedFileStream</derivedcompoundref>
+    <derivedcompoundref refid="classtrio_1_1MemoryStream" prot="public" virt="non-virtual">trio::MemoryStream</derivedcompoundref>
+    <includes refid="Stream_8h" local="no">Stream.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtrio_1_1BoundedIOStream_1ab68bb604ec68fe3571cd81789039d93f" prot="public" static="no">
+        <type><ref refid="namespacetrio_1a4b77aebe484e434a3112e66b70acd116" kindref="member">trio::AccessMode</ref></type>
+        <definition>using trio::BoundedIOStream::AccessMode =  trio::AccessMode</definition>
+        <argsstring></argsstring>
+        <name>AccessMode</name>
+        <qualifiedname>trio::BoundedIOStream::AccessMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="16" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classtrio_1_1BoundedIOStream_1ac7def2dc131ce92fade579b73695c972" prot="public" static="no">
+        <type><ref refid="namespacetrio_1a6020d2cf223a27e6f0c208754c379dce" kindref="member">trio::OpenMode</ref></type>
+        <definition>using trio::BoundedIOStream::OpenMode =  trio::OpenMode</definition>
+        <argsstring></argsstring>
+        <name>OpenMode</name>
+        <qualifiedname>trio::BoundedIOStream::OpenMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="17" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classtrio_1_1BoundedIOStream_1a0298a701e6508d21a06a7a12beea4ba2" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref></type>
+        <definition>const sc::StatusCode trio::BoundedIOStream::OpenError</definition>
+        <argsstring></argsstring>
+        <name>OpenError</name>
+        <qualifiedname>trio::BoundedIOStream::OpenError</qualifiedname>
+        <initializer>{100, &quot;Error opening file&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="19" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1af5145015e4f7c55662aa7a248dc29c0d" compoundref="FileStreamImpl_8cpp" startline="69" endline="93">trio::FileStreamImpl::open</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtrio_1_1BoundedIOStream_1a5bca141b1213e5f752a4fde5679708bd" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref></type>
+        <definition>const sc::StatusCode trio::BoundedIOStream::ReadError</definition>
+        <argsstring></argsstring>
+        <name>ReadError</name>
+        <qualifiedname>trio::BoundedIOStream::ReadError</qualifiedname>
+        <initializer>{101, &quot;Error reading file&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="20" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1abf0a546ad27b383f94b94e58a9210845" compoundref="FileStreamImpl_8cpp" startline="116" endline="129">trio::FileStreamImpl::read</referencedby>
+        <referencedby refid="classtrio_1_1MemoryStreamImpl_1a4f661e5c8c728e64bef2b19f5e16cfa9" compoundref="MemoryStreamImpl_8cpp" startline="118" endline="126">trio::MemoryStreamImpl::read</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref></type>
+        <definition>const sc::StatusCode trio::BoundedIOStream::WriteError</definition>
+        <argsstring></argsstring>
+        <name>WriteError</name>
+        <qualifiedname>trio::BoundedIOStream::WriteError</qualifiedname>
+        <initializer>{102, &quot;Error writing file&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="21" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1a21553243d67bcf7b017a24d71820c9fb" compoundref="FileStreamImpl_8cpp" startline="153" endline="170">trio::FileStreamImpl::write</referencedby>
+        <referencedby refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7" compoundref="MemoryStreamImpl_8cpp" startline="141" endline="149">trio::MemoryStreamImpl::write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtrio_1_1BoundedIOStream_1a20f4c9068fa8d05f6f6135c367fe4d24" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref></type>
+        <definition>const sc::StatusCode trio::BoundedIOStream::AlreadyOpenError</definition>
+        <argsstring></argsstring>
+        <name>AlreadyOpenError</name>
+        <qualifiedname>trio::BoundedIOStream::AlreadyOpenError</qualifiedname>
+        <initializer>{103, &quot;File already <ref refid="classtrio_1_1Openable_1addfdc5360983a446fe200410a3eaef8f" kindref="member">open</ref>&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="22" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1af5145015e4f7c55662aa7a248dc29c0d" compoundref="FileStreamImpl_8cpp" startline="69" endline="93">trio::FileStreamImpl::open</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classtrio_1_1BoundedIOStream_1afbe507ff2b39fc2ccb8550dfc27e0ce9" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref></type>
+        <definition>const sc::StatusCode trio::BoundedIOStream::SeekError</definition>
+        <argsstring></argsstring>
+        <name>SeekError</name>
+        <qualifiedname>trio::BoundedIOStream::SeekError</qualifiedname>
+        <initializer>{104, &quot;Error seeking file&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="23" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1a6f2a2ac467cec1b636300d6ed9ab9f48" compoundref="FileStreamImpl_8cpp" startline="103" endline="114">trio::FileStreamImpl::seek</referencedby>
+        <referencedby refid="classtrio_1_1MemoryStreamImpl_1a0a02d6bcef1fde8ec6631c0e052f2172" compoundref="MemoryStreamImpl_8cpp" startline="103" endline="116">trio::MemoryStreamImpl::seek</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1BoundedIOStream_1a68637af962300a39b1048d53d50d1f7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::BoundedIOStream::~BoundedIOStream</definition>
+        <argsstring>()</argsstring>
+        <name>~BoundedIOStream</name>
+        <qualifiedname>trio::BoundedIOStream::~BoundedIOStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="26" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+      <node id="1">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="2">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+      <node id="5">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="7">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+      <node id="6">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>sc::StatusCode</label>
+        <link refid="structsc_1_1StatusCode"/>
+      </node>
+      <node id="8">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+      <node id="1">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+AlreadyOpenError</edgelabel>
+          <edgelabel>+OpenError</edgelabel>
+          <edgelabel>+ReadError</edgelabel>
+          <edgelabel>+SeekError</edgelabel>
+          <edgelabel>+WriteError</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="2">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+      <node id="5">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="7">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+      <node id="6">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" line="14" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Stream.h" bodystart="14" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1BoundedIOStream_1ab68bb604ec68fe3571cd81789039d93f" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>AccessMode</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1a20f4c9068fa8d05f6f6135c367fe4d24" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>AlreadyOpenError</name></member>
+      <member refid="classtrio_1_1Closeable_1ac2e99d3bd99a39cf528ba29b1ba0baf1" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>close</name></member>
+      <member refid="classtrio_1_1Openable_1addfdc5360983a446fe200410a3eaef8f" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>open</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1a0298a701e6508d21a06a7a12beea4ba2" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>OpenError</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1ac7def2dc131ce92fade579b73695c972" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>OpenMode</name></member>
+      <member refid="classtrio_1_1Readable_1a134ad61b17c812f7aa2d912fc96d36f9" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>read</name></member>
+      <member refid="classtrio_1_1Readable_1ae7272a2547bb33c20c9b37493491c6c1" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>read</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1a5bca141b1213e5f752a4fde5679708bd" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>ReadError</name></member>
+      <member refid="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>seek</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1afbe507ff2b39fc2ccb8550dfc27e0ce9" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>SeekError</name></member>
+      <member refid="classtrio_1_1Bounded_1af35254c3e5f016117885d7234c80d9a7" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>size</name></member>
+      <member refid="classtrio_1_1Seekable_1af5071bbc6e4760fdfb3d5c0d83117b85" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>tell</name></member>
+      <member refid="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>write</name></member>
+      <member refid="classtrio_1_1Writable_1a7c23fed723a8afefd8ecfd78a48d18dc" prot="public" virt="pure-virtual"><scope>trio::BoundedIOStream</scope><name>write</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" prot="public" virt="non-virtual"><scope>trio::BoundedIOStream</scope><name>WriteError</name></member>
+      <member refid="classtrio_1_1Bounded_1a7ea3df0afdd14896c30ae7502dffe2ff" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Bounded</name></member>
+      <member refid="classtrio_1_1BoundedIOStream_1a68637af962300a39b1048d53d50d1f7c" prot="public" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~BoundedIOStream</name></member>
+      <member refid="classtrio_1_1Closeable_1aebe07ebcbb431ecdd71b575993038097" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Closeable</name></member>
+      <member refid="classtrio_1_1Controllable_1a66a85a74eb5921ba18e7d50f16bb3d14" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Controllable</name></member>
+      <member refid="classtrio_1_1Openable_1a24782209f544f766b4b953dae7b1dbd4" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Openable</name></member>
+      <member refid="classtrio_1_1Readable_1a49421a76a150a17207dc2d896d73d7a7" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Readable</name></member>
+      <member refid="classtrio_1_1Seekable_1abbd824465ebc3080b3c1d84f3266bb2d" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Seekable</name></member>
+      <member refid="classtrio_1_1Writable_1aadd7ce033795eb76f383ae341a17aa21" prot="protected" virt="virtual"><scope>trio::BoundedIOStream</scope><name>~Writable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

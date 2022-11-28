@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="BinaryStreamReaderImpl_8h" kind="file" language="C++">
+    <compoundname>BinaryStreamReaderImpl.h</compoundname>
+    <includes refid="BinaryStreamReader_8h" local="yes">dna/BinaryStreamReader.h</includes>
+    <includes local="yes">dna/ReaderImpl.h</includes>
+    <includes refid="src_2dna_2TypeDefs_8h" local="yes">dna/TypeDefs.h</includes>
+    <includes refid="FilteredInputArchive_8h" local="yes">dna/stream/FilteredInputArchive.h</includes>
+    <includes refid="Provider_8h" local="no">status/Provider.h</includes>
+    <includedby refid="BinaryStreamReaderImpl_8cpp" local="yes">BinaryStreamReaderImpl.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>dna/BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="4">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="6">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="9">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="18">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="17">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="79">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="24">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="58">
+        <label>dna/DataLayerBitmask.h</label>
+        <link refid="DataLayerBitmask_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>dna/TypeDefs.h</label>
+        <link refid="src_2dna_2TypeDefs_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>dna/stream/FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>dna/utils/ScopedEnumEx.h</label>
+        <link refid="dna_2utils_2ScopedEnumEx_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>terse/Archive.h</label>
+        <link refid="Archive_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>terse/archives/Common.h</label>
+        <link refid="Common_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>terse/archives/Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>terse/archives/binary/InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="71">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>terse/types/ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>terse/types/Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>terse/types/Transparent.h</label>
+        <link refid="Transparent_8h"/>
+      </node>
+      <node id="75">
+        <label>terse/utils/ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>terse/utils/Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="78">
+        <label>array</label>
+      </node>
+      <node id="14">
+        <label>cassert</label>
+      </node>
+      <node id="15">
+        <label>cstddef</label>
+      </node>
+      <node id="27">
+        <label>cstdint</label>
+      </node>
+      <node id="54">
+        <label>cstring</label>
+      </node>
+      <node id="60">
+        <label>dna/LODConstraint.h</label>
+      </node>
+      <node id="36">
+        <label>dna/ReaderImpl.h</label>
+      </node>
+      <node id="61">
+        <label>dna/filters/AnimatedMapFilter.h</label>
+      </node>
+      <node id="62">
+        <label>dna/filters/BlendShapeFilter.h</label>
+      </node>
+      <node id="63">
+        <label>dna/filters/JointFilter.h</label>
+      </node>
+      <node id="64">
+        <label>dna/filters/MeshFilter.h</label>
+      </node>
+      <node id="55">
+        <label>functional</label>
+      </node>
+      <node id="56">
+        <label>iterator</label>
+      </node>
+      <node id="44">
+        <label>list</label>
+      </node>
+      <node id="45">
+        <label>map</label>
+      </node>
+      <node id="40">
+        <label>memory</label>
+      </node>
+      <node id="41">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="46">
+        <label>set</label>
+      </node>
+      <node id="80">
+        <label>stdio.h</label>
+      </node>
+      <node id="47">
+        <label>string</label>
+      </node>
+      <node id="77">
+        <label>sys/param.h</label>
+      </node>
+      <node id="69">
+        <label>tuple</label>
+      </node>
+      <node id="42">
+        <label>type_traits</label>
+      </node>
+      <node id="48">
+        <label>unordered_map</label>
+      </node>
+      <node id="49">
+        <label>unordered_set</label>
+      </node>
+      <node id="20">
+        <label>utility</label>
+      </node>
+      <node id="50">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="1">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdna_1_1BinaryStreamReaderImpl" prot="public">dna::BinaryStreamReaderImpl</innerclass>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BinaryStreamReader_8h" kindref="compound">dna/BinaryStreamReader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dna/ReaderImpl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="src_2dna_2TypeDefs_8h" kindref="compound">dna/TypeDefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FilteredInputArchive_8h" kindref="compound">dna/stream/FilteredInputArchive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Provider_8h" kindref="compound">status/Provider.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classdna_1_1BinaryStreamReaderImpl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdna_1_1BinaryStreamReaderImpl" kindref="compound">BinaryStreamReaderImpl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1ReaderImpl" kindref="compound">ReaderImpl</ref>&lt;BinaryStreamReader&gt;<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a11a615264ed164c349f35931be75fab2" kindref="member">BinaryStreamReaderImpl</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer_,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>maxLOD_,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>minLOD_,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a11a615264ed164c349f35931be75fab2" kindref="member">BinaryStreamReaderImpl</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer_,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>lods,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1ac54cb7d6d5ae354a761d3c4c85b70080" kindref="member">unload</ref>(<ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a5221e569c4e7fa2ebf2046c433bf72ef" kindref="member">read</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1aa7d5920bedb2443900f7515173322aa0" kindref="member">isLODConstrained</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31" refid="classdna_1_1BinaryStreamReaderImpl_1a4fd8e6558c4edb4a3e2bd68800065359" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusProvider" kindref="compound">sc::StatusProvider</ref><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a4fd8e6558c4edb4a3e2bd68800065359" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classdna_1_1BinaryStreamReaderImpl_1a09bca449b522fb599ec230aa32ce606d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a09bca449b522fb599ec230aa32ce606d" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classdna_1_1BinaryStreamReaderImpl_1a5107dd28e1c44d9341027dfbd59a4cc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive" kindref="compound">FilteredInputArchive</ref><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a5107dd28e1c44d9341027dfbd59a4cc2" kindref="member">archive</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classdna_1_1BinaryStreamReaderImpl_1a4afd5d1171053c1328ea2fbe0be14d99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1BinaryStreamReaderImpl_1a4afd5d1171053c1328ea2fbe0be14d99" kindref="member">lodConstrained</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamReaderImpl.h"/>
+  </compounddef>
+</doxygen>

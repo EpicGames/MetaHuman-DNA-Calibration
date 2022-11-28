@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1FilteredInputArchive" kind="class" language="C++" prot="public" final="yes">
+    <compoundname>dna::FilteredInputArchive</compoundname>
+    <basecompoundref refid="classdna_1_1AnimatedMapFilter" prot="public" virt="non-virtual">dna::AnimatedMapFilter</basecompoundref>
+    <basecompoundref refid="classdna_1_1BlendShapeFilter" prot="public" virt="non-virtual">dna::BlendShapeFilter</basecompoundref>
+    <basecompoundref refid="classdna_1_1JointFilter" prot="public" virt="non-virtual">dna::JointFilter</basecompoundref>
+    <basecompoundref refid="classdna_1_1MeshFilter" prot="public" virt="non-virtual">dna::MeshFilter</basecompoundref>
+    <basecompoundref refid="classterse_1_1ExtendableBinaryInputArchive" prot="public" virt="non-virtual">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</basecompoundref>
+    <includes refid="FilteredInputArchive_8h" local="no">FilteredInputArchive.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classdna_1_1FilteredInputArchive_1a14d7b7c43e74b062ba41cd2f89a0aa81" prot="private" static="no">
+        <type><ref refid="classterse_1_1ExtendableBinaryInputArchive" kindref="compound">terse::ExtendableBinaryInputArchive</ref>&lt; <ref refid="classdna_1_1FilteredInputArchive" kindref="compound">FilteredInputArchive</ref>, <ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>, std::uint32_t, std::uint32_t, <ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89aeec89088ee408b80387155272b113256" kindref="member">terse::Endianness::Network</ref> &gt;</type>
+        <definition>using dna::FilteredInputArchive::BaseArchive =  terse::ExtendableBinaryInputArchive&lt;FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network&gt;</definition>
+        <argsstring></argsstring>
+        <name>BaseArchive</name>
+        <qualifiedname>dna::FilteredInputArchive::BaseArchive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="38" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1a582c0bd4614a7583aac5facbe7531700" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend dna::FilteredInputArchive::Archive&lt; FilteredInputArchive &gt;</definition>
+        <argsstring></argsstring>
+        <name>Archive&lt; FilteredInputArchive &gt;</name>
+        <qualifiedname>dna::FilteredInputArchive::Archive&lt; FilteredInputArchive &gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="43" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" prot="private" static="no" mutable="no">
+        <type><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> *</type>
+        <definition>BoundedIOStream* dna::FilteredInputArchive::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <qualifiedname>dna::FilteredInputArchive::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="76" column="25" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="76" bodyend="-1"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">processSubset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource* dna::FilteredInputArchive::memRes</definition>
+        <argsstring></argsstring>
+        <name>memRes</name>
+        <qualifiedname>dna::FilteredInputArchive::memRes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="77" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="77" bodyend="-1"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" compoundref="FilteredInputArchive_8cpp" startline="94" endline="134">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25" kindref="member">DataLayerBitmask</ref></type>
+        <definition>DataLayerBitmask dna::FilteredInputArchive::layerBitmask</definition>
+        <argsstring></argsstring>
+        <name>layerBitmask</name>
+        <qualifiedname>dna::FilteredInputArchive::layerBitmask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="78" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" compoundref="FilteredInputArchive_8cpp" startline="94" endline="134">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" prot="private" static="no" mutable="no">
+        <type><ref refid="classdna_1_1LODConstraint" kindref="compound">LODConstraint</ref></type>
+        <definition>LODConstraint dna::FilteredInputArchive::lodConstraint</definition>
+        <argsstring></argsstring>
+        <name>lodConstraint</name>
+        <qualifiedname>dna::FilteredInputArchive::lodConstraint</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="79" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="79" bodyend="-1"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dna::FilteredInputArchive::unconstrainedLODCount</definition>
+        <argsstring></argsstring>
+        <name>unconstrainedLODCount</name>
+        <qualifiedname>dna::FilteredInputArchive::unconstrainedLODCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="80" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="80" bodyend="-1"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1ac1a20b098a9568a24d57b229791438de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::FilteredInputArchive::FilteredInputArchive</definition>
+        <argsstring>(BoundedIOStream *stream_, DataLayer layer_, std::uint16_t maxLOD_, std::uint16_t minLOD_, MemoryResource *memRes_)</argsstring>
+        <name>FilteredInputArchive</name>
+        <qualifiedname>dna::FilteredInputArchive::FilteredInputArchive</qualifiedname>
+        <param>
+          <type><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> *</type>
+          <declname>stream_</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref></type>
+          <declname>layer_</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>maxLOD_</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>minLOD_</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="46" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="38" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a43839444faed201fc4f8a6bca2922ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::FilteredInputArchive::FilteredInputArchive</definition>
+        <argsstring>(BoundedIOStream *stream_, DataLayer layer_, ConstArrayView&lt; std::uint16_t &gt; lods_, MemoryResource *memRes_)</argsstring>
+        <name>FilteredInputArchive</name>
+        <qualifiedname>dna::FilteredInputArchive::FilteredInputArchive</qualifiedname>
+        <param>
+          <type><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> *</type>
+          <declname>stream_</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref></type>
+          <declname>layer_</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>lods_</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="51" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="55" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawDescriptor &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawDescriptor" kindref="compound">RawDescriptor</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="57" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="85" bodyend="92"/>
+        <references refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" compoundref="dna_2LODConstraint_8cpp" startline="51" endline="55">dna::LODConstraint::clampTo</references>
+        <references refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" compoundref="dna_2LODConstraint_8cpp" startline="47" endline="49">dna::LODConstraint::getLODCount</references>
+        <references refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" compoundref="dna_2LODConstraint_8cpp" startline="39" endline="41">dna::LODConstraint::getMaxLOD</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawDescriptor_1a7e1ef178fb15e7d0d2b5ada8bb706f22" compoundref="dna_2DNA_8h" startline="187">dna::RawDescriptor::lodCount</references>
+        <references refid="structdna_1_1RawDescriptor_1acf35a9d1135caf4920cfe0fadf1b6879" compoundref="dna_2DNA_8h" startline="188">dna::RawDescriptor::maxLOD</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::process</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a386e46692089b78ab1a89367fea70a0d" compoundref="FilteredInputArchive_8cpp" startline="136" endline="148">process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawDefinition &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawDefinition" kindref="compound">RawDefinition</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="58" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="94" bodyend="134"/>
+        <references refid="structdna_1_1RawDefinition_1aacce964e60fda9a3cbab4c99f60816ce" compoundref="dna_2DNA_8h" startline="324">dna::RawDefinition::animatedMapNames</references>
+        <references refid="classdna_1_1AnimatedMapFilter_1a8889709e16e78582ca70b808714185c6" compoundref="filters_2AnimatedMapFilter_8cpp" startline="24" endline="32">dna::AnimatedMapFilter::apply</references>
+        <references refid="classdna_1_1BlendShapeFilter_1ae793b6e6972bab749e113d71947dc787" compoundref="filters_2BlendShapeFilter_8cpp" startline="24" endline="38">dna::BlendShapeFilter::apply</references>
+        <references refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" compoundref="filters_2JointFilter_8cpp" startline="27" endline="57">dna::JointFilter::apply</references>
+        <references refid="classdna_1_1MeshFilter_1a8fdedb3908d7d9993dffea271f536698" compoundref="filters_2MeshFilter_8cpp" startline="24" endline="38">dna::MeshFilter::apply</references>
+        <references refid="structdna_1_1RawDefinition_1a0187d72ff4fbfc177a66c7dd1be8231e" compoundref="dna_2DNA_8h" startline="323">dna::RawDefinition::blendShapeChannelNames</references>
+        <references refid="classdna_1_1AnimatedMapFilter_1a8c6cb59a6ee300af107fb1f958be03e4" compoundref="filters_2AnimatedMapFilter_8cpp" startline="18" endline="22">dna::AnimatedMapFilter::configure</references>
+        <references refid="classdna_1_1BlendShapeFilter_1af5e4098d03df979b6bdcd684c4720015" compoundref="filters_2BlendShapeFilter_8cpp" startline="18" endline="22">dna::BlendShapeFilter::configure</references>
+        <references refid="classdna_1_1JointFilter_1abe98bfb6dcf85c71c8aaba161ab94582" compoundref="filters_2JointFilter_8cpp" startline="20" endline="25">dna::JointFilter::configure</references>
+        <references refid="classdna_1_1MeshFilter_1a809efea7bc2dae3dcf45c5f005e80431" compoundref="filters_2MeshFilter_8cpp" startline="18" endline="22">dna::MeshFilter::configure</references>
+        <references refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" compoundref="dna_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dna::contains</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc">dna::Definition</references>
+        <references refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" compoundref="dna_2LODMapping_8cpp" startline="51" endline="54">dna::LODMapping::discardLODs</references>
+        <references refid="classdna_1_1LODMapping_1a478fa6df93b667676fa201ac11354a29" compoundref="dna_2LODMapping_8cpp" startline="129" endline="135">dna::LODMapping::getCombinedDistinctIndices</references>
+        <references refid="classdna_1_1LODMapping_1ac7ae14d615f10844031891d7fef40cb9" compoundref="dna_2LODMapping_8cpp" startline="70" endline="77">dna::LODMapping::getIndices</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="structdna_1_1RawDefinition_1a907cadb175dd665f400fd4fd53395c5f" compoundref="dna_2DNA_8h" startline="322">dna::RawDefinition::jointNames</references>
+        <references refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" compoundref="FilteredInputArchive_8h" startline="78">layerBitmask</references>
+        <references refid="structdna_1_1RawDefinition_1a7b3c68bbba07b5495e7fec0b8ea0a9ef" compoundref="dna_2DNA_8h" startline="318">dna::RawDefinition::lodAnimatedMapMapping</references>
+        <references refid="structdna_1_1RawDefinition_1af47732a5166024273246f29067ca7dc4" compoundref="dna_2DNA_8h" startline="317">dna::RawDefinition::lodBlendShapeMapping</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawDefinition_1adcd62346011ab078a3514dce09ca602d" compoundref="dna_2DNA_8h" startline="316">dna::RawDefinition::lodJointMapping</references>
+        <references refid="structdna_1_1RawDefinition_1adfa49eda0cc9a74e91ac6202fb4c313f" compoundref="dna_2DNA_8h" startline="319">dna::RawDefinition::lodMeshMapping</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" compoundref="FilteredInputArchive_8h" startline="77">memRes</references>
+        <references refid="structdna_1_1RawDefinition_1af03b43b007443ae0ed41cf4d9f8b5166" compoundref="dna_2DNA_8h" startline="325">dna::RawDefinition::meshNames</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::process</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a386e46692089b78ab1a89367fea70a0d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawBehavior &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawBehavior" kindref="compound">RawBehavior</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="59" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="136" bodyend="148"/>
+        <references refid="structdna_1_1RawBehavior_1a024b9dc13209d64d404fc6fc1f54b9ab" compoundref="dna_2DNA_8h" startline="583">dna::RawBehavior::animatedMaps</references>
+        <references refid="structdna_1_1RawBehavior_1a19c8f21d9a234fa90d845525fe1a8b77" compoundref="dna_2DNA_8h" startline="582">dna::RawBehavior::animatedMapsMarker</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527">dna::Behavior</references>
+        <references refid="structdna_1_1RawBehavior_1aa8e03cabeaf40d4b47d80c351ba450f9" compoundref="dna_2DNA_8h" startline="580">dna::RawBehavior::blendShapeChannels</references>
+        <references refid="structdna_1_1RawBehavior_1ad696bc2090feb24e3f9baf0443f70c2f" compoundref="dna_2DNA_8h" startline="579">dna::RawBehavior::blendShapeChannelsMarker</references>
+        <references refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" compoundref="dna_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dna::contains</references>
+        <references refid="structdna_1_1RawBehavior_1a4b8523b6fe94be99c040f67c99659512" compoundref="dna_2DNA_8h" startline="574">dna::RawBehavior::controls</references>
+        <references refid="structdna_1_1RawBehavior_1a2cbd16a6aed22eaa056d257e917c25eb" compoundref="dna_2DNA_8h" startline="573">dna::RawBehavior::controlsMarker</references>
+        <references refid="structdna_1_1RawBehavior_1adfbb247bd1c0f40510c91323aaeab0de" compoundref="dna_2DNA_8h" startline="577">dna::RawBehavior::joints</references>
+        <references refid="structdna_1_1RawBehavior_1ac8e34e98d2f29d64f52a917e8088f547" compoundref="dna_2DNA_8h" startline="576">dna::RawBehavior::jointsMarker</references>
+        <references refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" compoundref="FilteredInputArchive_8h" startline="78">layerBitmask</references>
+        <references refid="structdna_1_1RawBehavior_1abae81aaa88631f4013ef8b8485cb3e1f" compoundref="dna_2DNA_8h" startline="571">dna::RawBehavior::marker</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1ab9d882b0e1a9176cfcf93fe52fe57da7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawJoints &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawJoints" kindref="compound">RawJoints</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="60" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="150" bodyend="196"/>
+        <references refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" compoundref="dna_2LODConstraint_8cpp" startline="57" endline="59">dna::LODConstraint::applyTo</references>
+        <references refid="structdna_1_1RawJoints_1a2c2650b21676894b02c63896c0bcd59a" compoundref="dna_2DNA_8h" startline="507">dna::RawJoints::colCount</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" compoundref="FilteredInputArchive_8cpp" startline="24">dna::jointAttributeCount</references>
+        <references refid="structdna_1_1RawJoints_1a5cb67288174aa076ed83bd64daaf651f" compoundref="dna_2DNA_8h" startline="508">dna::RawJoints::jointGroups</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="classdna_1_1JointFilter_1adea95fdb98024794defb9e185974bd0f" compoundref="filters_2JointFilter_8cpp" startline="177" endline="179">dna::JointFilter::maxRemappedIndex</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" compoundref="FilteredInputArchive_8h" startline="77">memRes</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::processSize</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">processSubset</references>
+        <references refid="classdna_1_1JointFilter_1a1e4cfee412a23a00ba785cfa14088480" compoundref="filters_2JointFilter_8cpp" startline="173" endline="175">dna::JointFilter::remapped</references>
+        <references refid="structdna_1_1RawJoints_1ad045776f4dd3a480662e6dc00a2a39af" compoundref="dna_2DNA_8h" startline="506">dna::RawJoints::rowCount</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a373b95175b6399a85195bd0237553614" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawBlendShapeChannels &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawBlendShapeChannels" kindref="compound">RawBlendShapeChannels</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="61" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="198" bodyend="210"/>
+        <references refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" compoundref="dna_2LODConstraint_8cpp" startline="57" endline="59">dna::LODConstraint::applyTo</references>
+        <references refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" compoundref="DynArray_8h" startline="134" endline="136">terse::DynArray&lt; T, TAllocator &gt;::empty</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="structdna_1_1RawBlendShapeChannels_1a93268bc30f4509cc45c2be0679588257" compoundref="dna_2DNA_8h" startline="530">dna::RawBlendShapeChannels::inputIndices</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawBlendShapeChannels_1a7c4839e1e455507820a88d7a580aa5e2" compoundref="dna_2DNA_8h" startline="529">dna::RawBlendShapeChannels::lods</references>
+        <references refid="structdna_1_1RawBlendShapeChannels_1af0f8e3bda2703165306e691c19c83d95" compoundref="dna_2DNA_8h" startline="531">dna::RawBlendShapeChannels::outputIndices</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">processSubset</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a52ac0c9453989831c2bd04bee6587e36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawAnimatedMaps &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawAnimatedMaps" kindref="compound">RawAnimatedMaps</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="62" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="212" bodyend="227"/>
+        <references refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" compoundref="dna_2LODConstraint_8cpp" startline="57" endline="59">dna::LODConstraint::applyTo</references>
+        <references refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" compoundref="dna_2DNA_8h" startline="553">dna::RawAnimatedMaps::conditionals</references>
+        <references refid="structdna_1_1RawConditionalTable_1ac7071e24747f59155e14b71685412a1f" compoundref="dna_2DNA_8h" startline="390">dna::RawConditionalTable::cutValues</references>
+        <references refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" compoundref="DynArray_8h" startline="134" endline="136">terse::DynArray&lt; T, TAllocator &gt;::empty</references>
+        <references refid="structdna_1_1RawConditionalTable_1aa26f0b6b848ad5b2f396a6769c638704" compoundref="dna_2DNA_8h" startline="387">dna::RawConditionalTable::fromValues</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="structdna_1_1RawConditionalTable_1a8f5284340403657ba61194d3bc09b01b" compoundref="dna_2DNA_8h" startline="385">dna::RawConditionalTable::inputIndices</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawAnimatedMaps_1ab6ad33078b028d0e5d6dabafc354b279" compoundref="dna_2DNA_8h" startline="552">dna::RawAnimatedMaps::lods</references>
+        <references refid="structdna_1_1RawConditionalTable_1abf3dd4351268e95a2f3d2380c79ca092" compoundref="dna_2DNA_8h" startline="386">dna::RawConditionalTable::outputIndices</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">processSubset</references>
+        <references refid="structdna_1_1RawConditionalTable_1af9f5015915a5c9da6e1844564c0109fb" compoundref="dna_2DNA_8h" startline="389">dna::RawConditionalTable::slopeValues</references>
+        <references refid="structdna_1_1RawConditionalTable_1a173d49af5fc3ca1ec9841ad6856f2ce2" compoundref="dna_2DNA_8h" startline="388">dna::RawConditionalTable::toValues</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a3f4a4ffe32cd502f912d3e57aa9b57db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawGeometry &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawGeometry" kindref="compound">RawGeometry</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="63" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="229" bodyend="266"/>
+        <references refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" compoundref="dna_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dna::contains</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c">dna::GeometryRest</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" compoundref="FilteredInputArchive_8h" startline="78">layerBitmask</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawMesh_1afd166e7dd8e890e1d671c408c2840640" compoundref="dna_2DNA_8h" startline="750">dna::RawMesh::marker</references>
+        <references refid="structdna_1_1RawGeometry_1a7cf55d8de1d7728de5b114b601ea9f77" compoundref="dna_2DNA_8h" startline="791">dna::RawGeometry::marker</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" compoundref="FilteredInputArchive_8h" startline="77">memRes</references>
+        <references refid="structdna_1_1RawGeometry_1a08fbe16485d9e69800b5ae326cb72c57" compoundref="dna_2DNA_8h" startline="792">dna::RawGeometry::meshes</references>
+        <references refid="structdna_1_1RawMesh_1ab15aeb803606f3b6d2f9a035bb4bdc58" compoundref="dna_2DNA_8h" startline="741">dna::RawMesh::offset</references>
+        <references refid="classdna_1_1MeshFilter_1a0207bc3e8c416385af9d382ddfda0964" compoundref="filters_2MeshFilter_8cpp" startline="40" endline="42">dna::MeshFilter::passes</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::processSize</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a5d7c1ef4ed7f75f0806a1607ebaf6039" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawMesh &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawMesh" kindref="compound">RawMesh</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="64" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="268" bodyend="286"/>
+        <references refid="structdna_1_1RawMesh_1a6ae69a86cfc622549ca9e0f63438f1e1" compoundref="dna_2DNA_8h" startline="749">dna::RawMesh::blendShapeTargets</references>
+        <references refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" compoundref="dna_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dna::contains</references>
+        <references refid="structdna_1_1RawMesh_1acf7cf30f6c0e75b5f5b41b1dcdf2d48a" compoundref="dna_2DNA_8h" startline="746">dna::RawMesh::faces</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544">dna::GeometryBlendShapesOnly</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" compoundref="FilteredInputArchive_8h" startline="78">layerBitmask</references>
+        <references refid="structdna_1_1RawMesh_1a96e4e5262a45f94be9565ffb48b1c9b5" compoundref="dna_2DNA_8h" startline="745">dna::RawMesh::layouts</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="structdna_1_1RawMesh_1afd166e7dd8e890e1d671c408c2840640" compoundref="dna_2DNA_8h" startline="750">dna::RawMesh::marker</references>
+        <references refid="structdna_1_1RawMesh_1a91a5a66cbf900f527e590b501827a00e" compoundref="dna_2DNA_8h" startline="747">dna::RawMesh::maximumInfluencePerVertex</references>
+        <references refid="structdna_1_1RawMesh_1a02c2ba98c17b1426c6e8cc1ef91680ef" compoundref="dna_2DNA_8h" startline="744">dna::RawMesh::normals</references>
+        <references refid="structdna_1_1RawMesh_1ab15aeb803606f3b6d2f9a035bb4bdc58" compoundref="dna_2DNA_8h" startline="741">dna::RawMesh::offset</references>
+        <references refid="structdna_1_1RawMesh_1ac2244101df7dc7eb72d732c5e58d557f" compoundref="dna_2DNA_8h" startline="742">dna::RawMesh::positions</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="structdna_1_1RawMesh_1acc2a632fcdbc8aacb49cabdcc4f9240b" compoundref="dna_2DNA_8h" startline="748">dna::RawMesh::skinWeights</references>
+        <references refid="structdna_1_1RawMesh_1a237b9fac2a9e5218745d7b99715c3ea6" compoundref="dna_2DNA_8h" startline="743">dna::RawMesh::textureCoordinates</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a968050b5aa2795d9bc479c856874a93c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(RawVertexSkinWeights &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1RawVertexSkinWeights" kindref="compound">RawVertexSkinWeights</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="65" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="288" bodyend="296"/>
+        <references refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" compoundref="filters_2JointFilter_8cpp" startline="27" endline="57">dna::JointFilter::apply</references>
+        <references refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">dna::LODConstraint::hasImpactOn</references>
+        <references refid="structdna_1_1RawVertexSkinWeights_1a00b798e5e128f84d5689706d5cedee16" compoundref="dna_2DNA_8h" startline="700">dna::RawVertexSkinWeights::jointIndices</references>
+        <references refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" compoundref="FilteredInputArchive_8h" startline="79">lodConstraint</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">process</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" compoundref="FilteredInputArchive_8h" startline="80">unconstrainedLODCount</references>
+        <references refid="structdna_1_1RawVertexSkinWeights_1ae7a46f0cca6581521ab56066b3078f6e" compoundref="dna_2DNA_8h" startline="699">dna::RawVertexSkinWeights::weights</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1af67a7bac8864c113df754f8237683889" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::process</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>process</name>
+        <qualifiedname>dna::FilteredInputArchive::process</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="68" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="68" bodyend="70"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::process</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dna::FilteredInputArchive::processSubset</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t offset, std::size_t size)</argsstring>
+        <name>processSubset</name>
+        <qualifiedname>dna::FilteredInputArchive::processSubset</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="73" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp" bodystart="72" bodyend="83"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" compoundref="binary_2InputArchive_8h" startline="196" endline="204">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::processElements</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::processSize</references>
+        <references refid="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c">trio::Seekable::seek</references>
+        <references refid="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" compoundref="FilteredInputArchive_8h" startline="76">stream</references>
+        <references refid="classtrio_1_1Seekable_1af5071bbc6e4760fdfb3d5c0d83117b85">trio::Seekable::tell</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1ab9d882b0e1a9176cfcf93fe52fe57da7" compoundref="FilteredInputArchive_8cpp" startline="150" endline="196">process</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>terse::Archive&lt; FilteredInputArchive &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; FilteredInputArchive &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::AnimatedMapFilter</label>
+        <link refid="classdna_1_1AnimatedMapFilter"/>
+      </node>
+      <node id="3">
+        <label>dna::BlendShapeFilter</label>
+        <link refid="classdna_1_1BlendShapeFilter"/>
+      </node>
+      <node id="1">
+        <label>dna::FilteredInputArchive</label>
+        <link refid="classdna_1_1FilteredInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::JointFilter</label>
+        <link refid="classdna_1_1JointFilter"/>
+      </node>
+      <node id="5">
+        <label>dna::MeshFilter</label>
+        <link refid="classdna_1_1MeshFilter"/>
+      </node>
+      <node id="8">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="9">
+        <label>terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>terse::Archive&lt; FilteredInputArchive &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; FilteredInputArchive &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="9" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="template-instance">
+          <edgelabel>&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::AnimatedMapFilter</label>
+        <link refid="classdna_1_1AnimatedMapFilter"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::BlendShapeFilter</label>
+        <link refid="classdna_1_1BlendShapeFilter"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::FilteredInputArchive</label>
+        <link refid="classdna_1_1FilteredInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-lodConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::JointFilter</label>
+        <link refid="classdna_1_1JointFilter"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dna::LODConstraint</label>
+        <link refid="classdna_1_1LODConstraint"/>
+      </node>
+      <node id="6">
+        <label>dna::MeshFilter</label>
+        <link refid="classdna_1_1MeshFilter"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+      <node id="18">
+        <label>sc::StatusCode</label>
+        <link refid="structsc_1_1StatusCode"/>
+      </node>
+      <node id="9">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="19">
+        <label>terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+      <node id="10">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+AlreadyOpenError</edgelabel>
+          <edgelabel>+OpenError</edgelabel>
+          <edgelabel>+ReadError</edgelabel>
+          <edgelabel>+SeekError</edgelabel>
+          <edgelabel>+WriteError</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="11">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+      <node id="14">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="16">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+      <node id="15">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" line="31" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.h" bodystart="36" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classdna_1_1AnimatedMapFilter_1a6b579ffb2621269cb426c4fb9e6f347c" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>AnimatedMapFilter</name></member>
+      <member refid="classdna_1_1AnimatedMapFilter_1a8889709e16e78582ca70b808714185c6" prot="public" virt="non-virtual" ambiguityscope="dna::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classdna_1_1BlendShapeFilter_1ae793b6e6972bab749e113d71947dc787" prot="public" virt="non-virtual" ambiguityscope="dna::BlendShapeFilter::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" prot="public" virt="non-virtual" ambiguityscope="dna::JointFilter::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classdna_1_1JointFilter_1ad365dfe45ef08d37d79c37e61ccd1252" prot="public" virt="non-virtual" ambiguityscope="dna::JointFilter::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" prot="public" virt="non-virtual" ambiguityscope="dna::JointFilter::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classdna_1_1MeshFilter_1a8fdedb3908d7d9993dffea271f536698" prot="public" virt="non-virtual" ambiguityscope="dna::MeshFilter::"><scope>dna::FilteredInputArchive</scope><name>apply</name></member>
+      <member refid="classterse_1_1Archive_1a42458df7d5e4e87755c88dd01f866640" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>Archive</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a582c0bd4614a7583aac5facbe7531700" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>Archive&lt; FilteredInputArchive &gt;</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a14d7b7c43e74b062ba41cd2f89a0aa81" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>BaseArchive</name></member>
+      <member refid="classdna_1_1BlendShapeFilter_1a266f1176d37876c7a4eb755c235001d7" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>BlendShapeFilter</name></member>
+      <member refid="classdna_1_1AnimatedMapFilter_1a8c6cb59a6ee300af107fb1f958be03e4" prot="public" virt="non-virtual" ambiguityscope="dna::"><scope>dna::FilteredInputArchive</scope><name>configure</name></member>
+      <member refid="classdna_1_1BlendShapeFilter_1af5e4098d03df979b6bdcd684c4720015" prot="public" virt="non-virtual" ambiguityscope="dna::BlendShapeFilter::"><scope>dna::FilteredInputArchive</scope><name>configure</name></member>
+      <member refid="classdna_1_1JointFilter_1abe98bfb6dcf85c71c8aaba161ab94582" prot="public" virt="non-virtual" ambiguityscope="dna::JointFilter::"><scope>dna::FilteredInputArchive</scope><name>configure</name></member>
+      <member refid="classdna_1_1MeshFilter_1a809efea7bc2dae3dcf45c5f005e80431" prot="public" virt="non-virtual" ambiguityscope="dna::MeshFilter::"><scope>dna::FilteredInputArchive</scope><name>configure</name></member>
+      <member refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1Archive_1ab765e22c9a8bcab4e98d9b593577de82" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a1cb4dcafeea7813ac227105d95cb12ae" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>endianness</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a7405c9535ef44e9d5156e89bd8d284f7" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>ExtendableBinaryInputArchive</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1ac1a20b098a9568a24d57b229791438de" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>FilteredInputArchive</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a43839444faed201fc4f8a6bca2922ae6" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>FilteredInputArchive</name></member>
+      <member refid="classterse_1_1Archive_1a7a9fc12b40284867ff4969c6c48c8982" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>getUserData</name></member>
+      <member refid="classterse_1_1Archive_1a462e059ee44f6ab246bfff8d444144c3" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>impl</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a74f6c013e374f3777bf4b5a72adb3bfb" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>isOk</name></member>
+      <member refid="classdna_1_1JointFilter_1a3b314a823800159d00d8b333117ce307" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>JointFilter</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a7e0d8fef862834689b7df40fe84e21cc" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>label</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>layerBitmask</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>lodConstraint</name></member>
+      <member refid="classdna_1_1JointFilter_1adea95fdb98024794defb9e185974bd0f" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>maxRemappedIndex</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>memRes</name></member>
+      <member refid="classdna_1_1MeshFilter_1a988b7fac7f8f102eda69eade9d04438f" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>MeshFilter</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>OffsetType</name></member>
+      <member refid="classterse_1_1Archive_1a4df3e8d790c6bb1e74763f2952c9ad65" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>operator()</name></member>
+      <member refid="classterse_1_1Archive_1a06b33e08fd4d274553a8717f5da84c22" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classterse_1_1Archive_1a2be0b456566c72d32680de9b9a6f2904" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classdna_1_1JointFilter_1ab0b761b7ee7e6ba232f8c285258310bf" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>option</name></member>
+      <member refid="classdna_1_1JointFilter_1abc50db4bdf5c01c7134bdfb272ba2720" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>Option</name></member>
+      <member refid="classdna_1_1AnimatedMapFilter_1a6acf1a80332b443f2db0801d5752d081" prot="public" virt="non-virtual" ambiguityscope="dna::"><scope>dna::FilteredInputArchive</scope><name>passes</name></member>
+      <member refid="classdna_1_1BlendShapeFilter_1ae8cc0b25fe1ed7c876717d9203bc0014" prot="public" virt="non-virtual" ambiguityscope="dna::BlendShapeFilter::"><scope>dna::FilteredInputArchive</scope><name>passes</name></member>
+      <member refid="classdna_1_1JointFilter_1a7f474c38660a1dcfd4ec6fc3070d57b2" prot="public" virt="non-virtual" ambiguityscope="dna::JointFilter::"><scope>dna::FilteredInputArchive</scope><name>passes</name></member>
+      <member refid="classdna_1_1MeshFilter_1a0207bc3e8c416385af9d382ddfda0964" prot="public" virt="non-virtual" ambiguityscope="dna::MeshFilter::"><scope>dna::FilteredInputArchive</scope><name>passes</name></member>
+      <member refid="classdna_1_1AnimatedMapFilter_1ada1a0bfbb410859d4d1e7676955412bb" prot="private" virt="non-virtual" ambiguityscope="dna::"><scope>dna::FilteredInputArchive</scope><name>passingIndices</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a386e46692089b78ab1a89367fea70a0d" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1ab9d882b0e1a9176cfcf93fe52fe57da7" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a373b95175b6399a85195bd0237553614" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a52ac0c9453989831c2bd04bee6587e36" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a3f4a4ffe32cd502f912d3e57aa9b57db" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a5d7c1ef4ed7f75f0806a1607ebaf6039" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a968050b5aa2795d9bc479c856874a93c" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1af67a7bac8864c113df754f8237683889" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aff1d879c896111a56f8efd01fb66a973" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aa2fe4da437f4519c2c1ae6e14be404d1" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a4cf5e7a27503127138b86ebe858b95d3" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ad63df9f82b8cf217cdb283244e6bd174" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1adf2d9333950a59a4a5aafe10c3136b2c" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a76d4aaca1e2a2d4c360c5c5bd1858c53" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a071ae480d7f79db9582e9753f65e9de8" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5eaf522812d1c76931017ca9e8473f14" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aa04f91438376a1e10f789f49dcdced7e" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a34e68fafa278cf68e7267c833ed72858" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a870eb5b50d35453e4b837d1644f74032" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6b445304dd1df8aa7fece122a6bac7af" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a587485377909b682caeb54fde7d4f244" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5b75a55a728a3f347a063466009f8d59" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a136707450a287df7f3dcff81d134fc42" prot="protected" virt="non-virtual" ambiguityscope="ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;::"><scope>dna::FilteredInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6d6b562a585bfe59ded501978c9e6c17" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a2f4077cf50e25454032571ce5cac2c58" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a26a571c4043a1178d86d4b94a3a63dc3" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" prot="protected" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processSize</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>processSubset</name></member>
+      <member refid="classdna_1_1JointFilter_1a1e4cfee412a23a00ba785cfa14088480" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>remapped</name></member>
+      <member refid="classdna_1_1AnimatedMapFilter_1a010f356cc028250a8e536dcb6d6df726" prot="private" virt="non-virtual" ambiguityscope="dna::"><scope>dna::FilteredInputArchive</scope><name>remappedIndices</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>resize</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6a2c06bc2da07187f709fc1bfa391b53" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>resize</name></member>
+      <member refid="classdna_1_1JointFilter_1a29679953749d3d755b696d44420ff873" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>rootJointIndex</name></member>
+      <member refid="classterse_1_1Archive_1ac64d0bb1ad778cb392e026d002e74f33" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>setUserData</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>SizeType</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>stream</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aae34613f1ae978f063b9029ae2ff6904" prot="public" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>sync</name></member>
+      <member refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>unconstrainedLODCount</name></member>
+      <member refid="classterse_1_1Archive_1a0e9b96481b56e7de196e700cf5ffe5cb" prot="private" virt="non-virtual"><scope>dna::FilteredInputArchive</scope><name>userData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

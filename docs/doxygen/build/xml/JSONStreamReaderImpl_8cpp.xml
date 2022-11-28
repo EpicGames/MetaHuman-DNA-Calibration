@@ -1,0 +1,755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="JSONStreamReaderImpl_8cpp" kind="file" language="C++">
+    <compoundname>JSONStreamReaderImpl.cpp</compoundname>
+    <includes refid="JSONStreamReaderImpl_8h" local="yes">dna/stream/JSONStreamReaderImpl.h</includes>
+    <includes refid="src_2dna_2TypeDefs_8h" local="yes">dna/TypeDefs.h</includes>
+    <includes refid="Limits_8h" local="yes">dna/types/Limits.h</includes>
+    <includes refid="Provider_8h" local="no">status/Provider.h</includes>
+    <includes refid="StreamScope_8h" local="no">trio/utils/StreamScope.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">tuple</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="4">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="3">
+        <label>dna/JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="10">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="19">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="18">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="58">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="25">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="76">
+        <label>trio/utils/StreamScope.h</label>
+        <link refid="StreamScope_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna/TypeDefs.h</label>
+        <link refid="src_2dna_2TypeDefs_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna/stream/JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>dna/types/Limits.h</label>
+        <link refid="Limits_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>terse/Archive.h</label>
+        <link refid="Archive_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>terse/archives/Common.h</label>
+        <link refid="Common_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>terse/archives/Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>terse/archives/json/InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="67">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>terse/types/ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>terse/types/Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>terse/types/CharInputStreamBuf.h</label>
+        <link refid="CharInputStreamBuf_8h"/>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>terse/types/Transparent.h</label>
+        <link refid="Transparent_8h"/>
+      </node>
+      <node id="73">
+        <label>terse/utils/Base64.h</label>
+        <link refid="Base64_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="60">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="28">
+        <label>cstdint</label>
+      </node>
+      <node id="55">
+        <label>cstring</label>
+      </node>
+      <node id="37">
+        <label>dna/ReaderImpl.h</label>
+      </node>
+      <node id="56">
+        <label>functional</label>
+      </node>
+      <node id="57">
+        <label>iterator</label>
+      </node>
+      <node id="77">
+        <label>limits</label>
+      </node>
+      <node id="45">
+        <label>list</label>
+      </node>
+      <node id="46">
+        <label>map</label>
+      </node>
+      <node id="41">
+        <label>memory</label>
+      </node>
+      <node id="42">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="47">
+        <label>set</label>
+      </node>
+      <node id="74">
+        <label>sstream</label>
+      </node>
+      <node id="59">
+        <label>stdio.h</label>
+      </node>
+      <node id="71">
+        <label>streambuf</label>
+      </node>
+      <node id="48">
+        <label>string</label>
+      </node>
+      <node id="65">
+        <label>tuple</label>
+      </node>
+      <node id="43">
+        <label>type_traits</label>
+      </node>
+      <node id="49">
+        <label>unordered_map</label>
+      </node>
+      <node id="50">
+        <label>unordered_set</label>
+      </node>
+      <node id="21">
+        <label>utility</label>
+      </node>
+      <node id="51">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="JSONStreamReaderImpl_8h" kindref="compound">dna/stream/JSONStreamReaderImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="src_2dna_2TypeDefs_8h" kindref="compound">dna/TypeDefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Limits_8h" kindref="compound">dna/types/Limits.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Provider_8h" kindref="compound">status/Provider.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="StreamScope_8h" kindref="compound">trio/utils/StreamScope.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note:<sp/>JSONStreamReader::status<sp/>hasn&apos;t<sp/>been<sp/>initialized<sp/>deliberately,<sp/>as<sp/>it<sp/>uses<sp/>the<sp/>same<sp/>error<sp/>codes<sp/>that<sp/>were</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>already<sp/>registered<sp/>in<sp/>BinaryStreamReader,<sp/>and<sp/>since<sp/>they<sp/>are<sp/>all<sp/>registered<sp/>in<sp/>a<sp/>single,<sp/>global<sp/>error<sp/>code<sp/>registry,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>would<sp/>trigger<sp/>an<sp/>assert<sp/>there.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="classdna_1_1JSONStreamReader_1a49c119652cf80a2db2d216d0c4871eec" kindref="member">JSONStreamReader::~JSONStreamReader</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classdna_1_1JSONStreamReader_1aba0e57032fea766fb24915b5210cf923" refkind="member"><highlight class="normal"><ref refid="classdna_1_1JSONStreamReader" kindref="compound">JSONStreamReader</ref>*<sp/><ref refid="classdna_1_1JSONStreamReader_1aba0e57032fea766fb24915b5210cf923" kindref="member">JSONStreamReader::create</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;JSONStreamReaderImpl&gt;</ref><sp/>alloc{memRes};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>alloc.newObject(stream,<sp/>memRes);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classdna_1_1JSONStreamReader_1a49ed2896a8e6b10b3f85d46bb456d4d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1JSONStreamReader_1a49ed2896a8e6b10b3f85d46bb456d4d5" kindref="member">JSONStreamReader::destroy</ref>(<ref refid="classdna_1_1JSONStreamReader" kindref="compound">JSONStreamReader</ref>*<sp/>instance)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>reader<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdna_1_1JSONStreamReaderImpl" kindref="compound">JSONStreamReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(instance);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;JSONStreamReaderImpl&gt;</ref><sp/>alloc{reader-&gt;getMemoryResource()};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>alloc.deleteObject(reader);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classdna_1_1JSONStreamReaderImpl_1a345c93bbdc9acd3dac738a94c0b35950" refkind="member"><highlight class="normal"><ref refid="classdna_1_1JSONStreamReaderImpl_1a345c93bbdc9acd3dac738a94c0b35950" kindref="member">JSONStreamReaderImpl::JSONStreamReaderImpl</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref>{memRes_},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1ReaderImpl" kindref="compound">ReaderImpl</ref>{memRes_},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>stream{stream_},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>archive{stream_}<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classdna_1_1JSONStreamReaderImpl_1a27dadff57c804b7cf5c6ee40a5f3fe36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a27dadff57c804b7cf5c6ee40a5f3fe36" kindref="member">JSONStreamReaderImpl::unload</ref>(<ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">DataLayer::All</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cabacb1964c4470f0e5c8992578937bb03" kindref="member">DataLayer::AllWithoutBlendShapes</ref>)<sp/>||</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca77b90cceaada15c2767933b3d5db0f8a" kindref="member">DataLayer::Descriptor</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref><sp/>=<sp/><ref refid="structdna_1_1DNA" kindref="compound">DNA</ref>{<ref refid="classdna_1_1BaseImpl_1aaf242d8e71e7df8e5415e27c70d03db8" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cad9c6333623e6357515fcbf17be806273" kindref="member">DataLayer::Geometry</ref>)<sp/>||<sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca96fa7330c972d369c23d5b7d70a637ac" kindref="member">DataLayer::GeometryWithoutBlendShapes</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.unloadGeometry();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayer::Behavior</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.unloadBehavior();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayer::Definition</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.unloadGeometry();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.unloadBehavior();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.unloadDefinition();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classdna_1_1JSONStreamReaderImpl_1a5f35f70a34f0cf1b8d117f1204077238" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a5f35f70a34f0cf1b8d117f1204077238" kindref="member">JSONStreamReaderImpl::read</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Due<sp/>to<sp/>possible<sp/>usage<sp/>of<sp/>custom<sp/>stream<sp/>implementations,<sp/>the<sp/>status<sp/>actually<sp/>must<sp/>be<sp/>cleared<sp/>at<sp/>this<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>external<sp/>streams<sp/>do<sp/>not<sp/>have<sp/>access<sp/>to<sp/>the<sp/>status<sp/>reset<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a32c2dfe388a568f953bdb0ba0d21a8c0" kindref="member">status</ref>.<ref refid="classsc_1_1StatusProvider_1adf03c5df9d13b53842a0856ef858a304" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1StreamScope" kindref="compound">trio::StreamScope</ref><sp/>scope{<ref refid="classdna_1_1JSONStreamReaderImpl_1a4ab1b3873371e7a53d205835310837f7" kindref="member">stream</ref>};</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classsc_1_1Status_1a4569e3c01410719eaa1a95d39d59763f" kindref="member">sc::Status::isOk</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a69ee9591c317365206ebf0cecdaea2c7" kindref="member">archive</ref><sp/>&gt;&gt;<sp/><ref refid="classdna_1_1BaseImpl_1afb96929eaf813f7dbc2eea11bcad5a41" kindref="member">dna</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classsc_1_1Status_1a4569e3c01410719eaa1a95d39d59763f" kindref="member">sc::Status::isOk</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespacedna" kindref="compound">dna</ref>.signature.matches())<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a32c2dfe388a568f953bdb0ba0d21a8c0" kindref="member">status</ref>.<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classdna_1_1StreamReader_1a7e1e5a37ec4ba772aedf3aca7745f0a6" kindref="member">SignatureMismatchError</ref>,<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.signature.value.expected.data(),<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.signature.value.got.data());</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespacedna" kindref="compound">dna</ref>.version.matches())<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JSONStreamReaderImpl_1a32c2dfe388a568f953bdb0ba0d21a8c0" kindref="member">status</ref>.<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classdna_1_1StreamReader_1a27a924f740fdab13ab0f813e0c028662" kindref="member">VersionMismatchError</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.version.generation.expected,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.version.version.expected,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.version.generation.got,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.version.version.got);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/JSONStreamReaderImpl.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacetrio" kind="namespace" language="C++">
+    <compoundname>trio</compoundname>
+    <innerclass refid="classtrio_1_1Bounded" prot="public">trio::Bounded</innerclass>
+    <innerclass refid="classtrio_1_1BoundedIOStream" prot="public">trio::BoundedIOStream</innerclass>
+    <innerclass refid="classtrio_1_1Buffered" prot="public">trio::Buffered</innerclass>
+    <innerclass refid="classtrio_1_1Closeable" prot="public">trio::Closeable</innerclass>
+    <innerclass refid="classtrio_1_1Controllable" prot="public">trio::Controllable</innerclass>
+    <innerclass refid="classtrio_1_1FileStream" prot="public">trio::FileStream</innerclass>
+    <innerclass refid="classtrio_1_1FileStreamImpl" prot="public">trio::FileStreamImpl</innerclass>
+    <innerclass refid="classtrio_1_1MemoryMappedFileStream" prot="public">trio::MemoryMappedFileStream</innerclass>
+    <innerclass refid="classtrio_1_1MemoryMappedFileStreamFallback" prot="public">trio::MemoryMappedFileStreamFallback</innerclass>
+    <innerclass refid="classtrio_1_1MemoryStream" prot="public">trio::MemoryStream</innerclass>
+    <innerclass refid="classtrio_1_1MemoryStreamImpl" prot="public">trio::MemoryStreamImpl</innerclass>
+    <innerclass refid="classtrio_1_1Openable" prot="public">trio::Openable</innerclass>
+    <innerclass refid="classtrio_1_1Readable" prot="public">trio::Readable</innerclass>
+    <innerclass refid="classtrio_1_1Resizable" prot="public">trio::Resizable</innerclass>
+    <innerclass refid="classtrio_1_1Seekable" prot="public">trio::Seekable</innerclass>
+    <innerclass refid="classtrio_1_1StreamScope" prot="public">trio::StreamScope</innerclass>
+    <innerclass refid="classtrio_1_1StreamStatus" prot="public">trio::StreamStatus</innerclass>
+    <innerclass refid="structtrio_1_1StringConverter" prot="public">trio::StringConverter</innerclass>
+    <innerclass refid="structtrio_1_1StringConverter_3_01char_01_4" prot="public">trio::StringConverter&lt; char &gt;</innerclass>
+    <innerclass refid="structtrio_1_1StringConverter_3_01wchar__t_01_4" prot="public">trio::StringConverter&lt; wchar_t &gt;</innerclass>
+    <innerclass refid="classtrio_1_1Writable" prot="public">trio::Writable</innerclass>
+    <innernamespace refid="namespacetrio_1_1anonymous__namespace_02FileStreamImpl_8cpp_03">trio::anonymous_namespace{FileStreamImpl.cpp}</innernamespace>
+    <innernamespace refid="namespacetrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03">trio::anonymous_namespace{MemoryStreamImpl.cpp}</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacetrio_1a4b77aebe484e434a3112e66b70acd116" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>AccessMode</name>
+        <qualifiedname>trio::AccessMode</qualifiedname>
+        <enumvalue id="namespacetrio_1a4b77aebe484e434a3112e66b70acd116a7a1a5f3e79fdc91edf2f5ead9d66abb4" prot="public">
+          <name>Read</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetrio_1a4b77aebe484e434a3112e66b70acd116a1129c0e4d43f2d121652a7302712cff6" prot="public">
+          <name>Write</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetrio_1a4b77aebe484e434a3112e66b70acd116a70a2a84088d405a2e3f1e3accaa16723" prot="public">
+          <name>ReadWrite</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/types/Parameters.h" line="7" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/types/Parameters.h" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacetrio_1a6020d2cf223a27e6f0c208754c379dce" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>OpenMode</name>
+        <qualifiedname>trio::OpenMode</qualifiedname>
+        <enumvalue id="namespacetrio_1a6020d2cf223a27e6f0c208754c379dcea6ce976e8f061b2b5cfe4d0c50c3405dd" prot="public">
+          <name>Binary</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetrio_1a6020d2cf223a27e6f0c208754c379dcea9dffbf69ffba8bc38bc4e01abf4b1675" prot="public">
+          <name>Text</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/types/Parameters.h" line="13" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/types/Parameters.h" bodystart="13" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacetrio_1a27f36ea5ff5af79b7f4e914f8ec6635f" prot="public" static="no">
+        <type><ref refid="classtrio_1_1MemoryMappedFileStreamFallback" kindref="compound">MemoryMappedFileStreamFallback</ref></type>
+        <definition>using trio::MemoryMappedFileStreamImpl = typedef MemoryMappedFileStreamFallback</definition>
+        <argsstring></argsstring>
+        <name>MemoryMappedFileStreamImpl</name>
+        <qualifiedname>trio::MemoryMappedFileStreamImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryMappedFileStream.cpp" line="18" column="5" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryMappedFileStream.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" prot="public" static="no">
+        <type>char</type>
+        <definition>using trio::NativeCharacter = typedef char</definition>
+        <argsstring></argsstring>
+        <name>NativeCharacter</name>
+        <qualifiedname>trio::NativeCharacter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" line="73" column="5" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetrio_1add2affebde5ca4fa798a3855cadd339b" prot="public" static="no">
+        <type><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">pma::String</ref>&lt; <ref refid="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" kindref="member">NativeCharacter</ref> &gt;</type>
+        <definition>using trio::NativeString = typedef pma::String&lt;NativeCharacter&gt;</definition>
+        <argsstring></argsstring>
+        <name>NativeString</name>
+        <qualifiedname>trio::NativeString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" line="76" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetrio_1a40b2e50fccab9373724e079b4a1da7a0" prot="public" static="no">
+        <type><ref refid="structtrio_1_1StringConverter" kindref="compound">StringConverter</ref>&lt; <ref refid="namespacetrio_1a7e7ab95bc38e14fb710084dbee394dad" kindref="member">NativeCharacter</ref> &gt;</type>
+        <definition>using trio::NativeStringConverter = typedef StringConverter&lt;NativeCharacter&gt;</definition>
+        <argsstring></argsstring>
+        <name>NativeStringConverter</name>
+        <qualifiedname>trio::NativeStringConverter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" line="77" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/NativeString.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetrio_1ae5bd4f7916560510c90291825c1145bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator&amp;</definition>
+        <argsstring>(TEnum lhs, TEnum rhs)</argsstring>
+        <name>operator&amp;</name>
+        <qualifiedname>trio::operator&amp;</qualifiedname>
+        <param>
+          <type>TEnum</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="11" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1adfb0aef3c528a124093f7e578913b445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator|</definition>
+        <argsstring>(TEnum lhs, TEnum rhs)</argsstring>
+        <name>operator|</name>
+        <qualifiedname>trio::operator|</qualifiedname>
+        <param>
+          <type>TEnum</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="18" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1abdd2f870385e7f29c47d79951b07bc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator^</definition>
+        <argsstring>(TEnum lhs, TEnum rhs)</argsstring>
+        <name>operator^</name>
+        <qualifiedname>trio::operator^</qualifiedname>
+        <param>
+          <type>TEnum</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="25" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1a5cd48709d186ec26f3964cd2c1f57a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator~</definition>
+        <argsstring>(TEnum value)</argsstring>
+        <name>operator~</name>
+        <qualifiedname>trio::operator~</qualifiedname>
+        <param>
+          <type>TEnum</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="32" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1a204504c976a3055d9abccae370e1e789" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator&amp;=</definition>
+        <argsstring>(TEnum &amp;lhs, TEnum rhs)</argsstring>
+        <name>operator&amp;=</name>
+        <qualifiedname>trio::operator&amp;=</qualifiedname>
+        <param>
+          <type>TEnum &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="39" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1afc7dbafd11e71f3d7acc02c510a7e5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator|=</definition>
+        <argsstring>(TEnum &amp;lhs, TEnum rhs)</argsstring>
+        <name>operator|=</name>
+        <qualifiedname>trio::operator|=</qualifiedname>
+        <param>
+          <type>TEnum &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="45" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1a0815b8b7c870c92e8064dbf3d3426051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, TEnum &gt;::type trio::operator^=</definition>
+        <argsstring>(TEnum &amp;lhs, TEnum rhs)</argsstring>
+        <name>operator^=</name>
+        <qualifiedname>trio::operator^=</qualifiedname>
+        <param>
+          <type>TEnum &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="51" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetrio_1a4a9deb5723842416dbadbb9f84554049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TEnum</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, bool &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_enum&lt; TEnum &gt;::value, bool &gt;::type trio::contains</definition>
+        <argsstring>(TEnum lhs, TEnum rhs)</argsstring>
+        <name>contains</name>
+        <qualifiedname>trio::contains</qualifiedname>
+        <param>
+          <type>TEnum</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>TEnum</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" line="57" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/utils/ScopedEnumEx.h" bodystart="57" bodyend="59"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1af5145015e4f7c55662aa7a248dc29c0d" compoundref="FileStreamImpl_8cpp" startline="69" endline="93">trio::FileStreamImpl::open</referencedby>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1abf0a546ad27b383f94b94e58a9210845" compoundref="FileStreamImpl_8cpp" startline="116" endline="129">trio::FileStreamImpl::read</referencedby>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1a21553243d67bcf7b017a24d71820c9fb" compoundref="FileStreamImpl_8cpp" startline="153" endline="170">trio::FileStreamImpl::write</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,955 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="alib_2dna_2filters_2JointFilter_8cpp" kind="file" language="C++">
+    <compoundname>alib/dna/filters/JointFilter.cpp</compoundname>
+    <includes refid="alib_2dna_2filters_2JointFilter_8h" local="yes">dnacalib/dna/filters/JointFilter.h</includes>
+    <includes refid="src_2dnacalib_2TypeDefs_8h" local="yes">dnacalib/TypeDefs.h</includes>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="yes">dnacalib/dna/DNA.h</includes>
+    <includes refid="alib_2dna_2filters_2Remap_8h" local="yes">dnacalib/dna/filters/Remap.h</includes>
+    <includes refid="alib_2utils_2Extd_8h" local="yes">dnacalib/utils/Extd.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>dna/BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>dna/BinaryStreamWriter.h</label>
+        <link refid="BinaryStreamWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="7">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="46">
+        <label>dna/JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>dna/JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>dna/StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>dna/Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dna/layers/BehaviorWriter.h</label>
+        <link refid="BehaviorWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>dna/layers/DefinitionWriter.h</label>
+        <link refid="DefinitionWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="12">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>dna/layers/DescriptorWriter.h</label>
+        <link refid="DescriptorWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>dna/layers/GeometryWriter.h</label>
+        <link refid="GeometryWriter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="4">
+        <label>dnacalib/types/Aliases.h</label>
+        <link refid="dnacalib_2types_2Aliases_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="20">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="24">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="27">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="3">
+        <label>dnacalib/TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>dnacalib/dna/DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>dnacalib/dna/LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>dnacalib/dna/SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>JointFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnacalib/dna/filters/JointFilter.h</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>dnacalib/dna/filters/Remap.h</label>
+        <link refid="alib_2dna_2filters_2Remap_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>dnacalib/utils/Extd.h</label>
+        <link refid="alib_2utils_2Extd_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>tdm/Computations.h</label>
+        <link refid="Computations_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>tdm/Mat.h</label>
+        <link refid="Mat_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>tdm/Types.h</label>
+        <link refid="Types_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>tdm/Vec.h</label>
+        <link refid="Vec_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>algorithm</label>
+      </node>
+      <node id="78">
+        <label>array</label>
+      </node>
+      <node id="17">
+        <label>cassert</label>
+      </node>
+      <node id="65">
+        <label>cmath</label>
+      </node>
+      <node id="18">
+        <label>cstddef</label>
+      </node>
+      <node id="30">
+        <label>cstdint</label>
+      </node>
+      <node id="71">
+        <label>cstring</label>
+      </node>
+      <node id="72">
+        <label>functional</label>
+      </node>
+      <node id="73">
+        <label>iterator</label>
+      </node>
+      <node id="56">
+        <label>list</label>
+      </node>
+      <node id="57">
+        <label>map</label>
+      </node>
+      <node id="52">
+        <label>memory</label>
+      </node>
+      <node id="53">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="58">
+        <label>set</label>
+      </node>
+      <node id="59">
+        <label>string</label>
+      </node>
+      <node id="79">
+        <label>tuple</label>
+      </node>
+      <node id="54">
+        <label>type_traits</label>
+      </node>
+      <node id="60">
+        <label>unordered_map</label>
+      </node>
+      <node id="61">
+        <label>unordered_set</label>
+      </node>
+      <node id="23">
+        <label>utility</label>
+      </node>
+      <node id="62">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacednac">dnac</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2JointFilter_8h" kindref="compound">dnacalib/dna/filters/JointFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="src_2dnacalib_2TypeDefs_8h" kindref="compound">dnacalib/TypeDefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2dna_2DNA_8h" kindref="compound">dnacalib/dna/DNA.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2Remap_8h" kindref="compound">dnacalib/dna/filters/Remap.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2utils_2Extd_8h" kindref="compound">dnacalib/utils/Extd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classdnac_1_1JointFilter_1a3d852fb9ba06fe78044b7bee552722e1" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1JointFilter_1a3d852fb9ba06fe78044b7bee552722e1" kindref="member">JointFilter::JointFilter</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>memRes{memRes_},</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>passingIndices{memRes_},</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>remappedIndices{memRes_},</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>{<ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" kindref="member">Option</ref>::All},</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>rootJointIndex{}<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" kindref="member">JointFilter::configure</ref>(std::uint16_t<sp/>jointCount,<sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedJointIndices,<sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" kindref="member">Option</ref><sp/>option_)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" kindref="member">option</ref><sp/>=<sp/>option_;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref><sp/>=<sp/>std::move(allowedJointIndices);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fill<sp/>the<sp/>structure<sp/>that<sp/>maps<sp/>indices<sp/>prior<sp/>to<sp/>deletion<sp/>to<sp/>indices<sp/>after<sp/>deletion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a00e9116a5d1ebd6f8353079449f53960" kindref="member">remap</ref>(jointCount,<sp/><ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>,<sp/><ref refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" kindref="member">remappedIndices</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" kindref="member">JointFilter::apply</ref>(<ref refid="structdnac_1_1RawDefinition" kindref="compound">RawDefinition</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" kindref="member">option</ref><sp/>!=<sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">Option::All</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fix<sp/>indices<sp/>so<sp/>they<sp/>match<sp/>the<sp/>same<sp/>elements<sp/>as<sp/>earlier<sp/>(but<sp/>their</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>actual<sp/>position<sp/>changed<sp/>with<sp/>the<sp/>deletion<sp/>of<sp/>the<sp/>unneeded<sp/>entries)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawDefinition_1a802e7c52a3bab384076591530f8333e2" kindref="member">lodJointMapping</ref>.<ref refid="classdnac_1_1LODMapping_1a41758d1cfe0e257be599e2422e6cf6ac" kindref="member">mapIndices</ref>([</highlight><highlight class="keyword">this</highlight><highlight class="normal">](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" kindref="member">remappedIndices</ref>.at(value);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>elements<sp/>that<sp/>are<sp/>not<sp/>referenced<sp/>by<sp/>the<sp/>new<sp/>subset<sp/>of<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1a95c6b538bcdcef315cef62027456bacd" kindref="member">jointNames</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1ae4b0bd4d79d8ab6b6a6d86f437cf86c3" kindref="member">jointHierarchy</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fix<sp/>joint<sp/>hierarchy<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>jntIdx<sp/>:<sp/>dest.<ref refid="structdnac_1_1RawDefinition_1ae4b0bd4d79d8ab6b6a6d86f437cf86c3" kindref="member">jointHierarchy</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jntIdx<sp/>=<sp/><ref refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" kindref="member">remappedIndices</ref>[jntIdx];</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>root<sp/>joint<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>jointIdx<sp/>=<sp/>0u;<sp/>jointIdx<sp/>&lt;<sp/>dest.<ref refid="structdnac_1_1RawDefinition_1ae4b0bd4d79d8ab6b6a6d86f437cf86c3" kindref="member">jointHierarchy</ref>.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>();<sp/>++jointIdx)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest.<ref refid="structdnac_1_1RawDefinition_1ae4b0bd4d79d8ab6b6a6d86f437cf86c3" kindref="member">jointHierarchy</ref>[jointIdx]<sp/>==<sp/>jointIdx)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter_1ad8100852135b0549a3861e9adb7b9ae1" kindref="member">rootJointIndex</ref><sp/>=<sp/>jointIdx;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delete<sp/>entries<sp/>from<sp/>other<sp/>mappings<sp/>that<sp/>reference<sp/>any<sp/>of<sp/>the<sp/>deleted<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aa7469f6fc9a35a09250d700036eff2bb" kindref="member">neutralJointTranslations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a1677de0fc21f0821dda1cd6f1f381220" kindref="member">xs</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aa7469f6fc9a35a09250d700036eff2bb" kindref="member">neutralJointTranslations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a43b5f5752b64130aa7bd46ba3885f848" kindref="member">ys</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aa7469f6fc9a35a09250d700036eff2bb" kindref="member">neutralJointTranslations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a004e90d622eda4f263188c826b65e14b" kindref="member">zs</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aee6126b35c05e3859bf31a5f7682d2ca" kindref="member">neutralJointRotations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a1677de0fc21f0821dda1cd6f1f381220" kindref="member">xs</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aee6126b35c05e3859bf31a5f7682d2ca" kindref="member">neutralJointRotations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a43b5f5752b64130aa7bd46ba3885f848" kindref="member">ys</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdnac_1_1RawDefinition_1aee6126b35c05e3859bf31a5f7682d2ca" kindref="member">neutralJointRotations</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a004e90d622eda4f263188c826b65e14b" kindref="member">zs</ref>,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" kindref="member">passingIndices</ref>));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classdnac_1_1JointFilter_1a43b0dfa72a3e2c94b33c592225cc472c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" kindref="member">JointFilter::apply</ref>(<ref refid="structdnac_1_1RawBehavior" kindref="compound">RawBehavior</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref><sp/>=<sp/>9u;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>jointGroup<sp/>:<sp/>dest.<ref refid="structdnac_1_1RawBehavior_1a13beb2057b960b7b4125f0d2ba7fb1c3" kindref="member">joints</ref>.<ref refid="structdnac_1_1RawJoints_1ac400270e73193f9d258ca7bcfe0071ef" kindref="member">jointGroups</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" kindref="member">option</ref><sp/>==<sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">Option::All</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>joint<sp/>index<sp/>from<sp/>joint<sp/>group<sp/>and<sp/>remap<sp/>joint<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(jointGroup.jointIndices,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](std::uint16_t<sp/>jntIdx,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>passes(jntIdx);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>jntIdx<sp/>:<sp/>jointGroup.jointIndices)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jntIdx<sp/>=<sp/><ref refid="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" kindref="member">remapped</ref>(jntIdx);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>row<sp/>indices<sp/>of<sp/>removed<sp/>output<sp/>indices<sp/>to<sp/>be<sp/>used<sp/>for<sp/>joint<sp/>delta<sp/>removal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a7aa108f1780825b08131eb9ee7ff1fd2" kindref="member">Set&lt;std::size_t&gt;</ref><sp/>rowsToDelete{<ref refid="classdnac_1_1JointFilter_1ae0e8cd395f2867e7e43008268e4e13a1" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>output<sp/>indices<sp/>belonging<sp/>to<sp/>the<sp/>deletable<sp/>joint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(jointGroup.outputIndices,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>&amp;rowsToDelete](std::uint16_t<sp/>outputIndex,<sp/>std::size_t<sp/>rowIndex)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>auto<sp/>jointIndex<sp/>=<sp/>static_cast&lt;std::uint16_t&gt;(outputIndex<sp/>/<sp/>jointAttributeCount);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!passes(jointIndex))<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowsToDelete.insert(rowIndex);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>false;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" kindref="member">option</ref><sp/>==<sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">Option::All</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remap<sp/>the<sp/>rest<sp/>of<sp/>output<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attrIdx<sp/>:<sp/>jointGroup.outputIndices)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jntIdx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(attrIdx<sp/>/<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>relAttrIdx<sp/>=<sp/>attrIdx<sp/>-<sp/>(jntIdx<sp/>*<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attrIdx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" kindref="member">remapped</ref>(jntIdx)<sp/>*<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref><sp/>+<sp/>relAttrIdx);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>no<sp/>animation<sp/>data<sp/>remains,<sp/>there&apos;s<sp/>no<sp/>point<sp/>in<sp/>keeping<sp/>input<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointGroupColumnCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(jointGroup.inputIndices.size());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jointGroup.outputIndices.empty())<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointGroup.inputIndices.clear();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>joint<sp/>deltas<sp/>associated<sp/>with<sp/>the<sp/>removed<sp/>output<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(jointGroup.values,<sp/>[&amp;rowsToDelete,<sp/>jointGroupColumnCount](</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">,<sp/>std::size_t<sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>std::uint16_t<sp/>rowIndex<sp/>=<sp/>static_cast&lt;std::uint16_t&gt;(index<sp/>/<sp/>jointGroupColumnCount);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(rowsToDelete.find(rowIndex)<sp/>==<sp/>rowsToDelete.end());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Recompute<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>lod<sp/>:<sp/>jointGroup.lods)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>decrementBy<sp/>=<sp/>0u;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rowIndex<sp/>:<sp/>rowsToDelete)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rowIndex<sp/>&lt;<sp/>lod)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++decrementBy;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lod<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(lod<sp/>-<sp/>decrementBy);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>JointFilter::apply(<ref refid="structdnac_1_1RawVertexSkinWeights" kindref="compound">RawVertexSkinWeights</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref><sp/>!=<sp/>Option::All)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>itWeightSrc<sp/>=<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>.begin();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>itWeightDst<sp/>=<sp/>itWeightSrc;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>itJointSrc<sp/>=<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>itJointDst<sp/>=<sp/>itJointSrc;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>discardedWeights<sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(itJointSrc<sp/>!=<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(passes(*itJointSrc))<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*itJointDst<sp/>=<sp/>*itJointSrc;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itJointSrc;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itJointDst;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*itWeightDst<sp/>=<sp/>*itWeightSrc;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itWeightSrc;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itWeightDst;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>discardedWeights<sp/>+=<sp/>*itWeightSrc;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itJointSrc;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++itWeightSrc;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" kindref="member">resize</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::distance(dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" kindref="member">begin</ref>(),<sp/>itJointDst)));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>.resize(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::distance(dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>.begin(),<sp/>itWeightDst)));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()<sp/>==<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>.size());</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(passingIndices.empty())<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" kindref="member">empty</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reassign<sp/>complete<sp/>influence<sp/>to<sp/>root<sp/>joint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" kindref="member">resize_uninitialized</ref>(1ul);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>[0ul]<sp/>=<sp/>rootJointIndex;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>.resize_uninitialized(1ul);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>[0ul]<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Normalize<sp/>weights</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>jntIdx<sp/>:<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" kindref="member">jointIndices</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jntIdx<sp/>=<sp/>remapped(jntIdx);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>normalizationRatio<sp/>=<sp/>1.0f<sp/>/<sp/>(1.0f<sp/>-<sp/>discardedWeights);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>weight<sp/>:<sp/>dest.<ref refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" kindref="member">weights</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight<sp/>*=<sp/>normalizationRatio;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classdnac_1_1JointFilter_1afdcbdf76008fa27db15a2adeefd3577e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>JointFilter::passes(std::uint16_t<sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(passingIndices,<sp/>index);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" refkind="member"><highlight class="normal">std::uint16_t<sp/>JointFilter::remapped(std::uint16_t<sp/>oldIndex)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>remappedIndices.at(oldIndex);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="classdnac_1_1JointFilter_1abfb57c79b5db27c6aa6842a3b5ba85f9" refkind="member"><highlight class="normal">std::uint16_t<sp/>JointFilter::maxRemappedIndex()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(remappedIndices.empty()<sp/>?<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0)<sp/>:<sp/><ref refid="namespaceextd_1a4f7fd6d2283b5f448b5aaf4936a8a192" kindref="member">extd::maxOf</ref>(remappedIndices).second);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp"/>
+  </compounddef>
+</doxygen>

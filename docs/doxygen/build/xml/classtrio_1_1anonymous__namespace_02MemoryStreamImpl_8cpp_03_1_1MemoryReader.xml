@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader" kind="class" language="C++" prot="public">
+    <compoundname>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</compoundname>
+    <basecompoundref refid="classtrio_1_1Readable" prot="public" virt="non-virtual">trio::Readable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a83ec1753e358146c1af0979738fb8b3f" prot="private" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" line="41" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1af464410f73f3c6ec1c93730bcf51d33b" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::MemoryReader</definition>
+        <argsstring>(const char *source_)</argsstring>
+        <name>MemoryReader</name>
+        <qualifiedname>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::MemoryReader</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>source_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" line="25" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a38427a9a781125a6561b3028fe6ecde5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::read</definition>
+        <argsstring>(char *destination, std::size_t size) override</argsstring>
+        <name>read</name>
+        <qualifiedname>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::read</qualifiedname>
+        <reimplements refid="classtrio_1_1Readable_1a134ad61b17c812f7aa2d912fc96d36f9">read</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read bytes from stream into the given buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination buffer into which the data is going to be read from the stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of bytes read. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" line="28" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a4d05920810106ba6bc9e22ab23b7f939" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::read</definition>
+        <argsstring>(Writable *destination, std::size_t size) override</argsstring>
+        <name>read</name>
+        <qualifiedname>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::read</qualifiedname>
+        <reimplements refid="classtrio_1_1Readable_1ae7272a2547bb33c20c9b37493491c6c1">read</reimplements>
+        <param>
+          <type><ref refid="classtrio_1_1Writable" kindref="compound">Writable</ref> *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read bytes from this stream into the given stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>destination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Destination stream into which the data is going to be read from this stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read from stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of bytes read. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" line="34" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" bodystart="34" bodyend="38"/>
+        <references refid="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e">trio::Writable::write</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="1">
+        <label>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</label>
+        <link refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="1">
+        <label>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</label>
+        <link refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" line="23" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp" bodystart="23" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1af464410f73f3c6ec1c93730bcf51d33b" prot="public" virt="non-virtual"><scope>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</scope><name>MemoryReader</name></member>
+      <member refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a38427a9a781125a6561b3028fe6ecde5" prot="public" virt="virtual"><scope>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</scope><name>read</name></member>
+      <member refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a4d05920810106ba6bc9e22ab23b7f939" prot="public" virt="virtual"><scope>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</scope><name>read</name></member>
+      <member refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a83ec1753e358146c1af0979738fb8b3f" prot="private" virt="non-virtual"><scope>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</scope><name>source</name></member>
+      <member refid="classtrio_1_1Readable_1a49421a76a150a17207dc2d896d73d7a7" prot="protected" virt="virtual"><scope>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</scope><name>~Readable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

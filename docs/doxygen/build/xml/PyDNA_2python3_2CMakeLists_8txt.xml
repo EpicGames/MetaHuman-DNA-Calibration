@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="PyDNA_2python3_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>PyDNA/python3/CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="PyDNA_2python3_2CMakeLists_8txt_1a43128f00117d5a91f785d7da3c0c98bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set</definition>
+        <argsstring>(PYTHON3_EXACT_VERSION &quot;&quot; CACHE STRING &quot;Specify exact python3 version against which the extension should be built&quot;) if(PYTHON3_EXACT_VERSION) set(find_python3_extra_args $</argsstring>
+        <name>set</name>
+        <param>
+          <type>PYTHON3_EXACT_VERSION &quot;&quot; CACHE STRING &quot;Specify exact python3 version against which the extension should be built&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" line="1" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" bodystart="1" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>EXACT</type>
+        <definition>EXACT endif</definition>
+        <argsstring>() find_package(Python3 $</argsstring>
+        <name>endif</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" line="4" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" bodystart="4" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>COMPONENTS Development</type>
+        <definition>COMPONENTS Development set_property</definition>
+        <argsstring>(SOURCE DNA.i PROPERTY CPLUSPLUS ON) set_property(SOURCE DNA.i PROPERTY SWIG_MODULE_NAME dna) option(TYPEMAP_DEBUG &quot;Debug deducing of typemaps&quot; OFF) if(TYPEMAP_DEBUG) set_property(SOURCE DNA.i PROPERTY SWIG_FLAGS &quot;-debug-tmsearch&quot;) endif() swig_add_library(py3dna TYPE SHARED LANGUAGE python OUTPUT_DIR $</argsstring>
+        <name>set_property</name>
+        <param>
+          <type>SOURCE DNA.i PROPERTY CPLUSPLUS</type>
+          <declname>ON</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" line="7" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" bodystart="7" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="PyDNA_2python3_2CMakeLists_8txt_1a681b580e5c97d16540a66bfc45b8cdb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>py3bin SOURCES DNA i</type>
+        <definition>py3bin SOURCES DNA i set_property</definition>
+        <argsstring>(TARGET py3dna PROPERTY SWIG_USE_TARGET_INCLUDE_DIRECTORIES ON) target_include_directories(py3dna PUBLIC $</argsstring>
+        <name>set_property</name>
+        <param>
+          <type>TARGET py3dna PROPERTY SWIG_USE_TARGET_INCLUDE_DIRECTORIES</type>
+          <declname>ON</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" line="26" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>target_link_libraries</definition>
+        <argsstring>(py3dna PUBLIC DNACalib::dnacalib Spyus::spyus PRIVATE Python3::Python) add_custom_target(py3dna-distribution ALL DEPENDS py3dna COMMAND $</argsstring>
+        <name>target_link_libraries</name>
+        <param>
+          <type>py3dna PUBLIC DNACalib::dnacalib Spyus::spyus PRIVATE Python3::Python</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" line="29" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt" bodystart="29" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="PyDNA_2python3_2CMakeLists_8txt_1a43128f00117d5a91f785d7da3c0c98bc" refkind="member"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a43128f00117d5a91f785d7da3c0c98bc" kindref="member">set</ref>(PYTHON3_EXACT_VERSION<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>CACHE<sp/>STRING<sp/></highlight><highlight class="stringliteral">&quot;Specify<sp/>exact<sp/>python3<sp/>version<sp/>against<sp/>which<sp/>the<sp/>extension<sp/>should<sp/>be<sp/>built&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(PYTHON3_EXACT_VERSION)</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a43128f00117d5a91f785d7da3c0c98bc" kindref="member">set</ref>(find_python3_extra_args<sp/>${PYTHON3_EXACT_VERSION}<sp/>EXACT)</highlight></codeline>
+<codeline lineno="4" refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" refkind="member"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">find_package(Python3<sp/>${find_python3_extra_args}<sp/>COMPONENTS<sp/>Development)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" refkind="member"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" kindref="member">set_property</ref>(SOURCE<sp/>DNA.i<sp/>PROPERTY<sp/>CPLUSPLUS<sp/>ON)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" kindref="member">set_property</ref>(SOURCE<sp/>DNA.i<sp/>PROPERTY<sp/>SWIG_MODULE_NAME<sp/><ref refid="namespacedna" kindref="compound">dna</ref>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(TYPEMAP_DEBUG<sp/></highlight><highlight class="stringliteral">&quot;Debug<sp/>deducing<sp/>of<sp/>typemaps&quot;</highlight><highlight class="normal"><sp/>OFF)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(TYPEMAP_DEBUG)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" kindref="member">set_property</ref>(SOURCE<sp/>DNA.i<sp/>PROPERTY<sp/>SWIG_FLAGS<sp/></highlight><highlight class="stringliteral">&quot;-debug-tmsearch&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">swig_add_library(py3dna</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>TYPE</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SHARED</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>LANGUAGE</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>python</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>OUTPUT_DIR</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_BINARY_DIR}/py3bin</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>SOURCES</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DNA.i)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="PyDNA_2python3_2CMakeLists_8txt_1a681b580e5c97d16540a66bfc45b8cdb4" refkind="member"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1a9c6c016ae15afae9c419055daaad0c2e" kindref="member">set_property</ref>(TARGET<sp/>py3dna<sp/>PROPERTY<sp/>SWIG_USE_TARGET_INCLUDE_DIRECTORIES<sp/>ON)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">target_include_directories(py3dna<sp/>PUBLIC<sp/>${CMAKE_CURRENT_LIST_DIR})</highlight></codeline>
+<codeline lineno="29" refid="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" refkind="member"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" kindref="member">target_link_libraries</ref>(py3dna</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>PUBLIC</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DNACalib::dnacalib</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Spyus::spyus</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>PRIVATE</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Python3::Python)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">add_custom_target(py3dna-distribution<sp/>ALL</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>DEPENDS</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>py3dna</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>COMMAND</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_COMMAND}<sp/>-E<sp/>make_directory<sp/>${CMAKE_BINARY_DIR}/py3bin</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>COMMAND</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_COMMAND}<sp/>-E<sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">copy</ref><sp/>$&lt;TARGET_FILE:py3dna&gt;<sp/>${CMAKE_BINARY_DIR}/py3bin</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>COMMAND</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_COMMAND}<sp/>-E<sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">copy</ref><sp/>$&lt;TARGET_FILE:DNACalib::dnacalib&gt;<sp/>${CMAKE_BINARY_DIR}/py3bin</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>COMMAND</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_COMMAND}<sp/>-E<sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">copy</ref><sp/>${CMAKE_CURRENT_LIST_DIR}/examples/<ref refid="namespacedemo" kindref="compound">demo</ref>.py<sp/>${CMAKE_BINARY_DIR}/py3bin/dna_demo.py)</highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNA/python3/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structdna_1_1Signature" kind="struct" language="C++" prot="public">
+    <compoundname>dna::Signature</compoundname>
+    <includes refid="dna_2DNA_8h" local="no">DNA.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>Size</declname>
+        <defname>Size</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structdna_1_1Signature_1a5a5be16bfca22c15a85ec1fef1de8e99" prot="public" static="no">
+        <type>std::array&lt; char, Size &gt;</type>
+        <definition>using dna::Signature&lt; Size &gt;::SignatureValueType =  std::array&lt;char, Size&gt;</definition>
+        <argsstring></argsstring>
+        <name>SignatureValueType</name>
+        <qualifiedname>dna::Signature::SignatureValueType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="71" column="5" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdna_1_1Signature_1aaa97de396fa7b51bf4286521d98db748" prot="public" static="no" mutable="no">
+        <type><ref refid="structdna_1_1ExpectedValue" kindref="compound">ExpectedValue</ref>&lt; <ref refid="structdna_1_1Signature_1a5a5be16bfca22c15a85ec1fef1de8e99" kindref="member">SignatureValueType</ref> &gt;</type>
+        <definition>ExpectedValue&lt;SignatureValueType&gt; dna::Signature&lt; Size &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>dna::Signature::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="73" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="structdna_1_1Signature_1ae4625a40faf13a416efb3e3c76f8b6b7" compoundref="dna_2DNA_8h" startline="84" endline="86">dna::Signature&lt; Size &gt;::matches</referencedby>
+        <referencedby refid="structdna_1_1Signature_1a0721eea5e276734eeda5c0aa419c310c" compoundref="dna_2DNA_8h" startline="79" endline="82">dna::Signature&lt; Size &gt;::serialize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdna_1_1Signature_1ae4afd8b6390e6219583045572112d17e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dna::Signature&lt; Size &gt;::Signature</definition>
+        <argsstring>(SignatureValueType bytes)</argsstring>
+        <name>Signature</name>
+        <qualifiedname>dna::Signature::Signature</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1Signature_1a5a5be16bfca22c15a85ec1fef1de8e99" kindref="member">SignatureValueType</ref></type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="75" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="75" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structdna_1_1Signature_1a0721eea5e276734eeda5c0aa419c310c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dna::Signature&lt; Size &gt;::serialize</definition>
+        <argsstring>(Archive &amp;archive)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>dna::Signature::serialize</qualifiedname>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="79" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="79" bodyend="82"/>
+        <references refid="structdna_1_1Signature_1aaa97de396fa7b51bf4286521d98db748" compoundref="dna_2DNA_8h" startline="73">dna::Signature&lt; Size &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="structdna_1_1Signature_1ae4625a40faf13a416efb3e3c76f8b6b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dna::Signature&lt; Size &gt;::matches</definition>
+        <argsstring>() const</argsstring>
+        <name>matches</name>
+        <qualifiedname>dna::Signature::matches</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="84" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="84" bodyend="86"/>
+        <references refid="structdna_1_1ExpectedValue_1abccd53a0e1a267829a7537a53dc38cd1" compoundref="dna_2DNA_8h" startline="63" endline="65">dna::ExpectedValue&lt; T &gt;::matches</references>
+        <references refid="structdna_1_1Signature_1aaa97de396fa7b51bf4286521d98db748" compoundref="dna_2DNA_8h" startline="73">dna::Signature&lt; Size &gt;::value</references>
+        <referencedby refid="structdna_1_1DNA_1a9e7fdbce45fc2413c4dd44d0a2c11b3a" compoundref="dna_2DNA_8h" startline="834" endline="854">dna::DNA::load</referencedby>
+        <referencedby refid="structdnac_1_1DNA_1a361738ca3df1e230d51eca958b8b6ec7" compoundref="dnacalib_2dna_2DNA_8h" startline="834" endline="854">dnac::DNA::load</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dna::Signature&lt; 3 &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; 3 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::Signature&lt; Size &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dna::ExpectedValue&lt; SignatureValueType &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; SignatureValueType &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::ExpectedValue&lt; T &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+      </node>
+      <node id="1">
+        <label>dna::Signature&lt; Size &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" line="70" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DNA.h" bodystart="70" bodyend="88"/>
+    <listofallmembers>
+      <member refid="structdna_1_1Signature_1ae4625a40faf13a416efb3e3c76f8b6b7" prot="public" virt="non-virtual"><scope>dna::Signature</scope><name>matches</name></member>
+      <member refid="structdna_1_1Signature_1a0721eea5e276734eeda5c0aa419c310c" prot="public" virt="non-virtual"><scope>dna::Signature</scope><name>serialize</name></member>
+      <member refid="structdna_1_1Signature_1ae4afd8b6390e6219583045572112d17e" prot="public" virt="non-virtual"><scope>dna::Signature</scope><name>Signature</name></member>
+      <member refid="structdna_1_1Signature_1a5a5be16bfca22c15a85ec1fef1de8e99" prot="public" virt="non-virtual"><scope>dna::Signature</scope><name>SignatureValueType</name></member>
+      <member refid="structdna_1_1Signature_1aaa97de396fa7b51bf4286521d98db748" prot="public" virt="non-virtual"><scope>dna::Signature</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpma_1_1MemoryResource" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>pma::MemoryResource</compoundname>
+    <derivedcompoundref refid="classpma_1_1AlignedMemoryResource" prot="public" virt="non-virtual">pma::AlignedMemoryResource</derivedcompoundref>
+    <derivedcompoundref refid="classpma_1_1ArenaMemoryResource" prot="public" virt="non-virtual">pma::ArenaMemoryResource</derivedcompoundref>
+    <derivedcompoundref refid="classpma_1_1DefaultMemoryResource" prot="public" virt="non-virtual">pma::DefaultMemoryResource</derivedcompoundref>
+    <includes refid="MemoryResource_8h" local="no">MemoryResource.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpma_1_1MemoryResource_1a2f1214ba97985f9728633a518fb62578" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>pma::MemoryResource::~MemoryResource</definition>
+        <argsstring>()</argsstring>
+        <name>~MemoryResource</name>
+        <qualifiedname>pma::MemoryResource::~MemoryResource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/MemoryResource.h" line="19" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1MemoryResource_1ad43f9c740450042025424135a15497bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void * pma::MemoryResource::allocate</definition>
+        <argsstring>(std::size_t size, std::size_t alignment)=0</argsstring>
+        <name>allocate</name>
+        <qualifiedname>pma::MemoryResource::allocate</qualifiedname>
+        <reimplementedby refid="classpma_1_1AlignedMemoryResource_1ac88cd6ae3def23f46a66e60500ca8542">allocate</reimplementedby>
+        <reimplementedby refid="classpma_1_1ArenaMemoryResource_1aef2cb6cd6b6bb1f53787976e2503a271">allocate</reimplementedby>
+        <reimplementedby refid="classpma_1_1DefaultMemoryResource_1a12e045ccbf63ddcec8561d465d0e56f6">allocate</reimplementedby>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/MemoryResource.h" line="20" column="22"/>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1_1Impl_1ab4d14f8032d9dd70d1016a46657cea46" compoundref="ArenaMemoryResource_8cpp" startline="95" endline="106">pma::ArenaMemoryResource::Impl::allocateArena</referencedby>
+        <referencedby refid="classpma_1_1impl_1_1PolyAllocator_1a796f545108a3048f039f65c388f2eeef" compoundref="PolyAllocator_8h" startline="67" endline="69">pma::impl::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::allocateBytes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1MemoryResource_1ae775e6f871764336db8dc4d95ba95b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void pma::MemoryResource::deallocate</definition>
+        <argsstring>(void *ptr, std::size_t size, std::size_t alignment)=0</argsstring>
+        <name>deallocate</name>
+        <qualifiedname>pma::MemoryResource::deallocate</qualifiedname>
+        <reimplementedby refid="classpma_1_1AlignedMemoryResource_1a98349fccd4981bca15bfc7887e0d52cf">deallocate</reimplementedby>
+        <reimplementedby refid="classpma_1_1ArenaMemoryResource_1ad8f3c6e40a851df95b8ccee6d4e02022">deallocate</reimplementedby>
+        <reimplementedby refid="classpma_1_1DefaultMemoryResource_1aa25d797c95d6cdb57895bb7f36d9d7f9">deallocate</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/MemoryResource.h" line="21" column="22"/>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1_1Impl_1ab4d14f8032d9dd70d1016a46657cea46" compoundref="ArenaMemoryResource_8cpp" startline="95" endline="106">pma::ArenaMemoryResource::Impl::allocateArena</referencedby>
+        <referencedby refid="classpma_1_1impl_1_1PolyAllocator_1a7441db0eab429db0e822d7c3244cac98" compoundref="PolyAllocator_8h" startline="71" endline="73">pma::impl::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::deallocateBytes</referencedby>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1_1Impl_1a5e9f215e3e6f4a796cd2440dcd80114b" compoundref="ArenaMemoryResource_8cpp" startline="51" endline="56">pma::ArenaMemoryResource::Impl::~Impl</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> is an abstract class that allows the implementation of polymorphic allocators. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>It&apos;s purpose is to allow passing arbitrary allocators through API boundaries, without requiring changes in the signatures and types involved. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>pma::AlignedMemoryResource</label>
+        <link refid="classpma_1_1AlignedMemoryResource"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pma::ArenaMemoryResource</label>
+        <link refid="classpma_1_1ArenaMemoryResource"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pma::DefaultMemoryResource</label>
+        <link refid="classpma_1_1DefaultMemoryResource"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/MemoryResource.h" line="17" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/MemoryResource.h" bodystart="17" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classpma_1_1MemoryResource_1ad43f9c740450042025424135a15497bc" prot="public" virt="pure-virtual"><scope>pma::MemoryResource</scope><name>allocate</name></member>
+      <member refid="classpma_1_1MemoryResource_1ae775e6f871764336db8dc4d95ba95b2b" prot="public" virt="pure-virtual"><scope>pma::MemoryResource</scope><name>deallocate</name></member>
+      <member refid="classpma_1_1MemoryResource_1a2f1214ba97985f9728633a518fb62578" prot="public" virt="virtual"><scope>pma::MemoryResource</scope><name>~MemoryResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

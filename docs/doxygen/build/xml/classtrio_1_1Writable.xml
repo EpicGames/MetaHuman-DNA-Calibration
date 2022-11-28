@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1Writable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>trio::Writable</compoundname>
+    <derivedcompoundref refid="classtrio_1_1BoundedIOStream" prot="public" virt="non-virtual">trio::BoundedIOStream</derivedcompoundref>
+    <derivedcompoundref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter" prot="public" virt="non-virtual">trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryWriter</derivedcompoundref>
+    <includes refid="Concepts_8h" local="no">Concepts.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::size_t</type>
+        <definition>virtual std::size_t trio::Writable::write</definition>
+        <argsstring>(const char *source, std::size_t size)=0</argsstring>
+        <name>write</name>
+        <qualifiedname>trio::Writable::write</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a21553243d67bcf7b017a24d71820c9fb">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1aedd4ee0667ca613bdf10dbcb9ebfdaa9">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1ac5d39e5d900469d957664b53ddd6f1a1">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7">write</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes bytes from the given buffer to the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source buffer from which the data is going to be written to the stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write to the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of bytes written. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="53" column="29"/>
+        <referencedby refid="classtrio_1_1FileStreamImpl_1a6ea1c44150f144f5b632d4c32f62f08c" compoundref="FileStreamImpl_8cpp" startline="131" endline="151">trio::FileStreamImpl::read</referencedby>
+        <referencedby refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a4d05920810106ba6bc9e22ab23b7f939" compoundref="MemoryStreamImpl_8cpp" startline="34" endline="38">trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader::read</referencedby>
+        <referencedby refid="classtrio_1_1MemoryStreamImpl_1a1b9085ee7ff1210ca46142414cadbedc" compoundref="MemoryStreamImpl_8cpp" startline="128" endline="139">trio::MemoryStreamImpl::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtrio_1_1Writable_1a7c23fed723a8afefd8ecfd78a48d18dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::size_t</type>
+        <definition>virtual std::size_t trio::Writable::write</definition>
+        <argsstring>(Readable *source, std::size_t size)=0</argsstring>
+        <name>write</name>
+        <qualifiedname>trio::Writable::write</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a876dfedc5ad235e338e53b6ab80d087d">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1a9c2dfd3b3acaf8add9e07d16ec4f760f">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a9c1479f6c1a5db074cd8a280f03afab5">write</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1ac83e4c44edeca8b430aec1fe554fc350">write</reimplementedby>
+        <param>
+          <type><ref refid="classtrio_1_1Readable" kindref="compound">Readable</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Writes bytes from the given stream to this stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream from which the data is going to be written into this stream. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write to the stream. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of bytes written. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="63" column="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrio_1_1Writable_1aadd7ce033795eb76f383ae341a17aa21" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::Writable::~Writable</definition>
+        <argsstring>()</argsstring>
+        <name>~Writable</name>
+        <qualifiedname>trio::Writable::~Writable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="66" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+      <node id="9">
+        <label>trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryWriter</label>
+        <link refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="42" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" bodystart="42" bodyend="68"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e" prot="public" virt="pure-virtual"><scope>trio::Writable</scope><name>write</name></member>
+      <member refid="classtrio_1_1Writable_1a7c23fed723a8afefd8ecfd78a48d18dc" prot="public" virt="pure-virtual"><scope>trio::Writable</scope><name>write</name></member>
+      <member refid="classtrio_1_1Writable_1aadd7ce033795eb76f383ae341a17aa21" prot="protected" virt="virtual"><scope>trio::Writable</scope><name>~Writable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.ui package &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dna_viewer.util package" href="dna_viewer.util.html" />
+    <link rel="prev" title="dna_viewer.reader package" href="dna_viewer.reader.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dna_viewer</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dna_viewer.html">dna_viewer package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dna_viewer.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html">dna_viewer.builder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html">dna_viewer.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html">dna_viewer.const package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html">dna_viewer.model package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html">dna_viewer.reader package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">dna_viewer.ui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html">dna_viewer.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer.version">dna_viewer.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">dna_viewer</a> &raquo;</li>
+          <li><a href="dna_viewer.html">dna_viewer package</a> &raquo;</li>
+      <li>dna_viewer.ui package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer.ui.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dna-viewer-ui-package">
+<h1>dna_viewer.ui package<a class="headerlink" href="#dna-viewer-ui-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-dna_viewer.ui.build_options_widget">
+<span id="dna-viewer-ui-build-options-widget-module"></span><h2>dna_viewer.ui.build_options_widget module<a class="headerlink" href="#module-dna_viewer.ui.build_options_widget" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.BuildOptionsWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.build_options_widget.</span></span><span class="sig-name descname"><span class="pre">BuildOptionsWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements"><span class="pre">dna_viewer.ui.elements.Elements</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_generic_changed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/build_options_widget.html#BuildOptionsWidget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.build_options_widget.BuildOptionsWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<p>Widget containing build options checkboxes</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements">Elements</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The object containing references to the UI elements</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">layout</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QHBoxLayout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">layout</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The layout containing the build options checkboxes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.BuildOptionsWidget.create_checkbox">
+<span class="sig-name descname"><span class="pre">create_checkbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_changed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checked</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QCheckBox</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/build_options_widget.html#BuildOptionsWidget.create_checkbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.build_options_widget.BuildOptionsWidget.create_checkbox" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a checkbox with given parameters and connects them to the on_changed method</p>
+<p>&#64;type label: str
+&#64;param label: The label of the checkbox</p>
+<p>&#64;type on_changed: Callable[[int], None]
+&#64;param on_changed: The method that will get called when the checkbox changes states</p>
+<p>&#64;type checked: bool
+&#64;param checked: The value representing if the checkbox is checked after creation</p>
+<p>&#64;type enabled: bool
+&#64;param enabled: The value representing if the checkbox is enabled after creation</p>
+<p>&#64;rtype: QCheckBox
+&#64;returns: the created checkbox object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.BuildOptionsWidget.on_joints_changed">
+<span class="sig-name descname"><span class="pre">on_joints_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/build_options_widget.html#BuildOptionsWidget.on_joints_changed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.build_options_widget.BuildOptionsWidget.on_joints_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Method that gets called when the joints checkbox is changed</p>
+<p>&#64;type state: int
+&#64;param state: The changed state of the checkbox</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.BuildOptionsWidget.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.build_options_widget.BuildOptionsWidget.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.Checkbox">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.build_options_widget.</span></span><span class="sig-name descname"><span class="pre">Checkbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/build_options_widget.html#Checkbox"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.build_options_widget.Checkbox" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.Checkbox.checked">
+<span class="sig-name descname"><span class="pre">checked</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#dna_viewer.ui.build_options_widget.Checkbox.checked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.build_options_widget.Checkbox.unchecked">
+<span class="sig-name descname"><span class="pre">unchecked</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#dna_viewer.ui.build_options_widget.Checkbox.unchecked" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.dna_viewer_window">
+<span id="dna-viewer-ui-dna-viewer-window-module"></span><h2>dna_viewer.ui.dna_viewer_window module<a class="headerlink" href="#module-dna_viewer.ui.dna_viewer_window" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.dna_viewer_window.</span></span><span class="sig-name descname"><span class="pre">DnaViewerWindow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtWidgets.QWidget</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMainWindow</span></code></p>
+<p>UI Window</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements">Elements</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The object containing references to the UI elements</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">elements_creator</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.elements_creator.ElementsCreator" title="dna_viewer.ui.elements_creator.ElementsCreator">ElementsCreator</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">elements_creator</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The class used for creating UI elements</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">build_scene_successful</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">build_scene_successful</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing if building of the scene was a success</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">character_config</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.character.Character" title="dna_viewer.builder.character.Character">Character</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">character_config</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The character configuration that will be processed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.activate_window">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activate_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.activate_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.activate_window" title="Permalink to this definition"></a></dt>
+<dd><p>Shows window if minimized</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.build_scene">
+<span class="sig-name descname"><span class="pre">build_scene</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.build_scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.build_scene" title="Permalink to this definition"></a></dt>
+<dd><p>Start building the scene</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.create_main_widget">
+<span class="sig-name descname"><span class="pre">create_main_widget</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.create_main_widget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.create_main_widget" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the widget containing the UI elements</p>
+<p>&#64;rtype: QtWidgets.QWidget
+&#64;returns: the main widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.create_ui">
+<span class="sig-name descname"><span class="pre">create_ui</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.create_ui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.create_ui" title="Permalink to this definition"></a></dt>
+<dd><p>Fills the window with UI elements</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.get_character_config">
+<span class="sig-name descname"><span class="pre">get_character_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.config.html#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.get_character_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.get_character_config" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the character config from the UI elements</p>
+<p>&#64;rtype: Character
+&#64;returns: character configuration object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.maya_main_window">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">maya_main_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.maya_main_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.maya_main_window" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the MayaWindow instance</p>
+<p>&#64;throws RuntimeError</p>
+<p>&#64;rtype: QtWidgets.QWidget
+&#64;returns: main window instance</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.process">
+<span class="sig-name descname"><span class="pre">process</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.process"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.process" title="Permalink to this definition"></a></dt>
+<dd><p>Start the build process of creation of scene from provided configuration from the UI</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.set_progress">
+<span class="sig-name descname"><span class="pre">set_progress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.set_progress"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.set_progress" title="Permalink to this definition"></a></dt>
+<dd><p>Setting text and/or value to progress bar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.set_size">
+<span class="sig-name descname"><span class="pre">set_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.set_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.set_size" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the window size</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.setup_window">
+<span class="sig-name descname"><span class="pre">setup_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.setup_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.setup_window" title="Permalink to this definition"></a></dt>
+<dd><p>A method for setting up the window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.show_window">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">show_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#DnaViewerWindow.show_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.show_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.DnaViewerWindow.window">
+<span class="sig-name descname"><span class="pre">window</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.DnaViewerWindow.window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.ui.dna_viewer_window.show_dna_viewer_window">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.dna_viewer_window.</span></span><span class="sig-name descname"><span class="pre">show_dna_viewer_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/dna_viewer_window.html#show_dna_viewer_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.dna_viewer_window.show_dna_viewer_window" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.elements">
+<span id="dna-viewer-ui-elements-module"></span><h2>dna_viewer.ui.elements module<a class="headerlink" href="#module-dna_viewer.ui.elements" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.elements.</span></span><span class="sig-name descname"><span class="pre">Elements</span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Used for holding references to elements that get added to widgets</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">main_widget</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">main_widget</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The main widget that holds everything</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">select_dna_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser">FileChooser</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">select_dna_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The FileChooser widget for getting the DNA path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">load_dna_btn</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QPushButton</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">load_dna_btn</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The button that starts loading in the DNA</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh_tree_list</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QWidget</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh_tree_list</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The widget that contains the meshes to be selected in a tree list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">joints_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">joints_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The checkbox that represents if joints should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">normals_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">normals_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The checkbox that represents if normals should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">blend_shapes_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">blend_shapes_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The checkbox that represents if blend shapes should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">skin_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">skin_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The checkbox that represents if skin should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">rig_logic_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QCheckBox</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">rig_logic_cb</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The checkbox that represents if rig logic should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">select_gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser">FileChooser</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">select_gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The FileChooser widget for getting the gui path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">select_analog_gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser">FileChooser</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">select_analog_gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The FileChooser widget for getting the analog gui path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">select_aas_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser">FileChooser</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">select_aas_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The FileChooser widget for getting the additional assembly script path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">process_btn</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QPushButton</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">process_btn</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The button that starts creating the scene and character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">progress_bar</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QProgressBar</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">progress_bar</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The progress bar that shows the building progress</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.blend_shapes_cb">
+<span class="sig-name descname"><span class="pre">blend_shapes_cb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QCheckBox</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.blend_shapes_cb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.create_new_scene">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_new_scene</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.create_new_scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.create_new_scene" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a new scene</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.dna">
+<span class="sig-name descname"><span class="pre">dna</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.dna" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_aas_path">
+<span class="sig-name descname"><span class="pre">get_aas_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_aas_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_aas_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the additional assembly script file path</p>
+<p>&#64;rtype: Optional[str]
+&#64;returns: The additional assembly script file path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_analog_gui_path">
+<span class="sig-name descname"><span class="pre">get_analog_gui_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_analog_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_analog_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the analog gui file path</p>
+<p>&#64;rtype: Optional[str]
+&#64;returns: The analog gui file path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_build_options">
+<span class="sig-name descname"><span class="pre">get_build_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.config.html#dna_viewer.config.character.BuildOptions" title="dna_viewer.config.character.BuildOptions"><span class="pre">dna_viewer.config.character.BuildOptions</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_build_options"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_build_options" title="Permalink to this definition"></a></dt>
+<dd><p>Gets and returns a build options configuration from the corresponding UI elements</p>
+<p>&#64;rtype: BuildOptions
+&#64;returns: The object containing build option configuration</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_dna_path">
+<span class="sig-name descname"><span class="pre">get_dna_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_dna_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_dna_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the DNA file path</p>
+<p>&#64;rtype: Optional[str]
+&#64;returns: The DNA file path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_file_path">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the file path contained in the provided FileChooser widget</p>
+<p>&#64;type input: FileChooser
+&#64;param input: The FileChooser widget we want to get the file path from</p>
+<p>&#64;rtype: Optional[str]
+&#64;returns: The value extracted from the FileChooser</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.get_gui_path">
+<span class="sig-name descname"><span class="pre">get_gui_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.get_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.get_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the gui file path</p>
+<p>&#64;rtype: Optional[str]
+&#64;returns: The gui file path</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.is_checked">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_checked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">checkbox</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PySide2.QtWidgets.QCheckBox</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements.html#Elements.is_checked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements.Elements.is_checked" title="Permalink to this definition"></a></dt>
+<dd><p>Returns if the provided checkbox is checked and enabled</p>
+<p>&#64;type checkbox: QCheckBox
+&#64;param checkbox: The checkbox thats value needs to be checked and enabled</p>
+<p>&#64;rtype: bool
+&#64;returns: The flag representing if the checkbox is checked and enabled</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.joints_cb">
+<span class="sig-name descname"><span class="pre">joints_cb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QCheckBox</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.joints_cb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.load_dna_btn">
+<span class="sig-name descname"><span class="pre">load_dna_btn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QPushButton</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.load_dna_btn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.main_widget">
+<span class="sig-name descname"><span class="pre">main_widget</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QWidget</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.main_widget" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.mesh_tree_list">
+<span class="sig-name descname"><span class="pre">mesh_tree_list</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QWidget</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.mesh_tree_list" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.normals_cb">
+<span class="sig-name descname"><span class="pre">normals_cb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QCheckBox</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.normals_cb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.process_btn">
+<span class="sig-name descname"><span class="pre">process_btn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QPushButton</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.process_btn" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.progress_bar">
+<span class="sig-name descname"><span class="pre">progress_bar</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QProgressBar</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.progress_bar" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.rig_logic_cb">
+<span class="sig-name descname"><span class="pre">rig_logic_cb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QCheckBox</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.rig_logic_cb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.select_aas_path">
+<span class="sig-name descname"><span class="pre">select_aas_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.select_aas_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.select_analog_gui_path">
+<span class="sig-name descname"><span class="pre">select_analog_gui_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.select_analog_gui_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.select_dna_path">
+<span class="sig-name descname"><span class="pre">select_dna_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.select_dna_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.select_gui_path">
+<span class="sig-name descname"><span class="pre">select_gui_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.select_gui_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements.Elements.skin_cb">
+<span class="sig-name descname"><span class="pre">skin_cb</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PySide2.QtWidgets.QCheckBox</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.ui.elements.Elements.skin_cb" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.elements_creator">
+<span id="dna-viewer-ui-elements-creator-module"></span><h2>dna_viewer.ui.elements_creator module<a class="headerlink" href="#module-dna_viewer.ui.elements_creator" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.elements_creator.</span></span><span class="sig-name descname"><span class="pre">ElementsCreator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PySide2.QtWidgets.QMainWindow</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements"><span class="pre">dna_viewer.ui.elements.Elements</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Used for creating elements that get added to the main window</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">window</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QMainWindow</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">window</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The main UI window</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements">Elements</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">elements</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The container with references to the UI elements</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">body</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QVBoxLayout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">body</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The body layout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">header</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>QHBoxLayout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">header</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The header layout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_aas_selector">
+<span class="sig-name descname"><span class="pre">create_aas_selector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_aas_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_aas_selector" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the additional assembly script selector widget</p>
+<p>&#64;rtype: FileChooser
+&#64;returns: Additional assembly script selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_analog_gui_selector">
+<span class="sig-name descname"><span class="pre">create_analog_gui_selector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_analog_gui_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_analog_gui_selector" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the analog gui selector widget</p>
+<p>&#64;rtype: FileChooser
+&#64;returns: Analog gui selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_body">
+<span class="sig-name descname"><span class="pre">create_body</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QVBoxLayout</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_body"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_body" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the main body layout and adds needed widgets</p>
+<p>&#64;rtype: QVBoxLayout
+&#64;returns: The created vertical box layout with the widgets added</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_body_widgets">
+<span class="sig-name descname"><span class="pre">create_body_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_body_widgets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_body_widgets" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds all needed widgets to the body</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_build_options">
+<span class="sig-name descname"><span class="pre">create_build_options</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_build_options"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_build_options" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the widget containing the build options checkboxes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_dna_chooser">
+<span class="sig-name descname"><span class="pre">create_dna_chooser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_dna_chooser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_dna_chooser" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the DNA chooser widget</p>
+<p>&#64;rtype: FileChooser
+&#64;returns: Dna chooser widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_dna_selector">
+<span class="sig-name descname"><span class="pre">create_dna_selector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_dna_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_dna_selector" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the DNA selector widget</p>
+<p>&#64;rtype: QWidget
+&#64;returns: The created DNA selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_file_chooser">
+<span class="sig-name descname"><span class="pre">create_file_chooser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caption</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_file_chooser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_file_chooser" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a file chooser widget that is used for selecting file paths</p>
+<p>&#64;type label: str
+&#64;param label: The label in the FileDialog that pops up</p>
+<p>&#64;type caption: str
+&#64;param caption: The caption in the FileDialog that pops up</p>
+<p>&#64;type filter: str
+&#64;param filter: The file filter that is used in the FileDialog</p>
+<p>&#64;rtype: FileChooser
+&#64;returns: The created file chooser object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_gui_selector">
+<span class="sig-name descname"><span class="pre">create_gui_selector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_gui_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_gui_selector" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the gui selector widget</p>
+<p>&#64;rtype: FileChooser
+&#64;returns: Gui selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_header">
+<span class="sig-name descname"><span class="pre">create_header</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QHBoxLayout</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_header"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_header" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds to the header widget</p>
+<p>&#64;rtype: QHBoxLayout
+&#64;returns: The created horizontal box layout with the widgets added</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_header_widgets">
+<span class="sig-name descname"><span class="pre">create_header_widgets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_header_widgets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_header_widgets" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds all needed widgets to the header</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_help_btn">
+<span class="sig-name descname"><span class="pre">create_help_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_help_btn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_help_btn" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the help button widget</p>
+<p>&#64;rtype: QHBoxLayout
+&#64;returns: The created horizontal box layout with the widgets added</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_load_dna_button">
+<span class="sig-name descname"><span class="pre">create_load_dna_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna_input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_load_dna_button"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_load_dna_button" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds the load DNA button widget</p>
+<p>&#64;type input: FileChooser
+&#64;param input: The file chooser object corresponding to the DNA selector widget</p>
+<p>&#64;rtype: QWidget
+&#64;returns: The created load DNA button widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_mesh_selector">
+<span class="sig-name descname"><span class="pre">create_mesh_selector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList" title="dna_viewer.ui.mesh_tree_list.MeshTreeList"><span class="pre">dna_viewer.ui.mesh_tree_list.MeshTreeList</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_mesh_selector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_mesh_selector" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds a mesh tree list where the entries are grouped by lods, this is used for selecting the meses that need to be processed</p>
+<p>&#64;rtype: MeshTreeList
+&#64;returns: The created mesh tree list widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_process_btn">
+<span class="sig-name descname"><span class="pre">create_process_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PySide2.QtWidgets.QMainWindow</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QPushButton</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_process_btn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_process_btn" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds a process button</p>
+<p>&#64;type window: QMainWindow
+&#64;param window: The instance of the window object</p>
+<p>&#64;rtype: QPushButton
+&#64;returns: The created process button</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.create_progress_bar">
+<span class="sig-name descname"><span class="pre">create_progress_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PySide2.QtWidgets.QMainWindow</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QProgressBar</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.create_progress_bar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.create_progress_bar" title="Permalink to this definition"></a></dt>
+<dd><p>Creates and adds progress bar</p>
+<p>&#64;type window: QMainWindow
+&#64;param window: The instance of the window object</p>
+<p>&#64;rtype: QProgressBar
+&#64;returns: The created progress bar</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.is_enabled_and_checked">
+<span class="sig-name descname"><span class="pre">is_enabled_and_checked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_box</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">PySide2.QtWidgets.QCheckBox</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.is_enabled_and_checked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.is_enabled_and_checked" title="Permalink to this definition"></a></dt>
+<dd><p>Method that checks if check box is enabled in same time</p>
+<p>&#64;type check_box: QCheckBox
+&#64;param check_box: The checkbox instance to check</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.on_dna_selected">
+<span class="sig-name descname"><span class="pre">on_dna_selected</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.on_dna_selected"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.on_dna_selected" title="Permalink to this definition"></a></dt>
+<dd><p>The method that gets called when a DNA file gets selected</p>
+<p>&#64;type input: FileChooser
+&#64;param input: The file chooser object corresponding to the DNA selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.on_generic_changed">
+<span class="sig-name descname"><span class="pre">on_generic_changed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.on_generic_changed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.on_generic_changed" title="Permalink to this definition"></a></dt>
+<dd><p>Method that gets called when the checkbox is changed</p>
+<p>&#64;type state: int
+&#64;param state: The changed state of the checkbox</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.on_help">
+<span class="sig-name descname"><span class="pre">on_help</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.on_help"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.on_help" title="Permalink to this definition"></a></dt>
+<dd><p>The method that gets called when the help button is clicked</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.on_load_dna_clicked">
+<span class="sig-name descname"><span class="pre">on_load_dna_clicked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.file_chooser.FileChooser" title="dna_viewer.ui.file_chooser.FileChooser"><span class="pre">dna_viewer.ui.file_chooser.FileChooser</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.on_load_dna_clicked"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.on_load_dna_clicked" title="Permalink to this definition"></a></dt>
+<dd><p>The method that gets called when a DNA file gets selected</p>
+<p>&#64;type input: FileChooser
+&#64;param input: The file chooser object corresponding to the DNA selector widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.elements_creator.ElementsCreator.set_riglogic_cb_enabled">
+<span class="sig-name descname"><span class="pre">set_riglogic_cb_enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/elements_creator.html#ElementsCreator.set_riglogic_cb_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.elements_creator.ElementsCreator.set_riglogic_cb_enabled" title="Permalink to this definition"></a></dt>
+<dd><p>Method that sets enable state of riglogic check box</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.file_chooser">
+<span id="dna-viewer-ui-file-chooser-module"></span><h2>dna_viewer.ui.file_chooser module<a class="headerlink" href="#module-dna_viewer.ui.file_chooser" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.file_chooser.FileChooser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.file_chooser.</span></span><span class="sig-name descname"><span class="pre">FileChooser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">PySide2.QtWidgets.QWidget</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">placeholder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialog_caption</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'Select</span> <span class="pre">a</span> <span class="pre">file'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dialog_filter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'All</span> <span class="pre">files</span> <span class="pre">(*.*)'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">button_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'...'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dir_selector</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">on_changed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/file_chooser.html#FileChooser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.file_chooser.FileChooser" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<p>A custom widget used for selecting a file path using a FileDialog and an input field</p>
+<p>&#64;type fc_text_field: QLineEdit
+&#64;param fc_text_field: The input text field for storing the result path</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.file_chooser.FileChooser.get_file_path">
+<span class="sig-name descname"><span class="pre">get_file_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/file_chooser.html#FileChooser.get_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.file_chooser.FileChooser.get_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the file path from the text field</p>
+<p>&#64;rtype: str
+&#64;returns: The file path contained in the text field</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.file_chooser.FileChooser.open_dialog">
+<span class="sig-name descname"><span class="pre">open_dialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/file_chooser.html#FileChooser.open_dialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.file_chooser.FileChooser.open_dialog" title="Permalink to this definition"></a></dt>
+<dd><p>Opens a file dialog, when a path is chosen, the text field gets filled with its value</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.file_chooser.FileChooser.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.file_chooser.FileChooser.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.mesh_tree_list">
+<span id="dna-viewer-ui-mesh-tree-list-module"></span><h2>dna_viewer.ui.mesh_tree_list module<a class="headerlink" href="#module-dna_viewer.ui.mesh_tree_list" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.mesh_tree_list.</span></span><span class="sig-name descname"><span class="pre">MeshTreeList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.ui.elements.Elements" title="dna_viewer.ui.elements.Elements"><span class="pre">dna_viewer.ui.elements.Elements</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/mesh_tree_list.html#MeshTreeList"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QWidget</span></code></p>
+<p>A custom widget that lists out meshes with checkboxes next to them, so these meshes can be selected to be processed. The meshes are grouped by LOD</p>
+<p>&#64;type elements: Elements
+&#64;param elements: The object containing references to the UI elements</p>
+<p>&#64;type mesh_tree: QWidget
+&#64;param mesh_tree: The widget that contains the meshes to be selected in a tree list</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList.create_mesh_tree">
+<span class="sig-name descname"><span class="pre">create_mesh_tree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PySide2.QtWidgets.QWidget</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/mesh_tree_list.html#MeshTreeList.create_mesh_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList.create_mesh_tree" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the mesh tree list widget</p>
+<p>&#64;rtype: QWidget
+&#64;returns: The created widget</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList.fill_mesh_list">
+<span class="sig-name descname"><span class="pre">fill_mesh_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lod_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.definition.NamesAndIndices" title="dna_viewer.model.definition.NamesAndIndices"><span class="pre">dna_viewer.model.definition.NamesAndIndices</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/mesh_tree_list.html#MeshTreeList.fill_mesh_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList.fill_mesh_list" title="Permalink to this definition"></a></dt>
+<dd><p>Fills the mesh list with the meshes, and groups them by lods</p>
+<p>&#64;type lod_count: int
+&#64;param lod_count: The LOD count</p>
+<p>&#64;type meshes: NamesAndIndices
+&#64;param meshes: The names and indices of all the meshes</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList.get_selected_meshes">
+<span class="sig-name descname"><span class="pre">get_selected_meshes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/mesh_tree_list.html#MeshTreeList.get_selected_meshes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList.get_selected_meshes" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the selected meshes from the tree widget</p>
+<p>&#64;rtype: List[int]
+&#64;returns: The list of mesh indices that are selected</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.ui.mesh_tree_list.MeshTreeList.tree_item_changed">
+<span class="sig-name descname"><span class="pre">tree_item_changed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/ui/mesh_tree_list.html#MeshTreeList.tree_item_changed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.mesh_tree_list.MeshTreeList.tree_item_changed" title="Permalink to this definition"></a></dt>
+<dd><p>The method that gets called when a tree item gets its value changed</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui.widgets">
+<span id="dna-viewer-ui-widgets-module"></span><h2>dna_viewer.ui.widgets module<a class="headerlink" href="#module-dna_viewer.ui.widgets" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.widgets.MessageDialog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.widgets.</span></span><span class="sig-name descname"><span class="pre">MessageDialog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message:</span> <span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">icon:</span> <span class="pre">&lt;class</span> <span class="pre">'PySide2.QtWidgets.QMessageBox.Icon'&gt;</span> <span class="pre">=</span> <span class="pre">PySide2.QtWidgets.QMessageBox.Icon.Information</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent:</span> <span class="pre">typing.Optional[PySide2.QtWidgets.QWidget]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/ui/widgets.html#MessageDialog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.widgets.MessageDialog" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QMessageBox</span></code></p>
+<p>A widget for creating a message dialog</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.widgets.MessageDialog.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.widgets.MessageDialog.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.widgets.QHLine">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.widgets.</span></span><span class="sig-name descname"><span class="pre">QHLine</span></span><a class="reference internal" href="_modules/dna_viewer/ui/widgets.html#QHLine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.widgets.QHLine" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QFrame</span></code></p>
+<p>A widget for creating a horizontal line</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.ui.widgets.QHLine.staticMetaObject">
+<span class="sig-name descname"><span class="pre">staticMetaObject</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;PySide2.QtCore.QMetaObject</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#dna_viewer.ui.widgets.QHLine.staticMetaObject" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.ui.widgets.QVSpacer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.ui.widgets.</span></span><span class="sig-name descname"><span class="pre">QVSpacer</span></span><a class="reference internal" href="_modules/dna_viewer/ui/widgets.html#QVSpacer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.ui.widgets.QVSpacer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PySide2.QtWidgets.QSpacerItem</span></code></p>
+<p>A widget for creating a vertical line</p>
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.ui">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dna_viewer.ui" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer.reader.html" class="btn btn-neutral float-left" title="dna_viewer.reader package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna_viewer.util.html" class="btn btn-neutral float-right" title="dna_viewer.util package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

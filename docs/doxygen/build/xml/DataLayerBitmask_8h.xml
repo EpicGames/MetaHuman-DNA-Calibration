@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DataLayerBitmask_8h" kind="file" language="C++">
+    <compoundname>DataLayerBitmask.h</compoundname>
+    <includes refid="DataLayer_8h" local="yes">dna/DataLayer.h</includes>
+    <includes refid="dna_2utils_2ScopedEnumEx_8h" local="yes">dna/utils/ScopedEnumEx.h</includes>
+    <includedby refid="FilteredInputArchive_8h" local="yes">FilteredInputArchive.h</includedby>
+    <includedby refid="Writer_8cpp" local="yes">Writer.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="1">
+        <label>DataLayerBitmask.h</label>
+        <link refid="DataLayerBitmask_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna/utils/ScopedEnumEx.h</label>
+        <link refid="dna_2utils_2ScopedEnumEx_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>DataLayerBitmask.h</label>
+        <link refid="DataLayerBitmask_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Writer.cpp</label>
+        <link refid="Writer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="3">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="2">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DataLayer_8h" kindref="compound">dna/DataLayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dna_2utils_2ScopedEnumEx_8h" kindref="compound">dna/utils/ScopedEnumEx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="namespacedna_1ad0fb05c7febae18102c255c303484d25" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25" kindref="member">DataLayerBitmask</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca77b90cceaada15c2767933b3d5db0f8a" kindref="member">Descriptor</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca0b890b1926b90387673882e6ccae7fdc" kindref="member">Definition</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab39a035a995fc6597c8eb942210d1527" kindref="member">Behavior</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544" kindref="member">GeometryBlendShapesOnly</ref><sp/>=<sp/>8,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">GeometryRest</ref><sp/>=<sp/>16,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="namespacedna_1a3035750816448c5f6c87cc3d589db0a8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25" kindref="member">DataLayerBitmask</ref><sp/><ref refid="namespacedna_1a3035750816448c5f6c87cc3d589db0a8" kindref="member">computeDataLayerBitmask</ref>(<ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25" kindref="member">DataLayerBitmask</ref><sp/>result<sp/>=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a77b90cceaada15c2767933b3d5db0f8a" kindref="member">DataLayerBitmask::Descriptor</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayer::Definition</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayer::Behavior</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayerBitmask::Behavior</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cad9c6333623e6357515fcbf17be806273" kindref="member">DataLayer::Geometry</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544" kindref="member">DataLayerBitmask::GeometryBlendShapesOnly</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">DataLayerBitmask::GeometryRest</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca96fa7330c972d369c23d5b7d70a637ac" kindref="member">DataLayer::GeometryWithoutBlendShapes</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">DataLayerBitmask::GeometryRest</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cabacb1964c4470f0e5c8992578937bb03" kindref="member">DataLayer::AllWithoutBlendShapes</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayerBitmask::Behavior</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">DataLayerBitmask::GeometryRest</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">DataLayer::All</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayerBitmask::Behavior</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544" kindref="member">DataLayerBitmask::GeometryBlendShapesOnly</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>|=<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">DataLayerBitmask::GeometryRest</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/DataLayerBitmask.h"/>
+  </compounddef>
+</doxygen>

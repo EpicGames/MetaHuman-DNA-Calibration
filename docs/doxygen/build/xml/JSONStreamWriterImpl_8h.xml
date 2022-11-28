@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="JSONStreamWriterImpl_8h" kind="file" language="C++">
+    <compoundname>JSONStreamWriterImpl.h</compoundname>
+    <includes local="yes">dna/DNA.h</includes>
+    <includes refid="JSONStreamWriter_8h" local="yes">dna/JSONStreamWriter.h</includes>
+    <includes local="yes">dna/WriterImpl.h</includes>
+    <includes refid="json_2OutputArchive_8h" local="no">terse/archives/json/OutputArchive.h</includes>
+    <includedby refid="JSONStreamWriterImpl_8cpp" local="yes">JSONStreamWriterImpl.cpp</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="4">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="3">
+        <label>dna/JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna/StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna/Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna/layers/BehaviorWriter.h</label>
+        <link refid="BehaviorWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/layers/DefinitionWriter.h</label>
+        <link refid="DefinitionWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="10">
+        <label>dna/layers/DescriptorWriter.h</label>
+        <link refid="DescriptorWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>dna/layers/GeometryWriter.h</label>
+        <link refid="GeometryWriter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="19">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="18">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="22">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="25">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="1">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>terse/Archive.h</label>
+        <link refid="Archive_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>terse/archives/Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>terse/archives/json/OutputArchive.h</label>
+        <link refid="json_2OutputArchive_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="43">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>terse/types/ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>terse/types/Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>terse/types/CharOutputStreamBuf.h</label>
+        <link refid="CharOutputStreamBuf_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>terse/types/Transparent.h</label>
+        <link refid="Transparent_8h"/>
+      </node>
+      <node id="55">
+        <label>terse/utils/Base64.h</label>
+        <link refid="Base64_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="52">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="16">
+        <label>cstddef</label>
+      </node>
+      <node id="28">
+        <label>cstdint</label>
+      </node>
+      <node id="48">
+        <label>cstring</label>
+      </node>
+      <node id="2">
+        <label>dna/DNA.h</label>
+      </node>
+      <node id="37">
+        <label>dna/WriterImpl.h</label>
+      </node>
+      <node id="49">
+        <label>functional</label>
+      </node>
+      <node id="50">
+        <label>iterator</label>
+      </node>
+      <node id="56">
+        <label>limits</label>
+      </node>
+      <node id="44">
+        <label>memory</label>
+      </node>
+      <node id="57">
+        <label>sstream</label>
+      </node>
+      <node id="53">
+        <label>streambuf</label>
+      </node>
+      <node id="58">
+        <label>string</label>
+      </node>
+      <node id="59">
+        <label>tuple</label>
+      </node>
+      <node id="41">
+        <label>type_traits</label>
+      </node>
+      <node id="21">
+        <label>utility</label>
+      </node>
+      <node id="60">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="1">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classdna_1_1JSONStreamWriterImpl" prot="public">dna::JSONStreamWriterImpl</innerclass>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dna/DNA.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="JSONStreamWriter_8h" kindref="compound">dna/JSONStreamWriter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dna/WriterImpl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="json_2OutputArchive_8h" kindref="compound">terse/archives/json/OutputArchive.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classdna_1_1JSONStreamWriterImpl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdna_1_1JSONStreamWriterImpl" kindref="compound">JSONStreamWriterImpl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1WriterImpl" kindref="compound">WriterImpl</ref>&lt;JSONStreamWriter&gt;<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JSONStreamWriterImpl_1a26a5bf6d95454a634d80618d8414f4d4" kindref="member">JSONStreamWriterImpl</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,<sp/>std::uint32_t<sp/>indentWidth,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1JSONStreamWriterImpl_1a3bdfd08782b95f57ac288b4250c8d39d" kindref="member">write</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classdna_1_1JSONStreamWriterImpl_1aba55a42cdc5236615c44db6c801e884a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/><ref refid="classdna_1_1JSONStreamWriterImpl_1aba55a42cdc5236615c44db6c801e884a" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classdna_1_1JSONStreamWriterImpl_1a8b072c1aa7369a4af72d73d1ceb043c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1JSONOutputArchive" kindref="compound">terse::JSONOutputArchive&lt;BoundedIOStream&gt;</ref><sp/><ref refid="classdna_1_1JSONStreamWriterImpl_1a8b072c1aa7369a4af72d73d1ceb043c7" kindref="member">archive</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/JSONStreamWriterImpl.h"/>
+  </compounddef>
+</doxygen>

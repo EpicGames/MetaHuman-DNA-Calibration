@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structdnac_1_1RawFace" kind="struct" language="C++" prot="public">
+    <compoundname>dnac::RawFace</compoundname>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="no">DNA.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdnac_1_1RawFace_1a49c1ffdc9f281a95b7fbad12476b390a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacednac_1ab7887c11e5cb2fe15854f4c432134342" kindref="member">DynArray</ref>&lt; std::uint32_t &gt;</type>
+        <definition>DynArray&lt;std::uint32_t&gt; dnac::RawFace::layoutIndices</definition>
+        <argsstring></argsstring>
+        <name>layoutIndices</name>
+        <qualifiedname>dnac::RawFace::layoutIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="684" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="684" bodyend="-1"/>
+        <referencedby refid="structdnac_1_1RawFace_1aad2b9a8c2e4a9d1f21cf89728c162bf7" compoundref="dnacalib_2dna_2DNA_8h" startline="691" endline="694">serialize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdnac_1_1RawFace_1ae447e27d9dcbeb7d53721a637245a029" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RawFace::RawFace</definition>
+        <argsstring>(MemoryResource *memRes)</argsstring>
+        <name>RawFace</name>
+        <qualifiedname>dnac::RawFace::RawFace</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="686" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="686" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="structdnac_1_1RawFace_1aad2b9a8c2e4a9d1f21cf89728c162bf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dnac::RawFace::serialize</definition>
+        <argsstring>(Archive &amp;archive)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>dnac::RawFace::serialize</qualifiedname>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="691" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="691" bodyend="694"/>
+        <references refid="structdnac_1_1RawFace_1a49c1ffdc9f281a95b7fbad12476b390a" compoundref="dnacalib_2dna_2DNA_8h" startline="684">layoutIndices</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>terse::DynArray&lt; std::uint32_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dnac::RawFace</label>
+        <link refid="structdnac_1_1RawFace"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+layoutIndices</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>std::unique_ptr&lt; T &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::unique_ptr&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</label>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="683" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="683" bodyend="696"/>
+    <listofallmembers>
+      <member refid="structdnac_1_1RawFace_1a49c1ffdc9f281a95b7fbad12476b390a" prot="public" virt="non-virtual"><scope>dnac::RawFace</scope><name>layoutIndices</name></member>
+      <member refid="structdnac_1_1RawFace_1ae447e27d9dcbeb7d53721a637245a029" prot="public" virt="non-virtual"><scope>dnac::RawFace</scope><name>RawFace</name></member>
+      <member refid="structdnac_1_1RawFace_1aad2b9a8c2e4a9d1f21cf89728c162bf7" prot="public" virt="non-virtual"><scope>dnac::RawFace</scope><name>serialize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

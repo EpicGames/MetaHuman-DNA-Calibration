@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="FilteredInputArchive_8cpp" kind="file" language="C++">
+    <compoundname>FilteredInputArchive.cpp</compoundname>
+    <includes refid="FilteredInputArchive_8h" local="yes">dna/stream/FilteredInputArchive.h</includes>
+    <includes local="yes">dna/DNA.h</includes>
+    <includes refid="src_2dna_2TypeDefs_8h" local="yes">dna/TypeDefs.h</includes>
+    <includes refid="utils_2Extd_8h" local="yes">dna/utils/Extd.h</includes>
+    <includes refid="dna_2utils_2ScopedEnumEx_8h" local="yes">dna/utils/ScopedEnumEx.h</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="9">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="15">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="19">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="22">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="4">
+        <label>dna/DataLayerBitmask.h</label>
+        <link refid="DataLayerBitmask_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna/TypeDefs.h</label>
+        <link refid="src_2dna_2TypeDefs_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna/stream/FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>dna/utils/Extd.h</label>
+        <link refid="utils_2Extd_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna/utils/ScopedEnumEx.h</label>
+        <link refid="dna_2utils_2ScopedEnumEx_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>terse/Archive.h</label>
+        <link refid="Archive_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>terse/archives/Common.h</label>
+        <link refid="Common_8h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>terse/archives/Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>terse/archives/binary/InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="59">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>terse/types/ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>terse/types/Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>terse/types/Transparent.h</label>
+        <link refid="Transparent_8h"/>
+      </node>
+      <node id="63">
+        <label>terse/utils/ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>terse/utils/Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>algorithm</label>
+      </node>
+      <node id="66">
+        <label>array</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="13">
+        <label>cstddef</label>
+      </node>
+      <node id="25">
+        <label>cstdint</label>
+      </node>
+      <node id="46">
+        <label>cstring</label>
+      </node>
+      <node id="67">
+        <label>dna/DNA.h</label>
+      </node>
+      <node id="7">
+        <label>dna/LODConstraint.h</label>
+      </node>
+      <node id="49">
+        <label>dna/filters/AnimatedMapFilter.h</label>
+      </node>
+      <node id="50">
+        <label>dna/filters/BlendShapeFilter.h</label>
+      </node>
+      <node id="51">
+        <label>dna/filters/JointFilter.h</label>
+      </node>
+      <node id="52">
+        <label>dna/filters/MeshFilter.h</label>
+      </node>
+      <node id="47">
+        <label>functional</label>
+      </node>
+      <node id="48">
+        <label>iterator</label>
+      </node>
+      <node id="36">
+        <label>list</label>
+      </node>
+      <node id="37">
+        <label>map</label>
+      </node>
+      <node id="33">
+        <label>memory</label>
+      </node>
+      <node id="34">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="38">
+        <label>set</label>
+      </node>
+      <node id="39">
+        <label>string</label>
+      </node>
+      <node id="65">
+        <label>sys/param.h</label>
+      </node>
+      <node id="57">
+        <label>tuple</label>
+      </node>
+      <node id="6">
+        <label>type_traits</label>
+      </node>
+      <node id="40">
+        <label>unordered_map</label>
+      </node>
+      <node id="41">
+        <label>unordered_set</label>
+      </node>
+      <node id="18">
+        <label>utility</label>
+      </node>
+      <node id="42">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="FilteredInputArchive_8h" kindref="compound">dna/stream/FilteredInputArchive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dna/DNA.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="src_2dna_2TypeDefs_8h" kindref="compound">dna/TypeDefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_2Extd_8h" kindref="compound">dna/utils/Extd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dna_2utils_2ScopedEnumEx_8h" kindref="compound">dna/utils/ScopedEnumEx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" kindref="member">jointAttributeCount</ref><sp/>=<sp/>9u;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>U&gt;</highlight></codeline>
+<codeline lineno="27" refid="namespacedna_1aeb9729de45b0a394c99c8907bce661c3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" kindref="member">UnorderedMap&lt;U, U&gt;</ref><sp/><ref refid="namespacedna_1aeb9729de45b0a394c99c8907bce661c3" kindref="member">remappedPositions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;T&gt;</ref>&amp;<sp/>target,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;U&gt;</ref>&amp;<sp/>indices,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" kindref="member">UnorderedMap&lt;U, U&gt;</ref><sp/>mapping{memRes};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(U<sp/>oldIndex{},<sp/>newIndex{};<sp/>oldIndex<sp/>&lt;<sp/>static_cast&lt;U&gt;(target.size());<sp/>++oldIndex)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices.find(oldIndex)<sp/>!=<sp/>indices.end())<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mapping.insert({oldIndex,<sp/>newIndex});</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++newIndex;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mapping;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classdna_1_1FilteredInputArchive_1ac1a20b098a9568a24d57b229791438de" refkind="member"><highlight class="normal"><ref refid="classdna_1_1FilteredInputArchive_1ac1a20b098a9568a24d57b229791438de" kindref="member">FilteredInputArchive::FilteredInputArchive</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer_,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>maxLOD_,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>minLOD_,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1AnimatedMapFilter" kindref="compound">AnimatedMapFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BlendShapeFilter" kindref="compound">BlendShapeFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JointFilter" kindref="compound">JointFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1MeshFilter" kindref="compound">MeshFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive" kindref="compound">BaseArchive</ref>{this,<sp/>stream_},</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>stream{stream_},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>memRes{memRes_},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>layerBitmask{<ref refid="namespacedna_1a3035750816448c5f6c87cc3d589db0a8" kindref="member">computeDataLayerBitmask</ref>(layer_)},</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>lodConstraint{maxLOD_,<sp/>minLOD_,<sp/>memRes},</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>unconstrainedLODCount{}<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classdna_1_1FilteredInputArchive_1a43839444faed201fc4f8a6bca2922ae6" refkind="member"><highlight class="normal"><ref refid="classdna_1_1FilteredInputArchive_1ac1a20b098a9568a24d57b229791438de" kindref="member">FilteredInputArchive::FilteredInputArchive</ref>(<ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref>*<sp/>stream_,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>layer_,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>lods_,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1AnimatedMapFilter" kindref="compound">AnimatedMapFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BlendShapeFilter" kindref="compound">BlendShapeFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JointFilter" kindref="compound">JointFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1MeshFilter" kindref="compound">MeshFilter</ref>{memRes_},</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive" kindref="compound">BaseArchive</ref>{this,<sp/>stream_},</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>stream{stream_},</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>memRes{memRes_},</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>layerBitmask{<ref refid="namespacedna_1a3035750816448c5f6c87cc3d589db0a8" kindref="member">computeDataLayerBitmask</ref>(layer_)},</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>lodConstraint{lods_,<sp/>memRes},</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>unconstrainedLODCount{}<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="72" refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">FilteredInputArchive::processSubset</ref>(TContainer&amp;<sp/>dest,<sp/>std::size_t<sp/>offset,<sp/>std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ElementType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TContainer::value_type;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>availableSize<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" kindref="member">processSize</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(offset<sp/>+<sp/>size<sp/>&lt;=<sp/>availableSize);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>startPosition<sp/>=<sp/><ref refid="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" kindref="member">stream</ref>-&gt;<ref refid="classtrio_1_1Seekable_1af5071bbc6e4760fdfb3d5c0d83117b85" kindref="member">tell</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Skip<sp/>over<sp/>first<sp/>N<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" kindref="member">stream</ref>-&gt;<ref refid="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c" kindref="member">seek</ref>(startPosition<sp/>+<sp/>offset<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ElementType));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>requested<sp/>number<sp/>of<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" kindref="member">BaseArchive::processElements</ref>(dest,<sp/>size);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Even<sp/>if<sp/>not<sp/>all<sp/>elements<sp/>were<sp/>read,<sp/>seek<sp/>to<sp/>the<sp/>end<sp/>of<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1ac1444608480f79338067ca83ef6349e2" kindref="member">stream</ref>-&gt;<ref refid="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c" kindref="member">seek</ref>(startPosition<sp/>+<sp/>availableSize<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ElementType));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawDescriptor" kindref="compound">RawDescriptor</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" kindref="member">BaseArchive::process</ref>(dest);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(dest.<ref refid="structdna_1_1RawDescriptor_1a7e1ef178fb15e7d0d2b5ada8bb706f22" kindref="member">lodCount</ref><sp/>&gt;<sp/>0u);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" kindref="member">clampTo</ref>(dest.<ref refid="structdna_1_1RawDescriptor_1a7e1ef178fb15e7d0d2b5ada8bb706f22" kindref="member">lodCount</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref><sp/>=<sp/>dest.<ref refid="structdna_1_1RawDescriptor_1a7e1ef178fb15e7d0d2b5ada8bb706f22" kindref="member">lodCount</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDescriptor_1acf35a9d1135caf4920cfe0fadf1b6879" kindref="member">maxLOD</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dest.<ref refid="structdna_1_1RawDescriptor_1acf35a9d1135caf4920cfe0fadf1b6879" kindref="member">maxLOD</ref><sp/>+<sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" kindref="member">getMaxLOD</ref>());</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDescriptor_1a7e1ef178fb15e7d0d2b5ada8bb706f22" kindref="member">lodCount</ref><sp/>=<sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" kindref="member">getLODCount</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawDefinition" kindref="compound">RawDefinition</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" kindref="member">contains</ref>(<ref refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" kindref="member">layerBitmask</ref>,<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc" kindref="member">DataLayerBitmask::Definition</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>all<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" kindref="member">BaseArchive::process</ref>(dest);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>filtering<sp/>is<sp/>done,<sp/>unless<sp/>LOD<sp/>constraint<sp/>may<sp/>have<sp/>some<sp/>effect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>find<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>find<sp/>the<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>LOD<sp/>0<sp/>(the<sp/>current<sp/>max<sp/>LOD,<sp/>at<sp/>index<sp/>0),<sp/>as<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contains<sp/>joints<sp/>from<sp/>all<sp/>lower<sp/>LODs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref><sp/>jointsNotInLOD0{<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointIndicesForLOD0<sp/>=<sp/>dest.<ref refid="structdna_1_1RawDefinition_1adcd62346011ab078a3514dce09ca602d" kindref="member">lodJointMapping</ref>.<ref refid="classdna_1_1LODMapping_1ac7ae14d615f10844031891d7fef40cb9" kindref="member">getIndices</ref>(0);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>dest.<ref refid="structdna_1_1RawDefinition_1a907cadb175dd665f400fd4fd53395c5f" kindref="member">jointNames</ref>.size();<sp/>++idx)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::find(jointIndicesForLOD0.begin(),<sp/>jointIndicesForLOD0.end(),<sp/>idx)<sp/>==<sp/>jointIndicesForLOD0.end())<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointsNotInLOD0.push_back(idx);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Discard<sp/>LOD<sp/>data<sp/>that<sp/>is<sp/>not<sp/>relevant<sp/>for<sp/>the<sp/>selected<sp/>MaxLOD<sp/>and<sp/>MinLOD<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1adfa49eda0cc9a74e91ac6202fb4c313f" kindref="member">lodMeshMapping</ref>.<ref refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" kindref="member">discardLODs</ref>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1adcd62346011ab078a3514dce09ca602d" kindref="member">lodJointMapping</ref>.<ref refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" kindref="member">discardLODs</ref>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1af47732a5166024273246f29067ca7dc4" kindref="member">lodBlendShapeMapping</ref>.<ref refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" kindref="member">discardLODs</ref>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1a7b3c68bbba07b5495e7fec0b8ea0a9ef" kindref="member">lodAnimatedMapMapping</ref>.<ref refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" kindref="member">discardLODs</ref>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1MeshFilter_1a809efea7bc2dae3dcf45c5f005e80431" kindref="member">MeshFilter::configure</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dest.<ref refid="structdna_1_1RawDefinition_1af03b43b007443ae0ed41cf4d9f8b5166" kindref="member">meshNames</ref>.size()),</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1adfa49eda0cc9a74e91ac6202fb4c313f" kindref="member">lodMeshMapping</ref>.<ref refid="classdna_1_1LODMapping_1a478fa6df93b667676fa201ac11354a29" kindref="member">getCombinedDistinctIndices</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1MeshFilter_1a8fdedb3908d7d9993dffea271f536698" kindref="member">MeshFilter::apply</ref>(dest);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>allowedJointIndices<sp/>=<sp/>dest.<ref refid="structdna_1_1RawDefinition_1adcd62346011ab078a3514dce09ca602d" kindref="member">lodJointMapping</ref>.<ref refid="classdna_1_1LODMapping_1a478fa6df93b667676fa201ac11354a29" kindref="member">getCombinedDistinctIndices</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>order<sp/>to<sp/>keep<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>add<sp/>them<sp/>all<sp/>to<sp/>the<sp/>list<sp/>of<sp/>joints<sp/>to<sp/>keep<sp/>when<sp/>filtering.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>allowedJointIndices.insert(jointsNotInLOD0.begin(),<sp/>jointsNotInLOD0.end());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JointFilter_1abe98bfb6dcf85c71c8aaba161ab94582" kindref="member">JointFilter::configure</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dest.<ref refid="structdna_1_1RawDefinition_1a907cadb175dd665f400fd4fd53395c5f" kindref="member">jointNames</ref>.size()),<sp/>allowedJointIndices);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" kindref="member">JointFilter::apply</ref>(dest);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BlendShapeFilter_1af5e4098d03df979b6bdcd684c4720015" kindref="member">BlendShapeFilter::configure</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dest.<ref refid="structdna_1_1RawDefinition_1a0187d72ff4fbfc177a66c7dd1be8231e" kindref="member">blendShapeChannelNames</ref>.size()),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1af47732a5166024273246f29067ca7dc4" kindref="member">lodBlendShapeMapping</ref>.<ref refid="classdna_1_1LODMapping_1a478fa6df93b667676fa201ac11354a29" kindref="member">getCombinedDistinctIndices</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1BlendShapeFilter_1ae793b6e6972bab749e113d71947dc787" kindref="member">BlendShapeFilter::apply</ref>(dest);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1AnimatedMapFilter_1a8c6cb59a6ee300af107fb1f958be03e4" kindref="member">AnimatedMapFilter::configure</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(dest.<ref refid="structdna_1_1RawDefinition_1aacce964e60fda9a3cbab4c99f60816ce" kindref="member">animatedMapNames</ref>.size()),</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawDefinition_1a7b3c68bbba07b5495e7fec0b8ea0a9ef" kindref="member">lodAnimatedMapMapping</ref>.<ref refid="classdna_1_1LODMapping_1a478fa6df93b667676fa201ac11354a29" kindref="member">getCombinedDistinctIndices</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1AnimatedMapFilter_1a8889709e16e78582ca70b808714185c6" kindref="member">AnimatedMapFilter::apply</ref>(dest);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="classdna_1_1FilteredInputArchive_1a386e46692089b78ab1a89367fea70a0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawBehavior" kindref="compound">RawBehavior</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" kindref="member">contains</ref>(<ref refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" kindref="member">layerBitmask</ref>,<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527" kindref="member">DataLayerBitmask::Behavior</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1abae81aaa88631f4013ef8b8485cb3e1f" kindref="member">marker</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1a2cbd16a6aed22eaa056d257e917c25eb" kindref="member">controlsMarker</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1a4b8523b6fe94be99c040f67c99659512" kindref="member">controls</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1ac8e34e98d2f29d64f52a917e8088f547" kindref="member">jointsMarker</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1adfbb247bd1c0f40510c91323aaeab0de" kindref="member">joints</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1ad696bc2090feb24e3f9baf0443f70c2f" kindref="member">blendShapeChannelsMarker</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1aa8e03cabeaf40d4b47d80c351ba450f9" kindref="member">blendShapeChannels</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1a19c8f21d9a234fa90d845525fe1a8b77" kindref="member">animatedMapsMarker</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBehavior_1a024b9dc13209d64d404fc6fc1f54b9ab" kindref="member">animatedMaps</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classdna_1_1FilteredInputArchive_1ab9d882b0e1a9176cfcf93fe52fe57da7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawJoints" kindref="compound">RawJoints</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawJoints_1ad045776f4dd3a480662e6dc00a2a39af" kindref="member">rowCount</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawJoints_1a2c2650b21676894b02c63896c0bcd59a" kindref="member">colCount</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawJoints_1a5cb67288174aa076ed83bd64daaf651f" kindref="member">jointGroups</ref>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>filtered<sp/>load<sp/>only<sp/>if<sp/>LOD<sp/>constraints<sp/>have<sp/>been<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointGroupCount<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" kindref="member">processSize</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawJoints_1a5cb67288174aa076ed83bd64daaf651f" kindref="member">jointGroups</ref>.reserve(jointGroupCount);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>i<sp/>=<sp/>0ul;<sp/>i<sp/>&lt;<sp/>jointGroupCount;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1RawJointGroup" kindref="compound">RawJointGroup</ref><sp/>jointGroup{<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(jointGroup.lods);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Discard<sp/>everything<sp/>that<sp/>falls<sp/>outside<sp/>the<sp/>region<sp/>bounded<sp/>by<sp/>LOD<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" kindref="member">applyTo</ref>(jointGroup.lods);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Input<sp/>indices<sp/>are<sp/>all<sp/>loaded<sp/>always<sp/>(unless<sp/>the<sp/>whole<sp/>joint<sp/>group<sp/>is<sp/>empty)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointGroupRowCount<sp/>=<sp/>(jointGroup.lods.empty()<sp/>?<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0)<sp/>:<sp/>jointGroup.lods[0]);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jointGroupRowCount<sp/>!=<sp/>0u)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(jointGroup.inputIndices);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(jointGroup.inputIndices,<sp/>0ul,<sp/>0ul);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointGroupColumnCount<sp/>=<sp/>jointGroup.inputIndices.size();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(jointGroup.outputIndices,<sp/>0ul,<sp/>jointGroupRowCount);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remap<sp/>joint<sp/>attribute<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>attrIdx<sp/>:<sp/>jointGroup.outputIndices)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jntIdx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(attrIdx<sp/>/<sp/><ref refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>relAttrIdx<sp/>=<sp/>attrIdx<sp/>-<sp/>(jntIdx<sp/>*<sp/><ref refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attrIdx<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdna_1_1JointFilter_1a1e4cfee412a23a00ba785cfa14088480" kindref="member">JointFilter::remapped</ref>(jntIdx)<sp/>*<sp/><ref refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" kindref="member">jointAttributeCount</ref><sp/>+<sp/>relAttrIdx);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(jointGroup.values,<sp/>0ul,<sp/>jointGroupRowCount<sp/>*<sp/>jointGroupColumnCount);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>and<sp/>remap<sp/>joint<sp/>indices<sp/>(according<sp/>to<sp/>the<sp/>remapping<sp/>created<sp/>while<sp/>loading<sp/>the<sp/>Definition<sp/>layer)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(jointGroup.jointIndices);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(jointGroup.jointIndices,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](std::uint16_t<sp/>jntIdx,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>JointFilter::passes(jntIdx);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>jntIdx<sp/>:<sp/>jointGroup.jointIndices)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jntIdx<sp/>=<sp/><ref refid="classdna_1_1JointFilter_1a1e4cfee412a23a00ba785cfa14088480" kindref="member">JointFilter::remapped</ref>(jntIdx);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawJoints_1a5cb67288174aa076ed83bd64daaf651f" kindref="member">jointGroups</ref>.push_back(std::move(jointGroup));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>uncompressedJointCount<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdna_1_1JointFilter_1adea95fdb98024794defb9e185974bd0f" kindref="member">JointFilter::maxRemappedIndex</ref>()<sp/>+<sp/>1u);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawJoints_1ad045776f4dd3a480662e6dc00a2a39af" kindref="member">rowCount</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(uncompressedJointCount<sp/>*<sp/><ref refid="namespacedna_1a117519626c9cd44fb83eae7f17b3f25a" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classdna_1_1FilteredInputArchive_1a373b95175b6399a85195bd0237553614" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawBlendShapeChannels" kindref="compound">RawBlendShapeChannels</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a7c4839e1e455507820a88d7a580aa5e2" kindref="member">lods</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a93268bc30f4509cc45c2be0679588257" kindref="member">inputIndices</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1af0f8e3bda2703165306e691c19c83d95" kindref="member">outputIndices</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Discard<sp/>everything<sp/>that<sp/>falls<sp/>outside<sp/>the<sp/>region<sp/>bounded<sp/>by<sp/>LOD<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" kindref="member">applyTo</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a7c4839e1e455507820a88d7a580aa5e2" kindref="member">lods</ref>);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a7c4839e1e455507820a88d7a580aa5e2" kindref="member">lods</ref>.<ref refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" kindref="member">empty</ref>()<sp/>?<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0)<sp/>:<sp/>dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a7c4839e1e455507820a88d7a580aa5e2" kindref="member">lods</ref>[0]);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1a93268bc30f4509cc45c2be0679588257" kindref="member">inputIndices</ref>,<sp/>0ul,<sp/>count);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawBlendShapeChannels_1af0f8e3bda2703165306e691c19c83d95" kindref="member">outputIndices</ref>,<sp/>0ul,<sp/>count);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="classdna_1_1FilteredInputArchive_1a52ac0c9453989831c2bd04bee6587e36" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawAnimatedMaps" kindref="compound">RawAnimatedMaps</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ab6ad33078b028d0e5d6dabafc354b279" kindref="member">lods</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Discard<sp/>everything<sp/>that<sp/>falls<sp/>outside<sp/>the<sp/>region<sp/>bounded<sp/>by<sp/>LOD<sp/>constraints</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" kindref="member">applyTo</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ab6ad33078b028d0e5d6dabafc354b279" kindref="member">lods</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rowCount<sp/>=<sp/>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ab6ad33078b028d0e5d6dabafc354b279" kindref="member">lods</ref>.<ref refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" kindref="member">empty</ref>()<sp/>?<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(0)<sp/>:<sp/>dest.<ref refid="structdna_1_1RawAnimatedMaps_1ab6ad33078b028d0e5d6dabafc354b279" kindref="member">lods</ref>[0]);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1a8f5284340403657ba61194d3bc09b01b" kindref="member">inputIndices</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1abf3dd4351268e95a2f3d2380c79ca092" kindref="member">outputIndices</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1aa26f0b6b848ad5b2f396a6769c638704" kindref="member">fromValues</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1a173d49af5fc3ca1ec9841ad6856f2ce2" kindref="member">toValues</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1af9f5015915a5c9da6e1844564c0109fb" kindref="member">slopeValues</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" kindref="member">processSubset</ref>(dest.<ref refid="structdna_1_1RawAnimatedMaps_1ae666bd6191607427577f961093c0203a" kindref="member">conditionals</ref>.<ref refid="structdna_1_1RawConditionalTable_1ac7071e24747f59155e14b71685412a1f" kindref="member">cutValues</ref>,<sp/>0ul,<sp/>rowCount);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="classdna_1_1FilteredInputArchive_1a3f4a4ffe32cd502f912d3e57aa9b57db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawGeometry" kindref="compound">RawGeometry</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawGeometry_1a7cf55d8de1d7728de5b114b601ea9f77" kindref="member">marker</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" kindref="member">contains</ref>(<ref refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" kindref="member">layerBitmask</ref>,<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c" kindref="member">DataLayerBitmask::GeometryRest</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>As<sp/>mesh<sp/>sizes<sp/>are<sp/>variable,<sp/>iterate<sp/>over<sp/>each<sp/>of<sp/>them,<sp/>reading<sp/>only<sp/>the<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>offsets<sp/>and<sp/>jumping<sp/>over<sp/>the<sp/>actual<sp/>data<sp/>of<sp/>the<sp/>meshes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>will<sp/>correctly<sp/>position<sp/>the<sp/>underlying<sp/>stream<sp/>(end<sp/>of<sp/>geometry<sp/>layer),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>while<sp/>still<sp/>not<sp/>reading<sp/>the<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>meshCount<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" kindref="member">processSize</ref>();</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="structdna_1_1RawMesh_1ab15aeb803606f3b6d2f9a035bb4bdc58" kindref="member">RawMesh::offset</ref>)<sp/>meshOffset{};</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(<ref refid="structdna_1_1RawMesh_1afd166e7dd8e890e1d671c408c2840640" kindref="member">RawMesh::marker</ref>)<sp/>meshMarker{meshOffset};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>i<sp/>=<sp/>{};<sp/>i<sp/>&lt;<sp/>meshCount;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(meshOffset);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(meshMarker);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawGeometry_1a08fbe16485d9e69800b5ae326cb72c57" kindref="member">meshes</ref>);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>filtered<sp/>load<sp/>only<sp/>if<sp/>a<sp/>different<sp/>maxLOD<sp/>is<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>meshCount<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" kindref="member">processSize</ref>();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawGeometry_1a08fbe16485d9e69800b5ae326cb72c57" kindref="member">meshes</ref>.reserve(meshCount);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>i<sp/>=<sp/>{};<sp/>i<sp/>&lt;<sp/>meshCount;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1RawMesh" kindref="compound">RawMesh</ref><sp/>mesh{<ref refid="classdna_1_1FilteredInputArchive_1a23c6f1625bf41d0e78a7f639fc2ab912" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>mesh<sp/>indices<sp/>filtered<sp/>for<sp/>the<sp/>current<sp/>maxLOD<sp/>permit<sp/>loading<sp/>this<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdna_1_1MeshFilter_1a0207bc3e8c416385af9d382ddfda0964" kindref="member">MeshFilter::passes</ref>(i))<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(mesh);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dest.<ref refid="structdna_1_1RawGeometry_1a08fbe16485d9e69800b5ae326cb72c57" kindref="member">meshes</ref>.push_back(std::move(mesh));</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Jump<sp/>over<sp/>the<sp/>whole<sp/>section<sp/>of<sp/>data<sp/>related<sp/>to<sp/>this<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(mesh.offset);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(mesh.marker);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="classdna_1_1FilteredInputArchive_1a5d7c1ef4ed7f75f0806a1607ebaf6039" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawMesh" kindref="compound">RawMesh</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1ab15aeb803606f3b6d2f9a035bb4bdc58" kindref="member">offset</ref>);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1ac2244101df7dc7eb72d732c5e58d557f" kindref="member">positions</ref>);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1a237b9fac2a9e5218745d7b99715c3ea6" kindref="member">textureCoordinates</ref>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1a02c2ba98c17b1426c6e8cc1ef91680ef" kindref="member">normals</ref>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1a96e4e5262a45f94be9565ffb48b1c9b5" kindref="member">layouts</ref>);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1acf7cf30f6c0e75b5f5b41b1dcdf2d48a" kindref="member">faces</ref>);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1a91a5a66cbf900f527e590b501827a00e" kindref="member">maximumInfluencePerVertex</ref>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1acc2a632fcdbc8aacb49cabdcc4f9240b" kindref="member">skinWeights</ref>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" kindref="member">contains</ref>(<ref refid="classdna_1_1FilteredInputArchive_1ace88a7dbba7b608c366c198c42d92e0b" kindref="member">layerBitmask</ref>,<sp/><ref refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544" kindref="member">DataLayerBitmask::GeometryBlendShapesOnly</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1a6ae69a86cfc622549ca9e0f63438f1e1" kindref="member">blendShapeTargets</ref>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(dest.<ref refid="structdna_1_1RawMesh_1a6ae69a86cfc622549ca9e0f63438f1e1" kindref="member">blendShapeTargets</ref>,<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdna_1_1RawBlendShapeTarget" kindref="compound">RawBlendShapeTarget</ref>&amp;<sp/>bst,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>BlendShapeFilter::passes(bst.blendShapeChannelIndex);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawMesh_1afd166e7dd8e890e1d671c408c2840640" kindref="member">marker</ref>);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="classdna_1_1FilteredInputArchive_1a968050b5aa2795d9bc479c856874a93c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">FilteredInputArchive::process</ref>(<ref refid="structdna_1_1RawVertexSkinWeights" kindref="compound">RawVertexSkinWeights</ref>&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawVertexSkinWeights_1ae7a46f0cca6581521ab56066b3078f6e" kindref="member">weights</ref>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" kindref="member">process</ref>(dest.<ref refid="structdna_1_1RawVertexSkinWeights_1a00b798e5e128f84d5689706d5cedee16" kindref="member">jointIndices</ref>);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdna_1_1FilteredInputArchive_1acbedc0fa2406363de6ecabc26dd59fa0" kindref="member">lodConstraint</ref>.<ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">hasImpactOn</ref>(<ref refid="classdna_1_1FilteredInputArchive_1a806fe1d09f6e16061a7ca1ea477fd173" kindref="member">unconstrainedLODCount</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(dest.<ref refid="structdna_1_1RawVertexSkinWeights_1ae7a46f0cca6581521ab56066b3078f6e" kindref="member">weights</ref>.size()<sp/>==<sp/>dest.<ref refid="structdna_1_1RawVertexSkinWeights_1a00b798e5e128f84d5689706d5cedee16" kindref="member">jointIndices</ref>.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" kindref="member">JointFilter::apply</ref>(dest);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/FilteredInputArchive.cpp"/>
+  </compounddef>
+</doxygen>

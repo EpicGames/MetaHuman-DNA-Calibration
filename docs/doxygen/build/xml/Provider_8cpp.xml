@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Provider_8cpp" kind="file" language="C++">
+    <compoundname>Provider.cpp</compoundname>
+    <includes refid="Provider_8h" local="yes">status/Provider.h</includes>
+    <includes refid="StatusCode_8h" local="yes">status/StatusCode.h</includes>
+    <includes refid="Storage_8h" local="yes">status/Storage.h</includes>
+    <includes refid="Registry_8h" local="yes">status/Registry.h</includes>
+    <includes local="no">cassert</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="2">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Provider.cpp</label>
+        <link refid="Provider_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>status/Registry.h</label>
+        <link refid="Registry_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>status/Storage.h</label>
+        <link refid="Storage_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>algorithm</label>
+      </node>
+      <node id="8">
+        <label>array</label>
+      </node>
+      <node id="12">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>initializer_list</label>
+      </node>
+      <node id="6">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacesc">sc</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Provider_8h" kindref="compound">status/Provider.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="StatusCode_8h" kindref="compound">status/StatusCode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Storage_8h" kindref="compound">status/Storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Registry_8h" kindref="compound">status/Registry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesc" kindref="compound">sc</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classsc_1_1StatusProvider_1a26e7ae52444695242571e5b7eea3d2be" refkind="member"><highlight class="normal"><ref refid="classsc_1_1StatusProvider_1a26e7ae52444695242571e5b7eea3d2be" kindref="member">StatusProvider::StatusProvider</ref>(std::initializer_list&lt;StatusCode&gt;<sp/>statuses)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>Release<sp/>build<sp/>will<sp/>eliminate<sp/>this<sp/>call,<sp/>as<sp/>it&apos;s<sp/>really<sp/>just<sp/>a<sp/>sanity<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>defining<sp/>duplicate<sp/>error<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="classsc_1_1StatusCodeRegistry_1ae25f66a04a1ab6fd799cc79337d905e4" kindref="member">StatusCodeRegistry::insert</ref>(statuses));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Avoid<sp/>warning<sp/>in<sp/>Release<sp/>builds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(statuses);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classsc_1_1StatusProvider_1adf03c5df9d13b53842a0856ef858a304" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusProvider_1adf03c5df9d13b53842a0856ef858a304" kindref="member">StatusProvider::reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsc_1_1StatusStorage_1af28b57ec9085479d61598e4c6aeda801" kindref="member">StatusStorage::reset</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classsc_1_1StatusProvider_1ab486119ec943db654198ec5f5979c188" refkind="member"><highlight class="normal"><ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref><sp/><ref refid="classsc_1_1StatusProvider_1ab486119ec943db654198ec5f5979c188" kindref="member">StatusProvider::get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusStorage_1a53a408f877bd65c6faec0779c80ecde7" kindref="member">StatusStorage::get</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classsc_1_1StatusProvider_1ad9165cf882e0aa9a81e0a857e5e54f78" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusProvider_1ad9165cf882e0aa9a81e0a857e5e54f78" kindref="member">StatusProvider::isOk</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusStorage_1ab91ef0d842f53a30e35783d01679637c" kindref="member">StatusStorage::isOk</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">StatusProvider::set</ref>(<ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref><sp/>status)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsc_1_1StatusStorage_1a9f3710c04a88dd49df6ae1cc9ea02086" kindref="member">StatusStorage::set</ref>(status);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sc</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Provider.cpp"/>
+  </compounddef>
+</doxygen>

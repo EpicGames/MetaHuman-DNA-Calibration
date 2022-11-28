@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.config.character &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.config.character</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.config.character</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">..config.aas</span> <span class="kn">import</span> <span class="n">AdditionalAssemblyScript</span>
+<span class="kn">from</span> <span class="nn">..config.analog_gui</span> <span class="kn">import</span> <span class="n">AnalogGui</span>
+<span class="kn">from</span> <span class="nn">..config.gui</span> <span class="kn">import</span> <span class="n">Gui</span>
+<span class="kn">from</span> <span class="nn">..config.rig_logic</span> <span class="kn">import</span> <span class="n">RigLogic</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+
+
+<div class="viewcode-block" id="SpaceModifiers"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.SpaceModifiers">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">SpaceModifiers</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent the character config</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type linear_modifier: float</span>
+<span class="sd">    @param linear_modifier: The linear modifier that needs to be applied to the character</span>
+
+<span class="sd">    @type angle_modifier: float</span>
+<span class="sd">    @param angle_modifier: The angle modifier that needs to be applied to the character</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">linear_modifier</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">angle_modifier</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BuildOptions"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.BuildOptions">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">BuildOptions</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent the build options we want to apply while building the character</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type add_joints: bool</span>
+<span class="sd">    @param add_joints: A flag representing whether joints should be added</span>
+
+<span class="sd">    @type add_normals: bool</span>
+<span class="sd">    @param add_normals: A flag representing whether normals should be added</span>
+
+<span class="sd">    @type add_blend_shapes: bool</span>
+<span class="sd">    @param add_blend_shapes: A flag representing whether blend shapes should be added</span>
+
+<span class="sd">    @type add_skin: bool</span>
+<span class="sd">    @param add_skin: A flag representing whether skin should be added</span>
+
+<span class="sd">    @type add_ctrl_attributes_on_root_joint: bool</span>
+<span class="sd">    @param add_ctrl_attributes_on_root_joint: A flag representing whether control attributes should be added to the root joint</span>
+
+<span class="sd">    @type add_animated_map_attributes_on_root_joint: bool</span>
+<span class="sd">    @param add_animated_map_attributes_on_root_joint: A flag representing whether animated map attributes should be added to the root joint</span>
+
+<span class="sd">    @type add_key_frames: bool</span>
+<span class="sd">    @param add_key_frames: A flag representing whether key frames should be added</span>
+
+<span class="sd">    @type add_mesh_name_to_blend_shape_channel_name: bool</span>
+<span class="sd">    @param add_mesh_name_to_blend_shape_channel_name: A flag representing whether mash name of blend shape channel is added to name when creating it</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">add_joints</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_normals</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_blend_shapes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_skin</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_ctrl_attributes_on_root_joint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_animated_map_attributes_on_root_joint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_key_frames</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">add_mesh_name_to_blend_shape_channel_name</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Character"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Character</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent the character config</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type dna: DNA</span>
+<span class="sd">    @param dna: Instance of DNA object</span>
+
+<span class="sd">    @type options: BuildOptions</span>
+<span class="sd">    @param options: The configuration containing the build options</span>
+
+<span class="sd">    @type modifiers: SpaceModifiers</span>
+<span class="sd">    @param modifiers: The configuration containing space modifiers for the character</span>
+
+<span class="sd">    @type meshes: List[int]</span>
+<span class="sd">    @param meshes: The list of mesh ids that need to be processed</span>
+
+<span class="sd">    @type rig_logic_config: RigLogic</span>
+<span class="sd">    @param rig_logic_config: The rig logic configuration file containing naming patterns</span>
+
+<span class="sd">    @type gui_options: Gui</span>
+<span class="sd">    @param gui_options: The configuration containing the gui options</span>
+
+<span class="sd">    @type analog_gui_options: AnalogGui</span>
+<span class="sd">    @param analog_gui_options: The configuration containing the analog gui options</span>
+
+<span class="sd">    @type create_character_node: bool</span>
+<span class="sd">    @param create_character_node: A flag representing whether the character should be parented to a character transform node in the scene hierarchy</span>
+
+<span class="sd">    @type create_display_layers: bool</span>
+<span class="sd">    @param create_display_layers: A flag representing whether the created meshes should be assigned to a display layer</span>
+
+<span class="sd">    @type aas: AdditionalAssemblyScript</span>
+<span class="sd">    @param aas: The configuration containing the additional assembly script options</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">options</span><span class="p">:</span> <span class="n">BuildOptions</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">BuildOptions</span><span class="p">)</span>
+    <span class="n">modifiers</span><span class="p">:</span> <span class="n">SpaceModifiers</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">SpaceModifiers</span><span class="p">)</span>
+    <span class="n">meshes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">rig_logic_config</span><span class="p">:</span> <span class="n">RigLogic</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">gui_options</span><span class="p">:</span> <span class="n">Gui</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">analog_gui_options</span><span class="p">:</span> <span class="n">AnalogGui</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">create_character_node</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">create_display_layers</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">aas</span><span class="p">:</span> <span class="n">AdditionalAssemblyScript</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Character.with_dna"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_dna">[docs]</a>    <span class="k">def</span> <span class="nf">with_dna</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the DNA file path</span>
+
+<span class="sd">        @type dna: DNA</span>
+<span class="sd">        @param dna: The location of the DNA file</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_character_node"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_character_node">[docs]</a>    <span class="k">def</span> <span class="nf">with_character_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if the result character rig should be parented to a character transform</span>
+
+<span class="sd">        @type value: bool</span>
+<span class="sd">        @param value: The flag that represents if the result character rig should be parented to a character transform</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_character_node</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_add_meshes_to_display_layers"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_add_meshes_to_display_layers">[docs]</a>    <span class="k">def</span> <span class="nf">with_add_meshes_to_display_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if the created meshes should be put in their corresponding display layer</span>
+
+<span class="sd">        @type value: bool</span>
+<span class="sd">        @param value: The flag that represents if the created meshes should be put in their corresponding display layer</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_display_layers</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_joints"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_joints">[docs]</a>    <span class="k">def</span> <span class="nf">with_joints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if joints should be created</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_gui_path"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_gui_path">[docs]</a>    <span class="k">def</span> <span class="nf">with_gui_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gui_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the gui path</span>
+
+<span class="sd">        @type gui_path: str</span>
+<span class="sd">        @param gui_path: The location of the gui file</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_options</span> <span class="o">=</span> <span class="n">Gui</span><span class="p">(</span><span class="n">gui_path</span><span class="o">=</span><span class="n">gui_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_gui"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_gui">[docs]</a>    <span class="k">def</span> <span class="nf">with_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gui</span><span class="p">:</span> <span class="n">Gui</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the gui configuration</span>
+
+<span class="sd">        @type gui: Gui</span>
+<span class="sd">        @param gui: The gui configuration file</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_options</span> <span class="o">=</span> <span class="n">gui</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_analog_gui"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_analog_gui">[docs]</a>    <span class="k">def</span> <span class="nf">with_analog_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">analog_gui_config</span><span class="p">:</span> <span class="n">AnalogGui</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the analog gui configuration</span>
+
+<span class="sd">        @type analog_gui_config: AnalogGui</span>
+<span class="sd">        @param analog_gui_config: The configuration containing the analog gui options</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">analog_gui_options</span> <span class="o">=</span> <span class="n">analog_gui_config</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_analog_gui_path"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_analog_gui_path">[docs]</a>    <span class="k">def</span> <span class="nf">with_analog_gui_path</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">analog_gui_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the analog gui path</span>
+
+<span class="sd">        @type analog_gui_path: Optional[str]</span>
+<span class="sd">        @param analog_gui_path: The configuration containing the analog gui options</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">analog_gui_options</span> <span class="o">=</span> <span class="n">AnalogGui</span><span class="p">(</span><span class="n">gui_path</span><span class="o">=</span><span class="n">analog_gui_path</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">with_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if blend shapes should be created</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_blend_shapes</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_skin"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_skin">[docs]</a>    <span class="k">def</span> <span class="nf">with_skin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if skin should be created</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_skin</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_normals"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_normals">[docs]</a>    <span class="k">def</span> <span class="nf">with_normals</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if normals should be created</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_normals</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_meshes"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_meshes">[docs]</a>    <span class="k">def</span> <span class="nf">with_meshes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">meshes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the meshes that need to be processed</span>
+
+<span class="sd">        @type meshes: List[int]</span>
+<span class="sd">        @param meshes: The list of mesh ids that need to be processed</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">meshes</span> <span class="o">=</span> <span class="n">meshes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meshes</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_linear_modifier"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_linear_modifier">[docs]</a>    <span class="k">def</span> <span class="nf">with_linear_modifier</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modifier</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the linear modifier</span>
+
+<span class="sd">        @type modifier: float</span>
+<span class="sd">        @param modifier: The value of the linear modifier</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">modifiers</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">=</span> <span class="n">modifier</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_angle_modifier"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_angle_modifier">[docs]</a>    <span class="k">def</span> <span class="nf">with_angle_modifier</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modifier</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the angle modifier</span>
+
+<span class="sd">        @type modifier: float</span>
+<span class="sd">        @param modifier: The value of the angle modifier</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">modifiers</span><span class="o">.</span><span class="n">angle_modifier</span> <span class="o">=</span> <span class="n">modifier</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_rig_logic"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_rig_logic">[docs]</a>    <span class="k">def</span> <span class="nf">with_rig_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rig_logic_node_config</span><span class="p">:</span> <span class="n">RigLogic</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the rig logic configuration</span>
+
+<span class="sd">        @type rig_logic_node_config: RigLogic</span>
+<span class="sd">        @param rig_logic_node_config: The rig logic configuration file containing naming patterns</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">rig_logic_config</span> <span class="o">=</span> <span class="n">rig_logic_node_config</span> <span class="ow">or</span> <span class="n">RigLogic</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_additional_assembly_script"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_additional_assembly_script">[docs]</a>    <span class="k">def</span> <span class="nf">with_additional_assembly_script</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">aas_config</span><span class="p">:</span> <span class="n">AdditionalAssemblyScript</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the additional assembly script configuration</span>
+
+<span class="sd">        @type aas_config: AdditionalAssemblyScript</span>
+<span class="sd">        @param aas_config: The configuration containing the additional assembly script options</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">aas_config</span><span class="o">.</span><span class="n">path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                <span class="s2">&quot;No AAS path provided, skipping additional assembly script execution&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="bp">self</span>
+
+        <span class="k">if</span> <span class="n">aas_config</span><span class="o">.</span><span class="n">module_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">aas_config</span><span class="o">.</span><span class="n">module_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">aas_config</span><span class="o">.</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">aas</span> <span class="o">=</span> <span class="n">aas_config</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_ctrl_attributes_on_root_joint"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_ctrl_attributes_on_root_joint">[docs]</a>    <span class="k">def</span> <span class="nf">with_ctrl_attributes_on_root_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if control attributes should be added on the root joint</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_ctrl_attributes_on_root_joint</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_animated_map_attributes_on_root_joint"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_animated_map_attributes_on_root_joint">[docs]</a>    <span class="k">def</span> <span class="nf">with_animated_map_attributes_on_root_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if animated map attributes should be added on the root joint</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_animated_map_attributes_on_root_joint</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div>
+
+<div class="viewcode-block" id="Character.with_key_frames"><a class="viewcode-back" href="../../../dna_viewer.config.html#dna_viewer.config.character.Character.with_key_frames">[docs]</a>    <span class="k">def</span> <span class="nf">with_key_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Character&quot;</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the flag that represents if key frames should be added</span>
+
+<span class="sd">        @rtype: Character</span>
+<span class="sd">        @returns: The instance of the changed object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_key_frames</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="bp">self</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

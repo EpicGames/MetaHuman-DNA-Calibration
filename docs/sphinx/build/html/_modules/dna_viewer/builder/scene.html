@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.builder.scene &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.builder.scene</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.builder.scene</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">traceback</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">..builder.character</span> <span class="kn">import</span> <span class="n">Character</span><span class="p">,</span> <span class="n">CharacterBuildResult</span>
+<span class="kn">from</span> <span class="nn">..config.scene</span> <span class="kn">import</span> <span class="n">Scene</span> <span class="k">as</span> <span class="n">SceneConfig</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">..util.conversion</span> <span class="kn">import</span> <span class="n">Conversion</span>
+<span class="kn">from</span> <span class="nn">..util.error</span> <span class="kn">import</span> <span class="n">DNAViewerError</span>
+<span class="kn">from</span> <span class="nn">..util.scene_builder</span> <span class="kn">import</span> <span class="n">SceneBuilder</span>
+
+
+<div class="viewcode-block" id="SceneError"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.SceneError">[docs]</a><span class="k">class</span> <span class="nc">SceneError</span><span class="p">(</span><span class="n">DNAViewerError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;An error class that inherits DNAViewerError and gets raised in the scene building process&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Scene creation failed! Reason: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="SceneResult"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.SceneResult">[docs]</a><span class="k">class</span> <span class="nc">SceneResult</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used for returning data after finishing the scene build process</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type character_results: List[CharacterBuildResult]</span>
+<span class="sd">    @param character_results: A list of all character build results from the scene building process</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">character_results</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CharacterBuildResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></div>
+
+
+<div class="viewcode-block" id="Scene"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene">[docs]</a><span class="k">class</span> <span class="nc">Scene</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A builder class used for building the character</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type config: Optional[SceneConfig]</span>
+<span class="sd">    @param config: The scene configuration options used for building the scene</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SceneConfig</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">config</span> <span class="ow">or</span> <span class="n">SceneConfig</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DNA</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Scene.build"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SceneResult</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Starts the scene building process&quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Started building scene&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">SceneResult</span><span class="p">()</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">create_new_scene</span><span class="p">:</span>
+                <span class="n">SceneBuilder</span><span class="o">.</span><span class="n">new_scene</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">character_config</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">character_config</span><span class="o">.</span><span class="n">dna</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_units</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nb">any</span><span class="p">(</span>
+                    <span class="n">character_config</span><span class="o">.</span><span class="n">create_display_layers</span>
+                    <span class="k">for</span> <span class="n">character_config</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">characters</span>
+                <span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">add_display_layers</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">build_scene</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_scene</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">except</span> <span class="n">SceneError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+            <span class="k">raise</span> <span class="n">e</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">()</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unhandled exception, </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="n">SceneError</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span> <span class="kn">from</span> <span class="nn">e</span></div>
+
+<div class="viewcode-block" id="Scene.save_scene"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.save_scene">[docs]</a>    <span class="k">def</span> <span class="nf">save_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Saves the scene from @config&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">save_options</span><span class="p">:</span>
+            <span class="n">SceneBuilder</span><span class="o">.</span><span class="n">save_scene</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">save_options</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Scene.set_units"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.set_units">[docs]</a>    <span class="k">def</span> <span class="nf">set_units</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Sets the translation and rotation units of the scene from @config&quot;&quot;&quot;</span>
+
+        <span class="n">SceneBuilder</span><span class="o">.</span><span class="n">set_units</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">units</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Scene.add_display_layers"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.add_display_layers">[docs]</a>    <span class="k">def</span> <span class="nf">add_display_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Adds the display layers to the scene&quot;&quot;&quot;</span>
+
+        <span class="n">display_layers_needed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_display_layers</span><span class="p">()</span>
+        <span class="n">SceneBuilder</span><span class="o">.</span><span class="n">add_display_layers</span><span class="p">(</span><span class="n">display_layers_needed</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Scene.get_display_layers"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.get_display_layers">[docs]</a>    <span class="k">def</span> <span class="nf">get_display_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Gets a lod id list that need to be created for the meshes from @config&quot;&quot;&quot;</span>
+        <span class="n">meshes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">char_config</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">meshes_per_lod</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_meshes_by_lods</span><span class="p">(</span><span class="n">char_config</span><span class="o">.</span><span class="n">meshes</span><span class="p">)</span>
+            <span class="p">):</span>
+                <span class="k">if</span> <span class="n">meshes_per_lod</span><span class="p">:</span>
+                    <span class="n">meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">meshes</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Scene.build_scene"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.scene.Scene.build_scene">[docs]</a>    <span class="k">def</span> <span class="nf">build_scene</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">build_result</span><span class="p">:</span> <span class="n">SceneResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Builds the scene for the configuration from @config</span>
+
+<span class="sd">        @type build_result: SceneResult</span>
+<span class="sd">        @param build_result: The SceneResult object that will contain results</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">linear_modifier</span> <span class="o">=</span> <span class="n">Conversion</span><span class="o">.</span><span class="n">calculate_linear_modifier</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">linear_unit</span>
+        <span class="p">)</span>
+        <span class="n">angle_modifier</span> <span class="o">=</span> <span class="n">Conversion</span><span class="o">.</span><span class="n">calculate_angle_modifier</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">angle_unit</span>
+        <span class="p">)</span>
+
+        <span class="n">results</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">CharacterBuildResult</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">character_config</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">characters</span><span class="p">:</span>
+            <span class="n">character_config</span><span class="o">.</span><span class="n">with_linear_modifier</span><span class="p">(</span><span class="n">linear_modifier</span><span class="p">)</span><span class="o">.</span><span class="n">with_angle_modifier</span><span class="p">(</span>
+                <span class="n">angle_modifier</span>
+            <span class="p">)</span>
+            <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Character</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">,</span> <span class="n">character_config</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">())</span>
+
+        <span class="n">build_result</span><span class="o">.</span><span class="n">character_results</span> <span class="o">=</span> <span class="n">results</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

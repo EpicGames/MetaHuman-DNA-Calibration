@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classterse_1_1JSONInputArchive" kind="class" language="C++" prot="public">
+    <compoundname>terse::JSONInputArchive</compoundname>
+    <basecompoundref refid="classterse_1_1ExtendableJSONInputArchive" prot="public" virt="non-virtual">terse::ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</basecompoundref>
+    <includes refid="json_2InputArchive_8h" local="no">InputArchive.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class TStream</type>
+      </param>
+      <param>
+        <type>typename TSize</type>
+        <defval>std::uint32_t</defval>
+      </param>
+      <param>
+        <type>typename TOffset</type>
+        <defval>TSize</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classterse_1_1JSONInputArchive_1a043397c81c25b744fc8d31d49d6c8720" prot="private" static="no">
+        <type><ref refid="classterse_1_1ExtendableJSONInputArchive" kindref="compound">ExtendableJSONInputArchive</ref>&lt; <ref refid="classterse_1_1JSONInputArchive" kindref="compound">JSONInputArchive</ref>, TStream, TSize, TOffset &gt;</type>
+        <definition>using terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;::BaseArchive =  ExtendableJSONInputArchive&lt;JSONInputArchive, TStream, TSize, TOffset&gt;</definition>
+        <argsstring></argsstring>
+        <name>BaseArchive</name>
+        <qualifiedname>terse::JSONInputArchive::BaseArchive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="537" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classterse_1_1JSONInputArchive_1ab1d8764c7397a1a6fdb4f226ba377029" prot="private" static="no" mutable="no">
+        <type>friend</type>
+        <definition>friend terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;::Archive&lt; JSONInputArchive &gt;</definition>
+        <argsstring></argsstring>
+        <name>Archive&lt; JSONInputArchive &gt;</name>
+        <qualifiedname>terse::JSONInputArchive::Archive&lt; JSONInputArchive &gt;</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="538" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="538" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classterse_1_1JSONInputArchive_1a864958067defe740e29fce106e3fa64f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;::JSONInputArchive</definition>
+        <argsstring>(TStream *stream_)</argsstring>
+        <name>JSONInputArchive</name>
+        <qualifiedname>terse::JSONInputArchive::JSONInputArchive</qualifiedname>
+        <param>
+          <type>TStream *</type>
+          <declname>stream_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="541" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="541" bodyend="542"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classterse_1_1JSONInputArchive_1ae3fdf14fecb04e3d9306f5dbd0bc8765" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;::process</definition>
+        <argsstring>(T &amp;&amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::JSONInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="546" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="546" bodyend="548"/>
+        <references refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" compoundref="json_2InputArchive_8h" startline="102" endline="105">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>terse::Archive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>terse::ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>terse::JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>terse::JSONInputArchive&lt; trio::BoundedIOStream &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>terse::JSONInputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="5">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>terse::Archive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>terse::ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-state</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="template-instance">
+          <edgelabel>&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>terse::JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>std::basic_ios&lt; Char &gt;</label>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>std::basic_istream&lt; Char &gt;</label>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::ios_base</label>
+      </node>
+      <node id="7">
+        <label>std::istream</label>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="12">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1ExtendableJSONInputArchive"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-state</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::SerializationState</label>
+        <link refid="structterse_1_1ExtendableJSONInputArchive_1_1SerializationState"/>
+      </node>
+      <node id="5">
+        <label>terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>terse::JSONInputArchive&lt; TStream, TSize, TOffset &gt;</label>
+        <link refid="classterse_1_1JSONInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" line="535" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/json/InputArchive.h" bodystart="535" bodyend="550"/>
+    <listofallmembers>
+      <member refid="classterse_1_1Archive_1a42458df7d5e4e87755c88dd01f866640" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>Archive</name></member>
+      <member refid="classterse_1_1JSONInputArchive_1ab1d8764c7397a1a6fdb4f226ba377029" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>Archive&lt; JSONInputArchive &gt;</name></member>
+      <member refid="classterse_1_1JSONInputArchive_1a043397c81c25b744fc8d31d49d6c8720" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>BaseArchive</name></member>
+      <member refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" prot="protected" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1Archive_1ab765e22c9a8bcab4e98d9b593577de82" prot="protected" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ac28b1039d09d7b08cc534f77b55ed737" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>expectChar</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a14a4b04ddac793779adca34267a9343b" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>ExtendableJSONInputArchive</name></member>
+      <member refid="classterse_1_1Archive_1a7a9fc12b40284867ff4969c6c48c8982" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>getUserData</name></member>
+      <member refid="classterse_1_1Archive_1a462e059ee44f6ab246bfff8d444144c3" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>impl</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1add3ac7122d0d7cf9c39f6405be7b5719" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>isOk</name></member>
+      <member refid="classterse_1_1Archive_1a72e39f25db3b5c693cecff9ce48429c2" prot="public" virt="non-virtual" ambiguityscope="Archive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt; &gt;::"><scope>terse::JSONInputArchive</scope><name>isOk</name></member>
+      <member refid="classterse_1_1JSONInputArchive_1a864958067defe740e29fce106e3fa64f" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>JSONInputArchive</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1af6d9e3786dc71c82d18300e32e6f50dc" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>label</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad36624ac23f9b1510123bb4ccd980413" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>OffsetType</name></member>
+      <member refid="classterse_1_1Archive_1a4df3e8d790c6bb1e74763f2952c9ad65" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>operator()</name></member>
+      <member refid="classterse_1_1Archive_1a06b33e08fd4d274553a8717f5da84c22" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classterse_1_1Archive_1a2be0b456566c72d32680de9b9a6f2904" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>popTransparency</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a1ca752b099079764a5e88d3bbf752730" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>postStructInput</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad63c71e42a99d6b403d55f26b198cb19" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>preStructInput</name></member>
+      <member refid="classterse_1_1JSONInputArchive_1ae3fdf14fecb04e3d9306f5dbd0bc8765" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a12dd3ef452d031ca8b62aa35f6c8e1c6" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ad66c4c9bd5a2cb7e5ecbc9438e198147" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a42d57d03595e8880807bf580b325ba7a" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a1bea01ef3058027492597841759729ef" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a0f9836333c52adb3bf6611ca3b198ab2" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1abae9ea0410c361566d49faef3a9a4b70" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a714b2df3b2df5a936e827fff6a3a94ee" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1adeb86c2c69641590c62c5c7aa248ce96" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a4cd4401d71333f4ec67cd0325f3c15a4" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1abda3dc26d85bd0e15151dad14c798efb" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a8fe1114d3420a17b24fae42f07752e58" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a38066d5b323b5bd54bd828428c43764c" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a05c488ce317e0f97ab96ae9e0dbb4926" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1aec72229c1dbdd3727b82f9609c3e58e4" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a7c11e5bb78260fb4c890f917bd2b95d6" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a2cc009f84b69996dc572707c2c23944e" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a9095bed4eeeb509c9460f9ad641cc1d4" prot="protected" virt="non-virtual" ambiguityscope="ExtendableJSONInputArchive&lt; JSONInputArchive&lt; TStream, std::uint32_t, std::uint32_t &gt;, TStream, std::uint32_t, std::uint32_t &gt;::"><scope>terse::JSONInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a840923cda19f36f5f70c68f20e331956" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>pushTransparency</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1aba3dbb63b6bed47e8a816a2fa73437ee" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>readChar</name></member>
+      <member refid="classterse_1_1Archive_1ac64d0bb1ad778cb392e026d002e74f33" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>setUserData</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a67490ea0d04c145250ea024a1f4a5369" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>SizeType</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1ae6395d72ebe9a7421fdd9d81cfe5d79b" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>skipWhiteSpace</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a0ddc4da5f182cd15f4540af962f18405" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>state</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a8e159d3776bad6d10cce7b91be7fc9da" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>stream</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a32a2cb5a88a30fe6665807f6deb56198" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>streamBuf</name></member>
+      <member refid="classterse_1_1ExtendableJSONInputArchive_1a5712e3134eea2752dd3bae3183148b95" prot="public" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>sync</name></member>
+      <member refid="classterse_1_1Archive_1a0e9b96481b56e7de196e700cf5ffe5cb" prot="private" virt="non-virtual"><scope>terse::JSONInputArchive</scope><name>userData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

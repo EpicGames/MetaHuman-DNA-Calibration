@@ -1,0 +1,1048 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ScaleCommand_8cpp" kind="file" language="C++">
+    <compoundname>ScaleCommand.cpp</compoundname>
+    <includes refid="ScaleCommand_8h" local="yes">dnacalib/commands/ScaleCommand.h</includes>
+    <includes refid="CommandImplBase_8h" local="yes">dnacalib/CommandImplBase.h</includes>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="yes">dnacalib/dna/DNA.h</includes>
+    <includes refid="DNACalibDNAReaderImpl_8h" local="yes">dnacalib/dna/DNACalibDNAReaderImpl.h</includes>
+    <includes refid="dnacalib_2types_2Aliases_8h" local="yes">dnacalib/types/Aliases.h</includes>
+    <includes local="no">cstdint</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>dna/BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>dna/BinaryStreamWriter.h</label>
+        <link refid="BinaryStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="8">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="47">
+        <label>dna/JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>dna/JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>dna/StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dna/Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>dna/layers/BehaviorWriter.h</label>
+        <link refid="BehaviorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>dna/layers/DefinitionWriter.h</label>
+        <link refid="DefinitionWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="13">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>dna/layers/DescriptorWriter.h</label>
+        <link refid="DescriptorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>dna/layers/GeometryWriter.h</label>
+        <link refid="GeometryWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="3">
+        <label>dnacalib/Command.h</label>
+        <link refid="Command_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnacalib/Defs.h</label>
+        <link refid="dnacalib_2Defs_8h"/>
+      </node>
+      <node id="2">
+        <label>dnacalib/commands/ScaleCommand.h</label>
+        <link refid="ScaleCommand_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>dnacalib/dna/DNACalibDNAReader.h</label>
+        <link refid="DNACalibDNAReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnacalib/types/Aliases.h</label>
+        <link refid="dnacalib_2types_2Aliases_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="21">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="25">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="28">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="52">
+        <label>dnacalib/CommandImplBase.h</label>
+        <link refid="CommandImplBase_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>dnacalib/TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ScaleCommand.cpp</label>
+        <link refid="ScaleCommand_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>dnacalib/dna/BaseImpl.h</label>
+        <link refid="dnacalib_2dna_2BaseImpl_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>dnacalib/dna/DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>dnacalib/dna/DNACalibDNAReaderImpl.h</label>
+        <link refid="DNACalibDNAReaderImpl_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>dnacalib/dna/DenormalizedData.h</label>
+        <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>dnacalib/dna/LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>dnacalib/dna/ReaderImpl.h</label>
+        <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>dnacalib/dna/SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>dnacalib/dna/WriterImpl.h</label>
+        <link refid="dnacalib_2dna_2WriterImpl_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>dnacalib/utils/Extd.h</label>
+        <link refid="alib_2utils_2Extd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>tdm/Computations.h</label>
+        <link refid="Computations_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>tdm/Mat.h</label>
+        <link refid="Mat_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>tdm/Types.h</label>
+        <link refid="Types_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>tdm/Vec.h</label>
+        <link refid="Vec_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="81">
+        <label>array</label>
+      </node>
+      <node id="18">
+        <label>cassert</label>
+      </node>
+      <node id="68">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstddef</label>
+      </node>
+      <node id="31">
+        <label>cstdint</label>
+      </node>
+      <node id="74">
+        <label>cstring</label>
+      </node>
+      <node id="75">
+        <label>functional</label>
+      </node>
+      <node id="76">
+        <label>iterator</label>
+      </node>
+      <node id="89">
+        <label>limits</label>
+      </node>
+      <node id="59">
+        <label>list</label>
+      </node>
+      <node id="60">
+        <label>map</label>
+      </node>
+      <node id="55">
+        <label>memory</label>
+      </node>
+      <node id="56">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="61">
+        <label>set</label>
+      </node>
+      <node id="62">
+        <label>string</label>
+      </node>
+      <node id="82">
+        <label>tuple</label>
+      </node>
+      <node id="57">
+        <label>type_traits</label>
+      </node>
+      <node id="63">
+        <label>unordered_map</label>
+      </node>
+      <node id="64">
+        <label>unordered_set</label>
+      </node>
+      <node id="24">
+        <label>utility</label>
+      </node>
+      <node id="65">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdnac_1_1ScaleCommand_1_1Impl" prot="public">dnac::ScaleCommand::Impl</innerclass>
+    <innernamespace refid="namespacednac">dnac</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ScaleCommand_8h" kindref="compound">dnacalib/commands/ScaleCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CommandImplBase_8h" kindref="compound">dnacalib/CommandImplBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2dna_2DNA_8h" kindref="compound">dnacalib/dna/DNA.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DNACalibDNAReaderImpl_8h" kindref="compound">dnacalib/dna/DNACalibDNAReaderImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2types_2Aliases_8h" kindref="compound">dnacalib/types/Aliases.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref><sp/>=<sp/>9u;</highlight></codeline>
+<codeline lineno="15" refid="namespacednac_1a7804d6177609c47b41b07722b0264719" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="namespacednac_1a7804d6177609c47b41b07722b0264719" kindref="member">rotationOffset</ref><sp/>=<sp/>3u;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classdnac_1_1ScaleCommand_1_1Impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand_1_1Impl" kindref="compound">ScaleCommand::Impl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase</ref>&lt;Impl&gt;<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classdnac_1_1ScaleCommand_1_1Impl_1a86e4a40d7d1fe5577a4ddaf0e342c095" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref><sp/>=<sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase&lt;Impl&gt;</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classdnac_1_1ScaleCommand_1_1Impl_1ac2ea815c83b4ef734f24463bccdb30e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1ac2ea815c83b4ef734f24463bccdb30e5" kindref="member">Impl</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref>{memRes_},</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>{},</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>{1.0f}<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classdnac_1_1ScaleCommand_1_1Impl_1a393ecf1e879ee5b2c77ebde067ab9b33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a393ecf1e879ee5b2c77ebde067ab9b33" kindref="member">setScale</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scale_)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref><sp/>=<sp/>scale_;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classdnac_1_1ScaleCommand_1_1Impl_1aa05db49bca9f500785921a1b36d724d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1aa05db49bca9f500785921a1b36d724d4" kindref="member">setOrigin</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin_)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref><sp/>=<sp/>origin_;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classdnac_1_1ScaleCommand_1_1Impl_1a59cb0cacfe5bec9caefe5788b509a26f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a59cb0cacfe5bec9caefe5788b509a26f" kindref="member">run</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref><sp/>!=<sp/>1.0f)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1f15b0e88bfa3e2c126a2d0282dbb38d" kindref="member">scaleNeutralJoints</ref>(output);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a765e5aba59db044180e88a69baa32dbd" kindref="member">scaleJointBehavior</ref>(output);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1ae15f40bf9aeeb015bfc18bb0daa831c0" kindref="member">scaleGeometry</ref>(output);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45" refid="classdnac_1_1ScaleCommand_1_1Impl_1a1f15b0e88bfa3e2c126a2d0282dbb38d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1f15b0e88bfa3e2c126a2d0282dbb38d" kindref="member">scaleNeutralJoints</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a60ff2e61efe5b9485c42abdfced7fa0b" kindref="member">getNeutralJointTranslationXs</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ys<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a513ccbcaca887a19ad0c8600c8b79bd7" kindref="member">getNeutralJointTranslationYs</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>zs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a9f8715c8fd5f11897c1278c6b0fe2776" kindref="member">getNeutralJointTranslationZs</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((xs.size()<sp/>==<sp/>ys.size())<sp/>&amp;&amp;<sp/>(ys.size()<sp/>==<sp/>zs.size()));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/>translations{xs,<sp/>ys,<sp/>zs,<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>i<sp/>=<sp/>0ul;<sp/>i<sp/>&lt;<sp/>translations.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isRootJoint<sp/>=<sp/>(output-&gt;<ref refid="classdnac_1_1ReaderImpl_1aeb7ef18efd4a765ba13d3960094bca85" kindref="member">getJointParentIndex</ref>(i)<sp/>==<sp/>i);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isRootJoint)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.xs[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.ys[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.zs[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.xs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.ys[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.zs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.xs[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.ys[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.zs[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.xs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.ys[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>translations.zs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" kindref="member">setNeutralJointTranslations</ref>(std::move(translations));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classdnac_1_1ScaleCommand_1_1Impl_1a765e5aba59db044180e88a69baa32dbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a765e5aba59db044180e88a69baa32dbd" kindref="member">scaleJointBehavior</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>jointGroupIndex<sp/>=<sp/>0u;<sp/>jointGroupIndex<sp/>&lt;<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a75c9bb26249d92c81c2a16247f8c4f5e" kindref="member">getJointGroupCount</ref>();<sp/>++jointGroupIndex)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>values<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1aafb275f39c9e45429fab9cba05a418a6" kindref="member">getJointGroupValues</ref>(jointGroupIndex);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>outputIndices<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a0dcf65e478fcaeb6683c963f8b599f01" kindref="member">getJointGroupOutputIndices</ref>(jointGroupIndex);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputIndices<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a1433abc3344a820826f2a2e887e6220d" kindref="member">getJointGroupInputIndices</ref>(jointGroupIndex);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>columnCount<sp/>=<sp/>inputIndices.size();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">AlignedDynArray&lt;float&gt;</ref><sp/>newValues{values.<ref refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" kindref="member">begin</ref>(),<sp/>values.end(),<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>row<sp/>=<sp/>0ul;<sp/>row<sp/>&lt;<sp/>outputIndices.size();<sp/>++row)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>the<sp/>translation<sp/>attributes<sp/>need<sp/>to<sp/>be<sp/>scaled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>relAttributeIndex<sp/>=<sp/>(outputIndices[row]<sp/>%<sp/><ref refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kindref="member">jointAttributeCount</ref>);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(relAttributeIndex<sp/>&lt;<sp/><ref refid="namespacednac_1a7804d6177609c47b41b07722b0264719" kindref="member">rotationOffset</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>column<sp/>=<sp/>0ul;<sp/>column<sp/>&lt;<sp/>columnCount;<sp/>++column)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newValues[row<sp/>*<sp/>columnCount<sp/>+<sp/>column]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" kindref="member">setJointGroupValues</ref>(jointGroupIndex,<sp/>std::move(newValues));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="classdnac_1_1ScaleCommand_1_1Impl_1ae15f40bf9aeeb015bfc18bb0daa831c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1ae15f40bf9aeeb015bfc18bb0daa831c0" kindref="member">scaleGeometry</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>meshIndex<sp/>=<sp/>0u;<sp/>meshIndex<sp/>&lt;<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1ad79abbd6be98e172f989311806fa01cf" kindref="member">getMeshCount</ref>();<sp/>++meshIndex)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1ae7c6509cead50685fae7fa3297844926" kindref="member">scaleVertexPositions</ref>(output,<sp/>meshIndex);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1afc9a2d7dc33381e2c76cc676a543c58a" kindref="member">scaleBlendShapeTargetDeltas</ref>(output,<sp/>meshIndex);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classdnac_1_1ScaleCommand_1_1Impl_1ae7c6509cead50685fae7fa3297844926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1ae7c6509cead50685fae7fa3297844926" kindref="member">scaleVertexPositions</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output,<sp/>std::uint16_t<sp/>meshIndex)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1aea95c3f004da9c7c57d82b21fd493801" kindref="member">getVertexPositionXs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ys<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a00f2620efcb497c3d51cf6aaea94d079" kindref="member">getVertexPositionYs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>zs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a1fdf97eb5f3c9b9b78bcd1ce79f484f3" kindref="member">getVertexPositionZs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((xs.size()<sp/>==<sp/>ys.size())<sp/>&amp;&amp;<sp/>(ys.size()<sp/>==<sp/>zs.size()));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/>vertices{xs,<sp/>ys,<sp/>zs,<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint32_t<sp/>i<sp/>=<sp/>0u;<sp/>i<sp/>&lt;<sp/>vertices.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.xs[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.ys[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.zs[i]<sp/>-=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.xs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.ys[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.zs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.xs[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.ys[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertices.zs[i]<sp/>+=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">setVertexPositions</ref>(meshIndex,<sp/>std::move(vertices));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classdnac_1_1ScaleCommand_1_1Impl_1afc9a2d7dc33381e2c76cc676a543c58a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1afc9a2d7dc33381e2c76cc676a543c58a" kindref="member">scaleBlendShapeTargetDeltas</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output,<sp/>std::uint16_t<sp/>meshIndex)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>blendShapeTargetIndex<sp/>=<sp/>0u;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blendShapeTargetIndex<sp/>&lt;<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a331dbfa35dd3f6a8e8b8131f4d5aef8c" kindref="member">getBlendShapeTargetCount</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++blendShapeTargetIndex)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1ac97d7efca1493f5f850704d78d40111e" kindref="member">getBlendShapeTargetDeltaXs</ref>(meshIndex,<sp/>blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ys<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a05e1fcb483624fa4cbc9922e3528a31a" kindref="member">getBlendShapeTargetDeltaYs</ref>(meshIndex,<sp/>blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>zs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a3bbe0f453f53493aa88cd5c5cbf3f06a" kindref="member">getBlendShapeTargetDeltaZs</ref>(meshIndex,<sp/>blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((xs.size()<sp/>==<sp/>ys.size())<sp/>&amp;&amp;<sp/>(ys.size()<sp/>==<sp/>zs.size()));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/>deltas{xs,<sp/>ys,<sp/>zs,<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint32_t<sp/>i<sp/>=<sp/>0u;<sp/>i<sp/>&lt;<sp/>deltas.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deltas.xs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deltas.ys[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deltas.zs[i]<sp/>*=<sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">setBlendShapeTargetDeltas</ref>(meshIndex,<sp/>blendShapeTargetIndex,<sp/>std::move(deltas));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="142" refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a1c911ff5b8e36d10b3f23f6b1126dbd5" kindref="member">origin</ref>;</highlight></codeline>
+<codeline lineno="143" refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1_1Impl_1a7c52b906dbd8a7ac139e4b0b72795a57" kindref="member">scale</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" kindref="member">ScaleCommand::ScaleCommand</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:<sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1ScaleCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classdnac_1_1ScaleCommand_1a8dad95fef0691538560a3b1c2fde75b7" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" kindref="member">ScaleCommand::ScaleCommand</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" kindref="member">scale</ref>,<sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1ScaleCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" kindref="member">pImpl</ref>-&gt;setScale(<ref refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" kindref="member">pImpl</ref>-&gt;setOrigin(origin);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand_1a44218c7518b11a00c5147db5d519c7cf" kindref="member">ScaleCommand::~ScaleCommand</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" kindref="member">ScaleCommand::ScaleCommand</ref>(<ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref>&amp;<sp/><ref refid="classdnac_1_1ScaleCommand_1a6c44f415907bb803646e83c46696bdae" kindref="member">ScaleCommand::operator=</ref>(<ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="classdnac_1_1ScaleCommand_1a493731dbceeee197a1b858f9b97ba0c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1a493731dbceeee197a1b858f9b97ba0c4" kindref="member">ScaleCommand::setScale</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" kindref="member">scale</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" kindref="member">pImpl</ref>-&gt;setScale(<ref refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" kindref="member">scale</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="classdnac_1_1ScaleCommand_1a672cf1c18e8f4780ddd027f132bc9601" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1a672cf1c18e8f4780ddd027f132bc9601" kindref="member">ScaleCommand::setOrigin</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" kindref="member">pImpl</ref>-&gt;setOrigin(origin);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3" kindref="member">ScaleCommand::run</ref>(<ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" kindref="member">pImpl</ref>-&gt;run(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(output));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp"/>
+  </compounddef>
+</doxygen>

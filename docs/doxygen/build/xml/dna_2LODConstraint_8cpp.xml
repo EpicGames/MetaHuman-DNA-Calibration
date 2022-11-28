@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dna_2LODConstraint_8cpp" kind="file" language="C++">
+    <compoundname>dna/LODConstraint.cpp</compoundname>
+    <includes local="yes">dna/LODConstraint.h</includes>
+    <includes refid="utils_2Extd_8h" local="yes">dna/utils/Extd.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">numeric</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>LODConstraint.cpp</label>
+        <link refid="dna_2LODConstraint_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna/utils/Extd.h</label>
+        <link refid="utils_2Extd_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>algorithm</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>dna/LODConstraint.h</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>iterator</label>
+      </node>
+      <node id="11">
+        <label>numeric</label>
+      </node>
+      <node id="8">
+        <label>set</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dna/LODConstraint.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="utils_2Extd_8h" kindref="compound">dna/utils/Extd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" refkind="member"><highlight class="normal"><ref refid="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" kindref="member">LODConstraint::LODConstraint</ref>(std::uint16_t<sp/>maxLOD,<sp/>std::uint16_t<sp/>minLOD,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:<sp/>lods{memRes}<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(maxLOD<sp/>&lt;=<sp/>minLOD);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.resize(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(minLOD<sp/>-<sp/>maxLOD)<sp/>+<sp/>1ul);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::iota(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.begin(),<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.end(),<sp/>maxLOD);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classdna_1_1LODConstraint_1a6ca927fc0f54aa9637f1547060afa389" refkind="member"><highlight class="normal"><ref refid="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" kindref="member">LODConstraint::LODConstraint</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>lods_,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:<sp/>lods{lods_.begin(),<sp/>lods_.end(),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>memRes}<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::sort(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.begin(),<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.end());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" kindref="member">LODConstraint::hasImpactOn</ref>(std::uint16_t<sp/>lodCount)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::uint16_t<sp/>lod<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.begin();<sp/>(it<sp/>!=<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.end())<sp/>&amp;&amp;<sp/>(lod<sp/>&lt;<sp/>lodCount);<sp/>++it)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lod<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(lod<sp/>+<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(lod<sp/>==<sp/>*it));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(lod<sp/>!=<sp/>lodCount);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" refkind="member"><highlight class="normal">std::uint16_t<sp/><ref refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" kindref="member">LODConstraint::getMaxLOD</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.empty()<sp/>?<sp/>std::uint16_t{}<sp/>:<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.front());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classdna_1_1LODConstraint_1a3fb6b5e1f8d759e320f027b439a37577" refkind="member"><highlight class="normal">std::uint16_t<sp/><ref refid="classdna_1_1LODConstraint_1a3fb6b5e1f8d759e320f027b439a37577" kindref="member">LODConstraint::getMinLOD</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.empty()<sp/>?<sp/>std::uint16_t{}<sp/>:<sp/><ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.back());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" refkind="member"><highlight class="normal">std::uint16_t<sp/><ref refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" kindref="member">LODConstraint::getLODCount</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>.size());</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" kindref="member">LODConstraint::clampTo</ref>(std::uint16_t<sp/>lodCount)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>,<sp/>[lodCount](std::uint16_t<sp/>lod,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lod<sp/>&lt;<sp/>lodCount;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" kindref="member">LODConstraint::applyTo</ref>(<ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref>&amp;<sp/>unconstrainedLODs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(unconstrainedLODs,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classdna_1_1LODConstraint_1a7ca9f9948d9ef6a5548c9cab569d5713" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" kindref="member">LODConstraint::applyTo</ref>(<ref refid="classterse_1_1DynArray" kindref="compound">DynArray&lt;std::uint16_t&gt;</ref>&amp;<sp/>unconstrainedLODs)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(unconstrainedLODs,<sp/><ref refid="namespaceextd_1a221ca03908027a0215902298b500af85" kindref="member">extd::byPosition</ref>(<ref refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" kindref="member">lods</ref>));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp"/>
+  </compounddef>
+</doxygen>

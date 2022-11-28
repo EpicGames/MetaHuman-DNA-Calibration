@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1Controllable" kind="class" language="C++" prot="public">
+    <compoundname>trio::Controllable</compoundname>
+    <basecompoundref refid="classtrio_1_1Openable" prot="public" virt="non-virtual">trio::Openable</basecompoundref>
+    <basecompoundref refid="classtrio_1_1Closeable" prot="public" virt="non-virtual">trio::Closeable</basecompoundref>
+    <derivedcompoundref refid="classtrio_1_1BoundedIOStream" prot="public" virt="non-virtual">trio::BoundedIOStream</derivedcompoundref>
+    <includes refid="Concepts_8h" local="no">Concepts.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrio_1_1Controllable_1a66a85a74eb5921ba18e7d50f16bb3d14" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::Controllable::~Controllable</definition>
+        <argsstring>()</argsstring>
+        <name>~Controllable</name>
+        <qualifiedname>trio::Controllable::~Controllable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="116" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="1">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="1">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="114" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" bodystart="114" bodyend="118"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1Closeable_1ac2e99d3bd99a39cf528ba29b1ba0baf1" prot="public" virt="pure-virtual"><scope>trio::Controllable</scope><name>close</name></member>
+      <member refid="classtrio_1_1Openable_1addfdc5360983a446fe200410a3eaef8f" prot="public" virt="pure-virtual"><scope>trio::Controllable</scope><name>open</name></member>
+      <member refid="classtrio_1_1Closeable_1aebe07ebcbb431ecdd71b575993038097" prot="protected" virt="virtual"><scope>trio::Controllable</scope><name>~Closeable</name></member>
+      <member refid="classtrio_1_1Controllable_1a66a85a74eb5921ba18e7d50f16bb3d14" prot="protected" virt="virtual"><scope>trio::Controllable</scope><name>~Controllable</name></member>
+      <member refid="classtrio_1_1Openable_1a24782209f544f766b4b953dae7b1dbd4" prot="protected" virt="virtual"><scope>trio::Controllable</scope><name>~Openable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

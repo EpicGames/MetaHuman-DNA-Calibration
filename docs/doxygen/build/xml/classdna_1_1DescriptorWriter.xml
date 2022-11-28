@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1DescriptorWriter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dna::DescriptorWriter</compoundname>
+    <derivedcompoundref refid="classdna_1_1DefinitionWriter" prot="public" virt="non-virtual">dna::DefinitionWriter</derivedcompoundref>
+    <includes refid="DescriptorWriter_8h" local="no">DescriptorWriter.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>dna::DescriptorWriter::~DescriptorWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~DescriptorWriter</name>
+        <qualifiedname>dna::DescriptorWriter::~DescriptorWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="21" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a9af57f937e1d24de1b6fcad6f109e4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setName</definition>
+        <argsstring>(const char *name)=0</argsstring>
+        <name>setName</name>
+        <qualifiedname>dna::DescriptorWriter::setName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a6a8c479a167ed3fbb4fa18e6c663dba7">setName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a6a8c479a167ed3fbb4fa18e6c663dba7">setName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a634200c9943976627ab3ac69f0a21d5d">setName</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an allocation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="30" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1aed61cd3661fe097ac1792608ea13971b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setArchetype</definition>
+        <argsstring>(Archetype archetype)=0</argsstring>
+        <name>setArchetype</name>
+        <qualifiedname>dna::DescriptorWriter::setArchetype</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4faeb7fbb237d53e67a411475b573ea7">setArchetype</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4faeb7fbb237d53e67a411475b573ea7">setArchetype</reimplementedby>
+        <param>
+          <type><ref refid="namespacedna_1a4a14ef1c085b2668735a8c8e965eec4f" kindref="member">Archetype</ref></type>
+          <declname>archetype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="31" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a7f5376ccecaa926aba462ff4cba47244" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setGender</definition>
+        <argsstring>(Gender gender)=0</argsstring>
+        <name>setGender</name>
+        <qualifiedname>dna::DescriptorWriter::setGender</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a99b757298c5e12ea3012efe1eaedbfba">setGender</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a99b757298c5e12ea3012efe1eaedbfba">setGender</reimplementedby>
+        <param>
+          <type><ref refid="namespacedna_1ae2ab72c674a376b1ed4b37d59e7ec20f" kindref="member">Gender</ref></type>
+          <declname>gender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="32" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a23839423080cbbef906d2edc1eb47b2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setAge</definition>
+        <argsstring>(std::uint16_t age)=0</argsstring>
+        <name>setAge</name>
+        <qualifiedname>dna::DescriptorWriter::setAge</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a6e5bf347665c1ca7489f90c20bc74c4d">setAge</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a6e5bf347665c1ca7489f90c20bc74c4d">setAge</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1aa0aeaa037daca84857b80f67c64f11b2">setAge</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>age</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="33" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1ace23be7b6e8b6104f472ca3f1d4b2235" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::clearMetaData</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearMetaData</name>
+        <qualifiedname>dna::DescriptorWriter::clearMetaData</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7d1608ac227fc0201492001145d4ac83">clearMetaData</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7d1608ac227fc0201492001145d4ac83">clearMetaData</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a922aeab5f0156d8accf8a933991e94b4">clearMetaData</reimplementedby>
+        <briefdescription>
+<para>Empties the metadata storage, delete all key-value pairs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="37" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a03d2b0ecc0a5e01081e9a5fccec9ca65" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setMetaData</definition>
+        <argsstring>(const char *key, const char *value)=0</argsstring>
+        <name>setMetaData</name>
+        <qualifiedname>dna::DescriptorWriter::setMetaData</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a12fac4dc2dc35036af34a08fdbf64e0f">setMetaData</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a12fac4dc2dc35036af34a08fdbf64e0f">setMetaData</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a03cbbbf413f0849e76dc8aaabc63826c">setMetaData</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Associate the metadata value with the given key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A unique, null-terminated key, to which the given value will be assigned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated, metadata value, which is to be assigned to the given key. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Consecutive calls using the same key will overwrite any existing data. </para>
+</simplesect>
+<simplesect kind="note"><para>Passing nullptr as the value argument will cause the associated key to be deleted. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="49" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1ac104f5869d0b01c92e8dcc7b6fcf7cc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setTranslationUnit</definition>
+        <argsstring>(TranslationUnit unit)=0</argsstring>
+        <name>setTranslationUnit</name>
+        <qualifiedname>dna::DescriptorWriter::setTranslationUnit</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad74bdf02e04fdb0ca9de04b392471bfc">setTranslationUnit</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad74bdf02e04fdb0ca9de04b392471bfc">setTranslationUnit</reimplementedby>
+        <param>
+          <type><ref refid="namespacedna_1abf96ecde7d9e8593bf3b2dd0649645d7" kindref="member">TranslationUnit</ref></type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="50" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a1756bb4c64fb48a95af1daea77c6b5a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setRotationUnit</definition>
+        <argsstring>(RotationUnit unit)=0</argsstring>
+        <name>setRotationUnit</name>
+        <qualifiedname>dna::DescriptorWriter::setRotationUnit</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1adff6c55690edce3328799aed3476094e">setRotationUnit</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1adff6c55690edce3328799aed3476094e">setRotationUnit</reimplementedby>
+        <param>
+          <type><ref refid="namespacedna_1a3c0e43a827bcc3c5546573ff589c2e38" kindref="member">RotationUnit</ref></type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="51" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a0a118e6fd0b17b4b40ff265f45d442e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setCoordinateSystem</definition>
+        <argsstring>(CoordinateSystem system)=0</argsstring>
+        <name>setCoordinateSystem</name>
+        <qualifiedname>dna::DescriptorWriter::setCoordinateSystem</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1afc0e1031361354e633c5a07ba2e6205f">setCoordinateSystem</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1afc0e1031361354e633c5a07ba2e6205f">setCoordinateSystem</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a81f75c1db04062c67eeccf4b523a9f6d">setCoordinateSystem</reimplementedby>
+        <param>
+          <type><ref refid="structdna_1_1CoordinateSystem" kindref="compound">CoordinateSystem</ref></type>
+          <declname>system</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="52" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a20f5c0bd82865136e3df7c9d67585213" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setLODCount</definition>
+        <argsstring>(std::uint16_t lodCount)=0</argsstring>
+        <name>setLODCount</name>
+        <qualifiedname>dna::DescriptorWriter::setLODCount</qualifiedname>
+        <reimplementedby refid="classdnac_1_1DNACalibDNAReaderImpl_1adb81b52459539d7685a547b417bdae61">setLODCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a5ab1b0d15505db40a3ffb0313446daed">setLODCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a5ab1b0d15505db40a3ffb0313446daed">setLODCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a3da850861647fc4f84395ea6c959a7b6">setLODCount</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lodCount</declname>
+        </param>
+        <briefdescription>
+<para>Available levels of detail (e.g. 6 which means the following levels are available: [0,1,2,3,4,5], where 0 is the LOD with the highest details, and 5 is the LOD with lowest details). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lodCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of levels available. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="60" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1a30f909fc6dcb53baa4462b45644056d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setDBMaxLOD</definition>
+        <argsstring>(std::uint16_t lod)=0</argsstring>
+        <name>setDBMaxLOD</name>
+        <qualifiedname>dna::DescriptorWriter::setDBMaxLOD</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1d603dd529eda020c8a9d3a49e1d2f80">setDBMaxLOD</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1d603dd529eda020c8a9d3a49e1d2f80">setDBMaxLOD</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ab5ae4b77370859f4c4ef201743063626">setDBMaxLOD</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <briefdescription>
+<para>The maximum level of detail stored in the <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> data for this character. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="64" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1ac194e90483e1fb937ad43cc57d9f9dba" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setDBComplexity</definition>
+        <argsstring>(const char *name)=0</argsstring>
+        <name>setDBComplexity</name>
+        <qualifiedname>dna::DescriptorWriter::setDBComplexity</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a20d6166528cd4dea11f2ae7fb3130b84">setDBComplexity</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a20d6166528cd4dea11f2ae7fb3130b84">setDBComplexity</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ae558840414fbeb0e1cd34a899cf9dce3">setDBComplexity</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the input control interface used to drive this character rig. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="72" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DescriptorWriter_1ac7b713af76afdc4f89af288b983c6779" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DescriptorWriter::setDBName</definition>
+        <argsstring>(const char *name)=0</argsstring>
+        <name>setDBName</name>
+        <qualifiedname>dna::DescriptorWriter::setDBName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a522ba7c85fd1ace1adad30a815068e57">setDBName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a522ba7c85fd1ace1adad30a815068e57">setDBName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a7ca24e7aaa560c8ac99f04bd41660ad3">setDBName</reimplementedby>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the database from which the character originates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="80" column="22"/>
+        <referencedby refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Write-only accessors to various metadata about the character and the rig. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Implementors should inherit from <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> itself and not this class. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna::WriterImpl&lt; JSONStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::WriterImpl&lt; dna::Writer &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="14">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::JSONStreamWriter</label>
+        <link refid="classdna_1_1JSONStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna::JSONStreamWriterImpl</label>
+        <link refid="classdna_1_1JSONStreamWriterImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" line="19" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DescriptorWriter.h" bodystart="19" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classdna_1_1DescriptorWriter_1ace23be7b6e8b6104f472ca3f1d4b2235" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>clearMetaData</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a23839423080cbbef906d2edc1eb47b2a" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setAge</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1aed61cd3661fe097ac1792608ea13971b" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setArchetype</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a0a118e6fd0b17b4b40ff265f45d442e7" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setCoordinateSystem</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac194e90483e1fb937ad43cc57d9f9dba" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setDBComplexity</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a30f909fc6dcb53baa4462b45644056d5" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setDBMaxLOD</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac7b713af76afdc4f89af288b983c6779" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setDBName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a7f5376ccecaa926aba462ff4cba47244" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setGender</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a20f5c0bd82865136e3df7c9d67585213" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setLODCount</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a03d2b0ecc0a5e01081e9a5fccec9ca65" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setMetaData</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a9af57f937e1d24de1b6fcad6f109e4e0" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a1756bb4c64fb48a95af1daea77c6b5a6" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setRotationUnit</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac104f5869d0b01c92e8dcc7b6fcf7cc9" prot="public" virt="pure-virtual"><scope>dna::DescriptorWriter</scope><name>setTranslationUnit</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" virt="virtual"><scope>dna::DescriptorWriter</scope><name>~DescriptorWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

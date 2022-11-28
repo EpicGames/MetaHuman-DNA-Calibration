@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.config package &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dna_viewer.const package" href="dna_viewer.const.html" />
+    <link rel="prev" title="dna_viewer.builder package" href="dna_viewer.builder.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dna_viewer</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dna_viewer.html">dna_viewer package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dna_viewer.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html">dna_viewer.builder package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">dna_viewer.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html">dna_viewer.const package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html">dna_viewer.model package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html">dna_viewer.reader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html">dna_viewer.ui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html">dna_viewer.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer.version">dna_viewer.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">dna_viewer</a> &raquo;</li>
+          <li><a href="dna_viewer.html">dna_viewer package</a> &raquo;</li>
+      <li>dna_viewer.config package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer.config.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dna-viewer-config-package">
+<h1>dna_viewer.config package<a class="headerlink" href="#dna-viewer-config-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-dna_viewer.config.aas">
+<span id="dna-viewer-config-aas-module"></span><h2>dna_viewer.config.aas module<a class="headerlink" href="#module-dna_viewer.config.aas" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.aas.AdditionalAssemblyScript">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.aas.</span></span><span class="sig-name descname"><span class="pre">AdditionalAssemblyScript</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path:</span> <span class="pre">typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module_name:</span> <span class="pre">typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'run_after_assemble'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter:</span> <span class="pre">typing.Dict[typing.Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/aas.html#AdditionalAssemblyScript"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.aas.AdditionalAssemblyScript" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the additional assembly script config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location of the script file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">module_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Optional[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">module_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The module name to be used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">method</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">method</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The method that should be called</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">parameter</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Dict[Any, Any]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">parameter</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The parameters that will be passed as the method arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.aas.AdditionalAssemblyScript.method">
+<span class="sig-name descname"><span class="pre">method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'run_after_assemble'</span></em><a class="headerlink" href="#dna_viewer.config.aas.AdditionalAssemblyScript.method" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.aas.AdditionalAssemblyScript.module_name">
+<span class="sig-name descname"><span class="pre">module_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.aas.AdditionalAssemblyScript.module_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.aas.AdditionalAssemblyScript.parameter">
+<span class="sig-name descname"><span class="pre">parameter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.config.aas.AdditionalAssemblyScript.parameter" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.aas.AdditionalAssemblyScript.path">
+<span class="sig-name descname"><span class="pre">path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.aas.AdditionalAssemblyScript.path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.analog_gui">
+<span id="dna-viewer-config-analog-gui-module"></span><h2>dna_viewer.config.analog_gui module<a class="headerlink" href="#module-dna_viewer.config.analog_gui" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.analog_gui.</span></span><span class="sig-name descname"><span class="pre">AnalogGui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">facial_root_joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACIAL_C_FacialRoot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_eye_joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACIAL_L_Eye'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_eye_joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACIAL_R_Eye'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">central_driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LOC_C_eyeDriver'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_eye_driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LOC_L_eyeDriver'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_eye_driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LOC_R_eyeDriver'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_eye_aim_up_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LOC_L_eyeAimUp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right_eye_aim_up_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'LOC_R_eyeAimUp'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">central_aim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRP_C_eyesAim'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">le_aim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRP_L_eyeAim'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">re_aim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'GRP_R_eyeAim'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the analog gui config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location of the gui file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">facial_root_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">facial_root_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the facial root joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">left_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">left_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the left eye joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">right_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">right_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the right eye joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">central_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">central_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the central driver</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">left_eye_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">left_eye_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the left eye driver</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">right_eye_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">right_eye_driver_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the right eye driver</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">central_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">central_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the central aim</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">le_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">le_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the left eye aim</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">re_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">re_aim</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the right eye aim</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.central_aim">
+<span class="sig-name descname"><span class="pre">central_aim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GRP_C_eyesAim'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.central_aim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.central_driver_name">
+<span class="sig-name descname"><span class="pre">central_driver_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOC_C_eyeDriver'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.central_driver_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.facial_root_joint_name">
+<span class="sig-name descname"><span class="pre">facial_root_joint_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FACIAL_C_FacialRoot'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.facial_root_joint_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.gui_path">
+<span class="sig-name descname"><span class="pre">gui_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.gui_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.le_aim">
+<span class="sig-name descname"><span class="pre">le_aim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GRP_L_eyeAim'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.le_aim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.left_eye_aim_up_name">
+<span class="sig-name descname"><span class="pre">left_eye_aim_up_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOC_L_eyeAimUp'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.left_eye_aim_up_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.left_eye_driver_name">
+<span class="sig-name descname"><span class="pre">left_eye_driver_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOC_L_eyeDriver'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.left_eye_driver_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.left_eye_joint_name">
+<span class="sig-name descname"><span class="pre">left_eye_joint_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FACIAL_L_Eye'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.left_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.re_aim">
+<span class="sig-name descname"><span class="pre">re_aim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GRP_R_eyeAim'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.re_aim" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.right_eye_aim_up_name">
+<span class="sig-name descname"><span class="pre">right_eye_aim_up_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOC_R_eyeAimUp'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.right_eye_aim_up_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.right_eye_driver_name">
+<span class="sig-name descname"><span class="pre">right_eye_driver_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'LOC_R_eyeDriver'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.right_eye_driver_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.right_eye_joint_name">
+<span class="sig-name descname"><span class="pre">right_eye_joint_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FACIAL_R_Eye'</span></em><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.right_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_central_aim">
+<span class="sig-name descname"><span class="pre">with_central_aim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_central_aim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_central_aim" title="Permalink to this definition"></a></dt>
+<dd><p>Set the central aim name</p>
+<p>&#64;type name: str
+&#64;param name: The value to set the central aim name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_central_driver_name">
+<span class="sig-name descname"><span class="pre">with_central_driver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_central_driver_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_central_driver_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the central driver name</p>
+<p>&#64;type driver_name: str
+&#64;param driver_name: The value to set the central driver name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_facial_root_joint_name">
+<span class="sig-name descname"><span class="pre">with_facial_root_joint_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_facial_root_joint_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_facial_root_joint_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the facial root joint name</p>
+<p>&#64;type joint_name: str
+&#64;param joint_name: The value to set the facial root joint name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_gui_path">
+<span class="sig-name descname"><span class="pre">with_gui_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the gui path</p>
+<p>&#64;type gui_path: str
+&#64;param gui_path: The location of the gui file</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_left_eye_aim">
+<span class="sig-name descname"><span class="pre">with_left_eye_aim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_left_eye_aim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_left_eye_aim" title="Permalink to this definition"></a></dt>
+<dd><p>Set the left eye aim name</p>
+<p>&#64;type name: str
+&#64;param name: The value to set the left eye aim name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_left_eye_aim_up_name">
+<span class="sig-name descname"><span class="pre">with_left_eye_aim_up_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_left_eye_aim_up_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_left_eye_aim_up_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the left eye aim up name</p>
+<p>&#64;type name: str
+&#64;param name: The value to set the left eye aim up name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_left_eye_driver_name">
+<span class="sig-name descname"><span class="pre">with_left_eye_driver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_left_eye_driver_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_left_eye_driver_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the left eye driver name</p>
+<p>&#64;type driver_name: str
+&#64;param driver_name: The value to set the left eye driver name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_left_eye_joint_name">
+<span class="sig-name descname"><span class="pre">with_left_eye_joint_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_left_eye_joint_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_left_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the left eye joint name</p>
+<p>&#64;type joint_name: str
+&#64;param joint_name: The value to set the left eye joint name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_right_eye_aim">
+<span class="sig-name descname"><span class="pre">with_right_eye_aim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_right_eye_aim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_right_eye_aim" title="Permalink to this definition"></a></dt>
+<dd><p>Set the right eye aim name</p>
+<p>&#64;type name: str
+&#64;param name: The value to set the central aim name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_right_eye_aim_up_name">
+<span class="sig-name descname"><span class="pre">with_right_eye_aim_up_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_right_eye_aim_up_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_right_eye_aim_up_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the right eye aim up name</p>
+<p>&#64;type name: str
+&#64;param name: The value to set the right eye aim up name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_right_eye_driver_name">
+<span class="sig-name descname"><span class="pre">with_right_eye_driver_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_right_eye_driver_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_right_eye_driver_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set right eye driver name</p>
+<p>&#64;type driver_name: str
+&#64;param driver_name: The value to set the left eye driver name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.analog_gui.AnalogGui.with_right_eye_joint_name">
+<span class="sig-name descname"><span class="pre">with_right_eye_joint_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/analog_gui.html#AnalogGui.with_right_eye_joint_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.analog_gui.AnalogGui.with_right_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the right eye joint name</p>
+<p>&#64;type joint_name: str
+&#64;param joint_name: The value to set the right eye joint name to</p>
+<p>&#64;rtype: AnalogGui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.character">
+<span id="dna-viewer-config-character-module"></span><h2>dna_viewer.config.character module<a class="headerlink" href="#module-dna_viewer.config.character" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.character.</span></span><span class="sig-name descname"><span class="pre">BuildOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_joints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_normals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_blend_shapes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_skin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_ctrl_attributes_on_root_joint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_animated_map_attributes_on_root_joint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_key_frames</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/character.html#BuildOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.BuildOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the build options we want to apply while building the character</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_joints</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_joints</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether joints should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_normals</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_normals</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether normals should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_blend_shapes</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_blend_shapes</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether blend shapes should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_skin</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_skin</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether skin should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_ctrl_attributes_on_root_joint</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_ctrl_attributes_on_root_joint</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether control attributes should be added to the root joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_animated_map_attributes_on_root_joint</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_animated_map_attributes_on_root_joint</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether animated map attributes should be added to the root joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_key_frames</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_key_frames</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether key frames should be added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether mash name of blend shape channel is added to name when creating it</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_animated_map_attributes_on_root_joint">
+<span class="sig-name descname"><span class="pre">add_animated_map_attributes_on_root_joint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_animated_map_attributes_on_root_joint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_blend_shapes">
+<span class="sig-name descname"><span class="pre">add_blend_shapes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_ctrl_attributes_on_root_joint">
+<span class="sig-name descname"><span class="pre">add_ctrl_attributes_on_root_joint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_ctrl_attributes_on_root_joint" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_joints">
+<span class="sig-name descname"><span class="pre">add_joints</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_joints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_key_frames">
+<span class="sig-name descname"><span class="pre">add_key_frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_key_frames" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_mesh_name_to_blend_shape_channel_name">
+<span class="sig-name descname"><span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_mesh_name_to_blend_shape_channel_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_normals">
+<span class="sig-name descname"><span class="pre">add_normals</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_normals" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.BuildOptions.add_skin">
+<span class="sig-name descname"><span class="pre">add_skin</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#dna_viewer.config.character.BuildOptions.add_skin" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.character.</span></span><span class="sig-name descname"><span class="pre">Character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna:</span> <span class="pre">typing.Optional[dna_viewer.model.dna.DNA]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options:</span> <span class="pre">dna_viewer.config.character.BuildOptions</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modifiers:</span> <span class="pre">dna_viewer.config.character.SpaceModifiers</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meshes:</span> <span class="pre">typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rig_logic_config:</span> <span class="pre">typing.Optional[dna_viewer.config.rig_logic.RigLogic]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_options:</span> <span class="pre">typing.Optional[dna_viewer.config.gui.Gui]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analog_gui_options:</span> <span class="pre">typing.Optional[dna_viewer.config.analog_gui.AnalogGui]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_character_node:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_display_layers:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aas:</span> <span class="pre">typing.Optional[dna_viewer.config.aas.AdditionalAssemblyScript]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the character config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA">DNA</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Instance of DNA object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.config.character.BuildOptions" title="dna_viewer.config.character.BuildOptions">BuildOptions</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing the build options</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">modifiers</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.config.character.SpaceModifiers" title="dna_viewer.config.character.SpaceModifiers">SpaceModifiers</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">modifiers</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing space modifiers for the character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">meshes</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">meshes</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The list of mesh ids that need to be processed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">rig_logic_config</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.rig_logic.RigLogic" title="dna_viewer.builder.rig_logic.RigLogic">RigLogic</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">rig_logic_config</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The rig logic configuration file containing naming patterns</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">gui_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.gui.Gui" title="dna_viewer.builder.gui.Gui">Gui</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">gui_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing the gui options</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">analog_gui_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.analog_gui.AnalogGui" title="dna_viewer.builder.analog_gui.AnalogGui">AnalogGui</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">analog_gui_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing the analog gui options</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">create_character_node</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">create_character_node</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether the character should be parented to a character transform node in the scene hierarchy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">create_display_layers</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">create_display_layers</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether the created meshes should be assigned to a display layer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">aas</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.config.aas.AdditionalAssemblyScript" title="dna_viewer.config.aas.AdditionalAssemblyScript">AdditionalAssemblyScript</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">aas</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing the additional assembly script options</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.aas">
+<span class="sig-name descname"><span class="pre">aas</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.aas.AdditionalAssemblyScript" title="dna_viewer.config.aas.AdditionalAssemblyScript"><span class="pre">dna_viewer.config.aas.AdditionalAssemblyScript</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.aas" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.analog_gui_options">
+<span class="sig-name descname"><span class="pre">analog_gui_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.analog_gui_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.create_character_node">
+<span class="sig-name descname"><span class="pre">create_character_node</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.create_character_node" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.create_display_layers">
+<span class="sig-name descname"><span class="pre">create_display_layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.create_display_layers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.dna">
+<span class="sig-name descname"><span class="pre">dna</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.dna" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.gui_options">
+<span class="sig-name descname"><span class="pre">gui_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.gui_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.meshes">
+<span class="sig-name descname"><span class="pre">meshes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.config.character.Character.meshes" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.modifiers">
+<span class="sig-name descname"><span class="pre">modifiers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.character.SpaceModifiers" title="dna_viewer.config.character.SpaceModifiers"><span class="pre">dna_viewer.config.character.SpaceModifiers</span></a></em><a class="headerlink" href="#dna_viewer.config.character.Character.modifiers" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.options">
+<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.character.BuildOptions" title="dna_viewer.config.character.BuildOptions"><span class="pre">dna_viewer.config.character.BuildOptions</span></a></em><a class="headerlink" href="#dna_viewer.config.character.Character.options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.rig_logic_config">
+<span class="sig-name descname"><span class="pre">rig_logic_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.Character.rig_logic_config" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_add_meshes_to_display_layers">
+<span class="sig-name descname"><span class="pre">with_add_meshes_to_display_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_add_meshes_to_display_layers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_add_meshes_to_display_layers" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if the created meshes should be put in their corresponding display layer</p>
+<p>&#64;type value: bool
+&#64;param value: The flag that represents if the created meshes should be put in their corresponding display layer</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_additional_assembly_script">
+<span class="sig-name descname"><span class="pre">with_additional_assembly_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">aas_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.config.aas.AdditionalAssemblyScript" title="dna_viewer.config.aas.AdditionalAssemblyScript"><span class="pre">dna_viewer.config.aas.AdditionalAssemblyScript</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_additional_assembly_script"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_additional_assembly_script" title="Permalink to this definition"></a></dt>
+<dd><p>Set the additional assembly script configuration</p>
+<p>&#64;type aas_config: AdditionalAssemblyScript
+&#64;param aas_config: The configuration containing the additional assembly script options</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_analog_gui">
+<span class="sig-name descname"><span class="pre">with_analog_gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analog_gui_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.config.analog_gui.AnalogGui" title="dna_viewer.config.analog_gui.AnalogGui"><span class="pre">dna_viewer.config.analog_gui.AnalogGui</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_analog_gui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_analog_gui" title="Permalink to this definition"></a></dt>
+<dd><p>Set the analog gui configuration</p>
+<p>&#64;type analog_gui_config: AnalogGui
+&#64;param analog_gui_config: The configuration containing the analog gui options</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_analog_gui_path">
+<span class="sig-name descname"><span class="pre">with_analog_gui_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analog_gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_analog_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_analog_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the analog gui path</p>
+<p>&#64;type analog_gui_path: Optional[str]
+&#64;param analog_gui_path: The configuration containing the analog gui options</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_angle_modifier">
+<span class="sig-name descname"><span class="pre">with_angle_modifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_angle_modifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_angle_modifier" title="Permalink to this definition"></a></dt>
+<dd><p>Set the angle modifier</p>
+<p>&#64;type modifier: float
+&#64;param modifier: The value of the angle modifier</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_animated_map_attributes_on_root_joint">
+<span class="sig-name descname"><span class="pre">with_animated_map_attributes_on_root_joint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_animated_map_attributes_on_root_joint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_animated_map_attributes_on_root_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if animated map attributes should be added on the root joint</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_blend_shapes">
+<span class="sig-name descname"><span class="pre">with_blend_shapes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_blend_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if blend shapes should be created</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_character_node">
+<span class="sig-name descname"><span class="pre">with_character_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_character_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_character_node" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if the result character rig should be parented to a character transform</p>
+<p>&#64;type value: bool
+&#64;param value: The flag that represents if the result character rig should be parented to a character transform</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_ctrl_attributes_on_root_joint">
+<span class="sig-name descname"><span class="pre">with_ctrl_attributes_on_root_joint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_ctrl_attributes_on_root_joint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_ctrl_attributes_on_root_joint" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if control attributes should be added on the root joint</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_dna">
+<span class="sig-name descname"><span class="pre">with_dna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_dna"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_dna" title="Permalink to this definition"></a></dt>
+<dd><p>Set the DNA file path</p>
+<p>&#64;type dna: DNA
+&#64;param dna: The location of the DNA file</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_gui">
+<span class="sig-name descname"><span class="pre">with_gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_gui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_gui" title="Permalink to this definition"></a></dt>
+<dd><p>Set the gui configuration</p>
+<p>&#64;type gui: Gui
+&#64;param gui: The gui configuration file</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_gui_path">
+<span class="sig-name descname"><span class="pre">with_gui_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the gui path</p>
+<p>&#64;type gui_path: str
+&#64;param gui_path: The location of the gui file</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_joints">
+<span class="sig-name descname"><span class="pre">with_joints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_joints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_joints" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if joints should be created</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_key_frames">
+<span class="sig-name descname"><span class="pre">with_key_frames</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_key_frames"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_key_frames" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if key frames should be added</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_linear_modifier">
+<span class="sig-name descname"><span class="pre">with_linear_modifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_linear_modifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_linear_modifier" title="Permalink to this definition"></a></dt>
+<dd><p>Set the linear modifier</p>
+<p>&#64;type modifier: float
+&#64;param modifier: The value of the linear modifier</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_meshes">
+<span class="sig-name descname"><span class="pre">with_meshes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">meshes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_meshes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_meshes" title="Permalink to this definition"></a></dt>
+<dd><p>Set the meshes that need to be processed</p>
+<p>&#64;type meshes: List[int]
+&#64;param meshes: The list of mesh ids that need to be processed</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_normals">
+<span class="sig-name descname"><span class="pre">with_normals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_normals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_normals" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if normals should be created</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_rig_logic">
+<span class="sig-name descname"><span class="pre">with_rig_logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rig_logic_node_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_rig_logic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_rig_logic" title="Permalink to this definition"></a></dt>
+<dd><p>Set the rig logic configuration</p>
+<p>&#64;type rig_logic_node_config: RigLogic
+&#64;param rig_logic_node_config: The rig logic configuration file containing naming patterns</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.character.Character.with_skin">
+<span class="sig-name descname"><span class="pre">with_skin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/character.html#Character.with_skin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.Character.with_skin" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag that represents if skin should be created</p>
+<p>&#64;rtype: Character
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.character.SpaceModifiers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.character.</span></span><span class="sig-name descname"><span class="pre">SpaceModifiers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">linear_modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle_modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/character.html#SpaceModifiers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.character.SpaceModifiers" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the character config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">linear_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">linear_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The linear modifier that needs to be applied to the character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">angle_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">angle_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The angle modifier that needs to be applied to the character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.SpaceModifiers.angle_modifier">
+<span class="sig-name descname"><span class="pre">angle_modifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.SpaceModifiers.angle_modifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.character.SpaceModifiers.linear_modifier">
+<span class="sig-name descname"><span class="pre">linear_modifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.character.SpaceModifiers.linear_modifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.gui">
+<span id="dna-viewer-config-gui-module"></span><h2>dna_viewer.config.gui module<a class="headerlink" href="#module-dna_viewer.config.gui" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.gui.</span></span><span class="sig-name descname"><span class="pre">Gui</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left_eye_joint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FACIAL_L_Eye'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eye_gui_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'CTRL_C_eye'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gui_translate_x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/gui.html#Gui"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.gui.Gui" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the gui config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">gui_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location of the gui file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">left_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">left_eye_joint_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the left eye joint</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">eye_gui_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">eye_gui_name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the control in the gui</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">gui_translate_x</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">gui_translate_x</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Represents the value that the gui should be additionally translated on the X axis</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.eye_gui_name">
+<span class="sig-name descname"><span class="pre">eye_gui_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'CTRL_C_eye'</span></em><a class="headerlink" href="#dna_viewer.config.gui.Gui.eye_gui_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.gui_path">
+<span class="sig-name descname"><span class="pre">gui_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.gui.Gui.gui_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.gui_translate_x">
+<span class="sig-name descname"><span class="pre">gui_translate_x</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">10</span></em><a class="headerlink" href="#dna_viewer.config.gui.Gui.gui_translate_x" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.left_eye_joint_name">
+<span class="sig-name descname"><span class="pre">left_eye_joint_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FACIAL_L_Eye'</span></em><a class="headerlink" href="#dna_viewer.config.gui.Gui.left_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.with_eye_gui_name_name">
+<span class="sig-name descname"><span class="pre">with_eye_gui_name_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/gui.html#Gui.with_eye_gui_name_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.gui.Gui.with_eye_gui_name_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set name of the eye element in the gui</p>
+<p>&#64;type name: str
+&#64;param name: The name of the element in the gui</p>
+<p>&#64;rtype: Gui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.with_gui_path">
+<span class="sig-name descname"><span class="pre">with_gui_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gui_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/gui.html#Gui.with_gui_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.gui.Gui.with_gui_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the gui path</p>
+<p>&#64;type gui_path: str
+&#64;param gui_path: The location of the gui file</p>
+<p>&#64;rtype: Gui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.with_gui_translate_x">
+<span class="sig-name descname"><span class="pre">with_gui_translate_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/gui.html#Gui.with_gui_translate_x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.gui.Gui.with_gui_translate_x" title="Permalink to this definition"></a></dt>
+<dd><p>Set the value the gui should be additionally translated on the X axis</p>
+<p>&#64;type value: float
+&#64;param value: The value the gui should be translated on the X axis</p>
+<p>&#64;rtype: Gui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.gui.Gui.with_left_eye_joint_name">
+<span class="sig-name descname"><span class="pre">with_left_eye_joint_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.gui.Gui" title="dna_viewer.config.gui.Gui"><span class="pre">dna_viewer.config.gui.Gui</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/gui.html#Gui.with_left_eye_joint_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.gui.Gui.with_left_eye_joint_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set name of the left eye joint</p>
+<p>&#64;type name: str
+&#64;param name: The name of the joint</p>
+<p>&#64;rtype: Gui
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.mesh">
+<span id="dna-viewer-config-mesh-module"></span><h2>dna_viewer.config.mesh module<a class="headerlink" href="#module-dna_viewer.config.mesh" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.mesh.Mesh">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.mesh.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linear_modifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/mesh.html#Mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.mesh.Mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the mesh configuration</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The index of the mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">linear_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">linear_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The linear modifier that needs to be applied to the character</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.mesh.Mesh.linear_modifier">
+<span class="sig-name descname"><span class="pre">linear_modifier</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.mesh.Mesh.linear_modifier" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.mesh.Mesh.mesh_index">
+<span class="sig-name descname"><span class="pre">mesh_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.mesh.Mesh.mesh_index" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.rig_logic">
+<span id="dna-viewer-config-rig-logic-module"></span><h2>dna_viewer.config.rig_logic module<a class="headerlink" href="#module-dna_viewer.config.rig_logic" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.rig_logic.</span></span><span class="sig-name descname"><span class="pre">RigLogic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'createEmbeddedNodeRL4'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dna_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">control_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;objName&gt;.&lt;attrName&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;objName&gt;.&lt;attrName&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_shape_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'&lt;objName&gt;_blendShapes.&lt;attrName&gt;'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">animated_map_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'FRM_WMmultipliers.&lt;objName&gt;_&lt;attrName&gt;'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the rig logic naming configuration</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">command</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">command</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The command used to start creating the rig logic using the plugin</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the rig logic node</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna_file_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna_file_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location of the DNA file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">control_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">control_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The naming pattern of controls</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">joint_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">joint_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The naming pattern of joints</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">blend_shape_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">blend_shape_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The naming pattern of blend shapes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">animated_map_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">animated_map_naming</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The naming pattern of animated maps</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.animated_map_naming">
+<span class="sig-name descname"><span class="pre">animated_map_naming</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'FRM_WMmultipliers.&lt;objName&gt;_&lt;attrName&gt;'</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.animated_map_naming" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.blend_shape_naming">
+<span class="sig-name descname"><span class="pre">blend_shape_naming</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&lt;objName&gt;_blendShapes.&lt;attrName&gt;'</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.blend_shape_naming" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.command">
+<span class="sig-name descname"><span class="pre">command</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'createEmbeddedNodeRL4'</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.command" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.control_naming">
+<span class="sig-name descname"><span class="pre">control_naming</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&lt;objName&gt;.&lt;attrName&gt;'</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.control_naming" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.dna_file_path">
+<span class="sig-name descname"><span class="pre">dna_file_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.dna_file_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.joint_naming">
+<span class="sig-name descname"><span class="pre">joint_naming</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'&lt;objName&gt;.&lt;attrName&gt;'</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.joint_naming" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">''</span></em><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_animated_map_naming">
+<span class="sig-name descname"><span class="pre">with_animated_map_naming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">animated_map_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_animated_map_naming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_animated_map_naming" title="Permalink to this definition"></a></dt>
+<dd><p>Set the naming pattern of animated maps</p>
+<p>&#64;type animated_map_naming: str
+&#64;param animated_map_naming: The naming pattern of animated maps</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_blend_shape_naming">
+<span class="sig-name descname"><span class="pre">with_blend_shape_naming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blend_shape_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_blend_shape_naming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_blend_shape_naming" title="Permalink to this definition"></a></dt>
+<dd><p>Set the naming pattern of blend shapes</p>
+<p>&#64;type blend_shape_naming: str
+&#64;param blend_shape_naming: The naming pattern of blend shapes</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_control_naming">
+<span class="sig-name descname"><span class="pre">with_control_naming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">control_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_control_naming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_control_naming" title="Permalink to this definition"></a></dt>
+<dd><p>Set the naming pattern of controls</p>
+<p>&#64;type control_naming: str
+&#64;param control_naming: The naming pattern of controls</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_dna_file_path">
+<span class="sig-name descname"><span class="pre">with_dna_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_dna_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_dna_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the location of the DNA file</p>
+<p>&#64;type dna_file_path: str
+&#64;param dna_file_path: The location of the DNA file</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_joint_naming">
+<span class="sig-name descname"><span class="pre">with_joint_naming</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_naming</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_joint_naming"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_joint_naming" title="Permalink to this definition"></a></dt>
+<dd><p>Set the naming pattern of joints</p>
+<p>&#64;type joint_naming: str
+&#64;param joint_naming: The naming pattern of joints</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.rig_logic.RigLogic.with_name">
+<span class="sig-name descname"><span class="pre">with_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.rig_logic.RigLogic" title="dna_viewer.config.rig_logic.RigLogic"><span class="pre">dna_viewer.config.rig_logic.RigLogic</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/rig_logic.html#RigLogic.with_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.rig_logic.RigLogic.with_name" title="Permalink to this definition"></a></dt>
+<dd><p>Set the name of the rig logic node</p>
+<p>&#64;type name: str
+&#64;param name: The name of the rig logic node</p>
+<p>&#64;rtype: RigLogic
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config.scene">
+<span id="dna-viewer-config-scene-module"></span><h2>dna_viewer.config.scene module<a class="headerlink" href="#module-dna_viewer.config.scene" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.SaveOptions">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.scene.</span></span><span class="sig-name descname"><span class="pre">SaveOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'C:\\source\\MetaHuman-DNA-Calibration\\docs\\sphinx\\source'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#SaveOptions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.SaveOptions" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the save options</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">name</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The name of the scene</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">extension</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">extension</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The extension</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">destination_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">destination_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location where the scene should be saved, if no value provided it defaults to the current working directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.SaveOptions.destination_path">
+<span class="sig-name descname"><span class="pre">destination_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C:\\source\\MetaHuman-DNA-Calibration\\docs\\sphinx\\source'</span></em><a class="headerlink" href="#dna_viewer.config.scene.SaveOptions.destination_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.SaveOptions.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.scene.SaveOptions.extension" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.SaveOptions.get_path">
+<span class="sig-name descname"><span class="pre">get_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#SaveOptions.get_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.SaveOptions.get_path" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the file path</p>
+<p>&#64;rtype: str
+&#64;returns: The file path</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.SaveOptions.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.scene.SaveOptions.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.config.scene.</span></span><span class="sig-name descname"><span class="pre">Scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna_path:</span> <span class="pre">typing.Optional[str]</span> <span class="pre">=</span> <span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">characters:</span> <span class="pre">typing.List[dna_viewer.config.character.Character]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units:</span> <span class="pre">dna_viewer.config.units.Unit</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_new_scene:</span> <span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_options:</span> <span class="pre">typing.Optional[dna_viewer.config.scene.SaveOptions]</span> <span class="pre">=</span> <span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the scene config</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna_path</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The location of the DNA file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">characters</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[<a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.character.Character" title="dna_viewer.builder.character.Character">Character</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">characters</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The list of character configuration objects that need to be processed for the scene</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">units</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Unit</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">units</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The configuration containing the units for the scene</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">create_new_scene</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">create_new_scene</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether a new should be created when the build process starts</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">save_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.config.scene.SaveOptions" title="dna_viewer.config.scene.SaveOptions">SaveOptions</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">save_options</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>A flag representing whether the created meshes should be assigned to a display layer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.characters">
+<span class="sig-name descname"><span class="pre">characters</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.config.scene.Scene.characters" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.create_new_scene">
+<span class="sig-name descname"><span class="pre">create_new_scene</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#dna_viewer.config.scene.Scene.create_new_scene" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.dna_path">
+<span class="sig-name descname"><span class="pre">dna_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.scene.Scene.dna_path" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.save_options">
+<span class="sig-name descname"><span class="pre">save_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#dna_viewer.config.scene.SaveOptions" title="dna_viewer.config.scene.SaveOptions"><span class="pre">dna_viewer.config.scene.SaveOptions</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#dna_viewer.config.scene.Scene.save_options" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.units">
+<span class="sig-name descname"><span class="pre">units</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dna_viewer.config.units.Unit</span></em><a class="headerlink" href="#dna_viewer.config.scene.Scene.units" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.with_angle_unit">
+<span class="sig-name descname"><span class="pre">with_angle_unit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna_viewer.config.units.AngleUnit</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.scene.Scene" title="dna_viewer.config.scene.Scene"><span class="pre">dna_viewer.config.scene.Scene</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene.with_angle_unit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene.with_angle_unit" title="Permalink to this definition"></a></dt>
+<dd><p>Set the angle unit for the scene</p>
+<p>&#64;type unit: str
+&#64;param unit: The angle unit name</p>
+<p>&#64;rtype: Scene
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.with_character">
+<span class="sig-name descname"><span class="pre">with_character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">character</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.config.character.Character" title="dna_viewer.config.character.Character"><span class="pre">dna_viewer.config.character.Character</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.scene.Scene" title="dna_viewer.config.scene.Scene"><span class="pre">dna_viewer.config.scene.Scene</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene.with_character"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene.with_character" title="Permalink to this definition"></a></dt>
+<dd><p>Adds a character to the list of characters that need to be processed</p>
+<p>&#64;type character: Character
+&#64;param character: The character configuration object</p>
+<p>&#64;rtype: Scene
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.with_create_new_scene">
+<span class="sig-name descname"><span class="pre">with_create_new_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">create_new_scene</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.scene.Scene" title="dna_viewer.config.scene.Scene"><span class="pre">dna_viewer.config.scene.Scene</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene.with_create_new_scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene.with_create_new_scene" title="Permalink to this definition"></a></dt>
+<dd><p>Set the flag representing whether a new should be created when the build process starts</p>
+<p>&#64;type create_new_scene: bool
+&#64;param create_new_scene: The flag representing whether a new should be created when the build process starts</p>
+<p>&#64;rtype: Scene
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.with_linear_unit">
+<span class="sig-name descname"><span class="pre">with_linear_unit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna_viewer.config.units.LinearUnit</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.scene.Scene" title="dna_viewer.config.scene.Scene"><span class="pre">dna_viewer.config.scene.Scene</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene.with_linear_unit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene.with_linear_unit" title="Permalink to this definition"></a></dt>
+<dd><p>Set the linear unit for the scene</p>
+<p>&#64;type unit: str
+&#64;param unit: The linear unit name</p>
+<p>&#64;rtype: Scene
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.config.scene.Scene.with_scene_file_path">
+<span class="sig-name descname"><span class="pre">with_scene_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'untitled_scene'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'mb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">destination_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.config.scene.Scene" title="dna_viewer.config.scene.Scene"><span class="pre">dna_viewer.config.scene.Scene</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/config/scene.html#Scene.with_scene_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.config.scene.Scene.with_scene_file_path" title="Permalink to this definition"></a></dt>
+<dd><p>Set the scene save configuration</p>
+<p>&#64;type name: str
+&#64;param name: The name of the scene</p>
+<p>&#64;type extension: str
+&#64;param extension: The extension</p>
+<p>&#64;type destination_path: str
+&#64;param destination_path: The location where the scene should be saved</p>
+<p>&#64;rtype: Scene
+&#64;returns: The instance of the changed object</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.config">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dna_viewer.config" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer.builder.html" class="btn btn-neutral float-left" title="dna_viewer.builder package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna_viewer.const.html" class="btn btn-neutral float-right" title="dna_viewer.const package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

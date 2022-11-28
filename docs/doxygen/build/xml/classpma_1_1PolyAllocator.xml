@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpma_1_1PolyAllocator" kind="class" language="C++" prot="public">
+    <compoundname>pma::PolyAllocator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::scoped_allocator_adaptor&lt; impl::PolyAllocator&lt; T, alignof(typename impl::max_align_of&lt; T, std::max_align_t &gt;::type), DefaultMemoryResource &gt; &gt;</basecompoundref>
+    <includes refid="PolyAllocator_8h" local="no">PolyAllocator.h</includes>
+    <innerclass refid="structpma_1_1PolyAllocator_1_1rebind" prot="public">pma::PolyAllocator::rebind</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>std::size_t</type>
+        <declname>Alignment</declname>
+        <defname>Alignment</defname>
+        <defval>alignof(typename <ref refid="structpma_1_1impl_1_1max__align__of" kindref="compound">impl::max_align_of</ref>&lt;T, std::max_align_t&gt;::type)</defval>
+      </param>
+      <param>
+        <type>class TDefaultMemoryResource</type>
+        <defval><ref refid="classpma_1_1DefaultMemoryResource" kindref="compound">DefaultMemoryResource</ref></defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classpma_1_1PolyAllocator_1a8bca1e600108bbbda33649964b423179" prot="private" static="no">
+        <type><ref refid="classpma_1_1impl_1_1PolyAllocator" kindref="compound">impl::PolyAllocator</ref>&lt; T, Alignment, TDefaultMemoryResource &gt;</type>
+        <definition>using pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::Impl =  impl::PolyAllocator&lt;T, Alignment, TDefaultMemoryResource&gt;</definition>
+        <argsstring></argsstring>
+        <name>Impl</name>
+        <qualifiedname>pma::PolyAllocator::Impl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="131" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classpma_1_1PolyAllocator_1a6e50322470552e25a646ccd8da063b5e" prot="private" static="no">
+        <type>std::scoped_allocator_adaptor&lt; <ref refid="classpma_1_1PolyAllocator_1a8bca1e600108bbbda33649964b423179" kindref="member">Impl</ref> &gt;</type>
+        <definition>using pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::Base =  std::scoped_allocator_adaptor&lt;Impl&gt;</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <qualifiedname>pma::PolyAllocator::Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="132" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpma_1_1PolyAllocator_1a63c41babbf419ea9a561c4498f2904d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::PolyAllocator</definition>
+        <argsstring>()=default</argsstring>
+        <name>PolyAllocator</name>
+        <qualifiedname>pma::PolyAllocator::PolyAllocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="140" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1PolyAllocator_1a0ffc31aef4473de3861de522063f8d65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::PolyAllocator</definition>
+        <argsstring>(MemoryResource *memRes)</argsstring>
+        <name>PolyAllocator</name>
+        <qualifiedname>pma::PolyAllocator::PolyAllocator</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="142" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="142" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1PolyAllocator_1a1988be0448525cb6986718a612ffe30d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>UAlignment</declname>
+            <defname>UAlignment</defname>
+          </param>
+          <param>
+            <type>class UDefaultMemoryResource</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::PolyAllocator</definition>
+        <argsstring>(const PolyAllocator&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;rhs)</argsstring>
+        <name>PolyAllocator</name>
+        <qualifiedname>pma::PolyAllocator::PolyAllocator</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator</ref>&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="146" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="146" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1PolyAllocator_1a0b7178a7aa0bf4993a6718a09c6f6f4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>UAlignment</declname>
+            <defname>UAlignment</defname>
+          </param>
+          <param>
+            <type>class UDefaultMemoryResource</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;::PolyAllocator</definition>
+        <argsstring>(const impl::PolyAllocator&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;rhs)</argsstring>
+        <name>PolyAllocator</name>
+        <qualifiedname>pma::PolyAllocator::PolyAllocator</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1impl_1_1PolyAllocator" kindref="compound">impl::PolyAllocator</ref>&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="150" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="150" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;</label>
+        <link refid="classpma_1_1PolyAllocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::scoped_allocator_adaptor&lt; impl::PolyAllocator&lt; T, alignof(typename impl::max_align_of&lt;T, std::max_align_t&gt;::type) , DefaultMemoryResource  &gt; &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pma::PolyAllocator&lt; T, Alignment, TDefaultMemoryResource &gt;</label>
+        <link refid="classpma_1_1PolyAllocator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::scoped_allocator_adaptor&lt; impl::PolyAllocator&lt; T, alignof(typename impl::max_align_of&lt;T, std::max_align_t&gt;::type) , DefaultMemoryResource  &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="129" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="129" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classpma_1_1PolyAllocator_1a6e50322470552e25a646ccd8da063b5e" prot="private" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>Base</name></member>
+      <member refid="classpma_1_1PolyAllocator_1a8bca1e600108bbbda33649964b423179" prot="private" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>Impl</name></member>
+      <member refid="classpma_1_1PolyAllocator_1a63c41babbf419ea9a561c4498f2904d3" prot="public" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>PolyAllocator</name></member>
+      <member refid="classpma_1_1PolyAllocator_1a0ffc31aef4473de3861de522063f8d65" prot="public" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>PolyAllocator</name></member>
+      <member refid="classpma_1_1PolyAllocator_1a1988be0448525cb6986718a612ffe30d" prot="public" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>PolyAllocator</name></member>
+      <member refid="classpma_1_1PolyAllocator_1a0b7178a7aa0bf4993a6718a09c6f6f4e" prot="public" virt="non-virtual"><scope>pma::PolyAllocator</scope><name>PolyAllocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1082 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="SetBlendShapeTargetDeltasCommand_8cpp" kind="file" language="C++">
+    <compoundname>SetBlendShapeTargetDeltasCommand.cpp</compoundname>
+    <includes refid="SetBlendShapeTargetDeltasCommand_8h" local="yes">dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</includes>
+    <includes refid="CommandImplBase_8h" local="yes">dnacalib/CommandImplBase.h</includes>
+    <includes refid="SupportFactories_8h" local="yes">dnacalib/commands/SupportFactories.h</includes>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="yes">dnacalib/dna/DNA.h</includes>
+    <includes refid="DNACalibDNAReaderImpl_8h" local="yes">dnacalib/dna/DNACalibDNAReaderImpl.h</includes>
+    <includes refid="dnacalib_2types_2Aliases_8h" local="yes">dnacalib/types/Aliases.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>dna/BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>dna/BinaryStreamWriter.h</label>
+        <link refid="BinaryStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="8">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="47">
+        <label>dna/JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>dna/JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>dna/StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dna/Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>dna/layers/BehaviorWriter.h</label>
+        <link refid="BehaviorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>dna/layers/DefinitionWriter.h</label>
+        <link refid="DefinitionWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="13">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>dna/layers/DescriptorWriter.h</label>
+        <link refid="DescriptorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>dna/layers/GeometryWriter.h</label>
+        <link refid="GeometryWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="3">
+        <label>dnacalib/Command.h</label>
+        <link refid="Command_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnacalib/Defs.h</label>
+        <link refid="dnacalib_2Defs_8h"/>
+      </node>
+      <node id="2">
+        <label>dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>dnacalib/commands/VectorOperations.h</label>
+        <link refid="VectorOperations_8h"/>
+      </node>
+      <node id="87">
+        <label>dnacalib/dna/DNACalibDNAReader.h</label>
+        <link refid="DNACalibDNAReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnacalib/types/Aliases.h</label>
+        <link refid="dnacalib_2types_2Aliases_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="21">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="25">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="28">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="53">
+        <label>dnacalib/CommandImplBase.h</label>
+        <link refid="CommandImplBase_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>dnacalib/TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SetBlendShapeTargetDeltasCommand.cpp</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>dnacalib/commands/SupportFactories.h</label>
+        <link refid="SupportFactories_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="89">
+        <label>dnacalib/dna/BaseImpl.h</label>
+        <link refid="dnacalib_2dna_2BaseImpl_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>dnacalib/dna/DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>dnacalib/dna/DNACalibDNAReaderImpl.h</label>
+        <link refid="DNACalibDNAReaderImpl_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>dnacalib/dna/DenormalizedData.h</label>
+        <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>dnacalib/dna/LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>dnacalib/dna/ReaderImpl.h</label>
+        <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>dnacalib/dna/SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>dnacalib/dna/WriterImpl.h</label>
+        <link refid="dnacalib_2dna_2WriterImpl_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>dnacalib/utils/Extd.h</label>
+        <link refid="alib_2utils_2Extd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>tdm/Computations.h</label>
+        <link refid="Computations_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>tdm/Mat.h</label>
+        <link refid="Mat_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>tdm/Types.h</label>
+        <link refid="Types_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>tdm/Vec.h</label>
+        <link refid="Vec_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="84">
+        <label>array</label>
+      </node>
+      <node id="18">
+        <label>cassert</label>
+      </node>
+      <node id="69">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstddef</label>
+      </node>
+      <node id="31">
+        <label>cstdint</label>
+      </node>
+      <node id="75">
+        <label>cstring</label>
+      </node>
+      <node id="76">
+        <label>functional</label>
+      </node>
+      <node id="77">
+        <label>iterator</label>
+      </node>
+      <node id="91">
+        <label>limits</label>
+      </node>
+      <node id="60">
+        <label>list</label>
+      </node>
+      <node id="61">
+        <label>map</label>
+      </node>
+      <node id="56">
+        <label>memory</label>
+      </node>
+      <node id="57">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="62">
+        <label>set</label>
+      </node>
+      <node id="63">
+        <label>string</label>
+      </node>
+      <node id="85">
+        <label>tuple</label>
+      </node>
+      <node id="58">
+        <label>type_traits</label>
+      </node>
+      <node id="64">
+        <label>unordered_map</label>
+      </node>
+      <node id="65">
+        <label>unordered_set</label>
+      </node>
+      <node id="24">
+        <label>utility</label>
+      </node>
+      <node id="66">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" prot="public">dnac::SetBlendShapeTargetDeltasCommand::Impl</innerclass>
+    <innernamespace refid="namespacednac">dnac</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SetBlendShapeTargetDeltasCommand_8h" kindref="compound">dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CommandImplBase_8h" kindref="compound">dnacalib/CommandImplBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SupportFactories_8h" kindref="compound">dnacalib/commands/SupportFactories.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2dna_2DNA_8h" kindref="compound">dnacalib/dna/DNA.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DNACalibDNAReaderImpl_8h" kindref="compound">dnacalib/dna/DNACalibDNAReaderImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2types_2Aliases_8h" kindref="compound">dnacalib/types/Aliases.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">SetBlendShapeTargetDeltasCommand::Impl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase</ref>&lt;Impl&gt;<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a6c66c2dd9bf90118ff0220fcba5772e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref><sp/>=<sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase&lt;Impl&gt;</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a022f690510a365eca535ea8b9071f355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a022f690510a365eca535ea8b9071f355" kindref="member">Impl</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref>{memRes_},</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>{memRes_},</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>{memRes_},</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" kindref="member">operation</ref>{<ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref>::<ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18fad53238014015da17926bca398282211f" kindref="member">Interpolate</ref>},</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>{},</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ab8260d8cf30232341bff5b680558079a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ab8260d8cf30232341bff5b680558079a" kindref="member">setMeshIndex</ref>(std::uint16_t<sp/>meshIndex_)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref><sp/>=<sp/>meshIndex_;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a5cccd9d38b246bab999b6990e551e359" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a5cccd9d38b246bab999b6990e551e359" kindref="member">setBlendShapeTargetIndex</ref>(std::uint16_t<sp/>blendShapeTargetIndex_)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref><sp/>=<sp/>blendShapeTargetIndex_;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9ce596e1b1959617b5b7029f2bc99e21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9ce596e1b1959617b5b7029f2bc99e21" kindref="member">setDeltas</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;Vector3&gt;</ref><sp/>deltas_)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a08c9b87eb9e483e8634736bb6df95b5d" kindref="member">assign</ref>(deltas_.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>deltas_.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a6e5face5ebf34131fbeb1319a62fef0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a6e5face5ebf34131fbeb1319a62fef0d" kindref="member">setDeltas</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a1677de0fc21f0821dda1cd6f1f381220" kindref="member">xs</ref>.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a43b5f5752b64130aa7bd46ba3885f848" kindref="member">ys</ref>.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a004e90d622eda4f263188c826b65e14b" kindref="member">zs</ref>.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a4dfdb37edeb3bffa585633ed4eeabda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a4dfdb37edeb3bffa585633ed4eeabda2" kindref="member">setMasks</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>masks_)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>.assign(masks_.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>masks_.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aa42f88c81da8538c67fcf00493d4b4de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aa42f88c81da8538c67fcf00493d4b4de" kindref="member">setOperation</ref>(<ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation_)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" kindref="member">operation</ref><sp/>=<sp/>operation_;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3a14e7b1ea95f57cd418aed7f0a64008" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3a14e7b1ea95f57cd418aed7f0a64008" kindref="member">run</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>getWeight<sp/>=<sp/><ref refid="structdnac_1_1WeightGetterFactory_1ad9d61db4210f88bf949322d1231e60d4" kindref="member">WeightGetterFactory::create</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>op<sp/>=<sp/><ref refid="structdnac_1_1OperationFactory_1a310da4915bffa9c1151590754094f220" kindref="member">OperationFactory::create</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" kindref="member">operation</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9cd5c3a3a400e107a5280bed4cab5878" kindref="member">computeBlendShapeTargetDeltas</ref>(op,<sp/>getWeight,<sp/>output);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FOperation,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>FWeightGetter&gt;</highlight></codeline>
+<codeline lineno="61" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9cd5c3a3a400e107a5280bed4cab5878" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9cd5c3a3a400e107a5280bed4cab5878" kindref="member">computeBlendShapeTargetDeltas</ref>(FOperation<sp/>op,<sp/>FWeightGetter<sp/>getWeight,<sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1ac97d7efca1493f5f850704d78d40111e" kindref="member">getBlendShapeTargetDeltaXs</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>,<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ys<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a05e1fcb483624fa4cbc9922e3528a31a" kindref="member">getBlendShapeTargetDeltaYs</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>,<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>zs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a3bbe0f453f53493aa88cd5c5cbf3f06a" kindref="member">getBlendShapeTargetDeltaZs</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>,<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((xs.size()<sp/>==<sp/>ys.size())<sp/>&amp;&amp;<sp/>(ys.size()<sp/>==<sp/>zs.size()));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/>result{xs,<sp/>ys,<sp/>zs,<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>accounts<sp/>for<sp/>the<sp/>case<sp/>when<sp/>output<sp/>is<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.resize(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a74950cdbd9de0353f79f984871c9c733" kindref="member">size</ref>(),<sp/>0.0f);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>.empty()<sp/>||<sp/>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a74950cdbd9de0353f79f984871c9c733" kindref="member">size</ref>()<sp/>==<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>.size()));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint32_t<sp/>i<sp/>=<sp/>0u;<sp/>i<sp/>&lt;<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a74950cdbd9de0353f79f984871c9c733" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>weight<sp/>=<sp/>getWeight(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>.data(),<sp/>i);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.xs[i]<sp/>=<sp/>op(result.xs[i],<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a1677de0fc21f0821dda1cd6f1f381220" kindref="member">xs</ref>[i],<sp/>weight);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.ys[i]<sp/>=<sp/>op(result.ys[i],<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a43b5f5752b64130aa7bd46ba3885f848" kindref="member">ys</ref>[i],<sp/>weight);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result.zs[i]<sp/>=<sp/>op(result.zs[i],<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>.<ref refid="structdnac_1_1RawVector3Vector_1a004e90d622eda4f263188c826b65e14b" kindref="member">zs</ref>[i],<sp/>weight);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">setBlendShapeTargetDeltas</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>,<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>,<sp/>std::move(result));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="80" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kindref="member">deltas</ref>;</highlight></codeline>
+<codeline lineno="81" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;float&gt;</ref><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kindref="member">masks</ref>;</highlight></codeline>
+<codeline lineno="82" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" kindref="member">operation</ref>;</highlight></codeline>
+<codeline lineno="83" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kindref="member">meshIndex</ref>;</highlight></codeline>
+<codeline lineno="84" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ad8c416596b74f6edfd21b9f6b9299488" kindref="member">blendShapeTargetIndex</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:<sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a90a706a493f9b2370cc71559bf8ca6b4" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;Vector3&gt;</ref><sp/>deltas,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMeshIndex(meshIndex);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(deltas);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setOperation(operation);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a03a1db43bef81dc8b76a8d1d33e22657" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMeshIndex(meshIndex);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(xs,<sp/>ys,<sp/>zs);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setOperation(operation);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1abd630b5ab1b0668358961291028aa7be" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;Vector3&gt;</ref><sp/>deltas,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>masks,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMeshIndex(meshIndex);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(deltas);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMasks(masks);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setOperation(operation);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aab18ede21b193892ded674172feb8a98" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>masks,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMeshIndex(meshIndex);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(xs,<sp/>ys,<sp/>zs);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMasks(masks);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setOperation(operation);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a46ac5bc9a3c6bad238ac8b0a91865b85" kindref="member">SetBlendShapeTargetDeltasCommand::~SetBlendShapeTargetDeltasCommand</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kindref="member">SetBlendShapeTargetDeltasCommand::SetBlendShapeTargetDeltasCommand</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand" kindref="compound">SetBlendShapeTargetDeltasCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand" kindref="compound">SetBlendShapeTargetDeltasCommand</ref>&amp;<sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ab0997fadc1bebb62fcbb895777b38e67" kindref="member">SetBlendShapeTargetDeltasCommand::operator=</ref>(<ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand" kindref="compound">SetBlendShapeTargetDeltasCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a935bbc1513a57dcc1869f6616ca76d08" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a935bbc1513a57dcc1869f6616ca76d08" kindref="member">SetBlendShapeTargetDeltasCommand::setMeshIndex</ref>(std::uint16_t<sp/>meshIndex)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMeshIndex(meshIndex);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ad181ea9f433b0f3fa99dbdfca29518eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ad181ea9f433b0f3fa99dbdfca29518eb" kindref="member">SetBlendShapeTargetDeltasCommand::setBlendShapeTargetIndex</ref>(std::uint16_t<sp/>blendShapeTargetIndex)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa97592ce94a15b07231f1c750ad8fd4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa97592ce94a15b07231f1c750ad8fd4e" kindref="member">SetBlendShapeTargetDeltasCommand::setDeltas</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;Vector3&gt;</ref><sp/>deltas)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(deltas);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ae882276c09d955bc230baaf5f508111d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa97592ce94a15b07231f1c750ad8fd4e" kindref="member">SetBlendShapeTargetDeltasCommand::setDeltas</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setDeltas(xs,<sp/>ys,<sp/>zs);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a276fe679159a33258d9d6d8fd497fe5e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a276fe679159a33258d9d6d8fd497fe5e" kindref="member">SetBlendShapeTargetDeltasCommand::setMasks</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>masks)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setMasks(masks);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a48418ac293efdb7458ecc53e9c0c8963" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a48418ac293efdb7458ecc53e9c0c8963" kindref="member">SetBlendShapeTargetDeltasCommand::setOperation</ref>(<ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>operation)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;setOperation(operation);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa929c4b449ec5d0e7fc42cfb7b8569fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa929c4b449ec5d0e7fc42cfb7b8569fa" kindref="member">SetBlendShapeTargetDeltasCommand::run</ref>(<ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kindref="member">pImpl</ref>-&gt;run(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(output));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetBlendShapeTargetDeltasCommand.cpp"/>
+  </compounddef>
+</doxygen>

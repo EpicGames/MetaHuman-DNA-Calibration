@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DataLayer_8h" kind="file" language="C++">
+    <compoundname>DataLayer.h</compoundname>
+    <includedby refid="dnacalib_2types_2Aliases_8h" local="no">Aliases.h</includedby>
+    <includedby refid="BinaryStreamReader_8h" local="yes">BinaryStreamReader.h</includedby>
+    <includedby refid="DataLayerBitmask_8h" local="yes">DataLayerBitmask.h</includedby>
+    <includedby refid="FilteredInputArchive_8h" local="yes">FilteredInputArchive.h</includedby>
+    <includedby refid="Reader_8h" local="yes">Reader.h</includedby>
+    <includedby refid="StreamReader_8h" local="yes">StreamReader.h</includedby>
+    <includedby refid="Writer_8h" local="yes">Writer.h</includedby>
+    <invincdepgraph>
+      <node id="33">
+        <label>CommandSequence.cpp</label>
+        <link refid="examples_2CommandSequence_8cpp"/>
+      </node>
+      <node id="34">
+        <label>SingleCommand.cpp</label>
+        <link refid="SingleCommand_8cpp"/>
+      </node>
+      <node id="83">
+        <label>BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>BinaryStreamWriter.h</label>
+        <link refid="BinaryStreamWriter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Command.h</label>
+        <link refid="Command_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>DNACalib.h</label>
+        <link refid="DNACalib_8h"/>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>CalculateMeshLowerLODsCommand.h</label>
+        <link refid="CalculateMeshLowerLODsCommand_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>ClearBlendShapesCommand.h</label>
+        <link refid="ClearBlendShapesCommand_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>CommandSequence.h</label>
+        <link refid="CommandSequence_8h"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>ConditionalCommand.h</label>
+        <link refid="ConditionalCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>PruneBlendShapeTargetsCommand.h</label>
+        <link refid="PruneBlendShapeTargetsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>RemoveJointAnimationCommand.h</label>
+        <link refid="RemoveJointAnimationCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>RemoveJointCommand.h</label>
+        <link refid="RemoveJointCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>RemoveMeshCommand.h</label>
+        <link refid="RemoveMeshCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>RenameAnimatedMapCommand.h</label>
+        <link refid="RenameAnimatedMapCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>RenameBlendShapeCommand.h</label>
+        <link refid="RenameBlendShapeCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>RenameJointCommand.h</label>
+        <link refid="RenameJointCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>RenameMeshCommand.h</label>
+        <link refid="RenameMeshCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>RotateCommand.h</label>
+        <link refid="RotateCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>ScaleCommand.h</label>
+        <link refid="ScaleCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>SetBlendShapeTargetDeltasCommand.h</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>SetLODsCommand.h</label>
+        <link refid="SetLODsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>SetNeutralJointRotationsCommand.h</label>
+        <link refid="SetNeutralJointRotationsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>SetNeutralJointTranslationsCommand.h</label>
+        <link refid="SetNeutralJointTranslationsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>SetSkinWeightsCommand.h</label>
+        <link refid="SetSkinWeightsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="56">
+        <label>SetVertexPositionsCommand.h</label>
+        <link refid="SetVertexPositionsCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>TranslateCommand.h</label>
+        <link refid="TranslateCommand_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>DNACalibDNAReader.h</label>
+        <link refid="DNACalibDNAReader_8h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Aliases.h</label>
+        <link refid="dnacalib_2types_2Aliases_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>VersionInfo.h</label>
+        <link refid="VersionInfo_8h"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>DataLayerBitmask.h</label>
+        <link refid="DataLayerBitmask_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>Reader.cpp</label>
+        <link refid="Reader_8cpp"/>
+      </node>
+      <node id="89">
+        <label>Writer.cpp</label>
+        <link refid="Writer_8cpp"/>
+      </node>
+      <node id="85">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="84">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="100">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="87">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="94">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="104">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="103">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="96">
+        <label>StreamReader.cpp</label>
+        <link refid="StreamReader_8cpp"/>
+      </node>
+      <node id="105">
+        <label>StreamWriter.cpp</label>
+        <link refid="StreamWriter_8cpp"/>
+      </node>
+      <node id="37">
+        <label>Command.cpp</label>
+        <link refid="Command_8cpp"/>
+      </node>
+      <node id="58">
+        <label>CommandImplBase.h</label>
+        <link refid="CommandImplBase_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CalculateMeshLowerLODsCommand.cpp</label>
+        <link refid="CalculateMeshLowerLODsCommand_8cpp"/>
+      </node>
+      <node id="7">
+        <label>ClearBlendShapesCommand.cpp</label>
+        <link refid="ClearBlendShapesCommand_8cpp"/>
+      </node>
+      <node id="39">
+        <label>CommandSequence.cpp</label>
+        <link refid="src_2dnacalib_2commands_2CommandSequence_8cpp"/>
+      </node>
+      <node id="9">
+        <label>PruneBlendShapeTargetsCommand.cpp</label>
+        <link refid="PruneBlendShapeTargetsCommand_8cpp"/>
+      </node>
+      <node id="10">
+        <label>RemoveJointAnimationCommand.cpp</label>
+        <link refid="RemoveJointAnimationCommand_8cpp"/>
+      </node>
+      <node id="11">
+        <label>RemoveJointCommand.cpp</label>
+        <link refid="RemoveJointCommand_8cpp"/>
+      </node>
+      <node id="12">
+        <label>RemoveMeshCommand.cpp</label>
+        <link refid="RemoveMeshCommand_8cpp"/>
+      </node>
+      <node id="13">
+        <label>RenameAnimatedMapCommand.cpp</label>
+        <link refid="RenameAnimatedMapCommand_8cpp"/>
+      </node>
+      <node id="14">
+        <label>RenameBlendShapeCommand.cpp</label>
+        <link refid="RenameBlendShapeCommand_8cpp"/>
+      </node>
+      <node id="15">
+        <label>RenameJointCommand.cpp</label>
+        <link refid="RenameJointCommand_8cpp"/>
+      </node>
+      <node id="16">
+        <label>RenameMeshCommand.cpp</label>
+        <link refid="RenameMeshCommand_8cpp"/>
+      </node>
+      <node id="17">
+        <label>RenameResourceCommand.h</label>
+        <link refid="RenameResourceCommand_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>RotateCommand.cpp</label>
+        <link refid="RotateCommand_8cpp"/>
+      </node>
+      <node id="19">
+        <label>ScaleCommand.cpp</label>
+        <link refid="ScaleCommand_8cpp"/>
+      </node>
+      <node id="20">
+        <label>SetBlendShapeTargetDeltasCommand.cpp</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8cpp"/>
+      </node>
+      <node id="21">
+        <label>SetLODsCommand.cpp</label>
+        <link refid="SetLODsCommand_8cpp"/>
+      </node>
+      <node id="22">
+        <label>SetNeutralJointRotationsCommand.cpp</label>
+        <link refid="SetNeutralJointRotationsCommand_8cpp"/>
+      </node>
+      <node id="23">
+        <label>SetNeutralJointTranslationsCommand.cpp</label>
+        <link refid="SetNeutralJointTranslationsCommand_8cpp"/>
+      </node>
+      <node id="24">
+        <label>SetSkinWeightsCommand.cpp</label>
+        <link refid="SetSkinWeightsCommand_8cpp"/>
+      </node>
+      <node id="25">
+        <label>SetVertexPositionsCommand.cpp</label>
+        <link refid="SetVertexPositionsCommand_8cpp"/>
+      </node>
+      <node id="79">
+        <label>SupportFactories.h</label>
+        <link refid="SupportFactories_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>TranslateCommand.cpp</label>
+        <link refid="TranslateCommand_8cpp"/>
+      </node>
+      <node id="3">
+        <label>BaseImpl.h</label>
+        <link refid="dnacalib_2dna_2BaseImpl_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DNACalibDNAReaderImpl.cpp</label>
+        <link refid="DNACalibDNAReaderImpl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>DNACalibDNAReaderImpl.h</label>
+        <link refid="DNACalibDNAReaderImpl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>DenormalizedData.h</label>
+        <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>LODConstraint.cpp</label>
+        <link refid="dnacalib_2dna_2LODConstraint_8cpp"/>
+      </node>
+      <node id="73">
+        <label>LODConstraint.h</label>
+        <link refid="dnacalib_2dna_2LODConstraint_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>LODMapping.cpp</label>
+        <link refid="dnacalib_2dna_2LODMapping_8cpp"/>
+      </node>
+      <node id="76">
+        <label>LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ReaderImpl.h</label>
+        <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>WriterImpl.h</label>
+        <link refid="dnacalib_2dna_2WriterImpl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>AnimatedMapFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2AnimatedMapFilter_8cpp"/>
+      </node>
+      <node id="66">
+        <label>AnimatedMapFilter.h</label>
+        <link refid="alib_2dna_2filters_2AnimatedMapFilter_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>BlendShapeFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2BlendShapeFilter_8cpp"/>
+      </node>
+      <node id="68">
+        <label>BlendShapeFilter.h</label>
+        <link refid="alib_2dna_2filters_2BlendShapeFilter_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>JointFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8cpp"/>
+      </node>
+      <node id="72">
+        <label>JointFilter.h</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>MeshFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2MeshFilter_8cpp"/>
+      </node>
+      <node id="77">
+        <label>MeshFilter.h</label>
+        <link refid="alib_2dna_2filters_2MeshFilter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>Remap.h</label>
+        <link refid="alib_2dna_2filters_2Remap_8h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>BoundingBox.h</label>
+        <link refid="BoundingBox_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>Triangle.cpp</label>
+        <link refid="Triangle_8cpp"/>
+      </node>
+      <node id="61">
+        <label>Triangle.h</label>
+        <link refid="Triangle_8h"/>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>UVBarycentricMapping.cpp</label>
+        <link refid="UVBarycentricMapping_8cpp"/>
+      </node>
+      <node id="29">
+        <label>UVBarycentricMapping.h</label>
+        <link refid="UVBarycentricMapping_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Algorithm.h</label>
+        <link refid="Algorithm_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>VersionInfo.cpp</label>
+        <link refid="VersionInfo_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacedna">dna</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacedna" kindref="compound">dna</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca77b90cceaada15c2767933b3d5db0f8a" kindref="member">Descriptor</ref>,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca0b890b1926b90387673882e6ccae7fdc" kindref="member">Definition</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>Includes<sp/>Descriptor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab39a035a995fc6597c8eb942210d1527" kindref="member">Behavior</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>Includes<sp/>Descriptor<sp/>and<sp/>Definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cad9c6333623e6357515fcbf17be806273" kindref="member">Geometry</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>Includes<sp/>Descriptor<sp/>and<sp/>Definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769ca96fa7330c972d369c23d5b7d70a637ac" kindref="member">GeometryWithoutBlendShapes</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>Includes<sp/>Descriptor<sp/>and<sp/>Definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cabacb1964c4470f0e5c8992578937bb03" kindref="member">AllWithoutBlendShapes</ref>,<sp/><sp/></highlight><highlight class="comment">//<sp/>Includes<sp/>everything<sp/>except<sp/>blend<sp/>shapes<sp/>from<sp/>Geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">All</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dna</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/DataLayer.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1JointFilter" kind="class" language="C++" prot="public">
+    <compoundname>dnac::JointFilter</compoundname>
+    <includes refid="alib_2dna_2filters_2JointFilter_8h" local="no">JointFilter.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Option</name>
+        <qualifiedname>dnac::JointFilter::Option</qualifiedname>
+        <enumvalue id="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680" prot="public">
+          <name>All</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ac4981bf6569acb0991807a641527cd6a" prot="public">
+          <name>AnimationOnly</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="18" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1JointFilter_1ae0e8cd395f2867e7e43008268e4e13a1" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource* dnac::JointFilter::memRes</definition>
+        <argsstring></argsstring>
+        <name>memRes</name>
+        <qualifiedname>dnac::JointFilter::memRes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="34" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1JointFilter_1a43b0dfa72a3e2c94b33c592225cc472c" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="59" endline="115">apply</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet</ref>&lt; std::uint16_t &gt;</type>
+        <definition>UnorderedSet&lt;std::uint16_t&gt; dnac::JointFilter::passingIndices</definition>
+        <argsstring></argsstring>
+        <name>passingIndices</name>
+        <qualifiedname>dnac::JointFilter::passingIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="35" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="27" endline="57">apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="20" endline="25">configure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" kindref="member">UnorderedMap</ref>&lt; std::uint16_t, std::uint16_t &gt;</type>
+        <definition>UnorderedMap&lt;std::uint16_t, std::uint16_t&gt; dnac::JointFilter::remappedIndices</definition>
+        <argsstring></argsstring>
+        <name>remappedIndices</name>
+        <qualifiedname>dnac::JointFilter::remappedIndices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="36" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="27" endline="57">apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="20" endline="25">configure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" prot="private" static="no" mutable="no">
+        <type><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" kindref="member">Option</ref></type>
+        <definition>Option dnac::JointFilter::option</definition>
+        <argsstring></argsstring>
+        <name>option</name>
+        <qualifiedname>dnac::JointFilter::option</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="37" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="27" endline="57">apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="20" endline="25">configure</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1JointFilter_1ad8100852135b0549a3861e9adb7b9ae1" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dnac::JointFilter::rootJointIndex</definition>
+        <argsstring></argsstring>
+        <name>rootJointIndex</name>
+        <qualifiedname>dnac::JointFilter::rootJointIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="38" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="27" endline="57">apply</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1a3d852fb9ba06fe78044b7bee552722e1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::JointFilter::JointFilter</definition>
+        <argsstring>(MemoryResource *memRes_)</argsstring>
+        <name>JointFilter</name>
+        <qualifiedname>dnac::JointFilter::JointFilter</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="24" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="12" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::JointFilter::configure</definition>
+        <argsstring>(std::uint16_t jointCount, UnorderedSet&lt; std::uint16_t &gt; allowedJointIndices, Option option_=Option::All)</argsstring>
+        <name>configure</name>
+        <qualifiedname>dnac::JointFilter::configure</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointCount</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet</ref>&lt; std::uint16_t &gt;</type>
+          <declname>allowedJointIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" kindref="member">Option</ref></type>
+          <declname>option_</declname>
+          <defval><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">Option::All</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="25" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="20" bodyend="25"/>
+        <references refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="37">option</references>
+        <references refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="35">passingIndices</references>
+        <references refid="namespacednac_1a00e9116a5d1ebd6f8353079449f53960" compoundref="alib_2dna_2filters_2Remap_8h" startline="11" endline="18">dnac::remap</references>
+        <references refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="36">remappedIndices</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::JointFilter::apply</definition>
+        <argsstring>(RawDefinition &amp;dest)</argsstring>
+        <name>apply</name>
+        <qualifiedname>dnac::JointFilter::apply</qualifiedname>
+        <param>
+          <type><ref refid="structdnac_1_1RawDefinition" kindref="compound">RawDefinition</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="26" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="27" bodyend="57"/>
+        <references refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680">All</references>
+        <references refid="namespaceextd_1a221ca03908027a0215902298b500af85" compoundref="utils_2Extd_8h" startline="107" endline="109">extd::byPosition</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="structdnac_1_1RawDefinition_1ae4b0bd4d79d8ab6b6a6d86f437cf86c3" compoundref="dnacalib_2dna_2DNA_8h" startline="327">dnac::RawDefinition::jointHierarchy</references>
+        <references refid="structdnac_1_1RawDefinition_1a95c6b538bcdcef315cef62027456bacd" compoundref="dnacalib_2dna_2DNA_8h" startline="322">dnac::RawDefinition::jointNames</references>
+        <references refid="structdnac_1_1RawDefinition_1a802e7c52a3bab384076591530f8333e2" compoundref="dnacalib_2dna_2DNA_8h" startline="316">dnac::RawDefinition::lodJointMapping</references>
+        <references refid="classdnac_1_1LODMapping_1a41758d1cfe0e257be599e2422e6cf6ac" compoundref="dnacalib_2dna_2LODMapping_8cpp" startline="99" endline="105">dnac::LODMapping::mapIndices</references>
+        <references refid="structdnac_1_1RawDefinition_1aee6126b35c05e3859bf31a5f7682d2ca" compoundref="dnacalib_2dna_2DNA_8h" startline="329">dnac::RawDefinition::neutralJointRotations</references>
+        <references refid="structdnac_1_1RawDefinition_1aa7469f6fc9a35a09250d700036eff2bb" compoundref="dnacalib_2dna_2DNA_8h" startline="328">dnac::RawDefinition::neutralJointTranslations</references>
+        <references refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="37">option</references>
+        <references refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="35">passingIndices</references>
+        <references refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="36">remappedIndices</references>
+        <references refid="classdnac_1_1JointFilter_1ad8100852135b0549a3861e9adb7b9ae1" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="38">rootJointIndex</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="structdnac_1_1RawVector3Vector_1a1677de0fc21f0821dda1cd6f1f381220" compoundref="dnacalib_2dna_2DNA_8h" startline="240">dnac::RawVector3Vector::xs</references>
+        <references refid="structdnac_1_1RawVector3Vector_1a43b5f5752b64130aa7bd46ba3885f848" compoundref="dnacalib_2dna_2DNA_8h" startline="241">dnac::RawVector3Vector::ys</references>
+        <references refid="structdnac_1_1RawVector3Vector_1a004e90d622eda4f263188c826b65e14b" compoundref="dnacalib_2dna_2DNA_8h" startline="242">dnac::RawVector3Vector::zs</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1a43b0dfa72a3e2c94b33c592225cc472c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::JointFilter::apply</definition>
+        <argsstring>(RawBehavior &amp;dest)</argsstring>
+        <name>apply</name>
+        <qualifiedname>dnac::JointFilter::apply</qualifiedname>
+        <param>
+          <type><ref refid="structdnac_1_1RawBehavior" kindref="compound">RawBehavior</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="27" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="59" bodyend="115"/>
+        <references refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ab1c94ca2fbc3e78fc30069c8d0f01680">All</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" compoundref="ScaleCommand_8cpp" startline="14">dnac::jointAttributeCount</references>
+        <references refid="structdnac_1_1RawJoints_1ac400270e73193f9d258ca7bcfe0071ef" compoundref="dnacalib_2dna_2DNA_8h" startline="508">dnac::RawJoints::jointGroups</references>
+        <references refid="structdnac_1_1RawBehavior_1a13beb2057b960b7b4125f0d2ba7fb1c3" compoundref="dnacalib_2dna_2DNA_8h" startline="577">dnac::RawBehavior::joints</references>
+        <references refid="classdnac_1_1JointFilter_1ae0e8cd395f2867e7e43008268e4e13a1" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="34">memRes</references>
+        <references refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" compoundref="alib_2dna_2filters_2JointFilter_8h" startline="37">option</references>
+        <references refid="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="173" endline="175">remapped</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::JointFilter::apply</definition>
+        <argsstring>(RawVertexSkinWeights &amp;dest)</argsstring>
+        <name>apply</name>
+        <qualifiedname>dnac::JointFilter::apply</qualifiedname>
+        <param>
+          <type><ref refid="structdnac_1_1RawVertexSkinWeights" kindref="compound">RawVertexSkinWeights</ref> &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="28" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="117" bodyend="167"/>
+        <references refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" compoundref="DynArray_8h" startline="148" endline="150">terse::DynArray&lt; T, TAllocator &gt;::begin</references>
+        <references refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" compoundref="DynArray_8h" startline="134" endline="136">terse::DynArray&lt; T, TAllocator &gt;::empty</references>
+        <references refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" compoundref="DynArray_8h" startline="152" endline="154">terse::DynArray&lt; T, TAllocator &gt;::end</references>
+        <references refid="structdnac_1_1RawVertexSkinWeights_1a699084cc0f0366f070d7882ead8b86aa" compoundref="dnacalib_2dna_2DNA_8h" startline="700">dnac::RawVertexSkinWeights::jointIndices</references>
+        <references refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" compoundref="DNACalib_2CMakeLists_8txt" startline="34" endline="41">option</references>
+        <references refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</references>
+        <references refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="structdnac_1_1RawVertexSkinWeights_1a4834495fe82ebdfda19b1f2cf09d1fc5" compoundref="dnacalib_2dna_2DNA_8h" startline="699">dnac::RawVertexSkinWeights::weights</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1afdcbdf76008fa27db15a2adeefd3577e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dnac::JointFilter::passes</definition>
+        <argsstring>(std::uint16_t index) const</argsstring>
+        <name>passes</name>
+        <qualifiedname>dnac::JointFilter::passes</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="29" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="169" bodyend="171"/>
+        <references refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" compoundref="utils_2Extd_8h" startline="40" endline="42">extd::contains</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dnac::JointFilter::remapped</definition>
+        <argsstring>(std::uint16_t oldIndex) const</argsstring>
+        <name>remapped</name>
+        <qualifiedname>dnac::JointFilter::remapped</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>oldIndex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="30" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="173" bodyend="175"/>
+        <referencedby refid="classdnac_1_1JointFilter_1a43b0dfa72a3e2c94b33c592225cc472c" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="59" endline="115">apply</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1JointFilter_1abfb57c79b5db27c6aa6842a3b5ba85f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dnac::JointFilter::maxRemappedIndex</definition>
+        <argsstring>() const</argsstring>
+        <name>maxRemappedIndex</name>
+        <qualifiedname>dnac::JointFilter::maxRemappedIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="31" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.cpp" bodystart="177" bodyend="179"/>
+        <references refid="namespaceextd_1a4f7fd6d2283b5f448b5aaf4936a8a192" compoundref="utils_2Extd_8h" startline="112" endline="120">extd::maxOf</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dnac::JointFilter</label>
+        <link refid="classdnac_1_1JointFilter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" line="16" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/filters/JointFilter.h" bodystart="16" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>apply</name></member>
+      <member refid="classdnac_1_1JointFilter_1a43b0dfa72a3e2c94b33c592225cc472c" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>apply</name></member>
+      <member refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>apply</name></member>
+      <member refid="classdnac_1_1JointFilter_1a37a69a26d49ff40722687deb79f7fc09" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>configure</name></member>
+      <member refid="classdnac_1_1JointFilter_1a3d852fb9ba06fe78044b7bee552722e1" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>JointFilter</name></member>
+      <member refid="classdnac_1_1JointFilter_1abfb57c79b5db27c6aa6842a3b5ba85f9" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>maxRemappedIndex</name></member>
+      <member refid="classdnac_1_1JointFilter_1ae0e8cd395f2867e7e43008268e4e13a1" prot="private" virt="non-virtual"><scope>dnac::JointFilter</scope><name>memRes</name></member>
+      <member refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>Option</name></member>
+      <member refid="classdnac_1_1JointFilter_1ac8a722bbb87656b65836253176536107" prot="private" virt="non-virtual"><scope>dnac::JointFilter</scope><name>option</name></member>
+      <member refid="classdnac_1_1JointFilter_1afdcbdf76008fa27db15a2adeefd3577e" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>passes</name></member>
+      <member refid="classdnac_1_1JointFilter_1a79645c0a3d472edc0436e079e8cf81bc" prot="private" virt="non-virtual"><scope>dnac::JointFilter</scope><name>passingIndices</name></member>
+      <member refid="classdnac_1_1JointFilter_1a0598a0aa1318aa78efc1199696d40732" prot="public" virt="non-virtual"><scope>dnac::JointFilter</scope><name>remapped</name></member>
+      <member refid="classdnac_1_1JointFilter_1a87d897cd25cb03d931ada2917d13fda0" prot="private" virt="non-virtual"><scope>dnac::JointFilter</scope><name>remappedIndices</name></member>
+      <member refid="classdnac_1_1JointFilter_1ad8100852135b0549a3861e9adb7b9ae1" prot="private" virt="non-virtual"><scope>dnac::JointFilter</scope><name>rootJointIndex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

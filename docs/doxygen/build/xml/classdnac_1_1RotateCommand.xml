@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1RotateCommand" kind="class" language="C++" prot="public">
+    <compoundname>dnac::RotateCommand</compoundname>
+    <basecompoundref refid="classdnac_1_1Command" prot="public" virt="non-virtual">dnac::Command</basecompoundref>
+    <includes refid="RotateCommand_8h" local="no">RotateCommand.h</includes>
+    <innerclass refid="classdnac_1_1RotateCommand_1_1Impl" prot="public">dnac::RotateCommand::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; <ref refid="classdnac_1_1RotateCommand_1_1Impl" kindref="compound">Impl</ref> &gt;</type>
+        <definition>ScopedPtr&lt;Impl&gt; dnac::RotateCommand::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <qualifiedname>dnac::RotateCommand::pImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="50" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RotateCommand_1a413461fb7a7dfedcceb18103801db110" compoundref="RotateCommand_8cpp" startline="104" endline="109">RotateCommand</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07" compoundref="RotateCommand_8cpp" startline="123" endline="125">run</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1a2ee8f1f0d63abba21b599ef14d803f81" compoundref="RotateCommand_8cpp" startline="119" endline="121">setOrigin</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" compoundref="RotateCommand_8cpp" startline="115" endline="117">setRotation</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::RotateCommand::RotateCommand</definition>
+        <argsstring>(MemoryResource *memRes=nullptr)</argsstring>
+        <name>RotateCommand</name>
+        <qualifiedname>dnac::RotateCommand::RotateCommand</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="22" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp" bodystart="101" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a413461fb7a7dfedcceb18103801db110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::RotateCommand::RotateCommand</definition>
+        <argsstring>(Vector3 degrees, Vector3 origin, MemoryResource *memRes=nullptr)</argsstring>
+        <name>RotateCommand</name>
+        <qualifiedname>dnac::RotateCommand::RotateCommand</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>degrees</declname>
+        </param>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="23" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp" bodystart="104" bodyend="109"/>
+        <references refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" compoundref="Transforms_8h" startline="15" endline="18">tdm::degrees</references>
+        <references refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" compoundref="RotateCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1aa4a422b6406e0bae5fc09becb4f43f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::RotateCommand::~RotateCommand</definition>
+        <argsstring>()</argsstring>
+        <name>~RotateCommand</name>
+        <qualifiedname>dnac::RotateCommand::~RotateCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="25" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1aeec20dba95d864e8aa2e4424dcc9368a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RotateCommand::RotateCommand</definition>
+        <argsstring>(const RotateCommand &amp;)=delete</argsstring>
+        <name>RotateCommand</name>
+        <qualifiedname>dnac::RotateCommand::RotateCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="27" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a83de7f0e9bb945b102e6207145cc96d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;</type>
+        <definition>RotateCommand &amp; dnac::RotateCommand::operator=</definition>
+        <argsstring>(const RotateCommand &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::RotateCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="28" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1ad6222aa4277855c6b6d94c351711aed3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::RotateCommand::RotateCommand</definition>
+        <argsstring>(RotateCommand &amp;&amp;)</argsstring>
+        <name>RotateCommand</name>
+        <qualifiedname>dnac::RotateCommand::RotateCommand</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="30" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a0c1c332517c1c8da13c1f338fdc9bf13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> <ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;</type>
+        <definition>RotateCommand &amp; dnac::RotateCommand::operator=</definition>
+        <argsstring>(RotateCommand &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::RotateCommand::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="31" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::RotateCommand::setRotation</definition>
+        <argsstring>(Vector3 degrees)</argsstring>
+        <name>setRotation</name>
+        <qualifiedname>dnac::RotateCommand::setRotation</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>degrees</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the rotation angles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>degrees</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rotation angles in degrees. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="38" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp" bodystart="115" bodyend="117"/>
+        <references refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" compoundref="Transforms_8h" startline="15" endline="18">tdm::degrees</references>
+        <references refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" compoundref="RotateCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a2ee8f1f0d63abba21b599ef14d803f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::RotateCommand::setOrigin</definition>
+        <argsstring>(Vector3 origin)</argsstring>
+        <name>setOrigin</name>
+        <qualifiedname>dnac::RotateCommand::setOrigin</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the rotation origin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="45" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp" bodystart="119" bodyend="121"/>
+        <references refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" compoundref="RotateCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::RotateCommand::run</definition>
+        <argsstring>(DNACalibDNAReader *output) override</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::RotateCommand::run</qualifiedname>
+        <reimplements refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee">run</reimplements>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="46" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp" bodystart="123" bodyend="125"/>
+        <references refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" compoundref="RotateCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref> is used to rotate neutral joints and vertex positions around given origin. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Joint rotations are represented in parent space, so it is enough to rotate only root joints, as that rotation will be propagated to the rest of the joints. </para>
+</simplesect>
+<simplesect kind="note"><para>If the origin is not set, the assumed origin is (0, 0, 0). </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::RotateCommand</label>
+        <link refid="classdnac_1_1RotateCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>pma::ScopedPtr&lt; dnac::RotateCommand::Impl &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; dnac::RotateCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::RotateCommand</label>
+        <link refid="classdnac_1_1RotateCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; T &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; dnac::RotateCommand::Impl &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; dnac::RotateCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="8" relation="private-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; U &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+      </node>
+      <node id="8">
+        <label>typename DefaultInstanceDestroyer&lt;T&gt;::type</label>
+      </node>
+      <node id="4">
+        <label>typename DefaultInstanceDestroyer&lt;dnac::RotateCommand::Impl &gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" line="20" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h" bodystart="20" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1RotateCommand_1a83de7f0e9bb945b102e6207145cc96d9" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a0c1c332517c1c8da13c1f338fdc9bf13" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" prot="private" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>pImpl</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>RotateCommand</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a413461fb7a7dfedcceb18103801db110" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>RotateCommand</name></member>
+      <member refid="classdnac_1_1RotateCommand_1aeec20dba95d864e8aa2e4424dcc9368a" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>RotateCommand</name></member>
+      <member refid="classdnac_1_1RotateCommand_1ad6222aa4277855c6b6d94c351711aed3" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>RotateCommand</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07" prot="public" virt="virtual"><scope>dnac::RotateCommand</scope><name>run</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a2ee8f1f0d63abba21b599ef14d803f81" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>setOrigin</name></member>
+      <member refid="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>setRotation</name></member>
+      <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::RotateCommand</scope><name>~Command</name></member>
+      <member refid="classdnac_1_1RotateCommand_1aa4a422b6406e0bae5fc09becb4f43f86" prot="public" virt="non-virtual"><scope>dnac::RotateCommand</scope><name>~RotateCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

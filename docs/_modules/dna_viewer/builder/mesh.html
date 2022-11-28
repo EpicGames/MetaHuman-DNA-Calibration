@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.builder.mesh &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.builder.mesh</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.builder.mesh</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">..builder.maya_mesh</span> <span class="kn">import</span> <span class="n">MayaMesh</span> <span class="k">as</span> <span class="n">MayaMeshBuilder</span>
+<span class="kn">from</span> <span class="nn">..config.character</span> <span class="kn">import</span> <span class="n">BuildOptions</span><span class="p">,</span> <span class="n">Character</span><span class="p">,</span> <span class="n">SpaceModifiers</span>
+<span class="kn">from</span> <span class="nn">..config.mesh</span> <span class="kn">import</span> <span class="n">Mesh</span> <span class="k">as</span> <span class="n">MeshConfig</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">..util.mesh_skin</span> <span class="kn">import</span> <span class="n">MeshSkin</span>
+<span class="kn">from</span> <span class="nn">..util.reference</span> <span class="kn">import</span> <span class="n">get_geometry_reader</span>
+
+
+<div class="viewcode-block" id="Mesh"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh">[docs]</a><span class="k">class</span> <span class="nc">Mesh</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A builder class used for adding joints to the scene</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type dna: DNA</span>
+<span class="sd">    @param dna: The location of the DNA file</span>
+
+<span class="sd">    @type mesh_index: int</span>
+<span class="sd">    @param mesh_index: The mesh index we are working with</span>
+
+<span class="sd">    @type joint_ids: List[int]</span>
+<span class="sd">    @param joint_ids: The joint indices used for adding skin</span>
+
+<span class="sd">    @type joint_names: List[str]</span>
+<span class="sd">    @param joint_names: The joint names used for adding skin</span>
+
+<span class="sd">    @type options: BuildOptions</span>
+<span class="sd">    @param options: The build options that will be applied when creating the mesh</span>
+
+<span class="sd">    @type modifiers: SpaceModifiers</span>
+<span class="sd">    @param modifiers: Space modifiers that should be applied when creating the mesh</span>
+
+<span class="sd">    @type config: Character</span>
+<span class="sd">    @param config: The character configuration options used for getting information about the DNA path, build options and space modifiers</span>
+
+<span class="sd">    @type mesh: MayaMeshBuilder</span>
+<span class="sd">    @param mesh: The builder class object for creating the meshes</span>
+
+<span class="sd">    @type dna: DNA</span>
+<span class="sd">    @param dna: The DNA object that was loaded in</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">character_config</span><span class="p">:</span> <span class="n">Character</span><span class="p">,</span>
+        <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">,</span>
+        <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">mesh_index</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">:</span> <span class="n">BuildOptions</span> <span class="o">=</span> <span class="n">character_config</span><span class="o">.</span><span class="n">options</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modifiers</span><span class="p">:</span> <span class="n">SpaceModifiers</span> <span class="o">=</span> <span class="n">character_config</span><span class="o">.</span><span class="n">modifiers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">MeshConfig</span><span class="p">(</span>
+            <span class="n">mesh_index</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">,</span>
+            <span class="n">linear_modifier</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">modifiers</span><span class="o">.</span><span class="n">linear_modifier</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">dna</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span> <span class="o">=</span> <span class="n">MayaMeshBuilder</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Mesh.build"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh.build">[docs]</a>    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Starts the build process, creates the neutral mesh, then adds normals, blends shapes and skin if needed&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_neutral_mesh</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_normals</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_blend_shapes</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_skin</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Mesh.create_neutral_mesh"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh.create_neutral_mesh">[docs]</a>    <span class="k">def</span> <span class="nf">create_neutral_mesh</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates the neutral mesh&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">create_neutral_mesh</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Mesh.add_normals"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh.add_normals">[docs]</a>    <span class="k">def</span> <span class="nf">add_normals</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Adds normals to the mesh if it is set in the build options&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_normals</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding normals...&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">add_normals</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Mesh.add_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh.add_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">add_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the blend shapes, then adds them to the mesh if it is set in the build options&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_blend_shapes</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;reading blend shapes...&quot;</span><span class="p">)</span>
+            <span class="n">geometry_reader</span> <span class="o">=</span> <span class="n">get_geometry_reader</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+            <span class="n">geometry_reader</span><span class="o">.</span><span class="n">read_blend_shapes</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span>
+            <span class="p">)</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding blend shapes...&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">add_blend_shapes</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_mesh_name_to_blend_shape_channel_name</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Mesh.add_skin"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh.add_skin">[docs]</a>    <span class="k">def</span> <span class="nf">add_skin</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Adds skin to the mesh if it is set in the build options&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_skin</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">add_joints</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">joint_ids</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">joint_names</span> <span class="o">=</span> <span class="n">MeshSkin</span><span class="o">.</span><span class="n">prepare_joints</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">add_skin</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joint_names</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">joint_ids</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

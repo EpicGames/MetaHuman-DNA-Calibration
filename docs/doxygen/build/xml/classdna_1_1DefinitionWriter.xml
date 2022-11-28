@@ -1,0 +1,1439 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1DefinitionWriter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dna::DefinitionWriter</compoundname>
+    <basecompoundref refid="classdna_1_1DescriptorWriter" prot="public" virt="non-virtual">dna::DescriptorWriter</basecompoundref>
+    <derivedcompoundref refid="classdna_1_1BehaviorWriter" prot="public" virt="virtual">dna::BehaviorWriter</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1GeometryWriter" prot="public" virt="virtual">dna::GeometryWriter</derivedcompoundref>
+    <includes refid="DefinitionWriter_8h" local="no">DefinitionWriter.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ad68a8a51b3ae0bc1ac4103d49359a023" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>dna::DefinitionWriter::~DefinitionWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~DefinitionWriter</name>
+        <qualifiedname>dna::DefinitionWriter::~DefinitionWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="22" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a51ec75c1d95e3f6b11e76a63bff7830a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearGUIControlNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearGUIControlNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearGUIControlNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0405a259b4fce1235b19ae0b0a52f244">clearGUIControlNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0405a259b4fce1235b19ae0b0a52f244">clearGUIControlNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a2726dafc3ea6b757ea75f6bd1b365b99">clearGUIControlNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored GUI control names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="28" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1acbe167777c421076e740f9e775f1ca52" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setGUIControlName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setGUIControlName</name>
+        <qualifiedname>dna::DefinitionWriter::setGUIControlName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a9957bb06ae42ce862d7e5ba1461116cc">setGUIControlName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a9957bb06ae42ce862d7e5ba1461116cc">setGUIControlName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a2c629dec652bc6858cd63fb7d3ea31c2">setGUIControlName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified GUI control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of GUI control names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The control name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="42" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1abc7053615464e121b86bb6c3c3605398" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearRawControlNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearRawControlNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearRawControlNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2c8500d30d3da7624ba317b7ba7f7dcd">clearRawControlNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2c8500d30d3da7624ba317b7ba7f7dcd">clearRawControlNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a5176da201cf54ebbfcccc432959d8b11">clearRawControlNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored raw control names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="46" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a603d4b1155e298fc240c991c51a35057" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setRawControlName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setRawControlName</name>
+        <qualifiedname>dna::DefinitionWriter::setRawControlName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af89ddd98e8ce0ee55bbb8e38bd15fcb2">setRawControlName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af89ddd98e8ce0ee55bbb8e38bd15fcb2">setRawControlName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a8087c7e36578e94332f70bbf2b3be3bf">setRawControlName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified raw control. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of raw control names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The control name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="60" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a623e9d447ff61291f0c4eebb2a52161d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearJointNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearJointNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearJointNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2722935c17ef59328ef3d5bc8c74c95e">clearJointNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2722935c17ef59328ef3d5bc8c74c95e">clearJointNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a1558e70985a321738257ccfa3af81c33">clearJointNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored joint names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="64" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setJointName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setJointName</name>
+        <qualifiedname>dna::DefinitionWriter::setJointName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a315475cff9a8796f4cbecf8f04eda31c">setJointName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a315475cff9a8796f4cbecf8f04eda31c">setJointName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a44aae8205ce754f800f42e204e31fe42">setJointName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified joint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of joint names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="78" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+        <referencedby refid="classdnac_1_1RenameJointCommand_1_1Impl_1ae76acd0abdf9a6bff72b53241ad82f87" compoundref="RenameJointCommand_8cpp" startline="34" endline="36">dnac::RenameJointCommand::Impl::setNameByIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1af5678ae2507289472d3bf7db42cf5737" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearJointIndices</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearJointIndices</name>
+        <qualifiedname>dna::DefinitionWriter::clearJointIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a46e0da5e729eeb5650f291f2fee654f2">clearJointIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a46e0da5e729eeb5650f291f2fee654f2">clearJointIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a90220538af2d87f31f22ec278a408551">clearJointIndices</reimplementedby>
+        <briefdescription>
+<para>Delete all stored joint indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="82" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a6d2908222c87eaae02f42897a3800ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setJointIndices</definition>
+        <argsstring>(std::uint16_t index, const std::uint16_t *jointIndices, std::uint16_t count)=0</argsstring>
+        <name>setJointIndices</name>
+        <qualifiedname>dna::DefinitionWriter::setJointIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ace09d578f12705f356be62dbc7d2f9de">setJointIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ace09d578f12705f356be62dbc7d2f9de">setJointIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a6617b8a4c7e06fd232bcd49f708951ce">setJointIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>jointIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Store a list of joint indices onto a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A position in a zero-indexed array where joint indices are stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The index denotes the position of an entire joint index list, not the position of it&apos;s individual elements, i.e. the row index in a 2D matrix of joint indices. </para>
+</simplesect>
+<simplesect kind="note"><para>The joint index storage will be implicitly resized (if needed) to provide storage for the number of joint indices that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the joint indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>These indices can be used to access joint names through <ref refid="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45" kindref="member">DefinitionReader::getJointName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of joint indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="101" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ada594e28662c8743180659e88666de30" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearLODJointMappings</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearLODJointMappings</name>
+        <qualifiedname>dna::DefinitionWriter::clearLODJointMappings</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0b75ec27710685e035da1bdde8fb7dbc">clearLODJointMappings</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0b75ec27710685e035da1bdde8fb7dbc">clearLODJointMappings</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a415f226e12e0a8cb98fed2848118c561">clearLODJointMappings</reimplementedby>
+        <briefdescription>
+<para>Delete all stored LOD to joint list index mapping entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="105" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ab455cc12547a8bf8fd640442c2cd37a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setLODJointMapping</definition>
+        <argsstring>(std::uint16_t lod, std::uint16_t index)=0</argsstring>
+        <name>setLODJointMapping</name>
+        <qualifiedname>dna::DefinitionWriter::setLODJointMapping</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1ef831d88bfb59523135de2d604424ee">setLODJointMapping</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1ef831d88bfb59523135de2d604424ee">setLODJointMapping</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a2ad56a99389d8d2194cf99040e029dac">setLODJointMapping</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set which joints belong to which level of detail. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual level of detail to which the joints are being associated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index onto which joints indices were assigned using setJointIndices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classdna_1_1DefinitionWriter_1a6d2908222c87eaae02f42897a3800ffb" kindref="member">setJointIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="114" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1aa69021d1daa96e5dc6c664a4a4d5b6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearBlendShapeChannelNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearBlendShapeChannelNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearBlendShapeChannelNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a930a14bbdf6bf34b647caef0e02c3617">clearBlendShapeChannelNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a930a14bbdf6bf34b647caef0e02c3617">clearBlendShapeChannelNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1afeba4f3dd39a71dc64076a1b5b2b1eb3">clearBlendShapeChannelNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored blend shape channel names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="118" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a16e68f1b1ec7a84ca03764c16a114b89" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setBlendShapeChannelName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setBlendShapeChannelName</name>
+        <qualifiedname>dna::DefinitionWriter::setBlendShapeChannelName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4e953b29a1c0cd920ee81883e79d3ff0">setBlendShapeChannelName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4e953b29a1c0cd920ee81883e79d3ff0">setBlendShapeChannelName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a055c94318db04a05e436fc3b1bed871c">setBlendShapeChannelName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified blend shape channel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of blend shape channel names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The blend shape channel name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="132" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+        <referencedby refid="classdnac_1_1RenameBlendShapeCommand_1_1Impl_1a3b0852c8391d0e14f1ea7101c41399bb" compoundref="RenameBlendShapeCommand_8cpp" startline="34" endline="36">dnac::RenameBlendShapeCommand::Impl::setNameByIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a7ccdfa0345f7789514a8dbb77fd9d6bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearBlendShapeChannelIndices</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearBlendShapeChannelIndices</name>
+        <qualifiedname>dna::DefinitionWriter::clearBlendShapeChannelIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a5487cc709d30acaaef2eb074cf437460">clearBlendShapeChannelIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a5487cc709d30acaaef2eb074cf437460">clearBlendShapeChannelIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad6f5303ff5548768e5d7c6df7ef54ea0">clearBlendShapeChannelIndices</reimplementedby>
+        <briefdescription>
+<para>Delete all stored blend shape channel indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="136" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ae938261e6df4857c604fbde039d02f3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setBlendShapeChannelIndices</definition>
+        <argsstring>(std::uint16_t index, const std::uint16_t *blendShapeChannelIndices, std::uint16_t count)=0</argsstring>
+        <name>setBlendShapeChannelIndices</name>
+        <qualifiedname>dna::DefinitionWriter::setBlendShapeChannelIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa6e1ff4d2c4ddba5a90b8090bbc55b2a">setBlendShapeChannelIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa6e1ff4d2c4ddba5a90b8090bbc55b2a">setBlendShapeChannelIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a5d45c555607e94036a757293c6f18971">setBlendShapeChannelIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>blendShapeChannelIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Store a list of blend shape channel name indices onto a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A position in a zero-indexed array where blend shape channel name indices are stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The index denotes the position of an entire blend shape channel index list, not the position of it&apos;s individual elements, i.e. the row index in a 2D matrix of blend shape channel indices. </para>
+</simplesect>
+<simplesect kind="note"><para>The blend shape channel index storage will be implicitly resized (if needed) to provide storage for the number of blend shape channel name indices that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>blendShapeChannelIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the blend shape channel name indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>These indices can be used to access blend shape channel names through <ref refid="classdna_1_1DefinitionReader_1a9162ea692bf3c45f65b7a569d5061623" kindref="member">DefinitionReader::getBlendShapeChannelName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of blend shape channel name indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="155" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a2fa5d2b6c9fb5725cc0bba2ea7c5b1ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearLODBlendShapeChannelMappings</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearLODBlendShapeChannelMappings</name>
+        <qualifiedname>dna::DefinitionWriter::clearLODBlendShapeChannelMappings</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a173ac29e83af843f0f0a771642c6fe31">clearLODBlendShapeChannelMappings</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a173ac29e83af843f0f0a771642c6fe31">clearLODBlendShapeChannelMappings</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a8efc17924b9e4171bcf6452b871ab8ce">clearLODBlendShapeChannelMappings</reimplementedby>
+        <briefdescription>
+<para>Delete all stored LOD to blend shape channel list index mapping entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="161" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1aecc6f0194a3ede2fd3a5949b5d726fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setLODBlendShapeChannelMapping</definition>
+        <argsstring>(std::uint16_t lod, std::uint16_t index)=0</argsstring>
+        <name>setLODBlendShapeChannelMapping</name>
+        <qualifiedname>dna::DefinitionWriter::setLODBlendShapeChannelMapping</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af9aae8a1b78479109154d868b8b4132d">setLODBlendShapeChannelMapping</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af9aae8a1b78479109154d868b8b4132d">setLODBlendShapeChannelMapping</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1acb243231dfa79dfb5fc0c005864ca671">setLODBlendShapeChannelMapping</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set which blend shape channels belong to which level of detail. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual level of detail to which the blend shape channels are being associated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index onto which blend shape channel name indices were assigned using setBlendShapeChannelIndices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The LOD indices set here are not interchangeable with the LOD values set in <ref refid="classdna_1_1BehaviorWriter_1a9eac4730bc5b2d683f81be7d7abf942a" kindref="member">BehaviorWriter::setBlendShapeChannelLODs</ref>. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1DefinitionWriter_1ae938261e6df4857c604fbde039d02f3c" kindref="member">setBlendShapeChannelIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="172" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1afab13f64abd3b2600cbb33f513c6e4bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearAnimatedMapNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearAnimatedMapNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearAnimatedMapNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab009a60200a4b880b72992243f974fe4">clearAnimatedMapNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab009a60200a4b880b72992243f974fe4">clearAnimatedMapNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a907ec49a82b4588c58e4bf8bbdecd0cf">clearAnimatedMapNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored animated map names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="176" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a952b9e26982e07b7cff4118cb7e4b3d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setAnimatedMapName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setAnimatedMapName</name>
+        <qualifiedname>dna::DefinitionWriter::setAnimatedMapName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af3f7354ef666e6682b5b2b469ce417cc">setAnimatedMapName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af3f7354ef666e6682b5b2b469ce417cc">setAnimatedMapName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a8ae140ca9607a92fd6f901d52b31c048">setAnimatedMapName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified animated map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of animated map names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The animated map name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="190" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+        <referencedby refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl_1ac65059a2a2c496d28325d5424becd2fc" compoundref="RenameAnimatedMapCommand_8cpp" startline="34" endline="36">dnac::RenameAnimatedMapCommand::Impl::setNameByIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a833ddf3aa21ae018e73923a9c17e8f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearAnimatedMapIndices</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearAnimatedMapIndices</name>
+        <qualifiedname>dna::DefinitionWriter::clearAnimatedMapIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a66f601f7475e438f981eb42badc57433">clearAnimatedMapIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a66f601f7475e438f981eb42badc57433">clearAnimatedMapIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a9de52627e4296b91b5e3e2141e3f1fa2">clearAnimatedMapIndices</reimplementedby>
+        <briefdescription>
+<para>Delete all stored animated map indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="194" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a9b34f7c55202132ea233bf62305e95fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setAnimatedMapIndices</definition>
+        <argsstring>(std::uint16_t index, const std::uint16_t *animatedMapIndices, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapIndices</name>
+        <qualifiedname>dna::DefinitionWriter::setAnimatedMapIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2b272b455b9f8bee1a2b12e24c50a648">setAnimatedMapIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2b272b455b9f8bee1a2b12e24c50a648">setAnimatedMapIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a5c10a6657cad341cb71517a1fdeaa4ac">setAnimatedMapIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>animatedMapIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Store a list of animated map name indices onto a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A position in a zero-indexed array where animated map name indices are stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The index denotes the position of an entire animated map index list, not the position of it&apos;s individual elements, i.e. the row index in a 2D matrix of animated map indices. </para>
+</simplesect>
+<simplesect kind="note"><para>The animated map index storage will be implicitly resized (if needed) to provide storage for the number of animated map name indices that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>animatedMapIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the animated map name indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>These indices can be used to access animated map names through <ref refid="classdna_1_1DefinitionReader_1a057aa04a10d076a1569995339d95533d" kindref="member">DefinitionReader::getAnimatedMapName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of animated map name indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="213" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ae88b611a59fdfadfef3fef6316bf7e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearLODAnimatedMapMappings</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearLODAnimatedMapMappings</name>
+        <qualifiedname>dna::DefinitionWriter::clearLODAnimatedMapMappings</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a81e921a85da5bd7836157c89bd753ed2">clearLODAnimatedMapMappings</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a81e921a85da5bd7836157c89bd753ed2">clearLODAnimatedMapMappings</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a1a7647fd3c1a18f2be4074fb12a60a41">clearLODAnimatedMapMappings</reimplementedby>
+        <briefdescription>
+<para>Delete all stored LOD to animated map list index mapping entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="217" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1ac8fbf066b96f5405488ea83ccd0b3ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setLODAnimatedMapMapping</definition>
+        <argsstring>(std::uint16_t lod, std::uint16_t index)=0</argsstring>
+        <name>setLODAnimatedMapMapping</name>
+        <qualifiedname>dna::DefinitionWriter::setLODAnimatedMapMapping</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7f4e014694aae1c46e06295a8b0f2337">setLODAnimatedMapMapping</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7f4e014694aae1c46e06295a8b0f2337">setLODAnimatedMapMapping</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a714048b4674e80789b4d03cab0333e68">setLODAnimatedMapMapping</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set which animated maps belong to which level of detail. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual level of detail to which the animated maps are being associated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index onto which animated map indices were assigned using setAnimatedMapIndices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classdna_1_1DefinitionWriter_1a9b34f7c55202132ea233bf62305e95fd" kindref="member">setAnimatedMapIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="226" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a12aa23a21232da2ffaa51e4dc6748bb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearMeshNames</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearMeshNames</name>
+        <qualifiedname>dna::DefinitionWriter::clearMeshNames</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1abc4e80a42b49bca656d94975f28ee4c1">clearMeshNames</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1abc4e80a42b49bca656d94975f28ee4c1">clearMeshNames</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ac5bbcbe6d0116652e1ff3ad4c79b9fd5">clearMeshNames</reimplementedby>
+        <briefdescription>
+<para>Delete all stored mesh names. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="230" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a3a04e9932ae29728b79d6fe38b86755f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setMeshName</definition>
+        <argsstring>(std::uint16_t index, const char *name)=0</argsstring>
+        <name>setMeshName</name>
+        <qualifiedname>dna::DefinitionWriter::setMeshName</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2ba68c4639b0c334eedd649c492f49db">setMeshName</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2ba68c4639b0c334eedd649c492f49db">setMeshName</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a2a9867b0d14d8982a5bcbc7af36d6f3c">setMeshName</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Name of the specified mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A name&apos;s position in the zero-indexed array of mesh names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The mesh name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A null-terminated string. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The passed in name is copied, which will involve an additional allocation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="243" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+        <referencedby refid="classdnac_1_1RenameMeshCommand_1_1Impl_1a2d4d79e680924fcdb5df70339947c7f6" compoundref="RenameMeshCommand_8cpp" startline="34" endline="36">dnac::RenameMeshCommand::Impl::setNameByIndex</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1aa4875b5153d765696a6693add5dd0c46" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearMeshIndices</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearMeshIndices</name>
+        <qualifiedname>dna::DefinitionWriter::clearMeshIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1adbeb394bbe314d89fb0415dae3eb8aa5">clearMeshIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1adbeb394bbe314d89fb0415dae3eb8aa5">clearMeshIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a5bce63ceb5879e899dc9f0a227866d53">clearMeshIndices</reimplementedby>
+        <briefdescription>
+<para>Delete all stored mesh indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="247" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a1ede54dbf2feef53b1210297a74ecb3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setMeshIndices</definition>
+        <argsstring>(std::uint16_t index, const std::uint16_t *meshIndices, std::uint16_t count)=0</argsstring>
+        <name>setMeshIndices</name>
+        <qualifiedname>dna::DefinitionWriter::setMeshIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ade15de044ad573433a0cc0c0579044be">setMeshIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ade15de044ad573433a0cc0c0579044be">setMeshIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a721a8f45039197f8c9df135bb7f0ccb8">setMeshIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>meshIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Store a list of mesh name indices onto a specified index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A position in a zero-indexed array where mesh name indices are stored. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The index denotes the position of an entire mesh index list, not the position of it&apos;s individual elements, i.e. the row index in a 2D matrix of mesh indices. </para>
+</simplesect>
+<simplesect kind="note"><para>The mesh index storage will be implicitly resized (if needed) to provide storage for the number of mesh name indices that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meshIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the mesh name indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>These indices can be used to access mesh names through <ref refid="classdna_1_1DefinitionReader_1a10353a0640d78d4ede523391293b9b30" kindref="member">DefinitionReader::getMeshName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of mesh name indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="266" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a4e8476c54bee8764db7e22f2d813c5e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearLODMeshMappings</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearLODMeshMappings</name>
+        <qualifiedname>dna::DefinitionWriter::clearLODMeshMappings</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ae690daa52960a0f423c091e659c29682">clearLODMeshMappings</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ae690daa52960a0f423c091e659c29682">clearLODMeshMappings</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a0aa67ea0b92102ccf988b6d968bffa69">clearLODMeshMappings</reimplementedby>
+        <briefdescription>
+<para>Delete all stored LOD to mesh list index mapping entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="270" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a76c1e2ef776b647c7313c6373daa0ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setLODMeshMapping</definition>
+        <argsstring>(std::uint16_t lod, std::uint16_t index)=0</argsstring>
+        <name>setLODMeshMapping</name>
+        <qualifiedname>dna::DefinitionWriter::setLODMeshMapping</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab7831684f498ef1642f18e0c73fc241c">setLODMeshMapping</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab7831684f498ef1642f18e0c73fc241c">setLODMeshMapping</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a4c112da07b688af484baa668b074173e">setLODMeshMapping</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lod</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Set which meshes belong to which level of detail. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lod</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The actual level of detail to which the meshes are being associated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index onto which mesh indices were assigned using setMeshIndices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classdna_1_1DefinitionWriter_1a1ede54dbf2feef53b1210297a74ecb3d" kindref="member">setMeshIndices</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="279" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a0df6e5029b789fd4a14208d1416cd246" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::clearMeshBlendShapeChannelMappings</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearMeshBlendShapeChannelMappings</name>
+        <qualifiedname>dna::DefinitionWriter::clearMeshBlendShapeChannelMappings</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0f5df5f0c29fb6460a952e4f25a27733">clearMeshBlendShapeChannelMappings</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0f5df5f0c29fb6460a952e4f25a27733">clearMeshBlendShapeChannelMappings</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a97a93e8281eb151f033b60c7a11ac556">clearMeshBlendShapeChannelMappings</reimplementedby>
+        <briefdescription>
+<para>Delete all stored mesh to blend shape channel mapping entries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="283" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a2af79d245c8106f3d9d893033355826d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setMeshBlendShapeChannelMapping</definition>
+        <argsstring>(std::uint32_t index, std::uint16_t meshIndex, std::uint16_t blendShapeChannelIndex)=0</argsstring>
+        <name>setMeshBlendShapeChannelMapping</name>
+        <qualifiedname>dna::DefinitionWriter::setMeshBlendShapeChannelMapping</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a81985d9add44724dc8a86a6c1f2bc0ae">setMeshBlendShapeChannelMapping</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a81985d9add44724dc8a86a6c1f2bc0ae">setMeshBlendShapeChannelMapping</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1aebdad4ca8d11257f083e51e4972e56b4">setMeshBlendShapeChannelMapping</reimplementedby>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>blendShapeChannelIndex</declname>
+        </param>
+        <briefdescription>
+<para>Associate a blend shape channel with it&apos;s mesh. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mapping&apos;s position in the zero-indexed array of mesh-blend shape channel mappings. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meshIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A mesh&apos;s position in the zero-indexed array of mesh names. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blendShapeChannelIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A blend shape channel&apos;s position in the zero-indexed array of blend shape channel names. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="293" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a69035647abcca8cad52431ca759fc96d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setJointHierarchy</definition>
+        <argsstring>(const std::uint16_t *jointIndices, std::uint16_t count)=0</argsstring>
+        <name>setJointHierarchy</name>
+        <qualifiedname>dna::DefinitionWriter::setJointHierarchy</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0a4658d3d6b8d2f452e576115561da96">setJointHierarchy</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0a4658d3d6b8d2f452e576115561da96">setJointHierarchy</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a431e695be5e2fc669780dc9e310d65ee">setJointHierarchy</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>jointIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>A simple array describing the parent-child relationships between joints. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Example: Joint names: [A, B, C, D, E, F, G, H] Hierarchy: [0, 0, 0, 1, 1, 4, 2, 2] Describes the following hierarchy: A<itemizedlist>
+<listitem><para>B | + D | + E | + F</para>
+</listitem><listitem><para>C<itemizedlist>
+<listitem><para>G</para>
+</listitem><listitem><para>H </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the joint indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>These indices can be used to access joint names through <ref refid="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45" kindref="member">DefinitionReader::getJointName</ref>. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of joint indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="316" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1af64d1d8956f3d0cd3165dae9df275c41" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setNeutralJointTranslations</definition>
+        <argsstring>(const Vector3 *translations, std::uint16_t count)=0</argsstring>
+        <name>setNeutralJointTranslations</name>
+        <qualifiedname>dna::DefinitionWriter::setNeutralJointTranslations</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1f16a9d463e9a6379e487d162723efde">setNeutralJointTranslations</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1f16a9d463e9a6379e487d162723efde">setNeutralJointTranslations</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad700376442d8ca4db07f0f3a8ac1c459">setNeutralJointTranslations</reimplementedby>
+        <param>
+          <type>const <ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref> *</type>
+          <declname>translations</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>translations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the translations are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of translation values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="323" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1DefinitionWriter_1a487bb27204d18dc9f120a3c18cd1539b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::DefinitionWriter::setNeutralJointRotations</definition>
+        <argsstring>(const Vector3 *rotations, std::uint16_t count)=0</argsstring>
+        <name>setNeutralJointRotations</name>
+        <qualifiedname>dna::DefinitionWriter::setNeutralJointRotations</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4214e5a84d6d24dd9845df4bf80ee381">setNeutralJointRotations</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a4214e5a84d6d24dd9845df4bf80ee381">setNeutralJointRotations</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ada546e6f233339ca3b49353ae77ef8f0">setNeutralJointRotations</reimplementedby>
+        <param>
+          <type>const <ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref> *</type>
+          <declname>rotations</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rotations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the rotations are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of rotation values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="330" column="22"/>
+        <referencedby refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Write-only accessors for <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> attributes that represent the rig&apos;s static data. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Implementors should inherit from <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> itself and not this class. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna::WriterImpl&lt; JSONStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::WriterImpl&lt; dna::Writer &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="14">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::JSONStreamWriter</label>
+        <link refid="classdna_1_1JSONStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna::JSONStreamWriterImpl</label>
+        <link refid="classdna_1_1JSONStreamWriterImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" line="20" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/DefinitionWriter.h" bodystart="20" bodyend="331"/>
+    <listofallmembers>
+      <member refid="classdna_1_1DefinitionWriter_1a833ddf3aa21ae018e73923a9c17e8f6c" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1afab13f64abd3b2600cbb33f513c6e4bb" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearAnimatedMapNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a7ccdfa0345f7789514a8dbb77fd9d6bf" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa69021d1daa96e5dc6c664a4a4d5b6f1" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearBlendShapeChannelNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a51ec75c1d95e3f6b11e76a63bff7830a" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearGUIControlNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af5678ae2507289472d3bf7db42cf5737" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a623e9d447ff61291f0c4eebb2a52161d" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearJointNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae88b611a59fdfadfef3fef6316bf7e0f" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearLODAnimatedMapMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2fa5d2b6c9fb5725cc0bba2ea7c5b1ab" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearLODBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ada594e28662c8743180659e88666de30" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearLODJointMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a4e8476c54bee8764db7e22f2d813c5e0" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearLODMeshMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a0df6e5029b789fd4a14208d1416cd246" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearMeshBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa4875b5153d765696a6693add5dd0c46" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a12aa23a21232da2ffaa51e4dc6748bb8" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearMeshNames</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ace23be7b6e8b6104f472ca3f1d4b2235" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearMetaData</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1abc7053615464e121b86bb6c3c3605398" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>clearRawControlNames</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a23839423080cbbef906d2edc1eb47b2a" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setAge</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a9b34f7c55202132ea233bf62305e95fd" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a952b9e26982e07b7cff4118cb7e4b3d9" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setAnimatedMapName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1aed61cd3661fe097ac1792608ea13971b" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setArchetype</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae938261e6df4857c604fbde039d02f3c" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a16e68f1b1ec7a84ca03764c16a114b89" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setBlendShapeChannelName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a0a118e6fd0b17b4b40ff265f45d442e7" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setCoordinateSystem</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac194e90483e1fb937ad43cc57d9f9dba" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setDBComplexity</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a30f909fc6dcb53baa4462b45644056d5" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setDBMaxLOD</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac7b713af76afdc4f89af288b983c6779" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setDBName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a7f5376ccecaa926aba462ff4cba47244" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setGender</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1acbe167777c421076e740f9e775f1ca52" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setGUIControlName</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a69035647abcca8cad52431ca759fc96d" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setJointHierarchy</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a6d2908222c87eaae02f42897a3800ffb" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setJointName</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ac8fbf066b96f5405488ea83ccd0b3ed2" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setLODAnimatedMapMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aecc6f0194a3ede2fd3a5949b5d726fab" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setLODBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a20f5c0bd82865136e3df7c9d67585213" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setLODCount</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ab455cc12547a8bf8fd640442c2cd37a4" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setLODJointMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a76c1e2ef776b647c7313c6373daa0ad5" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setLODMeshMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2af79d245c8106f3d9d893033355826d" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setMeshBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a1ede54dbf2feef53b1210297a74ecb3d" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a3a04e9932ae29728b79d6fe38b86755f" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setMeshName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a03d2b0ecc0a5e01081e9a5fccec9ca65" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setMetaData</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a9af57f937e1d24de1b6fcad6f109e4e0" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setName</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a487bb27204d18dc9f120a3c18cd1539b" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setNeutralJointRotations</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af64d1d8956f3d0cd3165dae9df275c41" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setNeutralJointTranslations</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a603d4b1155e298fc240c991c51a35057" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setRawControlName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a1756bb4c64fb48a95af1daea77c6b5a6" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setRotationUnit</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac104f5869d0b01c92e8dcc7b6fcf7cc9" prot="public" virt="pure-virtual"><scope>dna::DefinitionWriter</scope><name>setTranslationUnit</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ad68a8a51b3ae0bc1ac4103d49359a023" prot="protected" virt="virtual"><scope>dna::DefinitionWriter</scope><name>~DefinitionWriter</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" virt="virtual"><scope>dna::DefinitionWriter</scope><name>~DescriptorWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1LODConstraint" kind="class" language="C++" prot="public">
+    <compoundname>dna::LODConstraint</compoundname>
+    <includes refid="dna_2LODConstraint_8h" local="no">LODConstraint.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; std::uint16_t &gt;</type>
+        <definition>Vector&lt;std::uint16_t&gt; dna::LODConstraint::lods</definition>
+        <argsstring></argsstring>
+        <name>lods</name>
+        <qualifiedname>dna::LODConstraint::lods</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="25" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" compoundref="dna_2LODConstraint_8cpp" startline="57" endline="59">applyTo</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" compoundref="dna_2LODConstraint_8cpp" startline="51" endline="55">clampTo</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" compoundref="dna_2LODConstraint_8cpp" startline="47" endline="49">getLODCount</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" compoundref="dna_2LODConstraint_8cpp" startline="39" endline="41">getMaxLOD</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1a3fb6b5e1f8d759e320f027b439a37577" compoundref="dna_2LODConstraint_8cpp" startline="43" endline="45">getMinLOD</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" compoundref="dna_2LODConstraint_8cpp" startline="31" endline="37">hasImpactOn</referencedby>
+        <referencedby refid="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" compoundref="dna_2LODConstraint_8cpp" startline="20" endline="24">LODConstraint</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::LODConstraint::LODConstraint</definition>
+        <argsstring>(std::uint16_t maxLOD, std::uint16_t minLOD, MemoryResource *memRes)</argsstring>
+        <name>LODConstraint</name>
+        <qualifiedname>dna::LODConstraint::LODConstraint</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>maxLOD</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>minLOD</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="13" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="20" bodyend="24"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a6ca927fc0f54aa9637f1547060afa389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::LODConstraint::LODConstraint</definition>
+        <argsstring>(ConstArrayView&lt; std::uint16_t &gt; lods, MemoryResource *memRes)</argsstring>
+        <name>LODConstraint</name>
+        <qualifiedname>dna::LODConstraint::LODConstraint</qualifiedname>
+        <param>
+          <type><ref refid="namespacedna_1a2d8779c1a78015209a7249b86804dba6" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>lods</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="14" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="26" bodyend="29"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dna::LODConstraint::hasImpactOn</definition>
+        <argsstring>(std::uint16_t lodCount) const</argsstring>
+        <name>hasImpactOn</name>
+        <qualifiedname>dna::LODConstraint::hasImpactOn</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lodCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="16" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="31" bodyend="37"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1ae3d6a2ebc9313bc328902c3eadb7454a" compoundref="FilteredInputArchive_8cpp" startline="94" endline="134">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dna::LODConstraint::getMaxLOD</definition>
+        <argsstring>() const</argsstring>
+        <name>getMaxLOD</name>
+        <qualifiedname>dna::LODConstraint::getMaxLOD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="17" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="39" bodyend="41"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a3fb6b5e1f8d759e320f027b439a37577" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dna::LODConstraint::getMinLOD</definition>
+        <argsstring>() const</argsstring>
+        <name>getMinLOD</name>
+        <qualifiedname>dna::LODConstraint::getMinLOD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="18" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="43" bodyend="45"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dna::LODConstraint::getLODCount</definition>
+        <argsstring>() const</argsstring>
+        <name>getLODCount</name>
+        <qualifiedname>dna::LODConstraint::getLODCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="19" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="47" bodyend="49"/>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::LODConstraint::clampTo</definition>
+        <argsstring>(std::uint16_t lodCount)</argsstring>
+        <name>clampTo</name>
+        <qualifiedname>dna::LODConstraint::clampTo</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>lodCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="20" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="51" bodyend="55"/>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a355d5f72098f83e3349dfadd479cb2da" compoundref="FilteredInputArchive_8cpp" startline="85" endline="92">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::LODConstraint::applyTo</definition>
+        <argsstring>(Vector&lt; std::uint16_t &gt; &amp;unconstrainedLODs) const</argsstring>
+        <name>applyTo</name>
+        <qualifiedname>dna::LODConstraint::applyTo</qualifiedname>
+        <param>
+          <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; std::uint16_t &gt; &amp;</type>
+          <declname>unconstrainedLODs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="21" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="57" bodyend="59"/>
+        <references refid="namespaceextd_1a221ca03908027a0215902298b500af85" compoundref="utils_2Extd_8h" startline="107" endline="109">extd::byPosition</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+        <referencedby refid="classdna_1_1LODMapping_1aa70ec9906c68c28c9a43d99fd872182b" compoundref="dna_2LODMapping_8cpp" startline="51" endline="54">dna::LODMapping::discardLODs</referencedby>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1ab9d882b0e1a9176cfcf93fe52fe57da7" compoundref="FilteredInputArchive_8cpp" startline="150" endline="196">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1LODConstraint_1a7ca9f9948d9ef6a5548c9cab569d5713" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::LODConstraint::applyTo</definition>
+        <argsstring>(DynArray&lt; std::uint16_t &gt; &amp;unconstrainedLODs) const</argsstring>
+        <name>applyTo</name>
+        <qualifiedname>dna::LODConstraint::applyTo</qualifiedname>
+        <param>
+          <type><ref refid="namespacedna_1a238f3eaca8f457d0cb3afcdc1046a7ba" kindref="member">DynArray</ref>&lt; std::uint16_t &gt; &amp;</type>
+          <declname>unconstrainedLODs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="22" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.cpp" bodystart="61" bodyend="63"/>
+        <references refid="namespaceextd_1a221ca03908027a0215902298b500af85" compoundref="utils_2Extd_8h" startline="107" endline="109">extd::byPosition</references>
+        <references refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" compoundref="utils_2Extd_8h" startline="55" endline="60">extd::filter</references>
+        <references refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" compoundref="dna_2LODConstraint_8h" startline="25">lods</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dna::LODConstraint</label>
+        <link refid="classdna_1_1LODConstraint"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" line="11" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/LODConstraint.h" bodystart="11" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classdna_1_1LODConstraint_1ab035d7eb370a6ca377c52d81ccb27d66" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>applyTo</name></member>
+      <member refid="classdna_1_1LODConstraint_1a7ca9f9948d9ef6a5548c9cab569d5713" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>applyTo</name></member>
+      <member refid="classdna_1_1LODConstraint_1a142d2d9bfc0c111019d56a7b4698f9a2" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>clampTo</name></member>
+      <member refid="classdna_1_1LODConstraint_1a18cf4af01df99c2280955c66f580389b" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>getLODCount</name></member>
+      <member refid="classdna_1_1LODConstraint_1a7ddb757e8ed3ff2787ac5fb1e81e52c1" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>getMaxLOD</name></member>
+      <member refid="classdna_1_1LODConstraint_1a3fb6b5e1f8d759e320f027b439a37577" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>getMinLOD</name></member>
+      <member refid="classdna_1_1LODConstraint_1aa9ca15ac369d379986493b0b3372918c" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>hasImpactOn</name></member>
+      <member refid="classdna_1_1LODConstraint_1aa37f29e0b0927a4052c05bdf0d9c3e5b" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>LODConstraint</name></member>
+      <member refid="classdna_1_1LODConstraint_1a6ca927fc0f54aa9637f1547060afa389" prot="public" virt="non-virtual"><scope>dna::LODConstraint</scope><name>LODConstraint</name></member>
+      <member refid="classdna_1_1LODConstraint_1ac3726d956d496cc7d49979eb4d759a54" prot="private" virt="non-virtual"><scope>dna::LODConstraint</scope><name>lods</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

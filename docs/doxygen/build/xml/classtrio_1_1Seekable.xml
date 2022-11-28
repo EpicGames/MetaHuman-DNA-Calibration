@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1Seekable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>trio::Seekable</compoundname>
+    <derivedcompoundref refid="classtrio_1_1BoundedIOStream" prot="public" virt="non-virtual">trio::BoundedIOStream</derivedcompoundref>
+    <includes refid="Concepts_8h" local="no">Concepts.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1Seekable_1af5071bbc6e4760fdfb3d5c0d83117b85" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint64_t</type>
+        <definition>virtual std::uint64_t trio::Seekable::tell</definition>
+        <argsstring>()=0</argsstring>
+        <name>tell</name>
+        <qualifiedname>trio::Seekable::tell</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a35066ab7b50de21eeca6a592c11a4cd1">tell</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1a0898cbc7aaeedf49dff8feae7f9e1e33">tell</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1a1b8fb1f80d37a444261fb574701bb193">tell</reimplementedby>
+        <briefdescription>
+<para>Get the current position in the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Position in the stream relative to it&apos;s start, with 0 denoting the start position. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="77" column="31"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">dna::FilteredInputArchive::processSubset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void trio::Seekable::seek</definition>
+        <argsstring>(std::uint64_t position)=0</argsstring>
+        <name>seek</name>
+        <qualifiedname>trio::Seekable::seek</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a6f2a2ac467cec1b636300d6ed9ab9f48">seek</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1a847834bf4e47c8a737a5f64315d4365a">seek</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1a0a02d6bcef1fde8ec6631c0e052f2172">seek</reimplementedby>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Set the current position in the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position in the stream relative to it&apos;s start, with 0 denoting the start position. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="83" column="22"/>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a2f628b27204bf40c31713e8cfea9883d" compoundref="FilteredInputArchive_8cpp" startline="72" endline="83">dna::FilteredInputArchive::processSubset</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrio_1_1Seekable_1abbd824465ebc3080b3c1d84f3266bb2d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::Seekable::~Seekable</definition>
+        <argsstring>()</argsstring>
+        <name>~Seekable</name>
+        <qualifiedname>trio::Seekable::~Seekable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="86" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="70" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" bodystart="70" bodyend="88"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1Seekable_1aea11c922f49ddf61a0f30f7ad41dde2c" prot="public" virt="pure-virtual"><scope>trio::Seekable</scope><name>seek</name></member>
+      <member refid="classtrio_1_1Seekable_1af5071bbc6e4760fdfb3d5c0d83117b85" prot="public" virt="pure-virtual"><scope>trio::Seekable</scope><name>tell</name></member>
+      <member refid="classtrio_1_1Seekable_1abbd824465ebc3080b3c1d84f3266bb2d" prot="protected" virt="virtual"><scope>trio::Seekable</scope><name>~Seekable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

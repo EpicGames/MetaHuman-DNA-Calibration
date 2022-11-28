@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ByteSwap_8h" kind="file" language="C++">
+    <compoundname>ByteSwap.h</compoundname>
+    <includes refid="Endianness_8h" local="yes">terse/utils/Endianness.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">type_traits</includes>
+    <includedby refid="binary_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="binary_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>terse/utils/Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>cstring</label>
+      </node>
+      <node id="4">
+        <label>sys/param.h</label>
+      </node>
+      <node id="7">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="4">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="8">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="3">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structterse_1_1traits_1_1uint__of__size" prot="public">terse::traits::uint_of_size</innerclass>
+    <innerclass refid="structterse_1_1impl_1_1block128" prot="public">terse::impl::block128</innerclass>
+    <innerclass refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4" prot="public">terse::ByteSwapper&lt; Endianness::Little &gt;</innerclass>
+    <innerclass refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4" prot="public">terse::ByteSwapper&lt; Endianness::Big &gt;</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <innernamespace refid="namespaceterse_1_1traits">terse::traits</innernamespace>
+    <innernamespace refid="namespaceterse_1_1impl">terse::impl</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>TERSE_ENABLE_SSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ENABLE_SSE_BSWAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>TERSE_ENABLE_SSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Endianness_8h" kindref="compound">terse/utils/Endianness.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">traits<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size&gt;</highlight></codeline>
+<codeline lineno="28" refid="structterse_1_1traits_1_1uint__of__size" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1uint__of__size" kindref="compound">uint_of_size</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structterse_1_1traits_1_1uint__of__size_1a0a2e4912a342dc67681a64589d33401b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1uint__of__size_1a0a2e4912a342dc67681a64589d33401b" kindref="member">type</ref><sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::conditional&lt;(size<sp/>==<sp/>1ul),<sp/>std::uint8_t,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::conditional&lt;(size<sp/>==<sp/>2ul),<sp/>std::uint16_t,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::conditional&lt;(size<sp/>&lt;=<sp/>4ul),<sp/>std::uint32_t,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint64_t&gt;<ref refid="structterse_1_1traits_1_1uint__of__size_1a0a2e4912a342dc67681a64589d33401b" kindref="member">::type</ref>&gt;<ref refid="structterse_1_1traits_1_1uint__of__size_1a0a2e4912a342dc67681a64589d33401b" kindref="member">::type</ref>&gt;<ref refid="structterse_1_1traits_1_1uint__of__size_1a0a2e4912a342dc67681a64589d33401b" kindref="member">::type</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>traits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">impl<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="structterse_1_1impl_1_1block128" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1impl_1_1block128" kindref="compound">block128</ref><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structterse_1_1impl_1_1block128_1a73c46a21f45b394009563ac34a38c3f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="structterse_1_1impl_1_1block128_1a73c46a21f45b394009563ac34a38c3f5" kindref="member">alignment</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(__arm__)<sp/>||<sp/>defined(__aarch64__)<sp/>||<sp/>defined(_M_ARM)<sp/>||<sp/>defined(_M_ARM64)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::alignment_of&lt;std::max_align_t&gt;::value;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>16ul;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>impl</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89a0f9197b3e286a7522984831949087332" kindref="member">Little</ref>,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89ad491538da818a2ba11a3195ba035cfd3" kindref="member">Big</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89aeec89088ee408b80387155272b113256" kindref="member">Network</ref><sp/>=<sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89ad491538da818a2ba11a3195ba035cfd3" kindref="member">Big</ref></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;Endianness<sp/>EByteOrder&gt;</highlight></codeline>
+<codeline lineno="60" refid="structterse_1_1ByteSwapper" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="63" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper</ref>&lt;<ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref>::<ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89a0f9197b3e286a7522984831949087332" kindref="member">Little</ref>&gt;<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="66" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4_1a690e1d5cc41ca65ce37d02d7c0e3b993" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4_1a690e1d5cc41ca65ce37d02d7c0e3b993" kindref="member">swap</ref>(T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UIntType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1traits_1_1uint__of__size" kindref="compound">traits::uint_of_size</ref>&lt;</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)&gt;::type;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(UIntType),<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>matching<sp/>unsigned<sp/>integral<sp/>type<sp/>found<sp/>for<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>memcpy<sp/>is<sp/>the<sp/>only<sp/>well-defined<sp/>way<sp/>of<sp/>reconstructing<sp/>arbitrary<sp/>types<sp/>from<sp/>raw<sp/>bytes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>seemingly<sp/>unnecessary<sp/>copies<sp/>and<sp/>memcpy<sp/>calls<sp/>are<sp/>all<sp/>optimized<sp/>away,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiler<sp/>knows<sp/>what&apos;s<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIntType<sp/>swapped;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;swapped,<sp/>&amp;value,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapped<sp/>=<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(swapped);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;value,<sp/>&amp;swapped,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="83" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4_1adb3367af8f625457b3f7adfd5b723f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4_1adb3367af8f625457b3f7adfd5b723f6a" kindref="member">swap</ref>(T*<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(values);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UIntType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1traits_1_1uint__of__size" kindref="compound">traits::uint_of_size</ref>&lt;</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)&gt;::type;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(UIntType),<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>matching<sp/>unsigned<sp/>integral<sp/>type<sp/>found<sp/>for<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>memcpy<sp/>is<sp/>the<sp/>only<sp/>well-defined<sp/>way<sp/>of<sp/>reconstructing<sp/>arbitrary<sp/>types<sp/>from<sp/>raw<sp/>bytes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>seemingly<sp/>unnecessary<sp/>copies<sp/>and<sp/>memcpy<sp/>calls<sp/>are<sp/>all<sp/>optimized<sp/>away,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiler<sp/>knows<sp/>what&apos;s<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(<ref refid="structterse_1_1impl_1_1block128_1a73c46a21f45b394009563ac34a38c3f5" kindref="member">impl::block128::alignment</ref>())<sp/>UIntType<sp/>swapped[16ul<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)];</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped),<sp/>values,<sp/>16ul);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(values,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped),<sp/>16ul);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;&gt;</highlight></codeline>
+<codeline lineno="102" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper</ref>&lt;<ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref>::<ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89ad491538da818a2ba11a3195ba035cfd3" kindref="member">Big</ref>&gt;<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="105" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4_1a4e279f5d9ee0fb9d80bf0f0ead9e7b49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4_1a4e279f5d9ee0fb9d80bf0f0ead9e7b49" kindref="member">swap</ref>(T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UIntType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1traits_1_1uint__of__size" kindref="compound">traits::uint_of_size</ref>&lt;</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)&gt;::type;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(UIntType),<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>matching<sp/>unsigned<sp/>integral<sp/>type<sp/>found<sp/>for<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>memcpy<sp/>is<sp/>the<sp/>only<sp/>well-defined<sp/>way<sp/>of<sp/>reconstructing<sp/>arbitrary<sp/>types<sp/>from<sp/>raw<sp/>bytes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>seemingly<sp/>unnecessary<sp/>copies<sp/>and<sp/>memcpy<sp/>calls<sp/>are<sp/>all<sp/>optimized<sp/>away,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiler<sp/>knows<sp/>what&apos;s<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIntType<sp/>swapped;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;swapped,<sp/>&amp;value,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>swapped<sp/>=<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(swapped);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;value,<sp/>&amp;swapped,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="122" refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4_1ab1decd11dd992cbd8697025577c9cd76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4_1ab1decd11dd992cbd8697025577c9cd76" kindref="member">swap</ref>(T*<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UIntType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1traits_1_1uint__of__size" kindref="compound">traits::uint_of_size</ref>&lt;</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)&gt;::type;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)<sp/>==<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(UIntType),<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>matching<sp/>unsigned<sp/>integral<sp/>type<sp/>found<sp/>for<sp/>the<sp/>given<sp/>type.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>memcpy<sp/>is<sp/>the<sp/>only<sp/>well-defined<sp/>way<sp/>of<sp/>reconstructing<sp/>arbitrary<sp/>types<sp/>from<sp/>raw<sp/>bytes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>seemingly<sp/>unnecessary<sp/>copies<sp/>and<sp/>memcpy<sp/>calls<sp/>are<sp/>all<sp/>optimized<sp/>away,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>compiler<sp/>knows<sp/>what&apos;s<sp/>up.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">alignas</highlight><highlight class="normal">(<ref refid="structterse_1_1impl_1_1block128_1a73c46a21f45b394009563ac34a38c3f5" kindref="member">impl::block128::alignment</ref>())<sp/>UIntType<sp/>swapped[16ul<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T)];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped),<sp/>values,<sp/>16ul);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(values,<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">UIntType*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(swapped),<sp/>16ul);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(values);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;Endianness<sp/>EByteOrder&gt;</highlight></codeline>
+<codeline lineno="141" refid="namespaceterse_1a9b2842bfda3d781a4ebc2f8d0ac93f74" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapTo</ref><sp/>=<sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper&lt;EByteOrder&gt;</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;Endianness<sp/>EByteOrder&gt;</highlight></codeline>
+<codeline lineno="144" refid="namespaceterse_1aff42dccdf3fbe5bb07e8f36a3efa365d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapFrom</ref><sp/>=<sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper&lt;EByteOrder&gt;</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="147" refid="namespaceterse_1a0ccb75b9c1709902c8e9048ad6efcc29" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1a0ccb75b9c1709902c8e9048ad6efcc29" kindref="member">networkToHost</ref>(T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapFrom&lt;Endianness::Network&gt;::swap</ref>(value);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="152" refid="namespaceterse_1a5732cba33629964669368c0e26797c50" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1a5732cba33629964669368c0e26797c50" kindref="member">networkToHost128</ref>(T*<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapFrom&lt;Endianness::Network&gt;::swap</ref>(values);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="157" refid="namespaceterse_1ab0fe9e3822e69db299deeda839d999ab" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1ab0fe9e3822e69db299deeda839d999ab" kindref="member">hostToNetwork</ref>(T&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapTo&lt;Endianness::Network&gt;::swap</ref>(value);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="162" refid="namespaceterse_1a61567939ea66a9d75f2cc1f03e8bf866" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1a61567939ea66a9d75f2cc1f03e8bf866" kindref="member">hostToNetwork128</ref>(T*<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapTo&lt;Endianness::Network&gt;::swap</ref>(values);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h"/>
+  </compounddef>
+</doxygen>

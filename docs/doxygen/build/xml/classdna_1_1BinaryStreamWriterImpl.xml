@@ -1,0 +1,911 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1BinaryStreamWriterImpl" kind="class" language="C++" prot="public">
+    <compoundname>dna::BinaryStreamWriterImpl</compoundname>
+    <basecompoundref refid="classdna_1_1WriterImpl" prot="public" virt="non-virtual">dna::WriterImpl&lt; BinaryStreamWriter &gt;</basecompoundref>
+    <includes refid="BinaryStreamWriterImpl_8h" local="no">BinaryStreamWriterImpl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdna_1_1BinaryStreamWriterImpl_1ab23f43a599184a8edd469fc44f336e8c" prot="private" static="no" mutable="no">
+        <type><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> *</type>
+        <definition>BoundedIOStream* dna::BinaryStreamWriterImpl::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <qualifiedname>dna::BinaryStreamWriterImpl::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" line="20" column="25" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" compoundref="BinaryStreamWriterImpl_8cpp" startline="36" endline="41">write</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1BinaryStreamWriterImpl_1a0cf666faa3ba00e5bcb77743288d4766" prot="private" static="no" mutable="no">
+        <type><ref refid="classterse_1_1BinaryOutputArchive" kindref="compound">terse::BinaryOutputArchive</ref>&lt; <ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> &gt;</type>
+        <definition>terse::BinaryOutputArchive&lt;BoundedIOStream&gt; dna::BinaryStreamWriterImpl::archive</definition>
+        <argsstring></argsstring>
+        <name>archive</name>
+        <qualifiedname>dna::BinaryStreamWriterImpl::archive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" line="21" column="36" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" compoundref="BinaryStreamWriterImpl_8cpp" startline="36" endline="41">write</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1BinaryStreamWriterImpl_1af123ecdcd011458d41184c1a62a5669d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::BinaryStreamWriterImpl::BinaryStreamWriterImpl</definition>
+        <argsstring>(BoundedIOStream *stream_, MemoryResource *memRes_)</argsstring>
+        <name>BinaryStreamWriterImpl</name>
+        <qualifiedname>dna::BinaryStreamWriterImpl::BinaryStreamWriterImpl</qualifiedname>
+        <param>
+          <type><ref refid="classtrio_1_1BoundedIOStream" kindref="compound">BoundedIOStream</ref> *</type>
+          <declname>stream_</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" line="15" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.cpp" bodystart="29" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void dna::BinaryStreamWriterImpl::write</definition>
+        <argsstring>() override</argsstring>
+        <name>write</name>
+        <qualifiedname>dna::BinaryStreamWriterImpl::write</qualifiedname>
+        <reimplements refid="classdna_1_1StreamWriter_1a5270498830a06d2e57716ef8291bbc3f">write</reimplements>
+        <briefdescription>
+<para>Write data to stream from internal structures. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" line="17" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.cpp" bodystart="36" bodyend="41"/>
+        <references refid="classdna_1_1BinaryStreamWriterImpl_1a0cf666faa3ba00e5bcb77743288d4766" compoundref="BinaryStreamWriterImpl_8h" startline="21">archive</references>
+        <references refid="classtrio_1_1Closeable_1ac2e99d3bd99a39cf528ba29b1ba0baf1">trio::Closeable::close</references>
+        <references refid="classdna_1_1BaseImpl_1afb96929eaf813f7dbc2eea11bcad5a41" compoundref="dna_2BaseImpl_8h" startline="32">dna::BaseImpl::dna</references>
+        <references refid="classtrio_1_1Openable_1addfdc5360983a446fe200410a3eaef8f">trio::Openable::open</references>
+        <references refid="classdna_1_1BinaryStreamWriterImpl_1ab23f43a599184a8edd469fc44f336e8c" compoundref="BinaryStreamWriterImpl_8h" startline="20">stream</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>TWriterBase</label>
+      </node>
+      <node id="2">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; BinaryStreamWriter &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::BaseImpl</label>
+        <link refid="classdna_1_1BaseImpl"/>
+      </node>
+      <node id="6">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="9">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::WriterImpl&lt; TWriterBase &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="71">
+        <label>terse::Archive&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="68">
+        <label>terse::Archive&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="69" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>terse::Archive&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="65" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>terse::Archive&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt; &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="62" relation="usage">
+          <edgelabel>-impl</edgelabel>
+        </childnode>
+        <childnode refid="73" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="73" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>terse::ArchiveOffset&lt; std::uint32_t &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="template-instance">
+          <edgelabel>&lt; std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>terse::BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+        <childnode refid="66" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>terse::BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+        <childnode refid="66" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="59">
+        <label>terse::BinaryOutputArchive&lt; trio::BoundedIOStream &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+        <childnode refid="66" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>terse::BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="66" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="62">
+        <label>terse::BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="66" relation="template-instance">
+          <edgelabel>&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>terse::DynArray&lt; float &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>terse::DynArray&lt; std::uint16_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna::ExpectedValue&lt; SignatureValueType &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; SignatureValueType &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>dna::ExpectedValue&lt; std::uint16_t &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+        <childnode refid="15" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="70">
+        <label>terse::ExtendableBinaryOutputArchive&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryOutputArchive"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+        <childnode refid="74" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="67">
+        <label>terse::ExtendableBinaryOutputArchive&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryOutputArchive"/>
+        <childnode refid="68" relation="public-inheritance">
+        </childnode>
+        <childnode refid="74" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="63">
+        <label>terse::ExtendableBinaryOutputArchive&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryOutputArchive"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="60">
+        <label>terse::ExtendableBinaryOutputArchive&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryOutputArchive"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="74" relation="template-instance">
+          <edgelabel>&lt; BinaryOutputArchive&lt; trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, trio::BoundedIOStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>dna::RawSurjectiveMapping&lt; std::uint16_t &gt;</label>
+        <link refid="structdna_1_1RawSurjectiveMapping"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+        <childnode refid="31" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna::Signature&lt; 3 &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; 3 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>dna::SurjectiveMapping&lt; TFrom, TFrom &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+        <childnode refid="30" relation="template-instance">
+          <edgelabel>&lt; TFrom, TFrom &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>dna::SurjectiveMapping&lt; std::uint16_t, std::uint16_t &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+        <childnode refid="30" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t, std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>T</label>
+      </node>
+      <node id="49">
+        <label>TWriterBase</label>
+      </node>
+      <node id="2">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="48" relation="template-instance">
+          <edgelabel>&lt; BinaryStreamWriter &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::BaseImpl</label>
+        <link refid="classdna_1_1BaseImpl"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>#memRes</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#dna</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>-stream</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>-archive</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna::DNA</label>
+        <link refid="structdna_1_1DNA"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+memRes</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+eof</edgelabel>
+          <edgelabel>+signature</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+version</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+sections</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+descriptor</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+definition</edgelabel>
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>+behavior</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>+geometry</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="15">
+        <label>dna::ExpectedValue&lt; T &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+      </node>
+      <node id="9">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>dna::LODMapping</label>
+        <link refid="classdna_1_1LODMapping"/>
+      </node>
+      <node id="46">
+        <label>dna::RawAnimatedMaps</label>
+        <link refid="structdna_1_1RawAnimatedMaps"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+lods</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>dna::RawBehavior</label>
+        <link refid="structdna_1_1RawBehavior"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+animatedMapsMarker</edgelabel>
+          <edgelabel>+blendShapeChannelsMarker</edgelabel>
+          <edgelabel>+controlsMarker</edgelabel>
+          <edgelabel>+jointsMarker</edgelabel>
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>+controls</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>+blendShapeChannels</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>dna::RawBlendShapeChannels</label>
+        <link refid="structdna_1_1RawBlendShapeChannels"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+lods</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dna::RawConditionalTable</label>
+        <link refid="structdna_1_1RawConditionalTable"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>+cutValues</edgelabel>
+          <edgelabel>+fromValues</edgelabel>
+          <edgelabel>+slopeValues</edgelabel>
+          <edgelabel>+toValues</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>dna::RawControls</label>
+        <link refid="structdna_1_1RawControls"/>
+        <childnode refid="42" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>+psds</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>dna::RawCoordinateSystem</label>
+        <link refid="structdna_1_1RawCoordinateSystem"/>
+      </node>
+      <node id="25">
+        <label>dna::RawDefinition</label>
+        <link refid="structdna_1_1RawDefinition"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+lodAnimatedMapMapping</edgelabel>
+          <edgelabel>+lodBlendShapeMapping</edgelabel>
+          <edgelabel>+lodJointMapping</edgelabel>
+          <edgelabel>+lodMeshMapping</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+meshBlendShapeChannelMapping</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+jointHierarchy</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+neutralJointRotations</edgelabel>
+          <edgelabel>+neutralJointTranslations</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>dna::RawDescriptor</label>
+        <link refid="structdna_1_1RawDescriptor"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+coordinateSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>dna::RawGeometry</label>
+        <link refid="structdna_1_1RawGeometry"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+      </node>
+      <node id="44">
+        <label>dna::RawJoints</label>
+        <link refid="structdna_1_1RawJoints"/>
+      </node>
+      <node id="26">
+        <label>dna::RawLODMapping</label>
+        <link refid="structdna_1_1RawLODMapping"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>dna::RawPSDMatrix</label>
+        <link refid="structdna_1_1RawPSDMatrix"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+columns</edgelabel>
+          <edgelabel>+rows</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>+values</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>dna::RawSurjectiveMapping&lt; TFrom, TTo &gt;</label>
+        <link refid="structdna_1_1RawSurjectiveMapping"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna::RawVector3Vector</label>
+        <link refid="structdna_1_1RawVector3Vector"/>
+        <childnode refid="39" relation="usage">
+          <edgelabel>+xs</edgelabel>
+          <edgelabel>+ys</edgelabel>
+          <edgelabel>+zs</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dna::SectionLookupTable</label>
+        <link refid="structdna_1_1SectionLookupTable"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+          <edgelabel>+behavior</edgelabel>
+          <edgelabel>+blendShapeChannels</edgelabel>
+          <edgelabel>+controls</edgelabel>
+          <edgelabel>+definition</edgelabel>
+          <edgelabel>+descriptor</edgelabel>
+          <edgelabel>+geometry</edgelabel>
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dna::Signature&lt; Size &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>dna::SurjectiveMapping&lt; TFrom, TTo &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+      </node>
+      <node id="17">
+        <label>dna::Version</label>
+        <link refid="structdna_1_1Version"/>
+        <childnode refid="18" relation="usage">
+          <edgelabel>+generation</edgelabel>
+          <edgelabel>+version</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>dna::WriterImpl&lt; TWriterBase &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+      <node id="58">
+        <label>sc::StatusCode</label>
+        <link refid="structsc_1_1StatusCode"/>
+      </node>
+      <node id="35">
+        <label>std::unique_ptr&lt; T &gt;</label>
+        <childnode refid="36" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="22">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;::Proxy</label>
+        <link refid="structterse_1_1ArchiveOffset_1_1Proxy"/>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+target</edgelabel>
+        </childnode>
+      </node>
+      <node id="66">
+        <label>terse::BinaryOutputArchive&lt; TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1BinaryOutputArchive"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="74">
+        <label>terse::ExtendableBinaryOutputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryOutputArchive"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>trio::Bounded</label>
+        <link refid="classtrio_1_1Bounded"/>
+      </node>
+      <node id="50">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>+AlreadyOpenError</edgelabel>
+          <edgelabel>+OpenError</edgelabel>
+          <edgelabel>+ReadError</edgelabel>
+          <edgelabel>+SeekError</edgelabel>
+          <edgelabel>+WriteError</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="51">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="52">
+        <label>trio::Openable</label>
+        <link refid="classtrio_1_1Openable"/>
+      </node>
+      <node id="54">
+        <label>trio::Readable</label>
+        <link refid="classtrio_1_1Readable"/>
+      </node>
+      <node id="56">
+        <label>trio::Seekable</label>
+        <link refid="classtrio_1_1Seekable"/>
+      </node>
+      <node id="55">
+        <label>trio::Writable</label>
+        <link refid="classtrio_1_1Writable"/>
+      </node>
+      <node id="34">
+        <label>std::unique_ptr&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</label>
+        <childnode refid="35" relation="template-instance">
+          <edgelabel>&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" line="13" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/stream/BinaryStreamWriterImpl.h" bodystart="13" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classdna_1_1BinaryStreamWriterImpl_1a0cf666faa3ba00e5bcb77743288d4766" prot="private" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>archive</name></member>
+      <member refid="classdna_1_1BaseImpl_1a5eab4d70fe975d86bc4d1cb2ead29364" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1a8281f2063d4566a7895cd6c06852d65b" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1a9182dcfa882ca9e8b54bd22f30278f64" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BinaryStreamWriterImpl_1af123ecdcd011458d41184c1a62a5669d" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>BinaryStreamWriterImpl</name></member>
+      <member refid="classdna_1_1WriterImpl_1a66f601f7475e438f981eb42badc57433" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1ab009a60200a4b880b72992243f974fe4" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearAnimatedMapNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a5487cc709d30acaaef2eb074cf437460" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a930a14bbdf6bf34b647caef0e02c3617" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearBlendShapeChannelNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a3f1a0f893185e0e783ddf78e1793fd4d" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearBlendShapeTargets</name></member>
+      <member refid="classdna_1_1WriterImpl_1af7829beba2772a84e8dfdbad941c12ab" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearFaceVertexLayoutIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a0405a259b4fce1235b19ae0b0a52f244" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearGUIControlNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a1b00a9e291db9c5610fd5e4dd5ec1d6c" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearJointGroups</name></member>
+      <member refid="classdna_1_1WriterImpl_1a46e0da5e729eeb5650f291f2fee654f2" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearJointIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a2722935c17ef59328ef3d5bc8c74c95e" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearJointNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a81e921a85da5bd7836157c89bd753ed2" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearLODAnimatedMapMappings</name></member>
+      <member refid="classdna_1_1WriterImpl_1a173ac29e83af843f0f0a771642c6fe31" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearLODBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1WriterImpl_1a0b75ec27710685e035da1bdde8fb7dbc" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearLODJointMappings</name></member>
+      <member refid="classdna_1_1WriterImpl_1ae690daa52960a0f423c091e659c29682" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearLODMeshMappings</name></member>
+      <member refid="classdna_1_1WriterImpl_1a0f5df5f0c29fb6460a952e4f25a27733" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearMeshBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1WriterImpl_1afcd1ece8912f997df924aa063032e554" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearMeshes</name></member>
+      <member refid="classdna_1_1WriterImpl_1adbeb394bbe314d89fb0415dae3eb8aa5" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearMeshIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1abc4e80a42b49bca656d94975f28ee4c1" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearMeshNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a7d1608ac227fc0201492001145d4ac83" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearMetaData</name></member>
+      <member refid="classdna_1_1WriterImpl_1a2c8500d30d3da7624ba317b7ba7f7dcd" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearRawControlNames</name></member>
+      <member refid="classdna_1_1WriterImpl_1a518565e3df21326e3887549f1f6d0810" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>clearSkinWeights</name></member>
+      <member refid="classdna_1_1BinaryStreamWriter_1ab804720ee6cefe94515c27c224e76533" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>create</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa4b4ba2638ab85a8d48dc8cfb4ef10cd" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>deleteJointGroup</name></member>
+      <member refid="classdna_1_1WriterImpl_1a9069c4df78930686f3e7af74f3cdcb70" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>deleteMesh</name></member>
+      <member refid="classdna_1_1BinaryStreamWriter_1a3136879dd2de3e3432824c81cde85e2c" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>destroy</name></member>
+      <member refid="classdna_1_1BaseImpl_1afb96929eaf813f7dbc2eea11bcad5a41" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>dna</name></member>
+      <member refid="classdna_1_1BaseImpl_1a22006a54d368829db22b9bde38442de2" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>getMemoryResource</name></member>
+      <member refid="classdna_1_1BaseImpl_1aaf242d8e71e7df8e5415e27c70d03db8" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>memRes</name></member>
+      <member refid="classdna_1_1BaseImpl_1aadf1b22a7fca50dce7e5fbd69399cacb" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>operator=</name></member>
+      <member refid="classdna_1_1BaseImpl_1a03aa3393c1db5c00aebcfd48c586260d" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>operator=</name></member>
+      <member refid="classdna_1_1WriterImpl_1a6e5bf347665c1ca7489f90c20bc74c4d" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAge</name></member>
+      <member refid="classdna_1_1WriterImpl_1a7a699d703df166a758d6ff98b278aabb" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapCutValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1a989c660ba876f636cf34faaf54f15ab7" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapFromValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1a2b272b455b9f8bee1a2b12e24c50a648" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a69636f0b83e9b6897531ddae33f2edf1" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapInputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1aeafc20fe333a55170a7a9d1a77b23221" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapLODs</name></member>
+      <member refid="classdna_1_1WriterImpl_1af3f7354ef666e6682b5b2b469ce417cc" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapName</name></member>
+      <member refid="classdna_1_1WriterImpl_1aea63588718a47c13634d17dde99d43f8" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapOutputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a512ef366e97773a01f061ca87d689bce" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapSlopeValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1a1adbebe805cce1b624ad0bc474439121" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setAnimatedMapToValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1a4faeb7fbb237d53e67a411475b573ea7" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setArchetype</name></member>
+      <member refid="classdna_1_1WriterImpl_1a42a291f3337b6b44f3cd51e317fe7271" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelIndex</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa6e1ff4d2c4ddba5a90b8090bbc55b2a" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a2e33aefd192491c2aaa4cba6f52aae28" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelInputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a658b13c6674543a65748b4291829dd5a" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelLODs</name></member>
+      <member refid="classdna_1_1WriterImpl_1a4e953b29a1c0cd920ee81883e79d3ff0" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelName</name></member>
+      <member refid="classdna_1_1WriterImpl_1ae6c9c911ec4c33fe65329639009c3a01" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeChannelOutputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad99d3b3399c15030d3682a8c9dfb453a" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeTargetDeltas</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa07eb30dff23b4ebf71b27121f5b10ef" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setBlendShapeTargetVertexIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1afc0e1031361354e633c5a07ba2e6205f" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setCoordinateSystem</name></member>
+      <member refid="classdna_1_1WriterImpl_1a20d6166528cd4dea11f2ae7fb3130b84" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setDBComplexity</name></member>
+      <member refid="classdna_1_1WriterImpl_1a1d603dd529eda020c8a9d3a49e1d2f80" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setDBMaxLOD</name></member>
+      <member refid="classdna_1_1WriterImpl_1a522ba7c85fd1ace1adad30a815068e57" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setDBName</name></member>
+      <member refid="classdna_1_1WriterImpl_1a640289c474776d944f80b81f707bedbf" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setFaceVertexLayoutIndices</name></member>
+      <member refid="classdna_1_1Writer_1a41e7a151c6dab14e702667b9e41e8a85" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setFrom</name></member>
+      <member refid="classdna_1_1WriterImpl_1a99b757298c5e12ea3012efe1eaedbfba" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGender</name></member>
+      <member refid="classdna_1_1WriterImpl_1a9957bb06ae42ce862d7e5ba1461116cc" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIControlName</name></member>
+      <member refid="classdna_1_1WriterImpl_1a0a551c41baf6c917b6c0b7aa23afa7a5" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawCutValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad2c37dc179969e08c0ad925dda9b9c52" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawFromValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1ab3f03060b54e4615e0a1997e7efd2bd6" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawInputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1af1f3234ff4a191a1a9eb58f1ae4309f8" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawOutputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a87013493c4f76324ec715f2d34b29465" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawSlopeValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad0f242b6011dd426f87ba947f10c544a" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setGUIToRawToValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad5388fae75fcec3fb0854faa58475a8f" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointColumnCount</name></member>
+      <member refid="classdna_1_1WriterImpl_1a74e166e7a3d610e9afd008c35998a849" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointGroupInputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa140ca06400ad5396850fe53f2d060b6" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointGroupJointIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1aacdb5d64806e563d14ab29c6a7c6b225" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointGroupLODs</name></member>
+      <member refid="classdna_1_1WriterImpl_1a41cfaababcbd9f8330d4da2ced776e98" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointGroupOutputIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a01f3ae4c20b812fb8958a0211c82c7f0" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointGroupValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1a0a4658d3d6b8d2f452e576115561da96" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointHierarchy</name></member>
+      <member refid="classdna_1_1WriterImpl_1ace09d578f12705f356be62dbc7d2f9de" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a315475cff9a8796f4cbecf8f04eda31c" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointName</name></member>
+      <member refid="classdna_1_1WriterImpl_1a13fd5181306b3816da4e044b08f629e0" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setJointRowCount</name></member>
+      <member refid="classdna_1_1WriterImpl_1a7f4e014694aae1c46e06295a8b0f2337" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setLODAnimatedMapMapping</name></member>
+      <member refid="classdna_1_1WriterImpl_1af9aae8a1b78479109154d868b8b4132d" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setLODBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1WriterImpl_1a5ab1b0d15505db40a3ffb0313446daed" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setLODCount</name></member>
+      <member refid="classdna_1_1WriterImpl_1a1ef831d88bfb59523135de2d604424ee" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setLODJointMapping</name></member>
+      <member refid="classdna_1_1WriterImpl_1ab7831684f498ef1642f18e0c73fc241c" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setLODMeshMapping</name></member>
+      <member refid="classdna_1_1WriterImpl_1a87212e5bc21d526a0c821ae95f53a2a9" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setMaximumInfluencePerVertex</name></member>
+      <member refid="classdna_1_1WriterImpl_1a81985d9add44724dc8a86a6c1f2bc0ae" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setMeshBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1WriterImpl_1ade15de044ad573433a0cc0c0579044be" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setMeshIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a2ba68c4639b0c334eedd649c492f49db" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setMeshName</name></member>
+      <member refid="classdna_1_1WriterImpl_1a12fac4dc2dc35036af34a08fdbf64e0f" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setMetaData</name></member>
+      <member refid="classdna_1_1WriterImpl_1a6a8c479a167ed3fbb4fa18e6c663dba7" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setName</name></member>
+      <member refid="classdna_1_1WriterImpl_1a4214e5a84d6d24dd9845df4bf80ee381" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setNeutralJointRotations</name></member>
+      <member refid="classdna_1_1WriterImpl_1a1f16a9d463e9a6379e487d162723efde" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setNeutralJointTranslations</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa5b82e131eea5d1f2355ef1bde7df4c6" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setPSDColumnIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a3a1f35f87c2e9b802d840bc13fe207aa" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setPSDCount</name></member>
+      <member refid="classdna_1_1WriterImpl_1aeab7f025d8bba43b52ab14e54c8422d4" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setPSDRowIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad436ac16fcbf05db35d318c6b125cc3c" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setPSDValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1af89ddd98e8ce0ee55bbb8e38bd15fcb2" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setRawControlName</name></member>
+      <member refid="classdna_1_1WriterImpl_1adff6c55690edce3328799aed3476094e" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setRotationUnit</name></member>
+      <member refid="classdna_1_1WriterImpl_1a49694841b2dbe656f28da1254e900507" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setSkinWeightsJointIndices</name></member>
+      <member refid="classdna_1_1WriterImpl_1a92cd868b10f6570d4fa8343f2c1e7ff2" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setSkinWeightsValues</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad74bdf02e04fdb0ca9de04b392471bfc" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setTranslationUnit</name></member>
+      <member refid="classdna_1_1WriterImpl_1adb42a6c986f0b17fa23d4e1e5ba474c9" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setVertexLayouts</name></member>
+      <member refid="classdna_1_1WriterImpl_1aa637e689f972aca02a3c4e639037bb2c" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setVertexNormals</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad1ef41080bfe79bab8ec0c438f98d82d" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setVertexPositions</name></member>
+      <member refid="classdna_1_1WriterImpl_1a85fb4bd8e2701ca890bdf483e4dd4b9a" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>setVertexTextureCoordinates</name></member>
+      <member refid="classdna_1_1BinaryStreamWriterImpl_1ab23f43a599184a8edd469fc44f336e8c" prot="private" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>stream</name></member>
+      <member refid="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" prot="public" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>write</name></member>
+      <member refid="classdna_1_1WriterImpl_1ad5307940937c9a1ea616c1ebff3d02d2" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>WriterImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1a1d0528a7aa11cecbb6f96597568fe312" prot="protected" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~BaseImpl</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adfc84089a2ef97576a91b061d839af46" prot="protected" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~BehaviorWriter</name></member>
+      <member refid="classdna_1_1BinaryStreamWriter_1aa2a28b92cb68cc934c48de0c335fe626" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~BinaryStreamWriter</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ad68a8a51b3ae0bc1ac4103d49359a023" prot="protected" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~DefinitionWriter</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~DescriptorWriter</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a5867e2af786f11103b0e694312f15334" prot="protected" virt="virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~GeometryWriter</name></member>
+      <member refid="classdna_1_1StreamWriter_1aea7bd1c2086b9f1167493c19e8590157" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~StreamWriter</name></member>
+      <member refid="classdna_1_1Writer_1a0d344c575be95fce166e56b61056e0fd" prot="public" virt="non-virtual"><scope>dna::BinaryStreamWriterImpl</scope><name>~Writer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

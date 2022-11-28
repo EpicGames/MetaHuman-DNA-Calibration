@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Traits_8h" kind="file" language="C++">
+    <compoundname>Traits.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="Common_8h" local="yes">Common.h</includedby>
+    <includedby refid="binary_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="json_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="binary_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <includedby refid="json_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>type_traits</label>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="12">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="4">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="9">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="15">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Common.h</label>
+        <link refid="Common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>OutputArchive.h</label>
+        <link refid="json_2OutputArchive_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structterse_1_1traits_1_1sink" prot="public">terse::traits::sink</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1needs__allocator" prot="public">terse::traits::needs_allocator</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1needs__allocator_3_01T_00_01typename_01sink_3_01typename_01T_1_1allocat96ea404e4f31d29eaf1e05401f615e9f" prot="public">terse::traits::needs_allocator&lt; T, typename sink&lt; typename T::allocator_type, decltype(std::declval&lt; T &gt;().get_allocator())&gt;::type &gt;</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1true__sink" prot="public">terse::traits::true_sink</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__serialize__member" prot="public">terse::traits::has_serialize_member</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__load__member" prot="public">terse::traits::has_load_member</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__save__member" prot="public">terse::traits::has_save_member</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__reserve__member" prot="public">terse::traits::has_reserve_member</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__push__back__member" prot="public">terse::traits::has_push_back_member</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__serialize__function" prot="public">terse::traits::has_serialize_function</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__load__function" prot="public">terse::traits::has_load_function</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__save__function" prot="public">terse::traits::has_save_function</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1has__wide__elements" prot="public">terse::traits::has_wide_elements</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1is__pair" prot="public">terse::traits::is_pair</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1is__pair_3_01std_1_1pair_3_01K_00_01V_01_4_01_4" prot="public">terse::traits::is_pair&lt; std::pair&lt; K, V &gt; &gt;</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1is__tuple" prot="public">terse::traits::is_tuple</innerclass>
+    <innerclass refid="structterse_1_1traits_1_1is__tuple_3_01std_1_1tuple_3_01K_00_01V_01_4_01_4" prot="public">terse::traits::is_tuple&lt; std::tuple&lt; K, V &gt; &gt;</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <innernamespace refid="namespaceterse_1_1traits">terse::traits</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(char)<sp/>==<sp/>1ul,<sp/></highlight><highlight class="stringliteral">&quot;Unsupported<sp/>platform,<sp/>char<sp/>is<sp/>not<sp/>8-bits<sp/>wide.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespaceterse_1_1traits" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">traits<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...&gt;</highlight></codeline>
+<codeline lineno="23" refid="structterse_1_1traits_1_1sink" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1sink" kindref="compound">sink</ref><sp/>{</highlight></codeline>
+<codeline lineno="24" refid="structterse_1_1traits_1_1sink_1a3534d48a6fcb4a10a81e839b4bae89c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1sink_1a3534d48a6fcb4a10a81e839b4bae89c7" kindref="member">type</ref><sp/>=<sp/>void;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="28" refid="structterse_1_1traits_1_1needs__allocator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1needs__allocator" kindref="compound">needs_allocator</ref><sp/>:<sp/>std::false_type<sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="31" refid="structterse_1_1traits_1_1needs__allocator_3_01T_00_01typename_01sink_3_01typename_01T_1_1allocat96ea404e4f31d29eaf1e05401f615e9f" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1needs__allocator" kindref="compound">needs_allocator</ref>&lt;T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1traits_1_1sink" kindref="compound">sink</ref>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T::allocator_type,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;T&gt;().get_allocator())&gt;::type&gt;<sp/>:<sp/>std::true_type<sp/>{};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="35" refid="structterse_1_1traits_1_1true__sink" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1true__sink" kindref="compound">true_sink</ref><sp/>:<sp/>std::true_type<sp/>{};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Serializer<sp/>member<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="39" refid="namespaceterse_1_1traits_1a63b7c02fc10185c8ea13ce175446aad7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a63b7c02fc10185c8ea13ce175446aad7" kindref="member">test_serialize_member</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;T&gt;().serialize(std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="42" refid="namespaceterse_1_1traits_1a82c4c6fe660ed34437b8650c23d36293" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a63b7c02fc10185c8ea13ce175446aad7" kindref="member">test_serialize_member</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="45" refid="structterse_1_1traits_1_1has__serialize__member" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">has_serialize_member</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_serialize_member&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="48" refid="namespaceterse_1_1traits_1a902787f6b51af2a45195d0e15bec65d2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a902787f6b51af2a45195d0e15bec65d2" kindref="member">test_load_member</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;T&gt;().load(std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="51" refid="namespaceterse_1_1traits_1a69b0c0f73619ea94c0dce705604cf93e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a902787f6b51af2a45195d0e15bec65d2" kindref="member">test_load_member</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="54" refid="structterse_1_1traits_1_1has__load__member" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__load__member" kindref="compound">has_load_member</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_load_member&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="57" refid="namespaceterse_1_1traits_1ad1b2d2a02ca51ba9e2eec4cf6476a441" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1ad1b2d2a02ca51ba9e2eec4cf6476a441" kindref="member">test_save_member</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;T&gt;().save(std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="60" refid="namespaceterse_1_1traits_1abfac467f83c006a3bcc8aa2f53b789e9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1ad1b2d2a02ca51ba9e2eec4cf6476a441" kindref="member">test_save_member</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="63" refid="structterse_1_1traits_1_1has__save__member" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__save__member" kindref="compound">has_save_member</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_save_member&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="66" refid="namespaceterse_1_1traits_1a1815242915e540da65a47aa4712b4481" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a1815242915e540da65a47aa4712b4481" kindref="member">test_reserve_member</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;TContainer&gt;().reserve(0u))&gt;;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="69" refid="namespaceterse_1_1traits_1aab0a59c097f7054840a98dc42c63ec76" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a1815242915e540da65a47aa4712b4481" kindref="member">test_reserve_member</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="72" refid="structterse_1_1traits_1_1has__reserve__member" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__reserve__member" kindref="compound">has_reserve_member</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_reserve_member&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="75" refid="namespaceterse_1_1traits_1ad7a515ada36d8c6ab6bce50a24388379" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1ad7a515ada36d8c6ab6bce50a24388379" kindref="member">test_push_back_member</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(std::declval&lt;TContainer&gt;().push_back(</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::declval&lt;typename<sp/>TContainer::value_type&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="79" refid="namespaceterse_1_1traits_1a0b9c4b997cfa51359edac92d0807bb53" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1ad7a515ada36d8c6ab6bce50a24388379" kindref="member">test_push_back_member</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="82" refid="structterse_1_1traits_1_1has__push__back__member" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__push__back__member" kindref="compound">has_push_back_member</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_push_back_member&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Serializer<sp/>free<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="87" refid="namespaceterse_1_1traits_1a27a13e2e20abc83f1719f0ef386c8a63" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a27a13e2e20abc83f1719f0ef386c8a63" kindref="member">test_serialize_function</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(serialize(std::declval&lt;T&amp;&gt;(),<sp/>std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="90" refid="namespaceterse_1_1traits_1af94390888afac9d187fed1724ca8232b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a27a13e2e20abc83f1719f0ef386c8a63" kindref="member">test_serialize_function</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="93" refid="structterse_1_1traits_1_1has__serialize__function" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">has_serialize_function</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_serialize_function&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="96" refid="namespaceterse_1_1traits_1a24a9a9c90b888c0a34101b279d5b45e6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a24a9a9c90b888c0a34101b279d5b45e6" kindref="member">test_load_function</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(load(std::declval&lt;T&amp;&gt;(),<sp/>std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="99" refid="namespaceterse_1_1traits_1aaebc658aecc914f2d05fc40856433339" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a24a9a9c90b888c0a34101b279d5b45e6" kindref="member">test_load_function</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="102" refid="structterse_1_1traits_1_1has__load__function" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__load__function" kindref="compound">has_load_function</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_load_function&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="105" refid="namespaceterse_1_1traits_1a731b5f8294a357a81e9972700d857cd9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a731b5f8294a357a81e9972700d857cd9" kindref="member">test_save_function</ref>(std::int32_t)-&gt;true_sink&lt;</highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(save(std::declval&lt;T&amp;&gt;(),<sp/>std::declval&lt;T&amp;&gt;()))&gt;;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="108" refid="namespaceterse_1_1traits_1aca9549a3efc8b62cfe79b3c0ee2666a4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1_1traits_1a731b5f8294a357a81e9972700d857cd9" kindref="member">test_save_function</ref>(std::uint32_t)-&gt;std::false_type;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="111" refid="structterse_1_1traits_1_1has__save__function" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__save__function" kindref="compound">has_save_function</ref><sp/>:<sp/></highlight><highlight class="keyword">decltype</highlight><highlight class="normal">(test_save_function&lt;T&gt;(0))<sp/>{};</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="114" refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" kindref="member">is_batchable</ref><sp/>=<sp/>std::is_scalar&lt;typename<sp/>TContainer::value_type&gt;;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="117" refid="structterse_1_1traits_1_1has__wide__elements" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1has__wide__elements" kindref="compound">has_wide_elements</ref><sp/>{</highlight></codeline>
+<codeline lineno="118" refid="structterse_1_1traits_1_1has__wide__elements_1ab34bb23e6bd4c6478001957d8421454d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TContainer::value_type)<sp/>&gt;<sp/>1ul);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="122" refid="structterse_1_1traits_1_1is__pair" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1is__pair" kindref="compound">is_pair</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::false_type<sp/>{};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="125" refid="structterse_1_1traits_1_1is__pair_3_01std_1_1pair_3_01K_00_01V_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1is__pair" kindref="compound">is_pair&lt;std::pair&lt;K, V&gt;</ref><sp/>&gt;<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::true_type<sp/>{};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="128" refid="structterse_1_1traits_1_1is__tuple" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1is__tuple" kindref="compound">is_tuple</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::false_type<sp/>{};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="131" refid="structterse_1_1traits_1_1is__tuple_3_01std_1_1tuple_3_01K_00_01V_01_4_01_4" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1traits_1_1is__tuple" kindref="compound">is_tuple</ref>&lt;std::tuple&lt;K,<sp/>V&gt;<sp/>&gt;<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::true_type<sp/>{};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>traits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/Traits.h"/>
+  </compounddef>
+</doxygen>

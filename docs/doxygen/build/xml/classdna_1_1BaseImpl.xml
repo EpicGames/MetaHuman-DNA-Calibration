@@ -1,0 +1,609 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1BaseImpl" kind="class" language="C++" prot="public">
+    <compoundname>dna::BaseImpl</compoundname>
+    <derivedcompoundref refid="classdna_1_1ReaderImpl" prot="public" virt="virtual">dna::ReaderImpl&lt; BinaryStreamReader &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1ReaderImpl" prot="public" virt="virtual">dna::ReaderImpl&lt; JSONStreamReader &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1WriterImpl" prot="public" virt="virtual">dna::WriterImpl&lt; BinaryStreamWriter &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1WriterImpl" prot="public" virt="virtual">dna::WriterImpl&lt; JSONStreamWriter &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1ReaderImpl" prot="public" virt="virtual">dna::ReaderImpl&lt; TReaderBase &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1WriterImpl" prot="public" virt="virtual">dna::WriterImpl&lt; TWriterBase &gt;</derivedcompoundref>
+    <includes refid="dna_2BaseImpl_8h" local="no">BaseImpl.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdna_1_1BaseImpl_1aaf242d8e71e7df8e5415e27c70d03db8" prot="protected" static="no" mutable="no">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource* dna::BaseImpl::memRes</definition>
+        <argsstring></argsstring>
+        <name>memRes</name>
+        <qualifiedname>dna::BaseImpl::memRes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="31" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classdna_1_1BaseImpl_1a22006a54d368829db22b9bde38442de2" compoundref="dna_2BaseImpl_8h" startline="26" endline="28">getMemoryResource</referencedby>
+        <referencedby refid="classdna_1_1BinaryStreamReaderImpl_1ac54cb7d6d5ae354a761d3c4c85b70080" compoundref="BinaryStreamReaderImpl_8cpp" startline="95" endline="109">dna::BinaryStreamReaderImpl::unload</referencedby>
+        <referencedby refid="classdna_1_1JSONStreamReaderImpl_1a27dadff57c804b7cf5c6ee40a5f3fe36" compoundref="JSONStreamReaderImpl_8cpp" startline="49" endline="63">dna::JSONStreamReaderImpl::unload</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdna_1_1BaseImpl_1afb96929eaf813f7dbc2eea11bcad5a41" prot="protected" static="no" mutable="no">
+        <type><ref refid="structdna_1_1DNA" kindref="compound">DNA</ref></type>
+        <definition>DNA dna::BaseImpl::dna</definition>
+        <argsstring></argsstring>
+        <name>dna</name>
+        <qualifiedname>dna::BaseImpl::dna</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="32" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classdna_1_1BinaryStreamReaderImpl_1a5221e569c4e7fa2ebf2046c433bf72ef" compoundref="BinaryStreamReaderImpl_8cpp" startline="111" endline="138">dna::BinaryStreamReaderImpl::read</referencedby>
+        <referencedby refid="classdna_1_1JSONStreamReaderImpl_1a5f35f70a34f0cf1b8d117f1204077238" compoundref="JSONStreamReaderImpl_8cpp" startline="65" endline="92">dna::JSONStreamReaderImpl::read</referencedby>
+        <referencedby refid="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" compoundref="BinaryStreamWriterImpl_8cpp" startline="36" endline="41">dna::BinaryStreamWriterImpl::write</referencedby>
+        <referencedby refid="classdna_1_1JSONStreamWriterImpl_1a3bdfd08782b95f57ac288b4250c8d39d" compoundref="JSONStreamWriterImpl_8cpp" startline="36" endline="41">dna::JSONStreamWriterImpl::write</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a5eab4d70fe975d86bc4d1cb2ead29364" prot="protected" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dna::BaseImpl::BaseImpl</definition>
+        <argsstring>(MemoryResource *memRes_)</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dna::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="12" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a1d0528a7aa11cecbb6f96597568fe312" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::BaseImpl::~BaseImpl</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BaseImpl</name>
+        <qualifiedname>dna::BaseImpl::~BaseImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="17" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a8281f2063d4566a7895cd6c06852d65b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::BaseImpl::BaseImpl</definition>
+        <argsstring>(const BaseImpl &amp;)=delete</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dna::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type>const <ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="19" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1aadf1b22a7fca50dce7e5fbd69399cacb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        <definition>BaseImpl &amp; dna::BaseImpl::operator=</definition>
+        <argsstring>(const BaseImpl &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dna::BaseImpl::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="20" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a9182dcfa882ca9e8b54bd22f30278f64" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::BaseImpl::BaseImpl</definition>
+        <argsstring>(BaseImpl &amp;&amp;rhs)=delete</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dna::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type><ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a03aa3393c1db5c00aebcfd48c586260d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        <definition>BaseImpl &amp; dna::BaseImpl::operator=</definition>
+        <argsstring>(BaseImpl &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dna::BaseImpl::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdna_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="23" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1BaseImpl_1a22006a54d368829db22b9bde38442de2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource * dna::BaseImpl::getMemoryResource</definition>
+        <argsstring>()</argsstring>
+        <name>getMemoryResource</name>
+        <qualifiedname>dna::BaseImpl::getMemoryResource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="26" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" bodystart="26" bodyend="28"/>
+        <references refid="classdna_1_1BaseImpl_1aaf242d8e71e7df8e5415e27c70d03db8" compoundref="dna_2BaseImpl_8h" startline="31">memRes</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dna::ReaderImpl&lt; BinaryStreamReader &gt;</label>
+        <link refid="classdna_1_1ReaderImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; BinaryStreamReader &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::ReaderImpl&lt; JSONStreamReader &gt;</label>
+        <link refid="classdna_1_1ReaderImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="template-instance">
+          <edgelabel>&lt; JSONStreamReader &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; BinaryStreamWriter &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::WriterImpl&lt; JSONStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="template-instance">
+          <edgelabel>&lt; JSONStreamWriter &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::BaseImpl</label>
+        <link refid="classdna_1_1BaseImpl"/>
+      </node>
+      <node id="3">
+        <label>dna::BinaryStreamReaderImpl</label>
+        <link refid="classdna_1_1BinaryStreamReaderImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::JSONStreamReaderImpl</label>
+        <link refid="classdna_1_1JSONStreamReaderImpl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna::JSONStreamWriterImpl</label>
+        <link refid="classdna_1_1JSONStreamWriterImpl"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::ReaderImpl&lt; TReaderBase &gt;</label>
+        <link refid="classdna_1_1ReaderImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::WriterImpl&lt; TWriterBase &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>terse::ArchiveOffset&lt; std::uint32_t &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="template-instance">
+          <edgelabel>&lt; std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>terse::DynArray&lt; float &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>terse::DynArray&lt; std::uint16_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::ExpectedValue&lt; SignatureValueType &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; SignatureValueType &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna::ExpectedValue&lt; std::uint16_t &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dna::RawSurjectiveMapping&lt; std::uint16_t &gt;</label>
+        <link refid="structdna_1_1RawSurjectiveMapping"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::Signature&lt; 3 &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; 3 &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>dna::SurjectiveMapping&lt; TFrom, TFrom &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+        <childnode refid="21" relation="template-instance">
+          <edgelabel>&lt; TFrom, TFrom &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dna::SurjectiveMapping&lt; std::uint16_t, std::uint16_t &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+        <childnode refid="21" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t, std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dna::BaseImpl</label>
+        <link refid="classdna_1_1BaseImpl"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#memRes</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#dna</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DNA</label>
+        <link refid="structdna_1_1DNA"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+memRes</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+eof</edgelabel>
+          <edgelabel>+signature</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+version</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+sections</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+descriptor</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+definition</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>+behavior</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>+geometry</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna::ExpectedValue&lt; T &gt;</label>
+        <link refid="structdna_1_1ExpectedValue"/>
+      </node>
+      <node id="18">
+        <label>dna::LODMapping</label>
+        <link refid="classdna_1_1LODMapping"/>
+      </node>
+      <node id="37">
+        <label>dna::RawAnimatedMaps</label>
+        <link refid="structdna_1_1RawAnimatedMaps"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+lods</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>dna::RawBehavior</label>
+        <link refid="structdna_1_1RawBehavior"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+animatedMapsMarker</edgelabel>
+          <edgelabel>+blendShapeChannelsMarker</edgelabel>
+          <edgelabel>+controlsMarker</edgelabel>
+          <edgelabel>+jointsMarker</edgelabel>
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>+controls</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>+blendShapeChannels</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>dna::RawBlendShapeChannels</label>
+        <link refid="structdna_1_1RawBlendShapeChannels"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+lods</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>dna::RawConditionalTable</label>
+        <link refid="structdna_1_1RawConditionalTable"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+cutValues</edgelabel>
+          <edgelabel>+fromValues</edgelabel>
+          <edgelabel>+slopeValues</edgelabel>
+          <edgelabel>+toValues</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>dna::RawControls</label>
+        <link refid="structdna_1_1RawControls"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>+psds</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dna::RawCoordinateSystem</label>
+        <link refid="structdna_1_1RawCoordinateSystem"/>
+      </node>
+      <node id="16">
+        <label>dna::RawDefinition</label>
+        <link refid="structdna_1_1RawDefinition"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+lodAnimatedMapMapping</edgelabel>
+          <edgelabel>+lodBlendShapeMapping</edgelabel>
+          <edgelabel>+lodJointMapping</edgelabel>
+          <edgelabel>+lodMeshMapping</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+meshBlendShapeChannelMapping</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+jointHierarchy</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>+neutralJointRotations</edgelabel>
+          <edgelabel>+neutralJointTranslations</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna::RawDescriptor</label>
+        <link refid="structdna_1_1RawDescriptor"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+coordinateSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna::RawGeometry</label>
+        <link refid="structdna_1_1RawGeometry"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>dna::RawJoints</label>
+        <link refid="structdna_1_1RawJoints"/>
+      </node>
+      <node id="17">
+        <label>dna::RawLODMapping</label>
+        <link refid="structdna_1_1RawLODMapping"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>dna::RawPSDMatrix</label>
+        <link refid="structdna_1_1RawPSDMatrix"/>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+columns</edgelabel>
+          <edgelabel>+rows</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+values</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>dna::RawSurjectiveMapping&lt; TFrom, TTo &gt;</label>
+        <link refid="structdna_1_1RawSurjectiveMapping"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>dna::RawVector3Vector</label>
+        <link refid="structdna_1_1RawVector3Vector"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>+xs</edgelabel>
+          <edgelabel>+ys</edgelabel>
+          <edgelabel>+zs</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::SectionLookupTable</label>
+        <link refid="structdna_1_1SectionLookupTable"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+          <edgelabel>+behavior</edgelabel>
+          <edgelabel>+blendShapeChannels</edgelabel>
+          <edgelabel>+controls</edgelabel>
+          <edgelabel>+definition</edgelabel>
+          <edgelabel>+descriptor</edgelabel>
+          <edgelabel>+geometry</edgelabel>
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::Signature&lt; Size &gt;</label>
+        <link refid="structdna_1_1Signature"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+value</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dna::SurjectiveMapping&lt; TFrom, TTo &gt;</label>
+        <link refid="structdna_1_1SurjectiveMapping"/>
+      </node>
+      <node id="8">
+        <label>dna::Version</label>
+        <link refid="structdna_1_1Version"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+generation</edgelabel>
+          <edgelabel>+version</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+      <node id="26">
+        <label>std::unique_ptr&lt; T &gt;</label>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;::Proxy</label>
+        <link refid="structterse_1_1ArchiveOffset_1_1Proxy"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+target</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>std::unique_ptr&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</label>
+        <childnode refid="26" relation="template-instance">
+          <edgelabel>&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" line="10" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/BaseImpl.h" bodystart="10" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classdna_1_1BaseImpl_1a5eab4d70fe975d86bc4d1cb2ead29364" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1a8281f2063d4566a7895cd6c06852d65b" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1a9182dcfa882ca9e8b54bd22f30278f64" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdna_1_1BaseImpl_1afb96929eaf813f7dbc2eea11bcad5a41" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>dna</name></member>
+      <member refid="classdna_1_1BaseImpl_1a22006a54d368829db22b9bde38442de2" prot="public" virt="non-virtual"><scope>dna::BaseImpl</scope><name>getMemoryResource</name></member>
+      <member refid="classdna_1_1BaseImpl_1aaf242d8e71e7df8e5415e27c70d03db8" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>memRes</name></member>
+      <member refid="classdna_1_1BaseImpl_1aadf1b22a7fca50dce7e5fbd69399cacb" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>operator=</name></member>
+      <member refid="classdna_1_1BaseImpl_1a03aa3393c1db5c00aebcfd48c586260d" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>operator=</name></member>
+      <member refid="classdna_1_1BaseImpl_1a1d0528a7aa11cecbb6f96597568fe312" prot="protected" virt="non-virtual"><scope>dna::BaseImpl</scope><name>~BaseImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

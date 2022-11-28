@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.ui.elements &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.ui.elements</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.ui.elements</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="n">QCheckBox</span><span class="p">,</span> <span class="n">QProgressBar</span><span class="p">,</span> <span class="n">QPushButton</span><span class="p">,</span> <span class="n">QWidget</span>
+
+<span class="kn">from</span> <span class="nn">..config.character</span> <span class="kn">import</span> <span class="n">BuildOptions</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">..ui.file_chooser</span> <span class="kn">import</span> <span class="n">FileChooser</span>
+
+
+<div class="viewcode-block" id="Elements"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements">[docs]</a><span class="k">class</span> <span class="nc">Elements</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Used for holding references to elements that get added to widgets</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type main_widget: QWidget</span>
+<span class="sd">    @param main_widget: The main widget that holds everything</span>
+
+<span class="sd">    @type select_dna_path: FileChooser</span>
+<span class="sd">    @param select_dna_path: The FileChooser widget for getting the DNA path</span>
+
+<span class="sd">    @type load_dna_btn: QPushButton</span>
+<span class="sd">    @param load_dna_btn: The button that starts loading in the DNA</span>
+
+<span class="sd">    @type mesh_tree_list: QWidget</span>
+<span class="sd">    @param mesh_tree_list: The widget that contains the meshes to be selected in a tree list</span>
+
+<span class="sd">    @type joints_cb: QCheckBox</span>
+<span class="sd">    @param joints_cb: The checkbox that represents if joints should be added</span>
+
+<span class="sd">    @type normals_cb: QCheckBox</span>
+<span class="sd">    @param normals_cb: The checkbox that represents if normals should be added</span>
+
+<span class="sd">    @type blend_shapes_cb: QCheckBox</span>
+<span class="sd">    @param blend_shapes_cb: The checkbox that represents if blend shapes should be added</span>
+
+<span class="sd">    @type skin_cb: QCheckBox</span>
+<span class="sd">    @param skin_cb: The checkbox that represents if skin should be added</span>
+
+<span class="sd">    @type rig_logic_cb: QCheckBox</span>
+<span class="sd">    @param rig_logic_cb: The checkbox that represents if rig logic should be added</span>
+
+<span class="sd">    @type select_gui_path: FileChooser</span>
+<span class="sd">    @param select_gui_path: The FileChooser widget for getting the gui path</span>
+
+<span class="sd">    @type select_analog_gui_path: FileChooser</span>
+<span class="sd">    @param select_analog_gui_path: The FileChooser widget for getting the analog gui path</span>
+
+<span class="sd">    @type select_aas_path: FileChooser</span>
+<span class="sd">    @param select_aas_path: The FileChooser widget for getting the additional assembly script path</span>
+
+<span class="sd">    @type process_btn: QPushButton</span>
+<span class="sd">    @param process_btn: The button that starts creating the scene and character</span>
+
+<span class="sd">    @type progress_bar: QProgressBar</span>
+<span class="sd">    @param progress_bar: The progress bar that shows the building progress</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">main_widget</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_dna_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">load_dna_btn</span><span class="p">:</span> <span class="n">QPushButton</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">mesh_tree_list</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">joints_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">normals_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">blend_shapes_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">skin_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">rig_logic_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_gui_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_analog_gui_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_aas_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">process_btn</span><span class="p">:</span> <span class="n">QPushButton</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">progress_bar</span><span class="p">:</span> <span class="n">QProgressBar</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Elements.create_new_scene"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.create_new_scene">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create_new_scene</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates a new scene&quot;&quot;&quot;</span>
+
+        <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">new</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.get_file_path"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_file_path">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_file_path</span><span class="p">(</span><span class="nb">input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the file path contained in the provided FileChooser widget</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The FileChooser widget we want to get the file path from</span>
+
+<span class="sd">        @rtype: Optional[str]</span>
+<span class="sd">        @returns: The value extracted from the FileChooser</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">path</span> <span class="ow">and</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">path</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="Elements.get_dna_path"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_dna_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_dna_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the DNA file path</span>
+
+<span class="sd">        @rtype: Optional[str]</span>
+<span class="sd">        @returns: The DNA file path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.get_gui_path"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_gui_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the gui file path</span>
+
+<span class="sd">        @rtype: Optional[str]</span>
+<span class="sd">        @returns: The gui file path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_gui_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.get_analog_gui_path"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_analog_gui_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_analog_gui_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the analog gui file path</span>
+
+<span class="sd">        @rtype: Optional[str]</span>
+<span class="sd">        @returns: The analog gui file path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_analog_gui_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.get_aas_path"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_aas_path">[docs]</a>    <span class="k">def</span> <span class="nf">get_aas_path</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the additional assembly script file path</span>
+
+<span class="sd">        @rtype: Optional[str]</span>
+<span class="sd">        @returns: The additional assembly script file path</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_aas_path</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.get_build_options"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.get_build_options">[docs]</a>    <span class="k">def</span> <span class="nf">get_build_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BuildOptions</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets and returns a build options configuration from the corresponding UI elements</span>
+
+<span class="sd">        @rtype: BuildOptions</span>
+<span class="sd">        @returns: The object containing build option configuration</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="n">BuildOptions</span><span class="p">(</span>
+            <span class="n">add_joints</span><span class="o">=</span><span class="n">Elements</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span><span class="p">),</span>
+            <span class="n">add_normals</span><span class="o">=</span><span class="n">Elements</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">normals_cb</span><span class="p">),</span>
+            <span class="n">add_blend_shapes</span><span class="o">=</span><span class="n">Elements</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="p">),</span>
+            <span class="n">add_skin</span><span class="o">=</span><span class="n">Elements</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span><span class="p">),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Elements.is_checked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements.Elements.is_checked">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">is_checked</span><span class="p">(</span><span class="n">checkbox</span><span class="p">:</span> <span class="n">QCheckBox</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns if the provided checkbox is checked and enabled</span>
+
+<span class="sd">        @type checkbox: QCheckBox</span>
+<span class="sd">        @param checkbox: The checkbox thats value needs to be checked and enabled</span>
+
+<span class="sd">        @rtype: bool</span>
+<span class="sd">        @returns: The flag representing if the checkbox is checked and enabled</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">checkbox</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">checkbox</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">())</span>
+            <span class="ow">and</span> <span class="n">checkbox</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">CheckState</span><span class="o">.</span><span class="n">Checked</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

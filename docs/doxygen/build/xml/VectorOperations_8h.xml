@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="VectorOperations_8h" kind="file" language="C++">
+    <compoundname>VectorOperations.h</compoundname>
+    <includedby refid="SetBlendShapeTargetDeltasCommand_8h" local="yes">SetBlendShapeTargetDeltasCommand.h</includedby>
+    <includedby refid="SetVertexPositionsCommand_8h" local="yes">SetVertexPositionsCommand.h</includedby>
+    <includedby refid="SupportFactories_8h" local="yes">SupportFactories.h</includedby>
+    <invincdepgraph>
+      <node id="4">
+        <label>CommandSequence.cpp</label>
+        <link refid="examples_2CommandSequence_8cpp"/>
+      </node>
+      <node id="5">
+        <label>SingleCommand.cpp</label>
+        <link refid="SingleCommand_8cpp"/>
+      </node>
+      <node id="3">
+        <label>DNACalib.h</label>
+        <link refid="DNACalib_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SetBlendShapeTargetDeltasCommand.h</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>SetVertexPositionsCommand.h</label>
+        <link refid="SetVertexPositionsCommand_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>VectorOperations.h</label>
+        <link refid="VectorOperations_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SetBlendShapeTargetDeltasCommand.cpp</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8cpp"/>
+      </node>
+      <node id="8">
+        <label>SetVertexPositionsCommand.cpp</label>
+        <link refid="SetVertexPositionsCommand_8cpp"/>
+      </node>
+      <node id="9">
+        <label>SupportFactories.h</label>
+        <link refid="SupportFactories_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacednac">dnac</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18fad53238014015da17926bca398282211f" kindref="member">Interpolate</ref>,</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18faec211f7c20af43e742bf2570c3cb84f9" kindref="member">Add</ref>,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18fa1d9baf077ee87921f57a8fe42d510b65" kindref="member">Subtract</ref>,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18fae257376d913f3b53cbb4a9b19d770648" kindref="member">Multiply</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/VectorOperations.h"/>
+  </compounddef>
+</doxygen>

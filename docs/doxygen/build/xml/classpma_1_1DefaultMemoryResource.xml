@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classpma_1_1DefaultMemoryResource" kind="class" language="C++" prot="public">
+    <compoundname>pma::DefaultMemoryResource</compoundname>
+    <basecompoundref refid="classpma_1_1MemoryResource" prot="public" virt="non-virtual">pma::MemoryResource</basecompoundref>
+    <includes refid="DefaultMemoryResource_8h" local="no">DefaultMemoryResource.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpma_1_1DefaultMemoryResource_1a12e045ccbf63ddcec8561d465d0e56f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * pma::DefaultMemoryResource::allocate</definition>
+        <argsstring>(std::size_t size, std::size_t alignment) override</argsstring>
+        <name>allocate</name>
+        <qualifiedname>pma::DefaultMemoryResource::allocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ad43f9c740450042025424135a15497bc">allocate</reimplements>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/DefaultMemoryResource.h" line="18" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/DefaultMemoryResource.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classpma_1_1DefaultMemoryResource_1aa25d797c95d6cdb57895bb7f36d9d7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void pma::DefaultMemoryResource::deallocate</definition>
+        <argsstring>(void *ptr, std::size_t size, std::size_t alignment) override</argsstring>
+        <name>deallocate</name>
+        <qualifiedname>pma::DefaultMemoryResource::deallocate</qualifiedname>
+        <reimplements refid="classpma_1_1MemoryResource_1ae775e6f871764336db8dc4d95ba95b2b">deallocate</reimplements>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/DefaultMemoryResource.h" line="19" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/DefaultMemoryResource.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A <ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> that delegates to malloc / free. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>pma::DefaultMemoryResource</label>
+        <link refid="classpma_1_1DefaultMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>pma::DefaultMemoryResource</label>
+        <link refid="classpma_1_1DefaultMemoryResource"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/DefaultMemoryResource.h" line="16" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/resources/DefaultMemoryResource.h" bodystart="16" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classpma_1_1DefaultMemoryResource_1a12e045ccbf63ddcec8561d465d0e56f6" prot="public" virt="virtual"><scope>pma::DefaultMemoryResource</scope><name>allocate</name></member>
+      <member refid="classpma_1_1DefaultMemoryResource_1aa25d797c95d6cdb57895bb7f36d9d7f9" prot="public" virt="virtual"><scope>pma::DefaultMemoryResource</scope><name>deallocate</name></member>
+      <member refid="classpma_1_1MemoryResource_1a2f1214ba97985f9728633a518fb62578" prot="public" virt="virtual"><scope>pma::DefaultMemoryResource</scope><name>~MemoryResource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

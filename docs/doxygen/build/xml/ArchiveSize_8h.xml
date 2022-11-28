@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ArchiveSize_8h" kind="file" language="C++">
+    <compoundname>ArchiveSize.h</compoundname>
+    <includes refid="Anchor_8h" local="yes">terse/types/Anchor.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="binary_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="json_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="binary_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <includedby refid="json_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="1">
+        <label>ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstddef</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="4">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="11">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="3">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="8">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="14">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>OutputArchive.h</label>
+        <link refid="json_2OutputArchive_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structterse_1_1ArchiveSize" prot="public">terse::ArchiveSize</innerclass>
+    <innerclass refid="structterse_1_1ArchiveSize_1_1Proxy" prot="public">terse::ArchiveSize::Proxy</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Anchor_8h" kindref="compound">terse/types/Anchor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ArchiveSize<sp/>is<sp/>a<sp/>type<sp/>that<sp/>stores<sp/>an<sp/>arbitrary<sp/>size<sp/>value<sp/>(both<sp/>in-memory<sp/>and<sp/>writes<sp/>that<sp/>value<sp/>into<sp/>the<sp/>stream<sp/>as<sp/>well).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>has<sp/>two<sp/>accompanying<sp/>types:<sp/>Proxy<sp/>and<sp/>Anchor,<sp/>which<sp/>are<sp/>both<sp/>virtual,<sp/>utility<sp/>types,<sp/>and<sp/>they<sp/>work<sp/>together<sp/>to<sp/>achieve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>function<sp/>of<sp/>ArchiveSize.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>ArchiveSize<sp/>is<sp/>encountered<sp/>during<sp/>the<sp/>serialization<sp/>process,<sp/>at<sp/>first<sp/>an<sp/>empty<sp/>size<sp/>(zero)<sp/>value<sp/>will<sp/>be<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>into<sp/>the<sp/>stream<sp/>and<sp/>the<sp/>position<sp/>of<sp/>that<sp/>size<sp/>value<sp/>will<sp/>be<sp/>captured<sp/>in<sp/>an<sp/>in-memory<sp/>variable.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Later,<sp/>when<sp/>its<sp/>associated<sp/>Anchor<sp/>is<sp/>encountered,<sp/>it<sp/>will<sp/>capture<sp/>the<sp/>current<sp/>stream<sp/>position<sp/>as<sp/>the<sp/>base<sp/>(start)<sp/>offset,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>from<sp/>which<sp/>the<sp/>size<sp/>is<sp/>going<sp/>to<sp/>be<sp/>computed<sp/>(size<sp/>is<sp/>relative<sp/>to<sp/>some<sp/>base<sp/>offset).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Lastly,<sp/>when<sp/>its<sp/>ArchiveSize&lt;T&gt;::Proxy<sp/>is<sp/>encountered,<sp/>the<sp/>current<sp/>stream<sp/>position<sp/>will<sp/>be<sp/>captured,<sp/>and<sp/>the<sp/>earlier<sp/>captured</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>anchor<sp/>base<sp/>offset<sp/>will<sp/>be<sp/>subtracted<sp/>from<sp/>it<sp/>(resulting<sp/>in<sp/>the<sp/>size<sp/>value<sp/>-<sp/>the<sp/>size<sp/>between<sp/>Anchor<sp/>offset<sp/>and<sp/>Proxy<sp/>offset).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>With<sp/>the<sp/>size<sp/>value<sp/>computed,<sp/>it<sp/>will<sp/>update<sp/>the<sp/>in-memory<sp/>value<sp/>stored<sp/>in<sp/>ArchiveSize<sp/>with<sp/>it.<sp/>Then,<sp/>it<sp/>will<sp/>seek<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>stream<sp/>to<sp/>the<sp/>earlier<sp/>captured<sp/>position<sp/>of<sp/>the<sp/>size<sp/>value<sp/>(where<sp/>zeros<sp/>were<sp/>written<sp/>initially),<sp/>and<sp/>it<sp/>will<sp/>write<sp/>the<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>into<sp/>the<sp/>stream<sp/>at<sp/>that<sp/>position.<sp/>With<sp/>all<sp/>that<sp/>done,<sp/>it<sp/>will<sp/>seek<sp/>back<sp/>to<sp/>the<sp/>position<sp/>of<sp/>the<sp/>stream<sp/>before<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>proxy<sp/>was<sp/>encountered,<sp/>and<sp/>resume<sp/>serialization.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TSize,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TOffset&gt;</highlight></codeline>
+<codeline lineno="34" refid="structterse_1_1ArchiveSize" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structterse_1_1ArchiveSize_1a8a4aca343036bd3ad8e1c166054ef6b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ArchiveSize_1a8a4aca343036bd3ad8e1c166054ef6b9" kindref="member">ValueType</ref><sp/>=<sp/>TSize;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structterse_1_1ArchiveSize_1_1Proxy" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>*<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1Anchor" kindref="compound">Anchor&lt;TOffset&gt;</ref>*<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structterse_1_1ArchiveSize_1_1Proxy_1a1b75f0c135aa96e4a2f04518cf110cc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1b75f0c135aa96e4a2f04518cf110cc3" kindref="member">Proxy</ref>(<ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;<sp/>size,<sp/><ref refid="structterse_1_1Anchor" kindref="compound">Anchor&lt;TOffset&gt;</ref>&amp;<sp/>offset)<sp/>:<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>{std::addressof(size)},<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>{std::addressof(offset)}<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;onMove(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" kindref="member">onBaseMoved</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structterse_1_1ArchiveSize_1_1Proxy_1a72526296c88fc10bd0400ea1525c9ceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a72526296c88fc10bd0400ea1525c9ceb" kindref="member">~Proxy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;onMove(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" kindref="member">onBaseMoved</ref>,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="structterse_1_1ArchiveSize_1_1Proxy_1a0b24e20d746a9a180f76349d6e4160ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a0b24e20d746a9a180f76349d6e4160ff" kindref="member">Proxy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56" refid="structterse_1_1ArchiveSize_1_1Proxy_1a9e49ffb12fb80e81fc6a5527d06acacd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a9e49ffb12fb80e81fc6a5527d06acacd" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="structterse_1_1ArchiveSize_1_1Proxy_1a82e4d9887dedd78934c8569377e1cd30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a82e4d9887dedd78934c8569377e1cd30" kindref="member">Proxy</ref>(<ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;&amp;<sp/>rhs)<sp/>:<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>{nullptr},<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>{nullptr}<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>,<sp/>rhs.target);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>,<sp/>rhs.base);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;onMove(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" kindref="member">onBaseMoved</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="structterse_1_1ArchiveSize_1_1Proxy_1a79d988ac8ba1b6448c64ab4ae6e6587e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;<sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a79d988ac8ba1b6448c64ab4ae6e6587e" kindref="member">operator=</ref>(<ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>&amp;&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>,<sp/>rhs.target);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>,<sp/>rhs.base);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;onMove(<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" kindref="member">onBaseMoved</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="74" refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a857bab4bc3a4087485a3aae8c66b3282" kindref="member">onBaseMoved</ref>(<ref refid="structterse_1_1Anchor" kindref="compound">Anchor&lt;TOffset&gt;</ref>*<sp/>anchor,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(data);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref><sp/>=<sp/>anchor;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>position<sp/>of<sp/>the<sp/>marker<sp/>itself<sp/>in<sp/>the<sp/>stream<sp/>(this<sp/>is<sp/>a<sp/>runtime-only<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>which<sp/>is<sp/>not<sp/>written<sp/>to<sp/>the<sp/>file,<sp/>needed<sp/>only<sp/>for<sp/>the<sp/>serializer<sp/>to<sp/>know<sp/>where</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>seek<sp/>within<sp/>the<sp/>stream<sp/>when<sp/>the<sp/>marker&apos;s<sp/>actual<sp/>value<sp/>needs<sp/>to<sp/>be<sp/>written)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>size<sp/>value<sp/>itself<sp/>(what<sp/>is<sp/>written<sp/>to<sp/>the<sp/>file)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1a8a4aca343036bd3ad8e1c166054ef6b9" kindref="member">ValueType</ref><sp/><ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>size<sp/>is<sp/>moved,<sp/>it&apos;s<sp/>associated<sp/>proxy<sp/>must<sp/>be<sp/>updated<sp/>about<sp/>the<sp/>new<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">Proxy</ref>*<sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structterse_1_1ArchiveSize_1a4af2e3aedb82036019b07851884739f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a4af2e3aedb82036019b07851884739f6" kindref="member">ArchiveSize</ref>()<sp/>:<sp/><ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>{},<sp/><ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref>{},<sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>{nullptr}<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structterse_1_1ArchiveSize_1a7d7eaeb81ed66ebd497ee4108946040b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a7d7eaeb81ed66ebd497ee4108946040b" kindref="member">~ArchiveSize</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="structterse_1_1ArchiveSize_1a2984321fcc4a1a004aa86aa35cbd45a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a2984321fcc4a1a004aa86aa35cbd45a5" kindref="member">ArchiveSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98" refid="structterse_1_1ArchiveSize_1af9e0b41c3294e354c58ec9ec8cdad57d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;<sp/><ref refid="structterse_1_1ArchiveSize_1af9e0b41c3294e354c58ec9ec8cdad57d" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="structterse_1_1ArchiveSize_1a8404024611caa0a03e62685c79656836" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a8404024611caa0a03e62685c79656836" kindref="member">ArchiveSize</ref>(<ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;&amp;<sp/>rhs)<sp/>:<sp/><ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>{},<sp/><ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref>{},<sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>{nullptr}<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>,<sp/>rhs.position);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref>,<sp/>rhs.value);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>,<sp/>rhs.proxy);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>proxy<sp/>with<sp/>new<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structterse_1_1ArchiveSize_1a4458cf6e270177c5e449ee9eabd59dc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;<sp/><ref refid="structterse_1_1ArchiveSize_1a4458cf6e270177c5e449ee9eabd59dc2" kindref="member">operator=</ref>(<ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&amp;&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>,<sp/>rhs.position);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref>,<sp/>rhs.value);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>,<sp/>rhs.proxy);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>proxy<sp/>with<sp/>new<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ArchiveSize_1a0e47eb33a868bb2791061d5662b552c2" kindref="member">proxy</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TSize,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TOffset&gt;</highlight></codeline>
+<codeline lineno="124" refid="namespaceterse_1a85aaa0667ca8ce8ce4206b3c41aa7f93" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">ArchiveSize&lt;TSize, TOffset&gt;::Proxy</ref><sp/><ref refid="namespaceterse_1a5f934959bc76f0549863cf7c0f1b8016" kindref="member">proxy</ref>(<ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize&lt;TSize, TOffset&gt;</ref>&amp;<sp/>size,<sp/><ref refid="structterse_1_1Anchor" kindref="compound">Anchor&lt;TOffset&gt;</ref>&amp;<sp/>base)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">ArchiveSize&lt;TSize, TOffset&gt;::Proxy</ref>{size,<sp/>base};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/ArchiveSize.h"/>
+  </compounddef>
+</doxygen>

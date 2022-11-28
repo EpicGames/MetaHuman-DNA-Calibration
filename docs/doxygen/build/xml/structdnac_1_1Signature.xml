@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structdnac_1_1Signature" kind="struct" language="C++" prot="public">
+    <compoundname>dnac::Signature</compoundname>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="no">DNA.h</includes>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>Size</declname>
+        <defname>Size</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structdnac_1_1Signature_1ab17499c147d9fd280c785623a229ab62" prot="public" static="no">
+        <type>std::array&lt; char, Size &gt;</type>
+        <definition>using dnac::Signature&lt; Size &gt;::SignatureValueType =  std::array&lt;char, Size&gt;</definition>
+        <argsstring></argsstring>
+        <name>SignatureValueType</name>
+        <qualifiedname>dnac::Signature::SignatureValueType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="71" column="5" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structdnac_1_1Signature_1af52c91a011e1c55f36225927e79b65e1" prot="public" static="no" mutable="no">
+        <type><ref refid="structdnac_1_1ExpectedValue" kindref="compound">ExpectedValue</ref>&lt; <ref refid="structdnac_1_1Signature_1ab17499c147d9fd280c785623a229ab62" kindref="member">SignatureValueType</ref> &gt;</type>
+        <definition>ExpectedValue&lt;SignatureValueType&gt; dnac::Signature&lt; Size &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <qualifiedname>dnac::Signature::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="73" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="73" bodyend="-1"/>
+        <referencedby refid="structdnac_1_1Signature_1a61980581f501315e14f02df5dec6a792" compoundref="dnacalib_2dna_2DNA_8h" startline="84" endline="86">dnac::Signature&lt; Size &gt;::matches</referencedby>
+        <referencedby refid="structdnac_1_1Signature_1a764595cc1dc4c919804a39dc5967b1cd" compoundref="dnacalib_2dna_2DNA_8h" startline="79" endline="82">dnac::Signature&lt; Size &gt;::serialize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structdnac_1_1Signature_1a495ec861895f337eba5248ff8a62d219" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dnac::Signature&lt; Size &gt;::Signature</definition>
+        <argsstring>(SignatureValueType bytes)</argsstring>
+        <name>Signature</name>
+        <qualifiedname>dnac::Signature::Signature</qualifiedname>
+        <param>
+          <type><ref refid="structdnac_1_1Signature_1ab17499c147d9fd280c785623a229ab62" kindref="member">SignatureValueType</ref></type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="75" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="75" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structdnac_1_1Signature_1a764595cc1dc4c919804a39dc5967b1cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void dnac::Signature&lt; Size &gt;::serialize</definition>
+        <argsstring>(Archive &amp;archive)</argsstring>
+        <name>serialize</name>
+        <qualifiedname>dnac::Signature::serialize</qualifiedname>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="79" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="79" bodyend="82"/>
+        <references refid="structdnac_1_1Signature_1af52c91a011e1c55f36225927e79b65e1" compoundref="dnacalib_2dna_2DNA_8h" startline="73">dnac::Signature&lt; Size &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="structdnac_1_1Signature_1a61980581f501315e14f02df5dec6a792" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool dnac::Signature&lt; Size &gt;::matches</definition>
+        <argsstring>() const</argsstring>
+        <name>matches</name>
+        <qualifiedname>dnac::Signature::matches</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="84" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="84" bodyend="86"/>
+        <references refid="structdna_1_1ExpectedValue_1abccd53a0e1a267829a7537a53dc38cd1" compoundref="dna_2DNA_8h" startline="63" endline="65">dna::ExpectedValue&lt; T &gt;::matches</references>
+        <references refid="structdnac_1_1Signature_1af52c91a011e1c55f36225927e79b65e1" compoundref="dnacalib_2dna_2DNA_8h" startline="73">dnac::Signature&lt; Size &gt;::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dnac::Signature&lt; Size &gt;</label>
+        <link refid="structdnac_1_1Signature"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" line="70" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/DNA.h" bodystart="70" bodyend="88"/>
+    <listofallmembers>
+      <member refid="structdnac_1_1Signature_1a61980581f501315e14f02df5dec6a792" prot="public" virt="non-virtual"><scope>dnac::Signature</scope><name>matches</name></member>
+      <member refid="structdnac_1_1Signature_1a764595cc1dc4c919804a39dc5967b1cd" prot="public" virt="non-virtual"><scope>dnac::Signature</scope><name>serialize</name></member>
+      <member refid="structdnac_1_1Signature_1a495ec861895f337eba5248ff8a62d219" prot="public" virt="non-virtual"><scope>dnac::Signature</scope><name>Signature</name></member>
+      <member refid="structdnac_1_1Signature_1ab17499c147d9fd280c785623a229ab62" prot="public" virt="non-virtual"><scope>dnac::Signature</scope><name>SignatureValueType</name></member>
+      <member refid="structdnac_1_1Signature_1af52c91a011e1c55f36225927e79b65e1" prot="public" virt="non-virtual"><scope>dnac::Signature</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

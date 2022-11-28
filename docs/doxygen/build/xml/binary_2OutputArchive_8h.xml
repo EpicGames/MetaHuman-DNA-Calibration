@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="binary_2OutputArchive_8h" kind="file" language="C++">
+    <compoundname>binary/OutputArchive.h</compoundname>
+    <includes refid="Archive_8h" local="yes">terse/Archive.h</includes>
+    <includes refid="Traits_8h" local="yes">terse/archives/Traits.h</includes>
+    <includes refid="Anchor_8h" local="yes">terse/types/Anchor.h</includes>
+    <includes refid="ArchiveOffset_8h" local="yes">terse/types/ArchiveOffset.h</includes>
+    <includes refid="ArchiveSize_8h" local="yes">terse/types/ArchiveSize.h</includes>
+    <includes refid="Blob_8h" local="yes">terse/types/Blob.h</includes>
+    <includes refid="DynArray_8h" local="yes">terse/types/DynArray.h</includes>
+    <includes refid="Transparent_8h" local="yes">terse/types/Transparent.h</includes>
+    <includes refid="ByteSwap_8h" local="yes">terse/utils/ByteSwap.h</includes>
+    <includes local="no">array</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="BinaryStreamWriterImpl_8h" local="no">BinaryStreamWriterImpl.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>terse/Archive.h</label>
+        <link refid="Archive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>terse/archives/Traits.h</label>
+        <link refid="Traits_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>terse/types/Anchor.h</label>
+        <link refid="Anchor_8h"/>
+      </node>
+      <node id="8">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>terse/types/ArchiveSize.h</label>
+        <link refid="ArchiveSize_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>terse/types/Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>terse/types/Transparent.h</label>
+        <link refid="Transparent_8h"/>
+      </node>
+      <node id="20">
+        <label>terse/utils/ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>terse/utils/Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>algorithm</label>
+      </node>
+      <node id="23">
+        <label>array</label>
+      </node>
+      <node id="15">
+        <label>cassert</label>
+      </node>
+      <node id="9">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="16">
+        <label>cstring</label>
+      </node>
+      <node id="17">
+        <label>functional</label>
+      </node>
+      <node id="18">
+        <label>iterator</label>
+      </node>
+      <node id="24">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>memory</label>
+      </node>
+      <node id="25">
+        <label>string</label>
+      </node>
+      <node id="22">
+        <label>sys/param.h</label>
+      </node>
+      <node id="26">
+        <label>tuple</label>
+      </node>
+      <node id="6">
+        <label>type_traits</label>
+      </node>
+      <node id="3">
+        <label>utility</label>
+      </node>
+      <node id="27">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="2">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classterse_1_1ExtendableBinaryOutputArchive" prot="public">terse::ExtendableBinaryOutputArchive</innerclass>
+    <innerclass refid="classterse_1_1BinaryOutputArchive" prot="public">terse::BinaryOutputArchive</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Archive_8h" kindref="compound">terse/Archive.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Traits_8h" kindref="compound">terse/archives/Traits.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Anchor_8h" kindref="compound">terse/types/Anchor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ArchiveOffset_8h" kindref="compound">terse/types/ArchiveOffset.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ArchiveSize_8h" kindref="compound">terse/types/ArchiveSize.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Blob_8h" kindref="compound">terse/types/Blob.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DynArray_8h" kindref="compound">terse/types/DynArray.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Transparent_8h" kindref="compound">terse/types/Transparent.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ByteSwap_8h" kindref="compound">terse/utils/ByteSwap.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TExtender,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TStream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TSize,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TOffset,<sp/>Endianness<sp/>EByteOrder&gt;</highlight></codeline>
+<codeline lineno="38" refid="classterse_1_1ExtendableBinaryOutputArchive" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive" kindref="compound">ExtendableBinaryOutputArchive</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1Archive" kindref="compound">Archive</ref>&lt;TExtender&gt;<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40" refid="classterse_1_1ExtendableBinaryOutputArchive_1ae4ec4e7cc14d7ec58ea18f4bdc09d17b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1Archive" kindref="compound">BaseArchive</ref><sp/>=<sp/><ref refid="classterse_1_1Archive" kindref="compound">Archive&lt;TExtender&gt;</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Given<sp/>the<sp/>possibility<sp/>of<sp/>both<sp/>32<sp/>and<sp/>64bit<sp/>platforms,<sp/>use<sp/>a<sp/>fixed<sp/>width<sp/>type<sp/>during<sp/>serialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classterse_1_1ExtendableBinaryOutputArchive_1afdca38784bb2d8b7d627c557b29a3e15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1afdca38784bb2d8b7d627c557b29a3e15" kindref="member">SizeType</ref><sp/>=<sp/>TSize;</highlight></codeline>
+<codeline lineno="45" refid="classterse_1_1ExtendableBinaryOutputArchive_1a2f1a75d00cb1d21dc8aa3b7e7a523520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2f1a75d00cb1d21dc8aa3b7e7a523520" kindref="member">OffsetType</ref><sp/>=<sp/>TOffset;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classterse_1_1ExtendableBinaryOutputArchive_1a219c6920409163b387366616d14275fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a219c6920409163b387366616d14275fc" kindref="member">endianness</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EByteOrder;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="52" refid="classterse_1_1ExtendableBinaryOutputArchive_1aaf4d47689f5eefaf6304be232f8cd707" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1aaf4d47689f5eefaf6304be232f8cd707" kindref="member">ExtendableBinaryOutputArchive</ref>(TExtender*<sp/>extender,<sp/>TStream*<sp/>stream_)<sp/>:<sp/><ref refid="classterse_1_1Archive" kindref="compound">BaseArchive</ref>{extender},<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>{stream_}<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classterse_1_1ExtendableBinaryOutputArchive_1a0ba443c66ec9af611eb5e94802478f38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a0ba443c66ec9af611eb5e94802478f38" kindref="member">isOk</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classterse_1_1ExtendableBinaryOutputArchive_1accca92e8ef1fcc7db7d44384959aea08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1accca92e8ef1fcc7db7d44384959aea08" kindref="member">sync</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classterse_1_1ExtendableBinaryOutputArchive_1a59cafa4b48a029db7bcfc38ae2b1d24b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a59cafa4b48a029db7bcfc38ae2b1d24b" kindref="member">label</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="67" refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(<ref refid="structterse_1_1Transparent" kindref="compound">Transparent&lt;T&gt;</ref>&amp;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(source.data);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="classterse_1_1ExtendableBinaryOutputArchive_1a65c4ca01e4e1a02d7f4cdd6aa13e8ce1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a65c4ca01e4e1a02d7f4cdd6aa13e8ce1" kindref="member">process</ref>(<ref refid="structterse_1_1Anchor" kindref="compound">Anchor&lt;OffsetType&gt;</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source.<ref refid="structterse_1_1Anchor_1ab122fd961a772f08358885f58aea7b2c" kindref="member">value</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2f1a75d00cb1d21dc8aa3b7e7a523520" kindref="member">OffsetType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;tell());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classterse_1_1ExtendableBinaryOutputArchive_1aaad121eb9000007ecb6d5e5d403c0e35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1aaad121eb9000007ecb6d5e5d403c0e35" kindref="member">process</ref>(<ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset&lt;OffsetType&gt;</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Record<sp/>the<sp/>position<sp/>where<sp/>the<sp/>offset<sp/>is<sp/>going<sp/>to<sp/>be<sp/>written<sp/>so<sp/>it<sp/>can<sp/>be<sp/>seeked<sp/>to<sp/>later<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>its<sp/>proxy<sp/>is<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>push</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wuseless-cast&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source.<ref refid="structterse_1_1ArchiveOffset_1ad06792700f0b4003ebfc268d0afbc999" kindref="member">position</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">decltype(source.position)</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;tell());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>pop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>the<sp/>actual<sp/>offset<sp/>value<sp/>is<sp/>not<sp/>yet<sp/>known<sp/>at<sp/>the<sp/>time<sp/>when<sp/>its<sp/>declaration<sp/>is<sp/>encountered,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fill<sp/>its<sp/>place<sp/>with<sp/>zeros<sp/>as<sp/>a<sp/>placeholder,<sp/>and<sp/>it<sp/>will<sp/>be<sp/>later<sp/>populated<sp/>when<sp/>its<sp/>associated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>proxy<sp/>is<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveOffset_1a83a2c50912eb7640124534df6577d2e4" kindref="member">ArchiveOffset&lt;OffsetType&gt;::ValueType</ref>{});</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classterse_1_1ExtendableBinaryOutputArchive_1a2e4772f04a43da7a7addd919ab8df1df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2e4772f04a43da7a7addd919ab8df1df" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveOffset_1_1Proxy" kindref="compound">ArchiveOffset&lt;OffsetType&gt;::Proxy</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>position<sp/>of<sp/>the<sp/>stream<sp/>needs<sp/>to<sp/>be<sp/>written<sp/>to<sp/>the<sp/>position<sp/>where<sp/>the<sp/>associated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>`ArchiveOffset`<sp/>is<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>current<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;tell();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(current<sp/>&lt;=<sp/>std::numeric_limits&lt;OffsetType&gt;::max());</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source.<ref refid="structterse_1_1ArchiveOffset_1_1Proxy_1a5dbdae14a3bc2bd79b94b0ed931c8701" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveOffset_1a142797b061f46c5cd9f064d9c5ddfe1f" kindref="member">value</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2f1a75d00cb1d21dc8aa3b7e7a523520" kindref="member">OffsetType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(current);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Seek<sp/>to<sp/>the<sp/>actual<sp/>position<sp/>of<sp/>the<sp/>offset<sp/>marker<sp/>and<sp/>write<sp/>the<sp/>stream&apos;s<sp/>above<sp/>captured<sp/>position<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;seek(source.<ref refid="structterse_1_1ArchiveOffset_1_1Proxy_1a5dbdae14a3bc2bd79b94b0ed931c8701" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveOffset_1ad06792700f0b4003ebfc268d0afbc999" kindref="member">position</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2f1a75d00cb1d21dc8aa3b7e7a523520" kindref="member">OffsetType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(current));</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>to<sp/>the<sp/>earlier<sp/>captured<sp/>stream<sp/>position<sp/>so<sp/>processing<sp/>can<sp/>safely<sp/>resume<sp/>from<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;seek(current);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classterse_1_1ExtendableBinaryOutputArchive_1a8396f0f2e69c097e49a160537dbb9094" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a8396f0f2e69c097e49a160537dbb9094" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveOffset_1_1Proxy" kindref="compound">ArchiveOffset&lt;OffsetType&gt;::Proxy</ref>&amp;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(source);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classterse_1_1ExtendableBinaryOutputArchive_1adb98982df4a50f6ae12037ea317c054a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1adb98982df4a50f6ae12037ea317c054a" kindref="member">process</ref>(<ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize&lt;SizeType, OffsetType&gt;</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Record<sp/>the<sp/>position<sp/>where<sp/>the<sp/>size<sp/>is<sp/>going<sp/>to<sp/>be<sp/>written<sp/>so<sp/>it<sp/>can<sp/>be<sp/>seeked<sp/>to<sp/>later<sp/>when</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>its<sp/>proxy<sp/>is<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>push</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wuseless-cast&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source.<ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">decltype(source.position)</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;tell());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>pop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>the<sp/>actual<sp/>size<sp/>value<sp/>is<sp/>not<sp/>yet<sp/>known<sp/>at<sp/>the<sp/>time<sp/>when<sp/>it&apos;s<sp/>declaration<sp/>is<sp/>encountered,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fill<sp/>it&apos;s<sp/>place<sp/>with<sp/>zeros<sp/>as<sp/>a<sp/>placeholder,<sp/>and<sp/>it<sp/>will<sp/>be<sp/>later<sp/>populated<sp/>when<sp/>it&apos;s<sp/>associated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>proxy<sp/>is<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1a8a4aca343036bd3ad8e1c166054ef6b9" kindref="member">ArchiveSize&lt;SizeType, OffsetType&gt;::ValueType</ref>{});</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classterse_1_1ExtendableBinaryOutputArchive_1af3564e115f6f0d30a2aab5cb9a9c263e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1af3564e115f6f0d30a2aab5cb9a9c263e" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">ArchiveSize&lt;SizeType, OffsetType&gt;::Proxy</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>current<sp/>position<sp/>of<sp/>the<sp/>stream<sp/>minus<sp/>the<sp/>base<sp/>offset<sp/>needs<sp/>to<sp/>be<sp/>written<sp/>to<sp/>the<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>where<sp/>the<sp/>associated<sp/>`ArchiveSize`<sp/>is<sp/>found.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>current<sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;tell();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(source.<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(source.<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;value<sp/>&lt;=<sp/>current);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>current<sp/>-<sp/>source.<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" kindref="member">base</ref>-&gt;value;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(size<sp/>&lt;=<sp/>std::numeric_limits&lt;SizeType&gt;::max());</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source.<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" kindref="member">value</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1afdca38784bb2d8b7d627c557b29a3e15" kindref="member">SizeType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(size);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Seek<sp/>to<sp/>the<sp/>actual<sp/>position<sp/>of<sp/>the<sp/>size<sp/>marker<sp/>and<sp/>write<sp/>the<sp/>above<sp/>calculated<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;seek(source.<ref refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" kindref="member">target</ref>-&gt;<ref refid="structterse_1_1ArchiveSize_1a000647cc9c7f5e5317bd65b6d5b2a0be" kindref="member">position</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1afdca38784bb2d8b7d627c557b29a3e15" kindref="member">SizeType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(size));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>to<sp/>the<sp/>earlier<sp/>captured<sp/>stream<sp/>position<sp/>so<sp/>processing<sp/>can<sp/>safely<sp/>resume<sp/>from<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;seek(current);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classterse_1_1ExtendableBinaryOutputArchive_1a3dd79dc61b7b8e79914b8ca17e1c0ea2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a3dd79dc61b7b8e79914b8ca17e1c0ea2" kindref="member">process</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1ArchiveSize_1_1Proxy" kindref="compound">ArchiveSize&lt;SizeType, OffsetType&gt;::Proxy</ref>&amp;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(source);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="147" refid="classterse_1_1ExtendableBinaryOutputArchive_1af8dbd61aaa36b5f1e6772105b20ec76a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1af8dbd61aaa36b5f1e6772105b20ec76a" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1Blob" kindref="compound">Blob&lt;T, Args...&gt;</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1Blob" kindref="compound">Blob</ref>&lt;T,<sp/>Args...&gt;::value_type;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source.<ref refid="classterse_1_1Blob_1a7cf202e916939e6b9c12a6adc76af444" kindref="member">size</ref>()<sp/>!=<sp/>0ul)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;write(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source.<ref refid="classterse_1_1Blob_1ac0650cbe35b02e1d3541951ffe6eb082" kindref="member">data</ref>()),<sp/>source.<ref refid="classterse_1_1Blob_1a7cf202e916939e6b9c12a6adc76af444" kindref="member">size</ref>()<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ValueType));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::has_save_member&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="157" refid="classterse_1_1ExtendableBinaryOutputArchive_1a2718d1f84d0ccca317ce84b1aef305dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;::type<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a2718d1f84d0ccca317ce84b1aef305dd" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source).save(*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TExtender*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::has_serialize_member&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="163" refid="classterse_1_1ExtendableBinaryOutputArchive_1a8b944fef7723b9533b4ff83316d67e97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;::type<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a8b944fef7723b9533b4ff83316d67e97" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source).serialize(*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TExtender*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::has_save_function&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="169" refid="classterse_1_1ExtendableBinaryOutputArchive_1a9338e7925812c2eaf3aa5c1b1b48ab4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;::type<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a9338e7925812c2eaf3aa5c1b1b48ab4e" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>save(*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TExtender*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::has_serialize_function&lt;T&gt;::value,</highlight></codeline>
+<codeline lineno="175" refid="classterse_1_1ExtendableBinaryOutputArchive_1ac6f28d5a44701236d5d2c677ffc4a2c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;::type<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1ac6f28d5a44701236d5d2c677ffc4a2c7" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>serialize(*</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">TExtender*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">T&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source));</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;!traits::has_save_member&lt;T&gt;::value<sp/>&amp;&amp;<sp/>!<ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">traits::has_serialize_member&lt;T&gt;::value</ref><sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!<ref refid="structterse_1_1traits_1_1has__save__function" kindref="compound">traits::has_save_function&lt;T&gt;::value</ref><sp/>&amp;&amp;<sp/>!<ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">traits::has_serialize_function&lt;T&gt;::value</ref>,</highlight></codeline>
+<codeline lineno="182" refid="classterse_1_1ExtendableBinaryOutputArchive_1a62838c7b634a3e036327747480045023" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">&gt;::type<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a62838c7b634a3e036327747480045023" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>T<sp/>swapped;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(&amp;swapped,<sp/>&amp;source,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structterse_1_1ByteSwapper" kindref="compound">SwapTo&lt;EByteOrder&gt;::swap</ref>(swapped);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;write(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;swapped),<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(T));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/>std::</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="191" refid="classterse_1_1ExtendableBinaryOutputArchive_1afe70b635999e16416e838c4a1b651ae1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1afe70b635999e16416e838c4a1b651ae1" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::array&lt;T,<sp/>N&gt;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" kindref="member">processElements</ref>(source);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="196" refid="classterse_1_1ExtendableBinaryOutputArchive_1aaa13983c52b4ad342d3cc6ec5bead6b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1aaa13983c52b4ad342d3cc6ec5bead6b7" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;T,<sp/>Args...&gt;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1affb83332e7aec3a0bcddde72f51dd3a4" kindref="member">processSize</ref>(source.size());</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" kindref="member">processElements</ref>(source);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="202" refid="classterse_1_1ExtendableBinaryOutputArchive_1a4a8660cb5e4cb89608c2e93a1dad8c8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4a8660cb5e4cb89608c2e93a1dad8c8f" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray&lt;T, Args...&gt;</ref>&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1affb83332e7aec3a0bcddde72f51dd3a4" kindref="member">processSize</ref>(source.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" kindref="member">processElements</ref>(source);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="208" refid="classterse_1_1ExtendableBinaryOutputArchive_1a94d0409172c418de9cc136a3ffb3d7ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a94d0409172c418de9cc136a3ffb3d7ef" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::basic_string&lt;T,<sp/>Args...&gt;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1affb83332e7aec3a0bcddde72f51dd3a4" kindref="member">processSize</ref>(source.size());</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" kindref="member">processElements</ref>(source);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="214" refid="classterse_1_1ExtendableBinaryOutputArchive_1a8df20daf110f27027c6299103d7d0442" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a8df20daf110f27027c6299103d7d0442" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::pair&lt;K,<sp/>V&gt;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(source.first);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(source.second);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>V&gt;</highlight></codeline>
+<codeline lineno="220" refid="classterse_1_1ExtendableBinaryOutputArchive_1a141f28eee91f40a6a39f2030a390a215" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a141f28eee91f40a6a39f2030a390a215" kindref="member">process</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::tuple&lt;K,<sp/>V&gt;&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(std::get&lt;0&gt;(source));</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(std::get&lt;1&gt;(source));</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="classterse_1_1ExtendableBinaryOutputArchive_1affb83332e7aec3a0bcddde72f51dd3a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1affb83332e7aec3a0bcddde72f51dd3a4" kindref="member">processSize</ref>(std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(size<sp/>&lt;=<sp/>std::numeric_limits&lt;SizeType&gt;::max());</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">process</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1afdca38784bb2d8b7d627c557b29a3e15" kindref="member">SizeType</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(size));</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;!traits::is_batchable&lt;TContainer&gt;::value&gt;::type</highlight></codeline>
+<codeline lineno="232" refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a4e98f41fe33ce6e013c835ec9687cba6" kindref="member">processElements</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TContainer&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>element<sp/>:<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(element);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::is_batchable&lt;TContainer&gt;::value<sp/>&amp;&amp;<sp/><ref refid="structterse_1_1traits_1_1has__wide__elements" kindref="compound">traits::has_wide_elements&lt;TContainer&gt;::value</ref>&gt;::type</highlight></codeline>
+<codeline lineno="240" refid="classterse_1_1ExtendableBinaryOutputArchive_1abd105483f289fc94aa4888df98233883" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1abd105483f289fc94aa4888df98233883" kindref="member">processElements</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TContainer&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>element<sp/>:<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" kindref="member">BaseArchive::dispatch</ref>(element);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TContainer&gt;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::enable_if&lt;traits::is_batchable&lt;TContainer&gt;::value<sp/>&amp;&amp;<sp/>!<ref refid="structterse_1_1traits_1_1has__wide__elements" kindref="compound">traits::has_wide_elements&lt;TContainer&gt;::value</ref>&gt;::type</highlight></codeline>
+<codeline lineno="248" refid="classterse_1_1ExtendableBinaryOutputArchive_1a82f4921b9f4ddb89fade0886126e318a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a82f4921b9f4ddb89fade0886126e318a" kindref="member">processElements</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TContainer&amp;<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">ValueType<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TContainer::value_type;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>source.size();</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>0ul)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-reinterpret-cast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>-&gt;write(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(&amp;source[0]),<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ValueType));</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="258" refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TStream*<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a68a43b2cbbfa64fd98d5171969da0c1d" kindref="member">stream</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TStream,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TSize<sp/>=<sp/>std::u</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">32_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TOffset<sp/>=<sp/>TSize,<sp/>Endianness<sp/>EByteOrder<sp/>=<sp/>Endianness::Network&gt;</highlight></codeline>
+<codeline lineno="262" refid="classterse_1_1BinaryOutputArchive" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1BinaryOutputArchive" kindref="compound">BinaryOutputArchive</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive" kindref="compound">ExtendableBinaryOutputArchive</ref>&lt;BinaryOutputArchive&lt;TStream,<sp/>TSize,<sp/>TOffset,<sp/>EByteOrder&gt;,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TStream,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TSize,</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TOffset,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EByteOrder&gt;<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="268" refid="classterse_1_1BinaryOutputArchive_1a97809cb4969b681381eb7c8ff7d86b3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1ExtendableBinaryOutputArchive" kindref="compound">BaseArchive</ref><sp/>=<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive" kindref="compound">ExtendableBinaryOutputArchive&lt;BinaryOutputArchive, TStream, TSize, TOffset, EByteOrder&gt;</ref>;</highlight></codeline>
+<codeline lineno="269" refid="classterse_1_1BinaryOutputArchive_1ae4beea0c3a98795fc5bc2c16b23991fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1Archive" kindref="compound">Archive&lt;BinaryOutputArchive&gt;</ref>;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="272" refid="classterse_1_1BinaryOutputArchive_1a665b72b40a1983363dc5f4ceff5640f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1BinaryOutputArchive_1a665b72b40a1983363dc5f4ceff5640f1" kindref="member">BinaryOutputArchive</ref>(TStream*<sp/>stream_)<sp/>:<sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive" kindref="compound">BaseArchive</ref>{this,<sp/>stream_}<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="277" refid="classterse_1_1BinaryOutputArchive_1a8de8d76c4033d818d6d349237c278def" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1BinaryOutputArchive_1a8de8d76c4033d818d6d349237c278def" kindref="member">process</ref>(T&amp;&amp;<sp/>dest)<sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1ExtendableBinaryOutputArchive_1a72a8fb88226185103eced8d5ef521bfd" kindref="member">BaseArchive::process</ref>(std::forward&lt;T&gt;(dest));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/OutputArchive.h"/>
+  </compounddef>
+</doxygen>

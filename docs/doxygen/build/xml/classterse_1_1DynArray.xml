@@ -1,0 +1,867 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classterse_1_1DynArray" kind="class" language="C++" prot="public">
+    <compoundname>terse::DynArray</compoundname>
+    <includes refid="DynArray_8h" local="no">DynArray.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+      <param>
+        <type>class TAllocator</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" prot="public" static="no">
+        <type>T</type>
+        <definition>using terse::DynArray&lt; T, TAllocator &gt;::value_type =  T</definition>
+        <argsstring></argsstring>
+        <name>value_type</name>
+        <qualifiedname>terse::DynArray::value_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="31" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" prot="public" static="no">
+        <type>TAllocator</type>
+        <definition>using terse::DynArray&lt; T, TAllocator &gt;::allocator_type =  TAllocator</definition>
+        <argsstring></argsstring>
+        <name>allocator_type</name>
+        <qualifiedname>terse::DynArray::allocator_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="32" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" prot="private" static="no">
+        <type>std::unique_ptr&lt; <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>, std::function&lt; void(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *)&gt; &gt;</type>
+        <definition>using terse::DynArray&lt; T, TAllocator &gt;::pointer_type =  std::unique_ptr&lt;value_type, std::function&lt;void (value_type*)&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>pointer_type</name>
+        <qualifiedname>terse::DynArray::pointer_type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="35" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" prot="private" static="no" mutable="no">
+        <type><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref></type>
+        <definition>allocator_type terse::DynArray&lt; T, TAllocator &gt;::alloc</definition>
+        <argsstring></argsstring>
+        <name>alloc</name>
+        <qualifiedname>terse::DynArray::alloc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="225" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="225" bodyend="-1"/>
+        <referencedby refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" compoundref="DynArray_8h" startline="218" endline="222">terse::DynArray&lt; T, TAllocator &gt;::create</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" compoundref="DynArray_8h" startline="113" endline="115">terse::DynArray&lt; T, TAllocator &gt;::get_allocator</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" compoundref="DynArray_8h" startline="88" endline="94">terse::DynArray&lt; T, TAllocator &gt;::operator=</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" prot="private" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t terse::DynArray&lt; T, TAllocator &gt;::sz</definition>
+        <argsstring></argsstring>
+        <name>sz</name>
+        <qualifiedname>terse::DynArray::sz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="226" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="226" bodyend="-1"/>
+        <referencedby refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" compoundref="DynArray_8h" startline="160" endline="162">terse::DynArray&lt; T, TAllocator &gt;::cend</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" compoundref="DynArray_8h" startline="117" endline="120">terse::DynArray&lt; T, TAllocator &gt;::clear</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" compoundref="DynArray_8h" startline="134" endline="136">terse::DynArray&lt; T, TAllocator &gt;::empty</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" compoundref="DynArray_8h" startline="152" endline="154">terse::DynArray&lt; T, TAllocator &gt;::end</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" compoundref="DynArray_8h" startline="88" endline="94">terse::DynArray&lt; T, TAllocator &gt;::operator=</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" prot="private" static="no" mutable="no">
+        <type><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref></type>
+        <definition>pointer_type terse::DynArray&lt; T, TAllocator &gt;::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>terse::DynArray::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="227" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="227" bodyend="-1"/>
+        <referencedby refid="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" compoundref="DynArray_8h" startline="117" endline="120">terse::DynArray&lt; T, TAllocator &gt;::clear</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" compoundref="DynArray_8h" startline="88" endline="94">terse::DynArray&lt; T, TAllocator &gt;::operator=</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classterse_1_1DynArray_1a4cfa3da51c98e9db0bc7a8fc5a93944d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(const allocator_type &amp;allocator)</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref> &amp;</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="38" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a409a85316ae3cd6ec9836ca910e1aaa8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>()</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="44" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="44" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a35e4ad7bbb91c8a07d2ea15c7a82d96a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(std::size_t size, const allocator_type &amp;allocator=allocator_type{})</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref> &amp;</type>
+          <declname>allocator</declname>
+          <defval><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="47" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1aba7306ecdff50ed46a9bad33959c9e87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(std::size_t size, const value_type &amp;value, const allocator_type &amp;allocator=allocator_type{})</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref> &amp;</type>
+          <declname>allocator</declname>
+          <defval><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="53" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a137a1274958b94c1872c30d9bb7ec876" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(const value_type *source, std::size_t size, const allocator_type &amp;allocator=allocator_type{})</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref> &amp;</type>
+          <declname>allocator</declname>
+          <defval><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="59" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="59" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a994c7321fd20176b885ba7358450b151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TIterator</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(TIterator start, TIterator end, const allocator_type &amp;allocator=allocator_type{})</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>TIterator</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>TIterator</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref> &amp;</type>
+          <declname>allocator</declname>
+          <defval><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="68" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="68" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a03870b3f7cc3619339532ad136815b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::~DynArray</definition>
+        <argsstring>()=default</argsstring>
+        <name>~DynArray</name>
+        <qualifiedname>terse::DynArray::~DynArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="80" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(const DynArray &amp;rhs)</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="82" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="82" bodyend="86"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;</type>
+        <definition>DynArray &amp; terse::DynArray&lt; T, TAllocator &gt;::operator=</definition>
+        <argsstring>(const DynArray &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>terse::DynArray::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="88" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="88" bodyend="94"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a0737ae316e5d6beff79775b7163b043d" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::DynArray&lt; T, TAllocator &gt;::DynArray</definition>
+        <argsstring>(DynArray &amp;&amp;rhs) noexcept</argsstring>
+        <name>DynArray</name>
+        <qualifiedname>terse::DynArray::DynArray</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="96" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1af0a0f8bb191e288a832d58ececa04005" prot="public" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;</type>
+        <definition>DynArray &amp; terse::DynArray&lt; T, TAllocator &gt;::operator=</definition>
+        <argsstring>(DynArray &amp;&amp;rhs) noexcept</argsstring>
+        <name>operator=</name>
+        <qualifiedname>terse::DynArray::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="106" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="106" bodyend="111"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref></type>
+        <definition>allocator_type terse::DynArray&lt; T, TAllocator &gt;::get_allocator</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>get_allocator</name>
+        <qualifiedname>terse::DynArray::get_allocator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="113" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="113" bodyend="115"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <referencedby refid="classterse_1_1Blob_1a9d143779c4cf73254ea6845c9d3ee4cf" compoundref="Blob_8h" startline="31" endline="33">terse::Blob&lt; T, TAllocator &gt;::get_allocator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::DynArray&lt; T, TAllocator &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>terse::DynArray::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="117" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="117" bodyend="120"/>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="structdna_1_1RawTextureCoordinateVector_1ae77dba5c471f1fbda41c8ac6cb371845" compoundref="dna_2DNA_8h" startline="642" endline="645">dna::RawTextureCoordinateVector::clear</referencedby>
+        <referencedby refid="structdna_1_1RawVertexLayoutVector_1aa06186674d13dbb3946296d70bae00a4" compoundref="dna_2DNA_8h" startline="675" endline="679">dna::RawVertexLayoutVector::clear</referencedby>
+        <referencedby refid="structdnac_1_1RawTextureCoordinateVector_1a4716cac943ac056187741fbbb9a5dea7" compoundref="dnacalib_2dna_2DNA_8h" startline="642" endline="645">dnac::RawTextureCoordinateVector::clear</referencedby>
+        <referencedby refid="structdnac_1_1RawVertexLayoutVector_1a1b8cce5c5ccd4d145593225fa24f96ca" compoundref="dnacalib_2dna_2DNA_8h" startline="675" endline="679">dnac::RawVertexLayoutVector::clear</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>value_type * terse::DynArray&lt; T, TAllocator &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <qualifiedname>terse::DynArray::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="122" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="122" bodyend="124"/>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <referencedby refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" compoundref="DynArray_8h" startline="206" endline="215">terse::DynArray&lt; T, TAllocator &gt;::assign</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" compoundref="DynArray_8h" startline="148" endline="150">terse::DynArray&lt; T, TAllocator &gt;::begin</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" compoundref="DynArray_8h" startline="156" endline="158">terse::DynArray&lt; T, TAllocator &gt;::cbegin</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" compoundref="DynArray_8h" startline="160" endline="162">terse::DynArray&lt; T, TAllocator &gt;::cend</referencedby>
+        <referencedby refid="classterse_1_1Blob_1ac0650cbe35b02e1d3541951ffe6eb082" compoundref="Blob_8h" startline="35" endline="37">terse::Blob&lt; T, TAllocator &gt;::data</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" compoundref="DynArray_8h" startline="82" endline="86">terse::DynArray&lt; T, TAllocator &gt;::DynArray</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" compoundref="DynArray_8h" startline="152" endline="154">terse::DynArray&lt; T, TAllocator &gt;::end</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" compoundref="DynArray_8h" startline="138" endline="141">terse::DynArray&lt; T, TAllocator &gt;::operator[]</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a5d44d17c2c9312e1c85136999c43c819" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>const value_type * terse::DynArray&lt; T, TAllocator &gt;::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <qualifiedname>terse::DynArray::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="126" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="126" bodyend="128"/>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t terse::DynArray&lt; T, TAllocator &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <qualifiedname>terse::DynArray::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="130" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="130" bodyend="132"/>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classdna_1_1JointFilter_1abb137be3d53a09a0f490a87e1c7e4e67" compoundref="filters_2JointFilter_8cpp" startline="27" endline="57">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1af26bea27bb4880e349a7c463dce65fcc" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="27" endline="57">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" compoundref="DynArray_8h" startline="206" endline="215">terse::DynArray&lt; T, TAllocator &gt;::assign</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" compoundref="DynArray_8h" startline="218" endline="222">terse::DynArray&lt; T, TAllocator &gt;::create</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" compoundref="DynArray_8h" startline="82" endline="86">terse::DynArray&lt; T, TAllocator &gt;::DynArray</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" compoundref="DynArray_8h" startline="138" endline="141">terse::DynArray&lt; T, TAllocator &gt;::operator[]</referencedby>
+        <referencedby refid="classterse_1_1ExtendableBinaryOutputArchive_1a4a8660cb5e4cb89608c2e93a1dad8c8f" compoundref="binary_2OutputArchive_8h" startline="202" endline="205">terse::ExtendableBinaryOutputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" compoundref="json_2InputArchive_8h" startline="340" endline="384">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a968050b5aa2795d9bc479c856874a93c" compoundref="FilteredInputArchive_8cpp" startline="288" endline="296">dna::FilteredInputArchive::process</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</referencedby>
+        <referencedby refid="structdna_1_1RawTextureCoordinateVector_1af83fd366652bfb16fe1190257180deb2" compoundref="dna_2DNA_8h" startline="637" endline="640">dna::RawTextureCoordinateVector::size</referencedby>
+        <referencedby refid="structdna_1_1RawVertexLayoutVector_1a6ac39be4585f95317c18216dcc0ce381" compoundref="dna_2DNA_8h" startline="670" endline="673">dna::RawVertexLayoutVector::size</referencedby>
+        <referencedby refid="structdnac_1_1RawTextureCoordinateVector_1ae5dd6fb7b34cbcf4eae8fb8f072e937e" compoundref="dnacalib_2dna_2DNA_8h" startline="637" endline="640">dnac::RawTextureCoordinateVector::size</referencedby>
+        <referencedby refid="structdnac_1_1RawVertexLayoutVector_1acca54678951263bfc939d4b2c18c43c9" compoundref="dnacalib_2dna_2DNA_8h" startline="670" endline="673">dnac::RawVertexLayoutVector::size</referencedby>
+        <referencedby refid="classterse_1_1Blob_1a7cf202e916939e6b9c12a6adc76af444" compoundref="Blob_8h" startline="43" endline="45">terse::Blob&lt; T, TAllocator &gt;::size</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::DynArray&lt; T, TAllocator &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>terse::DynArray::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="134" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="134" bodyend="136"/>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" compoundref="filters_2JointFilter_8cpp" startline="117" endline="167">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="117" endline="167">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classdna_1_1FilteredInputArchive_1a373b95175b6399a85195bd0237553614" compoundref="FilteredInputArchive_8cpp" startline="198" endline="210">dna::FilteredInputArchive::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> &amp;</type>
+        <definition>value_type &amp; terse::DynArray&lt; T, TAllocator &gt;::operator[]</definition>
+        <argsstring>(std::size_t index)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>terse::DynArray::operator[]</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="138" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="138" bodyend="141"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1acfdcc391b1b0647b1df843c7f7001196" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> &amp;</type>
+        <definition>const value_type &amp; terse::DynArray&lt; T, TAllocator &gt;::operator[]</definition>
+        <argsstring>(std::size_t index) const</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>terse::DynArray::operator[]</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="143" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="143" bodyend="146"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>value_type * terse::DynArray&lt; T, TAllocator &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>terse::DynArray::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="148" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="148" bodyend="150"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <referencedby refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" compoundref="filters_2JointFilter_8cpp" startline="117" endline="167">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="117" endline="167">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1_1Impl_1a765e5aba59db044180e88a69baa32dbd" compoundref="ScaleCommand_8cpp" startline="74" endline="92">dnac::ScaleCommand::Impl::scaleJointBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>value_type * terse::DynArray&lt; T, TAllocator &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>terse::DynArray::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="152" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="152" bodyend="154"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" compoundref="filters_2JointFilter_8cpp" startline="117" endline="167">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="117" endline="167">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" compoundref="DynArray_8h" startline="206" endline="215">terse::DynArray&lt; T, TAllocator &gt;::assign</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>const value_type * terse::DynArray&lt; T, TAllocator &gt;::cbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>cbegin</name>
+        <qualifiedname>terse::DynArray::cbegin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="156" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="156" bodyend="158"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <referencedby refid="classterse_1_1DynArray_1af9a3420f730fc0af4d97ef3920474caa" compoundref="DynArray_8h" startline="164" endline="166">terse::DynArray&lt; T, TAllocator &gt;::begin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>const value_type * terse::DynArray&lt; T, TAllocator &gt;::cend</definition>
+        <argsstring>() const</argsstring>
+        <name>cend</name>
+        <qualifiedname>terse::DynArray::cend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="160" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="160" bodyend="162"/>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classterse_1_1DynArray_1a0d431ca272ef4c339ba146ba118ea94d" compoundref="DynArray_8h" startline="168" endline="170">terse::DynArray&lt; T, TAllocator &gt;::end</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1af9a3420f730fc0af4d97ef3920474caa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>const value_type * terse::DynArray&lt; T, TAllocator &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <qualifiedname>terse::DynArray::begin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="164" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="164" bodyend="166"/>
+        <references refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" compoundref="DynArray_8h" startline="156" endline="158">terse::DynArray&lt; T, TAllocator &gt;::cbegin</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a0d431ca272ef4c339ba146ba118ea94d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> *</type>
+        <definition>const value_type * terse::DynArray&lt; T, TAllocator &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <qualifiedname>terse::DynArray::end</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="168" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="168" bodyend="170"/>
+        <references refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" compoundref="DynArray_8h" startline="160" endline="162">terse::DynArray&lt; T, TAllocator &gt;::cend</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::DynArray&lt; T, TAllocator &gt;::resize</definition>
+        <argsstring>(std::size_t size, const value_type &amp;value)</argsstring>
+        <name>resize</name>
+        <qualifiedname>terse::DynArray::resize</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref> &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="172" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="172" bodyend="185"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <references refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" compoundref="DynArray_8h" startline="148" endline="150">terse::DynArray&lt; T, TAllocator &gt;::begin</references>
+        <references refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" compoundref="DynArray_8h" startline="218" endline="222">terse::DynArray&lt; T, TAllocator &gt;::create</references>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" compoundref="filters_2JointFilter_8cpp" startline="117" endline="167">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="117" endline="167">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" compoundref="json_2InputArchive_8h" startline="340" endline="384">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1acc3ad7b17dfed0fb4671fa91084509b8" compoundref="DynArray_8h" startline="187" endline="189">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1acc3ad7b17dfed0fb4671fa91084509b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::DynArray&lt; T, TAllocator &gt;::resize</definition>
+        <argsstring>(std::size_t size)</argsstring>
+        <name>resize</name>
+        <qualifiedname>terse::DynArray::resize</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="187" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="187" bodyend="189"/>
+        <references refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</definition>
+        <argsstring>(std::size_t size)</argsstring>
+        <name>resize_uninitialized</name>
+        <qualifiedname>terse::DynArray::resize_uninitialized</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="191" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="191" bodyend="203"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <references refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" compoundref="DynArray_8h" startline="218" endline="222">terse::DynArray&lt; T, TAllocator &gt;::create</references>
+        <references refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" compoundref="DynArray_8h" startline="227">terse::DynArray&lt; T, TAllocator &gt;::ptr</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <references refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" compoundref="DynArray_8h" startline="226">terse::DynArray&lt; T, TAllocator &gt;::sz</references>
+        <referencedby refid="classdna_1_1JointFilter_1adc24960764e58bacbdd5edd6d603ba6a" compoundref="filters_2JointFilter_8cpp" startline="117" endline="167">dna::JointFilter::apply</referencedby>
+        <referencedby refid="classdnac_1_1JointFilter_1a603b09ff91ed8912672a7eda3109868a" compoundref="alib_2dna_2filters_2JointFilter_8cpp" startline="117" endline="167">dnac::JointFilter::apply</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" compoundref="DynArray_8h" startline="206" endline="215">terse::DynArray&lt; T, TAllocator &gt;::assign</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1af5aad5c1b12562405a19bca0f78d4bf9" compoundref="json_2InputArchive_8h" startline="340" endline="384">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1a6a2c06bc2da07187f709fc1bfa391b53" compoundref="binary_2InputArchive_8h" startline="255" endline="257">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1Blob_1a337f310c583f03319a8104aad0367d9f" compoundref="Blob_8h" startline="47" endline="49">terse::Blob&lt; T, TAllocator &gt;::setSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TIterator</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::DynArray&lt; T, TAllocator &gt;::assign</definition>
+        <argsstring>(TIterator start, TIterator end)</argsstring>
+        <name>assign</name>
+        <qualifiedname>terse::DynArray::assign</qualifiedname>
+        <param>
+          <type>TIterator</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>TIterator</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="206" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="206" bodyend="215"/>
+        <references refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" compoundref="utils_2Extd_8h" startline="123" endline="125">extd::copy</references>
+        <references refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" compoundref="DynArray_8h" startline="122" endline="124">terse::DynArray&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" compoundref="DynArray_8h" startline="152" endline="154">terse::DynArray&lt; T, TAllocator &gt;::end</references>
+        <references refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref></type>
+        <definition>static pointer_type terse::DynArray&lt; T, TAllocator &gt;::create</definition>
+        <argsstring>(std::size_t size, allocator_type alloc)</argsstring>
+        <name>create</name>
+        <qualifiedname>terse::DynArray::create</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref></type>
+          <declname>alloc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="218" column="29" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="218" bodyend="222"/>
+        <references refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" compoundref="DynArray_8h" startline="225">terse::DynArray&lt; T, TAllocator &gt;::alloc</references>
+        <references refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" compoundref="DynArray_8h" startline="130" endline="132">terse::DynArray&lt; T, TAllocator &gt;::size</references>
+        <referencedby refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" compoundref="DynArray_8h" startline="172" endline="185">terse::DynArray&lt; T, TAllocator &gt;::resize</referencedby>
+        <referencedby refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Resizable array-like abstraction for trivial-types only. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>terse::DynArray&lt; float &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>terse::DynArray&lt; std::uint16_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>terse::DynArray&lt; std::uint32_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>terse::DynArray&lt; value_type, allocator_type &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; value_type, allocator_type &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>T</label>
+      </node>
+      <node id="3">
+        <label>std::unique_ptr&lt; T &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::unique_ptr&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</label>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" line="27" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h" bodystart="27" bodyend="229"/>
+    <listofallmembers>
+      <member refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" prot="private" virt="non-virtual"><scope>terse::DynArray</scope><name>alloc</name></member>
+      <member refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>allocator_type</name></member>
+      <member refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>assign</name></member>
+      <member refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>begin</name></member>
+      <member refid="classterse_1_1DynArray_1af9a3420f730fc0af4d97ef3920474caa" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>begin</name></member>
+      <member refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>cbegin</name></member>
+      <member refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>cend</name></member>
+      <member refid="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>clear</name></member>
+      <member refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" prot="private" virt="non-virtual"><scope>terse::DynArray</scope><name>create</name></member>
+      <member refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>data</name></member>
+      <member refid="classterse_1_1DynArray_1a5d44d17c2c9312e1c85136999c43c819" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>data</name></member>
+      <member refid="classterse_1_1DynArray_1a4cfa3da51c98e9db0bc7a8fc5a93944d" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a409a85316ae3cd6ec9836ca910e1aaa8" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a35e4ad7bbb91c8a07d2ea15c7a82d96a" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1aba7306ecdff50ed46a9bad33959c9e87" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a137a1274958b94c1872c30d9bb7ec876" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a994c7321fd20176b885ba7358450b151" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1a0737ae316e5d6beff79775b7163b043d" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>DynArray</name></member>
+      <member refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>empty</name></member>
+      <member refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>end</name></member>
+      <member refid="classterse_1_1DynArray_1a0d431ca272ef4c339ba146ba118ea94d" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>end</name></member>
+      <member refid="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>get_allocator</name></member>
+      <member refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>operator=</name></member>
+      <member refid="classterse_1_1DynArray_1af0a0f8bb191e288a832d58ececa04005" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>operator=</name></member>
+      <member refid="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>operator[]</name></member>
+      <member refid="classterse_1_1DynArray_1acfdcc391b1b0647b1df843c7f7001196" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>operator[]</name></member>
+      <member refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" prot="private" virt="non-virtual"><scope>terse::DynArray</scope><name>pointer_type</name></member>
+      <member refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" prot="private" virt="non-virtual"><scope>terse::DynArray</scope><name>ptr</name></member>
+      <member refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>resize</name></member>
+      <member refid="classterse_1_1DynArray_1acc3ad7b17dfed0fb4671fa91084509b8" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>resize</name></member>
+      <member refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>resize_uninitialized</name></member>
+      <member refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>size</name></member>
+      <member refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" prot="private" virt="non-virtual"><scope>terse::DynArray</scope><name>sz</name></member>
+      <member refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>value_type</name></member>
+      <member refid="classterse_1_1DynArray_1a03870b3f7cc3619339532ad136815b21" prot="public" virt="non-virtual"><scope>terse::DynArray</scope><name>~DynArray</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacesc" kind="namespace" language="C++">
+    <compoundname>sc</compoundname>
+    <innerclass refid="classsc_1_1Status" prot="public">sc::Status</innerclass>
+    <innerclass refid="structsc_1_1StatusCode" prot="public">sc::StatusCode</innerclass>
+    <innerclass refid="classsc_1_1StatusCodeRegistry" prot="public">sc::StatusCodeRegistry</innerclass>
+    <innerclass refid="classsc_1_1StatusProvider" prot="public">sc::StatusProvider</innerclass>
+    <innerclass refid="classsc_1_1StatusStorage" prot="public">sc::StatusStorage</innerclass>
+    <innernamespace refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03">sc::anonymous_namespace{Storage.cpp}</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacesc_1a613ada3e4c3dcea1029b35e841ac0cd7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref></type>
+        <definition>const StatusCode sc::OK</definition>
+        <argsstring></argsstring>
+        <name>OK</name>
+        <qualifiedname>sc::OK</qualifiedname>
+        <initializer>{0, &quot;Ok&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/PredefinedCodes.h" line="9" column="25" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/PredefinedCodes.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classsc_1_1StatusCodeRegistry_1ae25f66a04a1ab6fd799cc79337d905e4" compoundref="Registry_8cpp" startline="32" endline="50">sc::StatusCodeRegistry::insert</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1ab91ef0d842f53a30e35783d01679637c" compoundref="Storage_8cpp" startline="51" endline="53">sc::StatusStorage::isOk</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1af28b57ec9085479d61598e4c6aeda801" compoundref="Storage_8cpp" startline="42" endline="45">sc::StatusStorage::reset</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacesc_1a271fd165731ba3383150517f4da94bc2" prot="public" static="yes" mutable="no">
+        <type>thread_local StatusCodeStorage</type>
+        <definition>thread_local StatusCodeStorage sc::currentStatus</definition>
+        <argsstring></argsstring>
+        <name>currentStatus</name>
+        <qualifiedname>sc::currentStatus</qualifiedname>
+        <initializer>{0, &quot;Ok&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Storage.cpp" line="32" column="39" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Storage.cpp" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classsc_1_1StatusStorage_1a328151063293a20525c7144765a43cad" compoundref="Storage_8cpp" startline="55" endline="57">sc::StatusStorage::bufferSize</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1a53a408f877bd65c6faec0779c80ecde7" compoundref="Storage_8cpp" startline="47" endline="49">sc::StatusStorage::get</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1ab91ef0d842f53a30e35783d01679637c" compoundref="Storage_8cpp" startline="51" endline="53">sc::StatusStorage::isOk</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1af28b57ec9085479d61598e4c6aeda801" compoundref="Storage_8cpp" startline="42" endline="45">sc::StatusStorage::reset</referencedby>
+        <referencedby refid="classsc_1_1StatusStorage_1a9f3710c04a88dd49df6ae1cc9ea02086" compoundref="Storage_8cpp" startline="34" endline="40">sc::StatusStorage::set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesc_1aaeb76ae1ed6bb512b49bac3eba3c9530" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sc::operator==</definition>
+        <argsstring>(const StatusCode &amp;lhs, const StatusCode &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>sc::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/status/StatusCode.h" line="16" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/status/StatusCode.h" bodystart="16" bodyend="18"/>
+        <references refid="structsc_1_1StatusCode_1a9a44c4db8f029093d044173054459305" compoundref="StatusCode_8h" startline="12">sc::StatusCode::code</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacesc_1a2abbbace305bfb49bed033e874f6aeb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sc::operator!=</definition>
+        <argsstring>(const StatusCode &amp;lhs, const StatusCode &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>sc::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/status/StatusCode.h" line="20" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/status/StatusCode.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesc_1a57bee0d86ee30da6e6ae99f005d8e120" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_set&lt; int &gt; &amp;</type>
+        <definition>static std::unordered_set&lt; int &gt; &amp; sc::getRegistry</definition>
+        <argsstring>()</argsstring>
+        <name>getRegistry</name>
+        <qualifiedname>sc::getRegistry</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Registry.cpp" line="20" column="27" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Registry.cpp" bodystart="20" bodyend="30"/>
+        <referencedby refid="classsc_1_1StatusCodeRegistry_1ae6ce1bd0e7e206085e54af7c27b5ccce" compoundref="Registry_8cpp" startline="52" endline="55">sc::StatusCodeRegistry::contains</referencedby>
+        <referencedby refid="classsc_1_1StatusCodeRegistry_1ae25f66a04a1ab6fd799cc79337d905e4" compoundref="Registry_8cpp" startline="32" endline="50">sc::StatusCodeRegistry::insert</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/status/Provider.h" line="20" column="1"/>
+  </compounddef>
+</doxygen>

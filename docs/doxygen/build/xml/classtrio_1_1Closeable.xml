@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classtrio_1_1Closeable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>trio::Closeable</compoundname>
+    <derivedcompoundref refid="classtrio_1_1Controllable" prot="public" virt="non-virtual">trio::Controllable</derivedcompoundref>
+    <includes refid="Concepts_8h" local="no">Concepts.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtrio_1_1Closeable_1ac2e99d3bd99a39cf528ba29b1ba0baf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void trio::Closeable::close</definition>
+        <argsstring>()=0</argsstring>
+        <name>close</name>
+        <qualifiedname>trio::Closeable::close</qualifiedname>
+        <reimplementedby refid="classtrio_1_1FileStreamImpl_1a42f32344da4b9686abee8a71d4730ccb">close</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryMappedFileStreamFallback_1abe6e13944485e15ddc89445c601ac03d">close</reimplementedby>
+        <reimplementedby refid="classtrio_1_1MemoryStreamImpl_1a03aeffcc39b1745605befd7f0c36f2e0">close</reimplementedby>
+        <briefdescription>
+<para>Close access to the stream. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="107" column="22"/>
+        <referencedby refid="classdna_1_1BinaryStreamWriterImpl_1ae7221a27d558a6b513272a0064bdf1c9" compoundref="BinaryStreamWriterImpl_8cpp" startline="36" endline="41">dna::BinaryStreamWriterImpl::write</referencedby>
+        <referencedby refid="classdna_1_1JSONStreamWriterImpl_1a3bdfd08782b95f57ac288b4250c8d39d" compoundref="JSONStreamWriterImpl_8cpp" startline="36" endline="41">dna::JSONStreamWriterImpl::write</referencedby>
+        <referencedby refid="classtrio_1_1StreamScope_1a82073a5f161d716f4ea2f23acdea0f4b" compoundref="StreamScope_8h" startline="17" endline="21">trio::StreamScope::~StreamScope</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtrio_1_1Closeable_1aebe07ebcbb431ecdd71b575993038097" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>trio::Closeable::~Closeable</definition>
+        <argsstring>()</argsstring>
+        <name>~Closeable</name>
+        <qualifiedname>trio::Closeable::~Closeable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="110" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>trio::BoundedIOStream</label>
+        <link refid="classtrio_1_1BoundedIOStream"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+      <node id="2">
+        <label>trio::Controllable</label>
+        <link refid="classtrio_1_1Controllable"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio::FileStream</label>
+        <link refid="classtrio_1_1FileStream"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>trio::FileStreamImpl</label>
+        <link refid="classtrio_1_1FileStreamImpl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio::MemoryMappedFileStream</label>
+        <link refid="classtrio_1_1MemoryMappedFileStream"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio::MemoryMappedFileStreamFallback</label>
+        <link refid="classtrio_1_1MemoryMappedFileStreamFallback"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>trio::MemoryStream</label>
+        <link refid="classtrio_1_1MemoryStream"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>trio::MemoryStreamImpl</label>
+        <link refid="classtrio_1_1MemoryStreamImpl"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>trio::Closeable</label>
+        <link refid="classtrio_1_1Closeable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" line="102" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/trio/Concepts.h" bodystart="102" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classtrio_1_1Closeable_1ac2e99d3bd99a39cf528ba29b1ba0baf1" prot="public" virt="pure-virtual"><scope>trio::Closeable</scope><name>close</name></member>
+      <member refid="classtrio_1_1Closeable_1aebe07ebcbb431ecdd71b575993038097" prot="protected" virt="virtual"><scope>trio::Closeable</scope><name>~Closeable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

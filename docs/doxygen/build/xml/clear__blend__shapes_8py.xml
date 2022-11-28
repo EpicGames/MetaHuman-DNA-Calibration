@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="clear__blend__shapes_8py" kind="file" language="Python">
+    <compoundname>clear_blend_shapes.py</compoundname>
+    <innernamespace refid="namespaceclear__blend__shapes">clear_blend_shapes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceclear__blend__shapes" refkind="compound"><highlight class="comment">#-*-<sp/>coding:<sp/>utf-8<sp/>-*-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>argparse</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>dnacalib<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>dnac</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>dna</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespaceclear__blend__shapes_1a9b3412680c62fffead7660aa5022a8b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceclear__blend__shapes_1a9b3412680c62fffead7660aa5022a8b9" kindref="member">loadDNA</ref>(path):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>=<sp/><ref refid="classtrio_1_1FileStream" kindref="compound">dna.FileStream</ref>(path,<sp/>dna.FileStream.AccessMode_Read,<sp/>dna.FileStream.OpenMode_Binary)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>reader<sp/>=<sp/><ref refid="classdna_1_1BinaryStreamReader" kindref="compound">dna.BinaryStreamReader</ref>(stream,<sp/>dna.DataLayer_All)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>reader.read()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>dna.Status.isOk():</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>dna.Status.get()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>RuntimeError(</highlight><highlight class="stringliteral">&quot;Error<sp/>loading<sp/>DNA:<sp/>{}&quot;</highlight><highlight class="normal">.format(status.message))</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>reader</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="namespaceclear__blend__shapes_1a3bdc1ceb8a109e88276f91c038c9909a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceclear__blend__shapes_1a3bdc1ceb8a109e88276f91c038c9909a" kindref="member">saveDNA</ref>(reader,<sp/>path):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>=<sp/><ref refid="classtrio_1_1FileStream" kindref="compound">dna.FileStream</ref>(path,<sp/>dna.FileStream.AccessMode_Write,<sp/>dna.FileStream.OpenMode_Binary)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>writer<sp/>=<sp/><ref refid="classdna_1_1BinaryStreamWriter" kindref="compound">dna.BinaryStreamWriter</ref>(stream)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>writer.setFrom(reader)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>writer.write()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/>dna.Status.isOk():</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status<sp/>=<sp/>dna.Status.get()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>RuntimeError(</highlight><highlight class="stringliteral">&quot;Error<sp/>saving<sp/>DNA:<sp/>{}&quot;</highlight><highlight class="normal">.format(status.message))</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="namespaceclear__blend__shapes_1abad99f1c4cfaa771bacda380a7abfb50" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceclear__blend__shapes_1abad99f1c4cfaa771bacda380a7abfb50" kindref="member">calibrateDNA</ref>(inputPath,<sp/>outputPath):</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>dna<sp/>=<sp/><ref refid="namespaceclear__blend__shapes_1a9b3412680c62fffead7660aa5022a8b9" kindref="member">loadDNA</ref>(inputPath)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Copies<sp/>DNA<sp/>contents<sp/>and<sp/>will<sp/>serve<sp/>as<sp/>input/output<sp/>parameter<sp/>to<sp/>command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>calibrated<sp/>=<sp/><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">dnac.DNACalibDNAReader</ref>(dna)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>mesh_count<sp/>=<sp/>calibrated.getMeshCount()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>meshes:<sp/>{}&quot;</highlight><highlight class="normal">.format(mesh_count))</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>mesh_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(mesh_count):</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_count<sp/>=<sp/>calibrated.getBlendShapeTargetCount(mesh_index)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>blendshape<sp/>targets<sp/>for<sp/>mesh<sp/>{}({}):<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getMeshName(mesh_index),<sp/>mesh_index,<sp/>bs_tgt_count))</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>bs_tgt_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(bs_tgt_count):</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_delta_count<sp/>=<sp/>calibrated.getBlendShapeTargetDeltaCount(mesh_index,<sp/>bs_tgt_index)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>blendshape<sp/>target<sp/>deltas<sp/>for<sp/>mesh<sp/>{}({}),<sp/>blend<sp/>shape<sp/>target<sp/>{}:<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getMeshName(mesh_index),<sp/>mesh_index,<sp/>bs_tgt_index,<sp/>bs_tgt_delta_count))</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>LODs:<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getBlendShapeChannelLODs()))</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>input<sp/>indices:<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getBlendShapeChannelInputIndices()))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>output<sp/>indices:<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getBlendShapeChannelOutputIndices()))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Clears<sp/>all<sp/>blend<sp/>shapes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>command<sp/>=<sp/><ref refid="classdnac_1_1ClearBlendShapesCommand" kindref="compound">dnac.ClearBlendShapesCommand</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;\n\nClearing<sp/>blend<sp/>shape<sp/>data...\n\n&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Modifies<sp/>calibrated<sp/>DNA<sp/>in-place</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>command.run(calibrated)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>mesh_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(mesh_count):</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_count<sp/>=<sp/>calibrated.getBlendShapeTargetCount(mesh_index)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>bs_tgt_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(bs_tgt_count):</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_delta_count<sp/>=<sp/>calibrated.getBlendShapeTargetDeltaCount(mesh_index,<sp/>bs_tgt_index)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>bs_tgt_delta_count<sp/>!=<sp/>0:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>RuntimeError(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>target<sp/>deltas<sp/>not<sp/>removed<sp/>properly!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>bs_channel_lods<sp/>=<sp/>calibrated.getBlendShapeChannelLODs()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>bs_channel_input_indices<sp/>=<sp/>calibrated.getBlendShapeChannelInputIndices()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>bs_channel_output_indices<sp/>=<sp/>calibrated.getBlendShapeChannelOutputIndices()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len(bs_channel_lods)<sp/>!=<sp/>0)<sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>(len(bs_channel_input_indices)<sp/>!=<sp/>0)<sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>(len(bs_channel_output_indices)<sp/>!=<sp/>0):</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>RuntimeError(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>animation<sp/>data<sp/>not<sp/>removed<sp/>properly!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>meshes:<sp/>{}&quot;</highlight><highlight class="normal">.format(mesh_count))</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>mesh_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(mesh_count):</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_count<sp/>=<sp/>calibrated.getBlendShapeTargetCount(mesh_index)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>blendshape<sp/>targets<sp/>for<sp/>mesh<sp/>{}({}):<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getMeshName(mesh_index),<sp/>mesh_index,<sp/>bs_tgt_count))</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>bs_tgt_index<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(bs_tgt_count):</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bs_tgt_delta_count<sp/>=<sp/>calibrated.getBlendShapeTargetDeltaCount(mesh_index,<sp/>bs_tgt_index)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Number<sp/>of<sp/>blendshape<sp/>target<sp/>deltas<sp/>for<sp/>mesh<sp/>{}({}),<sp/>blend<sp/>shape<sp/>target<sp/>{}:<sp/>{}&quot;</highlight><highlight class="normal">.format(calibrated.getMeshName(mesh_index),<sp/>mesh_index,<sp/>bs_tgt_index,<sp/>bs_tgt_delta_count))</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>LODs:<sp/>{}&quot;</highlight><highlight class="normal">.format(bs_channel_lods))</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>input<sp/>indices:<sp/>{}&quot;</highlight><highlight class="normal">.format(bs_channel_input_indices))</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Blend<sp/>shape<sp/>channel<sp/>output<sp/>indices:<sp/>{}&quot;</highlight><highlight class="normal">.format(bs_channel_output_indices))</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;\n\nSuccessfully<sp/>cleared<sp/>blend<sp/>shape<sp/>data.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Saving<sp/>DNA...&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceclear__blend__shapes_1a3bdc1ceb8a109e88276f91c038c9909a" kindref="member">saveDNA</ref>(calibrated,<sp/>outputPath)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Done.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="namespaceclear__blend__shapes_1a0d3f4eaa4cffc4f1c598d720cb601804" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceclear__blend__shapes_1a0d3f4eaa4cffc4f1c598d720cb601804" kindref="member">main</ref>():</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>parser<sp/>=<sp/>argparse.ArgumentParser(description=</highlight><highlight class="stringliteral">&quot;DNACalib<sp/>clear<sp/>blend<sp/>shapes<sp/>example&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;input_dna&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metavar=</highlight><highlight class="stringliteral">&apos;input-dna&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=</highlight><highlight class="stringliteral">&apos;Path<sp/>to<sp/>DNA<sp/>file<sp/>to<sp/>load&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;output_dna&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>metavar=</highlight><highlight class="stringliteral">&apos;output-dna&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>help=</highlight><highlight class="stringliteral">&apos;Path<sp/>where<sp/>to<sp/>save<sp/>modified<sp/>DNA<sp/>file&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>args<sp/>=<sp/>parser.parse_args()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceclear__blend__shapes_1abad99f1c4cfaa771bacda380a7abfb50" kindref="member">calibrateDNA</ref>(args.input_dna,<sp/>args.output_dna)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceclear__blend__shapes_1a0d3f4eaa4cffc4f1c598d720cb601804" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/PyDNACalib/python3/examples/clear_blend_shapes.py"/>
+  </compounddef>
+</doxygen>

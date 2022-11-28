@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Transparent_8h" kind="file" language="C++">
+    <compoundname>Transparent.h</compoundname>
+    <includedby refid="binary_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="json_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="binary_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <includedby refid="json_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="4">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="11">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="3">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="8">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="14">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>OutputArchive.h</label>
+        <link refid="json_2OutputArchive_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Transparent.h</label>
+        <link refid="Transparent_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structterse_1_1Transparent" prot="public">terse::Transparent</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Textual<sp/>serialization<sp/>(currently<sp/>JSON<sp/>only)<sp/>generates<sp/>a<sp/>pair<sp/>of<sp/>braces<sp/>(`{}`)<sp/>around<sp/>every<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>that<sp/>has<sp/>a<sp/>load,<sp/>save<sp/>or<sp/>serialize<sp/>member<sp/>or<sp/>free<sp/>function,<sp/>capable<sp/>of<sp/>serializing<sp/>the<sp/>type<sp/>in<sp/>question.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>some<sp/>cases,<sp/>with<sp/>lots<sp/>of<sp/>nested<sp/>structures,<sp/>for<sp/>a<sp/>simpler<sp/>textual<sp/>representation,<sp/>some<sp/>of<sp/>these</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>layers<sp/>of<sp/>abstractions<sp/>might<sp/>be<sp/>preferable<sp/>to<sp/>be<sp/>ignored.<sp/>The<sp/>Transparent&lt;T&gt;<sp/>wrapper<sp/>type<sp/>is<sp/>used<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>exactly<sp/>that<sp/>purpose.<sp/>By<sp/>wrapping<sp/>any<sp/>member<sp/>from<sp/>within<sp/>a<sp/>serializer<sp/>function,<sp/>that<sp/>member<sp/>will<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>treated<sp/>as<sp/>transparent,<sp/>thus<sp/>avoiding<sp/>the<sp/>generation<sp/>of<sp/>a<sp/>pair<sp/>of<sp/>braces<sp/>for<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="14" refid="structterse_1_1Transparent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1Transparent" kindref="compound">Transparent</ref><sp/>{</highlight></codeline>
+<codeline lineno="15" refid="structterse_1_1Transparent_1a28f27e76b5132269e511603fd21bf701" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="structterse_1_1Transparent_1a28f27e76b5132269e511603fd21bf701" kindref="member">WrappedType</ref><sp/>=<sp/>T;</highlight></codeline>
+<codeline lineno="16" refid="structterse_1_1Transparent_1a2f61e206a23fd9a4f502c7cc82be6d69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structterse_1_1Transparent_1a28f27e76b5132269e511603fd21bf701" kindref="member">WrappedType</ref>&amp;<sp/><ref refid="structterse_1_1Transparent_1a2f61e206a23fd9a4f502c7cc82be6d69" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="20" refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" refkind="member"><highlight class="normal"><ref refid="structterse_1_1Transparent" kindref="compound">Transparent&lt;T&gt;</ref><sp/><ref refid="namespaceterse_1a25545889a90730dd71120d27e294cf86" kindref="member">transparent</ref>(T&amp;<sp/>data)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structterse_1_1Transparent" kindref="compound">Transparent&lt;T&gt;</ref>{data};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/Transparent.h"/>
+  </compounddef>
+</doxygen>

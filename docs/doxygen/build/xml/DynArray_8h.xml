@@ -1,0 +1,968 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DynArray_8h" kind="file" language="C++">
+    <compoundname>DynArray.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">type_traits</includes>
+    <includedby refid="Blob_8h" local="yes">Blob.h</includedby>
+    <includedby refid="binary_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="json_2InputArchive_8h" local="yes">InputArchive.h</includedby>
+    <includedby refid="binary_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <includedby refid="json_2OutputArchive_8h" local="yes">OutputArchive.h</includedby>
+    <includedby refid="src_2dna_2TypeDefs_8h" local="no">TypeDefs.h</includedby>
+    <includedby refid="src_2dnacalib_2TypeDefs_8h" local="no">TypeDefs.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>algorithm</label>
+      </node>
+      <node id="3">
+        <label>cassert</label>
+      </node>
+      <node id="4">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>cstring</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="7">
+        <label>iterator</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="9">
+        <label>type_traits</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="22">
+        <label>DNA.h</label>
+        <link refid="dna_2DNA_8h"/>
+      </node>
+      <node id="25">
+        <label>LODConstraint.h</label>
+        <link refid="dna_2LODConstraint_8h"/>
+      </node>
+      <node id="26">
+        <label>LODMapping.cpp</label>
+        <link refid="dna_2LODMapping_8cpp"/>
+      </node>
+      <node id="27">
+        <label>LODMapping.h</label>
+        <link refid="dna_2LODMapping_8h"/>
+      </node>
+      <node id="30">
+        <label>ReaderImpl.h</label>
+        <link refid="dna_2ReaderImpl_8h"/>
+      </node>
+      <node id="32">
+        <label>SurjectiveMapping.h</label>
+        <link refid="dna_2SurjectiveMapping_8h"/>
+      </node>
+      <node id="17">
+        <label>TypeDefs.h</label>
+        <link refid="src_2dna_2TypeDefs_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Writer.cpp</label>
+        <link refid="Writer_8cpp"/>
+      </node>
+      <node id="34">
+        <label>WriterImpl.h</label>
+        <link refid="dna_2WriterImpl_8h"/>
+      </node>
+      <node id="18">
+        <label>AnimatedMapFilter.cpp</label>
+        <link refid="filters_2AnimatedMapFilter_8cpp"/>
+      </node>
+      <node id="19">
+        <label>AnimatedMapFilter.h</label>
+        <link refid="filters_2AnimatedMapFilter_8h"/>
+      </node>
+      <node id="20">
+        <label>BlendShapeFilter.cpp</label>
+        <link refid="filters_2BlendShapeFilter_8cpp"/>
+      </node>
+      <node id="21">
+        <label>BlendShapeFilter.h</label>
+        <link refid="filters_2BlendShapeFilter_8h"/>
+      </node>
+      <node id="23">
+        <label>JointFilter.cpp</label>
+        <link refid="filters_2JointFilter_8cpp"/>
+      </node>
+      <node id="24">
+        <label>JointFilter.h</label>
+        <link refid="filters_2JointFilter_8h"/>
+      </node>
+      <node id="28">
+        <label>MeshFilter.cpp</label>
+        <link refid="filters_2MeshFilter_8cpp"/>
+      </node>
+      <node id="29">
+        <label>MeshFilter.h</label>
+        <link refid="filters_2MeshFilter_8h"/>
+      </node>
+      <node id="31">
+        <label>Remap.h</label>
+        <link refid="filters_2Remap_8h"/>
+      </node>
+      <node id="6">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="12">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="4">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>JSONStreamReaderImpl.cpp</label>
+        <link refid="JSONStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="9">
+        <label>JSONStreamReaderImpl.h</label>
+        <link refid="JSONStreamReaderImpl_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>JSONStreamWriterImpl.cpp</label>
+        <link refid="JSONStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="15">
+        <label>JSONStreamWriterImpl.h</label>
+        <link refid="JSONStreamWriterImpl_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>CommandImplBase.h</label>
+        <link refid="CommandImplBase_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>CalculateMeshLowerLODsCommand.cpp</label>
+        <link refid="CalculateMeshLowerLODsCommand_8cpp"/>
+      </node>
+      <node id="47">
+        <label>ClearBlendShapesCommand.cpp</label>
+        <link refid="ClearBlendShapesCommand_8cpp"/>
+      </node>
+      <node id="48">
+        <label>CommandSequence.cpp</label>
+        <link refid="src_2dnacalib_2commands_2CommandSequence_8cpp"/>
+      </node>
+      <node id="49">
+        <label>PruneBlendShapeTargetsCommand.cpp</label>
+        <link refid="PruneBlendShapeTargetsCommand_8cpp"/>
+      </node>
+      <node id="50">
+        <label>RemoveJointAnimationCommand.cpp</label>
+        <link refid="RemoveJointAnimationCommand_8cpp"/>
+      </node>
+      <node id="51">
+        <label>RemoveJointCommand.cpp</label>
+        <link refid="RemoveJointCommand_8cpp"/>
+      </node>
+      <node id="52">
+        <label>RemoveMeshCommand.cpp</label>
+        <link refid="RemoveMeshCommand_8cpp"/>
+      </node>
+      <node id="54">
+        <label>RenameAnimatedMapCommand.cpp</label>
+        <link refid="RenameAnimatedMapCommand_8cpp"/>
+      </node>
+      <node id="55">
+        <label>RenameBlendShapeCommand.cpp</label>
+        <link refid="RenameBlendShapeCommand_8cpp"/>
+      </node>
+      <node id="56">
+        <label>RenameJointCommand.cpp</label>
+        <link refid="RenameJointCommand_8cpp"/>
+      </node>
+      <node id="57">
+        <label>RenameMeshCommand.cpp</label>
+        <link refid="RenameMeshCommand_8cpp"/>
+      </node>
+      <node id="53">
+        <label>RenameResourceCommand.h</label>
+        <link refid="RenameResourceCommand_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>RotateCommand.cpp</label>
+        <link refid="RotateCommand_8cpp"/>
+      </node>
+      <node id="58">
+        <label>ScaleCommand.cpp</label>
+        <link refid="ScaleCommand_8cpp"/>
+      </node>
+      <node id="59">
+        <label>SetBlendShapeTargetDeltasCommand.cpp</label>
+        <link refid="SetBlendShapeTargetDeltasCommand_8cpp"/>
+      </node>
+      <node id="60">
+        <label>SetLODsCommand.cpp</label>
+        <link refid="SetLODsCommand_8cpp"/>
+      </node>
+      <node id="61">
+        <label>SetNeutralJointRotationsCommand.cpp</label>
+        <link refid="SetNeutralJointRotationsCommand_8cpp"/>
+      </node>
+      <node id="62">
+        <label>SetNeutralJointTranslationsCommand.cpp</label>
+        <link refid="SetNeutralJointTranslationsCommand_8cpp"/>
+      </node>
+      <node id="63">
+        <label>SetSkinWeightsCommand.cpp</label>
+        <link refid="SetSkinWeightsCommand_8cpp"/>
+      </node>
+      <node id="64">
+        <label>SetVertexPositionsCommand.cpp</label>
+        <link refid="SetVertexPositionsCommand_8cpp"/>
+      </node>
+      <node id="82">
+        <label>SupportFactories.h</label>
+        <link refid="SupportFactories_8h"/>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>TranslateCommand.cpp</label>
+        <link refid="TranslateCommand_8cpp"/>
+      </node>
+      <node id="67">
+        <label>BaseImpl.h</label>
+        <link refid="dnacalib_2dna_2BaseImpl_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>DNACalibDNAReaderImpl.cpp</label>
+        <link refid="DNACalibDNAReaderImpl_8cpp"/>
+      </node>
+      <node id="69">
+        <label>DNACalibDNAReaderImpl.h</label>
+        <link refid="DNACalibDNAReaderImpl_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>DenormalizedData.h</label>
+        <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>LODConstraint.cpp</label>
+        <link refid="dnacalib_2dna_2LODConstraint_8cpp"/>
+      </node>
+      <node id="75">
+        <label>LODConstraint.h</label>
+        <link refid="dnacalib_2dna_2LODConstraint_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>LODMapping.cpp</label>
+        <link refid="dnacalib_2dna_2LODMapping_8cpp"/>
+      </node>
+      <node id="78">
+        <label>LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>ReaderImpl.h</label>
+        <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>WriterImpl.h</label>
+        <link refid="dnacalib_2dna_2WriterImpl_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>AnimatedMapFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2AnimatedMapFilter_8cpp"/>
+      </node>
+      <node id="39">
+        <label>AnimatedMapFilter.h</label>
+        <link refid="alib_2dna_2filters_2AnimatedMapFilter_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>BlendShapeFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2BlendShapeFilter_8cpp"/>
+      </node>
+      <node id="41">
+        <label>BlendShapeFilter.h</label>
+        <link refid="alib_2dna_2filters_2BlendShapeFilter_8h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>JointFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8cpp"/>
+      </node>
+      <node id="74">
+        <label>JointFilter.h</label>
+        <link refid="alib_2dna_2filters_2JointFilter_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>MeshFilter.cpp</label>
+        <link refid="alib_2dna_2filters_2MeshFilter_8cpp"/>
+      </node>
+      <node id="80">
+        <label>MeshFilter.h</label>
+        <link refid="alib_2dna_2filters_2MeshFilter_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>Remap.h</label>
+        <link refid="alib_2dna_2filters_2Remap_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>BoundingBox.h</label>
+        <link refid="BoundingBox_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>Triangle.cpp</label>
+        <link refid="Triangle_8cpp"/>
+      </node>
+      <node id="84">
+        <label>Triangle.h</label>
+        <link refid="Triangle_8h"/>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>UVBarycentricMapping.cpp</label>
+        <link refid="UVBarycentricMapping_8cpp"/>
+      </node>
+      <node id="43">
+        <label>UVBarycentricMapping.h</label>
+        <link refid="UVBarycentricMapping_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>Algorithm.h</label>
+        <link refid="Algorithm_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>InputArchive.h</label>
+        <link refid="json_2InputArchive_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>OutputArchive.h</label>
+        <link refid="json_2OutputArchive_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Blob.h</label>
+        <link refid="Blob_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classterse_1_1DynArray" prot="public">terse::DynArray</innerclass>
+    <innernamespace refid="namespaceterse">terse</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;type_traits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceterse" kindref="compound">terse</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>TAllocator&gt;</highlight></codeline>
+<codeline lineno="27" refid="classterse_1_1DynArray" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_assert</highlight><highlight class="normal">(std::is_trivial&lt;T&gt;::value,<sp/></highlight><highlight class="stringliteral">&quot;Uninitialized<sp/>vector<sp/>doesn&apos;t<sp/>support<sp/>non-trivial<sp/>types.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref><sp/>=<sp/>T;</highlight></codeline>
+<codeline lineno="32" refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref><sp/>=<sp/>TAllocator;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref><sp/>=<sp/>std::unique_ptr&lt;<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>,<sp/>std::function&lt;void<sp/>(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*)&gt;<sp/>&gt;;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38" refid="classterse_1_1DynArray_1a4cfa3da51c98e9db0bc7a8fc5a93944d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a4cfa3da51c98e9db0bc7a8fc5a93944d" kindref="member">DynArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>&amp;<sp/>allocator)<sp/>:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>{allocator},</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>{},</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>{nullptr}<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classterse_1_1DynArray_1a409a85316ae3cd6ec9836ca910e1aaa8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a409a85316ae3cd6ec9836ca910e1aaa8" kindref="member">DynArray</ref>()<sp/>:<sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>{<ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{}}<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classterse_1_1DynArray_1a35e4ad7bbb91c8a07d2ea15c7a82d96a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a35e4ad7bbb91c8a07d2ea15c7a82d96a" kindref="member">DynArray</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>&amp;<sp/>allocator<sp/>=<sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{})<sp/>:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>{allocator},</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>{<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>},</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>{<ref refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" kindref="member">create</ref>(<ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>)}<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classterse_1_1DynArray_1aba7306ecdff50ed46a9bad33959c9e87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1aba7306ecdff50ed46a9bad33959c9e87" kindref="member">DynArray</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>&amp;<sp/>value,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>&amp;<sp/>allocator<sp/>=<sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{})<sp/>:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>{<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/>allocator}<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill_n(<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/>value);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classterse_1_1DynArray_1a137a1274958b94c1872c30d9bb7ec876" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a137a1274958b94c1872c30d9bb7ec876" kindref="member">DynArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/>source,<sp/>std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>&amp;<sp/>allocator<sp/>=<sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{})<sp/>:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>{<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/>allocator}<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>&amp;&amp;<sp/>(source<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/>source,<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>));</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TIterator&gt;</highlight></codeline>
+<codeline lineno="68" refid="classterse_1_1DynArray_1a994c7321fd20176b885ba7358450b151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a994c7321fd20176b885ba7358450b151" kindref="member">DynArray</ref>(TIterator<sp/>start,<sp/>TIterator<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>&amp;<sp/>allocator<sp/>=<sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref>{})<sp/>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>{</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::distance(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>)),<sp/>allocator}<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()<sp/>!=<sp/>0ul)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">std::copy</ref>(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>,<sp/>stdext::checked_array_iterator&lt;value_type*&gt;(<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">std::copy</ref>(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>,<sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classterse_1_1DynArray_1a03870b3f7cc3619339532ad136815b21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a03870b3f7cc3619339532ad136815b21" kindref="member">~DynArray</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a0ed2229eb58a21a06b748e51c7e5ed21" kindref="member">DynArray</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;<sp/>rhs)<sp/>:<sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>{rhs.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>(),<sp/>rhs.<ref refid="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" kindref="member">get_allocator</ref>()}<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>&amp;&amp;<sp/>(rhs.<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/>rhs.<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/>rhs.<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;<sp/><ref refid="classterse_1_1DynArray_1a01bb3ccd2656ca4b2f21ca9527dc73bd" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;<sp/>rhs)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref><sp/>tmp{rhs};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>,<sp/>tmp.alloc);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>,<sp/>tmp.ptr);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/>tmp.sz);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classterse_1_1DynArray_1a0737ae316e5d6beff79775b7163b043d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a0737ae316e5d6beff79775b7163b043d" kindref="member">DynArray</ref>(<ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;&amp;<sp/>rhs)<sp/>noexcept<sp/>:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>{},</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>{},</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>,<sp/>rhs.alloc);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>,<sp/>rhs.ptr);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/>rhs.sz);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classterse_1_1DynArray_1af0a0f8bb191e288a832d58ececa04005" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;<sp/><ref refid="classterse_1_1DynArray_1af0a0f8bb191e288a832d58ececa04005" kindref="member">operator=</ref>(<ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&amp;&amp;<sp/>rhs)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>,<sp/>rhs.alloc);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>,<sp/>rhs.ptr);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::swap(<ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/>rhs.sz);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref><sp/><ref refid="classterse_1_1DynArray_1a360fe05901de9088ce4737b067803e33" kindref="member">get_allocator</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a526b60832a87bf57b964c3ce00aa9b73" kindref="member">clear</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.reset();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>=<sp/>0ul;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.get();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classterse_1_1DynArray_1a5d44d17c2c9312e1c85136999c43c819" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1a5d44d17c2c9312e1c85136999c43c819" kindref="member">data</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.get();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130" refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1aa3343148f22077d945a77937e301b235" kindref="member">empty</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>==<sp/>0ul);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>&amp;<sp/><ref refid="classterse_1_1DynArray_1a63650774bcbdbeea3ec6ec1507a7e4cd" kindref="member">operator[]</ref>(std::size_t<sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(index<sp/>&lt;<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()[index];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="classterse_1_1DynArray_1acfdcc391b1b0647b1df843c7f7001196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>&amp;<sp/><ref refid="classterse_1_1DynArray_1acfdcc391b1b0647b1df843c7f7001196" kindref="member">operator[]</ref>(std::size_t<sp/>index)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(index<sp/>&lt;<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()[index];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" kindref="member">begin</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>+<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" kindref="member">cbegin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" kindref="member">cend</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>()<sp/>+<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="classterse_1_1DynArray_1af9a3420f730fc0af4d97ef3920474caa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1af9a3420f730fc0af4d97ef3920474caa" kindref="member">begin</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1afe1fd13b4e0f740e05d980cfd5fb4c56" kindref="member">cbegin</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classterse_1_1DynArray_1a0d431ca272ef4c339ba146ba118ea94d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/><ref refid="classterse_1_1DynArray_1a0d431ca272ef4c339ba146ba118ea94d" kindref="member">end</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1aec83f976da98f8189f6daa1162ade3b4" kindref="member">cend</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" kindref="member">resize</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>&amp;<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref><sp/>&gt;<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref><sp/>old{<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.release(),<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>.deallocate(p,<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref><sp/>=<sp/><ref refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" kindref="member">create</ref>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(old<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.get(),<sp/>old.get(),<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>));</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill_n(<ref refid="classterse_1_1DynArray_1af406a760efbcb2f92a1059eadf34578d" kindref="member">begin</ref>()<sp/>+<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref><sp/>-<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>,<sp/>value);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>=<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="classterse_1_1DynArray_1acc3ad7b17dfed0fb4671fa91084509b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1acc3ad7b17dfed0fb4671fa91084509b8" kindref="member">resize</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1acf1f49d8ee022b15fa34ed805e09e4e8" kindref="member">resize</ref>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/><ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>{});</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" kindref="member">resize_uninitialized</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref><sp/>&gt;<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref><sp/>old{<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.release(),<sp/>[</highlight><highlight class="keyword">this</highlight><highlight class="normal">](<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>.deallocate(p,<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}};</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref><sp/>=<sp/><ref refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" kindref="member">create</ref>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(old<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(<ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>.get(),<sp/>old.get(),<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>));</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref><sp/>=<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TIterator&gt;</highlight></codeline>
+<codeline lineno="206" refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a63323b5eca30cffaf401d376c4ed2028" kindref="member">assign</ref>(TIterator<sp/>start,<sp/>TIterator<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" kindref="member">resize_uninitialized</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::distance(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>)));</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()<sp/>!=<sp/>0ul)<sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">std::copy</ref>(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>,<sp/>stdext::checked_array_iterator&lt;value_type*&gt;(<ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>(),<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>()));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1a12ea8bc7218925e96a95740ba8110da2" kindref="member">std::copy</ref>(start,<sp/><ref refid="classterse_1_1DynArray_1a32ab59c5cc7a36fbc599e961c86ee9e6" kindref="member">end</ref>,<sp/><ref refid="classterse_1_1DynArray_1a43a53bd4d3addb0d80e99c1f776764f2" kindref="member">data</ref>());</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="218" refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref><sp/><ref refid="classterse_1_1DynArray_1a8a5add8f6daf705dc472b0e441cb2497" kindref="member">create</ref>(std::size_t<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>,<sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref>{<ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>.allocate(<ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>),<sp/>[<ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>,<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>](<ref refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kindref="member">value_type</ref>*<sp/>p)<sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>.deallocate(p,<sp/><ref refid="classterse_1_1DynArray_1a2f317866912cd6764477e74115d83bdb" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}};</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="225" refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a89e2b715cfbb6ea379eae573d7961ef9" kindref="member">allocator_type</ref><sp/><ref refid="classterse_1_1DynArray_1a51d7de42cc5d1d83a377ce1168946bec" kindref="member">alloc</ref>;</highlight></codeline>
+<codeline lineno="226" refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classterse_1_1DynArray_1a5881f253fcdf3ad48a6d64adf2be3dff" kindref="member">sz</ref>;</highlight></codeline>
+<codeline lineno="227" refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classterse_1_1DynArray_1a2f1a9793b41330096baa2830c378506d" kindref="member">pointer_type</ref><sp/><ref refid="classterse_1_1DynArray_1abda151c5ff5541bd289ca312b1951eef" kindref="member">ptr</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>terse</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/DynArray.h"/>
+  </compounddef>
+</doxygen>

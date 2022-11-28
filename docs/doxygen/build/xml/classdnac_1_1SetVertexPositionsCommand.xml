@@ -1,0 +1,586 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1SetVertexPositionsCommand" kind="class" language="C++" prot="public">
+    <compoundname>dnac::SetVertexPositionsCommand</compoundname>
+    <basecompoundref refid="classdnac_1_1Command" prot="public" virt="non-virtual">dnac::Command</basecompoundref>
+    <includes refid="SetVertexPositionsCommand_8h" local="no">SetVertexPositionsCommand.h</includes>
+    <innerclass refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl" prot="public">dnac::SetVertexPositionsCommand::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; <ref refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl" kindref="compound">Impl</ref> &gt;</type>
+        <definition>ScopedPtr&lt;Impl&gt; dnac::SetVertexPositionsCommand::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::pImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="107" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1a0d15bb58023eeaa13a8465d50aedd8d1" compoundref="SetVertexPositionsCommand_8cpp" startline="161" endline="163">run</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1a53a4f9200e934df7beafa54cdf566b06" compoundref="SetVertexPositionsCommand_8cpp" startline="153" endline="155">setMasks</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1a1b2da96f7f48508e9fd00f78cc819d5c" compoundref="SetVertexPositionsCommand_8cpp" startline="141" endline="143">setMeshIndex</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1a073e20da5c1b6e5648a3f1b03d36d020" compoundref="SetVertexPositionsCommand_8cpp" startline="157" endline="159">setOperation</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1abdbd0a89d7b30152ee1daca7d989354b" compoundref="SetVertexPositionsCommand_8cpp" startline="145" endline="147">setPositions</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1a9516f6e82fb0743f02d353bcfc99020f" compoundref="SetVertexPositionsCommand_8cpp" startline="85" endline="94">SetVertexPositionsCommand</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a913e95a43c33c04097e5739759a7cab0" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(MemoryResource *memRes=nullptr)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="21" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="82" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a9516f6e82fb0743f02d353bcfc99020f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(std::uint16_t meshIndex, ConstArrayView&lt; Vector3 &gt; positions, VectorOperation operation, MemoryResource *memRes=nullptr)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; <ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref> &gt;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref></type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="23" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="85" bodyend="94"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a673d07b39a394bd6fe638ecf3c3c1473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(std::uint16_t meshIndex, ConstArrayView&lt; float &gt; xs, ConstArrayView&lt; float &gt; ys, ConstArrayView&lt; float &gt; zs, VectorOperation operation, MemoryResource *memRes=nullptr)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>ys</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>zs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref></type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="27" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="96" bodyend="107"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a4852fa8f2a6a56841fd138675f66f025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(std::uint16_t meshIndex, ConstArrayView&lt; Vector3 &gt; positions, ConstArrayView&lt; float &gt; masks, VectorOperation operation, MemoryResource *memRes=nullptr)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; <ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref> &gt;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>masks</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref></type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="33" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="109" bodyend="120"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a77123789c41f219abcdc97d5b03a34ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(std::uint16_t meshIndex, ConstArrayView&lt; float &gt; xs, ConstArrayView&lt; float &gt; ys, ConstArrayView&lt; float &gt; zs, ConstArrayView&lt; float &gt; masks, VectorOperation operation, MemoryResource *memRes=nullptr)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>ys</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>zs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>masks</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref></type>
+          <declname>operation</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="38" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="122" bodyend="135"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a08cdb4da9133a8408ea8f5858dbe448a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::~SetVertexPositionsCommand</definition>
+        <argsstring>()</argsstring>
+        <name>~SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::~SetVertexPositionsCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="46" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a34a251403143bdd315f1308546808686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(const SetVertexPositionsCommand &amp;)=delete</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="48" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a07d0c8a0e51950ece0bedea3fae42db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;</type>
+        <definition>SetVertexPositionsCommand &amp; dnac::SetVertexPositionsCommand::operator=</definition>
+        <argsstring>(const SetVertexPositionsCommand &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="49" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a027c558584fc470b7dd0314c5feaabd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</definition>
+        <argsstring>(SetVertexPositionsCommand &amp;&amp;)</argsstring>
+        <name>SetVertexPositionsCommand</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::SetVertexPositionsCommand</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="51" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a8b18dc5f3cdb0ef3b7eeb282738eb8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> <ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;</type>
+        <definition>SetVertexPositionsCommand &amp; dnac::SetVertexPositionsCommand::operator=</definition>
+        <argsstring>(SetVertexPositionsCommand &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="52" column="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a1b2da96f7f48508e9fd00f78cc819d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::setMeshIndex</definition>
+        <argsstring>(std::uint16_t meshIndex)</argsstring>
+        <name>setMeshIndex</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::setMeshIndex</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the index of the mesh to change. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>meshIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mesh index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="59" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="141" bodyend="143"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1abdbd0a89d7b30152ee1daca7d989354b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::setPositions</definition>
+        <argsstring>(ConstArrayView&lt; Vector3 &gt; positions)</argsstring>
+        <name>setPositions</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::setPositions</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; <ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref> &gt;</type>
+          <declname>positions</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the vertex positions used to calculate new values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>positions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The vertex positions. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="66" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="145" bodyend="147"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1afad26cb57b2a38f454ba4f12f9162ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::setPositions</definition>
+        <argsstring>(ConstArrayView&lt; float &gt; xs, ConstArrayView&lt; float &gt; ys, ConstArrayView&lt; float &gt; zs)</argsstring>
+        <name>setPositions</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::setPositions</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>xs</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>ys</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>zs</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the vertex positions used to calculate new values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The X coordinates for each vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Y coordinates for each vertex. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Z coordinates for each vertex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="77" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="149" bodyend="151"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a53a4f9200e934df7beafa54cdf566b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::setMasks</definition>
+        <argsstring>(ConstArrayView&lt; float &gt; masks)</argsstring>
+        <name>setMasks</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::setMasks</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>masks</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting vertex masks used to calculate new vertex position values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>If no masks are set, default weight value of 1 is used for each vertex. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>masks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The weights for each vertex. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="86" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="153" bodyend="155"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a073e20da5c1b6e5648a3f1b03d36d020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::setOperation</definition>
+        <argsstring>(VectorOperation operation)</argsstring>
+        <name>setOperation</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::setOperation</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1a0839ffb81a5969050a4b31009a3ad18f" kindref="member">VectorOperation</ref></type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the type of operation used to calculate new vertex position values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Available operations are: Interpolate, Add, Subtract and Multiply. Each position is calculated based on the provided operation type in the following way:</para>
+</simplesect>
+Interpolate: <formula id="0">$newValue = previousValue * (1 - weight) + setValue * weight$</formula><linebreak/>
+ Add: <formula id="1">$newValue = previousValue + (setValue * weight)$</formula><linebreak/>
+ Subtract: <formula id="2">$newValue = previousValue - (setValue * weight)$</formula><linebreak/>
+ Multiply: <formula id="3">$newValue = previousValue * (setValue * weight)$</formula><linebreak/>
+ setValue is the value from new positions that were set, and weight is the value from masks array. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operation to use. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="102" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="157" bodyend="159"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1SetVertexPositionsCommand_1a0d15bb58023eeaa13a8465d50aedd8d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::SetVertexPositionsCommand::run</definition>
+        <argsstring>(DNACalibDNAReader *output) override</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::SetVertexPositionsCommand::run</qualifiedname>
+        <reimplements refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee">run</reimplements>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="103" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/SetVertexPositionsCommand.cpp" bodystart="161" bodyend="163"/>
+        <references refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" compoundref="SetVertexPositionsCommand_8h" startline="107">pImpl</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdnac_1_1SetVertexPositionsCommand" kindref="compound">SetVertexPositionsCommand</ref> is used to change vertex positions values. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::SetVertexPositionsCommand</label>
+        <link refid="classdnac_1_1SetVertexPositionsCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>pma::ScopedPtr&lt; dnac::SetVertexPositionsCommand::Impl &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; dnac::SetVertexPositionsCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::SetVertexPositionsCommand</label>
+        <link refid="classdnac_1_1SetVertexPositionsCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; T &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; dnac::SetVertexPositionsCommand::Impl &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; dnac::SetVertexPositionsCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="8" relation="private-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; U &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+      </node>
+      <node id="8">
+        <label>typename DefaultInstanceDestroyer&lt;T&gt;::type</label>
+      </node>
+      <node id="4">
+        <label>typename DefaultInstanceDestroyer&lt;dnac::SetVertexPositionsCommand::Impl &gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" line="19" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h" bodystart="19" bodyend="109"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a07d0c8a0e51950ece0bedea3fae42db0" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a8b18dc5f3cdb0ef3b7eeb282738eb8d7" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" prot="private" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>pImpl</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a0d15bb58023eeaa13a8465d50aedd8d1" prot="public" virt="virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>run</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a53a4f9200e934df7beafa54cdf566b06" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>setMasks</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a1b2da96f7f48508e9fd00f78cc819d5c" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>setMeshIndex</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a073e20da5c1b6e5648a3f1b03d36d020" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>setOperation</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1abdbd0a89d7b30152ee1daca7d989354b" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>setPositions</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1afad26cb57b2a38f454ba4f12f9162ee3" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>setPositions</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a913e95a43c33c04097e5739759a7cab0" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a9516f6e82fb0743f02d353bcfc99020f" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a673d07b39a394bd6fe638ecf3c3c1473" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a4852fa8f2a6a56841fd138675f66f025" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a77123789c41f219abcdc97d5b03a34ad" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a34a251403143bdd315f1308546808686" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a027c558584fc470b7dd0314c5feaabd6" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>SetVertexPositionsCommand</name></member>
+      <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>~Command</name></member>
+      <member refid="classdnac_1_1SetVertexPositionsCommand_1a08cdb4da9133a8408ea8f5858dbe448a" prot="public" virt="non-virtual"><scope>dnac::SetVertexPositionsCommand</scope><name>~SetVertexPositionsCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

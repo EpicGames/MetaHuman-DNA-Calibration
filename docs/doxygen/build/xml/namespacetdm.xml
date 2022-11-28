@@ -1,0 +1,2561 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacetdm" kind="namespace" language="C++">
+    <compoundname>tdm</compoundname>
+    <innerclass refid="structtdm_1_1projective_1_1axis__angle" prot="public">tdm::axis_angle</innerclass>
+    <innerclass refid="structtdm_1_1mat" prot="public">tdm::mat</innerclass>
+    <innerclass refid="structtdm_1_1vec" prot="public">tdm::vec</innerclass>
+    <innernamespace refid="namespacetdm_1_1affine">tdm::affine</innernamespace>
+    <innernamespace refid="namespacetdm_1_1impl">tdm::impl</innernamespace>
+    <innernamespace refid="namespacetdm_1_1projective" inline="yes">tdm::projective</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacetdm_1a4c1144e7275ec98fc638359109142aed" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>handedness</name>
+        <qualifiedname>tdm::handedness</qualifiedname>
+        <enumvalue id="namespacetdm_1a4c1144e7275ec98fc638359109142aeda811882fecd5c7618d7099ebbd39ea254" prot="public">
+          <name>left</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" prot="public">
+          <name>right</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="84" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="84" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacetdm_1a644d3de5f1ca2eaa628196afcfbadef4" prot="public" static="no">
+        <type>std::size_t</type>
+        <definition>using tdm::dim_t = typedef std::size_t</definition>
+        <argsstring></argsstring>
+        <name>dim_t</name>
+        <qualifiedname>tdm::dim_t</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="22" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a9eacfcb7bdb5b270f0ec00d6edc5ac57" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; 2, T &gt;</type>
+        <definition>using tdm::vec2 = typedef vec&lt;2, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>vec2</name>
+        <qualifiedname>tdm::vec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="30" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; 3, T &gt;</type>
+        <definition>using tdm::vec3 = typedef vec&lt;3, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>vec3</name>
+        <qualifiedname>tdm::vec3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="33" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a93270d442741f7fb12db553267945b62" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; 4, T &gt;</type>
+        <definition>using tdm::vec4 = typedef vec&lt;4, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>vec4</name>
+        <qualifiedname>tdm::vec4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="36" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a9ecf2d27c0330c96023d63f5f70ed043" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, int &gt;</type>
+        <definition>using tdm::ivec = typedef vec&lt;L, int&gt;</definition>
+        <argsstring></argsstring>
+        <name>ivec</name>
+        <qualifiedname>tdm::ivec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="41" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ad11d61a35ca71ea10bd64b586b384f35" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a9ecf2d27c0330c96023d63f5f70ed043" kindref="member">ivec</ref>&lt; 2 &gt;</type>
+        <definition>using tdm::ivec2 = typedef ivec&lt;2&gt;</definition>
+        <argsstring></argsstring>
+        <name>ivec2</name>
+        <qualifiedname>tdm::ivec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="43" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a5b684e18a8a3852bb3c54d515a87c021" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a9ecf2d27c0330c96023d63f5f70ed043" kindref="member">ivec</ref>&lt; 3 &gt;</type>
+        <definition>using tdm::ivec3 = typedef ivec&lt;3&gt;</definition>
+        <argsstring></argsstring>
+        <name>ivec3</name>
+        <qualifiedname>tdm::ivec3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="44" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a7dd06886da645ad841c67715d574c09c" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a9ecf2d27c0330c96023d63f5f70ed043" kindref="member">ivec</ref>&lt; 4 &gt;</type>
+        <definition>using tdm::ivec4 = typedef ivec&lt;4&gt;</definition>
+        <argsstring></argsstring>
+        <name>ivec4</name>
+        <qualifiedname>tdm::ivec4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="45" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a783c70d6b396b3b796d35072bf829fe2" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, float &gt;</type>
+        <definition>using tdm::fvec = typedef vec&lt;L, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>fvec</name>
+        <qualifiedname>tdm::fvec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="48" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a783c70d6b396b3b796d35072bf829fe2" kindref="member">fvec</ref>&lt; 2 &gt;</type>
+        <definition>using tdm::fvec2 = typedef fvec&lt;2&gt;</definition>
+        <argsstring></argsstring>
+        <name>fvec2</name>
+        <qualifiedname>tdm::fvec2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="50" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1aa01d9c92918f0f78c73c3a9494be09f8" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a783c70d6b396b3b796d35072bf829fe2" kindref="member">fvec</ref>&lt; 3 &gt;</type>
+        <definition>using tdm::fvec3 = typedef fvec&lt;3&gt;</definition>
+        <argsstring></argsstring>
+        <name>fvec3</name>
+        <qualifiedname>tdm::fvec3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="51" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ae3de82cf6116e648dd440ffb9a0aad0a" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a783c70d6b396b3b796d35072bf829fe2" kindref="member">fvec</ref>&lt; 4 &gt;</type>
+        <definition>using tdm::fvec4 = typedef fvec&lt;4&gt;</definition>
+        <argsstring></argsstring>
+        <name>fvec4</name>
+        <qualifiedname>tdm::fvec4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="52" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ad06e91c9f80257f1ea929e6408f8a331" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; 2, 2, T &gt;</type>
+        <definition>using tdm::mat2 = typedef mat&lt;2, 2, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>mat2</name>
+        <qualifiedname>tdm::mat2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="60" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ab8d7767b6a41b48c6a079fac69e90df7" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; 3, 3, T &gt;</type>
+        <definition>using tdm::mat3 = typedef mat&lt;3, 3, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>mat3</name>
+        <qualifiedname>tdm::mat3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="63" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; 4, 4, T &gt;</type>
+        <definition>using tdm::mat4 = typedef mat&lt;4, 4, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>mat4</name>
+        <qualifiedname>tdm::mat4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="66" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a0a4a6d413128ce00d730264468d766c4" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, int &gt;</type>
+        <definition>using tdm::imat = typedef mat&lt;R, C, int&gt;</definition>
+        <argsstring></argsstring>
+        <name>imat</name>
+        <qualifiedname>tdm::imat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="71" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a38986226fd1918e90cf95c06e560aa8d" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a0a4a6d413128ce00d730264468d766c4" kindref="member">imat</ref>&lt; 2, 2 &gt;</type>
+        <definition>using tdm::imat2 = typedef imat&lt;2, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>imat2</name>
+        <qualifiedname>tdm::imat2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="73" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a25ab9de0e058eec0ecd5a6e743ba723d" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a0a4a6d413128ce00d730264468d766c4" kindref="member">imat</ref>&lt; 3, 3 &gt;</type>
+        <definition>using tdm::imat3 = typedef imat&lt;3, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>imat3</name>
+        <qualifiedname>tdm::imat3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="74" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a30441ac830e272bd4e4dd39e89234379" prot="public" static="no">
+        <type><ref refid="namespacetdm_1a0a4a6d413128ce00d730264468d766c4" kindref="member">imat</ref>&lt; 4, 4 &gt;</type>
+        <definition>using tdm::imat4 = typedef imat&lt;4, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>imat4</name>
+        <qualifiedname>tdm::imat4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="75" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ab9aac8853c177de49c1357e3fc7cdb8a" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, float &gt;</type>
+        <definition>using tdm::fmat = typedef mat&lt;R, C, float&gt;</definition>
+        <argsstring></argsstring>
+        <name>fmat</name>
+        <qualifiedname>tdm::fmat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="78" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1ab181e474ae655e96bbd1d94c442be718" prot="public" static="no">
+        <type><ref refid="namespacetdm_1ab9aac8853c177de49c1357e3fc7cdb8a" kindref="member">fmat</ref>&lt; 2, 2 &gt;</type>
+        <definition>using tdm::fmat2 = typedef fmat&lt;2, 2&gt;</definition>
+        <argsstring></argsstring>
+        <name>fmat2</name>
+        <qualifiedname>tdm::fmat2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="80" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a5058d64e551b4a5f281cf8454f5b4bb5" prot="public" static="no">
+        <type><ref refid="namespacetdm_1ab9aac8853c177de49c1357e3fc7cdb8a" kindref="member">fmat</ref>&lt; 3, 3 &gt;</type>
+        <definition>using tdm::fmat3 = typedef fmat&lt;3, 3&gt;</definition>
+        <argsstring></argsstring>
+        <name>fmat3</name>
+        <qualifiedname>tdm::fmat3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="81" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacetdm_1a724304086392e7e3fc64dd35c1fbf3ea" prot="public" static="no">
+        <type><ref refid="namespacetdm_1ab9aac8853c177de49c1357e3fc7cdb8a" kindref="member">fmat</ref>&lt; 4, 4 &gt;</type>
+        <definition>using tdm::fmat4 = typedef fmat&lt;4, 4&gt;</definition>
+        <argsstring></argsstring>
+        <name>fmat4</name>
+        <qualifiedname>tdm::fmat4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" line="82" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Types.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetdm_1ab7a32e9e75bbffd9cda585d73d313de8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt;</type>
+        <definition>vec3&lt; T &gt; tdm::cross</definition>
+        <argsstring>(const vec3&lt; T &gt; &amp;lhs, const vec3&lt; T &gt; &amp;rhs)</argsstring>
+        <name>cross</name>
+        <qualifiedname>tdm::cross</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="22" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="22" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a789cefc95e9408211615da063d75b751" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T tdm::dot</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, T &gt; &amp;rhs)</argsstring>
+        <name>dot</name>
+        <qualifiedname>tdm::dot</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="31" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="31" bodyend="33"/>
+        <referencedby refid="classdnac_1_1Triangle_1ab989f4f1cd4c51ac60921519e65d41d9" compoundref="Triangle_8cpp" startline="33" endline="44">dnac::Triangle::getBarycentricCoords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a7e856a88d452831ae93e3f22c03b3e83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::negate</definition>
+        <argsstring>(vec&lt; L, T &gt; v)</argsstring>
+        <name>negate</name>
+        <qualifiedname>tdm::negate</qualifiedname>
+        <param>
+          <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="36" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="36" bodyend="38"/>
+        <references refid="structtdm_1_1vec_1a3f3ea73401edb017414292df5c64d4a8" compoundref="Vec_8h" startline="178" endline="182">tdm::vec&lt; L, T &gt;::negate</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ad2984aa9fe011508721b2582fd533cbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::negate</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;m)</argsstring>
+        <name>negate</name>
+        <qualifiedname>tdm::negate</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="41" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1aa46734d11a9299f44130a29409c2963f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type tdm::length</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;v)</argsstring>
+        <name>length</name>
+        <qualifiedname>tdm::length</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="46" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="46" bodyend="48"/>
+        <references refid="structtdm_1_1vec_1a2b355427a69d56cf8a32539191d96c93" compoundref="Vec_8h" startline="168" endline="171">tdm::vec&lt; L, T &gt;::length</references>
+        <referencedby refid="structtrio_1_1StringConverter_3_01wchar__t_01_4_1a8635df969e0bb53a35eb017245d6959d" compoundref="NativeString_8h" startline="44" endline="66">trio::StringConverter&lt; wchar_t &gt;::from</referencedby>
+        <referencedby refid="classdnac_1_1CalculateMeshLowerLODsCommand_1_1Impl_1afdd4b3a36329675410b02fb137a33761" compoundref="CalculateMeshLowerLODsCommand_8cpp" startline="93" endline="100">dnac::CalculateMeshLowerLODsCommand::Impl::getMeshName</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a19d3e09b0d8eea38abc06732ed3775a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, vec&lt; L, T &gt; &gt;::type tdm::normalize</definition>
+        <argsstring>(vec&lt; L, T &gt; v)</argsstring>
+        <name>normalize</name>
+        <qualifiedname>tdm::normalize</qualifiedname>
+        <param>
+          <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="51" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="51" bodyend="54"/>
+        <references refid="structtdm_1_1vec_1acd44cca051bda523e42cbfcbd26f49c9" compoundref="Vec_8h" startline="174" endline="176">tdm::vec&lt; L, T &gt;::normalize</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ad5abf5602d97e3df89baa5700086e9cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; C, R, T &gt;</type>
+        <definition>mat&lt; C, R, T &gt; tdm::transpose</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;m)</argsstring>
+        <name>transpose</name>
+        <qualifiedname>tdm::transpose</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="57" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="57" bodyend="64" declfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" declline="11" declcolumn="12"/>
+        <references refid="structtdm_1_1mat_1a5b4b59b8794a8e4223119c64c47252dc" compoundref="Mat_8h" startline="140" endline="145">tdm::mat&lt; R, C, T &gt;::apply</references>
+        <referencedby refid="structtdm_1_1mat_1a9f1b734dca470f22bffdcaf838c3b711" compoundref="Mat_8h" startline="84" endline="87">tdm::mat&lt; R, C, T &gt;::fromColumns</referencedby>
+        <referencedby refid="structtdm_1_1mat_1a022b835621316779fcb5f1655ac2b449" compoundref="Mat_8h" startline="236" endline="238">tdm::mat&lt; R, C, T &gt;::transpose</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a8b9006c1e5787cd89b7da5bdb8749ba0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T tdm::determinant</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;m)</argsstring>
+        <name>determinant</name>
+        <qualifiedname>tdm::determinant</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="129" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="129" bodyend="131"/>
+        <references refid="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" compoundref="Computations_8h" startline="88" endline="104">tdm::impl::determinant</references>
+        <referencedby refid="namespacetdm_1af6249949ec4da22bf7b907f2751efcaa" compoundref="Computations_8h" startline="134" endline="148">inverse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1af6249949ec4da22bf7b907f2751efcaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt;</type>
+        <definition>mat&lt; N, N, T &gt; tdm::inverse</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;m)</argsstring>
+        <name>inverse</name>
+        <qualifiedname>tdm::inverse</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="134" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="134" bodyend="148" declfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" declline="14" declcolumn="12"/>
+        <references refid="namespacetdm_1_1impl_1a984ad92a11c06e34fc8cbd1e3bbf468f" compoundref="Computations_8h" startline="107" endline="122">tdm::impl::adjoint</references>
+        <references refid="namespacetdm_1a8b9006c1e5787cd89b7da5bdb8749ba0" compoundref="Computations_8h" startline="129" endline="131">determinant</references>
+        <referencedby refid="namespacednac_1a30f0682d879e5cbc632ab6663cdde53e" compoundref="Algorithm_8h" startline="29" endline="37">dnac::extractRotationMatrix</referencedby>
+        <referencedby refid="namespacetdm_1adf6e432142236cf00f3bd40de27d2b2c" compoundref="Mat_8h" startline="388" endline="390">operator/</referencedby>
+        <referencedby refid="structtdm_1_1mat_1a08905db39e54a925f0326cbeed84066d" compoundref="Mat_8h" startline="227" endline="229">tdm::mat&lt; R, C, T &gt;::operator/=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1af2af6050315345aa0db49cc5f77ba33f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T tdm::trace</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;m)</argsstring>
+        <name>trace</name>
+        <qualifiedname>tdm::trace</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="151" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="151" bodyend="157"/>
+        <references refid="namespacetdm_1af2af6050315345aa0db49cc5f77ba33f" compoundref="Computations_8h" startline="151" endline="157">trace</references>
+        <referencedby refid="namespacetdm_1af2af6050315345aa0db49cc5f77ba33f" compoundref="Computations_8h" startline="151" endline="157">trace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a96d97543e016a745e13fc5636da84e0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool tdm::operator==</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>tdm::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="275" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="275" bodyend="282"/>
+        <references refid="structtdm_1_1mat_1a5b4b59b8794a8e4223119c64c47252dc" compoundref="Mat_8h" startline="140" endline="145">tdm::mat&lt; R, C, T &gt;::apply</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a7bf82ae9ab894985d26c1beb49aad3b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool tdm::operator!=</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>tdm::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="285" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="285" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1aebd74509bbae3af7401d982589abd9a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator+</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;m)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="290" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="290" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ac777140e095ad77e4731087a4bf25337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator-</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;m)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="295" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="295" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a7ae88b2db25fb34b53ee8e424e936544" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator+</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, T rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="302" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="302" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ab14951bd069206c7125f6bb108adb2cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator+</definition>
+        <argsstring>(T lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="307" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="307" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ad380fbf2cb8f050c146754e560bf62a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator+</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="312" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="312" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a8cf9acaa8cc9c1f45fab75b61cc40758" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator-</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, T rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="317" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="317" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a141a7a811d4aefe4a77c3a37bd6ea438" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator-</definition>
+        <argsstring>(T lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="322" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="322" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a1e507cadbc446bebf99e846304c1268d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator-</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="327" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="327" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1abc80b4060c9aabf8bf3a5958dea64b1c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator*</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, T rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="332" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="332" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1af05f7a33f9f4db9fb7b7d6ab37aabe89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator*</definition>
+        <argsstring>(T lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="337" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="337" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a08e49d8ff89d5f6181234465a4ddad90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::row_type</type>
+        <definition>mat&lt; R, C, T &gt;::row_type tdm::operator*</definition>
+        <argsstring>(const typename mat&lt; R, C, T &gt;::column_type &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const typename <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::column_type &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="342" column="32" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="342" bodyend="349"/>
+        <references refid="structtdm_1_1mat_1a5b4b59b8794a8e4223119c64c47252dc" compoundref="Mat_8h" startline="140" endline="145">tdm::mat&lt; R, C, T &gt;::apply</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a6259ba09d35d37f4b2ab5896e9abcc30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::column_type</type>
+        <definition>mat&lt; R, C, T &gt;::column_type tdm::operator*</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const typename mat&lt; R, C, T &gt;::row_type &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const typename <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::row_type &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="352" column="35" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="352" bodyend="360"/>
+        <references refid="structtdm_1_1vec_1a127a38ee0747536a683201485e0d40c4" compoundref="Vec_8h" startline="68" endline="73">tdm::vec&lt; L, T &gt;::apply</references>
+        <references refid="structtdm_1_1mat_1a41de3ceaa4bd5309b2432edea56a01ab" compoundref="Mat_8h" startline="251" endline="257">tdm::mat&lt; R, C, T &gt;::column</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ae70dbbd886fa423ed9d6554069dd9d5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>S</declname>
+            <defname>S</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator*</definition>
+        <argsstring>(const mat&lt; R, S, T &gt; &amp;lhs, const mat&lt; S, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, S, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; S, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="363" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="363" bodyend="370"/>
+        <references refid="structtdm_1_1mat_1a5b4b59b8794a8e4223119c64c47252dc" compoundref="Mat_8h" startline="140" endline="145">tdm::mat&lt; R, C, T &gt;::apply</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ac00c97cdcd06c57c74cfc5a6121cef91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator/</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, T rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="373" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="373" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a1d9fb0a814c5ba0b8dcd18367bbccdfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator/</definition>
+        <argsstring>(T lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="378" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="378" bodyend="385"/>
+        <references refid="structtdm_1_1mat_1a5b4b59b8794a8e4223119c64c47252dc" compoundref="Mat_8h" startline="140" endline="145">tdm::mat&lt; R, C, T &gt;::apply</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1adf6e432142236cf00f3bd40de27d2b2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::row_type</type>
+        <definition>mat&lt; R, C, T &gt;::row_type tdm::operator/</definition>
+        <argsstring>(const typename mat&lt; R, C, T &gt;::column_type &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const typename <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::column_type &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="388" column="32" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="388" bodyend="390"/>
+        <references refid="namespacetdm_1af6249949ec4da22bf7b907f2751efcaa" compoundref="Computations_8h" startline="134" endline="148">inverse</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a7c8ec05183092903f5e4a772cfabfcc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::column_type</type>
+        <definition>mat&lt; R, C, T &gt;::column_type tdm::operator/</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const typename mat&lt; R, C, T &gt;::row_type &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const typename <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;::row_type &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="393" column="35" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="393" bodyend="395"/>
+        <references refid="namespacetdm_1af6249949ec4da22bf7b907f2751efcaa" compoundref="Computations_8h" startline="134" endline="148">inverse</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a78719508d55676f81a2ab7a381636411" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>R</declname>
+            <defname>R</defname>
+          </param>
+          <param>
+            <type>dim_t</type>
+            <declname>C</declname>
+            <defname>C</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt;</type>
+        <definition>mat&lt; R, C, T &gt; tdm::operator/</definition>
+        <argsstring>(const mat&lt; R, C, T &gt; &amp;lhs, const mat&lt; R, C, T &gt; &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; R, C, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" line="398" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Mat.h" bodystart="398" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a42c57146e20cfe70131ff667f720bbad" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr double</type>
+        <definition>constexpr double tdm::pi</definition>
+        <argsstring>()</argsstring>
+        <name>pi</name>
+        <qualifiedname>tdm::pi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="10" column="25" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="10" bodyend="12"/>
+        <referencedby refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" compoundref="Transforms_8h" startline="15" endline="18">degrees</referencedby>
+        <referencedby refid="namespacednac_1aab3c105f2454303b836c591d0e676051" compoundref="Algorithm_8h" startline="43" endline="63">dnac::extractRotationVector</referencedby>
+        <referencedby refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" compoundref="Transforms_8h" startline="21" endline="24">radians</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a86f2ad532b61593c6f728678482bc114" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type tdm::degrees</definition>
+        <argsstring>(T radians)</argsstring>
+        <name>degrees</name>
+        <qualifiedname>tdm::degrees</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>radians</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="15" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="15" bodyend="18"/>
+        <references refid="namespacetdm_1a42c57146e20cfe70131ff667f720bbad" compoundref="Transforms_8h" startline="10" endline="12">pi</references>
+        <references refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" compoundref="Transforms_8h" startline="21" endline="24">radians</references>
+        <referencedby refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" compoundref="Transforms_8h" startline="21" endline="24">radians</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1a413461fb7a7dfedcceb18103801db110" compoundref="RotateCommand_8cpp" startline="104" endline="109">dnac::RotateCommand::RotateCommand</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" compoundref="RotateCommand_8cpp" startline="49" endline="74">dnac::RotateCommand::Impl::rotateNeutralJoints</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" compoundref="RotateCommand_8cpp" startline="115" endline="117">dnac::RotateCommand::setRotation</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_floating_point&lt; T &gt;::value, T &gt;::type tdm::radians</definition>
+        <argsstring>(T degrees)</argsstring>
+        <name>radians</name>
+        <qualifiedname>tdm::radians</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>degrees</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="21" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="21" bodyend="24"/>
+        <references refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" compoundref="Transforms_8h" startline="15" endline="18">degrees</references>
+        <references refid="namespacetdm_1a42c57146e20cfe70131ff667f720bbad" compoundref="Transforms_8h" startline="10" endline="12">pi</references>
+        <referencedby refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" compoundref="Transforms_8h" startline="15" endline="18">degrees</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" compoundref="RotateCommand_8cpp" startline="42" endline="47">dnac::RotateCommand::Impl::getRotationTransformationMatrix</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" compoundref="RotateCommand_8cpp" startline="49" endline="74">dnac::RotateCommand::Impl::rotateNeutralJoints</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a6d871452e6ba8e5af822c3d3f4573139" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(const vec3&lt; T &gt; &amp;axis, T radians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>radians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="53" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="53" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a531b788392d682b3b5507feceeaba471" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(const mat4&lt; T &gt; &amp;m, const vec3&lt; T &gt; &amp;axis, T radians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>axis</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>radians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="77" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a64b5932ac17185165bf65c2000cddfb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(T xRadians, T yRadians, T zRadians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>xRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>yRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>zRadians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="82" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="82" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a734e16d0c46de4f6622e1c8a631bfa53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(const mat4&lt; T &gt; &amp;m, T xRadians, T yRadians, T zRadians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>xRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>yRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>zRadians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="108" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a55b0b5111d65a205801e520b83a91e4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(const vec3&lt; T &gt; &amp;radians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>radians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="113" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="113" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1abac0d987f95650a5086a231364064fbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt;</type>
+        <definition>mat4&lt; T &gt; tdm::projective::rotate</definition>
+        <argsstring>(const mat4&lt; T &gt; &amp;m, const vec3&lt; T &gt; &amp;radians, handedness h=handedness::right)</argsstring>
+        <name>rotate</name>
+        <qualifiedname>tdm::projective::rotate</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a3fe6100e4962363b1a4be245b13d527c" kindref="member">mat4</ref>&lt; T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>radians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="118" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a3f30f4777ac8bdc4e0eb5c96ab634a58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt;</type>
+        <definition>mat&lt; L+1, L+1, T &gt; tdm::projective::scale</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;factors)</argsstring>
+        <name>scale</name>
+        <qualifiedname>tdm::projective::scale</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>factors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="123" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="123" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a0f73dee532160054f7aeb723d3371162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt;</type>
+        <definition>mat&lt; L+1, L+1, T &gt; tdm::projective::scale</definition>
+        <argsstring>(const mat&lt; L+1, L+1, T &gt; &amp;m, const vec&lt; L, T &gt; &amp;factors)</argsstring>
+        <name>scale</name>
+        <qualifiedname>tdm::projective::scale</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>factors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="132" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1aa3af28aac1eb1d3b1b6d6e66fdc95b59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt;</type>
+        <definition>mat&lt; L+1, L+1, T &gt; tdm::projective::scale</definition>
+        <argsstring>(T factor)</argsstring>
+        <name>scale</name>
+        <qualifiedname>tdm::projective::scale</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="137" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1af07ccf333c2d31d6b28e2a854e4b758a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L, L, T &gt;</type>
+        <definition>mat&lt; L, L, T &gt; tdm::projective::scale</definition>
+        <argsstring>(const mat&lt; L, L, T &gt; &amp;m, T factor)</argsstring>
+        <name>scale</name>
+        <qualifiedname>tdm::projective::scale</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L, L, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>factor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="142" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1acebdfbfa65a7452ac8b81acd0b618eee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt;</type>
+        <definition>mat&lt; L+1, L+1, T &gt; tdm::projective::translate</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;position)</argsstring>
+        <name>translate</name>
+        <qualifiedname>tdm::projective::translate</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="147" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="147" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1ac120cb33694cec606634642dc48019e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt;</type>
+        <definition>mat&lt; L+1, L+1, T &gt; tdm::projective::translate</definition>
+        <argsstring>(const mat&lt; L+1, L+1, T &gt; &amp;m, const vec&lt; L, T &gt; &amp;position)</argsstring>
+        <name>translate</name>
+        <qualifiedname>tdm::projective::translate</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; L+1, L+1, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="156" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1ab6b0c39e3a4f3435a1b3445dc0a93e9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1projective_1_1axis__angle" kindref="compound">axis_angle</ref>&lt; T &gt;</type>
+        <definition>axis_angle&lt; T &gt; tdm::projective::xyz2AxisAngle</definition>
+        <argsstring>(T xRadians, T yRadians, T zRadians, handedness h=handedness::right)</argsstring>
+        <name>xyz2AxisAngle</name>
+        <qualifiedname>tdm::projective::xyz2AxisAngle</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>xRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>yRadians</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>zRadians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="167" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="167" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1projective_1a070fb9fdf44db8b854ade70147a8ce4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1projective_1_1axis__angle" kindref="compound">axis_angle</ref>&lt; T &gt;</type>
+        <definition>axis_angle&lt; T &gt; tdm::projective::xyz2AxisAngle</definition>
+        <argsstring>(const vec3&lt; T &gt; &amp;radians, handedness h=handedness::right)</argsstring>
+        <name>xyz2AxisAngle</name>
+        <qualifiedname>tdm::projective::xyz2AxisAngle</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a0ee1135015dc380efab2a1f62e27d32c" kindref="member">vec3</ref>&lt; T &gt; &amp;</type>
+          <declname>radians</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aed" kindref="member">handedness</ref></type>
+          <declname>h</declname>
+          <defval><ref refid="namespacetdm_1a4c1144e7275ec98fc638359109142aeda7c4f29407893c334a6cb7a87bf045c0d" kindref="member">handedness::right</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" line="178" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Transforms.h" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a05f811d3bc2aa12226f32a16bd59df7a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool tdm::operator==</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, T &gt; &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>tdm::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="195" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="195" bodyend="201"/>
+        <references refid="structtdm_1_1vec_1a127a38ee0747536a683201485e0d40c4" compoundref="Vec_8h" startline="68" endline="73">tdm::vec&lt; L, T &gt;::apply</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a16ac9390c8ddf599cdd16c70834a883a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool tdm::operator!=</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, T &gt; &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>tdm::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="204" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="204" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ae8ffdd9f8fd168a7de79d1e785dd7789" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator+</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;v)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="209" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="209" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1acf53ae7eab8ff2f6aa02349020daf6fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator-</definition>
+        <argsstring>(vec&lt; L, T &gt; v)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="214" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="214" bodyend="216"/>
+        <references refid="structtdm_1_1vec_1a3f3ea73401edb017414292df5c64d4a8" compoundref="Vec_8h" startline="178" endline="182">tdm::vec&lt; L, T &gt;::negate</references>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1af6088bcd2d86ee9e651d11cb17fb111c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator+</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="219" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="219" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a5b05b1f0617c6772e434356ee8543bce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator+</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, U rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="224" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="224" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ae66b5b0ba2a8c0522dd2a95ccd4cbf90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator+</definition>
+        <argsstring>(T lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator+</name>
+        <qualifiedname>tdm::operator+</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="229" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="229" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1aa01033aeed7e1e35861941661f9ae8d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator-</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="234" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="234" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a37cdaf16a694f11bd8aed639f052e14f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator-</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, U rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="239" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="239" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a67e767b14f91dd4a4b31126fd3b0f798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator-</definition>
+        <argsstring>(T lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator-</name>
+        <qualifiedname>tdm::operator-</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="244" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1ad93285fd567280e6a7e66d5a70ba1510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator*</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="249" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="249" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a4adea190abd2fe6bebdf4ab56beda91e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_arithmetic&lt; U &gt;::value, <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_arithmetic&lt; U &gt;::value, vec&lt; L, T &gt; &gt;::type tdm::operator*</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, U rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="254" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1af1583dd6dc471b02cda2a41329879151" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, vec&lt; L, T &gt; &gt;::type tdm::operator*</definition>
+        <argsstring>(T lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <qualifiedname>tdm::operator*</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="259" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="259" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a5e2f806de39275efd894f67c2c701b53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt;</type>
+        <definition>vec&lt; L, T &gt; tdm::operator/</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="264" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="264" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1aab9963d576f52b93eb2d35ff0daa741a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_arithmetic&lt; U &gt;::value, <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_arithmetic&lt; U &gt;::value, vec&lt; L, T &gt; &gt;::type tdm::operator/</definition>
+        <argsstring>(const vec&lt; L, T &gt; &amp;lhs, U rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>U</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="269" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="269" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1a200a9434f704d37419f06b34041108af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>L</declname>
+            <defname>L</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, T &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_arithmetic&lt; T &gt;::value, vec&lt; L, T &gt; &gt;::type tdm::operator/</definition>
+        <argsstring>(T lhs, const vec&lt; L, U &gt; &amp;rhs)</argsstring>
+        <name>operator/</name>
+        <qualifiedname>tdm::operator/</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtdm_1_1vec" kindref="compound">vec</ref>&lt; L, U &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" line="274" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Vec.h" bodystart="274" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="19" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="AlignedMemoryResource_8cpp" kind="file" language="C++">
+    <compoundname>AlignedMemoryResource.cpp</compoundname>
+    <includes refid="AlignedMemoryResource_8h" local="yes">pma/resources/AlignedMemoryResource.h</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstdlib</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="4">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AlignedMemoryResource.cpp</label>
+        <link refid="AlignedMemoryResource_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="7">
+        <label>cstdint</label>
+      </node>
+      <node id="8">
+        <label>cstdlib</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacepma">pma</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="AlignedMemoryResource_8cpp_1acb861b2c4ec0c3344f25e69b667d9810" prot="public" static="no">
+        <name>ALIGNED_ALLOC</name>
+        <param><defname>ptr</defname></param>
+        <param><defname>alignment</defname></param>
+        <param><defname>size</defname></param>
+        <initializer>ptr = <ref refid="AlignedMemoryResource_8cpp_1ab8a1c145d376a36ae8ca2e4213b6f852" kindref="member">alignedAlloc</ref>(size, alignment)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="77" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="AlignedMemoryResource_8cpp_1a2018dcdf31f7fd4efa685ecff3137b05" prot="public" static="no">
+        <name>ALIGNED_FREE</name>
+        <param><defname>ptr</defname></param>
+        <initializer><ref refid="AlignedMemoryResource_8cpp_1a2898a09481cbfcd24d6d1309021ac137" kindref="member">alignedFree</ref>(ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="78" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="AlignedMemoryResource_8cpp_1a1e2fd36ca37121582814c06f59e756e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uintptr_t</type>
+        <definition>std::uintptr_t alignAddress</definition>
+        <argsstring>(std::uintptr_t address, std::size_t alignment)</argsstring>
+        <name>alignAddress</name>
+        <param>
+          <type>std::uintptr_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="31" column="27" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="31" bodyend="35"/>
+        <referencedby refid="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" compoundref="AlignedMemoryResource_8cpp" startline="38" endline="42">alignPointer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * alignPointer</definition>
+        <argsstring>(T *ptr, std::size_t alignment)</argsstring>
+        <name>alignPointer</name>
+        <param>
+          <type>T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="38" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="38" bodyend="42"/>
+        <references refid="AlignedMemoryResource_8cpp_1a1e2fd36ca37121582814c06f59e756e6" compoundref="AlignedMemoryResource_8cpp" startline="31" endline="35">alignAddress</references>
+        <referencedby refid="AlignedMemoryResource_8cpp_1ab8a1c145d376a36ae8ca2e4213b6f852" compoundref="AlignedMemoryResource_8cpp" startline="44" endline="61">alignedAlloc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="AlignedMemoryResource_8cpp_1ab8a1c145d376a36ae8ca2e4213b6f852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * alignedAlloc</definition>
+        <argsstring>(std::size_t size, std::size_t alignment)</argsstring>
+        <name>alignedAlloc</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="44" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="44" bodyend="61"/>
+        <references refid="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" compoundref="AlignedMemoryResource_8cpp" startline="38" endline="42">alignPointer</references>
+      </memberdef>
+      <memberdef kind="function" id="AlignedMemoryResource_8cpp_1a2898a09481cbfcd24d6d1309021ac137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void alignedFree</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>alignedFree</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" line="63" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp" bodystart="63" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AlignedMemoryResource_8h" kindref="compound">pma/resources/AlignedMemoryResource.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__linux__)<sp/>||<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)<sp/>||<sp/>defined(__ANDROID__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;malloc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__cplusplus)<sp/>&amp;&amp;<sp/>(__cplusplus<sp/>&gt;=<sp/>201703L)<sp/>&amp;&amp;<sp/>(defined(_GLIBCXX_HAVE_ALIGNED_ALLOC)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_LIBCPP_HAS_ALIGNED_ALLOC)<sp/>||<sp/>defined(_LIBCPP_HAS_C11_FEATURES))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_ALLOC(ptr,<sp/>alignment,<sp/>size)<sp/>ptr<sp/>=<sp/>std::aligned_alloc(alignment,<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_FREE(ptr)<sp/>std::free(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>((defined(_POSIX_VERSION)<sp/>&amp;&amp;<sp/>(_POSIX_VERSION<sp/>&gt;=<sp/>200112L))<sp/>||<sp/>defined(__linux__)<sp/>||<sp/>defined(__APPLE__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_ALLOC(ptr,<sp/>alignment,<sp/>size)<sp/>if<sp/>(::posix_memalign(&amp;(ptr),<sp/>alignment,<sp/>size))<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(ptr)<sp/>=<sp/>nullptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_FREE(ptr)<sp/>::free(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_ALLOC(ptr,<sp/>alignment,<sp/>size)<sp/>ptr<sp/>=<sp/>_aligned_malloc(size,<sp/>alignment)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_FREE(ptr)<sp/>_aligned_free(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__ANDROID__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_ALLOC(ptr,<sp/>alignment,<sp/>size)<sp/>ptr<sp/>=<sp/>::memalign(alignment,<sp/>size)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_FREE(ptr)<sp/>::free(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="AlignedMemoryResource_8cpp_1a1e2fd36ca37121582814c06f59e756e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uintptr_t<sp/><ref refid="AlignedMemoryResource_8cpp_1a1e2fd36ca37121582814c06f59e756e6" kindref="member">alignAddress</ref>(std::uintptr_t<sp/>address,<sp/>std::size_t<sp/>alignment)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>mask<sp/>=<sp/>alignment<sp/>-<sp/>1ul;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((alignment<sp/>&amp;<sp/>mask)<sp/>==<sp/>0ul);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(address<sp/>+<sp/>mask)<sp/>&amp;<sp/>~mask;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="38" refid="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T*<sp/><ref refid="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" kindref="member">alignPointer</ref>(T*<sp/>ptr,<sp/>std::size_t<sp/>alignment)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::uintptr_t<sp/>address<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">std::uintptr_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ptr);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::uintptr_t<sp/>aligned<sp/>=<sp/><ref refid="AlignedMemoryResource_8cpp_1a1e2fd36ca37121582814c06f59e756e6" kindref="member">alignAddress</ref>(address,<sp/>alignment);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">T*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(aligned);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="AlignedMemoryResource_8cpp_1ab8a1c145d376a36ae8ca2e4213b6f852" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="AlignedMemoryResource_8cpp_1ab8a1c145d376a36ae8ca2e4213b6f852" kindref="member">alignedAlloc</ref>(std::size_t<sp/>size,<sp/>std::size_t<sp/>alignment)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>actualSize<sp/>=<sp/>size<sp/>+<sp/>alignment;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pUnalignedChunk<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[actualSize];</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pAlignedChunk<sp/>=<sp/><ref refid="AlignedMemoryResource_8cpp_1ab078fdf361932eac77e00095a9896676" kindref="member">alignPointer</ref>(pUnalignedChunk,<sp/>alignment);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pAlignedChunk<sp/>==<sp/>pUnalignedChunk)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>was<sp/>no<sp/>need<sp/>for<sp/>additional<sp/>alignment,<sp/>so<sp/>an<sp/>artifical<sp/>gap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>added<sp/>to<sp/>make<sp/>room<sp/>for<sp/>the<sp/>shift<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pAlignedChunk<sp/>+=<sp/>alignment;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>and<sp/>write<sp/>the<sp/>shift<sp/>value<sp/>into<sp/>the<sp/>buffer<sp/>(it<sp/>is<sp/>needed<sp/>during</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>deallocation<sp/>to<sp/>reconstruct<sp/>by<sp/>which<sp/>amount<sp/>was<sp/>the<sp/>given<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>offset<sp/>to<sp/>meet<sp/>the<sp/>alignment<sp/>requirement)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ptrdiff_t<sp/>shift<sp/>=<sp/>pAlignedChunk<sp/>-<sp/>pUnalignedChunk;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>guaranteed<sp/>storage<sp/>size<sp/>for<sp/>the<sp/>shift<sp/>value<sp/>is<sp/>only<sp/>one<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert(shift<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>shift<sp/>&lt;=<sp/>256);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pAlignedChunk[-1]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(shift<sp/>&amp;<sp/>0xFF);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(pAlignedChunk);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="AlignedMemoryResource_8cpp_1a2898a09481cbfcd24d6d1309021ac137" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AlignedMemoryResource_8cpp_1a2898a09481cbfcd24d6d1309021ac137" kindref="member">alignedFree</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pAlignedChunk<sp/>=<sp/></highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ptr);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ptrdiff_t<sp/>shift<sp/>=<sp/>pAlignedChunk[-1];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>no<sp/>0<sp/>alignment,<sp/>so<sp/>the<sp/>value<sp/>is<sp/>reused<sp/>to<sp/>actually<sp/>denote<sp/>alignment<sp/>by<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(shift<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shift<sp/>=<sp/>256;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>actual<sp/>start<sp/>address<sp/>of<sp/>the<sp/>chunk,<sp/>prior<sp/>to<sp/>aligning<sp/>it&apos;s<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pUnalignedChunk<sp/>=<sp/>pAlignedChunk<sp/>-<sp/>shift;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<sp/>pUnalignedChunk;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="AlignedMemoryResource_8cpp_1acb861b2c4ec0c3344f25e69b667d9810" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_ALLOC(ptr,<sp/>alignment,<sp/>size)<sp/>ptr<sp/>=<sp/>alignedAlloc(size,<sp/>alignment)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="AlignedMemoryResource_8cpp_1a2018dcdf31f7fd4efa685ecff3137b05" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ALIGNED_FREE(ptr)<sp/>alignedFree(ptr)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepma" kindref="compound">pma</ref><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="classpma_1_1AlignedMemoryResource_1ac88cd6ae3def23f46a66e60500ca8542" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="classpma_1_1AlignedMemoryResource_1ac88cd6ae3def23f46a66e60500ca8542" kindref="member">AlignedMemoryResource::allocate</ref>(std::size_t<sp/>size,<sp/>std::size_t<sp/>alignment)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AlignedMemoryResource_8cpp_1acb861b2c4ec0c3344f25e69b667d9810" kindref="member">ALIGNED_ALLOC</ref>(ptr,<sp/>alignment,<sp/>size);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classpma_1_1AlignedMemoryResource_1a98349fccd4981bca15bfc7887e0d52cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpma_1_1AlignedMemoryResource_1a98349fccd4981bca15bfc7887e0d52cf" kindref="member">AlignedMemoryResource::deallocate</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>ptr,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">,<sp/>std::size_t<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-owning-memory,cppcoreguidelines-no-malloc,hicpp-no-malloc)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="AlignedMemoryResource_8cpp_1a2018dcdf31f7fd4efa685ecff3137b05" kindref="member">ALIGNED_FREE</ref>(ptr);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>pma</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/AlignedMemoryResource.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.util.maya_util &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.util.maya_util</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.util.maya_util</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span>
+
+<span class="kn">from</span> <span class="nn">maya.api.OpenMaya</span> <span class="kn">import</span> <span class="n">MDagPath</span><span class="p">,</span> <span class="n">MFnDagNode</span><span class="p">,</span> <span class="n">MFnTransform</span><span class="p">,</span> <span class="n">MGlobal</span><span class="p">,</span> <span class="n">MVector</span>
+
+<span class="kn">from</span> <span class="nn">..const.space</span> <span class="kn">import</span> <span class="n">OBJECT</span>
+<span class="kn">from</span> <span class="nn">..util.error</span> <span class="kn">import</span> <span class="n">DNAViewerError</span>
+
+
+<div class="viewcode-block" id="Maya"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.maya_util.Maya">[docs]</a><span class="k">class</span> <span class="nc">Maya</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;A utility class used for interfacing with maya transforms&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Maya.get_element"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.maya_util.Maya.get_element">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_element</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">MDagPath</span><span class="p">,</span> <span class="n">MFnDagNode</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;gets the Union[MDagPath, MFnDagNode] object of the element with the given name</span>
+
+<span class="sd">        @type name: str</span>
+<span class="sd">        @param name: The name of the element to be retrieved</span>
+
+<span class="sd">        @rtype: Union[MDagPath, MFnDagNode]</span>
+<span class="sd">        @returns: A OpenMaya object representing the given element</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sellist</span> <span class="o">=</span> <span class="n">MGlobal</span><span class="o">.</span><span class="n">getSelectionListByName</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Element with name:</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> not found!&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">exception</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">sellist</span><span class="o">.</span><span class="n">getDagPath</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">sellist</span><span class="o">.</span><span class="n">getDependNode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Maya.get_transform"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.maya_util.Maya.get_transform">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_transform</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MFnTransform</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;gets the transform of the element with the given name</span>
+
+<span class="sd">        @type element: str</span>
+<span class="sd">        @param element: The element name that we want the transform of</span>
+
+<span class="sd">        @rtype: MFnTransform</span>
+<span class="sd">        @returns: A MFnTransform object representing the given elements transform</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">MFnTransform</span><span class="p">(</span><span class="n">Maya</span><span class="o">.</span><span class="n">get_element</span><span class="p">(</span><span class="n">name</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Maya.get_translation"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.maya_util.Maya.get_translation">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_translation</span><span class="p">(</span><span class="n">element</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">space</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">OBJECT</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MVector</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;gets the translation of the element with the given name</span>
+
+<span class="sd">        @type element: str</span>
+<span class="sd">        @param element: The element name that we want the translation of</span>
+
+<span class="sd">        @type space: str</span>
+<span class="sd">        @param space: A string value representing the translation space (default is &quot;world&quot;)</span>
+
+<span class="sd">        @rtype: MVector</span>
+<span class="sd">        @returns: A MVector object representing the given elements translation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">MFnTransform</span><span class="p">(</span><span class="n">Maya</span><span class="o">.</span><span class="n">get_element</span><span class="p">(</span><span class="n">element</span><span class="p">))</span><span class="o">.</span><span class="n">translation</span><span class="p">(</span><span class="n">space</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Maya.set_translation"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.maya_util.Maya.set_translation">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">set_translation</span><span class="p">(</span>
+        <span class="n">element</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">translation</span><span class="p">:</span> <span class="n">MVector</span><span class="p">,</span> <span class="n">space</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">OBJECT</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;sets the translation of the element with the given name</span>
+
+<span class="sd">        @type element: str</span>
+<span class="sd">        @param element: The element name that we want to set the translation of</span>
+
+<span class="sd">        @type translation: MVector</span>
+<span class="sd">        @param translation: The new translation value</span>
+
+<span class="sd">        @type space: str</span>
+<span class="sd">        @param space: A string value representing the translation space (default is &quot;object&quot;)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">element_obj</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+        <span class="n">element_obj</span><span class="o">.</span><span class="n">setTranslation</span><span class="p">(</span><span class="n">translation</span><span class="p">,</span> <span class="n">space</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

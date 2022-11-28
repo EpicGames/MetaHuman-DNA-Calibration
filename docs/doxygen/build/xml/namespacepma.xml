@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacepma" kind="namespace" language="C++">
+    <compoundname>pma</compoundname>
+    <innerclass refid="classpma_1_1AlignedMemoryResource" prot="public">pma::AlignedMemoryResource</innerclass>
+    <innerclass refid="classpma_1_1ArenaMemoryResource" prot="public">pma::ArenaMemoryResource</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator" prot="public">pma::DefaultInstanceCreator</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01dna_1_1BinaryStreamReader_01_4" prot="public">pma::DefaultInstanceCreator&lt; dna::BinaryStreamReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01dna_1_1BinaryStreamWriter_01_4" prot="public">pma::DefaultInstanceCreator&lt; dna::BinaryStreamWriter &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01dna_1_1JSONStreamReader_01_4" prot="public">pma::DefaultInstanceCreator&lt; dna::JSONStreamReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01dna_1_1JSONStreamWriter_01_4" prot="public">pma::DefaultInstanceCreator&lt; dna::JSONStreamWriter &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01dnac_1_1DNACalibDNAReader_01_4" prot="public">pma::DefaultInstanceCreator&lt; dnac::DNACalibDNAReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01trio_1_1FileStream_01_4" prot="public">pma::DefaultInstanceCreator&lt; trio::FileStream &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01trio_1_1MemoryMappedFileStream_01_4" prot="public">pma::DefaultInstanceCreator&lt; trio::MemoryMappedFileStream &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceCreator_3_01trio_1_1MemoryStream_01_4" prot="public">pma::DefaultInstanceCreator&lt; trio::MemoryStream &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer" prot="public">pma::DefaultInstanceDestroyer</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01dna_1_1BinaryStreamReader_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; dna::BinaryStreamReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01dna_1_1BinaryStreamWriter_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; dna::BinaryStreamWriter &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01dna_1_1JSONStreamReader_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; dna::JSONStreamReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01dna_1_1JSONStreamWriter_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; dna::JSONStreamWriter &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01dnac_1_1DNACalibDNAReader_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; dnac::DNACalibDNAReader &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01trio_1_1FileStream_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; trio::FileStream &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01trio_1_1MemoryMappedFileStream_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; trio::MemoryMappedFileStream &gt;</innerclass>
+    <innerclass refid="structpma_1_1DefaultInstanceDestroyer_3_01trio_1_1MemoryStream_01_4" prot="public">pma::DefaultInstanceDestroyer&lt; trio::MemoryStream &gt;</innerclass>
+    <innerclass refid="classpma_1_1DefaultMemoryResource" prot="public">pma::DefaultMemoryResource</innerclass>
+    <innerclass refid="structpma_1_1Delete" prot="public">pma::Delete</innerclass>
+    <innerclass refid="structpma_1_1Delete_3_01T_0f_0e_4" prot="public">pma::Delete&lt; T[]&gt;</innerclass>
+    <innerclass refid="structpma_1_1FactoryCreate" prot="public">pma::FactoryCreate</innerclass>
+    <innerclass refid="structpma_1_1FactoryDestroy" prot="public">pma::FactoryDestroy</innerclass>
+    <innerclass refid="classpma_1_1MemoryResource" prot="public">pma::MemoryResource</innerclass>
+    <innerclass refid="structpma_1_1New" prot="public">pma::New</innerclass>
+    <innerclass refid="structpma_1_1New_3_01T_0f_0e_4" prot="public">pma::New&lt; T[]&gt;</innerclass>
+    <innerclass refid="classpma_1_1PolyAllocator" prot="public">pma::PolyAllocator</innerclass>
+    <innerclass refid="classpma_1_1ScopedPtr" prot="public">pma::ScopedPtr</innerclass>
+    <innernamespace refid="namespacepma_1_1impl">pma::impl</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::basic_string&lt; T, std::char_traits&lt; T &gt;, Allocator &gt;</type>
+        <definition>using pma::String = typedef std::basic_string&lt;T, std::char_traits&lt;T&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>String</name>
+        <qualifiedname>pma::String</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="26" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; T, Allocator &gt;</type>
+        <definition>using pma::Vector = typedef std::vector&lt;T, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>Vector</name>
+        <qualifiedname>pma::Vector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="29" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a66acdf887e847cb2662b905e682b0132" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;Vector&lt;T&gt; &gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; <ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; T &gt;, Allocator &gt;</type>
+        <definition>using pma::Matrix = typedef Vector&lt;Vector&lt;T&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>Matrix</name>
+        <qualifiedname>pma::Matrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="32" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a2b7ddbf324d74a36627c64f16b066d53" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="SPyUS_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">std::list</ref>&lt; T, Allocator &gt;</type>
+        <definition>using pma::List = typedef std::list&lt;T, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>List</name>
+        <qualifiedname>pma::List</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="35" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a7aa108f1780825b08131eb9ee7ff1fd2" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="SPyUS_2CMakeLists_8txt_1a36355bd6f100c6d8c183b00070b6f007" kindref="member">std::set</ref>&lt; T, std::less&lt; T &gt;, Allocator &gt;</type>
+        <definition>using pma::Set = typedef std::set&lt;T, std::less&lt;T&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>Set</name>
+        <qualifiedname>pma::Set</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="38" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::unordered_set&lt; T, std::hash&lt; T &gt;, std::equal_to&lt; T &gt;, Allocator &gt;</type>
+        <definition>using pma::UnorderedSet = typedef std::unordered_set&lt;T, std::hash&lt;T&gt;, std::equal_to&lt;T&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnorderedSet</name>
+        <qualifiedname>pma::UnorderedSet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="41" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a0477a3dc053bdee8c8943dfcfa1352f0" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;std::pair&lt;const K, V&gt; &gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::map&lt; K, V, std::less&lt; K &gt;, Allocator &gt;</type>
+        <definition>using pma::Map = typedef std::map&lt;K, V, std::less&lt;K&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>Map</name>
+        <qualifiedname>pma::Map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="44" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+          <param>
+            <type>typename Allocator</type>
+            <defval>PolyAllocator&lt;std::pair&lt;const K, V&gt; &gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::unordered_map&lt; K, V, std::hash&lt; K &gt;, std::equal_to&lt; K &gt;, Allocator &gt;</type>
+        <definition>using pma::UnorderedMap = typedef std::unordered_map&lt;K, V, std::hash&lt;K&gt;, std::equal_to&lt;K&gt;, Allocator&gt;</definition>
+        <argsstring></argsstring>
+        <name>UnorderedMap</name>
+        <qualifiedname>pma::UnorderedMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" line="47" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/TypeDefs.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1a8a889fca042c1a201a8c7f3c822e02ac" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class TTarget</type>
+          </param>
+          <param>
+            <type>class TBase</type>
+            <defval>TTarget</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpma_1_1impl_1_1ManagedInstance" kindref="compound">impl::ManagedInstance</ref>&lt; std::unique_ptr&lt; TBase, std::function&lt; void(TBase *)&gt; &gt;, TTarget, TBase &gt;</type>
+        <definition>using pma::UniqueInstance = typedef impl::ManagedInstance&lt;std::unique_ptr&lt;TBase, std::function&lt;void (TBase*)&gt; &gt;, TTarget, TBase&gt;</definition>
+        <argsstring></argsstring>
+        <name>UniqueInstance</name>
+        <qualifiedname>pma::UniqueInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/utils/ManagedInstance.h" line="55" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/utils/ManagedInstance.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacepma_1ae5d5b3ccc2827874d96c73b97ade544e" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>class TTarget</type>
+          </param>
+          <param>
+            <type>class TBase</type>
+            <defval>TTarget</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpma_1_1impl_1_1ManagedInstance" kindref="compound">impl::ManagedInstance</ref>&lt; std::shared_ptr&lt; TBase &gt;, TTarget, TBase &gt;</type>
+        <definition>using pma::SharedInstance = typedef impl::ManagedInstance&lt;std::shared_ptr&lt;TBase&gt;, TTarget, TBase&gt;</definition>
+        <argsstring></argsstring>
+        <name>SharedInstance</name>
+        <qualifiedname>pma::SharedInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/utils/ManagedInstance.h" line="58" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/utils/ManagedInstance.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacepma_1a0f0cc320add70f5fb6af1d2683645e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>TAlignment</declname>
+            <defname>TAlignment</defname>
+          </param>
+          <param>
+            <type>class TDefaultMemoryResource</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>UAlignment</declname>
+            <defname>UAlignment</defname>
+          </param>
+          <param>
+            <type>class UDefaultMemoryResource</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pma::operator==</definition>
+        <argsstring>(const PolyAllocator&lt; T, TAlignment, TDefaultMemoryResource &gt; &amp;lhs, const PolyAllocator&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;rhs)</argsstring>
+        <name>operator==</name>
+        <qualifiedname>pma::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator</ref>&lt; T, TAlignment, TDefaultMemoryResource &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator</ref>&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="157" column="6" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="157" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1a301b1b95dbf1313ab014aa4d93004f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>TAlignment</declname>
+            <defname>TAlignment</defname>
+          </param>
+          <param>
+            <type>class TDefaultMemoryResource</type>
+          </param>
+          <param>
+            <type>typename U</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>UAlignment</declname>
+            <defname>UAlignment</defname>
+          </param>
+          <param>
+            <type>class UDefaultMemoryResource</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool pma::operator!=</definition>
+        <argsstring>(const PolyAllocator&lt; T, TAlignment, TDefaultMemoryResource &gt; &amp;lhs, const PolyAllocator&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;rhs)</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>pma::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator</ref>&lt; T, TAlignment, TDefaultMemoryResource &gt; &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator</ref>&lt; U, UAlignment, UDefaultMemoryResource &gt; &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" line="165" column="6" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/PolyAllocator.h" bodystart="165" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1a64805040921b916b618da85c7b1b52b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>class TCreator</type>
+          </param>
+          <param>
+            <type>class TDestroyer</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename Base</type>
+            <defval>typename std::remove_pointer &lt; decltype(TCreator{} (std::declval&lt;Args&gt;()...)) &gt; ::type</defval>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; Base, TDestroyer &gt;</type>
+        <definition>ScopedPtr&lt; Base, TDestroyer &gt; pma::makeScoped</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>makeScoped</name>
+        <qualifiedname>pma::makeScoped</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Syntactic sugar for creating instances wrapped in a <ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The default behavior is to rely on the <ref refid="structpma_1_1New" kindref="compound">New</ref> / <ref refid="structpma_1_1Delete" kindref="compound">Delete</ref> pair of lifetime managers, because it&apos;s sensible to do so. However, because a significant portion of our abstractions follow the convention of exposing a create / destroy pair of factory functions (where create always returns a raw pointer), there also exists a dedicated <ref refid="structpma_1_1FactoryCreate" kindref="compound">FactoryCreate</ref> / <ref refid="structpma_1_1FactoryDestroy" kindref="compound">FactoryDestroy</ref> pair of lifetime managers. To change the default behavior in order to utilize a specific lifetime manager pair, specialize the <ref refid="structpma_1_1DefaultInstanceCreator" kindref="compound">DefaultInstanceCreator</ref> and <ref refid="structpma_1_1DefaultInstanceDestroyer" kindref="compound">DefaultInstanceDestroyer</ref> traits for the types that need different handling. Alternately, it&apos;s also possible to pass a custom creator / destroyer on each invocation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" line="252" column="11" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" bodystart="252" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1a7a64f35105cb3740a4fe55d119791810" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>template&lt; class ... &gt; class</type>
+            <declname>TCreatorTemplate</declname>
+            <defname>TCreatorTemplate</defname>
+          </param>
+          <param>
+            <type>template&lt; class ... &gt; class</type>
+            <declname>TDestroyerTemplate</declname>
+            <defname>TDestroyerTemplate</defname>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; T, TDestroyerTemplate&lt; T &gt; &gt;</type>
+        <definition>ScopedPtr&lt; T, TDestroyerTemplate&lt; T &gt; &gt; pma::makeScoped</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>makeScoped</name>
+        <qualifiedname>pma::makeScoped</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" line="261" column="11" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" bodystart="261" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1af6fd07e6cb33f1e87c818f3562c3eaba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; T, typename <ref refid="structpma_1_1DefaultInstanceDestroyer" kindref="compound">DefaultInstanceDestroyer</ref>&lt; T &gt;::type &gt;</type>
+        <definition>ScopedPtr&lt; T, typename DefaultInstanceDestroyer&lt; T &gt;::type &gt; pma::makeScoped</definition>
+        <argsstring>(Args &amp;&amp;... args)</argsstring>
+        <name>makeScoped</name>
+        <qualifiedname>pma::makeScoped</qualifiedname>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" line="268" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/pma/ScopedPtr.h" bodystart="268" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1a08f1bb4c76dacceca5d131ea988130c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uintptr_t</type>
+        <definition>std::uintptr_t pma::alignAddress</definition>
+        <argsstring>(std::uintptr_t address, std::size_t alignment)</argsstring>
+        <name>alignAddress</name>
+        <qualifiedname>pma::alignAddress</qualifiedname>
+        <param>
+          <type>std::uintptr_t</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" line="15" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="15" bodyend="19"/>
+        <referencedby refid="namespacepma_1ae9f76d74a60814f55c77aff5c80c56e1" compoundref="ArenaMemoryResource_8cpp" startline="22" endline="26">alignPointer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacepma_1ae9f76d74a60814f55c77aff5c80c56e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T * pma::alignPointer</definition>
+        <argsstring>(T *ptr, std::size_t alignment)</argsstring>
+        <name>alignPointer</name>
+        <qualifiedname>pma::alignPointer</qualifiedname>
+        <param>
+          <type>T *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>alignment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" line="22" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/pma/resources/ArenaMemoryResource.cpp" bodystart="22" bodyend="26"/>
+        <references refid="namespacepma_1a08f1bb4c76dacceca5d131ea988130c6" compoundref="ArenaMemoryResource_8cpp" startline="15" endline="19">alignAddress</references>
+        <referencedby refid="classpma_1_1ArenaMemoryResource_1_1Impl_1a674f4a229d1acc0aec8dc5d95a98e1ec" compoundref="ArenaMemoryResource_8cpp" startline="64" endline="88">pma::ArenaMemoryResource::Impl::allocate</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/BinaryStreamReader.h" line="121" column="1"/>
+  </compounddef>
+</doxygen>

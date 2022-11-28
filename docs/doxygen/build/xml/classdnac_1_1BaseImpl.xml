@@ -1,0 +1,502 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1BaseImpl" kind="class" language="C++" prot="public">
+    <compoundname>dnac::BaseImpl</compoundname>
+    <derivedcompoundref refid="classdnac_1_1ReaderImpl" prot="public" virt="virtual">dnac::ReaderImpl&lt; DNACalibDNAReader &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1WriterImpl" prot="public" virt="virtual">dnac::WriterImpl&lt; dna::Writer &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1ReaderImpl" prot="public" virt="virtual">dnac::ReaderImpl&lt; TReaderBase &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdnac_1_1WriterImpl" prot="public" virt="virtual">dnac::WriterImpl&lt; TWriterBase &gt;</derivedcompoundref>
+    <includes refid="dnacalib_2dna_2BaseImpl_8h" local="no">BaseImpl.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" prot="protected" static="no" mutable="no">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource* dnac::BaseImpl::memRes</definition>
+        <argsstring></argsstring>
+        <name>memRes</name>
+        <qualifiedname>dnac::BaseImpl::memRes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="31" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" compoundref="dnacalib_2dna_2BaseImpl_8h" startline="26" endline="28">getMemoryResource</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1a18f789887ae48a774e7549823920a8a5" compoundref="DNACalibDNAReaderImpl_8cpp" startline="172" endline="207">dnac::DNACalibDNAReaderImpl::removeJoint</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" compoundref="DNACalibDNAReaderImpl_8cpp" startline="209" endline="218">dnac::DNACalibDNAReaderImpl::removeJointAnimation</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" compoundref="DNACalibDNAReaderImpl_8cpp" startline="152" endline="170">dnac::DNACalibDNAReaderImpl::removeMesh</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" compoundref="DNACalibDNAReaderImpl_8cpp" startline="109" endline="119">dnac::DNACalibDNAReaderImpl::setBlendShapeTargetDeltas</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" compoundref="DNACalibDNAReaderImpl_8cpp" startline="89" endline="92">dnac::DNACalibDNAReaderImpl::setJointGroupValues</referencedby>
+        <referencedby refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" compoundref="DNACalibDNAReaderImpl_8cpp" startline="94" endline="102">dnac::DNACalibDNAReaderImpl::setVertexPositions</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1BaseImpl_1ad2b4846b06dcceaafc16e854dba6f01e" prot="protected" static="no" mutable="no">
+        <type><ref refid="structdnac_1_1DNA" kindref="compound">DNA</ref></type>
+        <definition>DNA dnac::BaseImpl::dna</definition>
+        <argsstring></argsstring>
+        <name>dna</name>
+        <qualifiedname>dnac::BaseImpl::dna</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="32" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a806d3a15e3a36f7a58ee73e5b32c4249" prot="protected" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dnac::BaseImpl::BaseImpl</definition>
+        <argsstring>(MemoryResource *memRes_)</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dnac::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="12" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1ac0974c55882091c30e0507e2366bf15f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::BaseImpl::~BaseImpl</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BaseImpl</name>
+        <qualifiedname>dnac::BaseImpl::~BaseImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="17" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a4d347a22f27ad0b71239ed9c42d81c4c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::BaseImpl::BaseImpl</definition>
+        <argsstring>(const BaseImpl &amp;)=delete</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dnac::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="19" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a48cf91b795aaf8f34fa2c898b2509975" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        <definition>BaseImpl &amp; dnac::BaseImpl::operator=</definition>
+        <argsstring>(const BaseImpl &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::BaseImpl::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="20" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a9863045677e36a0d85fef4c2ed30b6ea" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::BaseImpl::BaseImpl</definition>
+        <argsstring>(BaseImpl &amp;&amp;rhs)=delete</argsstring>
+        <name>BaseImpl</name>
+        <qualifiedname>dnac::BaseImpl::BaseImpl</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a57a1662a33727e60a0e14f030bfab6fc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;</type>
+        <definition>BaseImpl &amp; dnac::BaseImpl::operator=</definition>
+        <argsstring>(BaseImpl &amp;&amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::BaseImpl::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="23" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+        <definition>MemoryResource * dnac::BaseImpl::getMemoryResource</definition>
+        <argsstring>()</argsstring>
+        <name>getMemoryResource</name>
+        <qualifiedname>dnac::BaseImpl::getMemoryResource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="26" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" bodystart="26" bodyend="28"/>
+        <references refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" compoundref="dnacalib_2dna_2BaseImpl_8h" startline="31">memRes</references>
+        <referencedby refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9cd5c3a3a400e107a5280bed4cab5878" compoundref="SetBlendShapeTargetDeltasCommand_8cpp" startline="61" endline="77">dnac::SetBlendShapeTargetDeltasCommand::Impl::computeBlendShapeTargetDeltas</referencedby>
+        <referencedby refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a883917daa2aca369cf98baf6b5b6e4d0" compoundref="SetVertexPositionsCommand_8cpp" startline="56" endline="72">dnac::SetVertexPositionsCommand::Impl::computeVertexPositions</referencedby>
+        <referencedby refid="classdnac_1_1RotateCommand_1_1Impl_1a966194ee7b11f30b2fa41407d4624ea7" compoundref="RotateCommand_8cpp" startline="76" endline="93">dnac::RotateCommand::Impl::rotateVertexPositions</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1_1Impl_1afc9a2d7dc33381e2c76cc676a543c58a" compoundref="ScaleCommand_8cpp" startline="123" endline="139">dnac::ScaleCommand::Impl::scaleBlendShapeTargetDeltas</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1_1Impl_1a765e5aba59db044180e88a69baa32dbd" compoundref="ScaleCommand_8cpp" startline="74" endline="92">dnac::ScaleCommand::Impl::scaleJointBehavior</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1_1Impl_1a1f15b0e88bfa3e2c126a2d0282dbb38d" compoundref="ScaleCommand_8cpp" startline="45" endline="72">dnac::ScaleCommand::Impl::scaleNeutralJoints</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1_1Impl_1ae7c6509cead50685fae7fa3297844926" compoundref="ScaleCommand_8cpp" startline="101" endline="121">dnac::ScaleCommand::Impl::scaleVertexPositions</referencedby>
+        <referencedby refid="classdnac_1_1TranslateCommand_1_1Impl_1af0ed40ac0485ca35228d797b9de2933a" compoundref="TranslateCommand_8cpp" startline="45" endline="59">dnac::TranslateCommand::Impl::translateVertexPositions</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::ReaderImpl&lt; DNACalibDNAReader &gt;</label>
+        <link refid="classdnac_1_1ReaderImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; DNACalibDNAReader &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnac::WriterImpl&lt; dna::Writer &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; dna::Writer &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dnac::BaseImpl</label>
+        <link refid="classdnac_1_1BaseImpl"/>
+      </node>
+      <node id="3">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::ReaderImpl&lt; TReaderBase &gt;</label>
+        <link refid="classdnac_1_1ReaderImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::WriterImpl&lt; TWriterBase &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>terse::ArchiveOffset&lt; std::uint32_t &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="template-instance">
+          <edgelabel>&lt; std::uint32_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>terse::DynArray&lt; float &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="template-instance">
+          <edgelabel>&lt; float &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>terse::DynArray&lt; std::uint16_t &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="template-instance">
+          <edgelabel>&lt; std::uint16_t &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>T</label>
+      </node>
+      <node id="1">
+        <label>dnac::BaseImpl</label>
+        <link refid="classdnac_1_1BaseImpl"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#memRes</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#dna</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dnac::DNA</label>
+        <link refid="structdnac_1_1DNA"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+memRes</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+version</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+sections</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+descriptor</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+definition</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>+behavior</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>+geometry</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dnac::LODMapping</label>
+        <link refid="classdnac_1_1LODMapping"/>
+      </node>
+      <node id="27">
+        <label>dnac::RawAnimatedMaps</label>
+        <link refid="structdnac_1_1RawAnimatedMaps"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+lods</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>dnac::RawBehavior</label>
+        <link refid="structdnac_1_1RawBehavior"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+animatedMapsMarker</edgelabel>
+          <edgelabel>+blendShapeChannelsMarker</edgelabel>
+          <edgelabel>+controlsMarker</edgelabel>
+          <edgelabel>+jointsMarker</edgelabel>
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>+controls</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>+blendShapeChannels</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>dnac::RawBlendShapeChannels</label>
+        <link refid="structdnac_1_1RawBlendShapeChannels"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+lods</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>dnac::RawConditionalTable</label>
+        <link refid="structdnac_1_1RawConditionalTable"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+inputIndices</edgelabel>
+          <edgelabel>+outputIndices</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+cutValues</edgelabel>
+          <edgelabel>+fromValues</edgelabel>
+          <edgelabel>+slopeValues</edgelabel>
+          <edgelabel>+toValues</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>dnac::RawControls</label>
+        <link refid="structdnac_1_1RawControls"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>+conditionals</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>+psds</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dnac::RawCoordinateSystem</label>
+        <link refid="structdnac_1_1RawCoordinateSystem"/>
+      </node>
+      <node id="11">
+        <label>dnac::RawDefinition</label>
+        <link refid="structdnac_1_1RawDefinition"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+lodAnimatedMapMapping</edgelabel>
+          <edgelabel>+lodBlendShapeMapping</edgelabel>
+          <edgelabel>+lodJointMapping</edgelabel>
+          <edgelabel>+lodMeshMapping</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+jointHierarchy</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>+neutralJointRotations</edgelabel>
+          <edgelabel>+neutralJointTranslations</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dnac::RawDescriptor</label>
+        <link refid="structdnac_1_1RawDescriptor"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+coordinateSystem</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>dnac::RawGeometry</label>
+        <link refid="structdnac_1_1RawGeometry"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+marker</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>dnac::RawJoints</label>
+        <link refid="structdnac_1_1RawJoints"/>
+      </node>
+      <node id="12">
+        <label>dnac::RawLODMapping</label>
+        <link refid="structdnac_1_1RawLODMapping"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>dnac::RawPSDMatrix</label>
+        <link refid="structdnac_1_1RawPSDMatrix"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+columns</edgelabel>
+          <edgelabel>+rows</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+values</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>dnac::RawVector3Vector</label>
+        <link refid="structdnac_1_1RawVector3Vector"/>
+        <childnode refid="20" relation="usage">
+          <edgelabel>+xs</edgelabel>
+          <edgelabel>+ys</edgelabel>
+          <edgelabel>+zs</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::SectionLookupTable</label>
+        <link refid="structdnac_1_1SectionLookupTable"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+animatedMaps</edgelabel>
+          <edgelabel>+behavior</edgelabel>
+          <edgelabel>+blendShapeChannels</edgelabel>
+          <edgelabel>+controls</edgelabel>
+          <edgelabel>+definition</edgelabel>
+          <edgelabel>+descriptor</edgelabel>
+          <edgelabel>+geometry</edgelabel>
+          <edgelabel>+joints</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnac::Version</label>
+        <link refid="structdnac_1_1Version"/>
+      </node>
+      <node id="2">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+      <node id="16">
+        <label>std::unique_ptr&lt; T &gt;</label>
+        <childnode refid="17" relation="usage">
+          <edgelabel>+ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;</label>
+        <link refid="structterse_1_1ArchiveOffset"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+proxy</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>terse::ArchiveOffset&lt; TOffset &gt;::Proxy</label>
+        <link refid="structterse_1_1ArchiveOffset_1_1Proxy"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+target</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>terse::DynArray&lt; T, TAllocator &gt;</label>
+        <link refid="classterse_1_1DynArray"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>std::unique_ptr&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</label>
+        <childnode refid="16" relation="template-instance">
+          <edgelabel>&lt; value_type, std::function&lt; void(value_type *)&gt; &gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" line="10" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/dna/BaseImpl.h" bodystart="10" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1BaseImpl_1a806d3a15e3a36f7a58ee73e5b32c4249" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdnac_1_1BaseImpl_1a4d347a22f27ad0b71239ed9c42d81c4c" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdnac_1_1BaseImpl_1a9863045677e36a0d85fef4c2ed30b6ea" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>BaseImpl</name></member>
+      <member refid="classdnac_1_1BaseImpl_1ad2b4846b06dcceaafc16e854dba6f01e" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>dna</name></member>
+      <member refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" prot="public" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>getMemoryResource</name></member>
+      <member refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>memRes</name></member>
+      <member refid="classdnac_1_1BaseImpl_1a48cf91b795aaf8f34fa2c898b2509975" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1BaseImpl_1a57a1662a33727e60a0e14f030bfab6fc" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1BaseImpl_1ac0974c55882091c30e0507e2366bf15f" prot="protected" virt="non-virtual"><scope>dnac::BaseImpl</scope><name>~BaseImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

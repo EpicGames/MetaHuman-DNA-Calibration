@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacetdm_1_1impl" kind="namespace" language="C++">
+    <compoundname>tdm::impl</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetdm_1_1impl_1a8b9bffce0b1b01437454596d529e020a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void tdm::impl::minor</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;input, dim_t dimensions, dim_t i, dim_t j, mat&lt; N, N, T &gt; &amp;output)</argsstring>
+        <name>minor</name>
+        <qualifiedname>tdm::impl::minor</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a644d3de5f1ca2eaa628196afcfbadef4" kindref="member">dim_t</ref></type>
+          <declname>dimensions</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a644d3de5f1ca2eaa628196afcfbadef4" kindref="member">dim_t</ref></type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a644d3de5f1ca2eaa628196afcfbadef4" kindref="member">dim_t</ref></type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="72" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="72" bodyend="85"/>
+        <referencedby refid="namespacetdm_1_1impl_1a984ad92a11c06e34fc8cbd1e3bbf468f" compoundref="Computations_8h" startline="107" endline="122">adjoint</referencedby>
+        <referencedby refid="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" compoundref="Computations_8h" startline="88" endline="104">determinant</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T tdm::impl::determinant</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;m, dim_t dimensions)</argsstring>
+        <name>determinant</name>
+        <qualifiedname>tdm::impl::determinant</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacetdm_1a644d3de5f1ca2eaa628196afcfbadef4" kindref="member">dim_t</ref></type>
+          <declname>dimensions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="88" column="10" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="88" bodyend="104"/>
+        <references refid="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" compoundref="Computations_8h" startline="88" endline="104">determinant</references>
+        <references refid="namespacetdm_1_1impl_1a8b9bffce0b1b01437454596d529e020a" compoundref="Computations_8h" startline="72" endline="85">minor</references>
+        <referencedby refid="namespacetdm_1_1impl_1a984ad92a11c06e34fc8cbd1e3bbf468f" compoundref="Computations_8h" startline="107" endline="122">adjoint</referencedby>
+        <referencedby refid="namespacetdm_1a8b9006c1e5787cd89b7da5bdb8749ba0" compoundref="Computations_8h" startline="129" endline="131">tdm::determinant</referencedby>
+        <referencedby refid="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" compoundref="Computations_8h" startline="88" endline="104">determinant</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespacetdm_1_1impl_1a984ad92a11c06e34fc8cbd1e3bbf468f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>dim_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt;</type>
+        <definition>mat&lt; N, N, T &gt; tdm::impl::adjoint</definition>
+        <argsstring>(const mat&lt; N, N, T &gt; &amp;m)</argsstring>
+        <name>adjoint</name>
+        <qualifiedname>tdm::impl::adjoint</qualifiedname>
+        <param>
+          <type>const <ref refid="structtdm_1_1mat" kindref="compound">mat</ref>&lt; N, N, T &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="107" column="12" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" bodystart="107" bodyend="122"/>
+        <references refid="namespacetdm_1_1impl_1abb27bdfe1717ef57f4dcd7cba4ab4cbb" compoundref="Computations_8h" startline="88" endline="104">determinant</references>
+        <references refid="namespacetdm_1_1impl_1a8b9bffce0b1b01437454596d529e020a" compoundref="Computations_8h" startline="72" endline="85">minor</references>
+        <referencedby refid="namespacetdm_1af6249949ec4da22bf7b907f2751efcaa" compoundref="Computations_8h" startline="134" endline="148">tdm::inverse</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/tdm/Computations.h" line="66" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Storage_8cpp" kind="file" language="C++">
+    <compoundname>Storage.cpp</compoundname>
+    <includes refid="Storage_8h" local="yes">status/Storage.h</includes>
+    <includes refid="PredefinedCodes_8h" local="yes">status/PredefinedCodes.h</includes>
+    <includes refid="Registry_8h" local="yes">status/Registry.h</includes>
+    <includes refid="StatusCode_8h" local="yes">status/StatusCode.h</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">cstring</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="3">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>status/PredefinedCodes.h</label>
+        <link refid="PredefinedCodes_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>status/Registry.h</label>
+        <link refid="Registry_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Storage.cpp</label>
+        <link refid="Storage_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>status/Storage.h</label>
+        <link refid="Storage_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cassert</label>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="10">
+        <label>cstring</label>
+      </node>
+      <node id="8">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage" prot="public">sc::anonymous_namespace{Storage.cpp}::StatusCodeStorage</innerclass>
+    <innernamespace refid="namespacesc">sc</innernamespace>
+    <innernamespace refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03">sc::anonymous_namespace{Storage.cpp}</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Storage_8h" kindref="compound">status/Storage.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="PredefinedCodes_8h" kindref="compound">status/PredefinedCodes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Registry_8h" kindref="compound">status/Registry.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="StatusCode_8h" kindref="compound">status/StatusCode.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesc" kindref="compound">sc</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage" kindref="compound">StatusCodeStorage</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage_1a987742839850ba7813b5b9082ab5d578" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage_1a987742839850ba7813b5b9082ab5d578" kindref="member">code</ref>;</highlight></codeline>
+<codeline lineno="19" refid="structsc_1_1anonymous__namespace_02Storage_8cpp_03_1_1StatusCodeStorage_1afebc72f6f30c28af3f7275517417c471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>message[512];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03_1a3e77657bb750cdfcf376c2cbec9b6dfb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03_1a3e77657bb750cdfcf376c2cbec9b6dfb" kindref="member">strcopy</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/>std::size_t<sp/><ref refid="namespacetrio_1_1anonymous__namespace_02FileStreamImpl_8cpp_03_1a6c0884d13cc39d78a7b57aaa3c8cfe49" kindref="member">bufferSize</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy_s(destination,<sp/><ref refid="namespacetrio_1_1anonymous__namespace_02FileStreamImpl_8cpp_03_1a6c0884d13cc39d78a7b57aaa3c8cfe49" kindref="member">bufferSize</ref>,<sp/>source,<sp/><ref refid="namespacetrio_1_1anonymous__namespace_02FileStreamImpl_8cpp_03_1a6c0884d13cc39d78a7b57aaa3c8cfe49" kindref="member">bufferSize</ref><sp/>-<sp/>1ul);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::strncpy(destination,<sp/>source,<sp/><ref refid="namespacetrio_1_1anonymous__namespace_02FileStreamImpl_8cpp_03_1a6c0884d13cc39d78a7b57aaa3c8cfe49" kindref="member">bufferSize</ref><sp/>-<sp/>1ul);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">thread_local</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>StatusCodeStorage<sp/><ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>{0,<sp/></highlight><highlight class="stringliteral">&quot;Ok&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classsc_1_1StatusStorage_1a9f3710c04a88dd49df6ae1cc9ea02086" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusStorage_1a9f3710c04a88dd49df6ae1cc9ea02086" kindref="member">StatusStorage::set</ref>(<ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref><sp/>status)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>Release<sp/>build<sp/>will<sp/>eliminate<sp/>this<sp/>call,<sp/>as<sp/>it&apos;s<sp/>really<sp/>just<sp/>a<sp/>sanity<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>avoid<sp/>using<sp/>unregistered<sp/>status<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(<ref refid="classsc_1_1StatusCodeRegistry_1ae6ce1bd0e7e206085e54af7c27b5ccce" kindref="member">StatusCodeRegistry::contains</ref>(status));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.code<sp/>=<sp/>status.<ref refid="structsc_1_1StatusCode_1a9a44c4db8f029093d044173054459305" kindref="member">code</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03_1a3e77657bb750cdfcf376c2cbec9b6dfb" kindref="member">strcopy</ref>(<ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.message,<sp/>status.<ref refid="structsc_1_1StatusCode_1a8ab3d5bf55953684bac680f3bf179b16" kindref="member">message</ref>,<sp/><ref refid="classsc_1_1StatusStorage_1a328151063293a20525c7144765a43cad" kindref="member">bufferSize</ref>());</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classsc_1_1StatusStorage_1af28b57ec9085479d61598e4c6aeda801" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusStorage_1af28b57ec9085479d61598e4c6aeda801" kindref="member">StatusStorage::reset</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.code<sp/>=<sp/><ref refid="namespacesc_1a613ada3e4c3dcea1029b35e841ac0cd7" kindref="member">OK</ref>.<ref refid="structsc_1_1StatusCode_1a9a44c4db8f029093d044173054459305" kindref="member">code</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesc_1_1anonymous__namespace_02Storage_8cpp_03_1a3e77657bb750cdfcf376c2cbec9b6dfb" kindref="member">strcopy</ref>(<ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.message,<sp/><ref refid="namespacesc_1a613ada3e4c3dcea1029b35e841ac0cd7" kindref="member">OK</ref>.<ref refid="structsc_1_1StatusCode_1a8ab3d5bf55953684bac680f3bf179b16" kindref="member">message</ref>,<sp/><ref refid="classsc_1_1StatusStorage_1a328151063293a20525c7144765a43cad" kindref="member">bufferSize</ref>());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classsc_1_1StatusStorage_1a53a408f877bd65c6faec0779c80ecde7" refkind="member"><highlight class="normal"><ref refid="structsc_1_1StatusCode" kindref="compound">StatusCode</ref><sp/><ref refid="classsc_1_1StatusStorage_1a53a408f877bd65c6faec0779c80ecde7" kindref="member">StatusStorage::get</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{<ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.code,<sp/><ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.message};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classsc_1_1StatusStorage_1ab91ef0d842f53a30e35783d01679637c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classsc_1_1StatusStorage_1ab91ef0d842f53a30e35783d01679637c" kindref="member">StatusStorage::isOk</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.code<sp/>==<sp/><ref refid="namespacesc_1a613ada3e4c3dcea1029b35e841ac0cd7" kindref="member">OK</ref>.<ref refid="structsc_1_1StatusCode_1a9a44c4db8f029093d044173054459305" kindref="member">code</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classsc_1_1StatusStorage_1a328151063293a20525c7144765a43cad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/>std::size_t<sp/><ref refid="classsc_1_1StatusStorage_1a328151063293a20525c7144765a43cad" kindref="member">StatusStorage::bufferSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="namespacesc_1a271fd165731ba3383150517f4da94bc2" kindref="member">currentStatus</ref>.message);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sc</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/status/Storage.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,982 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Endianness_8h" kind="file" language="C++">
+    <compoundname>Endianness.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">sys/param.h</includes>
+    <includedby refid="ByteSwap_8h" local="yes">ByteSwap.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>sys/param.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>BinaryStreamReaderImpl.cpp</label>
+        <link refid="BinaryStreamReaderImpl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>BinaryStreamReaderImpl.h</label>
+        <link refid="BinaryStreamReaderImpl_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>BinaryStreamWriterImpl.cpp</label>
+        <link refid="BinaryStreamWriterImpl_8cpp"/>
+      </node>
+      <node id="9">
+        <label>BinaryStreamWriterImpl.h</label>
+        <link refid="BinaryStreamWriterImpl_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>FilteredInputArchive.cpp</label>
+        <link refid="FilteredInputArchive_8cpp"/>
+      </node>
+      <node id="4">
+        <label>FilteredInputArchive.h</label>
+        <link refid="FilteredInputArchive_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>InputArchive.h</label>
+        <link refid="binary_2InputArchive_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>OutputArchive.h</label>
+        <link refid="binary_2OutputArchive_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ByteSwap.h</label>
+        <link refid="ByteSwap_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Endianness.h</label>
+        <link refid="Endianness_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Endianness_8h_1adebfd572643d63e20b2286ba930194b1" prot="public" static="no">
+        <name>USE_SYS_PARAM_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="27" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>static std::uint16_t bswap16</definition>
+        <argsstring>(std::uint16_t x)</argsstring>
+        <name>bswap16</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="107" column="33" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="107" bodyend="110"/>
+        <referencedby refid="Endianness_8h_1aca526ddb89ad612566e219a35e10b42c" compoundref="Endianness_8h" startline="315" endline="317">bswap</referencedby>
+        <referencedby refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" compoundref="Endianness_8h" startline="168" endline="177">bswap16x8</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>static std::uint32_t bswap32</definition>
+        <argsstring>(std::uint32_t x)</argsstring>
+        <name>bswap32</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="112" column="33" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="112" bodyend="117"/>
+        <referencedby refid="Endianness_8h_1ada265de11e097992c1e8e34f60dd4b01" compoundref="Endianness_8h" startline="319" endline="321">bswap</referencedby>
+        <referencedby refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" compoundref="Endianness_8h" startline="179" endline="184">bswap32x4</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>static std::uint64_t bswap64</definition>
+        <argsstring>(std::uint64_t x)</argsstring>
+        <name>bswap64</name>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="119" column="33" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="119" bodyend="128"/>
+        <referencedby refid="Endianness_8h_1a6558d7eba068959761f2538ade5f91aa" compoundref="Endianness_8h" startline="323" endline="325">bswap</referencedby>
+        <referencedby refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" compoundref="Endianness_8h" startline="186" endline="189">bswap64x2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bswap16x8</definition>
+        <argsstring>(std::uint16_t *source)</argsstring>
+        <name>bswap16x8</name>
+        <param>
+          <type>std::uint16_t *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="168" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="168" bodyend="177"/>
+        <references refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" compoundref="Endianness_8h" startline="107" endline="110">bswap16</references>
+        <referencedby refid="Endianness_8h_1a40d54dcd63c01f3894d9522484653948" compoundref="Endianness_8h" startline="332" endline="334">bswap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bswap32x4</definition>
+        <argsstring>(std::uint32_t *source)</argsstring>
+        <name>bswap32x4</name>
+        <param>
+          <type>std::uint32_t *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="179" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="179" bodyend="184"/>
+        <references refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" compoundref="Endianness_8h" startline="112" endline="117">bswap32</references>
+        <referencedby refid="Endianness_8h_1a726701898a400e37cae5dd084268df3d" compoundref="Endianness_8h" startline="336" endline="338">bswap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void bswap64x2</definition>
+        <argsstring>(std::uint64_t *source)</argsstring>
+        <name>bswap64x2</name>
+        <param>
+          <type>std::uint64_t *</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="186" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="186" bodyend="189"/>
+        <references refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" compoundref="Endianness_8h" startline="119" endline="128">bswap64</references>
+        <referencedby refid="Endianness_8h_1a536b4ac7117c04912ba50bde0f181a19" compoundref="Endianness_8h" startline="340" endline="342">bswap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t ntoh</definition>
+        <argsstring>(std::uint8_t x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="242" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ad404c17f53a950a41f9602eb93aaa834" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t ntoh</definition>
+        <argsstring>(std::uint16_t x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="246" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="246" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a5f77ccbe7c30704098a3cdff8c09d54b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t ntoh</definition>
+        <argsstring>(std::uint32_t x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="250" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="250" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a451ae1d592cda278849d3651261409de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t ntoh</definition>
+        <argsstring>(std::uint64_t x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="254" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="254" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t hton</definition>
+        <argsstring>(std::uint8_t x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="258" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="258" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a2d4ed535d83f395c003e2a5d05eb54d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t hton</definition>
+        <argsstring>(std::uint16_t x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="262" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="262" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a7d51cf9ad09c3d23834106be969af1e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t hton</definition>
+        <argsstring>(std::uint32_t x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="266" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="266" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ae386ee400fef77fe88f83df3b6cf0f90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t hton</definition>
+        <argsstring>(std::uint64_t x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="270" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="270" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a22259a6da08dc89a7466fc63dc5f4247" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ntoh</definition>
+        <argsstring>(std::uint8_t *x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="276" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="276" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ad116a46dfd66843f461292550a72dc53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ntoh</definition>
+        <argsstring>(std::uint16_t *x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint16_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="280" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="280" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a35fcdaf164b42392cb7726600557a67c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ntoh</definition>
+        <argsstring>(std::uint32_t *x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint32_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="284" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="284" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a13575a8cffaad42253e8a562cc810a58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ntoh</definition>
+        <argsstring>(std::uint64_t *x)</argsstring>
+        <name>ntoh</name>
+        <param>
+          <type>std::uint64_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="288" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="288" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aff09ba68207e750c3dc1ffdd83cb0e90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hton</definition>
+        <argsstring>(std::uint8_t *x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="292" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="292" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a921c9bf6e35ba09935af45ad601de621" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hton</definition>
+        <argsstring>(std::uint16_t *x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint16_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="296" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="296" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ae43551f8e1e325b332ecd9cdcd2a253a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hton</definition>
+        <argsstring>(std::uint32_t *x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint32_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="300" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="300" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a7a4e8e2577040a63ae4e5de0249dac14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void hton</definition>
+        <argsstring>(std::uint64_t *x)</argsstring>
+        <name>hton</name>
+        <param>
+          <type>std::uint64_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="304" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="304" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint8_t</type>
+        <definition>std::uint8_t bswap</definition>
+        <argsstring>(std::uint8_t x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint8_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="310" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="310" bodyend="313"/>
+        <referencedby refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4_1a690e1d5cc41ca65ce37d02d7c0e3b993" compoundref="ByteSwap_8h" startline="66" endline="80">terse::ByteSwapper&lt; Endianness::Little &gt;::swap</referencedby>
+        <referencedby refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4_1a4e279f5d9ee0fb9d80bf0f0ead9e7b49" compoundref="ByteSwap_8h" startline="105" endline="119">terse::ByteSwapper&lt; Endianness::Big &gt;::swap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aca526ddb89ad612566e219a35e10b42c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t bswap</definition>
+        <argsstring>(std::uint16_t x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="315" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="315" bodyend="317"/>
+        <references refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" compoundref="Endianness_8h" startline="107" endline="110">bswap16</references>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1ada265de11e097992c1e8e34f60dd4b01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint32_t</type>
+        <definition>std::uint32_t bswap</definition>
+        <argsstring>(std::uint32_t x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="319" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="319" bodyend="321"/>
+        <references refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" compoundref="Endianness_8h" startline="112" endline="117">bswap32</references>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a6558d7eba068959761f2538ade5f91aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::uint64_t</type>
+        <definition>std::uint64_t bswap</definition>
+        <argsstring>(std::uint64_t x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint64_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="323" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="323" bodyend="325"/>
+        <references refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" compoundref="Endianness_8h" startline="119" endline="128">bswap64</references>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1aabce211788e294f0df2159cfb8d21fc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void bswap</definition>
+        <argsstring>(std::uint8_t *x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint8_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="327" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a40d54dcd63c01f3894d9522484653948" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void bswap</definition>
+        <argsstring>(std::uint16_t *x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint16_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="332" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="332" bodyend="334"/>
+        <references refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" compoundref="Endianness_8h" startline="168" endline="177">bswap16x8</references>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a726701898a400e37cae5dd084268df3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void bswap</definition>
+        <argsstring>(std::uint32_t *x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint32_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="336" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="336" bodyend="338"/>
+        <references refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" compoundref="Endianness_8h" startline="179" endline="184">bswap32x4</references>
+      </memberdef>
+      <memberdef kind="function" id="Endianness_8h_1a536b4ac7117c04912ba50bde0f181a19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void bswap</definition>
+        <argsstring>(std::uint64_t *x)</argsstring>
+        <name>bswap</name>
+        <param>
+          <type>std::uint64_t *</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" line="340" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h" bodystart="340" bodyend="342"/>
+        <references refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" compoundref="Endianness_8h" startline="186" endline="189">bswap64x2</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ENABLE_SSE_BSWAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;immintrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(NO_ENDIAN_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(USE_ENDIAN_H)<sp/>||<sp/>defined(USE_MACHINE_ENDIAN_H)<sp/>||<sp/>defined(USE_SYS_ENDIAN_H)<sp/>||<sp/>defined(USE_SYS_ISA_DEFS_H)<sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(USE_SYS_PARAM_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>OVERRIDDEN_ENDIAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>!defined(OVERRIDDEN_ENDIAN_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>defined(__linux__)<sp/>||<sp/>defined(__GLIBC__)<sp/>||<sp/>defined(__CYGWIN__)<sp/>||<sp/>defined(__ANDROID__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>USE_ENDIAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>USE_MACHINE_ENDIAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>defined(__FreeBSD__)<sp/>||<sp/>defined(__NetBSD__)<sp/>||<sp/>defined(__OpenBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>USE_SYS_ENDIAN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>defined(__sun)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>USE_SYS_ISA_DEFS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#elif<sp/>defined(__MINGW32__)<sp/>||<sp/>defined(__MINGW64__)<sp/>||<sp/>!(defined(_WIN64)<sp/>||<sp/>defined(_WIN32))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="Endianness_8h_1adebfd572643d63e20b2286ba930194b1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>USE_SYS_PARAM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>defined(USE_ENDIAN_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;endian.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(USE_MACHINE_ENDIAN_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;machine/endian.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(USE_SYS_ENDIAN_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/endian.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(USE_SYS_ISA_DEFS_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/isa_defs.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(USE_SYS_PARAM_H)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/param.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(TARGET_LITTLE_ENDIAN)<sp/>&amp;&amp;<sp/>!defined(TARGET_BIG_ENDIAN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>(defined(__BYTE_ORDER__)<sp/>&amp;&amp;<sp/>__BYTE_ORDER__<sp/>==<sp/>__ORDER_LITTLE_ENDIAN__)<sp/><sp/></highlight><highlight class="comment">/*GCC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(__BYTE_ORDER)<sp/>&amp;&amp;<sp/>__BYTE_ORDER<sp/>==<sp/>__LITTLE_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*Linux*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(_BYTE_ORDER)<sp/>&amp;&amp;<sp/>_BYTE_ORDER<sp/>==<sp/>_LITTLE_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*xBSD,Sun*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(BYTE_ORDER)<sp/>&amp;&amp;<sp/>BYTE_ORDER<sp/>==<sp/>LITTLE_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*Apple,MingW*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__LITTLE_ENDIAN__)<sp/><sp/></highlight><highlight class="comment">/*GCC<sp/>Mac*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__ARMEL__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="50"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__THUMBEL__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__AARCH64EL__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_MIPSEL)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__MIPSEL)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__MIPSEL__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(_M_IX86)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_M_X64)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(_M_IA64)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_M_AMD64)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(_M_ARM)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_M_ARM64)<sp/><sp/></highlight><highlight class="comment">/*MSVC*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>(defined(__BYTE_ORDER__)<sp/>&amp;&amp;<sp/>__BYTE_ORDER__<sp/>==<sp/>__ORDER_BIG_ENDIAN__)<sp/><sp/></highlight><highlight class="comment">/*GCC*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(__BYTE_ORDER)<sp/>&amp;&amp;<sp/>__BYTE_ORDER<sp/>==<sp/>__BIG_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*Linux*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(_BYTE_ORDER)<sp/>&amp;&amp;<sp/>_BYTE_ORDER<sp/>==<sp/>_BIG_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*xBSD,Sun*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="60"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(BYTE_ORDER)<sp/>&amp;&amp;<sp/>BYTE_ORDER<sp/>==<sp/>BIG_ENDIAN)<sp/><sp/></highlight><highlight class="comment">/*Apple,MingW*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(_M_PPC)<sp/><sp/></highlight><highlight class="comment">/*MSVC<sp/>for<sp/>XBox-360*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__BIG_ENDIAN__)<sp/><sp/></highlight><highlight class="comment">/*GCC<sp/>Mac*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__ARMEB__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__THUMBEB__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="63"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__AARCH64EB__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(_MIPSEB)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>\</highlight></codeline>
+<codeline lineno="64"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>defined(__MIPSEB)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"><sp/>||<sp/>defined(__MIPSEB__)<sp/><sp/></highlight><highlight class="comment">/*GCC,Clang*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TARGET_BIG_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#elif<sp/>defined(_WIN32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TARGET_LITTLE_ENDIAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>byte<sp/>order<sp/>checks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>guard<sp/>for<sp/>explicitly<sp/>defined<sp/>endianness</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/>*<sp/>Swap<sp/>intrinsics</highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__clang__)<sp/>||<sp/>(defined(__GNUC__)<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="75"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>((__GNUC__<sp/>==<sp/>4<sp/>&amp;&amp;<sp/>__GNUC_MINOR__<sp/>&gt;=<sp/>8)<sp/>||<sp/>__GNUC__<sp/>&gt;=<sp/>5))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>__builtin_bswap16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>__builtin_bswap32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>__builtin_bswap64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__linux__)<sp/>||<sp/>defined(__GLIBC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;byteswap.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>bswap_16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>bswap_32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>bswap_64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>_byteswap_ushort((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>_byteswap_ulong((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>_byteswap_uint64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;libkern/OSByteOrder.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>OSSwapInt16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>OSSwapInt32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>OSSwapInt64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__FreeBSD__)<sp/>||<sp/>defined(__NetBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/endian.h&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>defines<sp/>the<sp/>intrinsics<sp/>as<sp/>per<sp/>the<sp/>chosen<sp/>naming<sp/>convention</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__OpenBSD__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/endian.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>swap16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>swap32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>swap64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__sun)<sp/>||<sp/>defined(sun)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;sys/byteorder.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap16(x)<sp/>BSWAP_16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap32(x)<sp/>BSWAP_32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>bswap64(x)<sp/>BSWAP_64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(std::uint16_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((x&amp;<sp/>std::uint16_t{0x00FF})<sp/>&lt;&lt;<sp/>8)<sp/>|</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint16_t{0xFF00})<sp/>&gt;&gt;<sp/>8));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint32_t<sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(std::uint32_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((x&amp;<sp/>std::uint32_t{0x000000FF})<sp/>&lt;&lt;<sp/>24)<sp/>|</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint32_t{0x0000FF00})<sp/>&lt;&lt;<sp/>8)<sp/>|</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint32_t{0x00FF0000})<sp/>&gt;&gt;<sp/>8)<sp/>|</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint32_t{0xFF000000})<sp/>&gt;&gt;<sp/>24));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint64_t<sp/><ref refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" kindref="member">bswap64</ref>(std::uint64_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(((x&amp;<sp/>std::uint64_t{0x00000000000000FF})<sp/>&lt;&lt;<sp/>56)<sp/>|</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x000000000000FF00})<sp/>&lt;&lt;<sp/>40)<sp/>|</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x0000000000FF0000})<sp/>&lt;&lt;<sp/>24)<sp/>|</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x00000000FF000000})<sp/>&lt;&lt;<sp/>8)<sp/>|</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x000000FF00000000})<sp/>&gt;&gt;<sp/>8)<sp/>|</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x0000FF0000000000})<sp/>&gt;&gt;<sp/>24)<sp/>|</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0x00FF000000000000})<sp/>&gt;&gt;<sp/>40)<sp/>|</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x&amp;<sp/>std::uint64_t{0xFF00000000000000})<sp/>&gt;&gt;<sp/>56));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ENABLE_SSE_BSWAP)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" kindref="member">bswap16x8</ref>(std::uint16_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>v<sp/>=<sp/>_mm_load_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>swapped<sp/>=<sp/>_mm_or_si128(_mm_slli_epi16(v,<sp/>8),<sp/>_mm_srli_epi16(v,<sp/>8));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_mm_store_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source),<sp/>swapped);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" kindref="member">bswap32x4</ref>(std::uint32_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>v<sp/>=<sp/>_mm_load_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>swapped<sp/>=<sp/>_mm_shuffle_epi8(v,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_mm_set_epi8(</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/>13,<sp/>14,<sp/>15,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/>9,<sp/>10,<sp/>11,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4,<sp/>5,<sp/>6,<sp/>7,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>2,<sp/>3</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_mm_store_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source),<sp/>swapped);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" kindref="member">bswap64x2</ref>(std::uint64_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>v<sp/>=<sp/>_mm_load_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source));</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>__m128i<sp/>swapped<sp/>=<sp/>_mm_shuffle_epi8(v,</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_mm_set_epi8(</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8,<sp/>9,<sp/>10,<sp/>11,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12,<sp/>13,<sp/>14,<sp/>15,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>1,<sp/>2,<sp/>3,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4,<sp/>5,<sp/>6,<sp/>7</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_mm_store_si128(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal">__m128i*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(source),<sp/>swapped);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" kindref="member">bswap16x8</ref>(std::uint16_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[0]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[0]);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[1]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[1]);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[2]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[2]);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[3]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[3]);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[4]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[4]);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[5]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[5]);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[6]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[6]);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[7]<sp/>=<sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(source[7]);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179" refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" kindref="member">bswap32x4</ref>(std::uint32_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[0]<sp/>=<sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(source[0]);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[1]<sp/>=<sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(source[1]);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[2]<sp/>=<sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(source[2]);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[3]<sp/>=<sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(source[3]);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" kindref="member">bswap64x2</ref>(std::uint64_t*<sp/>source)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[0]<sp/>=<sp/><ref refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" kindref="member">bswap64</ref>(source[0]);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source[1]<sp/>=<sp/><ref refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" kindref="member">bswap64</ref>(source[1]);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>ENABLE_SSE_BSWAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Target<sp/>architecture<sp/>specific<sp/>ntoh<sp/>and<sp/>hton<sp/>for<sp/>all<sp/>relevant<sp/>sizes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>case<sp/>of<sp/>big<sp/>endian<sp/>architectures<sp/>this<sp/>is<sp/>a<sp/>noop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(TARGET_LITTLE_ENDIAN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh16(x)<sp/>bswap16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton16(x)<sp/>bswap16((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh32(x)<sp/>bswap32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton32(x)<sp/>bswap32((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh64(x)<sp/>bswap64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton64(x)<sp/>bswap64((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vectorized<sp/>swap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh8x16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton8x16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh16x8(x)<sp/>bswap16x8((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton16x8(x)<sp/>bswap16x8((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh32x4(x)<sp/>bswap32x4((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton32x4(x)<sp/>bswap32x4((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh64x2(x)<sp/>bswap64x2((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton64x2(x)<sp/>bswap64x2((x))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(TARGET_BIG_ENDIAN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh32(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton32(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh64(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton64(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vectorized<sp/>swap</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh8x16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton8x16(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh16x8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton16x8(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh32x4(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton32x4(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ntoh64x2(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>hton64x2(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#error<sp/>&quot;Platform<sp/>not<sp/>supported,<sp/>no<sp/>byte<sp/>swap<sp/>functions<sp/>defined.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__clang__)<sp/>||<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>push</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wunused-value&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Process<sp/>single<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint8_t<sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint8_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntoh8(x);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="Endianness_8h_1ad404c17f53a950a41f9602eb93aaa834" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint16_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntoh16(x);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250" refid="Endianness_8h_1a5f77ccbe7c30704098a3cdff8c09d54b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint32_t<sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint32_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntoh32(x);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="Endianness_8h_1a451ae1d592cda278849d3651261409de" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint64_t<sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint64_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ntoh64(x);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258" refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint8_t<sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint8_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hton8(x);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="Endianness_8h_1a2d4ed535d83f395c003e2a5d05eb54d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint16_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hton16(x);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight></codeline>
+<codeline lineno="266" refid="Endianness_8h_1a7d51cf9ad09c3d23834106be969af1e3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint32_t<sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint32_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hton32(x);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="Endianness_8h_1ae386ee400fef77fe88f83df3b6cf0f90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint64_t<sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint64_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>hton64(x);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Process<sp/>multiple<sp/>blocks<sp/>simultaneously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="Endianness_8h_1a22259a6da08dc89a7466fc63dc5f4247" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint8_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>ntoh8x16(x);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="Endianness_8h_1ad116a46dfd66843f461292550a72dc53" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint16_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>ntoh16x8(x);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284" refid="Endianness_8h_1a35fcdaf164b42392cb7726600557a67c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint32_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>ntoh32x4(x);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="Endianness_8h_1a13575a8cffaad42253e8a562cc810a58" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa652c33b65cc585232c204eec6dab0a5" kindref="member">ntoh</ref>(std::uint64_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>ntoh64x2(x);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292" refid="Endianness_8h_1aff09ba68207e750c3dc1ffdd83cb0e90" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint8_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>hton8x16(x);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296" refid="Endianness_8h_1a921c9bf6e35ba09935af45ad601de621" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint16_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>hton16x8(x);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="Endianness_8h_1ae43551f8e1e325b332ecd9cdcd2a253a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint32_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>hton32x4(x);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="Endianness_8h_1a7a4e8e2577040a63ae4e5de0249dac14" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aef3c1d5c06b5d2be796eee36613b4fa9" kindref="member">hton</ref>(std::uint64_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>hton64x2(x);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Byte<sp/>swap<sp/>overloads</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310" refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint8_t<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint8_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315" refid="Endianness_8h_1aca526ddb89ad612566e219a35e10b42c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint16_t<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint16_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1a130b2d6e14699ebe7755219bb36d02ab" kindref="member">bswap16</ref>(x);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319" refid="Endianness_8h_1ada265de11e097992c1e8e34f60dd4b01" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint32_t<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint32_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1ac211dab1db29353a9f6b8d1d5955ca02" kindref="member">bswap32</ref>(x);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323" refid="Endianness_8h_1a6558d7eba068959761f2538ade5f91aa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::uint64_t<sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint64_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1a45c7420067ea2f7a78f0fcac4082a185" kindref="member">bswap64</ref>(x);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327" refid="Endianness_8h_1aabce211788e294f0df2159cfb8d21fc6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint8_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="Endianness_8h_1a40d54dcd63c01f3894d9522484653948" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint16_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Endianness_8h_1a43759fca1755a2f75f3be7fa722b53b8" kindref="member">bswap16x8</ref>(x);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="Endianness_8h_1a726701898a400e37cae5dd084268df3d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint32_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Endianness_8h_1ab2c838c62eadef0377ccb02e30dbc978" kindref="member">bswap32x4</ref>(x);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340" refid="Endianness_8h_1a536b4ac7117c04912ba50bde0f181a19" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Endianness_8h_1aa8436b20ceafc68378431c59c35a726a" kindref="member">bswap</ref>(std::uint64_t*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Endianness_8h_1ae265896a1bb44f9d7add3e4e92dca117" kindref="member">bswap64x2</ref>(x);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__clang__)<sp/>||<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>pop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Endianness.h"/>
+  </compounddef>
+</doxygen>

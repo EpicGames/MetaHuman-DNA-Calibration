@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.util.mesh_neutral &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.util.mesh_neutral</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.util.mesh_neutral</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">maya.api.OpenMaya</span> <span class="kn">import</span> <span class="n">MDagModifier</span><span class="p">,</span> <span class="n">MFnMesh</span><span class="p">,</span> <span class="n">MObject</span><span class="p">,</span> <span class="n">MPoint</span>
+
+<span class="kn">from</span> <span class="nn">..config.mesh</span> <span class="kn">import</span> <span class="n">Mesh</span> <span class="k">as</span> <span class="n">MeshConfig</span>
+<span class="kn">from</span> <span class="nn">..model.dna</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">..model.mesh</span> <span class="kn">import</span> <span class="n">Mesh</span> <span class="k">as</span> <span class="n">MeshModel</span>
+
+
+<div class="viewcode-block" id="MeshNeutral"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral">[docs]</a><span class="k">class</span> <span class="nc">MeshNeutral</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A utility class used for creating and interacting with meshes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="MeshNeutral.get_vertex_positions_from_dna_vertex_positions"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.get_vertex_positions_from_dna_vertex_positions">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_vertex_positions_from_dna_vertex_positions</span><span class="p">(</span>
+        <span class="n">config</span><span class="p">:</span> <span class="n">MeshConfig</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">MeshModel</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">MPoint</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets a list of points that represent the vertex positions.</span>
+
+<span class="sd">        @type config: MeshConfig</span>
+<span class="sd">        @param config: Mesh configuration from the DNA.</span>
+
+<span class="sd">        @type data: MeshModel</span>
+<span class="sd">        @param data: An object that stores values that get passed around different methods.</span>
+
+<span class="sd">        @rtype: List[MPoint]</span>
+<span class="sd">        @returns: List of maya point objects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">vertex_positions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">dna_vertex_positions</span><span class="p">:</span>
+            <span class="n">vertex_positions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">MPoint</span><span class="p">(</span>
+                    <span class="n">config</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">position</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+                    <span class="n">config</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">position</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+                    <span class="n">config</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">position</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="n">vertex_positions</span></div>
+
+<div class="viewcode-block" id="MeshNeutral.prepare_mesh"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.prepare_mesh">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">prepare_mesh</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">MeshConfig</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">MeshModel</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets a list of points that represent the vertex positions.</span>
+
+<span class="sd">        @type config: MeshConfig</span>
+<span class="sd">        @param config: Mesh configuration from the DNA.</span>
+
+<span class="sd">        @type data: MeshModel</span>
+<span class="sd">        @param data: An object that stores values that get passed around different methods.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;==============================&quot;</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;building mesh with mesh_index: </span><span class="si">{</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">dna_vertex_positions</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_vertex_positions_for_mesh_index</span><span class="p">(</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span>
+        <span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">dna_vertex_layout_positions</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">dna</span><span class="o">.</span><span class="n">get_vertex_layout_positions_for_mesh_index</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="p">(</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">polygon_faces</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">polygon_connects</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_polygon_faces_and_connects</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MeshNeutral.create_mesh_object"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.create_mesh_object">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">create_mesh_object</span><span class="p">(</span>
+        <span class="n">config</span><span class="p">:</span> <span class="n">MeshConfig</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">MeshModel</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">MFnMesh</span><span class="p">,</span> <span class="n">MObject</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets a list of points that represent the vertex positions.</span>
+
+<span class="sd">        @type config: MeshConfig</span>
+<span class="sd">        @param config: Mesh configuration from the DNA.</span>
+
+<span class="sd">        @type data: MeshModel</span>
+<span class="sd">        @param data: An object that stores values that get passed around different methods.</span>
+
+<span class="sd">        @rtype: Tuple[MFnMesh, MObject]</span>
+<span class="sd">        @returns: Maya objects representing maya mesh functions and the created maya mesh object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">fn_mesh</span> <span class="o">=</span> <span class="n">MFnMesh</span><span class="p">()</span>
+
+        <span class="n">mesh_object</span> <span class="o">=</span> <span class="n">fn_mesh</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+            <span class="n">MeshNeutral</span><span class="o">.</span><span class="n">get_vertex_positions_from_dna_vertex_positions</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">data</span><span class="p">),</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">polygon_faces</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">polygon_connects</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fn_mesh</span><span class="p">,</span> <span class="n">mesh_object</span></div>
+
+<div class="viewcode-block" id="MeshNeutral.rename_mesh"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.rename_mesh">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">rename_mesh</span><span class="p">(</span><span class="n">config</span><span class="p">:</span> <span class="n">MeshConfig</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">mesh_object</span><span class="p">:</span> <span class="n">MObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MDagModifier</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Renames the initial mesh object that was created to the name from the configuration.</span>
+
+<span class="sd">        @type config: MeshConfig</span>
+<span class="sd">        @param config: Mesh configuration from the DNA.</span>
+
+<span class="sd">        @type mesh_object: MObject</span>
+<span class="sd">        @param data: An object that stores values that get passed around different methods.</span>
+
+<span class="sd">        @rtype: Tuple[MDagModifier]</span>
+<span class="sd">        @returns: Maya object representing the dag modifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">mesh_name</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_name</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">)</span>
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;naming mesh to: </span><span class="si">{</span><span class="n">mesh_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="n">dag_modifier</span> <span class="o">=</span> <span class="n">MDagModifier</span><span class="p">()</span>
+        <span class="n">dag_modifier</span><span class="o">.</span><span class="n">renameNode</span><span class="p">(</span><span class="n">mesh_object</span><span class="p">,</span> <span class="n">mesh_name</span><span class="p">)</span>
+        <span class="n">dag_modifier</span><span class="o">.</span><span class="n">doIt</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">dag_modifier</span></div>
+
+<div class="viewcode-block" id="MeshNeutral.get_texture_data"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.get_texture_data">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">get_texture_data</span><span class="p">(</span>
+        <span class="n">mesh_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the data needed for the creation of textures.</span>
+
+<span class="sd">        @type mesh_index: int</span>
+<span class="sd">        @param mesh_index: The mesh index</span>
+
+<span class="sd">        @type dna: DNA</span>
+<span class="sd">        @param dna: Instance of DNA.</span>
+
+<span class="sd">        @rtype: Tuple[List[float], List[float], List[int]] @returns: The tuple containing the list of texture</span>
+<span class="sd">        coordinate Us, the list of texture coordinate Vs and the list of texture coordinate indices.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">texture_coordinates</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_vertex_texture_coordinates_for_mesh</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+        <span class="n">dna_faces</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_faces</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+
+        <span class="n">coordinate_indices</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">layout_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dna</span><span class="o">.</span><span class="n">get_layouts_for_mesh_index</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">))):</span>
+            <span class="n">coordinate_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">dna</span><span class="o">.</span><span class="n">get_texture_coordinate_index</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">,</span> <span class="n">layout_id</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="n">texture_coordinate_us</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">texture_coordinate_vs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">texture_coordinate_indices</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">index_counter</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">for</span> <span class="n">vertices_layout_index_array</span> <span class="ow">in</span> <span class="n">dna_faces</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">vertex_layout_index_array</span> <span class="ow">in</span> <span class="n">vertices_layout_index_array</span><span class="p">:</span>
+                <span class="n">texture_coordinate</span> <span class="o">=</span> <span class="n">texture_coordinates</span><span class="p">[</span>
+                    <span class="n">coordinate_indices</span><span class="p">[</span><span class="n">vertex_layout_index_array</span><span class="p">]</span>
+                <span class="p">]</span>
+                <span class="n">texture_coordinate_us</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">texture_coordinate</span><span class="o">.</span><span class="n">u</span><span class="p">)</span>
+                <span class="n">texture_coordinate_vs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">texture_coordinate</span><span class="o">.</span><span class="n">v</span><span class="p">)</span>
+                <span class="n">texture_coordinate_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">index_counter</span><span class="p">)</span>
+                <span class="n">index_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">texture_coordinate_us</span><span class="p">,</span> <span class="n">texture_coordinate_vs</span><span class="p">,</span> <span class="n">texture_coordinate_indices</span></div>
+
+<div class="viewcode-block" id="MeshNeutral.add_texture_coordinates"><a class="viewcode-back" href="../../../dna_viewer.util.html#dna_viewer.util.mesh_neutral.MeshNeutral.add_texture_coordinates">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_texture_coordinates</span><span class="p">(</span>
+        <span class="n">config</span><span class="p">:</span> <span class="n">MeshConfig</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">MeshModel</span><span class="p">,</span> <span class="n">fn_mesh</span><span class="p">:</span> <span class="n">MFnMesh</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method for adding texture coordinates.</span>
+
+<span class="sd">        @type config: MeshConfig</span>
+<span class="sd">        @param config: Mesh configuration from the DNA.</span>
+
+<span class="sd">        @type data: MeshModel</span>
+<span class="sd">        @param data: An object that stores values that get passed around different methods.</span>
+
+<span class="sd">        @type fn_mesh: MFnMesh</span>
+<span class="sd">        @params fn_mesh: Object used for manipulating maya mesh objects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding texture coordinates...&quot;</span><span class="p">)</span>
+
+        <span class="p">(</span>
+            <span class="n">texture_coordinate_us</span><span class="p">,</span>
+            <span class="n">texture_coordinate_vs</span><span class="p">,</span>
+            <span class="n">texture_coordinate_indices</span><span class="p">,</span>
+        <span class="p">)</span> <span class="o">=</span> <span class="n">MeshNeutral</span><span class="o">.</span><span class="n">get_texture_data</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">,</span> <span class="n">dna</span><span class="p">)</span>
+
+        <span class="n">fn_mesh</span><span class="o">.</span><span class="n">setUVs</span><span class="p">(</span><span class="n">texture_coordinate_us</span><span class="p">,</span> <span class="n">texture_coordinate_vs</span><span class="p">)</span>
+        <span class="n">fn_mesh</span><span class="o">.</span><span class="n">assignUVs</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">polygon_faces</span><span class="p">,</span> <span class="n">texture_coordinate_indices</span><span class="p">)</span>
+
+        <span class="n">mesh_name</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_name</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">mesh_index</span><span class="p">)</span>
+
+        <span class="n">cmds</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">cmds</span><span class="o">.</span><span class="n">polyMergeUV</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">constructionHistory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

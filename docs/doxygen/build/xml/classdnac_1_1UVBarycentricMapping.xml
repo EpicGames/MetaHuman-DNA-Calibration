@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1UVBarycentricMapping" kind="class" language="C++" prot="public">
+    <compoundname>dnac::UVBarycentricMapping</compoundname>
+    <includes refid="UVBarycentricMapping_8h" local="no">UVBarycentricMapping.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classdnac_1_1UVBarycentricMapping_1a95065b2ebfdf16fb5384233e8c4f212e" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="classdnac_1_1Triangle" kindref="compound">Triangle</ref>, std::array&lt; std::uint32_t, 3u &gt; &gt;</type>
+        <definition>using dnac::UVBarycentricMapping::TrianglePositionIndicesPair =  std::pair&lt;Triangle, std::array&lt;std::uint32_t, 3u&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>TrianglePositionIndicesPair</name>
+        <qualifiedname>dnac::UVBarycentricMapping::TrianglePositionIndicesPair</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="14" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdnac_1_1UVBarycentricMapping_1a3ea642c44f542baab31cf8a438fa40cd" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="namespacetdm_1aa01d9c92918f0f78c73c3a9494be09f8" kindref="member">fvec3</ref>, <ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint32_t &gt; &gt;</type>
+        <definition>using dnac::UVBarycentricMapping::BarycentricPositionIndicesPair =  std::pair&lt;fvec3, ConstArrayView&lt;std::uint32_t&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>BarycentricPositionIndicesPair</name>
+        <qualifiedname>dnac::UVBarycentricMapping::BarycentricPositionIndicesPair</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="15" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1UVBarycentricMapping_1a497d8bfbf7c3ce4e6178a9cc6945fb85" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; <ref refid="classdnac_1_1UVBarycentricMapping_1a95065b2ebfdf16fb5384233e8c4f212e" kindref="member">TrianglePositionIndicesPair</ref> &gt;</type>
+        <definition>Vector&lt;TrianglePositionIndicesPair&gt; dnac::UVBarycentricMapping::triangles</definition>
+        <argsstring></argsstring>
+        <name>triangles</name>
+        <qualifiedname>dnac::UVBarycentricMapping::triangles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="34" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1a7a7379e253c15f9ec7ecf1ab4b659451" compoundref="UVBarycentricMapping_8cpp" startline="67" endline="82">getBarycentric</referencedby>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1aa50157f5d4c05fece01679c4adeed198" compoundref="UVBarycentricMapping_8cpp" startline="59" endline="61">getTriangles</referencedby>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1a8ed1c73382c1247d9ed788742225775c" compoundref="UVBarycentricMapping_8cpp" startline="7" endline="46">UVBarycentricMapping</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1UVBarycentricMapping_1a21e6ec1f586fb13f1fe4554201348cfc" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; <ref refid="classdnac_1_1BoundingBox" kindref="compound">BoundingBox</ref> &gt;</type>
+        <definition>Vector&lt;BoundingBox&gt; dnac::UVBarycentricMapping::bBoxes</definition>
+        <argsstring></argsstring>
+        <name>bBoxes</name>
+        <qualifiedname>dnac::UVBarycentricMapping::bBoxes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="35" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1a7a7379e253c15f9ec7ecf1ab4b659451" compoundref="UVBarycentricMapping_8cpp" startline="67" endline="82">getBarycentric</referencedby>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1ab39a9bb69173363ee8579a74011c54c1" compoundref="UVBarycentricMapping_8cpp" startline="63" endline="65">getBoundingBoxes</referencedby>
+        <referencedby refid="classdnac_1_1UVBarycentricMapping_1a8ed1c73382c1247d9ed788742225775c" compoundref="UVBarycentricMapping_8cpp" startline="7" endline="46">UVBarycentricMapping</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1UVBarycentricMapping_1a8ed1c73382c1247d9ed788742225775c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::UVBarycentricMapping::UVBarycentricMapping</definition>
+        <argsstring>(const std::function&lt; ConstArrayView&lt; std::uint32_t &gt;(std::uint32_t)&gt; &amp;faceGetter, ConstArrayView&lt; std::uint32_t &gt; vertexPositionIndices, ConstArrayView&lt; std::uint32_t &gt; textureCoordinateUVIndices, ConstArrayView&lt; float &gt; Us, ConstArrayView&lt; float &gt; Vs, std::uint32_t faceCount, MemoryResource *memRes)</argsstring>
+        <name>UVBarycentricMapping</name>
+        <qualifiedname>dnac::UVBarycentricMapping::UVBarycentricMapping</qualifiedname>
+        <param>
+          <type>const std::function&lt; <ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint32_t &gt;(std::uint32_t)&gt; &amp;</type>
+          <declname>faceGetter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint32_t &gt;</type>
+          <declname>vertexPositionIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint32_t &gt;</type>
+          <declname>textureCoordinateUVIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>Us</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; float &gt;</type>
+          <declname>Vs</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>faceCount</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="18" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.cpp" bodystart="7" bodyend="46"/>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a21e6ec1f586fb13f1fe4554201348cfc" compoundref="UVBarycentricMapping_8h" startline="35">bBoxes</references>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a497d8bfbf7c3ce4e6178a9cc6945fb85" compoundref="UVBarycentricMapping_8h" startline="34">triangles</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1UVBarycentricMapping_1a69d300be6d14014a57085c679fa7ae01" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::UVBarycentricMapping::UVBarycentricMapping</definition>
+        <argsstring>(const dna::Reader *reader, std::uint16_t meshIndex, MemoryResource *memRes)</argsstring>
+        <name>UVBarycentricMapping</name>
+        <qualifiedname>dnac::UVBarycentricMapping::UVBarycentricMapping</qualifiedname>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref> *</type>
+          <declname>reader</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>meshIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="26" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.cpp" bodystart="48" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1UVBarycentricMapping_1aa50157f5d4c05fece01679c4adeed198" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; <ref refid="classdnac_1_1UVBarycentricMapping_1a95065b2ebfdf16fb5384233e8c4f212e" kindref="member">TrianglePositionIndicesPair</ref> &gt;</type>
+        <definition>ConstArrayView&lt; UVBarycentricMapping::TrianglePositionIndicesPair &gt; dnac::UVBarycentricMapping::getTriangles</definition>
+        <argsstring>() const</argsstring>
+        <name>getTriangles</name>
+        <qualifiedname>dnac::UVBarycentricMapping::getTriangles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="28" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.cpp" bodystart="59" bodyend="61"/>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a497d8bfbf7c3ce4e6178a9cc6945fb85" compoundref="UVBarycentricMapping_8h" startline="34">triangles</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1UVBarycentricMapping_1ab39a9bb69173363ee8579a74011c54c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; <ref refid="classdnac_1_1BoundingBox" kindref="compound">BoundingBox</ref> &gt;</type>
+        <definition>ConstArrayView&lt; BoundingBox &gt; dnac::UVBarycentricMapping::getBoundingBoxes</definition>
+        <argsstring>() const</argsstring>
+        <name>getBoundingBoxes</name>
+        <qualifiedname>dnac::UVBarycentricMapping::getBoundingBoxes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="29" column="24" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.cpp" bodystart="63" bodyend="65"/>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a21e6ec1f586fb13f1fe4554201348cfc" compoundref="UVBarycentricMapping_8h" startline="35">bBoxes</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1UVBarycentricMapping_1a7a7379e253c15f9ec7ecf1ab4b659451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1UVBarycentricMapping_1a3ea642c44f542baab31cf8a438fa40cd" kindref="member">BarycentricPositionIndicesPair</ref></type>
+        <definition>UVBarycentricMapping::BarycentricPositionIndicesPair dnac::UVBarycentricMapping::getBarycentric</definition>
+        <argsstring>(const fvec2 &amp;uv) const</argsstring>
+        <name>getBarycentric</name>
+        <qualifiedname>dnac::UVBarycentricMapping::getBarycentric</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacetdm_1a20ebba8186d4ee0b937cdd4fd2acafc2" kindref="member">fvec2</ref> &amp;</type>
+          <declname>uv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="31" column="40" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.cpp" bodystart="67" bodyend="82"/>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a21e6ec1f586fb13f1fe4554201348cfc" compoundref="UVBarycentricMapping_8h" startline="35">bBoxes</references>
+        <references refid="namespacednac_1a3f8cbd424839e2e73030b1bd098b2f96" compoundref="dnacalib_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dnac::contains</references>
+        <references refid="classdnac_1_1UVBarycentricMapping_1a497d8bfbf7c3ce4e6178a9cc6945fb85" compoundref="UVBarycentricMapping_8h" startline="34">triangles</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>dnac::UVBarycentricMapping</label>
+        <link refid="classdnac_1_1UVBarycentricMapping"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" line="12" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/types/UVBarycentricMapping.h" bodystart="12" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a3ea642c44f542baab31cf8a438fa40cd" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>BarycentricPositionIndicesPair</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a21e6ec1f586fb13f1fe4554201348cfc" prot="private" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>bBoxes</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a7a7379e253c15f9ec7ecf1ab4b659451" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>getBarycentric</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1ab39a9bb69173363ee8579a74011c54c1" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>getBoundingBoxes</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1aa50157f5d4c05fece01679c4adeed198" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>getTriangles</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a95065b2ebfdf16fb5384233e8c4f212e" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>TrianglePositionIndicesPair</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a497d8bfbf7c3ce4e6178a9cc6945fb85" prot="private" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>triangles</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a8ed1c73382c1247d9ed788742225775c" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>UVBarycentricMapping</name></member>
+      <member refid="classdnac_1_1UVBarycentricMapping_1a69d300be6d14014a57085c679fa7ae01" prot="public" virt="non-virtual"><scope>dnac::UVBarycentricMapping</scope><name>UVBarycentricMapping</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

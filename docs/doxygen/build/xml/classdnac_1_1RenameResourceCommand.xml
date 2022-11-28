@@ -1,0 +1,547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1RenameResourceCommand" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dnac::RenameResourceCommand</compoundname>
+    <basecompoundref refid="classdnac_1_1CommandImplBase" prot="public" virt="non-virtual">dnac::CommandImplBase&lt; TDerived &gt;</basecompoundref>
+    <includes refid="RenameResourceCommand_8h" local="no">RenameResourceCommand.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class TDerived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>Configuration</name>
+        <qualifiedname>dnac::RenameResourceCommand::Configuration</qualifiedname>
+        <enumvalue id="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862af5d49bc3243ac8419db1a2a0c448d1f3" prot="private">
+          <name>Unconfigured</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a2a03b284d5c36953c18abf0eceb9321b" prot="private">
+          <name>SearchAndRename</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a7f5f15120b2ec9de11f610e47bb3d98f" prot="private">
+          <name>RenameByIndex</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="19" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classdnac_1_1RenameResourceCommand_1aee638d5dd7ab5def97c242aa6b200b10" prot="private" static="no">
+        <type><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase</ref>&lt; TDerived &gt;</type>
+        <definition>using dnac::RenameResourceCommand&lt; TDerived &gt;::Super =  CommandImplBase&lt;TDerived&gt;</definition>
+        <argsstring></argsstring>
+        <name>Super</name>
+        <qualifiedname>dnac::RenameResourceCommand::Super</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="17" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1RenameResourceCommand_1a3ab80b9dbe11e276c4971a9bf981c1ff" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">String</ref>&lt; char &gt;</type>
+        <definition>String&lt;char&gt; dnac::RenameResourceCommand&lt; TDerived &gt;::oldName</definition>
+        <argsstring></argsstring>
+        <name>oldName</name>
+        <qualifiedname>dnac::RenameResourceCommand::oldName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="82" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="82" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a07304f9082e03cc638c4438760154dd7" compoundref="RenameResourceCommand_8h" startline="48" endline="52">dnac::RenameResourceCommand&lt; TDerived &gt;::setName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1ae5d060484bbf3a0aa543d80d3f3257fb" kindref="member">String</ref>&lt; char &gt;</type>
+        <definition>String&lt;char&gt; dnac::RenameResourceCommand&lt; TDerived &gt;::newName</definition>
+        <argsstring></argsstring>
+        <name>newName</name>
+        <qualifiedname>dnac::RenameResourceCommand::newName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="83" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="83" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" compoundref="RenameResourceCommand_8h" startline="73" endline="75">dnac::RenameResourceCommand&lt; TDerived &gt;::rename</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" compoundref="RenameResourceCommand_8h" startline="42" endline="46">dnac::RenameResourceCommand&lt; TDerived &gt;::setName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1RenameResourceCommand_1adf58f352a1e73ccadecb71f604dcec31" prot="private" static="no" mutable="no">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dnac::RenameResourceCommand&lt; TDerived &gt;::index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <qualifiedname>dnac::RenameResourceCommand::index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="84" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" compoundref="RenameResourceCommand_8h" startline="73" endline="75">dnac::RenameResourceCommand&lt; TDerived &gt;::rename</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" compoundref="RenameResourceCommand_8h" startline="42" endline="46">dnac::RenameResourceCommand&lt; TDerived &gt;::setName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" prot="private" static="no" mutable="no">
+        <type><ref refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862" kindref="member">Configuration</ref></type>
+        <definition>Configuration dnac::RenameResourceCommand&lt; TDerived &gt;::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <qualifiedname>dnac::RenameResourceCommand::config</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="85" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="85" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" compoundref="RenameResourceCommand_8h" startline="54" endline="60">dnac::RenameResourceCommand&lt; TDerived &gt;::run</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" compoundref="RenameResourceCommand_8h" startline="42" endline="46">dnac::RenameResourceCommand&lt; TDerived &gt;::setName</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1ace814073469bab9b5a69f056eaa4eb39" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RenameResourceCommand&lt; TDerived &gt;::RenameResourceCommand</definition>
+        <argsstring>(MemoryResource *memRes_)</argsstring>
+        <name>RenameResourceCommand</name>
+        <qualifiedname>dnac::RenameResourceCommand::RenameResourceCommand</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="26" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1ac62f17864e4ad4fca382e4c3209f1cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual dnac::RenameResourceCommand&lt; TDerived &gt;::~RenameResourceCommand</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RenameResourceCommand</name>
+        <qualifiedname>dnac::RenameResourceCommand::~RenameResourceCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="34" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a3a155cd0cad289fbb61534be46ef69a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RenameResourceCommand&lt; TDerived &gt;::RenameResourceCommand</definition>
+        <argsstring>(const RenameResourceCommand &amp;)=default</argsstring>
+        <name>RenameResourceCommand</name>
+        <qualifiedname>dnac::RenameResourceCommand::RenameResourceCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="36" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a4111f12410994c10904a5dbd36cc541b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;</type>
+        <definition>RenameResourceCommand &amp; dnac::RenameResourceCommand&lt; TDerived &gt;::operator=</definition>
+        <argsstring>(const RenameResourceCommand &amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::RenameResourceCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="37" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a84c292fc297cc7fa78bcb8333ae39c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RenameResourceCommand&lt; TDerived &gt;::RenameResourceCommand</definition>
+        <argsstring>(RenameResourceCommand &amp;&amp;)=default</argsstring>
+        <name>RenameResourceCommand</name>
+        <qualifiedname>dnac::RenameResourceCommand::RenameResourceCommand</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="39" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1aa955c2f5f5c45743d4f9c4f7af73411d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;</type>
+        <definition>RenameResourceCommand &amp; dnac::RenameResourceCommand&lt; TDerived &gt;::operator=</definition>
+        <argsstring>(RenameResourceCommand &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::RenameResourceCommand::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="40" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RenameResourceCommand&lt; TDerived &gt;::setName</definition>
+        <argsstring>(std::uint16_t index_, const char *newName_)</argsstring>
+        <name>setName</name>
+        <qualifiedname>dnac::RenameResourceCommand::setName</qualifiedname>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>newName_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="42" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="42" bodyend="46"/>
+        <references refid="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" compoundref="RenameResourceCommand_8h" startline="85">dnac::RenameResourceCommand&lt; TDerived &gt;::config</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1adf58f352a1e73ccadecb71f604dcec31" compoundref="RenameResourceCommand_8h" startline="84">dnac::RenameResourceCommand&lt; TDerived &gt;::index</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" compoundref="RenameResourceCommand_8h" startline="83">dnac::RenameResourceCommand&lt; TDerived &gt;::newName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a7f5f15120b2ec9de11f610e47bb3d98f">dnac::RenameResourceCommand&lt; TDerived &gt;::RenameByIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a07304f9082e03cc638c4438760154dd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RenameResourceCommand&lt; TDerived &gt;::setName</definition>
+        <argsstring>(const char *oldName_, const char *newName_)</argsstring>
+        <name>setName</name>
+        <qualifiedname>dnac::RenameResourceCommand::setName</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>oldName_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>newName_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="48" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="48" bodyend="52"/>
+        <references refid="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" compoundref="RenameResourceCommand_8h" startline="85">dnac::RenameResourceCommand&lt; TDerived &gt;::config</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" compoundref="RenameResourceCommand_8h" startline="83">dnac::RenameResourceCommand&lt; TDerived &gt;::newName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a3ab80b9dbe11e276c4971a9bf981c1ff" compoundref="RenameResourceCommand_8h" startline="82">dnac::RenameResourceCommand&lt; TDerived &gt;::oldName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a2a03b284d5c36953c18abf0eceb9321b">dnac::RenameResourceCommand&lt; TDerived &gt;::SearchAndRename</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RenameResourceCommand&lt; TDerived &gt;::run</definition>
+        <argsstring>(DNACalibDNAReaderImpl *output)</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::RenameResourceCommand::run</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="54" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="54" bodyend="60"/>
+        <references refid="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" compoundref="RenameResourceCommand_8h" startline="85">dnac::RenameResourceCommand&lt; TDerived &gt;::config</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" compoundref="RenameResourceCommand_8h" startline="73" endline="75">dnac::RenameResourceCommand&lt; TDerived &gt;::rename</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a7f5f15120b2ec9de11f610e47bb3d98f">dnac::RenameResourceCommand&lt; TDerived &gt;::RenameByIndex</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862a2a03b284d5c36953c18abf0eceb9321b">dnac::RenameResourceCommand&lt; TDerived &gt;::SearchAndRename</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</definition>
+        <argsstring>(DNACalibDNAReaderImpl *output)</argsstring>
+        <name>searchAndRename</name>
+        <qualifiedname>dnac::RenameResourceCommand::searchAndRename</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="63" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="63" bodyend="71"/>
+        <references refid="classdnac_1_1RenameResourceCommand_1a86ea191cd58e70cc79093ea089b086f6">dnac::RenameResourceCommand&lt; TDerived &gt;::getNameByIndex</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a0f83d288ee416a07a69ec67ad217a4bb">dnac::RenameResourceCommand&lt; TDerived &gt;::getNameCount</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" compoundref="RenameResourceCommand_8h" startline="83">dnac::RenameResourceCommand&lt; TDerived &gt;::newName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a3ab80b9dbe11e276c4971a9bf981c1ff" compoundref="RenameResourceCommand_8h" startline="82">dnac::RenameResourceCommand&lt; TDerived &gt;::oldName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1aedf4ccdfda6b8bd8e6c84a87e8cd7a13">dnac::RenameResourceCommand&lt; TDerived &gt;::setNameByIndex</references>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" compoundref="RenameResourceCommand_8h" startline="54" endline="60">dnac::RenameResourceCommand&lt; TDerived &gt;::run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RenameResourceCommand&lt; TDerived &gt;::rename</definition>
+        <argsstring>(DNACalibDNAReaderImpl *output)</argsstring>
+        <name>rename</name>
+        <qualifiedname>dnac::RenameResourceCommand::rename</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="73" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="73" bodyend="75"/>
+        <references refid="classdnac_1_1RenameResourceCommand_1adf58f352a1e73ccadecb71f604dcec31" compoundref="RenameResourceCommand_8h" startline="84">dnac::RenameResourceCommand&lt; TDerived &gt;::index</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" compoundref="RenameResourceCommand_8h" startline="83">dnac::RenameResourceCommand&lt; TDerived &gt;::newName</references>
+        <references refid="classdnac_1_1RenameResourceCommand_1aedf4ccdfda6b8bd8e6c84a87e8cd7a13">dnac::RenameResourceCommand&lt; TDerived &gt;::setNameByIndex</references>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" compoundref="RenameResourceCommand_8h" startline="54" endline="60">dnac::RenameResourceCommand&lt; TDerived &gt;::run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a0f83d288ee416a07a69ec67ad217a4bb" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::uint16_t</type>
+        <definition>virtual std::uint16_t dnac::RenameResourceCommand&lt; TDerived &gt;::getNameCount</definition>
+        <argsstring>(const dna::Reader *input) const =0</argsstring>
+        <name>getNameCount</name>
+        <qualifiedname>dnac::RenameResourceCommand::getNameCount</qualifiedname>
+        <reimplementedby refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl_1ac9a57552ad0083b11bf328cf46459209">getNameCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameBlendShapeCommand_1_1Impl_1a767551593746c6b32b5ee7a14659587a">getNameCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameJointCommand_1_1Impl_1a4b07bf472484683c8edc1eab849089fe">getNameCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameMeshCommand_1_1Impl_1a763eb77e3037b3700fa88a54ab79b54b">getNameCount</reimplementedby>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="77" column="31"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1a86ea191cd58e70cc79093ea089b086f6" prot="private" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classdna_1_1StringView" kindref="compound">StringView</ref></type>
+        <definition>virtual StringView dnac::RenameResourceCommand&lt; TDerived &gt;::getNameByIndex</definition>
+        <argsstring>(const dna::Reader *input, std::uint16_t index_) const =0</argsstring>
+        <name>getNameByIndex</name>
+        <qualifiedname>dnac::RenameResourceCommand::getNameByIndex</qualifiedname>
+        <reimplementedby refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl_1a48fe61cd6ec1bb5aac9b2b2cfb9a327c">getNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameBlendShapeCommand_1_1Impl_1a4c2da92f279d3e28905eef1444882588">getNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameJointCommand_1_1Impl_1a4b7af35ae75c206feaacbf221237c753">getNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameMeshCommand_1_1Impl_1a1f3798273fce57f4a19109c7678f8959">getNameByIndex</reimplementedby>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="78" column="28"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameResourceCommand_1aedf4ccdfda6b8bd8e6c84a87e8cd7a13" prot="private" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dnac::RenameResourceCommand&lt; TDerived &gt;::setNameByIndex</definition>
+        <argsstring>(dna::Writer *output, std::uint16_t index_, const char *name)=0</argsstring>
+        <name>setNameByIndex</name>
+        <qualifiedname>dnac::RenameResourceCommand::setNameByIndex</qualifiedname>
+        <reimplementedby refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl_1ac65059a2a2c496d28325d5424becd2fc">setNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameBlendShapeCommand_1_1Impl_1a3b0852c8391d0e14f1ea7101c41399bb">setNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameJointCommand_1_1Impl_1ae76acd0abdf9a6bff72b53241ad82f87">setNameByIndex</reimplementedby>
+        <reimplementedby refid="classdnac_1_1RenameMeshCommand_1_1Impl_1a2d4d79e680924fcdb5df70339947c7f6">setNameByIndex</reimplementedby>
+        <param>
+          <type><ref refid="classdna_1_1Writer" kindref="compound">dna::Writer</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="79" column="22"/>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" compoundref="RenameResourceCommand_8h" startline="73" endline="75">dnac::RenameResourceCommand&lt; TDerived &gt;::rename</referencedby>
+        <referencedby refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" compoundref="RenameResourceCommand_8h" startline="63" endline="71">dnac::RenameResourceCommand&lt; TDerived &gt;::searchAndRename</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::CommandImplBase&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TDerived &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnac::RenameResourceCommand&lt; Impl &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dnac::CommandImplBase&lt; TCommand &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+      </node>
+      <node id="5">
+        <label>dnac::RenameAnimatedMapCommand::Impl</label>
+        <link refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::RenameBlendShapeCommand::Impl</label>
+        <link refid="classdnac_1_1RenameBlendShapeCommand_1_1Impl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dnac::RenameJointCommand::Impl</label>
+        <link refid="classdnac_1_1RenameJointCommand_1_1Impl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dnac::RenameMeshCommand::Impl</label>
+        <link refid="classdnac_1_1RenameMeshCommand_1_1Impl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dnac::RenameResourceCommand&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dnac::CommandImplBase&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; TDerived &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnac::CommandImplBase&lt; TCommand &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dnac::RenameResourceCommand&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" line="15" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameResourceCommand.h" bodystart="15" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1CommandImplBase_1a61e4c37cc64510fb8861247ae839939e" prot="protected" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>CommandImplBase</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>config</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>Configuration</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1aaad21404fdc3816906b60a423ee526b4" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>create</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1a2d39f8502fb35a72933427eb810bed7f" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>destroy</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1a08756df6a2ac83827a17bf5511cb9fc3" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>getMemoryResource</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a86ea191cd58e70cc79093ea089b086f6" prot="private" virt="pure-virtual"><scope>dnac::RenameResourceCommand</scope><name>getNameByIndex</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a0f83d288ee416a07a69ec67ad217a4bb" prot="private" virt="pure-virtual"><scope>dnac::RenameResourceCommand</scope><name>getNameCount</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1adf58f352a1e73ccadecb71f604dcec31" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>index</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1aa6e089f0d257ef77e86370e1535196a3" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>memRes</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>newName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a3ab80b9dbe11e276c4971a9bf981c1ff" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>oldName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a4111f12410994c10904a5dbd36cc541b" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1aa955c2f5f5c45743d4f9c4f7af73411d" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>rename</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ace814073469bab9b5a69f056eaa4eb39" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a3a155cd0cad289fbb61534be46ef69a9" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a84c292fc297cc7fa78bcb8333ae39c35" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>run</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>searchAndRename</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>setName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a07304f9082e03cc638c4438760154dd7" prot="public" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>setName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1aedf4ccdfda6b8bd8e6c84a87e8cd7a13" prot="private" virt="pure-virtual"><scope>dnac::RenameResourceCommand</scope><name>setNameByIndex</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1aee638d5dd7ab5def97c242aa6b200b10" prot="private" virt="non-virtual"><scope>dnac::RenameResourceCommand</scope><name>Super</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ac62f17864e4ad4fca382e4c3209f1cea" prot="public" virt="virtual"><scope>dnac::RenameResourceCommand</scope><name>~RenameResourceCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

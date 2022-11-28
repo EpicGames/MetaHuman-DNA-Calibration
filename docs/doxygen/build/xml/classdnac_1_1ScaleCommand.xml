@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1ScaleCommand" kind="class" language="C++" prot="public">
+    <compoundname>dnac::ScaleCommand</compoundname>
+    <basecompoundref refid="classdnac_1_1Command" prot="public" virt="non-virtual">dnac::Command</basecompoundref>
+    <includes refid="ScaleCommand_8h" local="no">ScaleCommand.h</includes>
+    <innerclass refid="classdnac_1_1ScaleCommand_1_1Impl" prot="public">dnac::ScaleCommand::Impl</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" prot="private" static="no" mutable="no">
+        <type><ref refid="classpma_1_1ScopedPtr" kindref="compound">ScopedPtr</ref>&lt; <ref refid="classdnac_1_1ScaleCommand_1_1Impl" kindref="compound">Impl</ref> &gt;</type>
+        <definition>ScopedPtr&lt;Impl&gt; dnac::ScaleCommand::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <qualifiedname>dnac::ScaleCommand::pImpl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="49" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3" compoundref="ScaleCommand_8cpp" startline="169" endline="171">run</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1a8dad95fef0691538560a3b1c2fde75b7" compoundref="ScaleCommand_8cpp" startline="150" endline="155">ScaleCommand</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1a672cf1c18e8f4780ddd027f132bc9601" compoundref="ScaleCommand_8cpp" startline="165" endline="167">setOrigin</referencedby>
+        <referencedby refid="classdnac_1_1ScaleCommand_1a493731dbceeee197a1b858f9b97ba0c4" compoundref="ScaleCommand_8cpp" startline="161" endline="163">setScale</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::ScaleCommand::ScaleCommand</definition>
+        <argsstring>(MemoryResource *memRes=nullptr)</argsstring>
+        <name>ScaleCommand</name>
+        <qualifiedname>dnac::ScaleCommand::ScaleCommand</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="20" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp" bodystart="147" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a8dad95fef0691538560a3b1c2fde75b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::ScaleCommand::ScaleCommand</definition>
+        <argsstring>(float scale, Vector3 origin, MemoryResource *memRes=nullptr)</argsstring>
+        <name>ScaleCommand</name>
+        <qualifiedname>dnac::ScaleCommand::ScaleCommand</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="21" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp" bodystart="150" bodyend="155"/>
+        <references refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" compoundref="ScaleCommand_8h" startline="49">pImpl</references>
+        <references refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" compoundref="Transforms_8h" startline="29" endline="31">tdm::affine::scale</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a44218c7518b11a00c5147db5d519c7cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::ScaleCommand::~ScaleCommand</definition>
+        <argsstring>()</argsstring>
+        <name>~ScaleCommand</name>
+        <qualifiedname>dnac::ScaleCommand::~ScaleCommand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="23" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1ac361ac64835dcf250c76d1b3d676ea66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dnac::ScaleCommand::ScaleCommand</definition>
+        <argsstring>(const ScaleCommand &amp;)=delete</argsstring>
+        <name>ScaleCommand</name>
+        <qualifiedname>dnac::ScaleCommand::ScaleCommand</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="25" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a6c44f415907bb803646e83c46696bdae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;</type>
+        <definition>ScaleCommand &amp; dnac::ScaleCommand::operator=</definition>
+        <argsstring>(const ScaleCommand &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::ScaleCommand::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="26" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1aaddc77d0a50845db87d21e543879cffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::ScaleCommand::ScaleCommand</definition>
+        <argsstring>(ScaleCommand &amp;&amp;)</argsstring>
+        <name>ScaleCommand</name>
+        <qualifiedname>dnac::ScaleCommand::ScaleCommand</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="28" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1ab1d1611d286f556cd784c2ca898d1241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> <ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;</type>
+        <definition>ScaleCommand &amp; dnac::ScaleCommand::operator=</definition>
+        <argsstring>(ScaleCommand &amp;&amp;)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>dnac::ScaleCommand::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="29" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a493731dbceeee197a1b858f9b97ba0c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::ScaleCommand::setScale</definition>
+        <argsstring>(float scale)</argsstring>
+        <name>setScale</name>
+        <qualifiedname>dnac::ScaleCommand::setScale</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the scale factor to multiply with. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scale factor. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="36" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp" bodystart="161" bodyend="163"/>
+        <references refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" compoundref="ScaleCommand_8h" startline="49">pImpl</references>
+        <references refid="namespacetdm_1_1affine_1afd9ea184660c9658cc406603d0a47629" compoundref="Transforms_8h" startline="29" endline="31">tdm::affine::scale</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a672cf1c18e8f4780ddd027f132bc9601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::ScaleCommand::setOrigin</definition>
+        <argsstring>(Vector3 origin)</argsstring>
+        <name>setOrigin</name>
+        <qualifiedname>dnac::ScaleCommand::setOrigin</qualifiedname>
+        <param>
+          <type><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref></type>
+          <declname>origin</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the origin. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The origin is used to properly scale position values (vertex positions and neutral joint translations). </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Origin coordinates. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="44" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp" bodystart="165" bodyend="167"/>
+        <references refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" compoundref="ScaleCommand_8h" startline="49">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::ScaleCommand::run</definition>
+        <argsstring>(DNACalibDNAReader *output) override</argsstring>
+        <name>run</name>
+        <qualifiedname>dnac::ScaleCommand::run</qualifiedname>
+        <reimplements refid="classdnac_1_1Command_1a204ca2536a334f4eb83c66e09ef3ecee">run</reimplements>
+        <param>
+          <type><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="45" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/ScaleCommand.cpp" bodystart="169" bodyend="171"/>
+        <references refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" compoundref="ScaleCommand_8h" startline="49">pImpl</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classdnac_1_1ScaleCommand" kindref="compound">ScaleCommand</ref> is used to scale neutral joints, vertex positions and joint and blendshape deltas by a factor. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Only translation attributes of neutral joints and joint deltas are scaled. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::ScaleCommand</label>
+        <link refid="classdnac_1_1ScaleCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>pma::ScopedPtr&lt; dnac::ScaleCommand::Impl &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; dnac::ScaleCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::Command</label>
+        <link refid="classdnac_1_1Command"/>
+      </node>
+      <node id="1">
+        <label>dnac::ScaleCommand</label>
+        <link refid="classdnac_1_1ScaleCommand"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; T &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; dnac::ScaleCommand::Impl &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; dnac::ScaleCommand::Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;</label>
+        <link refid="classpma_1_1ScopedPtr"/>
+        <childnode refid="8" relation="private-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>pma::ScopedPtr&lt; T, TDestroyer &gt;::inspect&lt; U &gt;</label>
+        <link refid="structpma_1_1ScopedPtr_1_1inspect"/>
+      </node>
+      <node id="8">
+        <label>typename DefaultInstanceDestroyer&lt;T&gt;::type</label>
+      </node>
+      <node id="4">
+        <label>typename DefaultInstanceDestroyer&lt;dnac::ScaleCommand::Impl &gt;::type</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" line="18" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h" bodystart="18" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1ScaleCommand_1a6c44f415907bb803646e83c46696bdae" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1ab1d1611d286f556cd784c2ca898d1241" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1aa3516b9b39c7c7f725433d86aede54cc" prot="private" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>pImpl</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a8a4ab4be25bb4313c2d4b40e8adf5ad3" prot="public" virt="virtual"><scope>dnac::ScaleCommand</scope><name>run</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a8182f69028268e6b7bead9ba3bb25576" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>ScaleCommand</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a8dad95fef0691538560a3b1c2fde75b7" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>ScaleCommand</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1ac361ac64835dcf250c76d1b3d676ea66" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>ScaleCommand</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1aaddc77d0a50845db87d21e543879cffa" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>ScaleCommand</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a672cf1c18e8f4780ddd027f132bc9601" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>setOrigin</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a493731dbceeee197a1b858f9b97ba0c4" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>setScale</name></member>
+      <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::ScaleCommand</scope><name>~Command</name></member>
+      <member refid="classdnac_1_1ScaleCommand_1a44218c7518b11a00c5147db5d519c7cf" prot="public" virt="non-virtual"><scope>dnac::ScaleCommand</scope><name>~ScaleCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -66,7 +66,7 @@ Several Python examples are provided for reference and can be found in the **exa
 - [Remove a joint](/examples/dnacalib_remove_joint.py)
 - [Clear blend shape data](/examples/dnacalib_clear_blend_shapes.py)
 - [Subtract values from neutral mesh](/examples/dnacalib_neutral_mesh_subtract.py)
-- [Simple UI in Maya](examples/dna_viewer_run_in_maya.py) and some [documentation](docs/dna_viewer.md#usage-in-maya) for it
+- [Simple UI in Maya](examples/dna_viewer_run_in_maya.py)
 - [Generate rig and export FBX per LOD](examples/dna_viewer_demo.py)
 - [Propagating changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
 

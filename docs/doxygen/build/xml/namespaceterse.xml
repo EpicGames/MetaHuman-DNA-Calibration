@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespaceterse" kind="namespace" language="C++">
+    <compoundname>terse</compoundname>
+    <innerclass refid="structterse_1_1Anchor" prot="public">terse::Anchor</innerclass>
+    <innerclass refid="classterse_1_1Archive" prot="public">terse::Archive</innerclass>
+    <innerclass refid="structterse_1_1ArchiveOffset" prot="public">terse::ArchiveOffset</innerclass>
+    <innerclass refid="structterse_1_1ArchiveSize" prot="public">terse::ArchiveSize</innerclass>
+    <innerclass refid="classterse_1_1BinaryInputArchive" prot="public">terse::BinaryInputArchive</innerclass>
+    <innerclass refid="classterse_1_1BinaryOutputArchive" prot="public">terse::BinaryOutputArchive</innerclass>
+    <innerclass refid="classterse_1_1Blob" prot="public">terse::Blob</innerclass>
+    <innerclass refid="structterse_1_1ByteSwapper" prot="public">terse::ByteSwapper</innerclass>
+    <innerclass refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Big_01_4" prot="public">terse::ByteSwapper&lt; Endianness::Big &gt;</innerclass>
+    <innerclass refid="structterse_1_1ByteSwapper_3_01Endianness_1_1Little_01_4" prot="public">terse::ByteSwapper&lt; Endianness::Little &gt;</innerclass>
+    <innerclass refid="classterse_1_1CharInputStreamBuf" prot="public">terse::CharInputStreamBuf</innerclass>
+    <innerclass refid="classterse_1_1CharOutputStreamBuf" prot="public">terse::CharOutputStreamBuf</innerclass>
+    <innerclass refid="classterse_1_1DynArray" prot="public">terse::DynArray</innerclass>
+    <innerclass refid="classterse_1_1ExtendableBinaryInputArchive" prot="public">terse::ExtendableBinaryInputArchive</innerclass>
+    <innerclass refid="classterse_1_1ExtendableBinaryOutputArchive" prot="public">terse::ExtendableBinaryOutputArchive</innerclass>
+    <innerclass refid="classterse_1_1ExtendableJSONInputArchive" prot="public">terse::ExtendableJSONInputArchive</innerclass>
+    <innerclass refid="classterse_1_1ExtendableJSONOutputArchive" prot="public">terse::ExtendableJSONOutputArchive</innerclass>
+    <innerclass refid="classterse_1_1JSONInputArchive" prot="public">terse::JSONInputArchive</innerclass>
+    <innerclass refid="classterse_1_1JSONOutputArchive" prot="public">terse::JSONOutputArchive</innerclass>
+    <innerclass refid="structterse_1_1Transparent" prot="public">terse::Transparent</innerclass>
+    <innerclass refid="classterse_1_1VirtualSerializerProxy" prot="public">terse::VirtualSerializerProxy</innerclass>
+    <innernamespace refid="namespaceterse_1_1impl">terse::impl</innernamespace>
+    <innernamespace refid="namespaceterse_1_1traits">terse::traits</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Endianness</name>
+        <qualifiedname>terse::Endianness</qualifiedname>
+        <enumvalue id="namespaceterse_1aa7562cd5f24037b483789458d85d5a89a0f9197b3e286a7522984831949087332" prot="public">
+          <name>Little</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceterse_1aa7562cd5f24037b483789458d85d5a89ad491538da818a2ba11a3195ba035cfd3" prot="public">
+          <name>Big</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceterse_1aa7562cd5f24037b483789458d85d5a89aeec89088ee408b80387155272b113256" prot="public">
+          <name>Network</name>
+          <initializer>= Big</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="53" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="53" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceterse_1a9b2842bfda3d781a4ebc2f8d0ac93f74" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>Endianness</type>
+            <declname>EByteOrder</declname>
+            <defname>EByteOrder</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper</ref>&lt; EByteOrder &gt;</type>
+        <definition>using terse::SwapTo = typedef ByteSwapper&lt;EByteOrder&gt;</definition>
+        <argsstring></argsstring>
+        <name>SwapTo</name>
+        <qualifiedname>terse::SwapTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="141" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceterse_1aff42dccdf3fbe5bb07e8f36a3efa365d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>Endianness</type>
+            <declname>EByteOrder</declname>
+            <defname>EByteOrder</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structterse_1_1ByteSwapper" kindref="compound">ByteSwapper</ref>&lt; EByteOrder &gt;</type>
+        <definition>using terse::SwapFrom = typedef ByteSwapper&lt;EByteOrder&gt;</definition>
+        <argsstring></argsstring>
+        <name>SwapFrom</name>
+        <qualifiedname>terse::SwapFrom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="144" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceterse_1a531730fa214562c2563371e25ab143ec" prot="public" static="yes" mutable="no">
+        <type>const char *</type>
+        <definition>const char* terse::alphabet</definition>
+        <argsstring></argsstring>
+        <name>alphabet</name>
+        <qualifiedname>terse::alphabet</qualifiedname>
+        <initializer>= &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" line="17" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="namespaceterse_1a69dc9ab0e111e3adbcbe073b48cfbe29" compoundref="Base64_8h" startline="57" endline="84">base64decode</referencedby>
+        <referencedby refid="namespaceterse_1a07d89bdf9c5159cad6c7c85798d26909" compoundref="Base64_8h" startline="24" endline="50">base64encode</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceterse_1a5f934959bc76f0549863cf7c0f1b8016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TOffset</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; TOffset &gt;::Proxy</type>
+        <definition>ArchiveOffset&lt; TOffset &gt;::Proxy terse::proxy</definition>
+        <argsstring>(ArchiveOffset&lt; TOffset &gt; &amp;offset)</argsstring>
+        <name>proxy</name>
+        <qualifiedname>terse::proxy</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; TOffset &gt; &amp;</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/ArchiveOffset.h" line="102" column="32" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/ArchiveOffset.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a85aaa0667ca8ce8ce4206b3c41aa7f93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TSize</type>
+          </param>
+          <param>
+            <type>typename TOffset</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; TSize, TOffset &gt;::Proxy</type>
+        <definition>ArchiveSize&lt; TSize, TOffset &gt;::Proxy terse::proxy</definition>
+        <argsstring>(ArchiveSize&lt; TSize, TOffset &gt; &amp;size, Anchor&lt; TOffset &gt; &amp;base)</argsstring>
+        <name>proxy</name>
+        <qualifiedname>terse::proxy</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; TSize, TOffset &gt; &amp;</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="structterse_1_1Anchor" kindref="compound">Anchor</ref>&lt; TOffset &gt; &amp;</type>
+          <declname>base</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/ArchiveSize.h" line="124" column="30" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/ArchiveSize.h" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a25545889a90730dd71120d27e294cf86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structterse_1_1Transparent" kindref="compound">Transparent</ref>&lt; T &gt;</type>
+        <definition>Transparent&lt; T &gt; terse::transparent</definition>
+        <argsstring>(T &amp;data)</argsstring>
+        <name>transparent</name>
+        <qualifiedname>terse::transparent</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/Transparent.h" line="20" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/types/Transparent.h" bodystart="20" bodyend="22"/>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1ae4bc88587a4a9a184a4f8de3568ef433" compoundref="json_2InputArchive_8h" startline="515" endline="519">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONOutputArchive_1acedca6ef29b33691ca5901e0b331f90c" compoundref="json_2OutputArchive_8h" startline="271" endline="275">terse::ExtendableJSONOutputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::popTransparency</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONOutputArchive_1ae808cd1c26ff10039fa9a7135f5a43b8" compoundref="json_2OutputArchive_8h" startline="121" endline="130">terse::ExtendableJSONOutputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a5a33d7a632aa7d21590d5436b6edbbaa" compoundref="json_2InputArchive_8h" startline="151" endline="166">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a86f9ab8fb558bf7219b4ee1d04f7bba9" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::size_t</type>
+        <definition>constexpr std::size_t terse::base64encode</definition>
+        <argsstring>(std::size_t size)</argsstring>
+        <name>base64encode</name>
+        <qualifiedname>terse::base64encode</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" line="19" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" bodystart="19" bodyend="21"/>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a4cd4401d71333f4ec67cd0325f3c15a4" compoundref="json_2InputArchive_8h" startline="136" endline="147">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableJSONOutputArchive_1ab705354db3fe6a780ca3ac2b2ccbf7bc" compoundref="json_2OutputArchive_8h" startline="110" endline="117">terse::ExtendableJSONOutputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a07d89bdf9c5159cad6c7c85798d26909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t terse::base64encode</definition>
+        <argsstring>(char *destination, const char *source, std::size_t size)</argsstring>
+        <name>base64encode</name>
+        <qualifiedname>terse::base64encode</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" line="24" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" bodystart="24" bodyend="50"/>
+        <references refid="namespaceterse_1a531730fa214562c2563371e25ab143ec" compoundref="Base64_8h" startline="17">alphabet</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a8463eac7d23e67677dcd94074404dc09" prot="public" static="no" constexpr="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>constexpr std::size_t</type>
+        <definition>constexpr std::size_t terse::base64decode</definition>
+        <argsstring>(std::size_t size)</argsstring>
+        <name>base64decode</name>
+        <qualifiedname>terse::base64decode</qualifiedname>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" line="52" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" bodystart="52" bodyend="54"/>
+        <referencedby refid="classterse_1_1ExtendableJSONInputArchive_1a4cd4401d71333f4ec67cd0325f3c15a4" compoundref="json_2InputArchive_8h" startline="136" endline="147">terse::ExtendableJSONInputArchive&lt; TExtender, TStream, TSize, TOffset &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a69dc9ab0e111e3adbcbe073b48cfbe29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t terse::base64decode</definition>
+        <argsstring>(char *destination, const char *source, std::size_t size)</argsstring>
+        <name>base64decode</name>
+        <qualifiedname>terse::base64decode</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>destination</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" line="57" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/Base64.h" bodystart="57" bodyend="84"/>
+        <references refid="namespaceterse_1a531730fa214562c2563371e25ab143ec" compoundref="Base64_8h" startline="17">alphabet</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a0ccb75b9c1709902c8e9048ad6efcc29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::networkToHost</definition>
+        <argsstring>(T &amp;value)</argsstring>
+        <name>networkToHost</name>
+        <qualifiedname>terse::networkToHost</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="147" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a5732cba33629964669368c0e26797c50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::networkToHost128</definition>
+        <argsstring>(T *values)</argsstring>
+        <name>networkToHost128</name>
+        <qualifiedname>terse::networkToHost128</qualifiedname>
+        <param>
+          <type>T *</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="152" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1ab0fe9e3822e69db299deeda839d999ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::hostToNetwork</definition>
+        <argsstring>(T &amp;value)</argsstring>
+        <name>hostToNetwork</name>
+        <qualifiedname>terse::hostToNetwork</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="157" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="157" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceterse_1a61567939ea66a9d75f2cc1f03e8bf866" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::hostToNetwork128</definition>
+        <argsstring>(T *values)</argsstring>
+        <name>hostToNetwork128</name>
+        <qualifiedname>terse::hostToNetwork128</qualifiedname>
+        <param>
+          <type>T *</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" line="162" column="13" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/utils/ByteSwap.h" bodystart="162" bodyend="164"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/Archive.h" line="14" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.ui.elements_creator &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.ui.elements_creator</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.ui.elements_creator</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">webbrowser</span>
+
+<span class="kn">from</span> <span class="nn">PySide2</span> <span class="kn">import</span> <span class="n">QtCore</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QCheckBox</span><span class="p">,</span>
+    <span class="n">QHBoxLayout</span><span class="p">,</span>
+    <span class="n">QLabel</span><span class="p">,</span>
+    <span class="n">QMainWindow</span><span class="p">,</span>
+    <span class="n">QMessageBox</span><span class="p">,</span>
+    <span class="n">QProgressBar</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">..const.ui</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">HELP_URL</span><span class="p">,</span>
+    <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+    <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+    <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+    <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+    <span class="n">MARGIN_HEADER_BOTTOM</span><span class="p">,</span>
+    <span class="n">MARGIN_HEADER_LEFT</span><span class="p">,</span>
+    <span class="n">MARGIN_HEADER_RIGHT</span><span class="p">,</span>
+    <span class="n">MARGIN_HEADER_TOP</span><span class="p">,</span>
+    <span class="n">SPACING</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">..reader.dna</span> <span class="kn">import</span> <span class="n">load_dna</span>
+<span class="kn">from</span> <span class="nn">..ui.build_options_widget</span> <span class="kn">import</span> <span class="n">BuildOptionsWidget</span>
+<span class="kn">from</span> <span class="nn">..ui.elements</span> <span class="kn">import</span> <span class="n">Elements</span>
+<span class="kn">from</span> <span class="nn">..ui.file_chooser</span> <span class="kn">import</span> <span class="n">FileChooser</span>
+<span class="kn">from</span> <span class="nn">..ui.mesh_tree_list</span> <span class="kn">import</span> <span class="n">MeshTreeList</span>
+<span class="kn">from</span> <span class="nn">..version</span> <span class="kn">import</span> <span class="n">__version__</span>
+
+
+<div class="viewcode-block" id="ElementsCreator"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator">[docs]</a><span class="k">class</span> <span class="nc">ElementsCreator</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Used for creating elements that get added to the main window</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type window: QMainWindow</span>
+<span class="sd">    @param window: The main UI window</span>
+
+<span class="sd">    @type elements: Elements</span>
+<span class="sd">    @param elements: The container with references to the UI elements</span>
+
+<span class="sd">    @type body: QVBoxLayout</span>
+<span class="sd">    @param body: The body layout</span>
+
+<span class="sd">    @type header: QHBoxLayout</span>
+<span class="sd">    @param header: The header layout</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="n">QMainWindow</span><span class="p">,</span> <span class="n">elements</span><span class="p">:</span> <span class="n">Elements</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">window</span> <span class="o">=</span> <span class="n">window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span> <span class="o">=</span> <span class="n">elements</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">:</span> <span class="n">QVBoxLayout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">:</span> <span class="n">QHBoxLayout</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="ElementsCreator.create_body"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_body">[docs]</a>    <span class="k">def</span> <span class="nf">create_body</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QVBoxLayout</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the main body layout and adds needed widgets</span>
+
+<span class="sd">        @rtype: QVBoxLayout</span>
+<span class="sd">        @returns: The created vertical box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span> <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span> <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span> <span class="n">MARGIN_BOTTOM</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="n">SPACING</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_body_widgets</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_body_widgets"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_body_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">create_body_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates and adds all needed widgets to the body&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_dna_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">mesh_tree_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_mesh_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_build_options</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_gui_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gui_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_analog_gui_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_analog_gui_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_aas_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_aas_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">process_btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_process_btn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">progress_bar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_header"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_header">[docs]</a>    <span class="k">def</span> <span class="nf">create_header</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QHBoxLayout</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds to the header widget</span>
+
+<span class="sd">        @rtype: QHBoxLayout</span>
+<span class="sd">        @returns: The created horizontal box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_header_widgets</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_header_widgets"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_header_widgets">[docs]</a>    <span class="k">def</span> <span class="nf">create_header_widgets</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates and adds all needed widgets to the header&quot;&quot;&quot;</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">__version__</span><span class="p">)</span>
+        <span class="n">btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_help_btn</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_HEADER_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="n">SPACING</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_help_btn"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_help_btn">[docs]</a>    <span class="k">def</span> <span class="nf">create_help_btn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the help button widget</span>
+
+<span class="sd">        @rtype: QHBoxLayout</span>
+<span class="sd">        @returns: The created horizontal box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot; ? &quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Help&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_help</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.on_help"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.on_help">[docs]</a>    <span class="k">def</span> <span class="nf">on_help</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The method that gets called when the help button is clicked&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">HELP_URL</span><span class="p">:</span>
+            <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">HELP_URL</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span>
+                <span class="s2">&quot;About&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Sorry, this application does not have documentation yet.&quot;</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_dna_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_dna_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_dna_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the DNA selector widget</span>
+
+<span class="sd">        @rtype: QWidget</span>
+<span class="sd">        @returns: The created DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_dna_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_dna_chooser</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">load_dna_btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_load_dna_button</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_dna_path</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_dna_path</span><span class="o">.</span><span class="n">fc_text_field</span><span class="o">.</span><span class="n">textChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_dna_selected</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">load_dna_btn</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.on_dna_selected"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.on_dna_selected">[docs]</a>    <span class="k">def</span> <span class="nf">on_dna_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The method that gets called when a DNA file gets selected</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">enabled</span> <span class="o">=</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">load_dna_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_dna_chooser"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_dna_chooser">[docs]</a>    <span class="k">def</span> <span class="nf">create_dna_chooser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the DNA chooser widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Dna chooser widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Path:&quot;</span><span class="p">,</span> <span class="s2">&quot;Select a DNA file&quot;</span><span class="p">,</span> <span class="s2">&quot;DNA files (*.dna)&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_load_dna_button"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_load_dna_button">[docs]</a>    <span class="k">def</span> <span class="nf">create_load_dna_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dna_input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the load DNA button widget</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+
+<span class="sd">        @rtype: QWidget</span>
+<span class="sd">        @returns: The created load DNA button widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Load DNA&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_load_dna_clicked</span><span class="p">(</span><span class="n">dna_input</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.on_load_dna_clicked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.on_load_dna_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_load_dna_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The method that gets called when a DNA file gets selected</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">QtCore</span><span class="o">.</span><span class="n">QCoreApplication</span><span class="o">.</span><span class="n">processEvents</span><span class="p">()</span>
+        <span class="n">dna_file_path</span> <span class="o">=</span> <span class="n">Elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="nb">input</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">dna_file_path</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">load_dna</span><span class="p">(</span><span class="n">dna_file_path</span><span class="p">)</span>
+            <span class="n">lod_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">descriptor</span><span class="o">.</span><span class="n">lod_count</span>
+            <span class="n">meshes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">definition</span><span class="o">.</span><span class="n">meshes</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">fill_mesh_list</span><span class="p">(</span><span class="n">lod_count</span><span class="p">,</span> <span class="n">meshes</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_mesh_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_mesh_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_mesh_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MeshTreeList</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a mesh tree list where the entries are grouped by lods, this is used for selecting the meses that need to be processed</span>
+
+<span class="sd">        @rtype: MeshTreeList</span>
+<span class="sd">        @returns: The created mesh tree list widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MeshTreeList</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_file_chooser"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_file_chooser">[docs]</a>    <span class="k">def</span> <span class="nf">create_file_chooser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">caption</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">filter</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a file chooser widget that is used for selecting file paths</span>
+
+<span class="sd">        @type label: str</span>
+<span class="sd">        @param label: The label in the FileDialog that pops up</span>
+
+<span class="sd">        @type caption: str</span>
+<span class="sd">        @param caption: The caption in the FileDialog that pops up</span>
+
+<span class="sd">        @type filter: str</span>
+<span class="sd">        @param filter: The file filter that is used in the FileDialog</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: The created file chooser object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">(</span>
+            <span class="n">label</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">window</span><span class="p">,</span>
+            <span class="n">dialog_caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
+            <span class="n">dialog_filter</span><span class="o">=</span><span class="nb">filter</span><span class="p">,</span>
+            <span class="n">on_changed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_gui_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_gui_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_gui_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the gui selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Gui selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Gui path:&quot;</span><span class="p">,</span> <span class="s2">&quot;Select the gui file&quot;</span><span class="p">,</span> <span class="s2">&quot;gui files (*.ma)&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_aas_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_aas_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_aas_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the additional assembly script selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Additional assembly script selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;After assembly script path:&quot;</span><span class="p">,</span> <span class="s2">&quot;Select the aas file&quot;</span><span class="p">,</span> <span class="s2">&quot;python script (*.py)&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_analog_gui_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_analog_gui_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_analog_gui_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the analog gui selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Analog gui selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Analog gui path:&quot;</span><span class="p">,</span> <span class="s2">&quot;Select the analog gui file&quot;</span><span class="p">,</span> <span class="s2">&quot;analog gui files (*.ma)&quot;</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_build_options"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_build_options">[docs]</a>    <span class="k">def</span> <span class="nf">create_build_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates and adds the widget containing the build options checkboxes&quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">BuildOptionsWidget</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="p">,</span> <span class="n">on_generic_changed</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_process_btn"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_process_btn">[docs]</a>    <span class="k">def</span> <span class="nf">create_process_btn</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="n">QMainWindow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QPushButton</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a process button</span>
+
+<span class="sd">        @type window: QMainWindow</span>
+<span class="sd">        @param window: The instance of the window object</span>
+
+<span class="sd">        @rtype: QPushButton</span>
+<span class="sd">        @returns: The created process button</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Process&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">window</span><span class="o">.</span><span class="n">process</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.create_progress_bar"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.create_progress_bar">[docs]</a>    <span class="k">def</span> <span class="nf">create_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="n">QMainWindow</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QProgressBar</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds progress bar</span>
+
+<span class="sd">        @type window: QMainWindow</span>
+<span class="sd">        @param window: The instance of the window object</span>
+
+<span class="sd">        @rtype: QProgressBar</span>
+<span class="sd">        @returns: The created progress bar</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">progress</span> <span class="o">=</span> <span class="n">QProgressBar</span><span class="p">(</span><span class="n">window</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setTextVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setFormat</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">progress</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.on_generic_changed"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.on_generic_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_generic_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that gets called when the checkbox is changed</span>
+
+<span class="sd">        @type state: int</span>
+<span class="sd">        @param state: The changed state of the checkbox</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_riglogic_cb_enabled</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.is_enabled_and_checked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.is_enabled_and_checked">[docs]</a>    <span class="k">def</span> <span class="nf">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">check_box</span><span class="p">:</span> <span class="n">QCheckBox</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that checks if check box is enabled in same time</span>
+
+<span class="sd">        @type check_box: QCheckBox</span>
+<span class="sd">        @param check_box: The checkbox instance to check</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">check_box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">check_box</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">())</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">check_box</span><span class="o">.</span><span class="n">isChecked</span><span class="p">())</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="ElementsCreator.set_riglogic_cb_enabled"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.elements_creator.ElementsCreator.set_riglogic_cb_enabled">[docs]</a>    <span class="k">def</span> <span class="nf">set_riglogic_cb_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Method that sets enable state of riglogic check box&quot;&quot;&quot;</span>
+
+        <span class="n">all_total_meshes</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">dna</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">blend_shapes_cb</span>
+        <span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">())</span>
+                <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_count</span><span class="p">()</span>
+            <span class="p">):</span>
+                <span class="n">all_total_meshes</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="n">enabled</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">joints_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">all_total_meshes</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">skin_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_gui_path</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_analog_gui_path</span><span class="p">)</span>
+            <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">select_aas_path</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">elements</span><span class="o">.</span><span class="n">rig_logic_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

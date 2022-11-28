@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DNACalib_2examples_2CMakeLists_8txt" kind="file" language="C++">
+    <compoundname>DNACalib/examples/CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="DNACalib_2examples_2CMakeLists_8txt_1a59397cf4ff9d5b6a280a4b87b5280ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>set</definition>
+        <argsstring>(SOURCES CommandSequence.cpp SingleCommand.cpp) source_group(TREE $</argsstring>
+        <name>set</name>
+        <param>
+          <type>SOURCES CommandSequence.cpp SingleCommand.</type>
+          <declname>cpp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/examples/CMakeLists.txt" line="1" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/examples/CMakeLists.txt" bodystart="1" bodyend="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="DNACalib_2examples_2CMakeLists_8txt_1a59397cf4ff9d5b6a280a4b87b5280ba0" refkind="member"><highlight class="normal"><ref refid="DNACalib_2examples_2CMakeLists_8txt_1a59397cf4ff9d5b6a280a4b87b5280ba0" kindref="member">set</ref>(SOURCES</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/>CommandSequence.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>SingleCommand.cpp)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">source_group(TREE<sp/>${CMAKE_CURRENT_SOURCE_DIR}<sp/>FILES<sp/>${SOURCES})</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(example<sp/>IN<sp/>LISTS<sp/>SOURCES)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>get_filename_component(filename<sp/>${example}<sp/>NAME_WE)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">(TOLOWER<sp/>${filename}<sp/>example_target_name)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>add_executable(${example_target_name}<sp/>${example})</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" kindref="member">target_link_libraries</ref>(${example_target_name}<sp/>PRIVATE<sp/>${DNAC})</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>set_target_properties(${example_target_name}<sp/>PROPERTIES</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CXX_STANDARD<sp/>11</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CXX_STANDARD_REQUIRED<sp/>NO</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CXX_EXTENSIONS<sp/>NO</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FOLDER<sp/>examples)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>EXAMPLE_TARGETS<sp/>${example_target_name})</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">endforeach()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="DNACalib_2examples_2CMakeLists_8txt_1a59397cf4ff9d5b6a280a4b87b5280ba0" kindref="member">set</ref>(DNAC_EXAMPLES<sp/>${EXAMPLE_TARGETS}<sp/>PARENT_SCOPE)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(COPY_LIB_TO_EXAMPLES)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(GET<sp/>EXAMPLE_TARGETS<sp/>0<sp/>EXAMPLE_TARGET)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>add_custom_command(TARGET<sp/>${EXAMPLE_TARGET}<sp/>POST_BUILD</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMMAND<sp/>${CMAKE_COMMAND}<sp/>-E<sp/>copy_if_different<sp/>$&lt;TARGET_FILE:${DNAC}&gt;<sp/>$&lt;TARGET_FILE_DIR:${EXAMPLE_TARGET}&gt;)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/examples/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1011 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RotateCommand_8cpp" kind="file" language="C++">
+    <compoundname>RotateCommand.cpp</compoundname>
+    <includes refid="RotateCommand_8h" local="yes">dnacalib/commands/RotateCommand.h</includes>
+    <includes refid="CommandImplBase_8h" local="yes">dnacalib/CommandImplBase.h</includes>
+    <includes refid="dnacalib_2dna_2DNA_8h" local="yes">dnacalib/dna/DNA.h</includes>
+    <includes refid="DNACalibDNAReaderImpl_8h" local="yes">dnacalib/dna/DNACalibDNAReaderImpl.h</includes>
+    <includes refid="dnacalib_2types_2Aliases_8h" local="yes">dnacalib/types/Aliases.h</includes>
+    <includes refid="Algorithm_8h" local="yes">dnacalib/utils/Algorithm.h</includes>
+    <includes refid="TDM_8h" local="no">tdm/TDM.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>dna/BinaryStreamReader.h</label>
+        <link refid="BinaryStreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>dna/BinaryStreamWriter.h</label>
+        <link refid="BinaryStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dna/DataLayer.h</label>
+        <link refid="DataLayer_8h"/>
+      </node>
+      <node id="8">
+        <label>dna/Defs.h</label>
+        <link refid="dna_2Defs_8h"/>
+      </node>
+      <node id="47">
+        <label>dna/JSONStreamReader.h</label>
+        <link refid="JSONStreamReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>dna/JSONStreamWriter.h</label>
+        <link refid="JSONStreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna/Reader.h</label>
+        <link refid="Reader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna/StreamReader.h</label>
+        <link refid="StreamReader_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>dna/StreamWriter.h</label>
+        <link refid="StreamWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>dna/Writer.h</label>
+        <link refid="Writer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna/layers/BehaviorReader.h</label>
+        <link refid="BehaviorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>dna/layers/BehaviorWriter.h</label>
+        <link refid="BehaviorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna/layers/DefinitionReader.h</label>
+        <link refid="DefinitionReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>dna/layers/DefinitionWriter.h</label>
+        <link refid="DefinitionWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna/layers/Descriptor.h</label>
+        <link refid="Descriptor_8h"/>
+      </node>
+      <node id="13">
+        <label>dna/layers/DescriptorReader.h</label>
+        <link refid="DescriptorReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>dna/layers/DescriptorWriter.h</label>
+        <link refid="DescriptorWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>dna/layers/Geometry.h</label>
+        <link refid="Geometry_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>dna/layers/GeometryReader.h</label>
+        <link refid="GeometryReader_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>dna/layers/GeometryWriter.h</label>
+        <link refid="GeometryWriter_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>dna/types/Aliases.h</label>
+        <link refid="dna_2types_2Aliases_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>dna/types/ArrayView.h</label>
+        <link refid="ArrayView_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>dna/types/StringView.h</label>
+        <link refid="StringView_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>dna/types/Vector3.h</label>
+        <link refid="Vector3_8h"/>
+      </node>
+      <node id="3">
+        <label>dnacalib/Command.h</label>
+        <link refid="Command_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnacalib/Defs.h</label>
+        <link refid="dnacalib_2Defs_8h"/>
+      </node>
+      <node id="2">
+        <label>dnacalib/commands/RotateCommand.h</label>
+        <link refid="RotateCommand_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>dnacalib/dna/DNACalibDNAReader.h</label>
+        <link refid="DNACalibDNAReader_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnacalib/types/Aliases.h</label>
+        <link refid="dnacalib_2types_2Aliases_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="21">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>pma/resources/AlignedMemoryResource.h</label>
+        <link refid="AlignedMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>pma/resources/ArenaMemoryResource.h</label>
+        <link refid="ArenaMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="25">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="28">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>trio/streams/FileStream.h</label>
+        <link refid="FileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>trio/streams/MemoryMappedFileStream.h</label>
+        <link refid="MemoryMappedFileStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="52">
+        <label>dnacalib/CommandImplBase.h</label>
+        <link refid="CommandImplBase_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>dnacalib/TypeDefs.h</label>
+        <link refid="src_2dnacalib_2TypeDefs_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RotateCommand.cpp</label>
+        <link refid="RotateCommand_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>dnacalib/dna/BaseImpl.h</label>
+        <link refid="dnacalib_2dna_2BaseImpl_8h"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>dnacalib/dna/DNA.h</label>
+        <link refid="dnacalib_2dna_2DNA_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>dnacalib/dna/DNACalibDNAReaderImpl.h</label>
+        <link refid="DNACalibDNAReaderImpl_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>dnacalib/dna/DenormalizedData.h</label>
+        <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>dnacalib/dna/LODMapping.h</label>
+        <link refid="dnacalib_2dna_2LODMapping_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>dnacalib/dna/ReaderImpl.h</label>
+        <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>dnacalib/dna/SurjectiveMapping.h</label>
+        <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>dnacalib/dna/WriterImpl.h</label>
+        <link refid="dnacalib_2dna_2WriterImpl_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>dnacalib/utils/Algorithm.h</label>
+        <link refid="Algorithm_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>dnacalib/utils/Extd.h</label>
+        <link refid="alib_2utils_2Extd_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>tdm/Computations.h</label>
+        <link refid="Computations_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>tdm/Mat.h</label>
+        <link refid="Mat_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>tdm/Types.h</label>
+        <link refid="Types_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>tdm/Vec.h</label>
+        <link refid="Vec_8h"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>terse/types/ArchiveOffset.h</label>
+        <link refid="ArchiveOffset_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>terse/types/DynArray.h</label>
+        <link refid="DynArray_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>algorithm</label>
+      </node>
+      <node id="81">
+        <label>array</label>
+      </node>
+      <node id="18">
+        <label>cassert</label>
+      </node>
+      <node id="68">
+        <label>cmath</label>
+      </node>
+      <node id="19">
+        <label>cstddef</label>
+      </node>
+      <node id="31">
+        <label>cstdint</label>
+      </node>
+      <node id="74">
+        <label>cstring</label>
+      </node>
+      <node id="75">
+        <label>functional</label>
+      </node>
+      <node id="76">
+        <label>iterator</label>
+      </node>
+      <node id="89">
+        <label>limits</label>
+      </node>
+      <node id="59">
+        <label>list</label>
+      </node>
+      <node id="60">
+        <label>map</label>
+      </node>
+      <node id="55">
+        <label>memory</label>
+      </node>
+      <node id="56">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="61">
+        <label>set</label>
+      </node>
+      <node id="62">
+        <label>string</label>
+      </node>
+      <node id="82">
+        <label>tuple</label>
+      </node>
+      <node id="57">
+        <label>type_traits</label>
+      </node>
+      <node id="63">
+        <label>unordered_map</label>
+      </node>
+      <node id="64">
+        <label>unordered_set</label>
+      </node>
+      <node id="24">
+        <label>utility</label>
+      </node>
+      <node id="65">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdnac_1_1RotateCommand_1_1Impl" prot="public">dnac::RotateCommand::Impl</innerclass>
+    <innernamespace refid="namespacednac">dnac</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RotateCommand_8h" kindref="compound">dnacalib/commands/RotateCommand.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CommandImplBase_8h" kindref="compound">dnacalib/CommandImplBase.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2dna_2DNA_8h" kindref="compound">dnacalib/dna/DNA.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DNACalibDNAReaderImpl_8h" kindref="compound">dnacalib/dna/DNACalibDNAReaderImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dnacalib_2types_2Aliases_8h" kindref="compound">dnacalib/types/Aliases.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Algorithm_8h" kindref="compound">dnacalib/utils/Algorithm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="TDM_8h" kindref="compound">tdm/TDM.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classdnac_1_1RotateCommand_1_1Impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1RotateCommand_1_1Impl" kindref="compound">RotateCommand::Impl</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase</ref>&lt;Impl&gt;<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="classdnac_1_1RotateCommand_1_1Impl_1af80714f02ee48ad25e4a29b43a9cfba8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref><sp/>=<sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">CommandImplBase&lt;Impl&gt;</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20" refid="classdnac_1_1RotateCommand_1_1Impl_1adbc57f4b04970f23e2d4c6752cb8bc55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1adbc57f4b04970f23e2d4c6752cb8bc55" kindref="member">Impl</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1CommandImplBase" kindref="compound">Super</ref>{memRes_},</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref>{},</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>{}<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classdnac_1_1RotateCommand_1_1Impl_1a20853cc24f6c8036be2fc8a761e27781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a20853cc24f6c8036be2fc8a761e27781" kindref="member">setRotation</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>degrees_)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref><sp/>=<sp/>degrees_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classdnac_1_1RotateCommand_1_1Impl_1ad522775cf70474b599ec9e4a8c5119e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1ad522775cf70474b599ec9e4a8c5119e2" kindref="member">setOrigin</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin_)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref><sp/>=<sp/>origin_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classdnac_1_1RotateCommand_1_1Impl_1a03e174b412806413de3f1c2b985b61e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a03e174b412806413de3f1c2b985b61e2" kindref="member">run</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref><sp/>!=<sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>{})<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" kindref="member">rotateNeutralJoints</ref>(output);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a966194ee7b11f30b2fa41407d4624ea7" kindref="member">rotateVertexPositions</ref>(output);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42" refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structtdm_1_1mat" kindref="compound">tdm::mat4&lt;float&gt;</ref><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" kindref="member">getRotationTransformationMatrix</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inverseTranslationMatrix<sp/>=<sp/><ref refid="namespacetdm_1_1projective_1acebdfbfa65a7452ac8b81acd0b618eee" kindref="member">tdm::translate</ref>(<ref refid="structtdm_1_1vec" kindref="compound">tdm::fvec3</ref>{-<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>,<sp/>-<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>,<sp/>-<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>});</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rotationMatrix<sp/>=<sp/><ref refid="namespacetdm_1_1projective_1a6d871452e6ba8e5af822c3d3f4573139" kindref="member">tdm::rotate</ref>(<ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>),<sp/><ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>),<sp/><ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>translationMatrix<sp/>=<sp/><ref refid="namespacetdm_1_1projective_1acebdfbfa65a7452ac8b81acd0b618eee" kindref="member">tdm::translate</ref>(<ref refid="structtdm_1_1vec" kindref="compound">tdm::fvec3</ref>{<ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>,<sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>,<sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>});</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>inverseTranslationMatrix<sp/>*<sp/>rotationMatrix<sp/>*<sp/>translationMatrix;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" kindref="member">rotateNeutralJoints</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rotationMatrix<sp/>=<sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" kindref="member">getRotationTransformationMatrix</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>jointIndex<sp/>=<sp/>0u;<sp/>jointIndex<sp/>&lt;<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a3096d034974ba868f3d42fc3984a5d66" kindref="member">getJointCount</ref>();<sp/>++jointIndex)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>parentIndex<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1aeb7ef18efd4a765ba13d3960094bca85" kindref="member">getJointParentIndex</ref>(jointIndex);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>root<sp/>joints<sp/>are<sp/>rotated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(jointIndex<sp/>==<sp/>parentIndex)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointNeutralRotation<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a8325f889701d951580a2ec49ca816ea7" kindref="member">getNeutralJointRotation</ref>(jointIndex);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointNeutralTranslation<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1ab600f483b951b6015df40a6766af7e87" kindref="member">getNeutralJointTranslation</ref>(jointIndex);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointRotationMatrix<sp/>=<sp/><ref refid="namespacetdm_1_1projective_1a6d871452e6ba8e5af822c3d3f4573139" kindref="member">tdm::rotate</ref>(<ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(jointNeutralRotation.x),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(jointNeutralRotation.y),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacetdm_1a26fb6809e4f953161a41fe43c18465d9" kindref="member">tdm::radians</ref>(jointNeutralRotation.z));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointTranslationMatrix<sp/>=<sp/><ref refid="namespacetdm_1_1projective_1acebdfbfa65a7452ac8b81acd0b618eee" kindref="member">tdm::translate</ref>(<ref refid="structtdm_1_1vec" kindref="compound">fvec3</ref>{jointNeutralTranslation.x,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointNeutralTranslation.y,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointNeutralTranslation.z});</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>transformMatrix<sp/>=<sp/>jointRotationMatrix<sp/>*<sp/>jointTranslationMatrix<sp/>*<sp/>rotationMatrix;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t<sp/>=<sp/><ref refid="namespacednac_1a886581767877508fd8845b042fffaf5f" kindref="member">extractTranslationVector</ref>(transformMatrix);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/><ref refid="namespacednac_1aab3c105f2454303b836c591d0e676051" kindref="member">extractRotationVector</ref>(transformMatrix);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a4568f0ed8febb72c073dca6b4229866d" kindref="member">setNeutralJointRotation</ref>(jointIndex,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>{<ref refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" kindref="member">tdm::degrees</ref>(r[0]),<sp/><ref refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" kindref="member">tdm::degrees</ref>(r[1]),<sp/><ref refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" kindref="member">tdm::degrees</ref>(r[2])});</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a394cf09d72836689ead003b84d1403eb" kindref="member">setNeutralJointTranslation</ref>(jointIndex,<sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>{t[0],<sp/>t[1],<sp/>t[2]});</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classdnac_1_1RotateCommand_1_1Impl_1a966194ee7b11f30b2fa41407d4624ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a966194ee7b11f30b2fa41407d4624ea7" kindref="member">rotateVertexPositions</ref>(<ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rotationMatrix<sp/>=<sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" kindref="member">getRotationTransformationMatrix</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>meshIndex<sp/>=<sp/>0u;<sp/>meshIndex<sp/>&lt;<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1ad79abbd6be98e172f989311806fa01cf" kindref="member">getMeshCount</ref>();<sp/>++meshIndex)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1aea95c3f004da9c7c57d82b21fd493801" kindref="member">getVertexPositionXs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ys<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a00f2620efcb497c3d51cf6aaea94d079" kindref="member">getVertexPositionYs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>zs<sp/>=<sp/>output-&gt;<ref refid="classdnac_1_1ReaderImpl_1a1fdf97eb5f3c9b9b78bcd1ce79f484f3" kindref="member">getVertexPositionZs</ref>(meshIndex);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>assert((xs.size()<sp/>==<sp/>ys.size())<sp/>&amp;&amp;<sp/>(ys.size()<sp/>==<sp/>zs.size()));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref><sp/>mesh{xs,<sp/>ys,<sp/>zs,<sp/>output-&gt;<ref refid="classdnac_1_1BaseImpl_1a32cf2cb73c096570d97256ad9df80b1b" kindref="member">getMemoryResource</ref>()};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>i<sp/>=<sp/>0ul;<sp/>i<sp/>&lt;<sp/>mesh.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtdm_1_1vec" kindref="compound">tdm::fvec4</ref><sp/>vertex{mesh.xs[i],<sp/>mesh.ys[i],<sp/>mesh.zs[i],<sp/>1.0f};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structtdm_1_1vec" kindref="compound">tdm::fvec4</ref><sp/>rotatedVertex<sp/>=<sp/>vertex<sp/>*<sp/>rotationMatrix;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mesh.xs[i]<sp/>=<sp/>rotatedVertex[0];</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mesh.ys[i]<sp/>=<sp/>rotatedVertex[1];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mesh.zs[i]<sp/>=<sp/>rotatedVertex[2];</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output-&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">setVertexPositions</ref>(meshIndex,<sp/>std::move(mesh));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96" refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a96d8404506410b6c6b2f94766e13f328" kindref="member">degrees</ref>;</highlight></codeline>
+<codeline lineno="97" refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/><ref refid="classdnac_1_1RotateCommand_1_1Impl_1a36cdd1ed02623fa6a186b7caa4bc5236" kindref="member">origin</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" kindref="member">RotateCommand::RotateCommand</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:<sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1RotateCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classdnac_1_1RotateCommand_1a413461fb7a7dfedcceb18103801db110" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" kindref="member">RotateCommand::RotateCommand</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>degrees,<sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>pImpl{<ref refid="namespacepma_1a64805040921b916b618da85c7b1b52b6" kindref="member">makeScoped</ref>&lt;<ref refid="classdnac_1_1RotateCommand_1_1Impl" kindref="compound">Impl</ref>&gt;(memRes)}<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" kindref="member">pImpl</ref>-&gt;setRotation(<ref refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" kindref="member">degrees</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" kindref="member">pImpl</ref>-&gt;setOrigin(origin);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><ref refid="classdnac_1_1RotateCommand_1aa4a422b6406e0bae5fc09becb4f43f86" kindref="member">RotateCommand::~RotateCommand</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><ref refid="classdnac_1_1RotateCommand_1a75a140f192916352415e5b58c9c2d9cd" kindref="member">RotateCommand::RotateCommand</ref>(<ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref>&amp;<sp/><ref refid="classdnac_1_1RotateCommand_1a83de7f0e9bb945b102e6207145cc96d9" kindref="member">RotateCommand::operator=</ref>(<ref refid="classdnac_1_1RotateCommand" kindref="compound">RotateCommand</ref>&amp;&amp;)<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1a89809c7affc8e790e12673df84eeae9f" kindref="member">RotateCommand::setRotation</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>degrees)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" kindref="member">pImpl</ref>-&gt;setRotation(<ref refid="namespacetdm_1a86f2ad532b61593c6f728678482bc114" kindref="member">degrees</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="classdnac_1_1RotateCommand_1a2ee8f1f0d63abba21b599ef14d803f81" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1a2ee8f1f0d63abba21b599ef14d803f81" kindref="member">RotateCommand::setOrigin</ref>(<ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref><sp/>origin)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" kindref="member">pImpl</ref>-&gt;setOrigin(origin);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1RotateCommand_1a21cbf4f70eaae2d229dc2b40ca875e07" kindref="member">RotateCommand::run</ref>(<ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1RotateCommand_1ac4ec3173b8920c956d77539f861c0ce4" kindref="member">pImpl</ref>-&gt;run(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(output));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RotateCommand.cpp"/>
+  </compounddef>
+</doxygen>

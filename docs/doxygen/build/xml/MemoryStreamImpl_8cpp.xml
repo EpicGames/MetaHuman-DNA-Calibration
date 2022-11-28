@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="MemoryStreamImpl_8cpp" kind="file" language="C++">
+    <compoundname>MemoryStreamImpl.cpp</compoundname>
+    <includes refid="MemoryStreamImpl_8h" local="yes">trio/streams/MemoryStreamImpl.h</includes>
+    <includes refid="PolyAllocator_8h" local="no">pma/PolyAllocator.h</includes>
+    <includes local="no">cassert</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstring</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="10">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>pma/PolyAllocator.h</label>
+        <link refid="PolyAllocator_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>pma/TypeDefs.h</label>
+        <link refid="include_2pma_2TypeDefs_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>pma/resources/DefaultMemoryResource.h</label>
+        <link refid="DefaultMemoryResource_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="19">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="5">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio/streams/MemoryStream.h</label>
+        <link refid="MemoryStream_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="1">
+        <label>MemoryStreamImpl.cpp</label>
+        <link refid="MemoryStreamImpl_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>trio/streams/MemoryStreamImpl.h</label>
+        <link refid="MemoryStreamImpl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>trio/streams/StreamStatus.h</label>
+        <link refid="StreamStatus_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>algorithm</label>
+      </node>
+      <node id="22">
+        <label>array</label>
+      </node>
+      <node id="26">
+        <label>cassert</label>
+      </node>
+      <node id="7">
+        <label>cstddef</label>
+      </node>
+      <node id="8">
+        <label>cstdint</label>
+      </node>
+      <node id="37">
+        <label>cstring</label>
+      </node>
+      <node id="30">
+        <label>list</label>
+      </node>
+      <node id="31">
+        <label>map</label>
+      </node>
+      <node id="27">
+        <label>memory</label>
+      </node>
+      <node id="28">
+        <label>scoped_allocator</label>
+      </node>
+      <node id="32">
+        <label>set</label>
+      </node>
+      <node id="20">
+        <label>stdio.h</label>
+      </node>
+      <node id="33">
+        <label>string</label>
+      </node>
+      <node id="29">
+        <label>type_traits</label>
+      </node>
+      <node id="34">
+        <label>unordered_map</label>
+      </node>
+      <node id="35">
+        <label>unordered_set</label>
+      </node>
+      <node id="13">
+        <label>utility</label>
+      </node>
+      <node id="36">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader" prot="public">trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryReader</innerclass>
+    <innerclass refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter" prot="public">trio::anonymous_namespace{MemoryStreamImpl.cpp}::MemoryWriter</innerclass>
+    <innernamespace refid="namespacetrio">trio</innernamespace>
+    <innernamespace refid="namespacetrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03">trio::anonymous_namespace{MemoryStreamImpl.cpp}</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MemoryStreamImpl_8h" kindref="compound">trio/streams/MemoryStreamImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="PolyAllocator_8h" kindref="compound">pma/PolyAllocator.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(push)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(disable<sp/>:<sp/>4365<sp/>4987)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cassert&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>warning(pop)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetrio" kindref="compound">trio</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="namespacetrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader" kindref="compound">MemoryReader</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1Readable" kindref="compound">Readable</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1af464410f73f3c6ec1c93730bcf51d33b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1af464410f73f3c6ec1c93730bcf51d33b" kindref="member">MemoryReader</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source_)<sp/>:<sp/>source{source_}<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a38427a9a781125a6561b3028fe6ecde5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a38427a9a781125a6561b3028fe6ecde5" kindref="member">read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination,<sp/>std::size_t<sp/>size)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(destination,<sp/>source,<sp/>size);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a4d05920810106ba6bc9e22ab23b7f939" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a4d05920810106ba6bc9e22ab23b7f939" kindref="member">read</ref>(<ref refid="classtrio_1_1Writable" kindref="compound">Writable</ref>*<sp/>destination,<sp/>std::size_t<sp/>size)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination-&gt;<ref refid="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e" kindref="member">write</ref>(source,<sp/>size);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a83ec1753e358146c1af0979738fb8b3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryReader_1a83ec1753e358146c1af0979738fb8b3f" kindref="member">source</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter" kindref="compound">MemoryWriter</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1Writable" kindref="compound">Writable</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a5295ca76ae83bf639ae8f9c08bb015e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a5295ca76ae83bf639ae8f9c08bb015e8" kindref="member">MemoryWriter</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination_)<sp/>:<sp/>destination{destination_}<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1ac5d39e5d900469d957664b53ddd6f1a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1ac5d39e5d900469d957664b53ddd6f1a1" kindref="member">write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/>std::size_t<sp/>size)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::memcpy(destination,<sp/>source,<sp/>size);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a9c1479f6c1a5db074cd8a280f03afab5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a9c1479f6c1a5db074cd8a280f03afab5" kindref="member">write</ref>(<ref refid="classtrio_1_1Readable" kindref="compound">Readable</ref>*<sp/>source,<sp/>std::size_t<sp/>size)</highlight><highlight class="keyword"><sp/>override<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source-&gt;<ref refid="classtrio_1_1Readable_1a134ad61b17c812f7aa2d912fc96d36f9" kindref="member">read</ref>(destination,<sp/>size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destination<sp/>+=<sp/>size;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="62" refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a0fd15c9beebd7ca89947a12adffba778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classtrio_1_1anonymous__namespace_02MemoryStreamImpl_8cpp_03_1_1MemoryWriter_1a0fd15c9beebd7ca89947a12adffba778" kindref="member">destination</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><ref refid="classtrio_1_1MemoryStream_1acede829880baee3b79553898cc913aed" kindref="member">MemoryStream::~MemoryStream</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classtrio_1_1MemoryStream_1a589354badff0962d09ce1bd52a2cc476" refkind="member"><highlight class="normal"><ref refid="classtrio_1_1MemoryStream" kindref="compound">MemoryStream</ref>*<sp/><ref refid="classtrio_1_1MemoryStream_1a589354badff0962d09ce1bd52a2cc476" kindref="member">MemoryStream::create</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStream_1a589354badff0962d09ce1bd52a2cc476" kindref="member">create</ref>(0ul,<sp/>memRes);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classtrio_1_1MemoryStream_1a686c9901f86854be00f5dec48b4f9e92" refkind="member"><highlight class="normal"><ref refid="classtrio_1_1MemoryStream" kindref="compound">MemoryStream</ref>*<sp/><ref refid="classtrio_1_1MemoryStream_1a589354badff0962d09ce1bd52a2cc476" kindref="member">MemoryStream::create</ref>(std::size_t<sp/>initialSize,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">pma::PolyAllocator&lt;MemoryStreamImpl&gt;</ref><sp/>alloc{memRes};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>alloc.newObject(initialSize,<sp/>memRes);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classtrio_1_1MemoryStream_1a195283d130d47fe0dff848fb2fc554ce" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStream_1a195283d130d47fe0dff848fb2fc554ce" kindref="member">MemoryStream::destroy</ref>(<ref refid="classtrio_1_1MemoryStream" kindref="compound">MemoryStream</ref>*<sp/>instance)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>stream<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classtrio_1_1MemoryStreamImpl" kindref="compound">MemoryStreamImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(instance);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">pma::PolyAllocator&lt;MemoryStreamImpl&gt;</ref><sp/>alloc{stream-&gt;getMemoryResource()};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>alloc.deleteObject(stream);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classtrio_1_1MemoryStreamImpl_1a7b54d90d0f5a58e66ef195c961af3f90" refkind="member"><highlight class="normal"><ref refid="classtrio_1_1MemoryStreamImpl_1a7b54d90d0f5a58e66ef195c961af3f90" kindref="member">MemoryStreamImpl::MemoryStreamImpl</ref>(std::size_t<sp/>initialSize,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>data{initialSize,<sp/>static_cast&lt;char&gt;(0),<sp/>memRes_},</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>position{},</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>memRes{memRes_}<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classtrio_1_1MemoryStreamImpl_1afa8ac423cc717367c6ccf65c7718d2c8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1afa8ac423cc717367c6ccf65c7718d2c8" kindref="member">MemoryStreamImpl::open</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref><sp/>=<sp/>0ul;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classtrio_1_1MemoryStreamImpl_1a03aeffcc39b1745605befd7f0c36f2e0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a03aeffcc39b1745605befd7f0c36f2e0" kindref="member">MemoryStreamImpl::close</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref><sp/>=<sp/>0ul;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="classtrio_1_1MemoryStreamImpl_1a1b8fb1f80d37a444261fb574701bb193" refkind="member"><highlight class="normal">std::uint64_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a1b8fb1f80d37a444261fb574701bb193" kindref="member">MemoryStreamImpl::tell</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="classtrio_1_1MemoryStreamImpl_1a0a02d6bcef1fde8ec6631c0e052f2172" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a02d6bcef1fde8ec6631c0e052f2172" kindref="member">MemoryStreamImpl::seek</ref>(std::uint64_t<sp/>position_)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((position_<sp/>==<sp/>0ul)<sp/>||<sp/>(position_<sp/>&lt;=<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>()))<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>push</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>ignored<sp/>&quot;-Wuseless-cast&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(position_);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>!defined(__clang__)<sp/>&amp;&amp;<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#pragma<sp/>GCC<sp/>diagnostic<sp/>pop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1afbe507ff2b39fc2ccb8550dfc27e0ce9" kindref="member">SeekError</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="classtrio_1_1MemoryStreamImpl_1a4f661e5c8c728e64bef2b19f5e16cfa9" refkind="member"><highlight class="normal">std::size_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a4f661e5c8c728e64bef2b19f5e16cfa9" kindref="member">MemoryStreamImpl::read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>destination,<sp/>std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(destination<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1a5bca141b1213e5f752a4fde5679708bd" kindref="member">ReadError</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0ul;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>MemoryWriter<sp/>writer{destination};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a4f661e5c8c728e64bef2b19f5e16cfa9" kindref="member">read</ref>(&amp;writer,<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classtrio_1_1MemoryStreamImpl_1a1b9085ee7ff1210ca46142414cadbedc" refkind="member"><highlight class="normal">std::size_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a4f661e5c8c728e64bef2b19f5e16cfa9" kindref="member">MemoryStreamImpl::read</ref>(<ref refid="classtrio_1_1Writable" kindref="compound">Writable</ref>*<sp/>destination,<sp/>std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(destination<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1a5bca141b1213e5f752a4fde5679708bd" kindref="member">ReadError</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0ul;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>available<sp/>=<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.size()<sp/>-<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesToRead<sp/>=<sp/>std::min(<ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>,<sp/>available);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesCopied<sp/>=<sp/>(bytesToRead<sp/>&gt;<sp/>0ul<sp/>?<sp/>destination-&gt;<ref refid="classtrio_1_1Writable_1a463e8d3e652fc4c3ce971d3fc2eaec7e" kindref="member">write</ref>(&amp;<ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>[<ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref>],<sp/>bytesToRead)<sp/>:<sp/>0ul);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref><sp/>+=<sp/>bytesCopied;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bytesCopied;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7" refkind="member"><highlight class="normal">std::size_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7" kindref="member">MemoryStreamImpl::write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>source,<sp/>std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" kindref="member">WriteError</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0ul;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>MemoryReader<sp/>reader{source};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7" kindref="member">write</ref>(&amp;reader,<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="classtrio_1_1MemoryStreamImpl_1ac83e4c44edeca8b430aec1fe554fc350" refkind="member"><highlight class="normal">std::size_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a6087ad6527a356c063d2b076bba1f6a7" kindref="member">MemoryStreamImpl::write</ref>(<ref refid="classtrio_1_1Readable" kindref="compound">Readable</ref>*<sp/>source,<sp/>std::size_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(source<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" kindref="member">WriteError</ref>);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0ul;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>available<sp/>=<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.size()<sp/>-<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(available<sp/>&lt;<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>newSize<sp/>=<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.size()<sp/>+<sp/>(<ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref><sp/>-<sp/>available);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>overflow<sp/>/<sp/>wrap-around</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newSize<sp/>&lt;<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.size())<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a0a59d4e7601b9deccb43922314fb65a7" kindref="member">status</ref>-&gt;<ref refid="classsc_1_1StatusProvider_1a0894ef1ff8f81599f9becda261abd4a8" kindref="member">set</ref>(<ref refid="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" kindref="member">WriteError</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0ul;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.resize(newSize);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::size_t<sp/>bytesCopied<sp/>=<sp/>source-&gt;<ref refid="classtrio_1_1Readable_1a134ad61b17c812f7aa2d912fc96d36f9" kindref="member">read</ref>(&amp;<ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>[<ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref>],<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">size</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1ab53c5a3c85a51fce797c5d56caf3ca08" kindref="member">position</ref><sp/>+=<sp/>bytesCopied;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bytesCopied;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" refkind="member"><highlight class="normal">std::uint64_t<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a2135e0f67de0007163c8b284c173262f" kindref="member">MemoryStreamImpl::size</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a14fe8ea1d5ecfb1f6079237ab7179e32" kindref="member">data</ref>.size();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="classtrio_1_1MemoryStreamImpl_1a4f92cc886f063ebd3738b1454789b4c5" refkind="member"><highlight class="normal"><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a4f92cc886f063ebd3738b1454789b4c5" kindref="member">MemoryStreamImpl::getMemoryResource</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classtrio_1_1MemoryStreamImpl_1a4b2f1d3d9c5f20c7eee45ff2702feaa7" kindref="member">memRes</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>trio</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/streams/MemoryStreamImpl.cpp"/>
+  </compounddef>
+</doxygen>

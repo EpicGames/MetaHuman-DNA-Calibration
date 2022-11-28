@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1Writer" kind="class" language="C++" prot="public">
+    <compoundname>dna::Writer</compoundname>
+    <basecompoundref refid="classdna_1_1BehaviorWriter" prot="public" virt="non-virtual">dna::BehaviorWriter</basecompoundref>
+    <basecompoundref refid="classdna_1_1GeometryWriter" prot="public" virt="non-virtual">dna::GeometryWriter</basecompoundref>
+    <derivedcompoundref refid="classdnac_1_1WriterImpl" prot="public" virt="non-virtual">dnac::WriterImpl&lt; dna::Writer &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classdna_1_1StreamWriter" prot="public" virt="non-virtual">dna::StreamWriter</derivedcompoundref>
+    <includes refid="Writer_8h" local="no">Writer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1Writer_1a0d344c575be95fce166e56b61056e0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>dna::Writer::~Writer</definition>
+        <argsstring>() override</argsstring>
+        <name>~Writer</name>
+        <qualifiedname>dna::Writer::~Writer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/Writer.h" line="25" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1Writer_1a41e7a151c6dab14e702667b9e41e8a85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dna::Writer::setFrom</definition>
+        <argsstring>(const Reader *source, DataLayer layer=DataLayer::All, MemoryResource *memRes=nullptr)</argsstring>
+        <name>setFrom</name>
+        <qualifiedname>dna::Writer::setFrom</qualifiedname>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> *</type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769c" kindref="member">DataLayer</ref></type>
+          <declname>layer</declname>
+          <defval><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">DataLayer::All</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> from the given <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This function copies all the data from the given <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> into the <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> instance, by calling each getter function of the <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref>, and passing the return values to the matching setter functions in the <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref>. It is implemented in the abstract class itself to provide the functionality for all <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> Writers. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>source</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> from which the data needs to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Limit which layers should be taken over from the given source reader. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memRes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional memory resource to use for temporary allocations during copying. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/Writer.h" line="41" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/Writer.cpp" bodystart="413" bodyend="432"/>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ab39a035a995fc6597c8eb942210d1527">dna::Behavior</references>
+        <references refid="namespacedna_1a3035750816448c5f6c87cc3d589db0a8" compoundref="DataLayerBitmask_8h" startline="18" endline="43">dna::computeDataLayerBitmask</references>
+        <references refid="namespacedna_1a570698cb59e2a9295b49d8cdcd143c6f" compoundref="dna_2utils_2ScopedEnumEx_8h" startline="57" endline="59">dna::contains</references>
+        <references refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</references>
+        <references refid="namespacedna_1ae53d84a6543f4f423b7dfbfa448c39e5" compoundref="Writer_8cpp" startline="384" endline="411">dna::copyBlendShapeTargets</references>
+        <references refid="namespacedna_1a16f3f0150d5c559e35eda9ee663b38fb" compoundref="Writer_8cpp" startline="105" endline="198">dna::copyDefinition</references>
+        <references refid="namespacedna_1a3dd6b21633eba36a583be501ee467fa6" compoundref="Writer_8cpp" startline="45" endline="63">dna::copyDescriptor</references>
+        <references refid="namespacedna_1a96b705368b65e6dfd0c9a92e27aeeadb" compoundref="Writer_8cpp" startline="315" endline="372">dna::copyGeometry</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a0b890b1926b90387673882e6ccae7fdc">dna::Definition</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25a9d6fffaf16174e94ed7e134586b8b544">dna::GeometryBlendShapesOnly</references>
+        <references refid="namespacedna_1ad0fb05c7febae18102c255c303484d25ad60a23fb7cc430a37fecdcf7282a3c9c">dna::GeometryRest</references>
+        <referencedby refid="classdnac_1_1DNACalibDNAReader_1a32959ad38241412ef0e128beb25ceb75" compoundref="DNACalibDNAReaderImpl_8cpp" startline="21" endline="25">dnac::DNACalibDNAReader::create</referencedby>
+        <referencedby refid="classdnac_1_1SetLODsCommand_1_1Impl_1a9ad3eb1a0e9746c3422abc47ff0a2179" compoundref="SetLODsCommand_8cpp" startline="26" endline="39">dnac::SetLODsCommand::Impl::run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The abstract <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> which its implementations are expected to inherit. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>This class combines the various different writer interfaces into a single interface. The artificial separation into multiple interfaces in this case just mirrors the structure of the <ref refid="classdna_1_1Reader" kindref="compound">Reader</ref> hierarchy, as it&apos;s not possible to selectively write only specific layers. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="10">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna::WriterImpl&lt; JSONStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::WriterImpl&lt; dna::Writer &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="5">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna::JSONStreamWriter</label>
+        <link refid="classdna_1_1JSONStreamWriter"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>dna::JSONStreamWriterImpl</label>
+        <link refid="classdna_1_1JSONStreamWriterImpl"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="5">
+        <label>dna::GeometryWriter</label>
+        <link refid="classdna_1_1GeometryWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/Writer.h" line="23" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/Writer.h" bodystart="23" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classdna_1_1DefinitionWriter_1a833ddf3aa21ae018e73923a9c17e8f6c" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1afab13f64abd3b2600cbb33f513c6e4bb" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearAnimatedMapNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a7ccdfa0345f7789514a8dbb77fd9d6bf" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa69021d1daa96e5dc6c664a4a4d5b6f1" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearBlendShapeChannelNames</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a4c0d6fe95fadbaca5d967308444d7f6d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearBlendShapeTargets</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a6d746233671efa8b06f965cf77a0974b" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearFaceVertexLayoutIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a51ec75c1d95e3f6b11e76a63bff7830a" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearGUIControlNames</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a6b9475d1a888a5e7b61c5a64eb40f2ae" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearJointGroups</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af5678ae2507289472d3bf7db42cf5737" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a623e9d447ff61291f0c4eebb2a52161d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearJointNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae88b611a59fdfadfef3fef6316bf7e0f" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearLODAnimatedMapMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2fa5d2b6c9fb5725cc0bba2ea7c5b1ab" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearLODBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ada594e28662c8743180659e88666de30" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearLODJointMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a4e8476c54bee8764db7e22f2d813c5e0" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearLODMeshMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a0df6e5029b789fd4a14208d1416cd246" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearMeshBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a256a78757e7ae43a9c815a2b1c5f1638" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearMeshes</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa4875b5153d765696a6693add5dd0c46" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a12aa23a21232da2ffaa51e4dc6748bb8" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearMeshNames</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ace23be7b6e8b6104f472ca3f1d4b2235" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearMetaData</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1abc7053615464e121b86bb6c3c3605398" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearRawControlNames</name></member>
+      <member refid="classdna_1_1GeometryWriter_1ad177d927d0338fba4ef2ae4ab95babdb" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>clearSkinWeights</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ada7f206c218b1e65bd2331b584322413" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>deleteJointGroup</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a7e68e144fc72334a7a69b3dacfdeb9c4" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>deleteMesh</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a23839423080cbbef906d2edc1eb47b2a" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAge</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1b66c9c33eddeb21eae0ad734cecc343" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapCutValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adcc2982bd1e9a7b014904f55382ea7f7" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapFromValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a9b34f7c55202132ea233bf62305e95fd" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a76a88fe1ca13c58e88729846c68668c5" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8794fb60023c7135a8e64df33f760ff8" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapLODs</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a952b9e26982e07b7cff4118cb7e4b3d9" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac1300d462f548d4f1711b2d6c4553b99" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a85b0b644ee45dbc4ef4ccc3299c4d43b" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a4e360d3d0c2a1fe5f5fa500b879e8b27" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setAnimatedMapToValues</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1aed61cd3661fe097ac1792608ea13971b" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setArchetype</name></member>
+      <member refid="classdna_1_1GeometryWriter_1aa4ee705c45615b3fce8ed96f1b3b0890" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelIndex</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae938261e6df4857c604fbde039d02f3c" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1298ec717057270d5e29a4ce27352345" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a9eac4730bc5b2d683f81be7d7abf942a" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelLODs</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a16e68f1b1ec7a84ca03764c16a114b89" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac10d5d4766d112140ba61be45bae15c7" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeChannelOutputIndices</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a8a1d73319b25b070f0d72c59fdd2e55c" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeTargetDeltas</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a5f10ae8f75a2f036edb7b9cbcba3ecb5" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setBlendShapeTargetVertexIndices</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a0a118e6fd0b17b4b40ff265f45d442e7" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setCoordinateSystem</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac194e90483e1fb937ad43cc57d9f9dba" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setDBComplexity</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a30f909fc6dcb53baa4462b45644056d5" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setDBMaxLOD</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac7b713af76afdc4f89af288b983c6779" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setDBName</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a0dc0c7304f1429b1895fcedffde8bfa3" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setFaceVertexLayoutIndices</name></member>
+      <member refid="classdna_1_1Writer_1a41e7a151c6dab14e702667b9e41e8a85" prot="public" virt="non-virtual"><scope>dna::Writer</scope><name>setFrom</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a7f5376ccecaa926aba462ff4cba47244" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGender</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1acbe167777c421076e740f9e775f1ca52" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIControlName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adba15d24dd5998ea0bb9e16c8043f078" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawCutValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac2c53991d953244d8d8d9cfef3814537" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawFromValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a220225a3400609ea6ad701d82231fcd2" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8ff614803260b787dedf6c24f13d5d30" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a5b6f8d09f7e14f2d4aca12b03247fa55" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a834af50cb5c8f1567ab474bb4dce9131" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setGUIToRawToValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ae20b30d9f64ce34affae4c8bb8efa445" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointColumnCount</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1aa8d6031abc7c0b7a262054c7589719e8" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointGroupInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1abc4bde60580a3f969b2c31694c5db4a2" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointGroupJointIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a0574869602e12d5d02c1140b51d8e96e" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointGroupLODs</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1587c7656d8010eae73723f5ebcc8df2" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointGroupOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a9cd33855b41cf50fa38b40dd871f7b9f" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointGroupValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a69035647abcca8cad52431ca759fc96d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointHierarchy</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a6d2908222c87eaae02f42897a3800ffb" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a28cb22e4690d1921c71775c939652c80" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setJointRowCount</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ac8fbf066b96f5405488ea83ccd0b3ed2" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setLODAnimatedMapMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aecc6f0194a3ede2fd3a5949b5d726fab" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setLODBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a20f5c0bd82865136e3df7c9d67585213" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setLODCount</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ab455cc12547a8bf8fd640442c2cd37a4" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setLODJointMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a76c1e2ef776b647c7313c6373daa0ad5" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setLODMeshMapping</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a847d4e6701869a0eb3f528775e2bcf36" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setMaximumInfluencePerVertex</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2af79d245c8106f3d9d893033355826d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setMeshBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a1ede54dbf2feef53b1210297a74ecb3d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a3a04e9932ae29728b79d6fe38b86755f" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setMeshName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a03d2b0ecc0a5e01081e9a5fccec9ca65" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setMetaData</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a9af57f937e1d24de1b6fcad6f109e4e0" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setName</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a487bb27204d18dc9f120a3c18cd1539b" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setNeutralJointRotations</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af64d1d8956f3d0cd3165dae9df275c41" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setNeutralJointTranslations</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ae9c842c529475cd612097967b76bbbdc" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setPSDColumnIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a318c9585948a1b810d3c175adc612cd3" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setPSDCount</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8b9013b6c4f7fddc63bc3d540024366a" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setPSDRowIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ab0914f0c6d936da871ca3c494f78ae18" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setPSDValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a603d4b1155e298fc240c991c51a35057" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setRawControlName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a1756bb4c64fb48a95af1daea77c6b5a6" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setRotationUnit</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a1193d02012fe866e4a306205eaefe9ca" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setSkinWeightsJointIndices</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a6a7aeca2da8cd7829461a141690acc15" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setSkinWeightsValues</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac104f5869d0b01c92e8dcc7b6fcf7cc9" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setTranslationUnit</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a37c74ec30c140577de33907ee744f56d" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setVertexLayouts</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a57e513ac3e7dc63a8debb768174be323" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setVertexNormals</name></member>
+      <member refid="classdna_1_1GeometryWriter_1aebfee73d4e1219e3170e7f6b8960f03a" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setVertexPositions</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a29e35bef1a560c33e2e022d410d2cd7e" prot="public" virt="pure-virtual"><scope>dna::Writer</scope><name>setVertexTextureCoordinates</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adfc84089a2ef97576a91b061d839af46" prot="protected" virt="virtual"><scope>dna::Writer</scope><name>~BehaviorWriter</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ad68a8a51b3ae0bc1ac4103d49359a023" prot="protected" virt="virtual"><scope>dna::Writer</scope><name>~DefinitionWriter</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" virt="virtual"><scope>dna::Writer</scope><name>~DescriptorWriter</name></member>
+      <member refid="classdna_1_1GeometryWriter_1a5867e2af786f11103b0e694312f15334" prot="protected" virt="virtual"><scope>dna::Writer</scope><name>~GeometryWriter</name></member>
+      <member refid="classdna_1_1Writer_1a0d344c575be95fce166e56b61056e0fd" prot="public" virt="non-virtual"><scope>dna::Writer</scope><name>~Writer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

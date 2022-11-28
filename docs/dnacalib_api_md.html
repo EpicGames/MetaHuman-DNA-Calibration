@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API overview &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API overview</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dnacalib_api_md.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-overview">
+<h1>API overview<a class="headerlink" href="#api-overview" title="Permalink to this headline"></a></h1>
+<p>DNA modification is done through available commands. Each command implements the <code class="docutils literal notranslate"><span class="pre">run(DNACalibDNAReader*</span> <span class="pre">output)</span></code> method
+that modifies the DNA specified through its argument. To configure the modification that occurs in <code class="docutils literal notranslate"><span class="pre">run()</span></code>, parameters
+can be passed through constructor or specific setter methods.
+The following documentation is for C++. Currently, there is no Python documentation.</p>
+<p>List of all available commands:</p>
+<section id="commands-that-remove-certain-parts-of-dna">
+<h2>Commands that remove certain parts of DNA:<a class="headerlink" href="#commands-that-remove-certain-parts-of-dna" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointAnimationCommand.h"><code class="docutils literal notranslate"><span class="pre">RemoveJointAnimationCommand</span></code></a> Removes
+animation of joint with given index from the DNA.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h"><code class="docutils literal notranslate"><span class="pre">RemoveJointCommand</span></code></a> Removes joint with given
+index from the DNA.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RemoveMeshCommand.h"><code class="docutils literal notranslate"><span class="pre">RemoveMeshCommand</span></code></a> Removes mesh with given index
+from the DNA.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/ClearBlendShapesCommand.h"><code class="docutils literal notranslate"><span class="pre">ClearBlendShapesCommand</span></code></a> Clears all blend shape data
+from the DNA.</p></li>
+</ul>
+</section>
+<section id="commands-that-rename-certain-parts-of-dna">
+<h2>Commands that rename certain parts of DNA:<a class="headerlink" href="#commands-that-rename-certain-parts-of-dna" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RenameAnimatedMapCommand.h"><code class="docutils literal notranslate"><span class="pre">RenameAnimatedMapCommand</span></code></a> Renames animated
+map with given index or previous name.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RenameBlendShapeCommand.h"><code class="docutils literal notranslate"><span class="pre">RenameBlendShapeCommand</span></code></a> Renames blendshape
+with given index or previous name.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RenameJointCommand.h"><code class="docutils literal notranslate"><span class="pre">RenameJointCommand</span></code></a> Renames joint with given
+index or previous name.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RenameMeshCommand.h"><code class="docutils literal notranslate"><span class="pre">RenameMeshCommand</span></code></a> Renames mesh with given index
+or previous name.</p></li>
+</ul>
+</section>
+<section id="commands-that-transform-dna">
+<h2>Commands that transform DNA:<a class="headerlink" href="#commands-that-transform-dna" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/RotateCommand.h"><code class="docutils literal notranslate"><span class="pre">RotateCommand</span></code></a> Rotates neutral joints and vertex
+positions around given origin.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/ScaleCommand.h"><code class="docutils literal notranslate"><span class="pre">ScaleCommand</span></code></a> Scales neutral joints, vertex positions,
+and joint and blendshape deltas by a factor. For neutral joints and joint deltas, only translation attributes are scaled.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/TranslateCommand.h"><code class="docutils literal notranslate"><span class="pre">TranslateCommand</span></code></a> Translates neutral joints and
+vertex positions.</p></li>
+</ul>
+</section>
+<section id="commands-that-modify-blendshapes">
+<h2>Commands that modify blendshapes:<a class="headerlink" href="#commands-that-modify-blendshapes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/SetBlendShapeTargetDeltasCommand.h"><code class="docutils literal notranslate"><span class="pre">SetBlendShapeTargetDeltasCommand</span></code></a>
+Changes blendshape target deltas.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/PruneBlendShapeTargetsCommand.h"><code class="docutils literal notranslate"><span class="pre">PruneBlendShapeTargetsCommand</span></code></a>
+Prunes blendshape target deltas which are lower than or equal to the specified threshold.</p></li>
+</ul>
+</section>
+<section id="commands-that-change-bind-pose">
+<h2>Commands that change bind pose:<a class="headerlink" href="#commands-that-change-bind-pose" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/SetNeutralJointRotationsCommand.h"><code class="docutils literal notranslate"><span class="pre">SetNeutralJointRotationsCommand</span></code></a>
+Sets new rotation values to neutral joints.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/SetNeutralJointTranslationsCommand.h"><code class="docutils literal notranslate"><span class="pre">SetNeutralJointTranslationsCommand</span></code></a>
+Sets new translation values to neutral joints.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/SetVertexPositionsCommand.h"><code class="docutils literal notranslate"><span class="pre">SetVertexPositionsCommand</span></code></a> Changes
+vertex positions values.</p></li>
+</ul>
+</section>
+<section id="commands-that-perform-useful-calculations-or-provide-additional-functionality">
+<h2>Commands that perform useful calculations or provide additional functionality:<a class="headerlink" href="#commands-that-perform-useful-calculations-or-provide-additional-functionality" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/SetLODsCommand.h"><code class="docutils literal notranslate"><span class="pre">SetLODsCommand</span></code></a> Filters DNA so that it only contains
+data for specified LODs.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/CalculateMeshLowerLODsCommand.h"><code class="docutils literal notranslate"><span class="pre">CalculateMeshLowerLODsCommand</span></code></a>
+Recalculates vertex positions for lower LOD meshes of the specified mesh.</p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/CommandSequence.h"><code class="docutils literal notranslate"><span class="pre">CommandSequence</span></code></a> Runs a sequence of commands on
+the specified DNA.</p></li>
+</ul>
+<p>A more detailed description of each available command and its methods can be found in
+<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib/DNACalib/include/dnacalib/commands/"><code class="docutils literal notranslate"><span class="pre">DNACalib/include/dnacalib/commands</span></code></a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

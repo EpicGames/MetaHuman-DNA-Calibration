@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.reader package &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dna_viewer.ui package" href="dna_viewer.ui.html" />
+    <link rel="prev" title="dna_viewer.model package" href="dna_viewer.model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dna_viewer</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dna_viewer.html">dna_viewer package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dna_viewer.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html">dna_viewer.builder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html">dna_viewer.config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html">dna_viewer.const package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html">dna_viewer.model package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">dna_viewer.reader package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html">dna_viewer.ui package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html">dna_viewer.util package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer.version">dna_viewer.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.html#module-dna_viewer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">dna_viewer</a> &raquo;</li>
+          <li><a href="dna_viewer.html">dna_viewer package</a> &raquo;</li>
+      <li>dna_viewer.reader package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer.reader.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dna-viewer-reader-package">
+<h1>dna_viewer.reader package<a class="headerlink" href="#dna-viewer-reader-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-dna_viewer.reader.behavior">
+<span id="dna-viewer-reader-behavior-module"></span><h2>dna_viewer.reader.behavior module<a class="headerlink" href="#module-dna_viewer.reader.behavior" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.behavior.</span></span><span class="sig-name descname"><span class="pre">Behavior</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna.BinaryStreamReader</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used for reading the behavior part of the DNA file</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BinaryStreamReader</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The stream reader being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">behavior</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BehaviorModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">behavior</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The object that holds the behavior data read from the DNA file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.add_animated_maps">
+<span class="sig-name descname"><span class="pre">add_animated_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.add_animated_maps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.add_animated_maps" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the animated maps part of the behavior</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.add_blend_shapes">
+<span class="sig-name descname"><span class="pre">add_blend_shapes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.add_blend_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.add_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the blend shapes part of the behavior</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.add_gui_to_raw">
+<span class="sig-name descname"><span class="pre">add_gui_to_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.add_gui_to_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.add_gui_to_raw" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the gui to raw mapping</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.add_joints">
+<span class="sig-name descname"><span class="pre">add_joints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.add_joints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.add_joints" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the joints part of the behavior</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.add_psd">
+<span class="sig-name descname"><span class="pre">add_psd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.add_psd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.add_psd" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the PSD part of the behavior</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.behavior.Behavior.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.behavior.Behavior" title="dna_viewer.model.behavior.Behavior"><span class="pre">dna_viewer.model.behavior.Behavior</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/behavior.html#Behavior.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.behavior.Behavior.read" title="Permalink to this definition"></a></dt>
+<dd><p>Starts reading in the behavior part of the DNA</p>
+<p>&#64;rtype: BehaviorModel
+&#64;returns: the instance of the created behavior model</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.reader.definition">
+<span id="dna-viewer-reader-definition-module"></span><h2>dna_viewer.reader.definition module<a class="headerlink" href="#module-dna_viewer.reader.definition" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.definition.</span></span><span class="sig-name descname"><span class="pre">Definition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna.BinaryStreamReader</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used for reading the definition part of the DNA file</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BinaryStreamReader</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The stream reader being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">definition</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>DefinitionModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">definition</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The object that holds the definition data read from the DNA file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_animated_maps">
+<span class="sig-name descname"><span class="pre">add_animated_maps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_animated_maps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_animated_maps" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the animated maps of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_blend_shape_channels">
+<span class="sig-name descname"><span class="pre">add_blend_shape_channels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_blend_shape_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_blend_shape_channels" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the neutral joints part of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_controls">
+<span class="sig-name descname"><span class="pre">add_controls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_controls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_controls" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the gui and raw controls of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_joints">
+<span class="sig-name descname"><span class="pre">add_joints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_joints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_joints" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the joints of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_mesh_blend_shape_channel_mapping">
+<span class="sig-name descname"><span class="pre">add_mesh_blend_shape_channel_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_mesh_blend_shape_channel_mapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_mesh_blend_shape_channel_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the mesh blend shape channel mapping</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_meshes">
+<span class="sig-name descname"><span class="pre">add_meshes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_meshes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_meshes" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the meshes of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.add_neutral_joints">
+<span class="sig-name descname"><span class="pre">add_neutral_joints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.add_neutral_joints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.add_neutral_joints" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the neutral joints part of the definition</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.definition.Definition.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.definition.Definition" title="dna_viewer.model.definition.Definition"><span class="pre">dna_viewer.model.definition.Definition</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/definition.html#Definition.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.definition.Definition.read" title="Permalink to this definition"></a></dt>
+<dd><p>Starts reading in the definition part of the DNA</p>
+<p>&#64;rtype: DefinitionModel
+&#64;returns: the instance of the created definition model</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.reader.descriptor">
+<span id="dna-viewer-reader-descriptor-module"></span><h2>dna_viewer.reader.descriptor module<a class="headerlink" href="#module-dna_viewer.reader.descriptor" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.descriptor.</span></span><span class="sig-name descname"><span class="pre">Descriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna.BinaryStreamReader</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used for reading the descriptor part of the DNA file</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BinaryStreamReader</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The stream reader being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">descriptor</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>DescriptorModel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">descriptor</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The object that holds the descriptor data read from the DNA file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor.add_basic_data">
+<span class="sig-name descname"><span class="pre">add_basic_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor.add_basic_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor.add_basic_data" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the character name, archetype, gender and age</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor.add_db_data">
+<span class="sig-name descname"><span class="pre">add_db_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor.add_db_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor.add_db_data" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the db data from the DNA file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor.add_geometry_data">
+<span class="sig-name descname"><span class="pre">add_geometry_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor.add_geometry_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor.add_geometry_data" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the translation unit, rotation unit, and coordinate system from the DNA file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor.add_metadata">
+<span class="sig-name descname"><span class="pre">add_metadata</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor.add_metadata"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor.add_metadata" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the metadata provided from the DNA file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.descriptor.Descriptor.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.descriptor.Descriptor" title="dna_viewer.model.descriptor.Descriptor"><span class="pre">dna_viewer.model.descriptor.Descriptor</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/descriptor.html#Descriptor.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.descriptor.Descriptor.read" title="Permalink to this definition"></a></dt>
+<dd><p>Starts reading in the descriptor part of the DNA</p>
+<p>&#64;rtype: DescriptorModel
+&#64;returns: the instance of the created descriptor model</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.reader.dna">
+<span id="dna-viewer-reader-dna-module"></span><h2>dna_viewer.reader.dna module<a class="headerlink" href="#module-dna_viewer.reader.dna" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.dna.</span></span><span class="sig-name descname"><span class="pre">DNA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used to represent the character config</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.load_dna">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_dna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.load_dna"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.load_dna" title="Permalink to this definition"></a></dt>
+<dd><p>Loads in the DNA from the given file path</p>
+<p>&#64;type dna: DNAModel
+&#64;param dna: The DNA data</p>
+<p>&#64;rtype: DNA
+&#64;returns: An object representing the DNA data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.load_mesh">
+<span class="sig-name descname"><span class="pre">load_mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.geometry.Mesh" title="dna_viewer.model.geometry.Mesh"><span class="pre">dna_viewer.model.geometry.Mesh</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.load_mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.load_mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Loads geometry data for a single mesh at the given index</p>
+<p>&#64;type mesh_index: int
+&#64;param mesh_index: mesh index</p>
+<p>&#64;rtype: Mesh
+&#64;returns: mesh data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.load_meshes">
+<span class="sig-name descname"><span class="pre">load_meshes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.load_meshes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.load_meshes" title="Permalink to this definition"></a></dt>
+<dd><p>Loads all the mesh data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the base DNA data as well as the meshes</p>
+<p>&#64;rtype: DNAModel
+&#64;returns: The DNA data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read_base">
+<span class="sig-name descname"><span class="pre">read_base</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read_base" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the base DNA data without the mesh data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read_behavior">
+<span class="sig-name descname"><span class="pre">read_behavior</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.behavior.Behavior" title="dna_viewer.model.behavior.Behavior"><span class="pre">dna_viewer.model.behavior.Behavior</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read_behavior"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read_behavior" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the descriptor part of the DNA</p>
+<p>&#64;rtype: DescriptorModel
+&#64;returns: Descriptor data from the DNA</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read_definition">
+<span class="sig-name descname"><span class="pre">read_definition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.definition.Definition" title="dna_viewer.model.definition.Definition"><span class="pre">dna_viewer.model.definition.Definition</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read_definition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read_definition" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the definition part of the DNA</p>
+<p>&#64;rtype: DefinitionModel
+&#64;returns: Definition data from the DNA</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read_descriptor">
+<span class="sig-name descname"><span class="pre">read_descriptor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.descriptor.Descriptor" title="dna_viewer.model.descriptor.Descriptor"><span class="pre">dna_viewer.model.descriptor.Descriptor</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read_descriptor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read_descriptor" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the descriptor part of the DNA</p>
+<p>&#64;rtype: DescriptorModel
+&#64;returns: Descriptor data from the DNA</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.DNA.read_geometry_for_mesh_index">
+<span class="sig-name descname"><span class="pre">read_geometry_for_mesh_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.geometry.Mesh" title="dna_viewer.model.geometry.Mesh"><span class="pre">dna_viewer.model.geometry.Mesh</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#DNA.read_geometry_for_mesh_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.DNA.read_geometry_for_mesh_index" title="Permalink to this definition"></a></dt>
+<dd><p>Reads the geometry for a given mesh index</p>
+<p>&#64;type mesh_index: int
+&#64;param mesh_index: mesh index</p>
+<p>&#64;rtype: Mesh
+&#64;returns: Mesh data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.reader.dna.load_dna">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.dna.</span></span><span class="sig-name descname"><span class="pre">load_dna</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.dna.DNA" title="dna_viewer.model.dna.DNA"><span class="pre">dna_viewer.model.dna.DNA</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/dna.html#load_dna"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.dna.load_dna" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-dna_viewer.reader.geometry">
+<span id="dna-viewer-reader-geometry-module"></span><h2>dna_viewer.reader.geometry module<a class="headerlink" href="#module-dna_viewer.reader.geometry" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.reader.geometry.</span></span><span class="sig-name descname"><span class="pre">Geometry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream_reader</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dna.BinaryStreamReader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used for reading the geometry part of the DNA file</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>BinaryStreamReader</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">reader</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The stream reader being used</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.builder.html#dna_viewer.builder.mesh.Mesh" title="dna_viewer.builder.mesh.Mesh">Mesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The mesh model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The mesh index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_face_vertex_layouts">
+<span class="sig-name descname"><span class="pre">add_face_vertex_layouts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_face_vertex_layouts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_face_vertex_layouts" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the face vertex layouts</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_layouts">
+<span class="sig-name descname"><span class="pre">add_layouts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_layouts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_layouts" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the vertex layouts</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_mesh_name">
+<span class="sig-name descname"><span class="pre">add_mesh_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_mesh_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_mesh_name" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the mesh name</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_normals">
+<span class="sig-name descname"><span class="pre">add_normals</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_normals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_normals" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the normals</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_positions">
+<span class="sig-name descname"><span class="pre">add_positions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_positions" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the vertex positions</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_skin_weights">
+<span class="sig-name descname"><span class="pre">add_skin_weights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_skin_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_skin_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the skin weights</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_texture_coordinates">
+<span class="sig-name descname"><span class="pre">add_texture_coordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_texture_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_texture_coordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the texture coordinates</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.add_topology">
+<span class="sig-name descname"><span class="pre">add_topology</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.add_topology"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.add_topology" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the positions, texture coordinates, normals, layouts and face vertex layouts</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.geometry.Mesh" title="dna_viewer.model.geometry.Mesh"><span class="pre">dna_viewer.model.geometry.Mesh</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.read" title="Permalink to this definition"></a></dt>
+<dd><p>Starts reading in the mesh from the geometry part of the DNA</p>
+<p>&#64;rtype: Mesh
+&#64;returns: The instance of the mesh model</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.read_blend_shapes">
+<span class="sig-name descname"><span class="pre">read_blend_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.geometry.Mesh" title="dna_viewer.model.geometry.Mesh"><span class="pre">dna_viewer.model.geometry.Mesh</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.read_blend_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.read_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the blend shapes</p>
+<p>&#64;type mesh: Mesh
+&#64;param mesh: The mesh model</p>
+<p>&#64;type mesh_index: int
+&#64;param mesh_index: The mesh index</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.reader.geometry.Geometry.read_target_deltas">
+<span class="sig-name descname"><span class="pre">read_target_deltas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blend_shape_target_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="dna_viewer.model.html#dna_viewer.model.geometry.Point3" title="dna_viewer.model.geometry.Point3"><span class="pre">dna_viewer.model.geometry.Point3</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/reader/geometry.html#Geometry.read_target_deltas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.reader.geometry.Geometry.read_target_deltas" title="Permalink to this definition"></a></dt>
+<dd><p>Reads in the target deltas</p>
+<p>&#64;rtype: Dict[int, Point3]
+&#64;returns: Mapping of vertex indices to positions</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.reader">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-dna_viewer.reader" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer.model.html" class="btn btn-neutral float-left" title="dna_viewer.model package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna_viewer.ui.html" class="btn btn-neutral float-right" title="dna_viewer.ui package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

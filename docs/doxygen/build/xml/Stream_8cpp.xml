@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Stream_8cpp" kind="file" language="C++">
+    <compoundname>Stream.cpp</compoundname>
+    <includes refid="Stream_8h" local="yes">trio/Stream.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>pma/Defs.h</label>
+        <link refid="pma_2Defs_8h"/>
+      </node>
+      <node id="8">
+        <label>pma/MemoryResource.h</label>
+        <link refid="MemoryResource_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>pma/ScopedPtr.h</label>
+        <link refid="ScopedPtr_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>status/Defs.h</label>
+        <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="12">
+        <label>status/Status.h</label>
+        <link refid="Status_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>status/StatusCode.h</label>
+        <link refid="StatusCode_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>trio/Concepts.h</label>
+        <link refid="Concepts_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>trio/Defs.h</label>
+        <link refid="trio_2Defs_8h"/>
+      </node>
+      <node id="2">
+        <label>trio/Stream.h</label>
+        <link refid="Stream_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>trio/types/Aliases.h</label>
+        <link refid="trio_2types_2Aliases_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>trio/types/Parameters.h</label>
+        <link refid="Parameters_8h"/>
+      </node>
+      <node id="1">
+        <label>Stream.cpp</label>
+        <link refid="Stream_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>cstddef</label>
+      </node>
+      <node id="6">
+        <label>cstdint</label>
+      </node>
+      <node id="11">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetrio">trio</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Stream_8h" kindref="compound">trio/Stream.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetrio" kindref="compound">trio</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref><sp/><ref refid="classtrio_1_1BoundedIOStream_1a0298a701e6508d21a06a7a12beea4ba2" kindref="member">BoundedIOStream::OpenError</ref>{100,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>opening<sp/>file&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref><sp/><ref refid="classtrio_1_1BoundedIOStream_1a5bca141b1213e5f752a4fde5679708bd" kindref="member">BoundedIOStream::ReadError</ref>{101,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>reading<sp/>file&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref><sp/><ref refid="classtrio_1_1BoundedIOStream_1adaa88ae7c4bbeda319710963adc81ce8" kindref="member">BoundedIOStream::WriteError</ref>{102,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>writing<sp/>file&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref><sp/><ref refid="classtrio_1_1BoundedIOStream_1a20f4c9068fa8d05f6f6135c367fe4d24" kindref="member">BoundedIOStream::AlreadyOpenError</ref>{103,<sp/></highlight><highlight class="stringliteral">&quot;File<sp/>already<sp/>open&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structsc_1_1StatusCode" kindref="compound">sc::StatusCode</ref><sp/><ref refid="classtrio_1_1BoundedIOStream_1afbe507ff2b39fc2ccb8550dfc27e0ce9" kindref="member">BoundedIOStream::SeekError</ref>{104,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>seeking<sp/>file&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="classtrio_1_1BoundedIOStream_1a68637af962300a39b1048d53d50d1f7c" kindref="member">BoundedIOStream::~BoundedIOStream</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>trio</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/trio/Stream.cpp"/>
+  </compounddef>
+</doxygen>

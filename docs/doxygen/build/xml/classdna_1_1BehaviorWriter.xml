@@ -1,0 +1,1560 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdna_1_1BehaviorWriter" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>dna::BehaviorWriter</compoundname>
+    <basecompoundref refid="classdna_1_1DefinitionWriter" prot="public" virt="virtual">dna::DefinitionWriter</basecompoundref>
+    <derivedcompoundref refid="classdna_1_1Writer" prot="public" virt="non-virtual">dna::Writer</derivedcompoundref>
+    <includes refid="BehaviorWriter_8h" local="no">BehaviorWriter.h</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1adfc84089a2ef97576a91b061d839af46" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>dna::BehaviorWriter::~BehaviorWriter</definition>
+        <argsstring>()</argsstring>
+        <name>~BehaviorWriter</name>
+        <qualifiedname>dna::BehaviorWriter::~BehaviorWriter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="21" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a220225a3400609ea6ad701d82231fcd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawInputIndices</definition>
+        <argsstring>(const std::uint16_t *inputIndices, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawInputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab3f03060b54e4615e0a1997e7efd2bd6">setGUIToRawInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ab3f03060b54e4615e0a1997e7efd2bd6">setGUIToRawInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad2d3f0a4e59159122d4d458e76634896">setGUIToRawInputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>inputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Input indices used for mapping gui to raw controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the input indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of input indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="32" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a8ff614803260b787dedf6c24f13d5d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawOutputIndices</definition>
+        <argsstring>(const std::uint16_t *outputIndices, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawOutputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af1f3234ff4a191a1a9eb58f1ae4309f8">setGUIToRawOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1af1f3234ff4a191a1a9eb58f1ae4309f8">setGUIToRawOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1afbb540a52bfd67c2ba0c4c10f8d29e57">setGUIToRawOutputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>outputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Output indices used for mapping gui to raw controls. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the output indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of output indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="41" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ac2c53991d953244d8d8d9cfef3814537" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawFromValues</definition>
+        <argsstring>(const float *fromValues, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawFromValues</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawFromValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad2c37dc179969e08c0ad925dda9b9c52">setGUIToRawFromValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad2c37dc179969e08c0ad925dda9b9c52">setGUIToRawFromValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1af8d6f6a4b37c0b2ae6711ce177d6e745">setGUIToRawFromValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>fromValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fromValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the filter values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of filter values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="51" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a834af50cb5c8f1567ab474bb4dce9131" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawToValues</definition>
+        <argsstring>(const float *toValues, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawToValues</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawToValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad0f242b6011dd426f87ba947f10c544a">setGUIToRawToValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad0f242b6011dd426f87ba947f10c544a">setGUIToRawToValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1abab4fe8ac5dcf3ef94352e8dc4a1f6bd">setGUIToRawToValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>toValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the filter values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of filter values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="61" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a5b6f8d09f7e14f2d4aca12b03247fa55" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawSlopeValues</definition>
+        <argsstring>(const float *slopeValues, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawSlopeValues</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawSlopeValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a87013493c4f76324ec715f2d34b29465">setGUIToRawSlopeValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a87013493c4f76324ec715f2d34b29465">setGUIToRawSlopeValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad66f1526d1b83e2a0202b5cba006d8a8">setGUIToRawSlopeValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>slopeValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Computational values(slope/gradient) used for calculating the output value during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slopeValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the computational values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of computational values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="71" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1adba15d24dd5998ea0bb9e16c8043f078" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setGUIToRawCutValues</definition>
+        <argsstring>(const float *cutValues, std::uint16_t count)=0</argsstring>
+        <name>setGUIToRawCutValues</name>
+        <qualifiedname>dna::BehaviorWriter::setGUIToRawCutValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0a551c41baf6c917b6c0b7aa23afa7a5">setGUIToRawCutValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a0a551c41baf6c917b6c0b7aa23afa7a5">setGUIToRawCutValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a6f172cc5e7d9303e82e391be2e3ee02f">setGUIToRawCutValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>cutValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Computational values(vertical intercept) used for calculating the output value during gui to raw control mapping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cutValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the computational values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of computational values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="81" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a318c9585948a1b810d3c175adc612cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setPSDCount</definition>
+        <argsstring>(std::uint16_t count)=0</argsstring>
+        <name>setPSDCount</name>
+        <qualifiedname>dna::BehaviorWriter::setPSDCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a3a1f35f87c2e9b802d840bc13fe207aa">setPSDCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a3a1f35f87c2e9b802d840bc13fe207aa">setPSDCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a3fcafeb3115598b40f42c602f33901b6">setPSDCount</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>The number of distinct PSD expressions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="85" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a8b9013b6c4f7fddc63bc3d540024366a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setPSDRowIndices</definition>
+        <argsstring>(const std::uint16_t *rowIndices, std::uint16_t count)=0</argsstring>
+        <name>setPSDRowIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setPSDRowIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aeab7f025d8bba43b52ab14e54c8422d4">setPSDRowIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aeab7f025d8bba43b52ab14e54c8422d4">setPSDRowIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a92808a0b8cb585c841b5c503714d073c">setPSDRowIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>rowIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>PSD(input) indices which will become the rows of the PSD matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rowIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the PSD indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of PSD indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="94" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ae9c842c529475cd612097967b76bbbdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setPSDColumnIndices</definition>
+        <argsstring>(const std::uint16_t *columnIndices, std::uint16_t count)=0</argsstring>
+        <name>setPSDColumnIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setPSDColumnIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa5b82e131eea5d1f2355ef1bde7df4c6">setPSDColumnIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa5b82e131eea5d1f2355ef1bde7df4c6">setPSDColumnIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1acf946da1bac864c1928504d3017f17db">setPSDColumnIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>columnIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Control(input) indices which will become the columns of the PSD matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>columnIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the control indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of control indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="103" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ab0914f0c6d936da871ca3c494f78ae18" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setPSDValues</definition>
+        <argsstring>(const float *weights, std::uint16_t count)=0</argsstring>
+        <name>setPSDValues</name>
+        <qualifiedname>dna::BehaviorWriter::setPSDValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad436ac16fcbf05db35d318c6b125cc3c">setPSDValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad436ac16fcbf05db35d318c6b125cc3c">setPSDValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1adfa3a030d725599b59d23d2c52077b2e">setPSDValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>weights</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Weights associated with each PSD row and column pair. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weights</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the weight values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of weight values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Controls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="112" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a28cb22e4690d1921c71775c939652c80" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointRowCount</definition>
+        <argsstring>(std::uint16_t rowCount)=0</argsstring>
+        <name>setJointRowCount</name>
+        <qualifiedname>dna::BehaviorWriter::setJointRowCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a13fd5181306b3816da4e044b08f629e0">setJointRowCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a13fd5181306b3816da4e044b08f629e0">setJointRowCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad4d3a1363add94e7741f6d47c0079dec">setJointRowCount</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>rowCount</declname>
+        </param>
+        <briefdescription>
+<para>Number of rows in the entire, uncompressed joint matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="117" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ae20b30d9f64ce34affae4c8bb8efa445" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointColumnCount</definition>
+        <argsstring>(std::uint16_t columnCount)=0</argsstring>
+        <name>setJointColumnCount</name>
+        <qualifiedname>dna::BehaviorWriter::setJointColumnCount</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad5388fae75fcec3fb0854faa58475a8f">setJointColumnCount</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ad5388fae75fcec3fb0854faa58475a8f">setJointColumnCount</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ab20d9b0c024e3663c842568901d15575">setJointColumnCount</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>columnCount</declname>
+        </param>
+        <briefdescription>
+<para>Number of columns in the entire, uncompressed joint matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="122" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a6b9475d1a888a5e7b61c5a64eb40f2ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::clearJointGroups</definition>
+        <argsstring>()=0</argsstring>
+        <name>clearJointGroups</name>
+        <qualifiedname>dna::BehaviorWriter::clearJointGroups</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1b00a9e291db9c5610fd5e4dd5ec1d6c">clearJointGroups</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1b00a9e291db9c5610fd5e4dd5ec1d6c">clearJointGroups</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a9f112320f9f6109ec0dd90dc86e8e671">clearJointGroups</reimplementedby>
+        <briefdescription>
+<para>Delete all joint groups. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="126" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ada7f206c218b1e65bd2331b584322413" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::deleteJointGroup</definition>
+        <argsstring>(std::uint16_t jointGroupIndex)=0</argsstring>
+        <name>deleteJointGroup</name>
+        <qualifiedname>dna::BehaviorWriter::deleteJointGroup</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa4b4ba2638ab85a8d48dc8cfb4ef10cd">deleteJointGroup</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa4b4ba2638ab85a8d48dc8cfb4ef10cd">deleteJointGroup</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a8f88666c5e322a50c4a2da5fd895e6ac">deleteJointGroup</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <briefdescription>
+<para>Delete the specified joint group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>jointGroupIndex must be less than the value returned by getJointGroupCount. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="134" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a0574869602e12d5d02c1140b51d8e96e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointGroupLODs</definition>
+        <argsstring>(std::uint16_t jointGroupIndex, const std::uint16_t *lods, std::uint16_t count)=0</argsstring>
+        <name>setJointGroupLODs</name>
+        <qualifiedname>dna::BehaviorWriter::setJointGroupLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aacdb5d64806e563d14ab29c6a7c6b225">setJointGroupLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aacdb5d64806e563d14ab29c6a7c6b225">setJointGroupLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a16dcb872282fade83002ba9a41c30b13">setJointGroupLODs</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>lods</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Number of rows per each level of detail for the specified joint group. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself, while the value denotes the number of rows within the joint group belonging to that level. e.g.: [12, 9, 3] | | + LOD-2 contains first 3 rows | + LOD-1 contains first 9 rows<itemizedlist>
+<listitem><para>LOD-0 contains first 12 rows </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the lod bounds are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of lod bounds to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="155" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1aa8d6031abc7c0b7a262054c7589719e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointGroupInputIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex, const std::uint16_t *inputIndices, std::uint16_t count)=0</argsstring>
+        <name>setJointGroupInputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setJointGroupInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a74e166e7a3d610e9afd008c35998a849">setJointGroupInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a74e166e7a3d610e9afd008c35998a849">setJointGroupInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a25f57093350190d00c76f0bc4de3106c">setJointGroupInputIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>inputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Column indices that the specified joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The column indices point into the entire, uncompressed joint matrix. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the column indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of column indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="171" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a1587c7656d8010eae73723f5ebcc8df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointGroupOutputIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex, const std::uint16_t *outputIndices, std::uint16_t count)=0</argsstring>
+        <name>setJointGroupOutputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setJointGroupOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a41cfaababcbd9f8330d4da2ced776e98">setJointGroupOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a41cfaababcbd9f8330d4da2ced776e98">setJointGroupOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1afe41cdd7f4cbfccc353bff1f61fb56a6">setJointGroupOutputIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>outputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Row indices that the specified joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The row indices point into the entire, uncompressed joint matrix. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the row indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of row indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="189" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a9cd33855b41cf50fa38b40dd871f7b9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointGroupValues</definition>
+        <argsstring>(std::uint16_t jointGroupIndex, const float *values, std::uint32_t count)=0</argsstring>
+        <name>setJointGroupValues</name>
+        <qualifiedname>dna::BehaviorWriter::setJointGroupValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a01f3ae4c20b812fb8958a0211c82c7f0">setJointGroupValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a01f3ae4c20b812fb8958a0211c82c7f0">setJointGroupValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a78bd0ab6be87569c02700a3183eb54c5">setJointGroupValues</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>std::uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Values that the specified joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="205" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1abc4bde60580a3f969b2c31694c5db4a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setJointGroupJointIndices</definition>
+        <argsstring>(std::uint16_t jointGroupIndex, const std::uint16_t *jointIndices, std::uint16_t count)=0</argsstring>
+        <name>setJointGroupJointIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setJointGroupJointIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa140ca06400ad5396850fe53f2d060b6">setJointGroupJointIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aa140ca06400ad5396850fe53f2d060b6">setJointGroupJointIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ad792d87c667532b8d33c244b0fc5c8ec">setJointGroupJointIndices</reimplementedby>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>jointGroupIndex</declname>
+        </param>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>jointIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Joint indices that the specified joint group contains. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointGroupIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A joint group&apos;s position in the zero-indexed array of joint groups. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the joint indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of joint indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>Joints </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="219" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a9eac4730bc5b2d683f81be7d7abf942a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setBlendShapeChannelLODs</definition>
+        <argsstring>(const std::uint16_t *lods, std::uint16_t count)=0</argsstring>
+        <name>setBlendShapeChannelLODs</name>
+        <qualifiedname>dna::BehaviorWriter::setBlendShapeChannelLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a658b13c6674543a65748b4291829dd5a">setBlendShapeChannelLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a658b13c6674543a65748b4291829dd5a">setBlendShapeChannelLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ac88c8790c855dc25fb94f6a455822377">setBlendShapeChannelLODs</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>lods</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Input index count per each level of detail for blend shapes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of input indices belonging to that level. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the lod bounds are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of lod bounds to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The LOD values set here are not interchangeable with the LOD indices set in DefinitionWriter::setBlendShapeNameIndices and DefinitionWriter::setLODBlendShapeMapping </para>
+</simplesect>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="236" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a1298ec717057270d5e29a4ce27352345" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setBlendShapeChannelInputIndices</definition>
+        <argsstring>(const std::uint16_t *inputIndices, std::uint16_t count)=0</argsstring>
+        <name>setBlendShapeChannelInputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setBlendShapeChannelInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2e33aefd192491c2aaa4cba6f52aae28">setBlendShapeChannelInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a2e33aefd192491c2aaa4cba6f52aae28">setBlendShapeChannelInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ace0a92e54114279c2ff4773c82a56464">setBlendShapeChannelInputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>inputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Input indices used to index into the input vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the input indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of input indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="245" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ac10d5d4766d112140ba61be45bae15c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setBlendShapeChannelOutputIndices</definition>
+        <argsstring>(const std::uint16_t *outputIndices, std::uint16_t count)=0</argsstring>
+        <name>setBlendShapeChannelOutputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setBlendShapeChannelOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ae6c9c911ec4c33fe65329639009c3a01">setBlendShapeChannelOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1ae6c9c911ec4c33fe65329639009c3a01">setBlendShapeChannelOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1ac355df4a760193e2383d35deecef370a">setBlendShapeChannelOutputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>outputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Output indices specify the positions of blend shape output values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the output indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of output indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>BlendShapes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="254" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a8794fb60023c7135a8e64df33f760ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapLODs</definition>
+        <argsstring>(const std::uint16_t *lods, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapLODs</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapLODs</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aeafc20fe333a55170a7a9d1a77b23221">setAnimatedMapLODs</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aeafc20fe333a55170a7a9d1a77b23221">setAnimatedMapLODs</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a4425664e65a7e95e3c281892e89242a3">setAnimatedMapLODs</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>lods</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Row count per each level of detail for animated maps. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Each element&apos;s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of rows (within the conditional table), belonging to that level. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lods</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the lod bounds are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of lod bounds to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="267" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a76a88fe1ca13c58e88729846c68668c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapInputIndices</definition>
+        <argsstring>(const std::uint16_t *inputIndices, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapInputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapInputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a69636f0b83e9b6897531ddae33f2edf1">setAnimatedMapInputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a69636f0b83e9b6897531ddae33f2edf1">setAnimatedMapInputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1aa06b617201cbf9b47eeac5dceb1374c8">setAnimatedMapInputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>inputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Input indices used to index into the array of input values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the input indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of input indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="276" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1ac1300d462f548d4f1711b2d6c4553b99" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapOutputIndices</definition>
+        <argsstring>(const std::uint16_t *outputIndices, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapOutputIndices</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapOutputIndices</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aea63588718a47c13634d17dde99d43f8">setAnimatedMapOutputIndices</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1aea63588718a47c13634d17dde99d43f8">setAnimatedMapOutputIndices</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a983d003cffafa9cb4f3fa7e317e91648">setAnimatedMapOutputIndices</reimplementedby>
+        <param>
+          <type>const std::uint16_t *</type>
+          <declname>outputIndices</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Output indices that specify the computed output value&apos;s position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outputIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the output indices are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of output indices to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="285" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1adcc2982bd1e9a7b014904f55382ea7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapFromValues</definition>
+        <argsstring>(const float *fromValues, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapFromValues</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapFromValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a989c660ba876f636cf34faaf54f15ab7">setAnimatedMapFromValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a989c660ba876f636cf34faaf54f15ab7">setAnimatedMapFromValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1acc2b7d7416492dd5fcbc91411a22ff7b">setAnimatedMapFromValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>fromValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fromValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the filter values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of filter values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="295" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a4e360d3d0c2a1fe5f5fa500b879e8b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapToValues</definition>
+        <argsstring>(const float *toValues, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapToValues</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapToValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1adbebe805cce1b624ad0bc474439121">setAnimatedMapToValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a1adbebe805cce1b624ad0bc474439121">setAnimatedMapToValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a26d8394c3357a0b052f63eb3bcfa31d7">setAnimatedMapToValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>toValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>toValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the filter values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of filter values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="305" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a85b0b644ee45dbc4ef4ccc3299c4d43b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapSlopeValues</definition>
+        <argsstring>(const float *slopeValues, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapSlopeValues</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapSlopeValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a512ef366e97773a01f061ca87d689bce">setAnimatedMapSlopeValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a512ef366e97773a01f061ca87d689bce">setAnimatedMapSlopeValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1a636c87083123df470dca9a4e1c8dfb7b">setAnimatedMapSlopeValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>slopeValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Computational values(slope/gradient) used for calculating the output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>slopeValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the computational values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of computational values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="314" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classdna_1_1BehaviorWriter_1a1b66c9c33eddeb21eae0ad734cecc343" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void dna::BehaviorWriter::setAnimatedMapCutValues</definition>
+        <argsstring>(const float *cutValues, std::uint16_t count)=0</argsstring>
+        <name>setAnimatedMapCutValues</name>
+        <qualifiedname>dna::BehaviorWriter::setAnimatedMapCutValues</qualifiedname>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7a699d703df166a758d6ff98b278aabb">setAnimatedMapCutValues</reimplementedby>
+        <reimplementedby refid="classdna_1_1WriterImpl_1a7a699d703df166a758d6ff98b278aabb">setAnimatedMapCutValues</reimplementedby>
+        <reimplementedby refid="classdnac_1_1WriterImpl_1af43e61097317cb9630f25486dc548138">setAnimatedMapCutValues</reimplementedby>
+        <param>
+          <type>const float *</type>
+          <declname>cutValues</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Computational values(vertical intercept) used for calculating the output value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cutValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The source address from which the computational values are to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of computational values to copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>AnimatedMaps </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="323" column="22"/>
+        <referencedby refid="namespacedna_1af9aee0c3b362245afd07c38b8b421fff" compoundref="Writer_8cpp" startline="200" endline="294">dna::copyBehavior</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Write-only accessors for <ref refid="structdna_1_1DNA" kindref="compound">DNA</ref> attributes that define the rig&apos;s evaluation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Implementors should inherit from <ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> itself and not this class. </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="classdna_1_1Writer" kindref="compound">Writer</ref> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="9">
+        <label>dna::WriterImpl&lt; BinaryStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>dna::WriterImpl&lt; JSONStreamWriter &gt;</label>
+        <link refid="classdna_1_1WriterImpl"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::WriterImpl&lt; dna::Writer &gt;</label>
+        <link refid="classdnac_1_1WriterImpl"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>dna::BinaryStreamWriter</label>
+        <link refid="classdna_1_1BinaryStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>dna::BinaryStreamWriterImpl</label>
+        <link refid="classdna_1_1BinaryStreamWriterImpl"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+      <node id="11">
+        <label>dna::JSONStreamWriter</label>
+        <link refid="classdna_1_1JSONStreamWriter"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>dna::JSONStreamWriterImpl</label>
+        <link refid="classdna_1_1JSONStreamWriterImpl"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dna::StreamWriter</label>
+        <link refid="classdna_1_1StreamWriter"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dna::Writer</label>
+        <link refid="classdna_1_1Writer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::DNACalibDNAReaderImpl</label>
+        <link refid="classdnac_1_1DNACalibDNAReaderImpl"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>dna::BehaviorWriter</label>
+        <link refid="classdna_1_1BehaviorWriter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dna::DefinitionWriter</label>
+        <link refid="classdna_1_1DefinitionWriter"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dna::DescriptorWriter</label>
+        <link refid="classdna_1_1DescriptorWriter"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" line="19" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/include/dna/layers/BehaviorWriter.h" bodystart="19" bodyend="324"/>
+    <listofallmembers>
+      <member refid="classdna_1_1DefinitionWriter_1a833ddf3aa21ae018e73923a9c17e8f6c" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1afab13f64abd3b2600cbb33f513c6e4bb" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearAnimatedMapNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a7ccdfa0345f7789514a8dbb77fd9d6bf" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa69021d1daa96e5dc6c664a4a4d5b6f1" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearBlendShapeChannelNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a51ec75c1d95e3f6b11e76a63bff7830a" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearGUIControlNames</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a6b9475d1a888a5e7b61c5a64eb40f2ae" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearJointGroups</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af5678ae2507289472d3bf7db42cf5737" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a623e9d447ff61291f0c4eebb2a52161d" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearJointNames</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae88b611a59fdfadfef3fef6316bf7e0f" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearLODAnimatedMapMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2fa5d2b6c9fb5725cc0bba2ea7c5b1ab" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearLODBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ada594e28662c8743180659e88666de30" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearLODJointMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a4e8476c54bee8764db7e22f2d813c5e0" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearLODMeshMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a0df6e5029b789fd4a14208d1416cd246" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearMeshBlendShapeChannelMappings</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aa4875b5153d765696a6693add5dd0c46" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a12aa23a21232da2ffaa51e4dc6748bb8" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearMeshNames</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ace23be7b6e8b6104f472ca3f1d4b2235" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearMetaData</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1abc7053615464e121b86bb6c3c3605398" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>clearRawControlNames</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ada7f206c218b1e65bd2331b584322413" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>deleteJointGroup</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a23839423080cbbef906d2edc1eb47b2a" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAge</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1b66c9c33eddeb21eae0ad734cecc343" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapCutValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adcc2982bd1e9a7b014904f55382ea7f7" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapFromValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a9b34f7c55202132ea233bf62305e95fd" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a76a88fe1ca13c58e88729846c68668c5" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8794fb60023c7135a8e64df33f760ff8" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapLODs</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a952b9e26982e07b7cff4118cb7e4b3d9" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac1300d462f548d4f1711b2d6c4553b99" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a85b0b644ee45dbc4ef4ccc3299c4d43b" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a4e360d3d0c2a1fe5f5fa500b879e8b27" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setAnimatedMapToValues</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1aed61cd3661fe097ac1792608ea13971b" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setArchetype</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ae938261e6df4857c604fbde039d02f3c" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setBlendShapeChannelIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1298ec717057270d5e29a4ce27352345" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setBlendShapeChannelInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a9eac4730bc5b2d683f81be7d7abf942a" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setBlendShapeChannelLODs</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a16e68f1b1ec7a84ca03764c16a114b89" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setBlendShapeChannelName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac10d5d4766d112140ba61be45bae15c7" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setBlendShapeChannelOutputIndices</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a0a118e6fd0b17b4b40ff265f45d442e7" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setCoordinateSystem</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac194e90483e1fb937ad43cc57d9f9dba" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setDBComplexity</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a30f909fc6dcb53baa4462b45644056d5" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setDBMaxLOD</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac7b713af76afdc4f89af288b983c6779" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setDBName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a7f5376ccecaa926aba462ff4cba47244" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGender</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1acbe167777c421076e740f9e775f1ca52" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIControlName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adba15d24dd5998ea0bb9e16c8043f078" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawCutValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ac2c53991d953244d8d8d9cfef3814537" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawFromValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a220225a3400609ea6ad701d82231fcd2" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8ff614803260b787dedf6c24f13d5d30" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a5b6f8d09f7e14f2d4aca12b03247fa55" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawSlopeValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a834af50cb5c8f1567ab474bb4dce9131" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setGUIToRawToValues</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ae20b30d9f64ce34affae4c8bb8efa445" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointColumnCount</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1aa8d6031abc7c0b7a262054c7589719e8" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointGroupInputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1abc4bde60580a3f969b2c31694c5db4a2" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointGroupJointIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a0574869602e12d5d02c1140b51d8e96e" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointGroupLODs</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a1587c7656d8010eae73723f5ebcc8df2" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointGroupOutputIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a9cd33855b41cf50fa38b40dd871f7b9f" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointGroupValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a69035647abcca8cad52431ca759fc96d" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointHierarchy</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a6d2908222c87eaae02f42897a3800ffb" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointName</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a28cb22e4690d1921c71775c939652c80" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setJointRowCount</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ac8fbf066b96f5405488ea83ccd0b3ed2" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setLODAnimatedMapMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1aecc6f0194a3ede2fd3a5949b5d726fab" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setLODBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a20f5c0bd82865136e3df7c9d67585213" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setLODCount</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ab455cc12547a8bf8fd640442c2cd37a4" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setLODJointMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a76c1e2ef776b647c7313c6373daa0ad5" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setLODMeshMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a2af79d245c8106f3d9d893033355826d" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setMeshBlendShapeChannelMapping</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a1ede54dbf2feef53b1210297a74ecb3d" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setMeshIndices</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a3a04e9932ae29728b79d6fe38b86755f" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setMeshName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a03d2b0ecc0a5e01081e9a5fccec9ca65" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setMetaData</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a9af57f937e1d24de1b6fcad6f109e4e0" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setName</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a487bb27204d18dc9f120a3c18cd1539b" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setNeutralJointRotations</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1af64d1d8956f3d0cd3165dae9df275c41" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setNeutralJointTranslations</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ae9c842c529475cd612097967b76bbbdc" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setPSDColumnIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a318c9585948a1b810d3c175adc612cd3" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setPSDCount</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1a8b9013b6c4f7fddc63bc3d540024366a" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setPSDRowIndices</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1ab0914f0c6d936da871ca3c494f78ae18" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setPSDValues</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1a603d4b1155e298fc240c991c51a35057" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setRawControlName</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a1756bb4c64fb48a95af1daea77c6b5a6" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setRotationUnit</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1ac104f5869d0b01c92e8dcc7b6fcf7cc9" prot="public" virt="pure-virtual"><scope>dna::BehaviorWriter</scope><name>setTranslationUnit</name></member>
+      <member refid="classdna_1_1BehaviorWriter_1adfc84089a2ef97576a91b061d839af46" prot="protected" virt="virtual"><scope>dna::BehaviorWriter</scope><name>~BehaviorWriter</name></member>
+      <member refid="classdna_1_1DefinitionWriter_1ad68a8a51b3ae0bc1ac4103d49359a023" prot="protected" virt="virtual"><scope>dna::BehaviorWriter</scope><name>~DefinitionWriter</name></member>
+      <member refid="classdna_1_1DescriptorWriter_1a055ce84ed039856b57c64db2dd5bb584" prot="protected" virt="virtual"><scope>dna::BehaviorWriter</scope><name>~DescriptorWriter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classdnac_1_1RenameJointCommand_1_1Impl" kind="class" language="C++" prot="public">
+    <compoundname>dnac::RenameJointCommand::Impl</compoundname>
+    <basecompoundref refid="classdnac_1_1RenameResourceCommand" prot="public" virt="non-virtual">dnac::RenameResourceCommand&lt; Impl &gt;</basecompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classdnac_1_1RenameJointCommand_1_1Impl_1a90f5a1fe060740009830438d095bac1f" prot="private" static="no">
+        <type><ref refid="classdnac_1_1RenameResourceCommand" kindref="compound">RenameResourceCommand</ref>&lt; <ref refid="classdnac_1_1RenameJointCommand_1_1Impl" kindref="compound">Impl</ref> &gt;</type>
+        <definition>using dnac::RenameJointCommand::Impl::Super =  RenameResourceCommand&lt;Impl&gt;</definition>
+        <argsstring></argsstring>
+        <name>Super</name>
+        <qualifiedname>dnac::RenameJointCommand::Impl::Super</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="19" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdnac_1_1RenameJointCommand_1_1Impl_1a0a21d4ec790a6a3c6c38f535480100e3" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dnac::RenameJointCommand::Impl::Impl</definition>
+        <argsstring>(MemoryResource *memRes_)</argsstring>
+        <name>Impl</name>
+        <qualifiedname>dnac::RenameJointCommand::Impl::Impl</qualifiedname>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="22" column="18" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="22" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdnac_1_1RenameJointCommand_1_1Impl_1a4b07bf472484683c8edc1eab849089fe" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::uint16_t</type>
+        <definition>std::uint16_t dnac::RenameJointCommand::Impl::getNameCount</definition>
+        <argsstring>(const dna::Reader *input) const override</argsstring>
+        <name>getNameCount</name>
+        <qualifiedname>dnac::RenameJointCommand::Impl::getNameCount</qualifiedname>
+        <reimplements refid="classdnac_1_1RenameResourceCommand_1a0f83d288ee416a07a69ec67ad217a4bb">getNameCount</reimplements>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="26" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="26" bodyend="28"/>
+        <references refid="classdna_1_1DefinitionReader_1acb077a6f51c59fcfc8a2e6dd2de6cf2e">dna::DefinitionReader::getJointCount</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameJointCommand_1_1Impl_1a4b7af35ae75c206feaacbf221237c753" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="classdna_1_1StringView" kindref="compound">StringView</ref></type>
+        <definition>StringView dnac::RenameJointCommand::Impl::getNameByIndex</definition>
+        <argsstring>(const dna::Reader *input, std::uint16_t index_) const override</argsstring>
+        <name>getNameByIndex</name>
+        <qualifiedname>dnac::RenameJointCommand::Impl::getNameByIndex</qualifiedname>
+        <reimplements refid="classdnac_1_1RenameResourceCommand_1a86ea191cd58e70cc79093ea089b086f6">getNameByIndex</reimplements>
+        <param>
+          <type>const <ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref> *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="30" column="20" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="30" bodyend="32"/>
+        <references refid="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45">dna::DefinitionReader::getJointName</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RenameJointCommand_1_1Impl_1ae76acd0abdf9a6bff72b53241ad82f87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void dnac::RenameJointCommand::Impl::setNameByIndex</definition>
+        <argsstring>(dna::Writer *output, std::uint16_t index_, const char *name) override</argsstring>
+        <name>setNameByIndex</name>
+        <qualifiedname>dnac::RenameJointCommand::Impl::setNameByIndex</qualifiedname>
+        <reimplements refid="classdnac_1_1RenameResourceCommand_1aedf4ccdfda6b8bd8e6c84a87e8cd7a13">setNameByIndex</reimplements>
+        <param>
+          <type><ref refid="classdna_1_1Writer" kindref="compound">dna::Writer</ref> *</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>std::uint16_t</type>
+          <declname>index_</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="34" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="34" bodyend="36"/>
+        <references refid="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b">dna::DefinitionWriter::setJointName</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>dnac::CommandImplBase&lt; Impl &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::CommandImplBase&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; TDerived &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::RenameResourceCommand&lt; Impl &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dnac::CommandImplBase&lt; TCommand &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+      </node>
+      <node id="1">
+        <label>dnac::RenameJointCommand::Impl</label>
+        <link refid="classdnac_1_1RenameJointCommand_1_1Impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::RenameResourceCommand&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>dnac::CommandImplBase&lt; Impl &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>dnac::CommandImplBase&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="template-instance">
+          <edgelabel>&lt; TDerived &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dnac::RenameResourceCommand&lt; Impl &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="template-instance">
+          <edgelabel>&lt; Impl &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dnac::CommandImplBase&lt; TCommand &gt;</label>
+        <link refid="classdnac_1_1CommandImplBase"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-memRes</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>dnac::RenameJointCommand::Impl</label>
+        <link refid="classdnac_1_1RenameJointCommand_1_1Impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>dnac::RenameResourceCommand&lt; TDerived &gt;</label>
+        <link refid="classdnac_1_1RenameResourceCommand"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>pma::MemoryResource</label>
+        <link refid="classpma_1_1MemoryResource"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" line="17" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/commands/RenameJointCommand.cpp" bodystart="17" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classdnac_1_1CommandImplBase_1a61e4c37cc64510fb8861247ae839939e" prot="protected" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>CommandImplBase</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a19a9853f3b35ec440920aec8c3add0b1" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>config</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a812b4ecc2b001948d40024bddbb42862" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>Configuration</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1aaad21404fdc3816906b60a423ee526b4" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>create</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1a2d39f8502fb35a72933427eb810bed7f" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>destroy</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1a08756df6a2ac83827a17bf5511cb9fc3" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>getMemoryResource</name></member>
+      <member refid="classdnac_1_1RenameJointCommand_1_1Impl_1a4b7af35ae75c206feaacbf221237c753" prot="private" virt="virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>getNameByIndex</name></member>
+      <member refid="classdnac_1_1RenameJointCommand_1_1Impl_1a4b07bf472484683c8edc1eab849089fe" prot="private" virt="virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>getNameCount</name></member>
+      <member refid="classdnac_1_1RenameJointCommand_1_1Impl_1a0a21d4ec790a6a3c6c38f535480100e3" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>Impl</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1adf58f352a1e73ccadecb71f604dcec31" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>index</name></member>
+      <member refid="classdnac_1_1CommandImplBase_1aa6e089f0d257ef77e86370e1535196a3" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>memRes</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a62bcaf386ca7be9d46d1a5f616972d47" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>newName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a3ab80b9dbe11e276c4971a9bf981c1ff" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>oldName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a4111f12410994c10904a5dbd36cc541b" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1aa955c2f5f5c45743d4f9c4f7af73411d" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>operator=</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a65e7ead3c31a4ff26296fec39798a11e" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>rename</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ace814073469bab9b5a69f056eaa4eb39" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a3a155cd0cad289fbb61534be46ef69a9" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a84c292fc297cc7fa78bcb8333ae39c35" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>RenameResourceCommand</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ae71f9b4d8bc25697c3102b2ed000dffb" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>run</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1afae56800b37f16afd4fa398f567730c4" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>searchAndRename</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a4d45da2af83bdd9e3a79a09613432d7c" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>setName</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1a07304f9082e03cc638c4438760154dd7" prot="public" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>setName</name></member>
+      <member refid="classdnac_1_1RenameJointCommand_1_1Impl_1ae76acd0abdf9a6bff72b53241ad82f87" prot="private" virt="virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>setNameByIndex</name></member>
+      <member refid="classdnac_1_1RenameJointCommand_1_1Impl_1a90f5a1fe060740009830438d095bac1f" prot="private" virt="non-virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>Super</name></member>
+      <member refid="classdnac_1_1RenameResourceCommand_1ac62f17864e4ad4fca382e4c3209f1cea" prot="public" virt="virtual"><scope>dnac::RenameJointCommand::Impl</scope><name>~RenameResourceCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

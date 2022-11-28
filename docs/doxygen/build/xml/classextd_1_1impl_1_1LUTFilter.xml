@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classextd_1_1impl_1_1LUTFilter" kind="class" language="C++" prot="public">
+    <compoundname>extd::impl::LUTFilter</compoundname>
+    <includes refid="utils_2Extd_8h" local="no">Extd.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TLUT</type>
+      </param>
+      <param>
+        <type><ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3ef" kindref="member">LUTStrategy</ref></type>
+        <declname>Strategy</declname>
+        <defname>Strategy</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" prot="private" static="no" mutable="no">
+        <type>const TLUT &amp;</type>
+        <definition>const TLUT &amp; extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::lut</definition>
+        <argsstring></argsstring>
+        <name>lut</name>
+        <qualifiedname>extd::impl::LUTFilter::lut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" line="96" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classextd_1_1impl_1_1LUTFilter_1a835e6e3324f328cb9541dc0852ff7304" compoundref="utils_2Extd_8h" startline="86" endline="88">extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::operator()</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1af210f90d4ef9445a5259a670ff73fab0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::LUTFilter</definition>
+        <argsstring>(const TLUT &amp;lut_)</argsstring>
+        <name>LUTFilter</name>
+        <qualifiedname>extd::impl::LUTFilter::LUTFilter</qualifiedname>
+        <param>
+          <type>const TLUT &amp;</type>
+          <declname>lut_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" line="83" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1a835e6e3324f328cb9541dc0852ff7304" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3ef" kindref="member">LUTStrategy</ref></type>
+            <declname>ChosenStrategy</declname>
+            <defname>ChosenStrategy</defname>
+            <defval>Strategy</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; ChosenStrategy==<ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3efad678aba164b442f27e193f3f05ef614f" kindref="member">LUTStrategy::ByValue</ref>, bool &gt;::type</type>
+        <definition>std::enable_if&lt; ChosenStrategy==LUTStrategy::ByValue, bool &gt;::type extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::operator()</definition>
+        <argsstring>(const T &amp;value, std::size_t)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>extd::impl::LUTFilter::operator()</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" line="86" column="36" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" bodystart="86" bodyend="88"/>
+        <references refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" compoundref="utils_2Extd_8h" startline="40" endline="42">extd::contains</references>
+        <references refid="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" compoundref="utils_2Extd_8h" startline="96">extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::lut</references>
+      </memberdef>
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1ac8f190e486b570cdbd9129af0210f597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3ef" kindref="member">LUTStrategy</ref></type>
+            <declname>ChosenStrategy</declname>
+            <defname>ChosenStrategy</defname>
+            <defval>Strategy</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; ChosenStrategy==<ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3efa95fe1743f1f06b9d7a4dac06c57635ed" kindref="member">LUTStrategy::ByPosition</ref>, bool &gt;::type</type>
+        <definition>std::enable_if&lt; ChosenStrategy==LUTStrategy::ByPosition, bool &gt;::type extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::operator()</definition>
+        <argsstring>(const T &amp;, std::size_t index)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>extd::impl::LUTFilter::operator()</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" line="91" column="36" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" bodystart="91" bodyend="93"/>
+        <references refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" compoundref="utils_2Extd_8h" startline="40" endline="42">extd::contains</references>
+        <references refid="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" compoundref="utils_2Extd_8h" startline="96">extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::lut</references>
+      </memberdef>
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1af210f90d4ef9445a5259a670ff73fab0" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::LUTFilter</definition>
+        <argsstring>(const TLUT &amp;lut_)</argsstring>
+        <name>LUTFilter</name>
+        <qualifiedname>extd::impl::LUTFilter::LUTFilter</qualifiedname>
+        <param>
+          <type>const TLUT &amp;</type>
+          <declname>lut_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" line="83" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" bodystart="83" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1a835e6e3324f328cb9541dc0852ff7304" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3ef" kindref="member">LUTStrategy</ref></type>
+            <declname>ChosenStrategy</declname>
+            <defname>ChosenStrategy</defname>
+            <defval>Strategy</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; ChosenStrategy==<ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3efad678aba164b442f27e193f3f05ef614f" kindref="member">LUTStrategy::ByValue</ref>, bool &gt;::type</type>
+        <definition>std::enable_if&lt; ChosenStrategy==LUTStrategy::ByValue, bool &gt;::type extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::operator()</definition>
+        <argsstring>(const T &amp;value, std::size_t)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>extd::impl::LUTFilter::operator()</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" line="86" column="36" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" bodystart="86" bodyend="88"/>
+        <references refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" compoundref="utils_2Extd_8h" startline="40" endline="42">extd::contains</references>
+        <references refid="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" compoundref="utils_2Extd_8h" startline="96">extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::lut</references>
+      </memberdef>
+      <memberdef kind="function" id="classextd_1_1impl_1_1LUTFilter_1ac8f190e486b570cdbd9129af0210f597" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type><ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3ef" kindref="member">LUTStrategy</ref></type>
+            <declname>ChosenStrategy</declname>
+            <defname>ChosenStrategy</defname>
+            <defval>Strategy</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; ChosenStrategy==<ref refid="namespaceextd_1_1impl_1a2630e2129dd46aec73a8dbbf9728a3efa95fe1743f1f06b9d7a4dac06c57635ed" kindref="member">LUTStrategy::ByPosition</ref>, bool &gt;::type</type>
+        <definition>std::enable_if&lt; ChosenStrategy==LUTStrategy::ByPosition, bool &gt;::type extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::operator()</definition>
+        <argsstring>(const T &amp;, std::size_t index)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>extd::impl::LUTFilter::operator()</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" line="91" column="36" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dnacalib/utils/Extd.h" bodystart="91" bodyend="93"/>
+        <references refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" compoundref="utils_2Extd_8h" startline="40" endline="42">extd::contains</references>
+        <references refid="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" compoundref="utils_2Extd_8h" startline="96">extd::impl::LUTFilter&lt; TLUT, Strategy &gt;::lut</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>extd::impl::LUTFilter&lt; TLUT, Strategy &gt;</label>
+        <link refid="classextd_1_1impl_1_1LUTFilter"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" line="81" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/dna/utils/Extd.h" bodystart="81" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1a892768b51af74a86cd0997ce6b386b53" prot="private" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>lut</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1af210f90d4ef9445a5259a670ff73fab0" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>LUTFilter</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1af210f90d4ef9445a5259a670ff73fab0" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>LUTFilter</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1a835e6e3324f328cb9541dc0852ff7304" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>operator()</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1ac8f190e486b570cdbd9129af0210f597" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>operator()</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1a835e6e3324f328cb9541dc0852ff7304" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>operator()</name></member>
+      <member refid="classextd_1_1impl_1_1LUTFilter_1ac8f190e486b570cdbd9129af0210f597" prot="public" virt="non-virtual"><scope>extd::impl::LUTFilter</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

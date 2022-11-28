@@ -1,0 +1,1001 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classterse_1_1ExtendableBinaryInputArchive" kind="class" language="C++" prot="public">
+    <compoundname>terse::ExtendableBinaryInputArchive</compoundname>
+    <basecompoundref refid="classterse_1_1Archive" prot="public" virt="non-virtual">terse::Archive&lt; TExtender &gt;</basecompoundref>
+    <includes refid="binary_2InputArchive_8h" local="no">InputArchive.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class TExtender</type>
+      </param>
+      <param>
+        <type>class TStream</type>
+      </param>
+      <param>
+        <type>typename TSize</type>
+      </param>
+      <param>
+        <type>typename TOffset</type>
+      </param>
+      <param>
+        <type><ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref></type>
+        <declname>EByteOrder</declname>
+        <defname>EByteOrder</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" prot="public" static="no">
+        <type>TSize</type>
+        <definition>using terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::SizeType =  TSize</definition>
+        <argsstring></argsstring>
+        <name>SizeType</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::SizeType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="41" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" prot="public" static="no">
+        <type>TOffset</type>
+        <definition>using terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::OffsetType =  TOffset</definition>
+        <argsstring></argsstring>
+        <name>OffsetType</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::OffsetType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="42" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classterse_1_1ExtendableBinaryInputArchive_1a55b6eb4f31e02390db505044cf7dc773" prot="private" static="no">
+        <type><ref refid="classterse_1_1Archive" kindref="compound">Archive</ref>&lt; TExtender &gt;</type>
+        <definition>using terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::BaseArchive =  Archive&lt;TExtender&gt;</definition>
+        <argsstring></argsstring>
+        <name>BaseArchive</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::BaseArchive</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="49" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" prot="private" static="no" mutable="no">
+        <type>TStream *</type>
+        <definition>TStream* terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="260" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="260" bodyend="-1"/>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1aff1d879c896111a56f8efd01fb66a973" compoundref="binary_2InputArchive_8h" startline="71" endline="73">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1a2f4077cf50e25454032571ce5cac2c58" compoundref="binary_2InputArchive_8h" startline="219" endline="235">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a1cb4dcafeea7813ac227105d95cb12ae" prot="public" static="yes" constexpr="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>constexpr <ref refid="namespaceterse_1aa7562cd5f24037b483789458d85d5a89" kindref="member">Endianness</ref></type>
+        <definition>static constexpr Endianness terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::endianness</definition>
+        <argsstring>()</argsstring>
+        <name>endianness</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::endianness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="44" column="37" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a7405c9535ef44e9d5156e89bd8d284f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::ExtendableBinaryInputArchive</definition>
+        <argsstring>(TExtender *extender, TStream *stream_)</argsstring>
+        <name>ExtendableBinaryInputArchive</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::ExtendableBinaryInputArchive</qualifiedname>
+        <param>
+          <type>TExtender *</type>
+          <declname>extender</declname>
+        </param>
+        <param>
+          <type>TStream *</type>
+          <declname>stream_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="52" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="52" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a74f6c013e374f3777bf4b5a72adb3bfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::isOk</definition>
+        <argsstring>()</argsstring>
+        <name>isOk</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::isOk</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="55" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1aae34613f1ae978f063b9029ae2ff6904" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::sync</definition>
+        <argsstring>()</argsstring>
+        <name>sync</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::sync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="59" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="59" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a7e0d8fef862834689b7df40fe84e21cc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::label</definition>
+        <argsstring>(const char *)</argsstring>
+        <name>label</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::label</qualifiedname>
+        <param>
+          <type>const char *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="62" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="62" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(Transparent&lt; T &gt; &amp;&amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1Transparent" kindref="compound">Transparent</ref>&lt; T &gt; &amp;&amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="67" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="67" bodyend="69"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+        <referencedby refid="classterse_1_1BinaryInputArchive_1ad68384b222c0ecf5b8182be99f398e8b" compoundref="binary_2InputArchive_8h" startline="279" endline="281">terse::BinaryInputArchive&lt; TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1aff1d879c896111a56f8efd01fb66a973" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(Anchor&lt; OffsetType &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1Anchor" kindref="compound">Anchor</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="71" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="71" bodyend="73"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+        <references refid="structterse_1_1Anchor_1ab122fd961a772f08358885f58aea7b2c" compoundref="Anchor_8h" startline="17">terse::Anchor&lt; TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1aa2fe4da437f4519c2c1ae6e14be404d1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(ArchiveOffset&lt; OffsetType &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="75" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="75" bodyend="79"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+        <references refid="structterse_1_1ArchiveOffset_1a142797b061f46c5cd9f064d9c5ddfe1f" compoundref="ArchiveOffset_8h" startline="66">terse::ArchiveOffset&lt; TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a4cf5e7a27503127138b86ebe858b95d3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(typename ArchiveOffset&lt; OffsetType &gt;::Proxy &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt;::Proxy &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="81" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="81" bodyend="84"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+        <references refid="structterse_1_1ArchiveOffset_1_1Proxy_1a5dbdae14a3bc2bd79b94b0ed931c8701" compoundref="ArchiveOffset_8h" startline="32">terse::ArchiveOffset&lt; TOffset &gt;::Proxy::target</references>
+        <references refid="structterse_1_1ArchiveOffset_1a142797b061f46c5cd9f064d9c5ddfe1f" compoundref="ArchiveOffset_8h" startline="66">terse::ArchiveOffset&lt; TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1ad63df9f82b8cf217cdb283244e6bd174" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(typename ArchiveOffset&lt; OffsetType &gt;::Proxy &amp;&amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveOffset" kindref="compound">ArchiveOffset</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt;::Proxy &amp;&amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="86" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="86" bodyend="88"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1adf2d9333950a59a4a5aafe10c3136b2c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(ArchiveSize&lt; SizeType, OffsetType &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="90" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="90" bodyend="93"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+        <references refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" compoundref="ArchiveSize_8h" startline="88">terse::ArchiveSize&lt; TSize, TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a76d4aaca1e2a2d4c360c5c5bd1858c53" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(typename ArchiveSize&lt; SizeType, OffsetType &gt;::Proxy &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt;::Proxy &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="95" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="95" bodyend="99"/>
+        <references refid="structterse_1_1ArchiveSize_1_1Proxy_1a36acf2c80bee7cbf3931c6773d7dd895" compoundref="ArchiveSize_8h" startline="39">terse::ArchiveSize&lt; TSize, TOffset &gt;::Proxy::base</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+        <references refid="structterse_1_1ArchiveSize_1_1Proxy_1a1c58480bd817319044ddcb3bccde1f16" compoundref="ArchiveSize_8h" startline="38">terse::ArchiveSize&lt; TSize, TOffset &gt;::Proxy::target</references>
+        <references refid="structterse_1_1ArchiveSize_1a578f16a55239ee6b2ac04e951e3da075" compoundref="ArchiveSize_8h" startline="88">terse::ArchiveSize&lt; TSize, TOffset &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a071ae480d7f79db9582e9753f65e9de8" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(typename ArchiveSize&lt; SizeType, OffsetType &gt;::Proxy &amp;&amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>typename <ref refid="structterse_1_1ArchiveSize" kindref="compound">ArchiveSize</ref>&lt; <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" kindref="member">SizeType</ref>, <ref refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" kindref="member">OffsetType</ref> &gt;::Proxy &amp;&amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="101" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="101" bodyend="103"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a5eaf522812d1c76931017ca9e8473f14" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(Blob&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1Blob" kindref="compound">Blob</ref>&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="106" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="106" bodyend="113"/>
+        <references refid="classterse_1_1Blob_1ac0650cbe35b02e1d3541951ffe6eb082" compoundref="Blob_8h" startline="35" endline="37">terse::Blob&lt; T, TAllocator &gt;::data</references>
+        <references refid="classterse_1_1Blob_1a7cf202e916939e6b9c12a6adc76af444" compoundref="Blob_8h" startline="43" endline="45">terse::Blob&lt; T, TAllocator &gt;::size</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1aa04f91438376a1e10f789f49dcdced7e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__load__member" kindref="compound">traits::has_load_member</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_load_member&lt; T &gt;::value, void &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="117" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="117" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1ab9cfad86ccac45902389a05af1a5f7b6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">traits::has_serialize_member</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_serialize_member&lt; T &gt;::value, void &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="123" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="123" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1af7dfa37ba4226007f40b15bb1f63fde1" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__load__function" kindref="compound">traits::has_load_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_load_function&lt; T &gt;::value, void &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="129" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="129" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a507740057b6b760c8791885b81f273c6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">traits::has_serialize_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; traits::has_serialize_function&lt; T &gt;::value, void &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="135" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a7269259a52232caca40917d19b342e24" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="structterse_1_1traits_1_1has__load__member" kindref="compound">traits::has_load_member</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__serialize__member" kindref="compound">traits::has_serialize_member</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__load__function" kindref="compound">traits::has_load_function</ref>&lt; T &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__serialize__function" kindref="compound">traits::has_serialize_function</ref>&lt; T &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt;!traits::has_load_member&lt; T &gt;::value &amp;&amp;!traits::has_serialize_member&lt; T &gt;::value &amp;&amp;!traits::has_load_function&lt; T &gt;::value &amp;&amp;!traits::has_serialize_function&lt; T &gt;::value, void &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(T &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="142" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="142" bodyend="146"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a34e68fafa278cf68e7267c833ed72858" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>std::size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(std::array&lt; T, N &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>std::array&lt; T, N &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="149" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="149" bodyend="153"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a870eb5b50d35453e4b837d1644f74032" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(std::vector&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>std::vector&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="156" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="156" bodyend="159"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" compoundref="binary_2InputArchive_8h" startline="196" endline="204">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a6b445304dd1df8aa7fece122a6bac7af" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(DynArray&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="162" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="162" bodyend="165"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" compoundref="binary_2InputArchive_8h" startline="196" endline="204">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a587485377909b682caeb54fde7d4f244" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(std::basic_string&lt; T, Args... &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>std::basic_string&lt; T, Args... &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="168" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="168" bodyend="171"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" compoundref="binary_2InputArchive_8h" startline="196" endline="204">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" compoundref="binary_2InputArchive_8h" startline="185" endline="189">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a5b75a55a728a3f347a063466009f8d59" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(std::pair&lt; K, V &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>std::pair&lt; K, V &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="174" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="174" bodyend="177"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a136707450a287df7f3dcff81d134fc42" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</definition>
+        <argsstring>(std::tuple&lt; K, V &gt; &amp;dest)</argsstring>
+        <name>process</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::process</qualifiedname>
+        <param>
+          <type>std::tuple&lt; K, V &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="180" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="180" bodyend="183"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processSize</definition>
+        <argsstring>()</argsstring>
+        <name>processSize</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::processSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="185" column="21" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="185" bodyend="189"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" compoundref="binary_2InputArchive_8h" startline="67" endline="69">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</references>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1a870eb5b50d35453e4b837d1644f74032" compoundref="binary_2InputArchive_8h" startline="156" endline="159">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" kindref="member">traits::is_batchable</ref>&lt; TContainer &gt;::value &amp;&amp;<ref refid="structterse_1_1traits_1_1has__reserve__member" kindref="compound">traits::has_reserve_member</ref>&lt; TContainer &gt;::value &amp;&amp;<ref refid="structterse_1_1traits_1_1has__push__back__member" kindref="compound">traits::has_push_back_member</ref>&lt; TContainer &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt;!traits::is_batchable&lt; TContainer &gt;::value &amp;&amp;traits::has_reserve_member&lt; TContainer &gt;::value &amp;&amp;traits::has_push_back_member&lt; TContainer &gt;::value &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t size)</argsstring>
+        <name>processElements</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::processElements</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="196" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="196" bodyend="204"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1a870eb5b50d35453e4b837d1644f74032" compoundref="binary_2InputArchive_8h" startline="156" endline="159">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::process</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a6d6b562a585bfe59ded501978c9e6c17" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt;!<ref refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" kindref="member">traits::is_batchable</ref>&lt; TContainer &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__reserve__member" kindref="compound">traits::has_reserve_member</ref>&lt; TContainer &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__push__back__member" kindref="compound">traits::has_push_back_member</ref>&lt; TContainer &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt;!traits::is_batchable&lt; TContainer &gt;::value &amp;&amp;!traits::has_reserve_member&lt; TContainer &gt;::value &amp;&amp;!traits::has_push_back_member&lt; TContainer &gt;::value &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t size)</argsstring>
+        <name>processElements</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::processElements</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="210" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="210" bodyend="215"/>
+        <references refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" compoundref="Archive_8h" startline="61" endline="63">terse::Archive&lt; TExtender &gt;::dispatch</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" compoundref="binary_2InputArchive_8h" startline="250" endline="252">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a2f4077cf50e25454032571ce5cac2c58" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" kindref="member">traits::is_batchable</ref>&lt; TContainer &gt;::value &amp;&amp;<ref refid="structterse_1_1traits_1_1has__wide__elements" kindref="compound">traits::has_wide_elements</ref>&lt; TContainer &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; traits::is_batchable&lt; TContainer &gt;::value &amp;&amp;traits::has_wide_elements&lt; TContainer &gt;::value &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t size)</argsstring>
+        <name>processElements</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::processElements</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="219" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="219" bodyend="235"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" compoundref="binary_2InputArchive_8h" startline="250" endline="252">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a26a571c4043a1178d86d4b94a3a63dc3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; <ref refid="namespaceterse_1_1traits_1adf80a0218fce775808b43c46662b5d51" kindref="member">traits::is_batchable</ref>&lt; TContainer &gt;::value &amp;&amp;!<ref refid="structterse_1_1traits_1_1has__wide__elements" kindref="compound">traits::has_wide_elements</ref>&lt; TContainer &gt;::value &gt;::type</type>
+        <definition>std::enable_if&lt; traits::is_batchable&lt; TContainer &gt;::value &amp;&amp;!traits::has_wide_elements&lt; TContainer &gt;::value &gt;::type terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t size)</argsstring>
+        <name>processElements</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::processElements</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="239" column="9" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="239" bodyend="246"/>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" compoundref="binary_2InputArchive_8h" startline="250" endline="252">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</references>
+        <references refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" compoundref="binary_2InputArchive_8h" startline="260">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::stream</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class TContainer</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</definition>
+        <argsstring>(TContainer &amp;dest, std::size_t size)</argsstring>
+        <name>resize</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::resize</qualifiedname>
+        <param>
+          <type>TContainer &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="250" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="250" bodyend="252"/>
+        <referencedby refid="classterse_1_1ExtendableBinaryInputArchive_1a6d6b562a585bfe59ded501978c9e6c17" compoundref="binary_2InputArchive_8h" startline="210" endline="215">terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::processElements</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classterse_1_1ExtendableBinaryInputArchive_1a6a2c06bc2da07187f709fc1bfa391b53" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>class TAllocator</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;::resize</definition>
+        <argsstring>(DynArray&lt; T, TAllocator &gt; &amp;dest, std::size_t size)</argsstring>
+        <name>resize</name>
+        <qualifiedname>terse::ExtendableBinaryInputArchive::resize</qualifiedname>
+        <param>
+          <type><ref refid="classterse_1_1DynArray" kindref="compound">DynArray</ref>&lt; T, TAllocator &gt; &amp;</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="255" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="255" bodyend="257"/>
+        <references refid="classterse_1_1DynArray_1a059d13c5e37f77c801e81c9fb5ae1608" compoundref="DynArray_8h" startline="191" endline="203">terse::DynArray&lt; T, TAllocator &gt;::resize_uninitialized</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>terse::BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1BinaryInputArchive"/>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>terse::BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1BinaryInputArchive"/>
+        <childnode refid="7" relation="template-instance">
+          <edgelabel>&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>terse::ExtendableBinaryInputArchive&lt; BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;, TStream, std::uint32_t, std::uint32_t, EByteOrder &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>terse::ExtendableBinaryInputArchive&lt; BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; BinaryInputArchive&lt; TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;, TStream, std::uint32_t, std::uint32_t, Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>terse::ExtendableBinaryInputArchive&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="1" relation="template-instance">
+          <edgelabel>&lt; FilteredInputArchive, BoundedIOStream, std::uint32_t, std::uint32_t, terse::Endianness::Network &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dna::FilteredInputArchive</label>
+        <link refid="classdna_1_1FilteredInputArchive"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="7">
+        <label>terse::BinaryInputArchive&lt; TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1BinaryInputArchive"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>terse::Archive&lt; TExtender &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+        <childnode refid="3" relation="template-instance">
+          <edgelabel>&lt; TExtender &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>terse::Archive&lt; ArchiveImpl &gt;</label>
+        <link refid="classterse_1_1Archive"/>
+      </node>
+      <node id="1">
+        <label>terse::ExtendableBinaryInputArchive&lt; TExtender, TStream, TSize, TOffset, EByteOrder &gt;</label>
+        <link refid="classterse_1_1ExtendableBinaryInputArchive"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" line="38" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration/dnacalib/DNACalib/src/terse/archives/binary/InputArchive.h" bodystart="38" bodyend="261"/>
+    <listofallmembers>
+      <member refid="classterse_1_1Archive_1a42458df7d5e4e87755c88dd01f866640" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>Archive</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a55b6eb4f31e02390db505044cf7dc773" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>BaseArchive</name></member>
+      <member refid="classterse_1_1Archive_1a0e3a84f35cb1d9799566a4f4df6af694" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1Archive_1ab765e22c9a8bcab4e98d9b593577de82" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>dispatch</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a1cb4dcafeea7813ac227105d95cb12ae" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>endianness</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a7405c9535ef44e9d5156e89bd8d284f7" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>ExtendableBinaryInputArchive</name></member>
+      <member refid="classterse_1_1Archive_1a7a9fc12b40284867ff4969c6c48c8982" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>getUserData</name></member>
+      <member refid="classterse_1_1Archive_1a462e059ee44f6ab246bfff8d444144c3" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>impl</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a74f6c013e374f3777bf4b5a72adb3bfb" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>isOk</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a7e0d8fef862834689b7df40fe84e21cc" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>label</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5e4ff731f728bcd9a9135f951f70612e" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>OffsetType</name></member>
+      <member refid="classterse_1_1Archive_1a4df3e8d790c6bb1e74763f2952c9ad65" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>operator()</name></member>
+      <member refid="classterse_1_1Archive_1a06b33e08fd4d274553a8717f5da84c22" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classterse_1_1Archive_1a2be0b456566c72d32680de9b9a6f2904" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ae6b8a2259de518324ad11b9ac6f8f3bd" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aff1d879c896111a56f8efd01fb66a973" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aa2fe4da437f4519c2c1ae6e14be404d1" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a4cf5e7a27503127138b86ebe858b95d3" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ad63df9f82b8cf217cdb283244e6bd174" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1adf2d9333950a59a4a5aafe10c3136b2c" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a76d4aaca1e2a2d4c360c5c5bd1858c53" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a071ae480d7f79db9582e9753f65e9de8" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5eaf522812d1c76931017ca9e8473f14" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aa04f91438376a1e10f789f49dcdced7e" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ab9cfad86ccac45902389a05af1a5f7b6" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1af7dfa37ba4226007f40b15bb1f63fde1" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a507740057b6b760c8791885b81f273c6" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a7269259a52232caca40917d19b342e24" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a34e68fafa278cf68e7267c833ed72858" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a870eb5b50d35453e4b837d1644f74032" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6b445304dd1df8aa7fece122a6bac7af" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a587485377909b682caeb54fde7d4f244" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a5b75a55a728a3f347a063466009f8d59" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a136707450a287df7f3dcff81d134fc42" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>process</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a04fea441b82d9ee2222d44c54d9995d6" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6d6b562a585bfe59ded501978c9e6c17" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a2f4077cf50e25454032571ce5cac2c58" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a26a571c4043a1178d86d4b94a3a63dc3" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>processElements</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1ac55fa9162ae1abe23f996b2814a9b68b" prot="protected" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>processSize</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1acda97880720c4895554408fbffaf7929" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>resize</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a6a2c06bc2da07187f709fc1bfa391b53" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>resize</name></member>
+      <member refid="classterse_1_1Archive_1ac64d0bb1ad778cb392e026d002e74f33" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>setUserData</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a803296e3398b85ebafec055450e21cc5" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>SizeType</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1a8360d0098171f5916258596e9ccc7ee8" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>stream</name></member>
+      <member refid="classterse_1_1ExtendableBinaryInputArchive_1aae34613f1ae978f063b9029ae2ff6904" prot="public" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>sync</name></member>
+      <member refid="classterse_1_1Archive_1a0e9b96481b56e7de196e700cf5ffe5cb" prot="private" virt="non-virtual"><scope>terse::ExtendableBinaryInputArchive</scope><name>userData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
