@@ -1,17 +1,17 @@
-# DNA Calibration
-DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
+# MetaHuman DNA Calibration
+MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
 DNA is an integral part of [MetaHuman](https://www.unrealengine.com/en-US/metahuman) identity.
 DNA files are created with [MetaHuman Creator](https://metahuman.unrealengine.com/) and downloaded with 
 [Quixel Bridge](https://docs.metahuman.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/).
 
-DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
-DNA Calibration tools are provided in a GitHub repository located at this address.
+MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
+MetaHuman DNA Calibration tools are provided in a GitHub repository located at this address.
 
 
 # Overview
 For an explanation about how the repository is organized, [click here](docs/repository_organization.md).
 
-The DNA Calibration repository contains two distinct tools:
+The MetaHuman DNA Calibration repository contains two distinct tools:
 - [DNACalib](docs/dnacalib.md) (and its dependencies) 
 - [DNAViewer](docs/dna_viewer.md)
 
@@ -81,4 +81,4 @@ eg. `c:/dna_calibration` in Windows or `/home/user/dna_calibration` in Linux. Im
 See the [FAQ guide](docs/faq.md) for additional specifications.
 
 # License
-DNACalibration is released with [licence](LICENSE).
+MetaHuman DNA Calibration is released with [licence](LICENSE).
