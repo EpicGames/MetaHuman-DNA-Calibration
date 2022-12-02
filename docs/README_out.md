@@ -1,17 +1,17 @@
-# DNA Calibration
-DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
+# MetaHuman DNA Calibration
+MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
 DNA is an integral part of [MetaHuman](https://www.unrealengine.com/en-US/metahuman) identity.
 DNA files are created with [MetaHuman Creator](https://metahuman.unrealengine.com/) and downloaded with 
 [Quixel Bridge](https://docs.metahuman.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/).
 
-DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
-DNA Calibration tools are provided in a GitHub repository located at this address.
+MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
+MetaHuman DNA Calibration tools are provided in a GitHub repository located at this address.
 
 
 # Overview
 For an explanation about how the repository is organized, [click here](repository_organization_md).
 
-The DNA Calibration repository contains two distinct tools:
+The MetaHuman DNA Calibration repository contains two distinct tools:
 - [DNACalib](dnacalib_md) (and its dependencies) 
 - [DNAViewer](dna_viewer_md)
 
@@ -66,7 +66,7 @@ Several Python examples are provided for reference and can be found in the **exa
 - [Remove a joint](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_remove_joint.py)
 - [Clear blend shape data](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_clear_blend_shapes.py)
 - [Subtract values from neutral mesh](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_neutral_mesh_subtract.py)
-- [Simple UI in Maya](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_run_in_maya.py)
+- [Simple UI in Maya](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_run_in_maya.py) and some [documentation](dna_viewer.md#usage-in-maya) for it
 - [Generate rig and export FBX per LOD](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_demo.py)
 - [Propagating changes from Maya scene to dna](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
 
@@ -81,4 +81,4 @@ eg. `c:/dna_calibration` in Windows or `/home/user/dna_calibration` in Linux. Im
 See the [FAQ guide](faq_md) for additional specifications.
 
 # License
-DNACalibration is released with [licence](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/LICENSE).
+MetaHuman DNA Calibration is released with [licence](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/LICENSE).

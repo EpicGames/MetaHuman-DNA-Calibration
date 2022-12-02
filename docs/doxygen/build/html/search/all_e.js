@@ -58,7 +58,7 @@ var searchData=
   ['psds_55',['psds',['../structdna_1_1RawControls.html#a7c1da2f1dc6e6a3ac1f5dcd9e982e778',1,'dna::RawControls::psds()'],['../structdnac_1_1RawControls.html#aa661fb921f36a6b1fa2473ebcae7496f',1,'dnac::RawControls::psds()']]],
   ['ptr_56',['ptr',['../classtrust_1_1ArrayView.html#a45dfcb67bc922b4a12df6388675f6ff1',1,'trust::ArrayView::ptr()'],['../classpma_1_1ScopedPtr.html#a5ceb3522644f71462c6131ecc248228d',1,'pma::ScopedPtr::ptr()'],['../classpma_1_1ArenaMemoryResource_1_1Impl.html#ac7244eda5864e2f023f14a78724d1d07',1,'pma::ArenaMemoryResource::Impl::ptr()'],['../classterse_1_1DynArray.html#abda151c5ff5541bd289ca312b1951eef',1,'terse::DynArray::ptr()']]],
   ['pushtransparency_57',['pushTransparency',['../classterse_1_1ExtendableJSONInputArchive.html#a840923cda19f36f5f70c68f20e331956',1,'terse::ExtendableJSONInputArchive::pushTransparency()'],['../classterse_1_1ExtendableJSONOutputArchive.html#a8171a4dea3997a06ec7db73e5a2368ad',1,'terse::ExtendableJSONOutputArchive::pushTransparency()']]],
-  ['pydna_58',['PyDNA',['../md_C__source_MetaHuman_DNA_Calibration_dnacalib_PyDNA_README.html',1,'']]],
-  ['pydnacalib_59',['PyDNACalib',['../md_C__source_MetaHuman_DNA_Calibration_dnacalib_PyDNACalib_README.html',1,'']]],
+  ['pydna_58',['PyDNA',['../md_C__source_MetaHuman_DNA_Calibration_clean_dnacalib_PyDNA_README.html',1,'']]],
+  ['pydnacalib_59',['PyDNACalib',['../md_C__source_MetaHuman_DNA_Calibration_clean_dnacalib_PyDNACalib_README.html',1,'']]],
   ['readme_2emd_60',['README.md',['../PyDNA_2README_8md.html',1,'(Global Namespace)'],['../PyDNACalib_2README_8md.html',1,'(Global Namespace)']]]
 ];
