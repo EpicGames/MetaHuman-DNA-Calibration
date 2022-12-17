@@ -27,13 +27,13 @@ To use these tools, you should be familiar with:
 
 ## DNACalib
 [DNACalib](docs/dnacalib.md) and its [API](docs/dnacalib_api.md) are used to inspect and modify DNA files. With [DNACalib](docs/dnacalib.md), you can make the following changes in DNA files:
-- Rename joints, meshes, blendshapes, and / or animated maps.
-- Remove joints, meshes, and / or joint animation.
-- Rotate, scale, and translate the rig.
-- Remove LODs.
-- Change neutral joint positions, neutral mesh positions, and blendshape delta values.
-- Prune blendshapes.
-- Remove all blend shape data.
+- Rename joints, meshes, blendshapes, and / or animated maps
+- Remove joints, meshes, and / or joint animation
+- Rotate, scale, and translate the rig
+- Remove LODs
+- Change neutral joint positions, neutral mesh positions, and blendshape delta values
+- Prune blendshapes
+- Remove all blend shape data
 
 
 ## External Software Dependencies
@@ -51,9 +51,9 @@ DNACalib Python wrapper can be used in Python 3.7, `mayapy` (Maya's Python inter
 
 ## DNAViewer
 With DNAViewer, you can:
-- Create functional rigs for Maya.
-- Export FBX files.
-- Read internal parts of DNA files.
+- Create functional rigs for Maya
+- Export FBX files
+- Read internal parts of DNA files
 
 DNAViewer can be used in `mayapy` (Maya's Python interpreter) or in Maya 2022, except [Propagating changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py) which can be used just in Maya.
 
