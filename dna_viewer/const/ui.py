@@ -1,6 +1,6 @@
 WINDOW_OBJECT = "dnaviewer"
 WINDOW_TITLE = "DNA Viewer"
-HELP_URL = "https://pages.github.ol.epicgames.net/MHTech/dna_calibration"
+HELP_URL = "https://epicgames.github.io/MetaHuman-DNA-Calibration/"
 SPACING = 6
 
 WINDOW_SIZE_WIDTH_MIN = 550

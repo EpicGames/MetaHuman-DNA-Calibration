@@ -2,22 +2,9 @@
 
 ## Fix "RuntimeError: Error loading DNA: DNA signature mismatched, expected DNA, got ver?"
 
-DNA files are stored as [LFS](https://git-lfs.github.com/) files (Here is [another explanaintion](https://www.atlassian.com/git/tutorials/git-lfs) what LFS is). 
-This problem occurs when repo is downloaded as zip, and github then does not download LFS files as whole file, but as some metadata file.  
-Open that Ada.dna file in some editor file, from location were MetaHuman DNA Calibration is downloaded and then in 
-`data/dna/Ada.dna` (eg `c:/MetaHuman-DNA-Calibration/data/dna/Ada.dna` you will got this:
-
-```
-version https://git-lfs.github.com/spec/v1
-oid sha256:e764cfab938283231bcb3e5af1c7bcbec5154bab4804aafa1b5b7dc6e400ca5e
-size 73730354
-```
-Which is not valid DNA file. 
-
-There is two ways to fix this issue:
-- `git clone git clone https://github.com/EpicGames/MetaHuman-DNA-Calibration.git`
-- manually download [Ada.dna](../data/dna/Ada.dna) and/or [Taro.dna](../data/dna/Taro.dna), and put them in data directory 
-where you downloaded MetaHuman DNA Calibration. eg. `c:/MetaHuman-DNA-Calibration/data/dna`
+In order to fix this issue, you should install [git-lfs](https://git-lfs.github.com/), and clone the repository again. 
+DNA files will be downloaded correctly then.
+If you cannot install git-lfs, you can download DNA files manually.
 
 
 ## How do I distribute a Maya scene?

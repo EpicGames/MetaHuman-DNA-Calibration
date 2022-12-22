@@ -88,7 +88,7 @@ Prerequisites:
 - [CMake](https://cmake.org/download/) at least version 3.14
 - [SWIG](https://www.swig.org/download.html) at least version 4.0.0
 - [Python](https://www.python.org/downloads/) To specify the exact version of python3 to use, set the CMake variable
-`PYTHON3_EXACT_VERSION`. For example, to use the lib from Maya 2022, use minimum version 3.7.
+`PYTHON3_EXACT_VERSION`. For example, to use the lib from Maya 2022, use version 3.7.
 
 Use CMake to generate the build scripts required for building, e.g. by executing the following commands from the
 [`dna_calibration/dnacalib/`](/dnacalib) directory:
