@@ -37,9 +37,15 @@ To use these tools, you should be familiar with:
 
 
 ## External Software Dependencies
-DNACalib's Python wrapper is compiled against Python 3.7. If you are using a different version of Python, you must recompile it. Any Python 3 version should be fine.
-Pre-compiled binaries for Windows and Linux (both 64-bit) are part of the repository.
+DNACalib's Python wrapper is compiled against Python 3.7. Pre-compiled binaries for Windows and Linux (both 64-bit) are part of the repository.
+If you are using a different version of Python, you must recompile it. Any Python 3 version should be fine.
 If a user has a different platform or architecture, the library and its dependencies must be compiled.
+
+**Important**
+DNA files are stored as [LFS (Large File Storage)](https://git-lfs.github.com/) files. They are downloaded with the rest of the code if 
+git-lfs is installed and configured to use. If you are not using git-lfs, you have to download DNA files manually. 
+
+Additional information can be found [here](docs/faq.md#fix--runtimeerror--error-loading-dna--dna-signature-mismatched-expected-dna-got-ver-)
 
 **Warning:** 
 Python 2 is not supported.
