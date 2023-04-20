@@ -16,6 +16,8 @@
 #include "dnacalib/commands/ClearBlendShapesCommand.h"
 #include "dnacalib/commands/CommandSequence.h"
 #include "dnacalib/commands/PruneBlendShapeTargetsCommand.h"
+#include "dnacalib/commands/RemoveAnimatedMapCommand.h"
+#include "dnacalib/commands/RemoveBlendShapeCommand.h"
 #include "dnacalib/commands/RemoveJointAnimationCommand.h"
 #include "dnacalib/commands/RemoveJointCommand.h"
 #include "dnacalib/commands/RemoveMeshCommand.h"
@@ -41,6 +43,7 @@
 py_list_to_array_view(dnac::ConstArrayView<dnac::Vector3>, SWIG_TYPECHECK_FLOAT_ARRAY)
 py_list_to_array_view(dnac::ConstArrayView<float>, SWIG_TYPECHECK_FLOAT_ARRAY)
 py_list_to_array_view(dnac::ConstArrayView<std::uint16_t>, SWIG_TYPECHECK_INT16_ARRAY)
+py_list_to_array_view(dnac::ConstArrayView<std::uint32_t>, SWIG_TYPECHECK_INT32_ARRAY)
 
 array_view_to_py_list(trust::ArrayView);
 %apply trust::ArrayView {
@@ -102,6 +105,8 @@ CommandSequence.remove = command_sequence_remove(CommandSequence.remove)
 %include "dnacalib/commands/CalculateMeshLowerLODsCommand.h"
 %include "dnacalib/commands/ClearBlendShapesCommand.h"
 %include "dnacalib/commands/PruneBlendShapeTargetsCommand.h"
+%include "dnacalib/commands/RemoveAnimatedMapCommand.h"
+%include "dnacalib/commands/RemoveBlendShapeCommand.h"
 %include "dnacalib/commands/RemoveJointAnimationCommand.h"
 %include "dnacalib/commands/RemoveJointCommand.h"
 %include "dnacalib/commands/RemoveMeshCommand.h"

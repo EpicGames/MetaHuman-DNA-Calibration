@@ -75,6 +75,7 @@ These are:
 - [Rename a joint](/examples/dnacalib_rename_joint_demo.py)
 - [Create a small DNA from scratch](/examples/dna_demo.py)
 - [Create a new DNA from an existing one by extracting specific LODs](/examples/dnacalib_lod_demo.py)
+- [Read binary DNA and write it in a human readable format](/examples/dna_binary_to_json_demo.py)
 - [Remove a joint](/examples/dnacalib_remove_joint.py)
 - [Clear blend shape data](/examples/dnacalib_clear_blend_shapes.py)
 - [Subtract values from neutral mesh](/examples/dnacalib_neutral_mesh_subtract.py)
@@ -88,10 +89,10 @@ Prerequisites:
 - [CMake](https://cmake.org/download/) at least version 3.14
 - [SWIG](https://www.swig.org/download.html) at least version 4.0.0
 - [Python](https://www.python.org/downloads/) To specify the exact version of python3 to use, set the CMake variable
-`PYTHON3_EXACT_VERSION`. For example, to use the lib from Maya 2022, use version 3.7.
+`PYTHON3_EXACT_VERSION`. For example, to use the lib from Maya 2022, use version 3.7. For Maya 2023, use version 3.9.
 
 Use CMake to generate the build scripts required for building, e.g. by executing the following commands from the
-[`dna_calibration/dnacalib/`](/dnacalib) directory:
+[`MetaHuman-DNA-Calibration/dnacalib/`](/dnacalib) directory:
 
 ```
 mkdir build

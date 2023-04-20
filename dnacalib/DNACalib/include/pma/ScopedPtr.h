@@ -118,14 +118,14 @@ class ScopedPtr : private TDestroyer {
         template<typename U>
         struct inspect {
             using element_type = U;
-            using pointer_type = element_type *;
+            using pointer_type = element_type*;
             using is_array = std::false_type;
         };
 
         template<typename U>
         struct inspect<U[]> {
             using element_type = U;
-            using pointer_type = element_type *;
+            using pointer_type = element_type*;
             using is_array = std::true_type;
         };
 

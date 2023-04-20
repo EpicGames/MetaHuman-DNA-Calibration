@@ -35,6 +35,7 @@ class RotateCommand::Impl : public CommandImplBase<Impl> {
             if (degrees != Vector3{}) {
                 rotateNeutralJoints(output);
                 rotateVertexPositions(output);
+                rotateBlendShapeTargetDeltas(output);
             }
         }
 
@@ -89,6 +90,29 @@ class RotateCommand::Impl : public CommandImplBase<Impl> {
                     mesh.zs[i] = rotatedVertex[2];
                 }
                 output->setVertexPositions(meshIndex, std::move(mesh));
+            }
+        }
+
+        void rotateBlendShapeTargetDeltas(DNACalibDNAReaderImpl* output) {
+            const auto rotationMatrix = getRotationTransformationMatrix();
+            for (std::uint16_t meshIndex = 0u; meshIndex < output->getMeshCount(); ++meshIndex) {
+                for (std::uint16_t blendShapeTargetIndex = 0u;
+                     blendShapeTargetIndex < output->getBlendShapeTargetCount(meshIndex);
+                     ++blendShapeTargetIndex) {
+                    const auto xs = output->getBlendShapeTargetDeltaXs(meshIndex, blendShapeTargetIndex);
+                    const auto ys = output->getBlendShapeTargetDeltaYs(meshIndex, blendShapeTargetIndex);
+                    const auto zs = output->getBlendShapeTargetDeltaZs(meshIndex, blendShapeTargetIndex);
+                    assert((xs.size() == ys.size()) && (ys.size() == zs.size()));
+                    RawVector3Vector deltas{xs, ys, zs, output->getMemoryResource()};
+                    for (std::size_t i = 0ul; i < deltas.size(); ++i) {
+                        const tdm::fvec4 delta{deltas.xs[i], deltas.ys[i], deltas.zs[i], 1.0f};
+                        const tdm::fvec4 rotatedDelta = delta * rotationMatrix;
+                        deltas.xs[i] = rotatedDelta[0];
+                        deltas.ys[i] = rotatedDelta[1];
+                        deltas.zs[i] = rotatedDelta[2];
+                    }
+                    output->setBlendShapeTargetDeltas(meshIndex, blendShapeTargetIndex, std::move(deltas));
+                }
             }
         }
 

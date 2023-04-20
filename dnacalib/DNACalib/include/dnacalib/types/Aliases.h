@@ -17,6 +17,7 @@
 #include <pma/resources/ArenaMemoryResource.h>
 #include <pma/resources/DefaultMemoryResource.h>
 #include <status/Status.h>
+#include <status/StatusCode.h>
 #include <trio/Stream.h>
 #include <trio/streams/FileStream.h>
 #include <trio/streams/MemoryMappedFileStream.h>

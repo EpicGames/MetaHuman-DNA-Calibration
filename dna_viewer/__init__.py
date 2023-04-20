@@ -1,12 +1,23 @@
-from .config.character import BuildOptions
-from .reader.dna import load_dna
-from .ui.dna_viewer_window import show_dna_viewer_window
-from .util.assemble import assemble_rig
-from .util.mesh import (
-    build_meshes,
-    create_build_options,
-    get_mesh_index,
-    get_mesh_lods,
-    get_mesh_names,
+from .api import build_meshes, build_rig
+from .builder.config import Config, RigConfig
+from .builder.maya.skin_weights import (
+    get_skin_weights_from_scene,
+    set_skin_weights_to_scene,
 )
-from .util.mesh_helper import print_mesh_indices_containing_string, print_meshes
+from .dnalib.dnalib import DNA
+from .dnalib.layer import Layer
+from .ui.app import show
+from .version import __version__
+
+__all__ = [
+    "DNA",
+    "build_rig",
+    "build_meshes",
+    "show",
+    "get_skin_weights_from_scene",
+    "set_skin_weights_to_scene",
+    "Config",
+    "RigConfig",
+    "Layer",
+    "__version__",
+]

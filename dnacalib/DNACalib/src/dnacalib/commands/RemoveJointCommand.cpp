@@ -16,19 +16,24 @@ class RemoveJointCommand::Impl : public CommandImplBase<Impl> {
     public:
         explicit Impl(MemoryResource* memRes_) :
             Super{memRes_},
-            jointIndex{std::numeric_limits<std::uint16_t>::max()} {
+            jointIndices{memRes_} {
         }
 
         void setJointIndex(std::uint16_t jointIndex_) {
-            jointIndex = jointIndex_;
+            jointIndices.resize(1);
+            jointIndices[0] = jointIndex_;
+        }
+
+        void setJointIndices(ConstArrayView<std::uint16_t> jointIndices_) {
+            jointIndices.assign(jointIndices_.begin(), jointIndices_.end());
         }
 
         void run(DNACalibDNAReaderImpl* output) {
-            output->removeJoint(jointIndex);
+            output->removeJoints(ConstArrayView<std::uint16_t>{jointIndices});
         }
 
     private:
-        std::uint16_t jointIndex;
+        Vector<std::uint16_t> jointIndices;
 
 };
 
@@ -41,12 +46,22 @@ RemoveJointCommand::RemoveJointCommand(std::uint16_t jointIndex, MemoryResource*
     pImpl->setJointIndex(jointIndex);
 }
 
+RemoveJointCommand::RemoveJointCommand(ConstArrayView<std::uint16_t> jointIndices, MemoryResource* memRes) :
+    pImpl{makeScoped<Impl>(memRes)} {
+
+    pImpl->setJointIndices(jointIndices);
+}
+
 RemoveJointCommand::~RemoveJointCommand() = default;
 RemoveJointCommand::RemoveJointCommand(RemoveJointCommand&&) = default;
 RemoveJointCommand& RemoveJointCommand::operator=(RemoveJointCommand&&) = default;
 
 void RemoveJointCommand::setJointIndex(std::uint16_t jointIndex) {
     pImpl->setJointIndex(jointIndex);
+}
+
+void RemoveJointCommand::setJointIndices(ConstArrayView<std::uint16_t> jointIndices) {
+    pImpl->setJointIndices(jointIndices);
 }
 
 void RemoveJointCommand::run(DNACalibDNAReader* output) {

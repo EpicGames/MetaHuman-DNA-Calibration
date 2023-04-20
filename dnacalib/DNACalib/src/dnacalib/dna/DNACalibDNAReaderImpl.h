@@ -53,11 +53,18 @@ class DNACalibDNAReaderImpl : public ReaderImpl<DNACalibDNAReader>, public Write
                                        ConstArrayView<float> ys,
                                        ConstArrayView<float> zs);
         void setBlendShapeTargetDeltas(std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, RawVector3Vector&& deltas);
+
+        using WriterImpl<dna::Writer>::setBlendShapeTargetVertexIndices;
+        void setBlendShapeTargetVertexIndices(std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex,
+                                              ConstArrayView<std::uint32_t> vertexIndices);
+
         void pruneBlendShapeTargets(float threshold);
 
-        void removeMesh(std::uint16_t meshIndex);
-        void removeJoint(std::uint16_t jointIndex);
-        void removeJointAnimation(std::uint16_t jointIndex);
+        void removeMeshes(ConstArrayView<std::uint16_t> meshIndices);
+        void removeJoints(ConstArrayView<std::uint16_t> jointIndices);
+        void removeJointAnimations(ConstArrayView<std::uint16_t> jointIndex);
+        void removeBlendShapes(ConstArrayView<std::uint16_t> blendShapeIndices);
+        void removeAnimatedMaps(ConstArrayView<std::uint16_t> animatedMapIndices);
 
 };
 

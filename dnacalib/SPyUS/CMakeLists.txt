@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14)
 ################################################
 # Project setup
 set(SPYUS spyus)
-set(SPYUS_VERSION 1.2.0)
+set(SPYUS_VERSION 1.2.1)
 
 # Prevent in-source-tree builds
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)

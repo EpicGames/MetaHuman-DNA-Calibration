@@ -14,8 +14,6 @@ namespace dna {
     @brief Read-only accessors for various metadata about the character and the rig.
     @warning
         Implementors should inherit from Reader itself and not this class.
-    @note
-        The inherited LODExtentReader provides the interface to access the LOD count.
     @see Reader
 */
 class DNAAPI DescriptorReader {
@@ -34,7 +32,6 @@ class DNAAPI DescriptorReader {
             @warning
                 The index must be less than the value returned by getMetaDataCount.
             @return View over the key name string.
-            @see getMedaData
         */
         virtual StringView getMetaDataKey(std::uint32_t index) const = 0;
         /**

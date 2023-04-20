@@ -38,7 +38,6 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @warning
                 The index must be less than the value returned by getGUIControlCount.
             @return View over the GUI control name string.
-            @see Controls
         */
         virtual StringView getGUIControlName(std::uint16_t index) const = 0;
 
@@ -50,7 +49,6 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @warning
                 The index must be less than the value returned by getRawControlCount.
             @return View over the control name string.
-            @see Controls
         */
         virtual StringView getRawControlName(std::uint16_t index) const = 0;
 
@@ -62,7 +60,6 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @warning
                 The index must be less than the value returned by getJointCount.
             @return View over the joint name string.
-            @see Joints
         */
         virtual StringView getJointName(std::uint16_t index) const = 0;
         /**
@@ -115,7 +112,6 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @warning
                 The index must be less than the value returned by BlendShapeChannelExtentReader::getBlendShapeChannelCount.
             @return View over the blend shape channel name string.
-            @see BlendShapes
         */
         virtual StringView getBlendShapeChannelName(std::uint16_t index) const = 0;
         /**
@@ -129,11 +125,11 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @param lod
                 The level of detail which blend shape channels are being requested.
             @warning
-                The lod index must be less than the value returned by LODExtentReader::getLODCount.
+                The lod index must be less than the value returned by getLODCount.
             @return View over the blend shape channel indices.
             @warning
                 These LOD indices are not interchangeable with the LOD values from BehaviorReader::getBlendShapeChannelLODs.
-            @see LODExtentReader::getLODCount
+            @see getLODCount
             @see getBlendShapeChannelName
         */
         virtual ConstArrayView<std::uint16_t> getBlendShapeChannelIndicesForLOD(std::uint16_t lod) const = 0;
@@ -146,7 +142,6 @@ class DNAAPI DefinitionReader : public DescriptorReader {
             @warning
                 The index must be less than the value returned by getAnimatedMapCount.
             @return View over the animated map name string.
-            @see AnimatedMaps
         */
         virtual StringView getAnimatedMapName(std::uint16_t index) const = 0;
         /**

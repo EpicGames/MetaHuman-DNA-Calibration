@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 ################################################
 # Project setup
 set(DNAC dnacalib)
-set(DNAC_VERSION 6.6.0)
+set(DNAC_VERSION 6.8.0)
 # Prevent in-source-tree builds
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 # Create compilation database
@@ -68,6 +68,8 @@ set(HEADERS
     include/dnacalib/commands/CommandSequence.h
     include/dnacalib/commands/ConditionalCommand.h
     include/dnacalib/commands/PruneBlendShapeTargetsCommand.h
+    include/dnacalib/commands/RemoveAnimatedMapCommand.h
+    include/dnacalib/commands/RemoveBlendShapeCommand.h
     include/dnacalib/commands/RemoveJointAnimationCommand.h
     include/dnacalib/commands/RemoveJointCommand.h
     include/dnacalib/commands/RemoveMeshCommand.h
@@ -101,6 +103,8 @@ set(SOURCES
     src/dnacalib/commands/ClearBlendShapesCommand.cpp
     src/dnacalib/commands/CommandSequence.cpp
     src/dnacalib/commands/PruneBlendShapeTargetsCommand.cpp
+    src/dnacalib/commands/RemoveAnimatedMapCommand.cpp
+    src/dnacalib/commands/RemoveBlendShapeCommand.cpp
     src/dnacalib/commands/RemoveJointAnimationCommand.cpp
     src/dnacalib/commands/RemoveJointCommand.cpp
     src/dnacalib/commands/RemoveMeshCommand.cpp
@@ -230,7 +234,7 @@ target_supported_compile_options(${DNAC} PRIVATE "${CXX_EXTRA_FLAGS}")
 
 ################################################
 # Dependencies
-include(Dependencies)
+include(DNACDependencies)
 
 set(ADAPTABLE_HEADERS)
 foreach(hdr IN LISTS HEADERS)

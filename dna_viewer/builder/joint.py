@@ -2,7 +2,7 @@ from typing import Dict, List
 
 from maya import cmds
 
-from ..model.joint import Joint as JointModel
+from ..model import Joint as JointModel
 
 
 class Joint:
@@ -14,22 +14,12 @@ class Joint:
     @type joints: List[JointModel]
     @param joints: data representing the joints
 
-    @type linear_modifier: float
-    @param linear_modifier: The linear modifier that should be applied to the joints
-
-    @type angle_modifier: float
-    @param angle_modifier: The linear modifier that should be applied to the joints
-
     @type joint_flags: Dict[str, bool]
     @param joint_flags: A mapping used for setting flags that are used to avoid adding the same joint multiple times
     """
 
-    def __init__(
-        self, joints: List[JointModel], linear_modifier: float, angle_modifier: float
-    ) -> None:
+    def __init__(self, joints: List[JointModel]) -> None:
         self.joints = joints
-        self.linear_modifier = linear_modifier
-        self.angle_modifier = angle_modifier
         self.joint_flags: Dict[str, bool] = {}
 
         for joint in self.joints:
@@ -62,14 +52,14 @@ class Joint:
                 in_parent_space = False
 
         position = (
-            self.linear_modifier * joint.translation.x,
-            self.linear_modifier * joint.translation.y,
-            self.linear_modifier * joint.translation.z,
+            joint.translation.x,
+            joint.translation.y,
+            joint.translation.z,
         )
         orientation = (
-            self.angle_modifier * joint.orientation.x,
-            self.angle_modifier * joint.orientation.y,
-            self.angle_modifier * joint.orientation.z,
+            joint.orientation.x,
+            joint.orientation.y,
+            joint.orientation.z,
         )
         cmds.joint(
             p=position,
@@ -77,6 +67,7 @@ class Joint:
             n=joint.name,
             r=in_parent_space,
             a=not in_parent_space,
+            scaleCompensate=False,
         )
         self.joint_flags[joint.name] = True
 

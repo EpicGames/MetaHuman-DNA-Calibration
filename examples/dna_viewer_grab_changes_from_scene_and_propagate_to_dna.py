@@ -1,10 +1,13 @@
 """
-This example demonstrates how some can propagate changes from maya scene to dna file. Follow the steps:
+This example demonstrates how to propagate changes from maya scene to dna file.
+IMPORTANT: You have to setup the environment before running this example. Please refer to the 'Environment setup' section in README.md.
+
+Follow the steps:
 
 1. Start Maya
 2. open maya scene (do 2.1 or 2.2)
 2.1. Open existing maya scene generated from dna or
-2.2. start DNA Viewer GUI (run_maya_app_demo.py)
+2.2. start DNA Viewer GUI (dna_viewer_run_in_maya.py)
     - Select DNA file that you want to load and generate scene for
     - Select meshes that you want to change
     - Tick joints in Build Options
@@ -28,26 +31,21 @@ After performing this steps, your changes in maya scene will pe propagated to dn
     Use `/` (forward slash), because Maya uses forward slashes in path.
 
 - customization:
-    - change CHARACTER_NAME to Taro, or name of file which is copied to /data/dna
+    - change CHARACTER_NAME to Taro, or the name of a custom DNA file placed in /data/dna_files
 
 Expected:
-    - script will generate dna file <CHARACTER_NAME>_modified.dna in OUTPUT_DIR, eg. Ada_modified.dna
-    - script will generate maya scene <CHARACTER_NAME>_modified.mb in OUTPUT_DIR, eg. Ada_modified.mb
+    - script will generate dna file <CHARACTER_NAME>_modified.dna in OUTPUT_DIR, e.g. Ada_modified.dna
+    - script will generate maya scene <CHARACTER_NAME>_modified.mb in OUTPUT_DIR, e.g. Ada_modified.mb
     - script will generate workspace.mel in OUTPUT_DIR
 
-NOTE: If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the lib/linux directory before running the example:
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-lib-linux-dir>
+NOTE: If OUTPUT_DIR does not exist, it will be created.
 """
-
-import logging
 
 import maya.OpenMaya as om
 from maya import cmds
 
-from os import environ, makedirs
+from os import makedirs
 from os import path as ospath
-from sys import path as syspath
-from sys import platform
 
 CHARACTER_NAME = "Ada"
 
@@ -56,50 +54,32 @@ ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
 ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
 DATA_DIR = f"{ROOT_DIR}/data"
-DNA_DIR = f"{DATA_DIR}/dna"
+DNA_DIR = f"{DATA_DIR}/dna_files"
 CHARACTER_DNA = f"{DNA_DIR}/{CHARACTER_NAME}.dna"
 ANALOG_GUI = f"{DATA_DIR}/analog_gui.ma"
 GUI = f"{DATA_DIR}/gui.ma"
-AFTER_ASSEMBLY_SCRIPT = f"{DATA_DIR}/after_assembly_script.py"
+ADDITIONAL_ASSEMBLE_SCRIPT = f"{DATA_DIR}/additional_assemble_script.py"
 ADD_MESH_NAME_TO_BLEND_SHAPE_CHANNEL_NAME = True
-
 
 MODIFIED_CHARACTER_DNA = f"{OUTPUT_DIR}/{CHARACTER_NAME}_modified"
 
-if platform == "win32":
-    LIB_DIR = f"{ROOT_LIB_DIR}/windows"
-elif platform == "linux":
-    LIB_DIR = f"{ROOT_LIB_DIR}/linux"
-else:
-    raise OSError(
-        "OS not supported, please compile dependencies and add value to LIB_DIR"
-    )
-
-# Add bin directory to maya plugin path
-if "MAYA_PLUG_IN_PATH" in environ:
-    separator = ":" if platform == "linux" else ";"
-    environ["MAYA_PLUG_IN_PATH"] = separator.join([environ["MAYA_PLUG_IN_PATH"], LIB_DIR])
-else:
-    environ["MAYA_PLUG_IN_PATH"] = LIB_DIR
-
-# Adds directories to path
-syspath.insert(0, ROOT_DIR)
-syspath.insert(0, LIB_DIR)
-
-from dna import DataLayer_All, FileStream, Status, BinaryStreamReader, BinaryStreamWriter
+from dna import (
+    BinaryStreamReader,
+    BinaryStreamWriter,
+    DataLayer_All,
+    FileStream,
+    Status,
+)
 from dnacalib import (
     CommandSequence,
     DNACalibDNAReader,
-    RenameJointCommand,
-    ScaleCommand,
-    SetBlendShapeTargetDeltasCommand,
+    SetNeutralJointRotationsCommand,
+    SetNeutralJointTranslationsCommand,
     SetVertexPositionsCommand,
     VectorOperation_Add,
-    VectorOperation_Interpolate,
-    SetNeutralJointTranslationsCommand,
-    SetNeutralJointRotationsCommand
 )
-from dna_viewer import assemble_rig, load_dna
+
+from dna_viewer import DNA, RigConfig, build_rig
 
 
 def load_dna_reader(path):
@@ -113,7 +93,11 @@ def load_dna_reader(path):
 
 
 def save_dna(reader):
-    stream = FileStream(f"{MODIFIED_CHARACTER_DNA}.dna", FileStream.AccessMode_Write, FileStream.OpenMode_Binary)
+    stream = FileStream(
+        f"{MODIFIED_CHARACTER_DNA}.dna",
+        FileStream.AccessMode_Write,
+        FileStream.OpenMode_Binary,
+    )
     writer = BinaryStreamWriter(stream)
     writer.setFrom(reader)
     writer.write()
@@ -135,7 +119,10 @@ def get_mesh_vertex_positions_from_scene(meshName):
         positions = om.MPointArray()
 
         mf_mesh.getPoints(positions, om.MSpace.kObject)
-        return [[positions[i].x, positions[i].y, positions[i].z] for i in range(positions.length())]
+        return [
+            [positions[i].x, positions[i].y, positions[i].z]
+            for i in range(positions.length())
+        ]
     except RuntimeError:
         print(f"{meshName} is missing, skipping it")
         return None
@@ -173,7 +160,9 @@ def run_joints_command(reader, calibrated):
         raise RuntimeError(f"Error run_joints_command: {status.message}")
 
 
-def run_vertices_command(calibrated, old_vertices_positions, new_vertices_positions, mesh_index):
+def run_vertices_command(
+    calibrated, old_vertices_positions, new_vertices_positions, mesh_index
+):
     # making deltas between old vertices positions and new one
     deltas = []
     for new_vertex, old_vertex in zip(new_vertices_positions, old_vertices_positions):
@@ -183,7 +172,9 @@ def run_vertices_command(calibrated, old_vertices_positions, new_vertices_positi
         deltas.append(delta)
 
     # this is step 5 sub-step c
-    new_neutral_mesh = SetVertexPositionsCommand(mesh_index, deltas, VectorOperation_Add)
+    new_neutral_mesh = SetVertexPositionsCommand(
+        mesh_index, deltas, VectorOperation_Add
+    )
     commands = CommandSequence()
     # Add nex vertex position deltas (NOT ABSOLUTE VALUES) onto existing vertex positions
     commands.add(new_neutral_mesh)
@@ -196,13 +187,13 @@ def run_vertices_command(calibrated, old_vertices_positions, new_vertices_positi
 
 
 def assemble_maya_scene():
-    dna = load_dna(f"{MODIFIED_CHARACTER_DNA}.dna")
-    assemble_rig(dna=dna,
-                 gui_path=f"{DATA_DIR}/gui.ma",
-                 analog_gui_path=f"{DATA_DIR}/analog_gui.ma",
-                 aas_path=f"{DATA_DIR}/after_assembly_script.py",
-                 with_attributes_on_root_joint=True,
-                 with_key_frames=True)
+    dna = DNA(f"{MODIFIED_CHARACTER_DNA}.dna")
+    config = RigConfig(
+        gui_path=f"{DATA_DIR}/gui.ma",
+        analog_gui_path=f"{DATA_DIR}/analog_gui.ma",
+        aas_path=ADDITIONAL_ASSEMBLE_SCRIPT,
+    )
+    build_rig(dna=dna, config=config)
 
     cmds.file(rename=f"{MODIFIED_CHARACTER_DNA}.mb")
     cmds.file(save=True)
@@ -210,24 +201,28 @@ def assemble_maya_scene():
 
 makedirs(OUTPUT_DIR, exist_ok=True)
 
-dna = load_dna(CHARACTER_DNA)
+dna = DNA(CHARACTER_DNA)
+config = RigConfig(
+    gui_path=f"{DATA_DIR}/gui.ma",
+    analog_gui_path=f"{DATA_DIR}/analog_gui.ma",
+    aas_path=ADDITIONAL_ASSEMBLE_SCRIPT,
+)
+build_rig(dna=dna, config=config)
 
 # this is step 3 sub-step a
 current_vertices_positions = {}
 mesh_indices = []
-for mesh_index, name in enumerate(dna.get_mesh_names()):
+for mesh_index, name in enumerate(dna.meshes.names):
     current_vertices_positions[name] = {
         "mesh_index": mesh_index,
-        "positions": get_mesh_vertex_positions_from_scene(name)
+        "positions": get_mesh_vertex_positions_from_scene(name),
     }
 # loaded data - end of 3rd step
 ##################################
 
-
 ##################################
 # modify rig in maya, 4th step
 ##################################
-
 
 ##################################
 # propagate changes to dna, 5th step
@@ -239,6 +234,8 @@ run_joints_command(reader, calibrated)
 for name, item in current_vertices_positions.items():
     new_vertices_positions = get_mesh_vertex_positions_from_scene(name)
     if new_vertices_positions:
-        run_vertices_command(calibrated, item["positions"], new_vertices_positions, item["mesh_index"])
+        run_vertices_command(
+            calibrated, item["positions"], new_vertices_positions, item["mesh_index"]
+        )
 save_dna(calibrated)
 assemble_maya_scene()

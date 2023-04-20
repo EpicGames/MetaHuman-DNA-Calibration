@@ -18,10 +18,17 @@ class DNACalibDNAReader;
 */
 class SetBlendShapeTargetDeltasCommand : public Command {
     public:
+        DNACAPI static const sc::StatusCode VertexIndicesOutOfBoundsError;
+        DNACAPI static const sc::StatusCode NoVertexIndicesSetError;
+        DNACAPI static const sc::StatusCode DeltasVertexIndicesCountMismatch;
+        DNACAPI static const sc::StatusCode DeltasMasksCountMismatch;
+
+    public:
         DNACAPI explicit SetBlendShapeTargetDeltasCommand(MemoryResource* memRes = nullptr);
         DNACAPI SetBlendShapeTargetDeltasCommand(std::uint16_t meshIndex,
                                                  std::uint16_t blendShapeTargetIndex,
                                                  ConstArrayView<Vector3> deltas,
+                                                 ConstArrayView<std::uint32_t> vertexIndices,
                                                  VectorOperation operation,
                                                  MemoryResource* memRes = nullptr);
         DNACAPI SetBlendShapeTargetDeltasCommand(std::uint16_t meshIndex,
@@ -29,11 +36,13 @@ class SetBlendShapeTargetDeltasCommand : public Command {
                                                  ConstArrayView<float> xs,
                                                  ConstArrayView<float> ys,
                                                  ConstArrayView<float> zs,
+                                                 ConstArrayView<std::uint32_t> vertexIndices,
                                                  VectorOperation operation,
                                                  MemoryResource* memRes = nullptr);
         DNACAPI SetBlendShapeTargetDeltasCommand(std::uint16_t meshIndex,
                                                  std::uint16_t blendShapeTargetIndex,
                                                  ConstArrayView<Vector3> deltas,
+                                                 ConstArrayView<std::uint32_t> vertexIndices,
                                                  ConstArrayView<float> masks,
                                                  VectorOperation operation,
                                                  MemoryResource* memRes = nullptr);
@@ -42,6 +51,7 @@ class SetBlendShapeTargetDeltasCommand : public Command {
                                                  ConstArrayView<float> xs,
                                                  ConstArrayView<float> ys,
                                                  ConstArrayView<float> zs,
+                                                 ConstArrayView<std::uint32_t> vertexIndices,
                                                  ConstArrayView<float> masks,
                                                  VectorOperation operation,
                                                  MemoryResource* memRes = nullptr);
@@ -84,6 +94,13 @@ class SetBlendShapeTargetDeltasCommand : public Command {
                 The Z values for each delta.
         */
         DNACAPI void setDeltas(ConstArrayView<float> xs, ConstArrayView<float> ys, ConstArrayView<float> zs);
+
+        /**
+            @brief Method for setting the vertex indices that correspond to new deltas.
+            @param vertexIndices
+                The vertexIndices.
+        */
+        DNACAPI void setVertexIndices(ConstArrayView<std::uint32_t> vertexIndices);
 
         /**
             @brief Method for setting masks used to calculate new deltas for blend shape target.

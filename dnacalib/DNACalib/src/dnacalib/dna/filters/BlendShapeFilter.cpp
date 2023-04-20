@@ -12,13 +12,16 @@ namespace dnac {
 BlendShapeFilter::BlendShapeFilter(MemoryResource* memRes_) :
     memRes{memRes_},
     passingIndices{memRes},
-    remappedIndices{memRes} {
+    remappedIndices{memRes},
+    newBlendShapeLODs{memRes} {
 }
 
-void BlendShapeFilter::configure(std::uint16_t blendShapeCount, UnorderedSet<std::uint16_t> allowedBlendShapeIndices) {
+void BlendShapeFilter::configure(std::uint16_t blendShapeCount, UnorderedSet<std::uint16_t> allowedBlendShapeIndices,
+                                 Vector<std::uint16_t> blendShapeLODs) {
     passingIndices = std::move(allowedBlendShapeIndices);
     // Fill the structure that maps indices prior to deletion to indices after deletion
     remap(blendShapeCount, passingIndices, remappedIndices);
+    newBlendShapeLODs = std::move(blendShapeLODs);
 }
 
 void BlendShapeFilter::apply(RawDefinition& dest) {
@@ -35,6 +38,45 @@ void BlendShapeFilter::apply(RawDefinition& dest) {
         };
     dest.meshBlendShapeChannelMapping.removeIf(ignoredByLODConstraint);
     dest.meshBlendShapeChannelMapping.updateTo(remappedIndices);
+}
+
+void BlendShapeFilter::apply(RawBehavior& dest) {
+    UnorderedSet<std::size_t> indicesToDelete{memRes};
+
+    // Remove output indices of blend shapes to remove
+    extd::filter(dest.blendShapeChannels.outputIndices, [this, &indicesToDelete](std::uint16_t outputIndex, std::size_t index) {
+            if (!passes(outputIndex)) {
+                indicesToDelete.insert(index);
+                return false;
+            }
+            return true;
+        });
+
+    // Remap remaining output indices
+    for (auto& outputIdx : dest.blendShapeChannels.outputIndices) {
+        outputIdx = remappedIndices[outputIdx];
+    }
+
+    // Remove input indices associated with the removed output indices
+    extd::filter(dest.blendShapeChannels.inputIndices, [&indicesToDelete](std::uint16_t  /*unused*/, std::size_t index) {
+            return (indicesToDelete.find(index) == indicesToDelete.end());
+        });
+
+    // Set new LODs
+    assert(newBlendShapeLODs.size() == dest.blendShapeChannels.lods.size());
+    dest.blendShapeChannels.lods.assign(newBlendShapeLODs.begin(), newBlendShapeLODs.end());
+}
+
+void BlendShapeFilter::apply(RawMesh& dest) {
+    // Remove blend shape targets of blend shapes to remove
+    extd::filter(dest.blendShapeTargets, [this](const RawBlendShapeTarget& bsTarget, std::size_t  /*unused*/) {
+            return passes(bsTarget.blendShapeChannelIndex);
+        });
+
+    // Remap blend shape targets
+    for (auto& bsTarget : dest.blendShapeTargets) {
+        bsTarget.blendShapeChannelIndex = remappedIndices[bsTarget.blendShapeChannelIndex];
+    }
 }
 
 bool BlendShapeFilter::passes(std::uint16_t index) const {

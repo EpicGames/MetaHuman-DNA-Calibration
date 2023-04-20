@@ -13,12 +13,13 @@ namespace dnac {
 class DNACalibDNAReader;
 
 /**
-    @brief RemoveMeshCommand is used to remove a mesh.
+    @brief RemoveMeshCommand is used to remove meshes.
 */
 class RemoveMeshCommand : public Command {
     public:
         DNACAPI explicit RemoveMeshCommand(MemoryResource* memRes = nullptr);
         DNACAPI RemoveMeshCommand(std::uint16_t meshIndex, MemoryResource* memRes = nullptr);
+        DNACAPI RemoveMeshCommand(ConstArrayView<std::uint16_t> meshIndices, MemoryResource* memRes = nullptr);
 
         DNACAPI ~RemoveMeshCommand();
 
@@ -34,6 +35,14 @@ class RemoveMeshCommand : public Command {
                 The index of the mesh.
         */
         DNACAPI void setMeshIndex(std::uint16_t meshIndex);
+        /**
+            @brief Method for setting the indices of meshes to remove.
+            @param meshIndices
+                The mesh indices.
+            @note Call to either setter overwrites previous setter calls. When running the command, the last set mesh(es) will be removed.
+        */
+        DNACAPI void setMeshIndices(ConstArrayView<std::uint16_t> meshIndices);
+
         DNACAPI void run(DNACalibDNAReader* output) override;
 
     private:
