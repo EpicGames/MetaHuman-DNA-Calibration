@@ -332,7 +332,7 @@ class DNAAPI GeometryReader : public virtual DefinitionReader {
                 A position in the zero-indexed array of blend shape targets within the specified mesh.
             @warning
                 blendShapeTargetIndex must be less than the value returned by getBlendShapeTargetCount.
-            @see DefinitionReader::getBlendShapeName
+            @see DefinitionReader::getBlendShapeChannelName
         */
         virtual std::uint16_t getBlendShapeChannelIndex(std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex) const = 0;
         /**

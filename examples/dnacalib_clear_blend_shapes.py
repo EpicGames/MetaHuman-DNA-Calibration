@@ -1,63 +1,35 @@
 """
 This example demonstrates how to remove all blend shape data from a DNA.
+IMPORTANT: You have to setup the environment before running this example. Please refer to the 'Environment setup' section in README.md.
+
 - usage in command line:
-    - call without arguments:
-        python dnacalib_clear_blend_shapes.py
-        mayapy dnacalib_clear_blend_shapes.py
-
-        Expected: Script will generate Ada_new.dna in OUTPUT_DIR from original Ada.dna.
-    - call with arguments:
-        python dnacalib_clear_blend_shapes.py --dna_path=<PATH TO INPUT FILE> --output_dna=<PATH TO NEW FILE>
-        mayapy dnacalib_clear_blend_shapes.py --dna_path=<PATH TO INPUT FILE> --output_dna=<PATH TO NEW FILE>
-
-        Expected: script will generate <PATH TO NEW FILE>.
-        NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
+    python dnacalib_clear_blend_shapes.py
+    mayapy dnacalib_clear_blend_shapes.py
 - usage in Maya:
     1. copy whole content of this file to Maya Script Editor
-    2. delete "if __name__ == "__main__":
-            main()"
-    3. delete whole "def main" method
-    4. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
+    2. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
     Use `/` (forward slash), because Maya uses forward slashes in path.
-    5. call method calibrate_dna(<PATH TO INPUT FILE>, <PATH TO NEW FILE>)
 
-    Expected: script will generate <PATH TO NEW FILE>.
-    NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
+- customization:
+    - change CHARACTER_NAME to Taro, or the name of a custom DNA file placed in /data/dna_files
 
-NOTE: If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the lib/linux directory before running the example:
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-lib-linux-dir>
+Expected: Script will generate Ada_output.dna in OUTPUT_DIR from original Ada.dna.
+NOTE: If OUTPUT_DIR does not exist, it will be created.
 """
 
-
-import argparse
-from os import environ, makedirs
+from os import makedirs
 from os import path as ospath
-from sys import path as syspath
-from sys import platform
 
 # if you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
-ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
-if platform == "win32":
-    LIB_DIR = f"{ROOT_LIB_DIR}/windows"
-elif platform == "linux":
-    LIB_DIR = f"{ROOT_LIB_DIR}/linux"
-else:
-    raise OSError(
-        "OS not supported, please compile dependencies and add value to LIB_DIR"
-    )
 
-# Add bin directory to maya plugin path
-if "MAYA_PLUG_IN_PATH" in environ:
-    separator = ":" if platform == "linux" else ";"
-    environ["MAYA_PLUG_IN_PATH"] = separator.join([environ["MAYA_PLUG_IN_PATH"], LIB_DIR])
-else:
-    environ["MAYA_PLUG_IN_PATH"] = LIB_DIR
+CHARACTER_NAME = "Ada"
 
-# Adds directories to path
-syspath.insert(0, ROOT_DIR)
-syspath.insert(0, LIB_DIR)
+DATA_DIR = f"{ROOT_DIR}/data"
+CHARACTER_DNA = f"{DATA_DIR}/dna_files/{CHARACTER_NAME}.dna"
+OUTPUT_DNA = f"{OUTPUT_DIR}/{CHARACTER_NAME}_output.dna"
+
 
 from dna import DataLayer_All, FileStream, Status, BinaryStreamReader, BinaryStreamWriter
 from dnacalib import (
@@ -86,6 +58,33 @@ def save_dna(reader, path):
         status = Status.get()
         raise RuntimeError(f"Error saving DNA: {status.message}")
 
+
+def validate_geometry(dna):
+    mesh_count = dna.getMeshCount()
+    for mesh_index in range(mesh_count):
+        bs_tgt_count = dna.getBlendShapeTargetCount(mesh_index)
+        for bs_tgt_index in range(bs_tgt_count):
+            bs_tgt_delta_count = dna.getBlendShapeTargetDeltaCount(mesh_index, bs_tgt_index)
+            if bs_tgt_delta_count != 0:
+                raise RuntimeError("Blend shape target deltas not removed properly!")
+
+
+def validate_animation_data(dna):
+    bs_channel_lods = dna.getBlendShapeChannelLODs()
+    bs_channel_input_indices = dna.getBlendShapeChannelInputIndices()
+    bs_channel_output_indices = dna.getBlendShapeChannelOutputIndices()
+
+    if len(bs_channel_lods) != dna.getLODCount():
+        raise RuntimeError("Blend shape animation data not removed properly! Number of blend shape LODs does not match LOD count!")
+
+    for lod in bs_channel_lods:
+        if lod != 0:
+            raise RuntimeError("Blend shape animation data not removed properly!")
+
+    if (len(bs_channel_input_indices) != 0) or (len(bs_channel_output_indices) != 0):
+        raise RuntimeError("Blend shape animation data not removed properly!")
+
+
 def calibrate_dna(input_path, output_path):
     dna = load_dna(input_path)
 
@@ -113,19 +112,8 @@ def calibrate_dna(input_path, output_path):
     # Modifies calibrated DNA in-place
     command.run(calibrated)
 
-    for mesh_index in range(mesh_count):
-        bs_tgt_count = calibrated.getBlendShapeTargetCount(mesh_index)
-        for bs_tgt_index in range(bs_tgt_count):
-            bs_tgt_delta_count = calibrated.getBlendShapeTargetDeltaCount(mesh_index, bs_tgt_index)
-            if bs_tgt_delta_count:
-                raise RuntimeError("Blend shape target deltas not removed properly!")
-
-    bs_channel_lods = calibrated.getBlendShapeChannelLODs()
-    bs_channel_input_indices = calibrated.getBlendShapeChannelInputIndices()
-    bs_channel_output_indices = calibrated.getBlendShapeChannelOutputIndices()
-
-    if len(bs_channel_lods) or len(bs_channel_input_indices) or len(bs_channel_output_indices):
-        raise RuntimeError("Blend shape animation data not removed properly!")
+    validate_geometry(calibrated)
+    validate_animation_data(calibrated)
 
     print(f"Number of meshes: {mesh_count}")
 
@@ -135,6 +123,10 @@ def calibrate_dna(input_path, output_path):
         for bs_tgt_index in range(bs_tgt_count):
             bs_tgt_delta_count = calibrated.getBlendShapeTargetDeltaCount(mesh_index, bs_tgt_index)
             print(f"Number of blendshape target deltas for mesh {calibrated.getMeshName(mesh_index)}({mesh_index}), blend shape target {bs_tgt_index}: {bs_tgt_delta_count}")
+
+    bs_channel_lods = dna.getBlendShapeChannelLODs()
+    bs_channel_input_indices = dna.getBlendShapeChannelInputIndices()
+    bs_channel_output_indices = dna.getBlendShapeChannelOutputIndices()
 
     print(f"Blend shape channel LODs: {bs_channel_lods}")
     print(f"Blend shape channel input indices: {bs_channel_input_indices}")
@@ -146,23 +138,7 @@ def calibrate_dna(input_path, output_path):
     save_dna(calibrated, output_path)
     print("Done.")
 
-def main():
-    parser = argparse.ArgumentParser(description="DNACalib clear blend shapes example")
-    parser.add_argument(
-        "--input_dna", metavar="input_dna", help="Path to DNA file to load", default=f"{ROOT_DIR}/data/dna/Ada.dna"
-    )
-    parser.add_argument(
-        "--output_dna",
-        metavar="output_dna",
-        help="Path where to save modified DNA file",
-        default=f"{OUTPUT_DIR}/Ada_new.dna"
-    )
-
-    makedirs(OUTPUT_DIR, exist_ok=True)
-    args = parser.parse_args()
-
-    calibrate_dna(args.input_dna, args.output_dna)
-
 
 if __name__ == "__main__":
-    main()
+    makedirs(OUTPUT_DIR, exist_ok=True)
+    calibrate_dna(CHARACTER_DNA, OUTPUT_DNA)

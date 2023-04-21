@@ -18,6 +18,9 @@ class DNACalibDNAReader;
 */
 class SetVertexPositionsCommand : public Command {
     public:
+        DNACAPI static const sc::StatusCode PositionsMasksCountMismatch;
+
+    public:
         DNACAPI explicit SetVertexPositionsCommand(MemoryResource* memRes = nullptr);
 
         DNACAPI SetVertexPositionsCommand(std::uint16_t meshIndex,

@@ -26,7 +26,8 @@ class ClearBlendShapesCommand::Impl : public CommandImplBase<Impl> {
             for (std::uint16_t i = 0; i < output->getMeshCount(); ++i) {
                 output->clearBlendShapeTargets(i);
             }
-            output->setBlendShapeChannelLODs(nullptr, 0);
+            Vector<std::uint16_t> lods{output->getLODCount(), 0u, getMemoryResource()};
+            output->setBlendShapeChannelLODs(lods.data(), static_cast<std::uint16_t>(lods.size()));
             output->setBlendShapeChannelInputIndices(nullptr, 0);
             output->setBlendShapeChannelOutputIndices(nullptr, 0);
         }

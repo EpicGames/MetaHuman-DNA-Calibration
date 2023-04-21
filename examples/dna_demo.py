@@ -1,66 +1,36 @@
 """
 This example demonstrates creating DNA from scratch.
+IMPORTANT: You have to setup the environment before running this example. Please refer to the 'Environment setup' section in README.md.
+
 - usage in command line:
-    - call without arguments:
-        python dna_demo.py
-        mayapy dna_demo.py
-
-        Expected: Script will generate CustomDNA.dna in OUTPUT_DIR.
-        NOTE: If OUTPUT_DIR does not exist, it will be created.
-
-    - call with arguments:
-        python dna_demo.py --dna_path=<PATH TO NEW DNA FILE>
-        mayapy dna_demo.py --dna_path=<PATH TO NEW DNA FILE>
-
-        Expected: script will generate <PATH TO NEW DNA FILE>.
-        NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
-
+    python dna_demo.py
+    mayapy dna_demo.py
 - usage in Maya:
     1. copy whole content of this file to Maya Script Editor
-    2. delete "if __name__ == "__main__":
-            main()"
-    3. delete whole "def main" method
-    4. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
+    2. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
     Use `/` (forward slash), because Maya uses forward slashes in path.
-    5. call method create_new_dna(<PATH TO NEW DNA FILE>)
 
-    Expected: script will generate <PATH TO NEW DNA FILE>.
-    NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
+- customization:
+    - change CHARACTER_NAME to Taro, or the name of a custom DNA file placed in /data/dna_files
 
-NOTE: If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the lib/linux directory before running the example:
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-lib-linux-dir>
+Expected: Script will generate Ada_output.dna in OUTPUT_DIR from original Ada.dna.
+NOTE: If OUTPUT_DIR does not exist, it will be created.
 """
 
 
-import argparse
-from os import environ, makedirs
+from os import makedirs
 from os import path as ospath
-from sys import path as syspath
-from sys import platform
 
 # if you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
-ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
-if platform == "win32":
-    LIB_DIR = f"{ROOT_LIB_DIR}/windows"
-elif platform == "linux":
-    LIB_DIR = f"{ROOT_LIB_DIR}/linux"
-else:
-    raise OSError(
-        "OS not supported, please compile dependencies and add value to LIB_DIR"
-    )
 
-# Add bin directory to maya plugin path
-if "MAYA_PLUG_IN_PATH" in environ:
-    separator = ":" if platform == "linux" else ";"
-    environ["MAYA_PLUG_IN_PATH"] = separator.join([environ["MAYA_PLUG_IN_PATH"], LIB_DIR])
-else:
-    environ["MAYA_PLUG_IN_PATH"] = LIB_DIR
+CHARACTER_NAME = "Ada"
 
-# Adds directories to path
-syspath.insert(0, ROOT_DIR)
-syspath.insert(0, LIB_DIR)
+DATA_DIR = f"{ROOT_DIR}/data"
+CHARACTER_DNA = f"{DATA_DIR}/dna_files/{CHARACTER_NAME}.dna"
+OUTPUT_DNA = f"{OUTPUT_DIR}/{CHARACTER_NAME}_output.dna"
+
 
 from dna import DataLayer_All, FileStream, Status, BinaryStreamReader, BinaryStreamWriter
 
@@ -125,16 +95,6 @@ def create_new_dna(dna_path):
     print_dna_summary(dna_reader)
 
 
-def main():
-    parser = argparse.ArgumentParser(description="DNA demo")
-    parser.add_argument(
-        "--dna_path", metavar="--dna_path", help="Path where to save the DNA file", default=f"{OUTPUT_DIR}/CustomDNA.dna"
-    )
-    makedirs(OUTPUT_DIR, exist_ok=True)
-    args = parser.parse_args()
-
-    create_new_dna(args.dna_path)
-
-
 if __name__ == "__main__":
-    main()
+    makedirs(OUTPUT_DIR, exist_ok=True)
+    create_new_dna(OUTPUT_DNA)

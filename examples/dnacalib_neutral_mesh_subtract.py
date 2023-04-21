@@ -1,63 +1,34 @@
 """
 This example demonstrates how to subtract values from a neutral mesh and transfer those changes to its lower LOD meshes.
+IMPORTANT: You have to setup the environment before running this example. Please refer to the 'Environment setup' section in README.md.
+
 - usage in command line:
-    - call without arguments:
-        python dnacalib_neutral_mesh_subtract.py
-        mayapy dnacalib_neutral_mesh_subtract.py
-
-        Expected: Script will generate Ada_new.dna in OUTPUT_DIR from original Ada.dna.
-    - call with arguments:
-        python dnacalib_neutral_mesh_subtract.py --dna_path=<PATH TO INPUT FILE> --output_dna=<PATH TO NEW FILE>
-        mayapy dnacalib_neutral_mesh_subtract.py --dna_path=<PATH TO INPUT FILE> --output_dna=<PATH TO NEW FILE>
-
-        Expected: script will generate <PATH TO NEW FILE>.
-        NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
+    python dnacalib_neutral_mesh_subtract.py
+    mayapy dnacalib_neutral_mesh_subtract.py
 - usage in Maya:
     1. copy whole content of this file to Maya Script Editor
-    2. delete "if __name__ == "__main__":
-            main()"
-    3. delete whole "def main" method
-    4. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
+    2. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
     Use `/` (forward slash), because Maya uses forward slashes in path.
-    5. call method calibrate_dna(<PATH TO INPUT FILE>, <PATH TO NEW FILE>)
 
-    Expected: script will generate <PATH TO NEW FILE>.
-    NOTE: The directory referenced by the given path must exist. If the directory does not exist, the script is going to fail.
+- customization:
+    - change CHARACTER_NAME to Taro, or the name of a custom DNA file placed in /data/dna_files
 
-NOTE: If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the lib/linux directory before running the example:
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-lib-linux-dir>
+Expected: Script will generate Ada_output.dna in OUTPUT_DIR from original Ada.dna.
+NOTE: If OUTPUT_DIR does not exist, it will be created.
 """
 
-
-import argparse
-from os import environ, makedirs
+from os import makedirs
 from os import path as ospath
-from sys import path as syspath
-from sys import platform
 
 # if you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
-ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
-if platform == "win32":
-    LIB_DIR = f"{ROOT_LIB_DIR}/windows"
-elif platform == "linux":
-    LIB_DIR = f"{ROOT_LIB_DIR}/linux"
-else:
-    raise OSError(
-        "OS not supported, please compile dependencies and add value to LIB_DIR"
-    )
 
-# Add bin directory to maya plugin path
-if "MAYA_PLUG_IN_PATH" in environ:
-    separator = ":" if platform == "linux" else ";"
-    environ["MAYA_PLUG_IN_PATH"] = separator.join([environ["MAYA_PLUG_IN_PATH"], LIB_DIR])
-else:
-    environ["MAYA_PLUG_IN_PATH"] = LIB_DIR
+CHARACTER_NAME = "Ada"
 
-# Adds directories to path
-syspath.insert(0, ROOT_DIR)
-syspath.insert(0, LIB_DIR)
+DATA_DIR = f"{ROOT_DIR}/data"
+CHARACTER_DNA = f"{DATA_DIR}/dna_files/{CHARACTER_NAME}.dna"
+OUTPUT_DNA = f"{OUTPUT_DIR}/{CHARACTER_NAME}_output.dna"
 
 from dna import DataLayer_All, FileStream, Status, BinaryStreamReader, BinaryStreamWriter
 from dnacalib import (
@@ -67,6 +38,7 @@ from dnacalib import (
     CalculateMeshLowerLODsCommand
 )
 from math import isclose
+
 
 def load_dna(path):
     stream = FileStream(path, FileStream.AccessMode_Read, FileStream.OpenMode_Binary)
@@ -88,6 +60,7 @@ def save_dna(reader, path):
         status = Status.get()
         raise RuntimeError(f"Error saving DNA: {status.message}")
 
+
 def calibrate_dna(input_path, output_path):
     dna = load_dna(input_path)
 
@@ -105,7 +78,7 @@ def calibrate_dna(input_path, output_path):
     zs = calibrated.getVertexPositionZs(mesh_index)
 
     # Example values to subtract from original vertex positions for mesh with index 0
-    ones = [1] * vtx_count_mesh0
+    ones = [1.0] * vtx_count_mesh0
 
     # Command used to subtract example values from a specified neutral mesh
     subtract_command = SetVertexPositionsCommand()
@@ -150,8 +123,8 @@ def calibrate_dna(input_path, output_path):
 
     for i in range(vtx_count_mesh0):
         if (not isclose(xs[i] - 1, new_xs[i], rel_tol=1e-7) or
-            not isclose(ys[i] - 1, new_ys[i], rel_tol=1e-7) or
-            not isclose(zs[i] - 1, new_zs[i], rel_tol=1e-7)):
+                not isclose(ys[i] - 1, new_ys[i], rel_tol=1e-7) or
+                not isclose(zs[i] - 1, new_zs[i], rel_tol=1e-7)):
             raise RuntimeError("Vertex positions were not changed successfully!")
 
     print("\nSuccessfully changed vertex positions.")
@@ -161,23 +134,6 @@ def calibrate_dna(input_path, output_path):
     print("Done.")
 
 
-def main():
-    parser = argparse.ArgumentParser(description="DNACalib neutral mesh subtract example")
-    parser.add_argument(
-        "--input_dna", metavar="input_dna", help="Path to DNA file to load", default=f"{ROOT_DIR}/data/dna/Ada.dna"
-    )
-    parser.add_argument(
-        "--output_dna",
-        metavar="output_dna",
-        help="Path where to save modified DNA file",
-        default=f"{OUTPUT_DIR}/Ada_new.dna"
-    )
-
-    makedirs(OUTPUT_DIR, exist_ok=True)
-    args = parser.parse_args()
-
-    calibrate_dna(args.input_dna, args.output_dna)
-
-
 if __name__ == "__main__":
-    main()
+    makedirs(OUTPUT_DIR, exist_ok=True)
+    calibrate_dna(CHARACTER_DNA, OUTPUT_DNA)

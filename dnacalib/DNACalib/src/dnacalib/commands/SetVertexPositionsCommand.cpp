@@ -2,11 +2,13 @@
 
 #include "dnacalib/commands/SetVertexPositionsCommand.h"
 
+#include "dnacalib/TypeDefs.h"
 #include "dnacalib/CommandImplBase.h"
 #include "dnacalib/commands/SupportFactories.h"
 #include "dnacalib/dna/DNA.h"
 #include "dnacalib/dna/DNACalibDNAReaderImpl.h"
 #include "dnacalib/types/Aliases.h"
+#include "dnacalib/utils/FormatString.h"
 
 namespace dnac {
 
@@ -46,6 +48,7 @@ class SetVertexPositionsCommand::Impl : public CommandImplBase<Impl> {
         }
 
         void run(DNACalibDNAReaderImpl* output) {
+            status.reset();
             auto getWeight = WeightGetterFactory::create(masks);
             auto op = OperationFactory::create(operation);
             computeVertexPositions(op, getWeight, output);
@@ -61,7 +64,14 @@ class SetVertexPositionsCommand::Impl : public CommandImplBase<Impl> {
             RawVector3Vector result{xs, ys, zs, output->getMemoryResource()};
             // This accounts for the case when output is empty
             result.resize(positions.size(), 0.0f);
-            assert(masks.empty() || (positions.size() == masks.size()));
+            if (!masks.empty() && (positions.size() != masks.size())) {
+                const auto message = formatString(output->getMemoryResource(),
+                                                  "Number of set positions (%hu) differs from number of set masks (%hu).",
+                                                  positions.size(),
+                                                  masks.size());
+                status.set(PositionsMasksCountMismatch, message.c_str());
+                return;
+            }
             for (std::uint32_t i = 0u; i < positions.size(); ++i) {
                 const float weight = getWeight(masks.data(), i);
                 result.xs[i] = op(result.xs[i], positions.xs[i], weight);
@@ -72,12 +82,25 @@ class SetVertexPositionsCommand::Impl : public CommandImplBase<Impl> {
         }
 
     private:
+        static sc::StatusProvider status;
+
         RawVector3Vector positions;
         Vector<float> masks;
         VectorOperation operation;
         std::uint16_t meshIndex;
 
 };
+
+const sc::StatusCode SetVertexPositionsCommand::PositionsMasksCountMismatch{3201, "%s"};
+
+#ifdef __clang__
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wglobal-constructors"
+#endif
+sc::StatusProvider SetVertexPositionsCommand::Impl::status{PositionsMasksCountMismatch};
+#ifdef __clang__
+    #pragma clang diagnostic pop
+#endif
 
 SetVertexPositionsCommand::SetVertexPositionsCommand(MemoryResource* memRes) : pImpl{makeScoped<Impl>(memRes)} {
 }

@@ -51,6 +51,7 @@ def buildCommandList():
     # ¯\_(ツ)_/¯
     # Deltas in [[x, y, z], [x, y, z], [x, y, z]] format
     blendShapeTargetDeltas = [[0.0, 0.0, 2.0], [0.0, -1.0, 4.0], [3.0, -3.0, 8.0]]
+    vertexIndices = [0, 1, 2]
     # Weights for interpolation between original deltas and above defined deltas
     # 1.0 == take the new value completely, 0.0 means keep the old value
     # Format: [Delta-0-Mask, Delta-1-Mask, Delta-2-Mask]
@@ -58,6 +59,7 @@ def buildCommandList():
     setBlendShapesM0B0 = dnac.SetBlendShapeTargetDeltasCommand(0,  # mesh index
                                                              0,  # blend shape target index
                                                              blendShapeTargetDeltas,
+                                                             vertexIndices,
                                                              masks,
                                                              dnac.VectorOperation_Interpolate)
     commands.add(setBlendShapesM0B0)

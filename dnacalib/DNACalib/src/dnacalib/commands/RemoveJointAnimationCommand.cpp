@@ -16,19 +16,24 @@ class RemoveJointAnimationCommand::Impl : public CommandImplBase<Impl> {
     public:
         explicit Impl(MemoryResource* memRes_) :
             Super{memRes_},
-            jointIndex{std::numeric_limits<std::uint16_t>::max()} {
+            jointIndices{memRes_} {
         }
 
         void setJointIndex(std::uint16_t jointIndex_) {
-            jointIndex = jointIndex_;
+            jointIndices.resize(1);
+            jointIndices[0] = jointIndex_;
+        }
+
+        void setJointIndices(ConstArrayView<std::uint16_t> jointIndices_) {
+            jointIndices.assign(jointIndices_.begin(), jointIndices_.end());
         }
 
         void run(DNACalibDNAReaderImpl* output) {
-            output->removeJointAnimation(jointIndex);
+            output->removeJointAnimations(ConstArrayView<std::uint16_t>{jointIndices});
         }
 
     private:
-        std::uint16_t jointIndex;
+        Vector<std::uint16_t> jointIndices;
 
 };
 
@@ -41,12 +46,22 @@ RemoveJointAnimationCommand::RemoveJointAnimationCommand(std::uint16_t jointInde
     pImpl->setJointIndex(jointIndex);
 }
 
+RemoveJointAnimationCommand::RemoveJointAnimationCommand(ConstArrayView<std::uint16_t> jointIndices, MemoryResource* memRes) :
+    pImpl{makeScoped<Impl>(memRes)} {
+
+    pImpl->setJointIndices(jointIndices);
+}
+
 RemoveJointAnimationCommand::~RemoveJointAnimationCommand() = default;
 RemoveJointAnimationCommand::RemoveJointAnimationCommand(RemoveJointAnimationCommand&&) = default;
 RemoveJointAnimationCommand& RemoveJointAnimationCommand::operator=(RemoveJointAnimationCommand&&) = default;
 
 void RemoveJointAnimationCommand::setJointIndex(std::uint16_t jointIndex) {
     pImpl->setJointIndex(jointIndex);
+}
+
+void RemoveJointAnimationCommand::setJointIndices(ConstArrayView<std::uint16_t> jointIndices) {
+    pImpl->setJointIndices(jointIndices);
 }
 
 void RemoveJointAnimationCommand::run(DNACalibDNAReader* output) {

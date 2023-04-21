@@ -28,6 +28,24 @@
 %define py_list_to_array_view(type_name, typecheck_precedence)
 %typemap(in) (type_name) {
     if (PyList_Check($input)) {
+        bool isCorrect = true;
+        auto item = PyList_GetItem($input, 0);
+        if (item != NULL) {
+            if (std::is_floating_point<$1_basetype::value_type>::value) {
+                isCorrect = PyFloat_Check(item) ? true : false;
+            } else if (std::is_integral<$1_basetype::value_type>::value) {
+                isCorrect = PyLong_Check(item) || PyInt_Check(item) ? true : false;
+            } else {
+                // For structs, classes, and other object types, just assume true until something breaks
+                isCorrect = true;
+            }
+        } else {
+            isCorrect = true;
+        }
+        if (!isCorrect) {
+            SWIG_Python_RaiseOrModifyTypeError("wrong element type");
+            return 0;
+        }
         using value_type = std::remove_cv<$1_basetype::value_type>::type;
         const std::size_t count = static_cast<std::size_t>(PyList_Size($input));
         const auto ptr = reinterpret_cast<value_type*>(malloc(count * sizeof(value_type)));
@@ -46,6 +64,22 @@
 }
 
 %typemap(typecheck, precedence=typecheck_precedence) type_name {
-    $1 = PyList_Check($input) ? 1 : 0;
+    $1 = 0;
+    if (PyList_Check($input)) {
+        auto item = PyList_GetItem($input, 0);
+        if (item != NULL) {
+            if (std::is_floating_point<$1_basetype::value_type>::value) {
+                $1 = PyFloat_Check(item) ? 1 : 0;
+            } else if (std::is_integral<$1_basetype::value_type>::value) {
+                $1 = PyLong_Check(item) || PyInt_Check(item) ? 1 : 0;
+            } else {
+                // For structs, classes, and other object types, just assume true until something breaks
+                $1 = 1;
+            }
+        } else {
+            $1 = 1;
+        }
+    }
 }
+
 %enddef

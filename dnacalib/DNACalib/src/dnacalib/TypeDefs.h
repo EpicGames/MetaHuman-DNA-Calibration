@@ -9,6 +9,7 @@
 #include <pma/resources/AlignedMemoryResource.h>
 #include <pma/resources/ArenaMemoryResource.h>
 #include <pma/resources/DefaultMemoryResource.h>
+#include <status/Provider.h>
 #include <tdm/TDM.h>
 #include <terse/types/DynArray.h>
 

@@ -7,6 +7,8 @@
 #include "dnacalib/commands/CommandSequence.h"
 #include "dnacalib/commands/ConditionalCommand.h"
 #include "dnacalib/commands/PruneBlendShapeTargetsCommand.h"
+#include "dnacalib/commands/RemoveAnimatedMapCommand.h"
+#include "dnacalib/commands/RemoveBlendShapeCommand.h"
 #include "dnacalib/commands/RemoveJointAnimationCommand.h"
 #include "dnacalib/commands/RemoveJointCommand.h"
 #include "dnacalib/commands/RemoveMeshCommand.h"

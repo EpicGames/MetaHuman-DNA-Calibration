@@ -31,24 +31,25 @@ When running this from Maya, the `ROOT_DIR` should be set to an absolute path to
 
 # DNA
 
-## Loading the DNA ([`load_dna`](../dna_viewer/reader/dna.py#L28))
+## Loading the DNA
 
-Loads the DNA and returns a [`DNA`](../dna_viewer/model/dna.py#L40) object.
+Loads the DNA and returns a [`DNA`](../dna_viewer/dnalib/dnalib.py#L13) object.
 
 ```
-from dna_viewer import get_dna
+from dna_viewer import DNA
 
-dna_ada = load_dna(DNA_PATH_ADA)
-dna_taro = load_dna(DNA_PATH_TARO)
+dna_ada = DNA(DNA_PATH_ADA)
+dna_taro = DNA(DNA_PATH_TARO)
 ```
 
 This uses the following parameters:
 - `dna_path: str` - The path of the DNA file that should be used.
+- `layers: Optional[List[Layer]]` - List of parts of DNA to be loaded. If noting is passed, whole DNA is going to be loaded. Same as passing Layer.all.
 
-## Mesh Utilities
+## Build Meshes
 
-Mesh Utilities API explanation is located [here](/docs/dna_viewer_api_mesh_utilities.md).
+Build meshes API explanation is located [here](/docs/dna_viewer_api_build_meshes.md).
 
-## Rig Assembly
+## Build Rig
 
-Rig Assembly API explanation is located [here](/docs/dna_viewer_api_rig_assembly.md).
+Build Rig API explanation is located [here](/docs/dna_viewer_api_build_rig.md).

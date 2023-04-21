@@ -16,19 +16,24 @@ class RemoveMeshCommand::Impl : public CommandImplBase<Impl> {
     public:
         explicit Impl(MemoryResource* memRes_) :
             Super{memRes_},
-            meshIndex{std::numeric_limits<std::uint16_t>::max()} {
+            meshIndices{memRes_} {
         }
 
         void setMeshIndex(std::uint16_t meshIndex_) {
-            meshIndex = meshIndex_;
+            meshIndices.resize(1);
+            meshIndices[0] = meshIndex_;
+        }
+
+        void setMeshIndices(ConstArrayView<std::uint16_t> meshIndices_) {
+            meshIndices.assign(meshIndices_.begin(), meshIndices_.end());
         }
 
         void run(DNACalibDNAReaderImpl* output) {
-            output->removeMesh(meshIndex);
+            output->removeMeshes(ConstArrayView<std::uint16_t>{meshIndices});
         }
 
     private:
-        std::uint16_t meshIndex;
+        Vector<std::uint16_t> meshIndices;
 
 };
 
@@ -41,12 +46,22 @@ RemoveMeshCommand::RemoveMeshCommand(std::uint16_t meshIndex, MemoryResource* me
     pImpl->setMeshIndex(meshIndex);
 }
 
+RemoveMeshCommand::RemoveMeshCommand(ConstArrayView<std::uint16_t> meshIndices, MemoryResource* memRes) :
+    pImpl{makeScoped<Impl>(memRes)} {
+
+    pImpl->setMeshIndices(meshIndices);
+}
+
 RemoveMeshCommand::~RemoveMeshCommand() = default;
 RemoveMeshCommand::RemoveMeshCommand(RemoveMeshCommand&&) = default;
 RemoveMeshCommand& RemoveMeshCommand::operator=(RemoveMeshCommand&&) = default;
 
 void RemoveMeshCommand::setMeshIndex(std::uint16_t meshIndex) {
     pImpl->setMeshIndex(meshIndex);
+}
+
+void RemoveMeshCommand::setMeshIndices(ConstArrayView<std::uint16_t> meshIndices) {
+    pImpl->setMeshIndices(meshIndices);
 }
 
 void RemoveMeshCommand::run(DNACalibDNAReader* output) {

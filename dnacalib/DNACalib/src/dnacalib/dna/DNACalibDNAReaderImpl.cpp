@@ -3,6 +3,8 @@
 #include "dnacalib/dna/DNACalibDNAReaderImpl.h"
 
 #include "dnacalib/TypeDefs.h"
+#include "dnacalib/dna/filters/AnimatedMapFilter.h"
+#include "dnacalib/dna/filters/BlendShapeFilter.h"
 #include "dnacalib/dna/filters/JointFilter.h"
 #include "dnacalib/dna/filters/MeshFilter.h"
 #include "dnacalib/utils/Extd.h"
@@ -126,6 +128,15 @@ void DNACalibDNAReaderImpl::setBlendShapeTargetDeltas(std::uint16_t meshIndex,
     dna.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas = std::move(deltas);
 }
 
+void DNACalibDNAReaderImpl::setBlendShapeTargetVertexIndices(std::uint16_t meshIndex,
+                                                             std::uint16_t blendShapeTargetIndex,
+                                                             ConstArrayView<std::uint32_t> vertexIndices) {
+    ensureHasSize(dna.geometry.meshes, meshIndex + 1ul, memRes);
+    ensureHasSize(dna.geometry.meshes[meshIndex].blendShapeTargets, blendShapeTargetIndex + 1ul, memRes);
+    dna.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].vertexIndices.assign(vertexIndices.begin(),
+                                                                                                 vertexIndices.end());
+}
+
 void DNACalibDNAReaderImpl::pruneBlendShapeTargets(float threshold) {
     const float threshold2 = threshold * threshold;
     for (auto& mesh : dna.geometry.meshes) {
@@ -149,11 +160,12 @@ void DNACalibDNAReaderImpl::pruneBlendShapeTargets(float threshold) {
     }
 }
 
-void DNACalibDNAReaderImpl::removeMesh(std::uint16_t meshIndex) {
+void DNACalibDNAReaderImpl::removeMeshes(ConstArrayView<std::uint16_t> meshIndices) {
     // Filter and remap mesh names and indices
-    dna.definition.lodMeshMapping.filterIndices([meshIndex](std::uint16_t value) {
-            return (value != meshIndex);
+    dna.definition.lodMeshMapping.filterIndices([meshIndices](std::uint16_t value) {
+            return (!extd::contains(meshIndices, value));
         });
+
     // Collect all distinct element position indices that are referenced by the present LODs
     UnorderedSet<std::uint16_t> allowedMeshIndices = dna.definition.lodMeshMapping.getCombinedDistinctIndices(memRes);
 
@@ -169,13 +181,13 @@ void DNACalibDNAReaderImpl::removeMesh(std::uint16_t meshIndex) {
     cache.populate(this);
 }
 
-void DNACalibDNAReaderImpl::removeJoint(std::uint16_t jointIndex) {
+void DNACalibDNAReaderImpl::removeJoints(ConstArrayView<std::uint16_t> jointIndices) {
     // To find joints that are not in any LOD, find the joints that are not in LOD 0 (the current max LOD, at index 0), as it
     // contains joints from all lower LODs.
     Vector<std::uint16_t> jointsNotInLOD0{memRes};
     const auto jointIndicesForLOD0 = dna.definition.lodJointMapping.getIndices(0);
     for (std::uint16_t idx = 0; idx < dna.definition.jointNames.size(); ++idx) {
-        if (idx == jointIndex) {
+        if (extd::contains(jointIndices, idx)) {
             // Do not add the joint to remove.
             continue;
         }
@@ -184,8 +196,8 @@ void DNACalibDNAReaderImpl::removeJoint(std::uint16_t jointIndex) {
         }
     }
     // Filter and remap joint names and indices
-    dna.definition.lodJointMapping.filterIndices([jointIndex](std::uint16_t value) {
-            return (value != jointIndex);
+    dna.definition.lodJointMapping.filterIndices([jointIndices](std::uint16_t value) {
+            return (!extd::contains(jointIndices, value));
         });
     // Collect all distinct element position indices that are referenced by the present LODs
     UnorderedSet<std::uint16_t> allowedJointIndices = dna.definition.lodJointMapping.getCombinedDistinctIndices(memRes);
@@ -206,15 +218,68 @@ void DNACalibDNAReaderImpl::removeJoint(std::uint16_t jointIndex) {
     }
 }
 
-void DNACalibDNAReaderImpl::removeJointAnimation(std::uint16_t jointIndex) {
+void DNACalibDNAReaderImpl::removeJointAnimations(ConstArrayView<std::uint16_t> jointIndices) {
     UnorderedSet<std::uint16_t> allowedJointIndices = dna.definition.lodJointMapping.getCombinedDistinctIndices(memRes);
-    allowedJointIndices.erase(jointIndex);
+    for (const auto jointIndex : jointIndices) {
+        allowedJointIndices.erase(jointIndex);
+    }
 
     JointFilter jointFilter{memRes};
     jointFilter.configure(static_cast<std::uint16_t>(dna.definition.jointNames.size()),
                           std::move(allowedJointIndices),
                           JointFilter::Option::AnimationOnly);
     jointFilter.apply(dna.behavior);
+}
+
+void DNACalibDNAReaderImpl::removeBlendShapes(ConstArrayView<std::uint16_t> blendShapeIndices) {
+    // Filter blend shapes from LOD blend shape mapping
+    dna.definition.lodBlendShapeMapping.filterIndices([blendShapeIndices](std::uint16_t value) {
+            return (!extd::contains(blendShapeIndices, value));
+        });
+
+    Vector<std::uint16_t> blendShapeLODs{dna.definition.lodBlendShapeMapping.getLODCount(), 0u, memRes};
+    for (std::uint16_t lodIndex = 0; lodIndex < blendShapeLODs.size(); ++lodIndex) {
+        blendShapeLODs[lodIndex] = static_cast<std::uint16_t>(dna.definition.lodBlendShapeMapping.getIndices(lodIndex).size());
+    }
+
+    UnorderedSet<std::uint16_t> allowedBlendShapeIndices = dna.definition.lodBlendShapeMapping.getCombinedDistinctIndices(memRes);
+    BlendShapeFilter blendShapeFilter{memRes};
+    blendShapeFilter.configure(static_cast<std::uint16_t>(dna.definition.blendShapeChannelNames.size()),
+                               std::move(allowedBlendShapeIndices), std::move(blendShapeLODs));
+
+    // Remove blend shape from definition
+    blendShapeFilter.apply(dna.definition);
+
+    // Remove blend shape from behavior
+    blendShapeFilter.apply(dna.behavior);
+
+    // Remove blend shape from geometry
+    for (auto& mesh : dna.geometry.meshes) {
+        blendShapeFilter.apply(mesh);
+    }
+}
+
+void DNACalibDNAReaderImpl::removeAnimatedMaps(ConstArrayView<std::uint16_t> animatedMapIndices) {
+    // Keep track of animated map indices per LOD before filtering and remapping
+    Matrix<std::uint16_t> lodIndices{dna.definition.lodAnimatedMapMapping.getLODCount(), Vector<std::uint16_t>{memRes}, memRes};
+    for (std::uint16_t lodIndex = 0; lodIndex < static_cast<std::uint16_t>(lodIndices.size()); ++lodIndex) {
+        const auto& indices = dna.definition.lodAnimatedMapMapping.getIndices(lodIndex);
+        lodIndices[lodIndex].assign(indices.begin(), indices.end());
+    }
+    // Filter and remap animated map names and indices
+    dna.definition.lodAnimatedMapMapping.filterIndices([animatedMapIndices](std::uint16_t value) {
+            return (!extd::contains(animatedMapIndices, value));
+        });
+
+    // Collect all distinct element position indices that are referenced by the present LODs
+    UnorderedSet<std::uint16_t> allowedAnimatedMapIndices =
+        dna.definition.lodAnimatedMapMapping.getCombinedDistinctIndices(memRes);
+
+    AnimatedMapFilter animatedMapFilter{memRes};
+    animatedMapFilter.configure(static_cast<std::uint16_t>(dna.definition.animatedMapNames.size()),
+                                std::move(allowedAnimatedMapIndices), std::move(lodIndices));
+    animatedMapFilter.apply(dna.definition);
+    animatedMapFilter.apply(dna.behavior);
 }
 
 }  // namespace dnac

@@ -1,50 +1,36 @@
 """
 This example demonstrates rename of a joint.
-- usage in command line:
-    - call without arguments:
-        python rename_joint_demo.py
-        mayapy rename_joint_demo.py
+IMPORTANT: You have to setup the environment before running this example. Please refer to the 'Environment setup' section in README.md.
 
-        Expected: Script will generate Ada_new.dna in OUTPUT_DIR.
+- usage in command line:
+    python rename_joint_demo.py
+    mayapy rename_joint_demo.py
+
+    Expected: Script will generate Ada_output.dna in OUTPUT_DIR.
 - usage in Maya:
     1. copy whole content of this file to Maya Script Editor
     2. change value of ROOT_DIR to absolute path of dna_calibration, e.g. `c:/dna_calibration` in Windows or `/home/user/dna_calibration`. Important:
     Use `/` (forward slash), because Maya uses forward slashes in path.
-- customization:
-    - change value of DNA to Taro, or name of file which is copied to /data/dna
 
-NOTE: If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the lib/linux directory before running the example:
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-lib-linux-dir>
+- customization:
+    - change CHARACTER_NAME to Taro, or the name of a custom DNA file placed in /data/dna_files
+
+Expected: Script will generate Ada_output.dna in OUTPUT_DIR from original Ada.dna.
+NOTE: If OUTPUT_DIR does not exist, it will be created.
 """
 
-
-from os import environ, makedirs
+from os import makedirs
 from os import path as ospath
-from sys import path as syspath
-from sys import platform
 
 # if you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
-ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
-if platform == "win32":
-    LIB_DIR = f"{ROOT_LIB_DIR}/windows"
-elif platform == "linux":
-    LIB_DIR = f"{ROOT_LIB_DIR}/linux"
-else:
-    raise OSError(
-        "OS not supported, please compile dependencies and add value to LIB_DIR"
-    )
+OUTPUT_DIR = f"{ROOT_DIR}/output"
 
-# Add bin directory to maya plugin path
-if "MAYA_PLUG_IN_PATH" in environ:
-    separator = ":" if platform == "linux" else ";"
-    environ["MAYA_PLUG_IN_PATH"] = separator.join([environ["MAYA_PLUG_IN_PATH"], LIB_DIR])
-else:
-    environ["MAYA_PLUG_IN_PATH"] = LIB_DIR
+CHARACTER_NAME = "Ada"
 
-# Adds directories to path
-syspath.insert(0, ROOT_DIR)
-syspath.insert(0, LIB_DIR)
+DATA_DIR = f"{ROOT_DIR}/data"
+CHARACTER_DNA = f"{DATA_DIR}/dna_files/{CHARACTER_NAME}.dna"
+OUTPUT_DNA = f"{OUTPUT_DIR}/{CHARACTER_NAME}_output.dna"
 
 from dna import DataLayer_All, FileStream, Status, BinaryStreamReader, BinaryStreamWriter
 from dnacalib import DNACalibDNAReader, RenameJointCommand
@@ -71,22 +57,17 @@ def save_dna(reader, path):
         raise RuntimeError(f"Error saving DNA: {status.message}")
 
 
-CHARACTER_NAME = "Ada"
-DATA_DIR = f"{ROOT_DIR}/data"
-DNA_DIR = f"{DATA_DIR}/dna"
-OUTPUT_DIR = f"{ROOT_DIR}/output"
-makedirs(OUTPUT_DIR, exist_ok=True)
-DNA_CHARACTER = f"{DNA_DIR}/{CHARACTER_NAME}.dna"
-DNA_CHARACTER_NEW = f"{OUTPUT_DIR}/{CHARACTER_NAME}_new.dna"
+if __name__ == "__main__":
+    makedirs(OUTPUT_DIR, exist_ok=True)
 
-dna_reader = load_dna(DNA_CHARACTER)
-calibrated = DNACalibDNAReader(dna_reader)
-# Prints current joint name
-print(calibrated.getJointName(10))
-# Creates rename command
-rename = RenameJointCommand(10, "NewJointA")
-# Executes command
-rename.run(calibrated)
-# Prints the new joint name
-print(calibrated.getJointName(10))
-save_dna(calibrated, DNA_CHARACTER_NEW)
+    dna_reader = load_dna(CHARACTER_DNA)
+    calibrated = DNACalibDNAReader(dna_reader)
+    # Prints current joint name
+    print(calibrated.getJointName(10))
+    # Creates rename command
+    rename = RenameJointCommand(10, "NewJointA")
+    # Executes command
+    rename.run(calibrated)
+    # Prints the new joint name
+    print(calibrated.getJointName(10))
+    save_dna(calibrated, OUTPUT_DNA)

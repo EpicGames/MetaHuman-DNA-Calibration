@@ -11,9 +11,6 @@
 
 namespace dnac {
 
-static constexpr std::uint16_t jointAttributeCount = 9u;
-static constexpr std::uint16_t rotationOffset = 3u;
-
 class ScaleCommand::Impl : public CommandImplBase<Impl> {
     private:
         using Super = CommandImplBase<Impl>;
@@ -72,6 +69,9 @@ class ScaleCommand::Impl : public CommandImplBase<Impl> {
         }
 
         void scaleJointBehavior(DNACalibDNAReaderImpl* output) {
+            constexpr std::uint16_t jointAttributeCount = 9u;
+            constexpr std::uint16_t rotationOffset = 3u;
+
             for (std::uint16_t jointGroupIndex = 0u; jointGroupIndex < output->getJointGroupCount(); ++jointGroupIndex) {
                 const auto values = output->getJointGroupValues(jointGroupIndex);
                 const auto outputIndices = output->getJointGroupOutputIndices(jointGroupIndex);
