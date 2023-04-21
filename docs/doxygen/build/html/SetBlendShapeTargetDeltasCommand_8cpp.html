@@ -74,76 +74,80 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="SetBlendShapeTargetDeltasCommand_8h_source.html">dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2dnacalib_2TypeDefs_8h_source.html">dnacalib/TypeDefs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="CommandImplBase_8h_source.html">dnacalib/CommandImplBase.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="SupportFactories_8h_source.html">dnacalib/commands/SupportFactories.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dnacalib_2dna_2DNA_8h_source.html">dnacalib/dna/DNA.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="DNACalibDNAReaderImpl_8h_source.html">dnacalib/dna/DNACalibDNAReaderImpl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="dnacalib_2types_2Aliases_8h_source.html">dnacalib/types/Aliases.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="FormatString_8h_source.html">dnacalib/utils/FormatString.h</a>&quot;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;numeric&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SetBlendShapeTargetDeltasCommand.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="SetBlendShapeTargetDeltasCommand_8cpp__incl.png" border="0" usemap="#aSetBlendShapeTargetDeltasCommand_8cpp" alt=""/></div>
 <map name="aSetBlendShapeTargetDeltasCommand_8cpp" id="aSetBlendShapeTargetDeltasCommand_8cpp">
-<area shape="rect" title=" " alt="" coords="1489,5,1674,47"/>
-<area shape="rect" href="SetBlendShapeTargetDeltasCommand_8h.html" title=" " alt="" coords="827,423,1029,464"/>
-<area shape="rect" href="dnacalib_2types_2Aliases_8h.html" title=" " alt="" coords="995,601,1159,628"/>
-<area shape="rect" href="CommandImplBase_8h.html" title=" " alt="" coords="1482,430,1681,457"/>
-<area shape="rect" href="SupportFactories_8h.html" title=" " alt="" coords="3068,423,3255,464"/>
-<area shape="rect" href="dnacalib_2dna_2DNA_8h.html" title=" " alt="" coords="2683,341,2821,367"/>
-<area shape="rect" href="DNACalibDNAReaderImpl_8h.html" title=" " alt="" coords="1658,95,1881,136"/>
-<area shape="rect" href="Command_8h.html" title=" " alt="" coords="845,519,989,546"/>
-<area shape="rect" href="dnacalib_2Defs_8h.html" title=" " alt="" coords="861,601,971,628"/>
-<area shape="rect" title=" " alt="" coords="1297,1183,1359,1209"/>
-<area shape="rect" href="VectorOperations_8h.html" title=" " alt="" coords="1425,512,1605,553"/>
-<area shape="rect" href="DataLayer_8h.html" title=" " alt="" coords="1356,937,1473,963"/>
-<area shape="rect" href="BinaryStreamReader_8h.html" title=" " alt="" coords="1163,676,1341,703"/>
-<area shape="rect" href="StreamReader_8h.html" title=" " alt="" coords="1264,758,1405,785"/>
-<area shape="rect" href="dna_2types_2Aliases_8h.html" title=" " alt="" coords="671,937,809,963"/>
-<area shape="rect" href="MemoryResource_8h.html" title=" " alt="" coords="2001,1026,2165,1053"/>
-<area shape="rect" href="ScopedPtr_8h.html" title=" " alt="" coords="1203,1026,1325,1053"/>
-<area shape="rect" href="Status_8h.html" title=" " alt="" coords="501,1026,611,1053"/>
-<area shape="rect" href="Stream_8h.html" title=" " alt="" coords="578,1108,675,1135"/>
-<area shape="rect" href="FileStream_8h.html" title=" " alt="" coords="307,1026,477,1053"/>
-<area shape="rect" href="MemoryMappedFileStream_8h.html" title=" " alt="" coords="43,1019,231,1060"/>
-<area shape="rect" href="MemoryStream_8h.html" title=" " alt="" coords="636,1026,831,1053"/>
-<area shape="rect" href="BinaryStreamWriter_8h.html" title=" " alt="" coords="471,676,643,703"/>
-<area shape="rect" href="StreamWriter_8h.html" title=" " alt="" coords="801,758,935,785"/>
-<area shape="rect" href="JSONStreamReader_8h.html" title=" " alt="" coords="913,676,1087,703"/>
-<area shape="rect" href="JSONStreamWriter_8h.html" title=" " alt="" coords="667,676,837,703"/>
-<area shape="rect" href="Vector3_8h.html" title=" " alt="" coords="1365,676,1504,703"/>
-<area shape="rect" href="AlignedMemoryResource_8h.html" title=" " alt="" coords="1792,840,1995,881"/>
-<area shape="rect" href="ArenaMemoryResource_8h.html" title=" " alt="" coords="1986,929,2179,971"/>
-<area shape="rect" href="DefaultMemoryResource_8h.html" title=" " alt="" coords="2171,751,2370,792"/>
-<area shape="rect" href="dna_2Defs_8h.html" title=" " alt="" coords="1041,937,1125,963"/>
-<area shape="rect" href="Reader_8h.html" title=" " alt="" coords="1365,847,1464,874"/>
-<area shape="rect" title=" " alt="" coords="2619,1108,2683,1135"/>
-<area shape="rect" title=" " alt="" coords="1627,1108,1680,1135"/>
-<area shape="rect" href="Writer_8h.html" title=" " alt="" coords="995,847,1088,874"/>
-<area shape="rect" href="src_2dnacalib_2TypeDefs_8h.html" title=" " alt="" coords="2160,519,2299,546"/>
-<area shape="rect" href="PolyAllocator_8h.html" title=" " alt="" coords="2237,676,2376,703"/>
-<area shape="rect" href="include_2pma_2TypeDefs_8h.html" title=" " alt="" coords="2814,601,2930,628"/>
-<area shape="rect" href="TDM_8h.html" title=" " alt="" coords="2267,601,2354,628"/>
-<area shape="rect" href="DynArray_8h.html" title=" " alt="" coords="2531,601,2687,628"/>
-<area shape="rect" title=" " alt="" coords="2547,758,2613,785"/>
-<area shape="rect" title=" " alt="" coords="2716,758,2785,785"/>
-<area shape="rect" title=" " alt="" coords="3056,676,3096,703"/>
-<area shape="rect" title=" " alt="" coords="2976,676,3032,703"/>
-<area shape="rect" title=" " alt="" coords="2739,676,2813,703"/>
-<area shape="rect" title=" " alt="" coords="2501,676,2563,703"/>
-<area shape="rect" title=" " alt="" coords="3171,676,3248,703"/>
-<area shape="rect" title=" " alt="" coords="2889,676,2951,703"/>
-<area shape="rect" href="alib_2utils_2Extd_8h.html" title=" " alt="" coords="3006,601,3146,628"/>
-<area shape="rect" href="dnacalib_2dna_2LODMapping_8h.html" title=" " alt="" coords="3330,430,3515,457"/>
-<area shape="rect" href="dnacalib_2dna_2SurjectiveMapping_8h.html" title=" " alt="" coords="2523,430,2738,457"/>
-<area shape="rect" href="ArchiveOffset_8h.html" title=" " alt="" coords="3475,676,3653,703"/>
-<area shape="rect" title=" " alt="" coords="2813,430,2864,457"/>
-<area shape="rect" title=" " alt="" coords="2245,430,2296,457"/>
-<area shape="rect" href="DNACalibDNAReader_8h.html" title=" " alt="" coords="1115,519,1349,546"/>
-<area shape="rect" href="dnacalib_2dna_2ReaderImpl_8h.html" title=" " alt="" coords="2411,184,2586,211"/>
-<area shape="rect" href="dnacalib_2dna_2WriterImpl_8h.html" title=" " alt="" coords="1997,184,2166,211"/>
-<area shape="rect" href="dnacalib_2dna_2BaseImpl_8h.html" title=" " alt="" coords="2246,259,2410,285"/>
-<area shape="rect" href="dnacalib_2dna_2DenormalizedData_8h.html" title=" " alt="" coords="3137,333,3316,375"/>
-<area shape="rect" title=" " alt="" coords="2536,259,2589,285"/>
+<area shape="rect" title=" " alt="" coords="2161,5,2346,47"/>
+<area shape="rect" href="SetBlendShapeTargetDeltasCommand_8h.html" title=" " alt="" coords="1309,184,1512,225"/>
+<area shape="rect" href="dnacalib_2types_2Aliases_8h.html" title=" " alt="" coords="1390,363,1554,389"/>
+<area shape="rect" title=" " alt="" coords="516,944,577,971"/>
+<area shape="rect" href="src_2dnacalib_2TypeDefs_8h.html" title=" " alt="" coords="2275,281,2413,307"/>
+<area shape="rect" href="CommandImplBase_8h.html" title=" " alt="" coords="2051,191,2250,218"/>
+<area shape="rect" href="SupportFactories_8h.html" title=" " alt="" coords="3259,184,3445,225"/>
+<area shape="rect" href="dnacalib_2dna_2DNA_8h.html" title=" " alt="" coords="2607,102,2745,129"/>
+<area shape="rect" href="DNACalibDNAReaderImpl_8h.html" title=" " alt="" coords="1054,95,1277,136"/>
+<area shape="rect" href="FormatString_8h.html" title=" " alt="" coords="2326,102,2514,129"/>
+<area shape="rect" title=" " alt="" coords="2821,102,2889,129"/>
+<area shape="rect" href="Command_8h.html" title=" " alt="" coords="1327,281,1471,307"/>
+<area shape="rect" href="dnacalib_2Defs_8h.html" title=" " alt="" coords="1234,363,1345,389"/>
+<area shape="rect" href="VectorOperations_8h.html" title=" " alt="" coords="1651,273,1831,315"/>
+<area shape="rect" href="DataLayer_8h.html" title=" " alt="" coords="1139,698,1256,725"/>
+<area shape="rect" href="BinaryStreamReader_8h.html" title=" " alt="" coords="1424,437,1603,464"/>
+<area shape="rect" href="StreamReader_8h.html" title=" " alt="" coords="1101,519,1243,546"/>
+<area shape="rect" href="dna_2types_2Aliases_8h.html" title=" " alt="" coords="697,698,834,725"/>
+<area shape="rect" href="MemoryResource_8h.html" title=" " alt="" coords="2403,787,2567,814"/>
+<area shape="rect" href="ScopedPtr_8h.html" title=" " alt="" coords="1829,787,1952,814"/>
+<area shape="rect" href="Status_8h.html" title=" " alt="" coords="1593,787,1703,814"/>
+<area shape="rect" href="StatusCode_8h.html" title=" " alt="" coords="1613,869,1755,896"/>
+<area shape="rect" href="Stream_8h.html" title=" " alt="" coords="425,869,522,896"/>
+<area shape="rect" href="FileStream_8h.html" title=" " alt="" coords="358,787,527,814"/>
+<area shape="rect" href="MemoryMappedFileStream_8h.html" title=" " alt="" coords="94,780,282,821"/>
+<area shape="rect" href="MemoryStream_8h.html" title=" " alt="" coords="552,787,747,814"/>
+<area shape="rect" href="BinaryStreamWriter_8h.html" title=" " alt="" coords="366,437,538,464"/>
+<area shape="rect" href="StreamWriter_8h.html" title=" " alt="" coords="531,519,666,546"/>
+<area shape="rect" href="JSONStreamReader_8h.html" title=" " alt="" coords="1011,437,1186,464"/>
+<area shape="rect" href="JSONStreamWriter_8h.html" title=" " alt="" coords="614,437,783,464"/>
+<area shape="rect" href="Vector3_8h.html" title=" " alt="" coords="1211,437,1349,464"/>
+<area shape="rect" href="AlignedMemoryResource_8h.html" title=" " alt="" coords="2453,601,2656,643"/>
+<area shape="rect" href="ArenaMemoryResource_8h.html" title=" " alt="" coords="2033,691,2226,732"/>
+<area shape="rect" href="DefaultMemoryResource_8h.html" title=" " alt="" coords="2235,512,2434,553"/>
+<area shape="rect" href="Reader_8h.html" title=" " alt="" coords="1011,609,1109,635"/>
+<area shape="rect" title=" " alt="" coords="2699,944,2763,971"/>
+<area shape="rect" title=" " alt="" coords="2000,869,2053,896"/>
+<area shape="rect" href="Writer_8h.html" title=" " alt="" coords="741,609,835,635"/>
+<area shape="rect" href="PolyAllocator_8h.html" title=" " alt="" coords="2512,437,2651,464"/>
+<area shape="rect" href="include_2pma_2TypeDefs_8h.html" title=" " alt="" coords="2646,363,2762,389"/>
+<area shape="rect" href="Provider_8h.html" title=" " alt="" coords="2290,363,2409,389"/>
+<area shape="rect" href="TDM_8h.html" title=" " alt="" coords="2433,363,2519,389"/>
+<area shape="rect" href="DynArray_8h.html" title=" " alt="" coords="3041,363,3197,389"/>
+<area shape="rect" title=" " alt="" coords="3014,519,3079,546"/>
+<area shape="rect" title=" " alt="" coords="3299,519,3368,546"/>
+<area shape="rect" title=" " alt="" coords="2611,519,2731,546"/>
+<area shape="rect" title=" " alt="" coords="2856,519,2939,546"/>
+<area shape="rect" title=" " alt="" coords="2675,437,2714,464"/>
+<area shape="rect" title=" " alt="" coords="2891,437,2965,464"/>
+<area shape="rect" title=" " alt="" coords="2437,437,2488,464"/>
+<area shape="rect" title=" " alt="" coords="3381,437,3459,464"/>
+<area shape="rect" title=" " alt="" coords="3243,437,3306,464"/>
+<area shape="rect" href="alib_2utils_2Extd_8h.html" title=" " alt="" coords="3273,363,3413,389"/>
+<area shape="rect" href="dnacalib_2dna_2LODMapping_8h.html" title=" " alt="" coords="2377,191,2562,218"/>
+<area shape="rect" href="dnacalib_2dna_2SurjectiveMapping_8h.html" title=" " alt="" coords="2739,191,2954,218"/>
+<area shape="rect" href="ArchiveOffset_8h.html" title=" " alt="" coords="3533,437,3712,464"/>
+<area shape="rect" title=" " alt="" coords="1856,281,1907,307"/>
+<area shape="rect" href="DNACalibDNAReader_8h.html" title=" " alt="" coords="1017,281,1252,307"/>
+<area shape="rect" href="dnacalib_2dna_2ReaderImpl_8h.html" title=" " alt="" coords="1598,191,1773,218"/>
+<area shape="rect" href="dnacalib_2dna_2WriterImpl_8h.html" title=" " alt="" coords="1858,191,2027,218"/>
 </map>
 </div>
 </div><table class="memberdecls">

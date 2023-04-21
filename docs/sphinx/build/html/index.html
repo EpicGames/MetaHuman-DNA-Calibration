@@ -54,6 +54,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -64,11 +65,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -102,9 +106,9 @@
   <section id="metahuman-dna-calibration">
 <h1>MetaHuman DNA Calibration<a class="headerlink" href="#metahuman-dna-calibration" title="Permalink to this headline"></a></h1>
 <p>MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package.
-DNA is an integral part of <a class="reference external" href="https://www.unrealengine.com/en-US/metahuman">MetaHuman</a> identity.
+<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_md#metahuman-dna"><code class="docutils literal notranslate"><span class="pre">DNA</span></code></a> is an integral part of <a class="reference external" href="https://www.unrealengine.com/en-US/metahuman">MetaHuman</a> identity.
 DNA files are created with <a class="reference external" href="https://metahuman.unrealengine.com/">MetaHuman Creator</a> and downloaded with
-<a class="reference external" href="https://docs.metahuman.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/">Quixel Bridge</a>.</p>
+<a class="reference external" href="https://docs.metahuman.unrealengine.com/en-US/downloading-metahumans-with-quixel-bridge/">Quixel Bridge</a>, and Bifrost in UE5.</p>
 <p>MetaHuman DNA Calibration is a set of tools used for working with MetaHuman DNA files, bundled into a single package. We wanted to share this code to help users customize DNA files so they can better integrate the characters they create into their games and experiences.
 MetaHuman DNA Calibration tools are provided in a GitHub repository located at this address.</p>
 </section>
@@ -142,10 +146,12 @@ MetaHuman DNA Calibration tools are provided in a GitHub repository located at t
 <li><p>Prune blendshapes.</p></li>
 <li><p>Remove all blend shape data.</p></li>
 </ul>
+<p>An overview of the MetaHuman DNA file format can be found <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_md"><code class="docutils literal notranslate"><span class="pre">here</span></code></a>.</p>
+<p><strong>Note</strong>: DNACalib library allows removal and renaming of any joint. However, the following joints are used for connecting head with body and should not be removed or renamed: neck_01, neck_02, FACIAL_C_FacialRoot.</p>
 </section>
 <section id="external-software-dependencies">
 <h2>External Software Dependencies<a class="headerlink" href="#external-software-dependencies" title="Permalink to this headline"></a></h2>
-<p>DNACalib’s Python wrapper is compiled against Python 3.7. Pre-compiled binaries for Windows and Linux (both 64-bit) are part of the repository.
+<p>DNACalib’s Python wrapper is compiled against Python 3.7 and 3.9. Pre-compiled binaries for Windows and Linux (both 64-bit) are part of the repository.
 If you are using a different version of Python, you must recompile it. Any Python 3 version should be fine.
 If a user has a different platform or architecture, the library and its dependencies must be compiled.</p>
 <p><strong>Important</strong>
@@ -155,7 +161,54 @@ git-lfs is installed and configured to use. If you are not using git-lfs, you ha
 <p><strong>Warning:</strong>
 Python 2 is not supported.</p>
 <p>DNACalib can be used in C++ projects as a C++ library.</p>
-<p>DNACalib Python wrapper can be used in Python 3.7, <code class="docutils literal notranslate"><span class="pre">mayapy</span></code> (Maya’s Python interpreter), or Maya 2022.</p>
+<p>DNACalib Python wrapper can be used in Python 3.7 and 3.9, <code class="docutils literal notranslate"><span class="pre">mayapy</span></code> (Python interpreter shipped with Maya) shipped with Maya.
+Supported Maya versions are 2022 and 2023.</p>
+<p>Note: Maya 2022 is bundled with Python 3.7, Maya 2023 is bundled with Python 3.9.</p>
+</section>
+<section id="environment-setup">
+<h2>Environment Setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline"></a></h2>
+<p>In order to use MetaHuman DNA Calibration in your scripts, you need to:</p>
+<ul class="simple">
+<li><p>have Python3 installed, see <span class="xref myst">note</span>,</p></li>
+<li><p>add MetaHuman DNA Calibration location to <code class="docutils literal notranslate"><span class="pre">MAYA_MODULE_PATH</span></code> system variable (if you want to use MetaHuman DNA Calibration in Maya)</p></li>
+</ul>
+<p>If you plan to run the script from command line:</p>
+<ul class="simple">
+<li><p>in case of Maya’s interpreter (mayapy) you will have to initialize maya with:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maya.standalone</span> 
+<span class="n">maya</span><span class="o">.</span><span class="n">standalone</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>in case of python interpreter you will have to add the following on top of your script:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">ospath</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">syspath</span>
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">platform</span>
+
+<span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ospath</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ospath</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span><span class="si">}</span><span class="s2">/..&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="n">MAYA_VERSION</span> <span class="o">=</span> <span class="s2">&quot;2022&quot;</span>  <span class="c1"># or 2023</span>
+<span class="n">ROOT_LIB_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/lib/Maya</span><span class="si">{</span><span class="n">MAYA_VERSION</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">if</span> <span class="n">platform</span> <span class="o">==</span> <span class="s2">&quot;win32&quot;</span><span class="p">:</span>
+    <span class="n">LIB_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_LIB_DIR</span><span class="si">}</span><span class="s2">/windows&quot;</span>
+<span class="k">elif</span> <span class="n">platform</span> <span class="o">==</span> <span class="s2">&quot;linux&quot;</span><span class="p">:</span>
+    <span class="n">LIB_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_LIB_DIR</span><span class="si">}</span><span class="s2">/linux&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span>
+        <span class="s2">&quot;OS not supported, please compile dependencies and add value to LIB_DIR&quot;</span>
+    <span class="p">)</span>
+
+<span class="c1"># Adds directories to path</span>
+<span class="n">syspath</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">ROOT_DIR</span><span class="p">)</span>
+<span class="n">syspath</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">LIB_DIR</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>NOTE:
+If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolute path to the <code class="docutils literal notranslate"><span class="pre">lib/Maya2022/linux</span></code> or <code class="docutils literal notranslate"><span class="pre">lib/Maya2023/linux</span></code> directory before running the example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">LD_LIBRARY_PATH=$LD_LIBRARY_PATH:&lt;path-to-lib-linux-dir&gt;</span></code></p></li>
+</ul>
 </section>
 <section id="dnaviewer">
 <h2>DNAViewer<a class="headerlink" href="#dnaviewer" title="Permalink to this headline"></a></h2>
@@ -165,7 +218,7 @@ Python 2 is not supported.</p>
 <li><p>Export FBX files.</p></li>
 <li><p>Read internal parts of DNA files.</p></li>
 </ul>
-<p>DNAViewer can be used in <code class="docutils literal notranslate"><span class="pre">mayapy</span></code> (Maya’s Python interpreter) or in Maya 2022, except <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py">Propagating changes from Maya scene to dna</a> which can be used just in Maya.</p>
+<p>DNAViewer can be used in <code class="docutils literal notranslate"><span class="pre">mayapy</span></code> (Python interpreter shipped with Maya) or in Maya 2022, except <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py">Propagating changes from Maya scene to dna</a> which can be used just in Maya.</p>
 </section>
 </section>
 <section id="examples">
@@ -175,14 +228,17 @@ Python 2 is not supported.</p>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_demo.py">Showcase a few commands</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_rename_joint_demo.py">Rename a joint</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_demo.py">Create a small DNA from scratch</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_binary_to_json_demo.py">Read binary DNA and write it in a human readable format</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_lod_demo.py">Create a new DNA from an existing one by extracting specific LODs</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_remove_joint.py">Remove a joint</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_clear_blend_shapes.py">Clear blend shape data</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_neutral_mesh_subtract.py">Subtract values from neutral mesh</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_run_in_maya.py">Simple UI in Maya</a> and some <span class="xref myst">documentation</span> for it</p></li>
-<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_demo.py">Generate rig and export FBX per LOD</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_build_rig.py">Generates rig</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_export_fbx.py">Export FBX per LOD</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py">Propagating changes from Maya scene to dna</a></p></li>
 </ul>
+<p>Note: Examples are grouped in three groups: DNA, DNACalib, and DNAViewer. These names are embedded as prefixes: dna_, dnacalib_, and dna_viewer_.</p>
 <section id="example-dna-files">
 <h2>Example DNA files<a class="headerlink" href="#example-dna-files" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/dna">Two demo DNA files</a> are provided for easier testing of this tool. Any DNA generated with <a class="reference external" href="https://www.unrealengine.com/en-US/metahuman">MetaHumanCreator</a>
@@ -192,12 +248,12 @@ should work.</p>
 <section id="notes">
 <h1>Notes<a class="headerlink" href="#notes" title="Permalink to this headline"></a></h1>
 <p>If a user runs examples in Maya 2022, the value for <code class="docutils literal notranslate"><span class="pre">ROOT_DIR</span></code> should be changed and absolute paths must be used,
-eg. <code class="docutils literal notranslate"><span class="pre">c:/dna_calibration</span></code> in Windows or <code class="docutils literal notranslate"><span class="pre">/home/user/dna_calibration</span></code> in Linux. Important: Use <code class="docutils literal notranslate"><span class="pre">/</span></code> (forward slash), Maya uses forward slashes in path.</p>
+e.g. <code class="docutils literal notranslate"><span class="pre">c:/MetaHuman-DNA-Calibration</span></code> in Windows or <code class="docutils literal notranslate"><span class="pre">/home/user/MetaHuman-DNA-Calibration</span></code> in Linux. Important: Use <code class="docutils literal notranslate"><span class="pre">/</span></code> (forward slash), Maya uses forward slashes in path.</p>
 <p>See the <a class="reference internal" href="faq_md.html"><span class="doc std std-doc">FAQ guide</span></a> for additional specifications.</p>
 </section>
 <section id="license">
 <h1>License<a class="headerlink" href="#license" title="Permalink to this headline"></a></h1>
-<p>MetaHuman DNA Calibration is released with <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/LICENSE">licence</a>.</p>
+<p>MetaHuman DNA Calibration is released with <a class="reference internal" href="index_.html#license"><span class="std std-ref">licence</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -231,7 +287,7 @@ eg. <code class="docutils literal notranslate"><span class="pre">c:/dna_calibrat
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

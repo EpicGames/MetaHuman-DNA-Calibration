@@ -196,14 +196,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   22</span>                                               :</div>
-<div class="line"><span class="lineno">   23</span>            <a class="code hl_typedef" href="classdnac_1_1ScaleCommand_1_1Impl.html#a86e4a40d7d1fe5577a4ddaf0e342c095">Super</a>{memRes_},</div>
-<div class="line"><span class="lineno">   24</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>{},</div>
-<div class="line"><span class="lineno">   25</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>{1.0f} {</div>
-<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                                               :</div>
+<div class="line"><span class="lineno">   20</span>            <a class="code hl_typedef" href="classdnac_1_1ScaleCommand_1_1Impl.html#a86e4a40d7d1fe5577a4ddaf0e342c095">Super</a>{memRes_},</div>
+<div class="line"><span class="lineno">   21</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>{},</div>
+<div class="line"><span class="lineno">   22</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>{1.0f} {</div>
+<div class="line"><span class="lineno">   23</span>        }</div>
 <div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a1c911ff5b8e36d10b3f23f6b1126dbd5"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">dnac::ScaleCommand::Impl::origin</a></div><div class="ttdeci">Vector3 origin</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:142</div></div>
 <div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a7c52b906dbd8a7ac139e4b0b72795a57"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">dnac::ScaleCommand::Impl::scale</a></div><div class="ttdeci">float scale</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:143</div></div>
-<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a86e4a40d7d1fe5577a4ddaf0e342c095"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a86e4a40d7d1fe5577a4ddaf0e342c095">dnac::ScaleCommand::Impl::Super</a></div><div class="ttdeci">CommandImplBase&lt; Impl &gt; Super</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:19</div></div>
+<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a86e4a40d7d1fe5577a4ddaf0e342c095"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a86e4a40d7d1fe5577a4ddaf0e342c095">dnac::ScaleCommand::Impl::Super</a></div><div class="ttdeci">CommandImplBase&lt; Impl &gt; Super</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,15 +231,15 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   36</span>                                                {</div>
-<div class="line"><span class="lineno">   37</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a> != 1.0f) {</div>
-<div class="line"><span class="lineno">   38</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1f15b0e88bfa3e2c126a2d0282dbb38d">scaleNeutralJoints</a>(output);</div>
-<div class="line"><span class="lineno">   39</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#a765e5aba59db044180e88a69baa32dbd">scaleJointBehavior</a>(output);</div>
-<div class="line"><span class="lineno">   40</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#ae15f40bf9aeeb015bfc18bb0daa831c0">scaleGeometry</a>(output);</div>
-<div class="line"><span class="lineno">   41</span>            }</div>
-<div class="line"><span class="lineno">   42</span>        }</div>
-<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a1f15b0e88bfa3e2c126a2d0282dbb38d"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a1f15b0e88bfa3e2c126a2d0282dbb38d">dnac::ScaleCommand::Impl::scaleNeutralJoints</a></div><div class="ttdeci">void scaleNeutralJoints(DNACalibDNAReaderImpl *output)</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:45</div></div>
-<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a765e5aba59db044180e88a69baa32dbd"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a765e5aba59db044180e88a69baa32dbd">dnac::ScaleCommand::Impl::scaleJointBehavior</a></div><div class="ttdeci">void scaleJointBehavior(DNACalibDNAReaderImpl *output)</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:74</div></div>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                                {</div>
+<div class="line"><span class="lineno">   34</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a> != 1.0f) {</div>
+<div class="line"><span class="lineno">   35</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1f15b0e88bfa3e2c126a2d0282dbb38d">scaleNeutralJoints</a>(output);</div>
+<div class="line"><span class="lineno">   36</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#a765e5aba59db044180e88a69baa32dbd">scaleJointBehavior</a>(output);</div>
+<div class="line"><span class="lineno">   37</span>                <a class="code hl_function" href="classdnac_1_1ScaleCommand_1_1Impl.html#ae15f40bf9aeeb015bfc18bb0daa831c0">scaleGeometry</a>(output);</div>
+<div class="line"><span class="lineno">   38</span>            }</div>
+<div class="line"><span class="lineno">   39</span>        }</div>
+<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a1f15b0e88bfa3e2c126a2d0282dbb38d"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a1f15b0e88bfa3e2c126a2d0282dbb38d">dnac::ScaleCommand::Impl::scaleNeutralJoints</a></div><div class="ttdeci">void scaleNeutralJoints(DNACalibDNAReaderImpl *output)</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:42</div></div>
+<div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_a765e5aba59db044180e88a69baa32dbd"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#a765e5aba59db044180e88a69baa32dbd">dnac::ScaleCommand::Impl::scaleJointBehavior</a></div><div class="ttdeci">void scaleJointBehavior(DNACalibDNAReaderImpl *output)</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:71</div></div>
 <div class="ttc" id="aclassdnac_1_1ScaleCommand_1_1Impl_html_ae15f40bf9aeeb015bfc18bb0daa831c0"><div class="ttname"><a href="classdnac_1_1ScaleCommand_1_1Impl.html#ae15f40bf9aeeb015bfc18bb0daa831c0">dnac::ScaleCommand::Impl::scaleGeometry</a></div><div class="ttdeci">void scaleGeometry(DNACalibDNAReaderImpl *output)</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:94</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>, <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#ae15f40bf9aeeb015bfc18bb0daa831c0">scaleGeometry()</a>, <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a765e5aba59db044180e88a69baa32dbd">scaleJointBehavior()</a>, and <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1f15b0e88bfa3e2c126a2d0282dbb38d">scaleNeutralJoints()</a>.</p>
@@ -364,7 +364,10 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   74</span>                                                               {</div>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>                                                               {</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacedna.html#a117519626c9cd44fb83eae7f17b3f25a">jointAttributeCount</a> = 9u;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keyword">constexpr</span> std::uint16_t rotationOffset = 3u;</div>
+<div class="line"><span class="lineno">   74</span> </div>
 <div class="line"><span class="lineno">   75</span>            <span class="keywordflow">for</span> (std::uint16_t jointGroupIndex = 0u; jointGroupIndex &lt; output-&gt;getJointGroupCount(); ++jointGroupIndex) {</div>
 <div class="line"><span class="lineno">   76</span>                <span class="keyword">const</span> <span class="keyword">auto</span> values = output-&gt;getJointGroupValues(jointGroupIndex);</div>
 <div class="line"><span class="lineno">   77</span>                <span class="keyword">const</span> <span class="keyword">auto</span> outputIndices = output-&gt;getJointGroupOutputIndices(jointGroupIndex);</div>
@@ -373,8 +376,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   80</span>                AlignedDynArray&lt;float&gt; newValues{values.begin(), values.end(), output-&gt;getMemoryResource()};</div>
 <div class="line"><span class="lineno">   81</span>                <span class="keywordflow">for</span> (std::size_t row = 0ul; row &lt; outputIndices.size(); ++row) {</div>
 <div class="line"><span class="lineno">   82</span>                    <span class="comment">// Only the translation attributes need to be scaled</span></div>
-<div class="line"><span class="lineno">   83</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> relAttributeIndex = (outputIndices[row] % <a class="code hl_variable" href="namespacednac.html#a402958209f5216b9b08a3c2b08d0d73c">jointAttributeCount</a>);</div>
-<div class="line"><span class="lineno">   84</span>                    <span class="keywordflow">if</span> (relAttributeIndex &lt; <a class="code hl_variable" href="namespacednac.html#a7804d6177609c47b41b07722b0264719">rotationOffset</a>) {</div>
+<div class="line"><span class="lineno">   83</span>                    <span class="keyword">const</span> <span class="keyword">auto</span> relAttributeIndex = (outputIndices[row] % <a class="code hl_variable" href="namespacedna.html#a117519626c9cd44fb83eae7f17b3f25a">jointAttributeCount</a>);</div>
+<div class="line"><span class="lineno">   84</span>                    <span class="keywordflow">if</span> (relAttributeIndex &lt; rotationOffset) {</div>
 <div class="line"><span class="lineno">   85</span>                        <span class="keywordflow">for</span> (std::size_t column = 0ul; column &lt; columnCount; ++column) {</div>
 <div class="line"><span class="lineno">   86</span>                            newValues[row * columnCount + column] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
 <div class="line"><span class="lineno">   87</span>                        }</div>
@@ -383,10 +386,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><span class="lineno">   90</span>                output-&gt;setJointGroupValues(jointGroupIndex, std::move(newValues));</div>
 <div class="line"><span class="lineno">   91</span>            }</div>
 <div class="line"><span class="lineno">   92</span>        }</div>
-<div class="ttc" id="anamespacednac_html_a402958209f5216b9b08a3c2b08d0d73c"><div class="ttname"><a href="namespacednac.html#a402958209f5216b9b08a3c2b08d0d73c">dnac::jointAttributeCount</a></div><div class="ttdeci">static constexpr std::uint16_t jointAttributeCount</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:14</div></div>
-<div class="ttc" id="anamespacednac_html_a7804d6177609c47b41b07722b0264719"><div class="ttname"><a href="namespacednac.html#a7804d6177609c47b41b07722b0264719">dnac::rotationOffset</a></div><div class="ttdeci">static constexpr std::uint16_t rotationOffset</div><div class="ttdef"><b>Definition:</b> ScaleCommand.cpp:15</div></div>
+<div class="ttc" id="anamespacedna_html_a117519626c9cd44fb83eae7f17b3f25a"><div class="ttname"><a href="namespacedna.html#a117519626c9cd44fb83eae7f17b3f25a">dna::jointAttributeCount</a></div><div class="ttdeci">static constexpr std::uint16_t jointAttributeCount</div><div class="ttdef"><b>Definition:</b> FilteredInputArchive.cpp:24</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="classterse_1_1DynArray.html#af406a760efbcb2f92a1059eadf34578d">terse::DynArray&lt; T, TAllocator &gt;::begin()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a75c9bb26249d92c81c2a16247f8c4f5e">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupCount()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a1433abc3344a820826f2a2e887e6220d">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupInputIndices()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a0dcf65e478fcaeb6683c963f8b599f01">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupOutputIndices()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#aafb275f39c9e45429fab9cba05a418a6">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupValues()</a>, <a class="el" href="classdnac_1_1BaseImpl.html#a32cf2cb73c096570d97256ad9df80b1b">dnac::BaseImpl::getMemoryResource()</a>, <a class="el" href="namespacednac.html#a402958209f5216b9b08a3c2b08d0d73c">dnac::jointAttributeCount</a>, <a class="el" href="namespacednac.html#a7804d6177609c47b41b07722b0264719">dnac::rotationOffset</a>, <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>, and <a class="el" href="classdnac_1_1DNACalibDNAReaderImpl.html#ada98afe3be0c8dddabb0210872bbd775">dnac::DNACalibDNAReaderImpl::setJointGroupValues()</a>.</p>
+<p class="reference">References <a class="el" href="classterse_1_1DynArray.html#af406a760efbcb2f92a1059eadf34578d">terse::DynArray&lt; T, TAllocator &gt;::begin()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a75c9bb26249d92c81c2a16247f8c4f5e">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupCount()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a1433abc3344a820826f2a2e887e6220d">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupInputIndices()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#a0dcf65e478fcaeb6683c963f8b599f01">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupOutputIndices()</a>, <a class="el" href="classdnac_1_1ReaderImpl.html#aafb275f39c9e45429fab9cba05a418a6">dnac::ReaderImpl&lt; TReaderBase &gt;::getJointGroupValues()</a>, <a class="el" href="classdnac_1_1BaseImpl.html#a32cf2cb73c096570d97256ad9df80b1b">dnac::BaseImpl::getMemoryResource()</a>, <a class="el" href="namespacedna.html#a117519626c9cd44fb83eae7f17b3f25a">dna::jointAttributeCount</a>, <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>, and <a class="el" href="classdnac_1_1DNACalibDNAReaderImpl.html#ada98afe3be0c8dddabb0210872bbd775">dnac::DNACalibDNAReaderImpl::setJointGroupValues()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a59cb0cacfe5bec9caefe5788b509a26f">run()</a>.</p>
 
@@ -415,34 +417,34 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                               {</div>
-<div class="line"><span class="lineno">   46</span>            <span class="keyword">const</span> <span class="keyword">auto</span> xs = output-&gt;getNeutralJointTranslationXs();</div>
-<div class="line"><span class="lineno">   47</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ys = output-&gt;getNeutralJointTranslationYs();</div>
-<div class="line"><span class="lineno">   48</span>            <span class="keyword">const</span> <span class="keyword">auto</span> zs = output-&gt;getNeutralJointTranslationZs();</div>
-<div class="line"><span class="lineno">   49</span>            assert((xs.size() == ys.size()) &amp;&amp; (ys.size() == zs.size()));</div>
-<div class="line"><span class="lineno">   50</span>            RawVector3Vector translations{xs, ys, zs, output-&gt;getMemoryResource()};</div>
-<div class="line"><span class="lineno">   51</span>            <span class="keywordflow">for</span> (std::uint16_t i = 0ul; i &lt; translations.size(); ++i) {</div>
-<div class="line"><span class="lineno">   52</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> isRootJoint = (output-&gt;getJointParentIndex(i) == i);</div>
-<div class="line"><span class="lineno">   53</span>                <span class="keywordflow">if</span> (isRootJoint) {</div>
-<div class="line"><span class="lineno">   54</span>                    translations.xs[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a174ac0385ec85c98e8e2927fb15973bd">x</a>;</div>
-<div class="line"><span class="lineno">   55</span>                    translations.ys[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a98dedbceccb88f1327056fdd511b884d">y</a>;</div>
-<div class="line"><span class="lineno">   56</span>                    translations.zs[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a82be7bbbcdabd8602c94ecd8deff5a03">z</a>;</div>
-<div class="line"><span class="lineno">   57</span> </div>
-<div class="line"><span class="lineno">   58</span>                    translations.xs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   59</span>                    translations.ys[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   60</span>                    translations.zs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   61</span> </div>
-<div class="line"><span class="lineno">   62</span>                    translations.xs[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a174ac0385ec85c98e8e2927fb15973bd">x</a>;</div>
-<div class="line"><span class="lineno">   63</span>                    translations.ys[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a98dedbceccb88f1327056fdd511b884d">y</a>;</div>
-<div class="line"><span class="lineno">   64</span>                    translations.zs[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a82be7bbbcdabd8602c94ecd8deff5a03">z</a>;</div>
-<div class="line"><span class="lineno">   65</span>                } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">   66</span>                    translations.xs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   67</span>                    translations.ys[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   68</span>                    translations.zs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
-<div class="line"><span class="lineno">   69</span>                }</div>
-<div class="line"><span class="lineno">   70</span>            }</div>
-<div class="line"><span class="lineno">   71</span>            output-&gt;setNeutralJointTranslations(std::move(translations));</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                                                               {</div>
+<div class="line"><span class="lineno">   43</span>            <span class="keyword">const</span> <span class="keyword">auto</span> xs = output-&gt;getNeutralJointTranslationXs();</div>
+<div class="line"><span class="lineno">   44</span>            <span class="keyword">const</span> <span class="keyword">auto</span> ys = output-&gt;getNeutralJointTranslationYs();</div>
+<div class="line"><span class="lineno">   45</span>            <span class="keyword">const</span> <span class="keyword">auto</span> zs = output-&gt;getNeutralJointTranslationZs();</div>
+<div class="line"><span class="lineno">   46</span>            assert((xs.size() == ys.size()) &amp;&amp; (ys.size() == zs.size()));</div>
+<div class="line"><span class="lineno">   47</span>            RawVector3Vector translations{xs, ys, zs, output-&gt;getMemoryResource()};</div>
+<div class="line"><span class="lineno">   48</span>            <span class="keywordflow">for</span> (std::uint16_t i = 0ul; i &lt; translations.size(); ++i) {</div>
+<div class="line"><span class="lineno">   49</span>                <span class="keyword">const</span> <span class="keywordtype">bool</span> isRootJoint = (output-&gt;getJointParentIndex(i) == i);</div>
+<div class="line"><span class="lineno">   50</span>                <span class="keywordflow">if</span> (isRootJoint) {</div>
+<div class="line"><span class="lineno">   51</span>                    translations.xs[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a174ac0385ec85c98e8e2927fb15973bd">x</a>;</div>
+<div class="line"><span class="lineno">   52</span>                    translations.ys[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a98dedbceccb88f1327056fdd511b884d">y</a>;</div>
+<div class="line"><span class="lineno">   53</span>                    translations.zs[i] -= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a82be7bbbcdabd8602c94ecd8deff5a03">z</a>;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>                    translations.xs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   56</span>                    translations.ys[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   57</span>                    translations.zs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>                    translations.xs[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a174ac0385ec85c98e8e2927fb15973bd">x</a>;</div>
+<div class="line"><span class="lineno">   60</span>                    translations.ys[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a98dedbceccb88f1327056fdd511b884d">y</a>;</div>
+<div class="line"><span class="lineno">   61</span>                    translations.zs[i] += <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.<a class="code hl_variable" href="structdna_1_1Vector3.html#a82be7bbbcdabd8602c94ecd8deff5a03">z</a>;</div>
+<div class="line"><span class="lineno">   62</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   63</span>                    translations.xs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   64</span>                    translations.ys[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   65</span>                    translations.zs[i] *= <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>;</div>
+<div class="line"><span class="lineno">   66</span>                }</div>
+<div class="line"><span class="lineno">   67</span>            }</div>
+<div class="line"><span class="lineno">   68</span>            output-&gt;setNeutralJointTranslations(std::move(translations));</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
 <div class="ttc" id="astructdna_1_1Vector3_html_a174ac0385ec85c98e8e2927fb15973bd"><div class="ttname"><a href="structdna_1_1Vector3.html#a174ac0385ec85c98e8e2927fb15973bd">dna::Vector3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> Vector3.h:8</div></div>
 <div class="ttc" id="astructdna_1_1Vector3_html_a82be7bbbcdabd8602c94ecd8deff5a03"><div class="ttname"><a href="structdna_1_1Vector3.html#a82be7bbbcdabd8602c94ecd8deff5a03">dna::Vector3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition:</b> Vector3.h:10</div></div>
 <div class="ttc" id="astructdna_1_1Vector3_html_a98dedbceccb88f1327056fdd511b884d"><div class="ttname"><a href="structdna_1_1Vector3.html#a98dedbceccb88f1327056fdd511b884d">dna::Vector3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> Vector3.h:9</div></div>
@@ -537,9 +539,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   32</span>                                        {</div>
-<div class="line"><span class="lineno">   33</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a> = origin_;</div>
-<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                        {</div>
+<div class="line"><span class="lineno">   30</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a> = origin_;</div>
+<div class="line"><span class="lineno">   31</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a1c911ff5b8e36d10b3f23f6b1126dbd5">origin</a>.</p>
 
@@ -568,9 +570,9 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   28</span>                                    {</div>
-<div class="line"><span class="lineno">   29</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a> = scale_;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                    {</div>
+<div class="line"><span class="lineno">   26</span>            <a class="code hl_variable" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a> = scale_;</div>
+<div class="line"><span class="lineno">   27</span>        }</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1ScaleCommand_1_1Impl.html#a7c52b906dbd8a7ac139e4b0b72795a57">scale</a>.</p>
 

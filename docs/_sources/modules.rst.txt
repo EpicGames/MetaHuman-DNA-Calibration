@@ -1,5 +1,5 @@
-dna_viewer
-==========
+dna_calibration
+===============
 
 .. toctree::
    :maxdepth: 4

@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classdnac_1_1SetBlendShapeTargetDeltasCommand-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">dnac::SetBlendShapeTargetDeltasCommand Class Reference</div></div>
@@ -85,7 +86,7 @@ Inheritance diagram for dnac::SetBlendShapeTargetDeltasCommand:</div>
 <div class="dyncontent">
 <div class="center"><img src="classdnac_1_1SetBlendShapeTargetDeltasCommand__inherit__graph.png" border="0" usemap="#adnac_1_1SetBlendShapeTargetDeltasCommand_inherit__map" alt="Inheritance graph"/></div>
 <map name="adnac_1_1SetBlendShapeTargetDeltasCommand_inherit__map" id="adnac_1_1SetBlendShapeTargetDeltasCommand_inherit__map">
-<area shape="rect" title="SetBlendShapeTargetDeltasCommand is used to change blend shape target deltas." alt="" coords="5,145,211,589"/>
+<area shape="rect" title="SetBlendShapeTargetDeltasCommand is used to change blend shape target deltas." alt="" coords="5,145,211,692"/>
 <area shape="rect" href="classdnac_1_1Command.html" title="Command is an abstract class whose implementations are expected to modify the DNA provided in the run..." alt="" coords="49,5,167,97"/>
 </map>
 </div>
@@ -94,15 +95,16 @@ Collaboration diagram for dnac::SetBlendShapeTargetDeltasCommand:</div>
 <div class="dyncontent">
 <div class="center"><img src="classdnac_1_1SetBlendShapeTargetDeltasCommand__coll__graph.png" border="0" usemap="#adnac_1_1SetBlendShapeTargetDeltasCommand_coll__map" alt="Collaboration graph"/></div>
 <map name="adnac_1_1SetBlendShapeTargetDeltasCommand_coll__map" id="adnac_1_1SetBlendShapeTargetDeltasCommand_coll__map">
-<area shape="rect" title="SetBlendShapeTargetDeltasCommand is used to change blend shape target deltas." alt="" coords="23,1332,229,1776"/>
-<area shape="rect" href="classdnac_1_1Command.html" title="Command is an abstract class whose implementations are expected to modify the DNA provided in the run..." alt="" coords="46,1031,163,1123"/>
-<area shape="rect" href="classpma_1_1ScopedPtr.html" title=" " alt="" coords="188,884,381,1269"/>
-<area shape="rect" title=" " alt="" coords="5,568,236,675"/>
-<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="145,291,379,412"/>
-<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="243,5,427,97"/>
-<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="333,175,516,267"/>
-<area shape="rect" href="classpma_1_1ScopedPtr.html" title="Takes ownership over the given pointer and handles it&#39;s lifetime." alt="" coords="355,436,494,807"/>
-<area shape="rect" title=" " alt="" coords="540,175,712,267"/>
+<area shape="rect" title="SetBlendShapeTargetDeltasCommand is used to change blend shape target deltas." alt="" coords="100,1376,305,1835"/>
+<area shape="rect" href="classdnac_1_1Command.html" title="Command is an abstract class whose implementations are expected to modify the DNA provided in the run..." alt="" coords="5,1031,123,1123"/>
+<area shape="rect" href="structsc_1_1StatusCode.html" title=" " alt="" coords="147,1031,259,1123"/>
+<area shape="rect" href="classpma_1_1ScopedPtr.html" title=" " alt="" coords="353,884,546,1269"/>
+<area shape="rect" title=" " alt="" coords="170,568,401,675"/>
+<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="310,291,543,412"/>
+<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="408,5,592,97"/>
+<area shape="rect" href="structpma_1_1ScopedPtr_1_1inspect.html" title=" " alt="" coords="498,175,681,267"/>
+<area shape="rect" href="classpma_1_1ScopedPtr.html" title="Takes ownership over the given pointer and handles it&#39;s lifetime." alt="" coords="520,436,659,807"/>
+<area shape="rect" title=" " alt="" coords="705,175,877,267"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -115,14 +117,14 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5b9fe6f3fabfb7d93e447c188c764fd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a5b9fe6f3fabfb7d93e447c188c764fd8">SetBlendShapeTargetDeltasCommand</a> (<a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
 <tr class="separator:a5b9fe6f3fabfb7d93e447c188c764fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a706a493f9b2370cc71559bf8ca6b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a90a706a493f9b2370cc71559bf8ca6b4">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; <a class="el" href="structdna_1_1Vector3.html">Vector3</a> &gt; deltas, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
-<tr class="separator:a90a706a493f9b2370cc71559bf8ca6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03a1db43bef81dc8b76a8d1d33e22657"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a03a1db43bef81dc8b76a8d1d33e22657">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; xs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; ys, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; zs, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
-<tr class="separator:a03a1db43bef81dc8b76a8d1d33e22657"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd630b5ab1b0668358961291028aa7be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#abd630b5ab1b0668358961291028aa7be">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; <a class="el" href="structdna_1_1Vector3.html">Vector3</a> &gt; deltas, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; masks, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
-<tr class="separator:abd630b5ab1b0668358961291028aa7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab18ede21b193892ded674172feb8a98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aab18ede21b193892ded674172feb8a98">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; xs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; ys, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; zs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; masks, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
-<tr class="separator:aab18ede21b193892ded674172feb8a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d6132f7ec1b4829754a004b60793a0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a9d6132f7ec1b4829754a004b60793a0f">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; <a class="el" href="structdna_1_1Vector3.html">Vector3</a> &gt; deltas, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt; vertexIndices, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
+<tr class="separator:a9d6132f7ec1b4829754a004b60793a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a634a9607b9da5022c2b7cb76385fa590"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a634a9607b9da5022c2b7cb76385fa590">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; xs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; ys, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; zs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt; vertexIndices, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
+<tr class="separator:a634a9607b9da5022c2b7cb76385fa590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8a3f941e2851f1bb1c1cd10afe4b35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a1d8a3f941e2851f1bb1c1cd10afe4b35">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; <a class="el" href="structdna_1_1Vector3.html">Vector3</a> &gt; deltas, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt; vertexIndices, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; masks, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
+<tr class="separator:a1d8a3f941e2851f1bb1c1cd10afe4b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec198b71cf0eaeb7a944f18100259732"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aec198b71cf0eaeb7a944f18100259732">SetBlendShapeTargetDeltasCommand</a> (std::uint16_t meshIndex, std::uint16_t blendShapeTargetIndex, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; xs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; ys, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; zs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt; vertexIndices, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; masks, <a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a> operation, <a class="el" href="classpma_1_1MemoryResource.html">MemoryResource</a> *memRes=nullptr)</td></tr>
+<tr class="separator:aec198b71cf0eaeb7a944f18100259732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ac5bc9a3c6bad238ac8b0a91865b85"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a46ac5bc9a3c6bad238ac8b0a91865b85">~SetBlendShapeTargetDeltasCommand</a> ()</td></tr>
 <tr class="separator:a46ac5bc9a3c6bad238ac8b0a91865b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc536b1bcc8fe344c286e4e00fae0ef3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#acc536b1bcc8fe344c286e4e00fae0ef3">SetBlendShapeTargetDeltasCommand</a> (const <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html">SetBlendShapeTargetDeltasCommand</a> &amp;)=delete</td></tr>
@@ -145,6 +147,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae882276c09d955bc230baaf5f508111d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#ae882276c09d955bc230baaf5f508111d">setDeltas</a> (<a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; xs, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; ys, <a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; zs)</td></tr>
 <tr class="memdesc:ae882276c09d955bc230baaf5f508111d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the values used to calculate new deltas for blend shape target.  <a href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#ae882276c09d955bc230baaf5f508111d">More...</a><br /></td></tr>
 <tr class="separator:ae882276c09d955bc230baaf5f508111d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99779cd3c1129675927dce99b2004cce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a99779cd3c1129675927dce99b2004cce">setVertexIndices</a> (<a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt; vertexIndices)</td></tr>
+<tr class="memdesc:a99779cd3c1129675927dce99b2004cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting the vertex indices that correspond to new deltas.  <a href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a99779cd3c1129675927dce99b2004cce">More...</a><br /></td></tr>
+<tr class="separator:a99779cd3c1129675927dce99b2004cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276fe679159a33258d9d6d8fd497fe5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a276fe679159a33258d9d6d8fd497fe5e">setMasks</a> (<a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt; masks)</td></tr>
 <tr class="memdesc:a276fe679159a33258d9d6d8fd497fe5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for setting masks used to calculate new deltas for blend shape target.  <a href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a276fe679159a33258d9d6d8fd497fe5e">More...</a><br /></td></tr>
 <tr class="separator:a276fe679159a33258d9d6d8fd497fe5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,6 +163,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a61be18c56cbef51019c8f7b1f752518c inherit pub_methods_classdnac_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204ca2536a334f4eb83c66e09ef3ecee inherit pub_methods_classdnac_1_1Command"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1Command.html#a204ca2536a334f4eb83c66e09ef3ecee">run</a> (<a class="el" href="classdnac_1_1DNACalibDNAReader.html">DNACalibDNAReader</a> *output)=0</td></tr>
 <tr class="separator:a204ca2536a334f4eb83c66e09ef3ecee inherit pub_methods_classdnac_1_1Command"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:ade70eac725a671345e3f644dcaab3e53"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#ade70eac725a671345e3f644dcaab3e53">VertexIndicesOutOfBoundsError</a> {3101, &quot;%s&quot;}</td></tr>
+<tr class="separator:ade70eac725a671345e3f644dcaab3e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abefd0bf1139f63d79574bb16002ec6f2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#abefd0bf1139f63d79574bb16002ec6f2">NoVertexIndicesSetError</a> {3102, &quot;%s&quot;}</td></tr>
+<tr class="separator:abefd0bf1139f63d79574bb16002ec6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af624d916c3898b1a88260d23987f8d23"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#af624d916c3898b1a88260d23987f8d23">DeltasVertexIndicesCountMismatch</a> {3103, &quot;%s&quot;}</td></tr>
+<tr class="separator:af624d916c3898b1a88260d23987f8d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a017af9a3b90a9b0c6f0ad6ce39e948af"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="dnacalib_2Defs_8h.html#a582ed0de52e12122ce3c978581df8113">DNACAPI</a> const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a017af9a3b90a9b0c6f0ad6ce39e948af">DeltasMasksCountMismatch</a> {3104, &quot;%s&quot;}</td></tr>
+<tr class="separator:a017af9a3b90a9b0c6f0ad6ce39e948af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -190,14 +206,14 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                                                         : <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
-<div class="line"><span class="lineno">   89</span>}</div>
-<div class="ttc" id="aclassdnac_1_1SetBlendShapeTargetDeltasCommand_html_a8c0e4b27cfe8bc7a1ffafb819a422417"><div class="ttname"><a href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">dnac::SetBlendShapeTargetDeltasCommand::pImpl</a></div><div class="ttdeci">ScopedPtr&lt; Impl &gt; pImpl</div><div class="ttdef"><b>Definition:</b> SetBlendShapeTargetDeltasCommand.h:116</div></div>
+<div class="fragment"><div class="line"><span class="lineno">  210</span>                                                                                         : <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
+<div class="line"><span class="lineno">  211</span>}</div>
+<div class="ttc" id="aclassdnac_1_1SetBlendShapeTargetDeltasCommand_html_a8c0e4b27cfe8bc7a1ffafb819a422417"><div class="ttname"><a href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">dnac::SetBlendShapeTargetDeltasCommand::pImpl</a></div><div class="ttdeci">ScopedPtr&lt; Impl &gt; pImpl</div><div class="ttdef"><b>Definition:</b> SetBlendShapeTargetDeltasCommand.h:133</div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a90a706a493f9b2370cc71559bf8ca6b4" name="a90a706a493f9b2370cc71559bf8ca6b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90a706a493f9b2370cc71559bf8ca6b4">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[2/7]</span></h2>
+<a id="a9d6132f7ec1b4829754a004b60793a0f" name="a9d6132f7ec1b4829754a004b60793a0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6132f7ec1b4829754a004b60793a0f">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,6 +239,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>vertexIndices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a>&#160;</td>
           <td class="paramname"><em>operation</em>, </td>
         </tr>
@@ -239,21 +261,22 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   95</span>                                                                                           :</div>
-<div class="line"><span class="lineno">   96</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
-<div class="line"><span class="lineno">   97</span> </div>
-<div class="line"><span class="lineno">   98</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
-<div class="line"><span class="lineno">   99</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
-<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
-<div class="line"><span class="lineno">  102</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  218</span>                                                                                           :</div>
+<div class="line"><span class="lineno">  219</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
+<div class="line"><span class="lineno">  220</span> </div>
+<div class="line"><span class="lineno">  221</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
+<div class="line"><span class="lineno">  222</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
+<div class="line"><span class="lineno">  223</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
+<div class="line"><span class="lineno">  224</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setVertexIndices(vertexIndices);</div>
+<div class="line"><span class="lineno">  225</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
+<div class="line"><span class="lineno">  226</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
 </div>
 </div>
-<a id="a03a1db43bef81dc8b76a8d1d33e22657" name="a03a1db43bef81dc8b76a8d1d33e22657"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03a1db43bef81dc8b76a8d1d33e22657">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[3/7]</span></h2>
+<a id="a634a9607b9da5022c2b7cb76385fa590" name="a634a9607b9da5022c2b7cb76385fa590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634a9607b9da5022c2b7cb76385fa590">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,6 +314,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>vertexIndices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="namespacednac.html#a0839ffb81a5969050a4b31009a3ad18f">VectorOperation</a>&#160;</td>
           <td class="paramname"><em>operation</em>, </td>
         </tr>
@@ -307,21 +336,22 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  110</span>                                                                                           :</div>
-<div class="line"><span class="lineno">  111</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
-<div class="line"><span class="lineno">  112</span> </div>
-<div class="line"><span class="lineno">  113</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
-<div class="line"><span class="lineno">  114</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
-<div class="line"><span class="lineno">  115</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
-<div class="line"><span class="lineno">  116</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
-<div class="line"><span class="lineno">  117</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>                                                                                           :</div>
+<div class="line"><span class="lineno">  236</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
+<div class="line"><span class="lineno">  237</span> </div>
+<div class="line"><span class="lineno">  238</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
+<div class="line"><span class="lineno">  239</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
+<div class="line"><span class="lineno">  240</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
+<div class="line"><span class="lineno">  241</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setVertexIndices(vertexIndices);</div>
+<div class="line"><span class="lineno">  242</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
+<div class="line"><span class="lineno">  243</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
 </div>
 </div>
-<a id="abd630b5ab1b0668358961291028aa7be" name="abd630b5ab1b0668358961291028aa7be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd630b5ab1b0668358961291028aa7be">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[4/7]</span></h2>
+<a id="a1d8a3f941e2851f1bb1c1cd10afe4b35" name="a1d8a3f941e2851f1bb1c1cd10afe4b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8a3f941e2851f1bb1c1cd10afe4b35">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,6 +373,12 @@ Private Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; <a class="el" href="structdna_1_1Vector3.html">Vector3</a> &gt;&#160;</td>
           <td class="paramname"><em>deltas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>vertexIndices</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -369,22 +405,23 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                                                           :</div>
-<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
-<div class="line"><span class="lineno">  126</span> </div>
-<div class="line"><span class="lineno">  127</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
-<div class="line"><span class="lineno">  128</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
-<div class="line"><span class="lineno">  129</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
-<div class="line"><span class="lineno">  130</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
-<div class="line"><span class="lineno">  131</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
-<div class="line"><span class="lineno">  132</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  251</span>                                                                                           :</div>
+<div class="line"><span class="lineno">  252</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
+<div class="line"><span class="lineno">  253</span> </div>
+<div class="line"><span class="lineno">  254</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
+<div class="line"><span class="lineno">  255</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
+<div class="line"><span class="lineno">  256</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
+<div class="line"><span class="lineno">  257</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setVertexIndices(vertexIndices);</div>
+<div class="line"><span class="lineno">  258</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
+<div class="line"><span class="lineno">  259</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
+<div class="line"><span class="lineno">  260</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
 </div>
 </div>
-<a id="aab18ede21b193892ded674172feb8a98" name="aab18ede21b193892ded674172feb8a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab18ede21b193892ded674172feb8a98">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[5/7]</span></h2>
+<a id="aec198b71cf0eaeb7a944f18100259732" name="aec198b71cf0eaeb7a944f18100259732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec198b71cf0eaeb7a944f18100259732">&#9670;&nbsp;</a></span>SetBlendShapeTargetDeltasCommand() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,6 +459,12 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>vertexIndices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; float &gt;&#160;</td>
           <td class="paramname"><em>masks</em>, </td>
         </tr>
@@ -444,15 +487,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  141</span>                                                                                           :</div>
-<div class="line"><span class="lineno">  142</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
-<div class="line"><span class="lineno">  145</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
-<div class="line"><span class="lineno">  146</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
-<div class="line"><span class="lineno">  147</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
-<div class="line"><span class="lineno">  148</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
-<div class="line"><span class="lineno">  149</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>                                                                                           :</div>
+<div class="line"><span class="lineno">  271</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>{makeScoped&lt;Impl&gt;(memRes)} {</div>
+<div class="line"><span class="lineno">  272</span> </div>
+<div class="line"><span class="lineno">  273</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
+<div class="line"><span class="lineno">  274</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
+<div class="line"><span class="lineno">  275</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
+<div class="line"><span class="lineno">  276</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setVertexIndices(vertexIndices);</div>
+<div class="line"><span class="lineno">  277</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
+<div class="line"><span class="lineno">  278</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
+<div class="line"><span class="lineno">  279</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -613,9 +657,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classdnac_1_1Command.html#a204ca2536a334f4eb83c66e09ef3ecee">dnac::Command</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  179</span>                                                                    {</div>
-<div class="line"><span class="lineno">  180</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;run(<span class="keyword">static_cast&lt;</span>DNACalibDNAReaderImpl*<span class="keyword">&gt;</span>(output));</div>
-<div class="line"><span class="lineno">  181</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  313</span>                                                                    {</div>
+<div class="line"><span class="lineno">  314</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;run(<span class="keyword">static_cast&lt;</span>DNACalibDNAReaderImpl*<span class="keyword">&gt;</span>(output));</div>
+<div class="line"><span class="lineno">  315</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -644,9 +688,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  159</span>                                                                                                 {</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
-<div class="line"><span class="lineno">  161</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                                                                                                 {</div>
+<div class="line"><span class="lineno">  290</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setBlendShapeTargetIndex(blendShapeTargetIndex);</div>
+<div class="line"><span class="lineno">  291</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -693,9 +737,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  167</span>                                                                                                                             {</div>
-<div class="line"><span class="lineno">  168</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
-<div class="line"><span class="lineno">  169</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  297</span>                                                                                                                             {</div>
+<div class="line"><span class="lineno">  298</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(xs, ys, zs);</div>
+<div class="line"><span class="lineno">  299</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -724,9 +768,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  163</span>                                                                               {</div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
-<div class="line"><span class="lineno">  165</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  293</span>                                                                               {</div>
+<div class="line"><span class="lineno">  294</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setDeltas(deltas);</div>
+<div class="line"><span class="lineno">  295</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -756,9 +800,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                                           {</div>
-<div class="line"><span class="lineno">  172</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
-<div class="line"><span class="lineno">  173</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  305</span>                                                                           {</div>
+<div class="line"><span class="lineno">  306</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMasks(masks);</div>
+<div class="line"><span class="lineno">  307</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -787,9 +831,9 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  155</span>                                                                         {</div>
-<div class="line"><span class="lineno">  156</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
-<div class="line"><span class="lineno">  157</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  285</span>                                                                         {</div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setMeshIndex(meshIndex);</div>
+<div class="line"><span class="lineno">  287</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
@@ -823,15 +867,118 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line"><span class="lineno">  175</span>                                                                             {</div>
-<div class="line"><span class="lineno">  176</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
-<div class="line"><span class="lineno">  177</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  309</span>                                                                             {</div>
+<div class="line"><span class="lineno">  310</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setOperation(operation);</div>
+<div class="line"><span class="lineno">  311</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
+
+</div>
+</div>
+<a id="a99779cd3c1129675927dce99b2004cce" name="a99779cd3c1129675927dce99b2004cce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99779cd3c1129675927dce99b2004cce">&#9670;&nbsp;</a></span>setVertexIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dnac::SetBlendShapeTargetDeltasCommand::setVertexIndices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacednac.html#ac2e07be60cd7438652d21feb096edce4">ConstArrayView</a>&lt; std::uint32_t &gt;&#160;</td>
+          <td class="paramname"><em>vertexIndices</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method for setting the vertex indices that correspond to new deltas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexIndices</td><td>The vertexIndices. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  301</span>                                                                                                 {</div>
+<div class="line"><span class="lineno">  302</span>    <a class="code hl_variable" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>-&gt;setVertexIndices(vertexIndices);</div>
+<div class="line"><span class="lineno">  303</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a8c0e4b27cfe8bc7a1ffafb819a422417">pImpl</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a017af9a3b90a9b0c6f0ad6ce39e948af" name="a017af9a3b90a9b0c6f0ad6ce39e948af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a017af9a3b90a9b0c6f0ad6ce39e948af">&#9670;&nbsp;</a></span>DeltasMasksCountMismatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a> dnac::SetBlendShapeTargetDeltasCommand::DeltasMasksCountMismatch {3104, &quot;%s&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl.html#a9cd5c3a3a400e107a5280bed4cab5878">dnac::SetBlendShapeTargetDeltasCommand::Impl::computeBlendShapeTargetDeltas()</a>.</p>
+
+</div>
+</div>
+<a id="af624d916c3898b1a88260d23987f8d23" name="af624d916c3898b1a88260d23987f8d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af624d916c3898b1a88260d23987f8d23">&#9670;&nbsp;</a></span>DeltasVertexIndicesCountMismatch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a> dnac::SetBlendShapeTargetDeltasCommand::DeltasVertexIndicesCountMismatch {3103, &quot;%s&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl.html#a9cd5c3a3a400e107a5280bed4cab5878">dnac::SetBlendShapeTargetDeltasCommand::Impl::computeBlendShapeTargetDeltas()</a>.</p>
+
+</div>
+</div>
+<a id="abefd0bf1139f63d79574bb16002ec6f2" name="abefd0bf1139f63d79574bb16002ec6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefd0bf1139f63d79574bb16002ec6f2">&#9670;&nbsp;</a></span>NoVertexIndicesSetError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a> dnac::SetBlendShapeTargetDeltasCommand::NoVertexIndicesSetError {3102, &quot;%s&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl.html#a9cd5c3a3a400e107a5280bed4cab5878">dnac::SetBlendShapeTargetDeltasCommand::Impl::computeBlendShapeTargetDeltas()</a>.</p>
+
+</div>
+</div>
 <a id="a8c0e4b27cfe8bc7a1ffafb819a422417" name="a8c0e4b27cfe8bc7a1ffafb819a422417"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8c0e4b27cfe8bc7a1ffafb819a422417">&#9670;&nbsp;</a></span>pImpl</h2>
 
@@ -852,7 +999,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aa929c4b449ec5d0e7fc42cfb7b8569fa">run()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a90a706a493f9b2370cc71559bf8ca6b4">SetBlendShapeTargetDeltasCommand()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#ad181ea9f433b0f3fa99dbdfca29518eb">setBlendShapeTargetIndex()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aa97592ce94a15b07231f1c750ad8fd4e">setDeltas()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a276fe679159a33258d9d6d8fd497fe5e">setMasks()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a935bbc1513a57dcc1869f6616ca76d08">setMeshIndex()</a>, and <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a48418ac293efdb7458ecc53e9c0c8963">setOperation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aa929c4b449ec5d0e7fc42cfb7b8569fa">run()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a9d6132f7ec1b4829754a004b60793a0f">SetBlendShapeTargetDeltasCommand()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#ad181ea9f433b0f3fa99dbdfca29518eb">setBlendShapeTargetIndex()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#aa97592ce94a15b07231f1c750ad8fd4e">setDeltas()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a276fe679159a33258d9d6d8fd497fe5e">setMasks()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a935bbc1513a57dcc1869f6616ca76d08">setMeshIndex()</a>, <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a48418ac293efdb7458ecc53e9c0c8963">setOperation()</a>, and <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html#a99779cd3c1129675927dce99b2004cce">setVertexIndices()</a>.</p>
+
+</div>
+</div>
+<a id="ade70eac725a671345e3f644dcaab3e53" name="ade70eac725a671345e3f644dcaab3e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade70eac725a671345e3f644dcaab3e53">&#9670;&nbsp;</a></span>VertexIndicesOutOfBoundsError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structsc_1_1StatusCode.html">sc::StatusCode</a> dnac::SetBlendShapeTargetDeltasCommand::VertexIndicesOutOfBoundsError {3101, &quot;%s&quot;}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl.html#a9cd5c3a3a400e107a5280bed4cab5878">dnac::SetBlendShapeTargetDeltasCommand::Impl::computeBlendShapeTargetDeltas()</a>.</p>
 
 </div>
 </div>

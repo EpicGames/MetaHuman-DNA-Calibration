@@ -9,7 +9,8 @@ var searchData=
   ['findindicesofmeshlowerlods_6',['findIndicesOfMeshLowerLODs',['../classdnac_1_1CalculateMeshLowerLODsCommand_1_1Impl.html#ae0f84b037a2fde048c94a8d1e6b4eecb',1,'dnac::CalculateMeshLowerLODsCommand::Impl']]],
   ['first_7',['first',['../classtrust_1_1ArrayView.html#ab491895d12471cb3bdd874d745c6df43',1,'trust::ArrayView']]],
   ['flush_8',['flush',['../classtrio_1_1Buffered.html#a26d3651eaa3506ec501bde9791c3a0ba',1,'trio::Buffered::flush()'],['../classtrio_1_1MemoryMappedFileStreamFallback.html#a514af794d2b9637940fa2eac3049f122',1,'trio::MemoryMappedFileStreamFallback::flush()']]],
-  ['from_9',['from',['../structtrio_1_1StringConverter_3_01char_01_4.html#a82197b1d94867a0e7ad30166918acb39',1,'trio::StringConverter&lt; char &gt;::from()'],['../structtrio_1_1StringConverter_3_01wchar__t_01_4.html#a8635df969e0bb53a35eb017245d6959d',1,'trio::StringConverter&lt; wchar_t &gt;::from()']]],
-  ['fromcolumns_10',['fromColumns',['../structtdm_1_1mat.html#a9f1b734dca470f22bffdcaf838c3b711',1,'tdm::mat']]],
-  ['fromrows_11',['fromRows',['../structtdm_1_1mat.html#af211e4e27ae53a43d9db60c0af57b0e7',1,'tdm::mat']]]
+  ['formatstring_9',['formatString',['../namespacednac.html#a28b74df1b84e529ca37742636b66cd8b',1,'dnac']]],
+  ['from_10',['from',['../structtrio_1_1StringConverter_3_01char_01_4.html#a82197b1d94867a0e7ad30166918acb39',1,'trio::StringConverter&lt; char &gt;::from()'],['../structtrio_1_1StringConverter_3_01wchar__t_01_4.html#a8635df969e0bb53a35eb017245d6959d',1,'trio::StringConverter&lt; wchar_t &gt;::from()']]],
+  ['fromcolumns_11',['fromColumns',['../structtdm_1_1mat.html#a9f1b734dca470f22bffdcaf838c3b711',1,'tdm::mat']]],
+  ['fromrows_12',['fromRows',['../structtdm_1_1mat.html#af211e4e27ae53a43d9db60c0af57b0e7',1,'tdm::mat']]]
 ];

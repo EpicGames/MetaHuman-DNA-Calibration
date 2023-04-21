@@ -20,21 +20,22 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ae56914a750d8e4a15ed78989e214603a" prot="private" static="no" mutable="no">
-        <type>std::uint16_t</type>
-        <definition>std::uint16_t dnac::RemoveJointAnimationCommand::Impl::jointIndex</definition>
+      <memberdef kind="variable" id="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; std::uint16_t &gt;</type>
+        <definition>Vector&lt;std::uint16_t&gt; dnac::RemoveJointAnimationCommand::Impl::jointIndices</definition>
         <argsstring></argsstring>
-        <name>jointIndex</name>
-        <qualifiedname>dnac::RemoveJointAnimationCommand::Impl::jointIndex</qualifiedname>
+        <name>jointIndices</name>
+        <qualifiedname>dnac::RemoveJointAnimationCommand::Impl::jointIndices</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="31" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="31" bodyend="-1"/>
-        <referencedby refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a5e20943d1fc7f5329b5ce19e07f432b1" compoundref="RemoveJointAnimationCommand_8cpp" startline="26" endline="28">run</referencedby>
-        <referencedby refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a67b38503b44a524e9e9464c346c7a4fc" compoundref="RemoveJointAnimationCommand_8cpp" startline="22" endline="24">setJointIndex</referencedby>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="36" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a5e20943d1fc7f5329b5ce19e07f432b1" compoundref="RemoveJointAnimationCommand_8cpp" startline="31" endline="33">run</referencedby>
+        <referencedby refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a67b38503b44a524e9e9464c346c7a4fc" compoundref="RemoveJointAnimationCommand_8cpp" startline="22" endline="25">setJointIndex</referencedby>
+        <referencedby refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ac4d0b0817324c66b085f499671a55107" compoundref="RemoveJointAnimationCommand_8cpp" startline="27" endline="29">setJointIndices</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -72,8 +73,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="22" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="22" bodyend="24"/>
-        <references refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ae56914a750d8e4a15ed78989e214603a" compoundref="RemoveJointAnimationCommand_8cpp" startline="31">jointIndex</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="22" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="22" bodyend="25"/>
+        <references refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" compoundref="RemoveJointAnimationCommand_8cpp" startline="36">jointIndices</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ac4d0b0817324c66b085f499671a55107" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RemoveJointAnimationCommand::Impl::setJointIndices</definition>
+        <argsstring>(ConstArrayView&lt; std::uint16_t &gt; jointIndices_)</argsstring>
+        <name>setJointIndices</name>
+        <qualifiedname>dnac::RemoveJointAnimationCommand::Impl::setJointIndices</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>jointIndices_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="27" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="27" bodyend="29"/>
+        <references refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" compoundref="ArrayView_8h" startline="110" endline="112">trust::ArrayView&lt; T &gt;::begin</references>
+        <references refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" compoundref="ArrayView_8h" startline="114" endline="116">trust::ArrayView&lt; T &gt;::end</references>
+        <references refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" compoundref="RemoveJointAnimationCommand_8cpp" startline="36">jointIndices</references>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a5e20943d1fc7f5329b5ce19e07f432b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -91,9 +113,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="26" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="26" bodyend="28"/>
-        <references refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ae56914a750d8e4a15ed78989e214603a" compoundref="RemoveJointAnimationCommand_8cpp" startline="31">jointIndex</references>
-        <references refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" compoundref="DNACalibDNAReaderImpl_8cpp" startline="209" endline="218">dnac::DNACalibDNAReaderImpl::removeJointAnimation</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="31" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="31" bodyend="33"/>
+        <references refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" compoundref="RemoveJointAnimationCommand_8cpp" startline="36">jointIndices</references>
+        <references refid="classdnac_1_1DNACalibDNAReaderImpl_1a999a34d2290f5c2040ad5ce24fde6849" compoundref="DNACalibDNAReaderImpl_8cpp" startline="221" endline="232">dnac::DNACalibDNAReaderImpl::removeJointAnimations</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -148,17 +170,18 @@
         <link refid="classpma_1_1MemoryResource"/>
       </node>
     </collaborationgraph>
-    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="12" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="12" bodyend="33"/>
+    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" line="12" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointAnimationCommand.cpp" bodystart="12" bodyend="38"/>
     <listofallmembers>
       <member refid="classdnac_1_1CommandImplBase_1a61e4c37cc64510fb8861247ae839939e" prot="protected" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>CommandImplBase</name></member>
       <member refid="classdnac_1_1CommandImplBase_1aaad21404fdc3816906b60a423ee526b4" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>create</name></member>
       <member refid="classdnac_1_1CommandImplBase_1a2d39f8502fb35a72933427eb810bed7f" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>destroy</name></member>
       <member refid="classdnac_1_1CommandImplBase_1a08756df6a2ac83827a17bf5511cb9fc3" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>getMemoryResource</name></member>
       <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a4719c8fafb915b18c3bd4aedb427d30f" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>Impl</name></member>
-      <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ae56914a750d8e4a15ed78989e214603a" prot="private" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>jointIndex</name></member>
+      <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" prot="private" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>jointIndices</name></member>
       <member refid="classdnac_1_1CommandImplBase_1aa6e089f0d257ef77e86370e1535196a3" prot="private" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>memRes</name></member>
       <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a5e20943d1fc7f5329b5ce19e07f432b1" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>run</name></member>
       <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a67b38503b44a524e9e9464c346c7a4fc" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>setJointIndex</name></member>
+      <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ac4d0b0817324c66b085f499671a55107" prot="public" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>setJointIndices</name></member>
       <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a308e02b867b1e94c1bff51f84b5db017" prot="private" virt="non-virtual"><scope>dnac::RemoveJointAnimationCommand::Impl</scope><name>Super</name></member>
     </listofallmembers>
   </compounddef>

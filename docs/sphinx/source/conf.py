@@ -46,7 +46,6 @@ else:
 syspath.append(ROOT_DIR)
 syspath.append(LIB_DIR)
 
-
 import logging
 
 try:
@@ -54,13 +53,12 @@ try:
 
     try:
         standalone.initialize(name="python")
-    except Exception as e:
-        logging.error(f"Initializing mayapy failed {e}")
+    except Exception:
+        logging.warning("Starting Maya cannot be done in Maya")
 except ImportError as e:
-    logging.error(f"Initializing mayapy failed {e}")
+    logging.error("DNAViewer needs to be run with Maya2022")
     raise ImportError(e) from e
-
-
+    
 import dna_viewer
 
 syspath.append(f'{ROOT_DIR}/dna_viewer')
@@ -69,7 +67,7 @@ syspath.append(f'{ROOT_DIR}/dnacalib')
 # -- Project information -----------------------------------------------------
 
 project = 'DNA Calibration'
-copyright = '2022, Epic Games'
+copyright = '2023, Epic Games'
 author = 'Epic Games'
 
 
@@ -125,3 +123,6 @@ os.chdir(root)
 # breathe_debug_trace_directives = True
 breathe_projects = {"dnacalib": f'{ROOT_DIR}/docs/doxygen/build/xml/'}
 breathe_default_project = "dnacalib"
+cpp_id_attributes = ["DNACAPI"]
+
+myst_heading_anchors = 3

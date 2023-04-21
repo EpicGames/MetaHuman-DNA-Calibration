@@ -68,6 +68,7 @@ var menudata={children:[
 {text:"r",url:"namespacemembers_func_r.html#index_r"},
 {text:"s",url:"namespacemembers_func_s.html#index_s"},
 {text:"t",url:"namespacemembers_func_t.html#index_t"},
+{text:"v",url:"namespacemembers_func_v.html#index_v"},
 {text:"x",url:"namespacemembers_func_x.html#index_x"}]},
 {text:"Variables",url:"namespacemembers_vars.html"},
 {text:"Typedefs",url:"namespacemembers_type.html",children:[

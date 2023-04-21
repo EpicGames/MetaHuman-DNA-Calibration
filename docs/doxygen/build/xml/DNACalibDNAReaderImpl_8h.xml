@@ -11,6 +11,8 @@
     <includedby refid="ClearBlendShapesCommand_8cpp" local="yes">ClearBlendShapesCommand.cpp</includedby>
     <includedby refid="DNACalibDNAReaderImpl_8cpp" local="yes">DNACalibDNAReaderImpl.cpp</includedby>
     <includedby refid="PruneBlendShapeTargetsCommand_8cpp" local="yes">PruneBlendShapeTargetsCommand.cpp</includedby>
+    <includedby refid="RemoveAnimatedMapCommand_8cpp" local="yes">RemoveAnimatedMapCommand.cpp</includedby>
+    <includedby refid="RemoveBlendShapeCommand_8cpp" local="yes">RemoveBlendShapeCommand.cpp</includedby>
     <includedby refid="RemoveJointAnimationCommand_8cpp" local="yes">RemoveJointAnimationCommand.cpp</includedby>
     <includedby refid="RemoveJointCommand_8cpp" local="yes">RemoveJointCommand.cpp</includedby>
     <includedby refid="RemoveMeshCommand_8cpp" local="yes">RemoveMeshCommand.cpp</includedby>
@@ -332,6 +334,8 @@
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
         <childnode refid="27" relation="include">
         </childnode>
         <childnode refid="33" relation="include">
@@ -436,6 +440,20 @@
       <node id="25">
         <label>status/Defs.h</label>
         <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="65">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
       </node>
       <node id="24">
         <label>status/Status.h</label>
@@ -542,31 +560,33 @@
         </childnode>
         <childnode refid="65" relation="include">
         </childnode>
-        <childnode refid="72" relation="include">
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
         </childnode>
       </node>
-      <node id="76">
+      <node id="79">
         <label>dnacalib/dna/BaseImpl.h</label>
         <link refid="dnacalib_2dna_2BaseImpl_8h"/>
-        <childnode refid="77" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="77">
+      <node id="80">
         <label>dnacalib/dna/DNA.h</label>
         <link refid="dnacalib_2dna_2DNA_8h"/>
         <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="78" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="79" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
-        <childnode refid="80" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="81" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
@@ -574,11 +594,11 @@
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
         <childnode refid="54" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -588,35 +608,35 @@
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
-        <childnode refid="86" relation="include">
+        <childnode refid="88" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="41" relation="include">
         </childnode>
       </node>
-      <node id="83">
+      <node id="85">
         <label>dnacalib/dna/DenormalizedData.h</label>
         <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
-        <childnode refid="78" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="84" relation="include">
+        <childnode refid="86" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
       </node>
-      <node id="78">
+      <node id="81">
         <label>dnacalib/dna/LODMapping.h</label>
         <link refid="dnacalib_2dna_2LODMapping_8h"/>
         <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="30" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
       <node id="51">
@@ -624,126 +644,126 @@
         <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
         <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
-        </childnode>
-        <childnode refid="83" relation="include">
-        </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
         </childnode>
       </node>
-      <node id="79">
+      <node id="82">
         <label>dnacalib/dna/SurjectiveMapping.h</label>
         <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
         <childnode refid="52" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
-      <node id="86">
+      <node id="88">
         <label>dnacalib/dna/WriterImpl.h</label>
         <link refid="dnacalib_2dna_2WriterImpl_8h"/>
         <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
+        <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="84">
+      <node id="86">
         <label>dnacalib/utils/Extd.h</label>
         <link refid="alib_2utils_2Extd_8h"/>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
         <childnode refid="60" relation="include">
         </childnode>
         <childnode refid="64" relation="include">
         </childnode>
       </node>
-      <node id="70">
+      <node id="73">
         <label>tdm/Computations.h</label>
         <link refid="Computations_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
         <childnode refid="69" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="69">
+      <node id="72">
         <label>tdm/Mat.h</label>
         <link refid="Mat_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
-      </node>
-      <node id="65">
-        <label>tdm/TDM.h</label>
-        <link refid="TDM_8h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="68" relation="include">
-        </childnode>
         <childnode refid="69" relation="include">
-        </childnode>
-        <childnode refid="70" relation="include">
         </childnode>
         <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="71">
-        <label>tdm/Transforms.h</label>
-        <link refid="Transforms_8h"/>
-        <childnode refid="70" relation="include">
+      <node id="68">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="69" relation="include">
         </childnode>
-        <childnode refid="66" relation="include">
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
         </childnode>
       </node>
-      <node id="66">
+      <node id="74">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
         <label>tdm/Types.h</label>
         <link refid="Types_8h"/>
         <childnode refid="16" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="56" relation="include">
         </childnode>
       </node>
-      <node id="68">
+      <node id="71">
         <label>tdm/Vec.h</label>
         <link refid="Vec_8h"/>
-        <childnode refid="66" relation="include">
+        <childnode refid="69" relation="include">
         </childnode>
       </node>
-      <node id="80">
+      <node id="83">
         <label>terse/types/ArchiveOffset.h</label>
         <link refid="ArchiveOffset_8h"/>
         <childnode refid="18" relation="include">
@@ -753,7 +773,7 @@
         <childnode refid="54" relation="include">
         </childnode>
       </node>
-      <node id="72">
+      <node id="75">
         <label>terse/types/DynArray.h</label>
         <link refid="DynArray_8h"/>
         <childnode refid="16" relation="include">
@@ -762,11 +782,11 @@
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
+        <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
         <childnode refid="54" relation="include">
         </childnode>
@@ -776,13 +796,13 @@
       <node id="16">
         <label>algorithm</label>
       </node>
-      <node id="81">
+      <node id="67">
         <label>array</label>
       </node>
       <node id="17">
         <label>cassert</label>
       </node>
-      <node id="67">
+      <node id="70">
         <label>cmath</label>
       </node>
       <node id="18">
@@ -791,16 +811,16 @@
       <node id="30">
         <label>cstdint</label>
       </node>
-      <node id="73">
+      <node id="76">
         <label>cstring</label>
       </node>
-      <node id="74">
+      <node id="77">
         <label>functional</label>
       </node>
-      <node id="75">
+      <node id="78">
         <label>iterator</label>
       </node>
-      <node id="85">
+      <node id="87">
         <label>limits</label>
       </node>
       <node id="58">
@@ -818,10 +838,13 @@
       <node id="60">
         <label>set</label>
       </node>
+      <node id="66">
+        <label>stdio.h</label>
+      </node>
       <node id="61">
         <label>string</label>
       </node>
-      <node id="82">
+      <node id="84">
         <label>tuple</label>
       </node>
       <node id="56">
@@ -854,78 +877,86 @@
         <link refid="PruneBlendShapeTargetsCommand_8cpp"/>
       </node>
       <node id="6">
+        <label>RemoveAnimatedMapCommand.cpp</label>
+        <link refid="RemoveAnimatedMapCommand_8cpp"/>
+      </node>
+      <node id="7">
+        <label>RemoveBlendShapeCommand.cpp</label>
+        <link refid="RemoveBlendShapeCommand_8cpp"/>
+      </node>
+      <node id="8">
         <label>RemoveJointAnimationCommand.cpp</label>
         <link refid="RemoveJointAnimationCommand_8cpp"/>
       </node>
-      <node id="7">
+      <node id="9">
         <label>RemoveJointCommand.cpp</label>
         <link refid="RemoveJointCommand_8cpp"/>
       </node>
-      <node id="8">
+      <node id="10">
         <label>RemoveMeshCommand.cpp</label>
         <link refid="RemoveMeshCommand_8cpp"/>
       </node>
-      <node id="9">
+      <node id="11">
         <label>RenameAnimatedMapCommand.cpp</label>
         <link refid="RenameAnimatedMapCommand_8cpp"/>
       </node>
-      <node id="10">
+      <node id="12">
         <label>RenameBlendShapeCommand.cpp</label>
         <link refid="RenameBlendShapeCommand_8cpp"/>
       </node>
-      <node id="11">
+      <node id="13">
         <label>RenameJointCommand.cpp</label>
         <link refid="RenameJointCommand_8cpp"/>
       </node>
-      <node id="12">
+      <node id="14">
         <label>RenameMeshCommand.cpp</label>
         <link refid="RenameMeshCommand_8cpp"/>
       </node>
-      <node id="13">
+      <node id="15">
         <label>RenameResourceCommand.h</label>
         <link refid="RenameResourceCommand_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
       </node>
-      <node id="14">
+      <node id="16">
         <label>RotateCommand.cpp</label>
         <link refid="RotateCommand_8cpp"/>
       </node>
-      <node id="15">
+      <node id="17">
         <label>ScaleCommand.cpp</label>
         <link refid="ScaleCommand_8cpp"/>
       </node>
-      <node id="16">
+      <node id="18">
         <label>SetBlendShapeTargetDeltasCommand.cpp</label>
         <link refid="SetBlendShapeTargetDeltasCommand_8cpp"/>
       </node>
-      <node id="17">
+      <node id="19">
         <label>SetLODsCommand.cpp</label>
         <link refid="SetLODsCommand_8cpp"/>
       </node>
-      <node id="18">
+      <node id="20">
         <label>SetNeutralJointRotationsCommand.cpp</label>
         <link refid="SetNeutralJointRotationsCommand_8cpp"/>
       </node>
-      <node id="19">
+      <node id="21">
         <label>SetNeutralJointTranslationsCommand.cpp</label>
         <link refid="SetNeutralJointTranslationsCommand_8cpp"/>
       </node>
-      <node id="20">
+      <node id="22">
         <label>SetSkinWeightsCommand.cpp</label>
         <link refid="SetSkinWeightsCommand_8cpp"/>
       </node>
-      <node id="21">
+      <node id="23">
         <label>SetVertexPositionsCommand.cpp</label>
         <link refid="SetVertexPositionsCommand_8cpp"/>
       </node>
-      <node id="22">
+      <node id="24">
         <label>TranslateCommand.cpp</label>
         <link refid="TranslateCommand_8cpp"/>
       </node>
@@ -977,6 +1008,10 @@
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -1042,15 +1077,22 @@
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">setBlendShapeTargetDeltas</ref>(std::uint16_t<sp/>meshIndex,<sp/>std::uint16_t<sp/>blendShapeTargetIndex,<sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>deltas);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" kindref="member">pruneBlendShapeTargets</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" kindref="member">removeMesh</ref>(std::uint16_t<sp/>meshIndex);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a18f789887ae48a774e7549823920a8a5" kindref="member">removeJoint</ref>(std::uint16_t<sp/>jointIndex);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" kindref="member">removeJointAnimation</ref>(std::uint16_t<sp/>jointIndex);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1WriterImpl" kindref="compound">WriterImpl</ref>&lt;<ref refid="classdna_1_1Writer" kindref="compound">dna::Writer</ref>&gt;<ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a51d5d69dd682b2dfa2ee37c61109a442" kindref="member">::setBlendShapeTargetVertexIndices</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a51d5d69dd682b2dfa2ee37c61109a442" kindref="member">setBlendShapeTargetVertexIndices</ref>(std::uint16_t<sp/>meshIndex,<sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint32_t&gt;</ref><sp/>vertexIndices);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" kindref="member">pruneBlendShapeTargets</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e75b3ab28e83736c2332fcaf8cfdd93" kindref="member">removeMeshes</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>meshIndices);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a13faba4a20c3f6de5be7eefd3e61d2d6" kindref="member">removeJoints</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>jointIndices);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a999a34d2290f5c2040ad5ce24fde6849" kindref="member">removeJointAnimations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>jointIndex);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a26b1756a69ac5113a6d6621c9d162064" kindref="member">removeBlendShapes</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>blendShapeIndices);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af4496c037cc3b6f0e32585a74c81be6b" kindref="member">removeAnimatedMaps</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>animatedMapIndices);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/dna/DNACalibDNAReaderImpl.h"/>
   </compounddef>

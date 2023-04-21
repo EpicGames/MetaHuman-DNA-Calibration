@@ -65,6 +65,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -75,11 +76,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -138,8 +142,8 @@
 </section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
-<p>To run <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_viewer_md#examples">DNAViewer examples</a>, you must have Maya 2022 installed.
-To run <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dnacalib_md#python">DNACalib examples</a>, you need Python3.</p>
+<p>To run <span class="xref myst">DNAViewer examples</span>, you must have Maya 2022 installed.
+To run <span class="xref myst">DNACalib examples</span>, you need Python3.</p>
 </section>
 <section id="lib">
 <h2>Lib<a class="headerlink" href="#lib" title="Permalink to this headline"></a></h2>
@@ -147,17 +151,17 @@ To run <a class="reference external" href="https://github.com/EpicGames/MetaHuma
 RL4 is also available.</p>
 <section id="linux-location">
 <h3>Linux location<a class="headerlink" href="#linux-location" title="Permalink to this headline"></a></h3>
-<p>You have to copy or create symbolic links for all <strong>.so</strong> files in <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/lib/linux">lib</a>:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo ln -s ~/dna_calibration/lib/linux/_py3dna.so /usr/lib/_py3dna.so
+<p>You have to copy or create symbolic links for all <strong>.so</strong> files in <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/lib/Maya2022/linux">lib</a>:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/_py3dna.so /usr/lib/_py3dna.so
 
-sudo ln -s ~/dna_calibration/lib/linux/libdnacalib.so /usr/lib/libdnacalib.so
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so /usr/lib/libdnacalib.so
 
-sudo ln -s ~/dna_calibration/lib/linux/libdnacalib.so.6 /usr/lib/libdnacalib.so.6
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so.6 /usr/lib/libdnacalib.so.6
 
-sudo ln -s ~/dna_calibration/lib/linux/libembeddedRL4.so /usr/lib/embeddedRL4.mll
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libembeddedRL4.so /usr/lib/embeddedRL4.mll
 </pre></div>
 </div>
-<p>Note: Change the path <code class="docutils literal notranslate"><span class="pre">~/dna_calibration</span></code> to where <code class="docutils literal notranslate"><span class="pre">dna_calibration</span></code> is located.</p>
+<p>Note: Change the path <code class="docutils literal notranslate"><span class="pre">~/MetaHuman-DNA-Calibration</span></code> to where <code class="docutils literal notranslate"><span class="pre">MetaHuman-DNA-Calibration</span></code> is located.</p>
 </section>
 </section>
 <section id="data">
@@ -177,7 +181,7 @@ sudo ln -s ~/dna_calibration/lib/linux/libembeddedRL4.so /usr/lib/embeddedRL4.ml
 </table>
 <p>Additionally, we added <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/gui.ma"><code class="docutils literal notranslate"><span class="pre">gui</span></code></a> and <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/analog_gui.ma"><code class="docutils literal notranslate"><span class="pre">analog_gui</span></code></a> Maya scenes which are used during
 Maya scene assemble.
-Furthermore, <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/after_assembly_script.py"><code class="docutils literal notranslate"><span class="pre">after_assembly_script.py</span></code></a> is used to organize objects in scene and
+Furthermore, <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/additional_assemble_script.py"><code class="docutils literal notranslate"><span class="pre">additional_assemble_script.py</span></code></a> is used to organize objects in scene and
 connect controls. The ideal setup looks like this:</p>
 <p><img alt="image" src="_images/aas.png" /></p>
 </section>
@@ -194,7 +198,7 @@ connect controls. The ideal setup looks like this:</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

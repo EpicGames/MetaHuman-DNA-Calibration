@@ -1,4 +1,4 @@
-dna
+DNA
 ==========
 
 .. doxygenclass:: dna::StreamReader

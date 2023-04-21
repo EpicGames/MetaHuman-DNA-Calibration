@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.ui.app &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.ui.app</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.ui.app</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">webbrowser</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
+<span class="kn">from</span> <span class="nn">maya.cmds</span> <span class="kn">import</span> <span class="n">confirmDialog</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtCore</span> <span class="kn">import</span> <span class="n">QCoreApplication</span><span class="p">,</span> <span class="n">Qt</span>
+<span class="kn">from</span> <span class="nn">PySide2.QtWidgets</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">QApplication</span><span class="p">,</span>
+    <span class="n">QCheckBox</span><span class="p">,</span>
+    <span class="n">QGridLayout</span><span class="p">,</span>
+    <span class="n">QHBoxLayout</span><span class="p">,</span>
+    <span class="n">QLabel</span><span class="p">,</span>
+    <span class="n">QMainWindow</span><span class="p">,</span>
+    <span class="n">QMessageBox</span><span class="p">,</span>
+    <span class="n">QProgressBar</span><span class="p">,</span>
+    <span class="n">QPushButton</span><span class="p">,</span>
+    <span class="n">QTabWidget</span><span class="p">,</span>
+    <span class="n">QTreeWidget</span><span class="p">,</span>
+    <span class="n">QTreeWidgetItem</span><span class="p">,</span>
+    <span class="n">QTreeWidgetItemIterator</span><span class="p">,</span>
+    <span class="n">QVBoxLayout</span><span class="p">,</span>
+    <span class="n">QWidget</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">build_rig</span>
+<span class="kn">from</span> <span class="nn">..builder.config</span> <span class="kn">import</span> <span class="n">RigConfig</span>
+<span class="kn">from</span> <span class="nn">..dnalib.layer</span> <span class="kn">import</span> <span class="n">Layer</span>
+<span class="kn">from</span> <span class="nn">..version</span> <span class="kn">import</span> <span class="n">__version__</span>
+<span class="kn">from</span> <span class="nn">.widgets</span> <span class="kn">import</span> <span class="n">FileChooser</span><span class="p">,</span> <span class="n">QHLine</span>
+
+
+<div class="viewcode-block" id="show"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.show">[docs]</a><span class="k">def</span> <span class="nf">show</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">show_window</span><span class="p">()</span></div>
+
+
+<span class="n">WINDOW_OBJECT</span> <span class="o">=</span> <span class="s2">&quot;dnaviewer&quot;</span>
+<span class="n">WINDOW_TITLE</span> <span class="o">=</span> <span class="s2">&quot;DNA Viewer&quot;</span>
+<span class="n">HELP_URL</span> <span class="o">=</span> <span class="s2">&quot;https://epicgames.github.io/MetaHuman-DNA-Calibration/&quot;</span>
+<span class="n">SPACING</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">WINDOW_SIZE_WIDTH_MIN</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">WINDOW_SIZE_WIDTH_MAX</span> <span class="o">=</span> <span class="mi">1200</span>
+<span class="n">WINDOW_SIZE_HEIGHT_MIN</span> <span class="o">=</span> <span class="mi">800</span>
+<span class="n">WINDOW_SIZE_HEIGHT_MAX</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">MARGIN_LEFT</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">MARGIN_TOP</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">MARGIN_RIGHT</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">MARGIN_BOTTOM</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">MARGIN_HEADER_LEFT</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_HEADER_TOP</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_HEADER_RIGHT</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_HEADER_BOTTOM</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_BODY_LEFT</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_BODY_TOP</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">MARGIN_BODY_RIGHT</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<div class="viewcode-block" id="MeshTreeList"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList">[docs]</a><span class="k">class</span> <span class="nc">MeshTreeList</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A custom widget that lists out meshes with checkboxes next to them, so these meshes can be selected to be processed. The meshes are grouped by LOD</span>
+
+<span class="sd">    @type mesh_tree: QWidget</span>
+<span class="sd">    @param mesh_tree: The widget that contains the meshes to be selected in a tree list</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">main_window</span><span class="p">:</span> <span class="s2">&quot;DnaViewerWindow&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span> <span class="o">=</span> <span class="n">main_window</span>
+
+        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;Meshes:&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_mesh_tree</span><span class="p">()</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QGridLayout</span><span class="p">()</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">layout_holder</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">layout_holder</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="n">layout_holder</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+        <span class="n">layout_holder</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_select_all</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Select all meshes&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_select_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_select_all</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_all</span><span class="p">)</span>
+        <span class="n">layout_holder</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_select_all</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_deselect_all</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Deselect all meshes&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_deselect_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">btn_deselect_all</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">deselect_all</span><span class="p">)</span>
+        <span class="n">layout_holder</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">btn_deselect_all</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout_holder</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MeshTreeList.create_mesh_tree"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.create_mesh_tree">[docs]</a>    <span class="k">def</span> <span class="nf">create_mesh_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the mesh tree list widget</span>
+
+<span class="sd">        @rtype: QWidget</span>
+<span class="sd">        @returns: The created widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">mesh_tree</span> <span class="o">=</span> <span class="n">QTreeWidget</span><span class="p">()</span>
+        <span class="n">mesh_tree</span><span class="o">.</span><span class="n">setHeaderHidden</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">mesh_tree</span><span class="o">.</span><span class="n">itemChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tree_item_changed</span><span class="p">)</span>
+        <span class="n">mesh_tree</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="s2">&quot;background-color: #505050&quot;</span><span class="p">)</span>
+        <span class="n">mesh_tree</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Select mesh or meshes to add to rig&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">mesh_tree</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.fill_mesh_list"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.fill_mesh_list">[docs]</a>    <span class="k">def</span> <span class="nf">fill_mesh_list</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">lod_count</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">indices_names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fills the mesh list with the meshes, and groups them by lods</span>
+
+<span class="sd">        @type lod_count: int</span>
+<span class="sd">        @param lod_count: The LOD count</span>
+
+<span class="sd">        @type names: List[str]</span>
+<span class="sd">        @param names: The names and indices of all the meshes</span>
+
+<span class="sd">        @type indices_names: List[List[int]</span>
+<span class="sd">        @param indices_names: The names and indices of all the meshes</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lod_count</span><span class="p">):</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="p">)</span>
+            <span class="n">parent</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;LOD </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">parent</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">flags</span><span class="p">()</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ItemIsTristate</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ItemIsUserCheckable</span><span class="p">)</span>
+
+            <span class="n">meshes_in_lod</span> <span class="o">=</span> <span class="n">indices_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">mesh_index</span> <span class="ow">in</span> <span class="n">meshes_in_lod</span><span class="p">:</span>
+                <span class="n">child</span> <span class="o">=</span> <span class="n">QTreeWidgetItem</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">setFlags</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">flags</span><span class="p">()</span> <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">ItemIsUserCheckable</span><span class="p">)</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">names</span><span class="p">[</span><span class="n">mesh_index</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">setCheckState</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">Qt</span><span class="o">.</span><span class="n">Unchecked</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="o">.</span><span class="n">setItemExpanded</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.get_selected_meshes"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.get_selected_meshes">[docs]</a>    <span class="k">def</span> <span class="nf">get_selected_meshes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the selected meshes from the tree widget</span>
+
+<span class="sd">        @rtype: List[int]</span>
+<span class="sd">        @returns: The list of mesh indices that are selected</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">meshes</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">iterator</span> <span class="o">=</span> <span class="n">QTreeWidgetItemIterator</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="p">,</span> <span class="n">QTreeWidgetItemIterator</span><span class="o">.</span><span class="n">Checked</span>
+        <span class="p">)</span>
+        <span class="k">while</span> <span class="n">iterator</span><span class="o">.</span><span class="n">value</span><span class="p">():</span>
+            <span class="n">item</span> <span class="o">=</span> <span class="n">iterator</span><span class="o">.</span><span class="n">value</span><span class="p">()</span>
+            <span class="n">mesh_name</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">mesh_index</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_id_from_mesh_name</span><span class="p">(</span><span class="n">mesh_name</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">mesh_index</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mesh_index</span><span class="p">)</span>
+
+            <span class="n">iterator</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">meshes</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.select_all"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.select_all">[docs]</a>    <span class="k">def</span> <span class="nf">select_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Selects all meshes in the tree widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iterate_over_items</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Checked</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.deselect_all"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.deselect_all">[docs]</a>    <span class="k">def</span> <span class="nf">deselect_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deselects all meshes in the tree widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">iterate_over_items</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Unchecked</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.iterate_over_items"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.iterate_over_items">[docs]</a>    <span class="k">def</span> <span class="nf">iterate_over_items</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="n">Qt</span><span class="o">.</span><span class="n">CheckState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deselects all meshes in the tree widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">item</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree</span><span class="o">.</span><span class="n">invisibleRootItem</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">childCount</span><span class="p">()):</span>
+            <span class="n">child</span> <span class="o">=</span> <span class="n">item</span><span class="o">.</span><span class="n">child</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">setCheckState</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="MeshTreeList.tree_item_changed"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.MeshTreeList.tree_item_changed">[docs]</a>    <span class="k">def</span> <span class="nf">tree_item_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The method that gets called when a tree item gets its value changed&quot;&quot;&quot;</span>
+
+        <span class="n">meshes</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">meshes</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">skin_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">checkState</span><span class="p">())</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">rig_logic_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">meshes</span><span class="p">)</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_count</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">rig_logic_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">skin_cb</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span>
+                    <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">select_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                    <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">select_analog_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span>
+                    <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                    <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">select_aas_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">skin_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">main_window</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span>
+            <span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="DnaViewerWindow"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow">[docs]</a><span class="k">class</span> <span class="nc">DnaViewerWindow</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    UI Window</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    @type select_dna_path: FileChooser</span>
+<span class="sd">    @param select_dna_path: The FileChooser widget for getting the DNA path</span>
+
+<span class="sd">    @type load_dna_btn: QPushButton</span>
+<span class="sd">    @param load_dna_btn: The button that starts loading in the DNA</span>
+
+<span class="sd">    @type mesh_tree_list: QWidget</span>
+<span class="sd">    @param mesh_tree_list: The widget that contains the meshes to be selected in a tree list</span>
+
+<span class="sd">    @type joints_cb: QCheckBox</span>
+<span class="sd">    @param joints_cb: The checkbox that represents if joints should be added</span>
+
+<span class="sd">    @type blend_shapes_cb: QCheckBox</span>
+<span class="sd">    @param blend_shapes_cb: The checkbox that represents if blend shapes should be added</span>
+
+<span class="sd">    @type skin_cb: QCheckBox</span>
+<span class="sd">    @param skin_cb: The checkbox that represents if skin should be added</span>
+
+<span class="sd">    @type rig_logic_cb: QCheckBox</span>
+<span class="sd">    @param rig_logic_cb: The checkbox that represents if rig logic should be added</span>
+
+<span class="sd">    @type ctrl_attributes_on_root_joint_cb: QCheckBox</span>
+<span class="sd">    @param ctrl_attributes_on_root_joint_cb: The checkbox that represents if control attributes on joint should be added</span>
+
+<span class="sd">    @type animated_map_attributes_on_root_joint_cb: QCheckBox</span>
+<span class="sd">    @param animated_map_attributes_on_root_joint_cb: The checkbox that represents if animated maps attributes on root joint should be added</span>
+
+<span class="sd">    @type mesh_name_to_blend_shape_channel_name_cb: QCheckBox</span>
+<span class="sd">    @param mesh_name_to_blend_shape_channel_name_cb: The checkbox that represents if mesh names to blend shapes channel name should be added</span>
+
+<span class="sd">    @type key_frames_cb: QCheckBox</span>
+<span class="sd">    @param key_frames_cb: The checkbox that represents if key frames should be added</span>
+
+<span class="sd">    @type select_gui_path: FileChooser</span>
+<span class="sd">    @param select_gui_path: The FileChooser widget for getting the gui path</span>
+
+<span class="sd">    @type select_analog_gui_path: FileChooser</span>
+<span class="sd">    @param select_analog_gui_path: The FileChooser widget for getting the analog gui path</span>
+
+<span class="sd">    @type select_aas_path: FileChooser</span>
+<span class="sd">    @param select_aas_path: The FileChooser widget for getting the additional assemble script path</span>
+
+<span class="sd">    @type process_btn: QPushButton</span>
+<span class="sd">    @param process_btn: The button that starts creating the scene and character</span>
+
+<span class="sd">    @type progress_bar: QProgressBar</span>
+<span class="sd">    @param progress_bar: The progress bar that shows the building progress</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_instance</span><span class="p">:</span> <span class="s2">&quot;DnaViewerWindow&quot;</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">main_widget</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_dna_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">load_dna_btn</span><span class="p">:</span> <span class="n">QPushButton</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">mesh_tree_list</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">joints_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">blend_shapes_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">skin_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">rig_logic_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">ctrl_attributes_on_root_joint_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">animated_map_attributes_on_root_joint_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">mesh_name_to_blend_shape_channel_name_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">key_frames_cb</span><span class="p">:</span> <span class="n">QCheckBox</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_gui_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_analog_gui_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">select_aas_path</span><span class="p">:</span> <span class="n">FileChooser</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">process_btn</span><span class="p">:</span> <span class="n">QPushButton</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">progress_bar</span><span class="p">:</span> <span class="n">QProgressBar</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="p">:</span> <span class="n">QVBoxLayout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="p">:</span> <span class="n">QHBoxLayout</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">build_options</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra_build_options</span><span class="p">:</span> <span class="n">QWidget</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setup_window</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_ui</span><span class="p">()</span>
+
+<div class="viewcode-block" id="DnaViewerWindow.setup_window"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.setup_window">[docs]</a>    <span class="k">def</span> <span class="nf">setup_window</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;A method for setting up the window&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">windowFlags</span><span class="p">()</span>
+            <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowTitleHint</span>
+            <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowMaximizeButtonHint</span>
+            <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowMinimizeButtonHint</span>
+            <span class="o">|</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowCloseButtonHint</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setAttribute</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WA_DeleteOnClose</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="n">WINDOW_OBJECT</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="n">WINDOW_TITLE</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setWindowFlags</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">Window</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setFocusPolicy</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">StrongFocus</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_ui"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_ui">[docs]</a>    <span class="k">def</span> <span class="nf">create_ui</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Fills the window with UI elements&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_main_widget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setCentralWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_size</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setStyleSheet</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">load_css</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.load_css"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.load_css">[docs]</a>    <span class="k">def</span> <span class="nf">load_css</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">css</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s2">&quot;app.css&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">css</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_main_widget"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_main_widget">[docs]</a>    <span class="k">def</span> <span class="nf">create_main_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the widget containing the UI elements</span>
+
+<span class="sd">        @rtype: QtWidgets.QWidget</span>
+<span class="sd">        @returns: the main widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_header</span><span class="p">()</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_body</span><span class="p">()</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">QHLine</span><span class="p">())</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addLayout</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span><span class="n">MARGIN_LEFT</span><span class="p">,</span> <span class="n">MARGIN_TOP</span><span class="p">,</span> <span class="n">MARGIN_RIGHT</span><span class="p">,</span> <span class="n">MARGIN_BOTTOM</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="n">SPACING</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.set_size"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.set_size">[docs]</a>    <span class="k">def</span> <span class="nf">set_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Sets the window size&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">setMaximumSize</span><span class="p">(</span><span class="n">WINDOW_SIZE_WIDTH_MAX</span><span class="p">,</span> <span class="n">WINDOW_SIZE_HEIGHT_MAX</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">setMinimumSize</span><span class="p">(</span><span class="n">WINDOW_SIZE_WIDTH_MIN</span><span class="p">,</span> <span class="n">WINDOW_SIZE_HEIGHT_MIN</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">WINDOW_SIZE_WIDTH_MIN</span><span class="p">,</span> <span class="n">WINDOW_SIZE_HEIGHT_MIN</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.show_message_dialog"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.show_message_dialog">[docs]</a>    <span class="k">def</span> <span class="nf">show_message_dialog</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="n">dlg</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">()</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Warning</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Warning&quot;</span><span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span>
+            <span class="s2">&quot;Unsaved changes exists.</span><span class="se">\n</span><span class="s2">Save changes and create new scene, discard changes, and create new scene or cancel procesing.&quot;</span>
+        <span class="p">)</span>
+        <span class="n">dlg</span><span class="o">.</span><span class="n">setStandardButtons</span><span class="p">(</span>
+            <span class="n">QMessageBox</span><span class="o">.</span><span class="n">Save</span> <span class="o">|</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">Discard</span> <span class="o">|</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">Cancel</span>
+        <span class="p">)</span>
+        <span class="n">button</span> <span class="o">=</span> <span class="n">dlg</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">button</span> <span class="o">==</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">Save</span><span class="p">:</span>
+            <span class="n">cmds</span><span class="o">.</span><span class="n">SaveScene</span><span class="p">()</span>
+            <span class="k">return</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">modified</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">button</span> <span class="o">==</span> <span class="n">QMessageBox</span><span class="o">.</span><span class="n">Cancel</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.process"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.process">[docs]</a>    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Start the build process of creation of scene from provided configuration from the UI&quot;&quot;&quot;</span>
+
+        <span class="n">process</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">modified</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+            <span class="n">process</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">show_message_dialog</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">process</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">set_progress</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Processing in progress...&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">RigConfig</span><span class="p">(</span>
+                <span class="n">meshes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">(),</span>
+                <span class="n">gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">select_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(),</span>
+                <span class="n">analog_gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">select_analog_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(),</span>
+                <span class="n">aas_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">select_aas_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">(),</span>
+                <span class="n">add_rig_logic</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_rig_logic</span><span class="p">(),</span>
+                <span class="n">add_joints</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_joints</span><span class="p">(),</span>
+                <span class="n">add_blend_shapes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_blend_shapes</span><span class="p">(),</span>
+                <span class="n">add_skin_cluster</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_skin_cluster</span><span class="p">(),</span>
+                <span class="n">add_ctrl_attributes_on_root_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_ctrl_attributes_on_root_joint</span><span class="p">(),</span>
+                <span class="n">add_animated_map_attributes_on_root_joint</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_animated_map_attributes_on_root_joint</span><span class="p">(),</span>
+                <span class="n">add_mesh_name_to_blend_shape_channel_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_mesh_name_to_blend_shape_channel_name</span><span class="p">(),</span>
+                <span class="n">add_key_frames</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">add_key_frames</span><span class="p">(),</span>
+            <span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_progress</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_progress</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="mi">66</span><span class="p">)</span>
+                <span class="n">build_rig</span><span class="p">(</span><span class="n">dna</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_progress</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Processing completed&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">set_progress</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Processing failed&quot;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="n">confirmDialog</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">button</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ok&quot;</span><span class="p">],</span> <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;critical&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.set_progress"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.set_progress">[docs]</a>    <span class="k">def</span> <span class="nf">set_progress</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Setting text and/or value to progress bar&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">text</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">progress_bar</span><span class="o">.</span><span class="n">setFormat</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">progress_bar</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="n">value</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.show_window"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.show_window">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">show_window</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="n">DnaViewerWindow</span><span class="p">(</span>
+                <span class="n">parent</span><span class="o">=</span><span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">maya_main_window</span><span class="p">()</span>
+            <span class="p">)</span>
+        <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">activate_window</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.maya_main_window"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.maya_main_window">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">maya_main_window</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets the MayaWindow instance</span>
+
+<span class="sd">        @throws RuntimeError</span>
+
+<span class="sd">        @rtype: QtWidgets.QWidget</span>
+<span class="sd">        @returns: main window instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">QApplication</span><span class="o">.</span><span class="n">topLevelWidgets</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">obj</span><span class="o">.</span><span class="n">objectName</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;MayaWindow&quot;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">obj</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Could not find MayaWindow instance&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.activate_window"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.activate_window">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">activate_window</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Shows window if minimized&quot;&quot;&quot;</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">windowState</span><span class="p">()</span> <span class="o">&amp;</span> <span class="n">Qt</span><span class="o">.</span><span class="n">WindowMinimized</span><span class="p">:</span>
+                <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">setWindowState</span><span class="p">(</span><span class="n">Qt</span><span class="o">.</span><span class="n">WindowActive</span><span class="p">)</span>
+
+            <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">raise_</span><span class="p">()</span>
+            <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span><span class="o">.</span><span class="n">activateWindow</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">RuntimeError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;already deleted.&quot;</span><span class="p">):</span>
+                <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">_instance</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="n">DnaViewerWindow</span><span class="o">.</span><span class="n">show_window</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_joints"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_joints">[docs]</a>    <span class="k">def</span> <span class="nf">add_joints</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">add_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_skin_cluster"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_skin_cluster">[docs]</a>    <span class="k">def</span> <span class="nf">add_skin_cluster</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_rig_logic"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_rig_logic">[docs]</a>    <span class="k">def</span> <span class="nf">add_rig_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rig_logic_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_ctrl_attributes_on_root_joint"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_ctrl_attributes_on_root_joint">[docs]</a>    <span class="k">def</span> <span class="nf">add_ctrl_attributes_on_root_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ctrl_attributes_on_root_joint_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_animated_map_attributes_on_root_joint"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_animated_map_attributes_on_root_joint">[docs]</a>    <span class="k">def</span> <span class="nf">add_animated_map_attributes_on_root_joint</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">animated_map_attributes_on_root_joint_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_mesh_name_to_blend_shape_channel_name"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_mesh_name_to_blend_shape_channel_name">[docs]</a>    <span class="k">def</span> <span class="nf">add_mesh_name_to_blend_shape_channel_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_name_to_blend_shape_channel_name_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.add_key_frames"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.add_key_frames">[docs]</a>    <span class="k">def</span> <span class="nf">add_key_frames</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">key_frames_cb</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.is_checked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.is_checked">[docs]</a>    <span class="k">def</span> <span class="nf">is_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">checkbox</span><span class="p">:</span> <span class="n">QCheckBox</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns if the provided checkbox is checked and enabled</span>
+
+<span class="sd">        @type checkbox: QCheckBox</span>
+<span class="sd">        @param checkbox: The checkbox thats value needs to be checked and enabled</span>
+
+<span class="sd">        @rtype: bool</span>
+<span class="sd">        @returns: The flag representing if the checkbox is checked and enabled</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">checkbox</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">checkbox</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">())</span>
+            <span class="ow">and</span> <span class="n">checkbox</span><span class="o">.</span><span class="n">checkState</span><span class="p">()</span> <span class="o">==</span> <span class="n">Qt</span><span class="o">.</span><span class="n">CheckState</span><span class="o">.</span><span class="n">Checked</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_body"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_body">[docs]</a>    <span class="k">def</span> <span class="nf">create_body</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QVBoxLayout</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the main body layout and adds needed widgets</span>
+
+<span class="sd">        @rtype: QVBoxLayout</span>
+<span class="sd">        @returns: The created vertical box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="n">SPACING</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">create_dna_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_mesh_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">build_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_build_options</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">extra_build_options</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_extra_build_options</span><span class="p">()</span>
+
+        <span class="n">tab</span> <span class="o">=</span> <span class="n">QTabWidget</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">tab</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">build_options</span><span class="p">,</span> <span class="s2">&quot;Build options&quot;</span><span class="p">)</span>
+        <span class="n">tab</span><span class="o">.</span><span class="n">addTab</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">extra_build_options</span><span class="p">,</span> <span class="s2">&quot;Extra options&quot;</span><span class="p">)</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_gui_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_gui_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_analog_gui_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_analog_gui_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_aas_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_aas_selector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_process_btn</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">progress_bar</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_progress_bar</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">body</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_header"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_header">[docs]</a>    <span class="k">def</span> <span class="nf">create_header</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QHBoxLayout</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds to the header widget</span>
+
+<span class="sd">        @rtype: QHBoxLayout</span>
+<span class="sd">        @returns: The created horizontal box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">QHBoxLayout</span><span class="p">()</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">QLabel</span><span class="p">(</span><span class="s2">&quot;v&quot;</span> <span class="o">+</span> <span class="n">__version__</span><span class="p">)</span>
+        <span class="n">btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_help_btn</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addStretch</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_HEADER_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">setSpacing</span><span class="p">(</span><span class="n">SPACING</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">header</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_help_btn"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_help_btn">[docs]</a>    <span class="k">def</span> <span class="nf">create_help_btn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the help button widget</span>
+
+<span class="sd">        @rtype: QHBoxLayout</span>
+<span class="sd">        @returns: The created horizontal box layout with the widgets added</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="s2">&quot; ? &quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="s2">&quot;Help&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">on_help</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_help"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_help">[docs]</a>    <span class="k">def</span> <span class="nf">on_help</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;The method that gets called when the help button is clicked&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">HELP_URL</span><span class="p">:</span>
+            <span class="n">webbrowser</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">HELP_URL</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">QMessageBox</span><span class="o">.</span><span class="n">about</span><span class="p">(</span>
+                <span class="bp">self</span><span class="p">,</span>
+                <span class="s2">&quot;About&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Sorry, this application does not have documentation yet.&quot;</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_dna_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_dna_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_dna_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the DNA selector widget</span>
+
+<span class="sd">        @rtype: QWidget</span>
+<span class="sd">        @returns: The created DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_dna_chooser</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_dna_btn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_load_dna_button</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="o">.</span><span class="n">fc_text_field</span><span class="o">.</span><span class="n">textChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+            <span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_dna_selected</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span>
+        <span class="p">)</span>
+
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">()</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">load_dna_btn</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_HEADER_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_HEADER_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">widget</span><span class="o">.</span><span class="n">setLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_dna_selected"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_dna_selected">[docs]</a>    <span class="k">def</span> <span class="nf">on_dna_selected</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The method that gets called when a DNA file gets selected</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">enabled</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_dna_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_dna_chooser"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_dna_chooser">[docs]</a>    <span class="k">def</span> <span class="nf">create_dna_chooser</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the DNA chooser widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Dna chooser widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Path:&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;DNA file to load. Required by all gui elements&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Select a DNA file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;DNA files (*.dna)&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">on_dna_changed</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_dna_changed"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_dna_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_dna_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that gets called when the checkbox is changed</span>
+
+<span class="sd">        @type state: int</span>
+<span class="sd">        @param state: The changed state of the checkbox</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">enabled</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">path</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_dna_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">():</span>
+                <span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">load_dna_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">btn_select_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">btn_deselect_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_load_dna_button"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_load_dna_button">[docs]</a>    <span class="k">def</span> <span class="nf">create_load_dna_button</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dna_input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the load DNA button widget</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+
+<span class="sd">        @rtype: QWidget</span>
+<span class="sd">        @returns: The created load DNA button widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Load DNA&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_load_dna_clicked</span><span class="p">(</span><span class="n">dna_input</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_load_dna_clicked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_load_dna_clicked">[docs]</a>    <span class="k">def</span> <span class="nf">on_load_dna_clicked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="n">FileChooser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        The method that gets called when a DNA file gets selected</span>
+
+<span class="sd">        @type input: FileChooser</span>
+<span class="sd">        @param input: The file chooser object corresponding to the DNA selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">QCoreApplication</span><span class="o">.</span><span class="n">processEvents</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">dna_file_path</span> <span class="o">=</span> <span class="nb">input</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">dna_file_path</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="n">dna_file_path</span><span class="p">,</span> <span class="p">[</span><span class="n">Layer</span><span class="o">.</span><span class="n">definition</span><span class="p">])</span>
+                <span class="n">lod_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_lod_count</span><span class="p">()</span>
+                <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mesh_names</span><span class="p">()</span>
+                <span class="n">indices_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lod_indices_names</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">fill_mesh_list</span><span class="p">(</span><span class="n">lod_count</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">indices_names</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">enable_additional_build_options</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">btn_select_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">btn_deselect_all</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">dlg</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">()</span>
+            <span class="n">dlg</span><span class="o">.</span><span class="n">setIcon</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Warning</span><span class="p">)</span>
+            <span class="n">dlg</span><span class="o">.</span><span class="n">setWindowTitle</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+            <span class="n">dlg</span><span class="o">.</span><span class="n">setText</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">))</span>
+            <span class="n">dlg</span><span class="o">.</span><span class="n">setStandardButtons</span><span class="p">(</span><span class="n">QMessageBox</span><span class="o">.</span><span class="n">Ok</span><span class="p">)</span>
+            <span class="n">dlg</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">main_widget</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.get_mesh_names"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.get_mesh_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_mesh_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the meshes of the definition&quot;&quot;&quot;</span>
+        <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_count</span><span class="p">()):</span>
+            <span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_name</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">names</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.get_lod_indices_names"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.get_lod_indices_names">[docs]</a>    <span class="k">def</span> <span class="nf">get_lod_indices_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the meshes of the definition&quot;&quot;&quot;</span>
+        <span class="n">lod_indices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_lod_count</span><span class="p">()):</span>
+            <span class="n">lod_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_indices_for_lod</span><span class="p">(</span><span class="n">index</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">lod_indices</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_mesh_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_mesh_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_mesh_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MeshTreeList</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a mesh tree list where the entries are grouped by lods, this is used for selecting the meses that need to be processed</span>
+
+<span class="sd">        @rtype: MeshTreeList</span>
+<span class="sd">        @returns: The created mesh tree list widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">MeshTreeList</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_file_chooser"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_file_chooser">[docs]</a>    <span class="k">def</span> <span class="nf">create_file_chooser</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">caption</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="nb">filter</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">on_changed</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a file chooser widget that is used for selecting file paths</span>
+
+<span class="sd">        @type label: str</span>
+<span class="sd">        @param label: The label in the FileDialog that pops up</span>
+
+<span class="sd">        @type hint: str</span>
+<span class="sd">        @param hint: The label in the FileDialog that pops up</span>
+
+<span class="sd">        @type caption: str</span>
+<span class="sd">        @param caption: The caption in the FileDialog that pops up</span>
+
+<span class="sd">        @type filter: str</span>
+<span class="sd">        @param filter: The file filter that is used in the FileDialog</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: The created file chooser object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">FileChooser</span><span class="p">(</span>
+            <span class="n">label</span><span class="p">,</span>
+            <span class="n">hint</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">,</span>
+            <span class="n">dialog_caption</span><span class="o">=</span><span class="n">caption</span><span class="p">,</span>
+            <span class="n">dialog_filter</span><span class="o">=</span><span class="nb">filter</span><span class="p">,</span>
+            <span class="n">on_changed</span><span class="o">=</span><span class="n">on_changed</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_gui_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_gui_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_gui_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates the gui selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Gui selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Gui path:&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;GUI file to load. Required by RigLogic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Select the gui file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;gui files (*.ma)&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_aas_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_aas_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_aas_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the additional assemble script selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Additional assemble script selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Additional assemble script path:&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Additional assemble script to use. Required by RigLogic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Select the aas file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;python script (*.py)&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_analog_gui_selector"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_analog_gui_selector">[docs]</a>    <span class="k">def</span> <span class="nf">create_analog_gui_selector</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FileChooser</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds the analog gui selector widget</span>
+
+<span class="sd">        @rtype: FileChooser</span>
+<span class="sd">        @returns: Analog gui selector widget</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_file_chooser</span><span class="p">(</span>
+            <span class="s2">&quot;Analog gui path:&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Analog GUI file to load. Required by RigLogic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Select the analog gui file&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;analog gui files (*.ma)&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_build_options"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_build_options">[docs]</a>    <span class="k">def</span> <span class="nf">create_build_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates and adds the widget containing the build options checkboxes&quot;&quot;&quot;</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;joints&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Add joints to rig. Requires: DNA to be loaded&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">on_joints_changed</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;blend shapes&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Add blend shapes to rig. Requires: DNA to be loaded and at least one mesh to be check&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;skin cluster&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Add skin cluster to rig. Requires: DNA to be loaded and at least one mesh and joints to be checked&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rig_logic_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;rig logic&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Add RigLogic to rig. Requires: DNA to be loaded, all meshes to be checked, joints, skin, blend shapes to be checked, also gui, analog gui and additional assemble script must be set&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_extra_build_options"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_extra_build_options">[docs]</a>    <span class="k">def</span> <span class="nf">create_extra_build_options</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QWidget</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Creates and adds the widget containing the extra build options checkboxes&quot;&quot;&quot;</span>
+        <span class="n">widget</span> <span class="o">=</span> <span class="n">QWidget</span><span class="p">()</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="n">widget</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">setContentsMargins</span><span class="p">(</span>
+            <span class="n">MARGIN_BODY_LEFT</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_TOP</span><span class="p">,</span>
+            <span class="n">MARGIN_BODY_RIGHT</span><span class="p">,</span>
+            <span class="n">MARGIN_BOTTOM</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_attributes_on_root_joint_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;ctrl attributes on root joint&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;ctrl attributes on root joint&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">checked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animated_map_attributes_on_root_joint_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;animated map attributes on root joint&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;animated map attributes on root joint&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">checked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_name_to_blend_shape_channel_name_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;mesh name to blend shape channel name&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mesh name to blend shape channel name&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">checked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key_frames_cb</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_checkbox</span><span class="p">(</span>
+            <span class="s2">&quot;key frames&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Add keyframes to rig&quot;</span><span class="p">,</span>
+            <span class="n">layout</span><span class="p">,</span>
+            <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">checked</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addStretch</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">widget</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.enable_additional_build_options"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.enable_additional_build_options">[docs]</a>    <span class="k">def</span> <span class="nf">enable_additional_build_options</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable</span><span class="p">:</span> <span class="nb">bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ctrl_attributes_on_root_joint_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animated_map_attributes_on_root_joint_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mesh_name_to_blend_shape_channel_name_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">key_frames_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_checkbox"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_checkbox">[docs]</a>    <span class="k">def</span> <span class="nf">create_checkbox</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">label</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">hint</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layout</span><span class="p">:</span> <span class="n">QHBoxLayout</span><span class="p">,</span>
+        <span class="n">on_changed</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">int</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">checked</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">enabled</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QCheckBox</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a checkbox with given parameters and connects them to the on_changed method</span>
+
+<span class="sd">        @type label: str</span>
+<span class="sd">        @param label: The label of the checkbox</span>
+
+<span class="sd">        @type hint: str</span>
+<span class="sd">        @param hint: The hint of the checkbox</span>
+
+<span class="sd">        @type on_changed: Callable[[int], None]</span>
+<span class="sd">        @param on_changed: The method that will get called when the checkbox changes states</span>
+
+<span class="sd">        @type checked: bool</span>
+<span class="sd">        @param checked: The value representing if the checkbox is checked after creation</span>
+
+<span class="sd">        @type enabled: bool</span>
+<span class="sd">        @param enabled: The value representing if the checkbox is enabled after creation</span>
+
+<span class="sd">        @rtype: QCheckBox</span>
+<span class="sd">        @returns: the created checkbox object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">checkbox</span> <span class="o">=</span> <span class="n">QCheckBox</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        <span class="n">checkbox</span><span class="o">.</span><span class="n">setChecked</span><span class="p">(</span><span class="n">checked</span><span class="p">)</span>
+        <span class="n">checkbox</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span>
+        <span class="n">checkbox</span><span class="o">.</span><span class="n">setToolTip</span><span class="p">(</span><span class="n">hint</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">on_changed</span><span class="p">:</span>
+            <span class="n">checkbox</span><span class="o">.</span><span class="n">stateChanged</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">on_changed</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">checkbox</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">checkbox</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_joints_changed"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_joints_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_joints_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that gets called when the joints checkbox is changed</span>
+
+<span class="sd">        @type state: int</span>
+<span class="sd">        @param state: The changed state of the checkbox</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span><span class="o">.</span><span class="n">isChecked</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">process_btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">on_generic_changed</span><span class="p">(</span><span class="n">state</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_process_btn"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_process_btn">[docs]</a>    <span class="k">def</span> <span class="nf">create_process_btn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QPushButton</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a process button</span>
+
+<span class="sd">        @type window: QMainWindow</span>
+<span class="sd">        @param window: The instance of the window object</span>
+
+<span class="sd">        @rtype: QPushButton</span>
+<span class="sd">        @returns: The created process button</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">btn</span> <span class="o">=</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Process&quot;</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">btn</span><span class="o">.</span><span class="n">clicked</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">process</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">btn</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">btn</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.create_progress_bar"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.create_progress_bar">[docs]</a>    <span class="k">def</span> <span class="nf">create_progress_bar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QProgressBar</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds progress bar</span>
+
+<span class="sd">        @type window: QMainWindow</span>
+<span class="sd">        @param window: The instance of the window object</span>
+
+<span class="sd">        @rtype: QProgressBar</span>
+<span class="sd">        @returns: The created progress bar</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">progress</span> <span class="o">=</span> <span class="n">QProgressBar</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setRange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setValue</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setTextVisible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">progress</span><span class="o">.</span><span class="n">setFormat</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">body</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">progress</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">progress</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.on_generic_changed"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.on_generic_changed">[docs]</a>    <span class="k">def</span> <span class="nf">on_generic_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that gets called when the checkbox is changed</span>
+
+<span class="sd">        @type state: int</span>
+<span class="sd">        @param state: The changed state of the checkbox</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_riglogic_cb_enabled</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.is_enabled_and_checked"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.is_enabled_and_checked">[docs]</a>    <span class="k">def</span> <span class="nf">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">check_box</span><span class="p">:</span> <span class="n">QCheckBox</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method that checks if check box is enabled in same time</span>
+
+<span class="sd">        @type check_box: QCheckBox</span>
+<span class="sd">        @param check_box: The checkbox instance to check</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="n">check_box</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">check_box</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">())</span>
+            <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">check_box</span><span class="o">.</span><span class="n">isChecked</span><span class="p">())</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="DnaViewerWindow.set_riglogic_cb_enabled"><a class="viewcode-back" href="../../../dna_viewer.ui.html#dna_viewer.ui.app.DnaViewerWindow.set_riglogic_cb_enabled">[docs]</a>    <span class="k">def</span> <span class="nf">set_riglogic_cb_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Method that sets enable state of riglogic check box&quot;&quot;&quot;</span>
+
+        <span class="n">all_total_meshes</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mesh_tree_list</span><span class="o">.</span><span class="n">get_selected_meshes</span><span class="p">())</span>
+                <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_mesh_count</span><span class="p">()</span>
+            <span class="p">):</span>
+                <span class="n">all_total_meshes</span> <span class="o">=</span> <span class="kc">True</span>
+
+        <span class="n">enabled</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">joints_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="n">all_total_meshes</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_enabled_and_checked</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">skin_cb</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_analog_gui_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">select_aas_path</span><span class="o">.</span><span class="n">get_file_path</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rig_logic_cb</span><span class="o">.</span><span class="n">setEnabled</span><span class="p">(</span><span class="n">enabled</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

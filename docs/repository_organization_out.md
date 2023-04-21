@@ -21,8 +21,8 @@ Documentation is located [here](dnacalib_md)
 Documentation is located [here](dna_viewer_md)
 
 ## Examples
-To run [DNAViewer examples](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_viewer_md#examples), you must have Maya 2022 installed.
-To run [DNACalib examples](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dnacalib_md#python), you need Python3.
+To run [DNAViewer examples](/dna_viewer_md#examples), you must have Maya 2022 installed.
+To run [DNACalib examples](/dnacalib_md#python), you need Python3.
 
 ## Lib
 
@@ -30,20 +30,20 @@ To run [DNACalib examples](https://github.com/EpicGames/MetaHuman-DNA-Calibratio
 RL4 is also available.
 
 ### Linux location
-You have to copy or create symbolic links for all **.so** files in [lib](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/lib/linux):
+You have to copy or create symbolic links for all **.so** files in [lib](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/lib/Maya2022/linux):
 
 ```shell
-sudo ln -s ~/dna_calibration/lib/linux/_py3dna.so /usr/lib/_py3dna.so
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/_py3dna.so /usr/lib/_py3dna.so
 
-sudo ln -s ~/dna_calibration/lib/linux/libdnacalib.so /usr/lib/libdnacalib.so
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so /usr/lib/libdnacalib.so
 
-sudo ln -s ~/dna_calibration/lib/linux/libdnacalib.so.6 /usr/lib/libdnacalib.so.6
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so.6 /usr/lib/libdnacalib.so.6
 
-sudo ln -s ~/dna_calibration/lib/linux/libembeddedRL4.so /usr/lib/embeddedRL4.mll
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libembeddedRL4.so /usr/lib/embeddedRL4.mll
 
 ```
 
-Note: Change the path `~/dna_calibration` to where `dna_calibration` is located.
+Note: Change the path `~/MetaHuman-DNA-Calibration` to where `MetaHuman-DNA-Calibration` is located.
 
 ## Data
 
@@ -55,7 +55,7 @@ The [`data folder`](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/
 
 Additionally, we added [`gui`](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/gui.ma) and [`analog_gui`](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/analog_gui.ma) Maya scenes which are used during
 Maya scene assemble.
-Furthermore, [`after_assembly_script.py`](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/after_assembly_script.py) is used to organize objects in scene and
+Furthermore, [`additional_assemble_script.py`](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/additional_assemble_script.py) is used to organize objects in scene and
 connect controls. The ideal setup looks like this:
 
 ![image](img/aas.png)

@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="DNAViewer" href="dna_viewer_md.html" />
+    <link rel="next" title="API overview" href="dnacalib_api_md.html" />
     <link rel="prev" title="Repository Organization" href="repository_organization_md.html" /> 
 </head>
 
@@ -65,6 +65,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#build">Build</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -75,11 +76,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -191,6 +195,7 @@ if (!dnac::Status::isOk()) {
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_rename_joint_demo.py">Rename a joint</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_demo.py">Create a small DNA from scratch</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_lod_demo.py">Create a new DNA from an existing one by extracting specific LODs</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dna_binary_to_json_demo.py">Read binary DNA and write it in a human readable format</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_remove_joint.py">Remove a joint</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_clear_blend_shapes.py">Clear blend shape data</a></p></li>
 <li><p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/examples/dnacalib_neutral_mesh_subtract.py">Subtract values from neutral mesh</a></p></li>
@@ -206,10 +211,10 @@ If you are using a different architecture and/or platform, you must build DNACal
 <li><p><a class="reference external" href="https://cmake.org/download/">CMake</a> at least version 3.14</p></li>
 <li><p><a class="reference external" href="https://www.swig.org/download.html">SWIG</a> at least version 4.0.0</p></li>
 <li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a> To specify the exact version of python3 to use, set the CMake variable
-<code class="docutils literal notranslate"><span class="pre">PYTHON3_EXACT_VERSION</span></code>. For example, to use the lib from Maya 2022, use version 3.7.</p></li>
+<code class="docutils literal notranslate"><span class="pre">PYTHON3_EXACT_VERSION</span></code>. For example, to use the lib from Maya 2022, use version 3.7. For Maya 2023, use version 3.9.</p></li>
 </ul>
 <p>Use CMake to generate the build scripts required for building, e.g. by executing the following commands from the
-<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib"><code class="docutils literal notranslate"><span class="pre">dna_calibration/dnacalib/</span></code></a> directory:</p>
+<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dnacalib"><code class="docutils literal notranslate"><span class="pre">MetaHuman-DNA-Calibration/dnacalib/</span></code></a> directory:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
 <span class="n">cd</span> <span class="n">build</span>
 <span class="n">cmake</span> <span class="o">..</span>
@@ -227,13 +232,13 @@ If you are using a different architecture and/or platform, you must build DNACal
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="repository_organization_md.html" class="btn btn-neutral float-left" title="Repository Organization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dna_viewer_md.html" class="btn btn-neutral float-right" title="DNAViewer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dnacalib_api_md.html" class="btn btn-neutral float-right" title="API overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

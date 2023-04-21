@@ -19,7 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="dnacalib" href="dnacalib.html" />
+    <link rel="next" title="Mesh Utilities" href="dna_viewer_api_build_meshes_md.html" />
     <link rel="prev" title="Usage in Maya" href="dna_viewer_maya_md.html" /> 
 </head>
 
@@ -55,6 +55,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -65,16 +66,19 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#dna">DNA</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#loading-the-dna-load-dna">Loading the DNA (<code class="docutils literal notranslate"><span class="pre">load_dna</span></code>)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mesh-utilities">Mesh Utilities</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rig-assembly">Rig Assembly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loading-the-dna">Loading the DNA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-meshes">Build Meshes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-rig">Build Rig</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -136,27 +140,28 @@ beginning of any example mentioned below:</p>
 </section>
 <section id="dna">
 <h1>DNA<a class="headerlink" href="#dna" title="Permalink to this headline"></a></h1>
-<section id="loading-the-dna-load-dna">
-<h2>Loading the DNA (<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/reader/dna.py#L28"><code class="docutils literal notranslate"><span class="pre">load_dna</span></code></a>)<a class="headerlink" href="#loading-the-dna-load-dna" title="Permalink to this headline"></a></h2>
-<p>Loads the DNA and returns a <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/model/dna.py#L40"><code class="docutils literal notranslate"><span class="pre">DNA</span></code></a> object.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">get_dna</span>
+<section id="loading-the-dna">
+<h2>Loading the DNA<a class="headerlink" href="#loading-the-dna" title="Permalink to this headline"></a></h2>
+<p>Loads the DNA and returns a <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/dnalib/dnalib.py#L13"><code class="docutils literal notranslate"><span class="pre">DNA</span></code></a> object.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">DNA</span>
 
-<span class="n">dna_ada</span> <span class="o">=</span> <span class="n">load_dna</span><span class="p">(</span><span class="n">DNA_PATH_ADA</span><span class="p">)</span>
-<span class="n">dna_taro</span> <span class="o">=</span> <span class="n">load_dna</span><span class="p">(</span><span class="n">DNA_PATH_TARO</span><span class="p">)</span>
+<span class="n">dna_ada</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="n">DNA_PATH_ADA</span><span class="p">)</span>
+<span class="n">dna_taro</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="n">DNA_PATH_TARO</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This uses the following parameters:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dna_path:</span> <span class="pre">str</span></code> - The path of the DNA file that should be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">layers:</span> <span class="pre">Optional[List[Layer]]</span></code> - List of parts of DNA to be loaded. If noting is passed, whole DNA is going to be loaded. Same as passing Layer.all.</p></li>
 </ul>
 </section>
-<section id="mesh-utilities">
-<h2>Mesh Utilities<a class="headerlink" href="#mesh-utilities" title="Permalink to this headline"></a></h2>
-<p>Mesh Utilities API explanation is located <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_viewer_api_mesh_utilities_md">here</a>.</p>
+<section id="build-meshes">
+<h2>Build Meshes<a class="headerlink" href="#build-meshes" title="Permalink to this headline"></a></h2>
+<p>Build meshes API explanation is located <a class="reference internal" href="dna_viewer_api_build_meshes_md.html"><span class="doc std std-doc">here</span></a>.</p>
 </section>
-<section id="rig-assembly">
-<h2>Rig Assembly<a class="headerlink" href="#rig-assembly" title="Permalink to this headline"></a></h2>
-<p>Rig Assembly API explanation is located <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/docs/dna_viewer_api_rig_assembly_md">here</a>.</p>
+<section id="build-rig">
+<h2>Build Rig<a class="headerlink" href="#build-rig" title="Permalink to this headline"></a></h2>
+<p>Build Rig API explanation is located <a class="reference internal" href="dna_viewer_api_build_rig_md.html"><span class="doc std std-doc">here</span></a>.</p>
 </section>
 </section>
 
@@ -165,13 +170,13 @@ beginning of any example mentioned below:</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="dna_viewer_maya_md.html" class="btn btn-neutral float-left" title="Usage in Maya" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dnacalib.html" class="btn btn-neutral float-right" title="dnacalib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dna_viewer_api_build_meshes_md.html" class="btn btn-neutral float-right" title="Mesh Utilities" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

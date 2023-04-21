@@ -5,6 +5,7 @@
     <includes refid="src_2dnacalib_2TypeDefs_8h" local="yes">dnacalib/TypeDefs.h</includes>
     <includes local="no">cstdint</includes>
     <includedby refid="alib_2dna_2filters_2AnimatedMapFilter_8cpp" local="yes">AnimatedMapFilter.cpp</includedby>
+    <includedby refid="DNACalibDNAReaderImpl_8cpp" local="yes">DNACalibDNAReaderImpl.cpp</includedby>
     <incdepgraph>
       <node id="5">
         <label>dna/BinaryStreamReader.h</label>
@@ -295,6 +296,8 @@
         </childnode>
         <childnode refid="23" relation="include">
         </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
         <childnode refid="26" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
@@ -399,6 +402,20 @@
       <node id="24">
         <label>status/Defs.h</label>
         <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="62">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="64" relation="include">
+        </childnode>
       </node>
       <node id="23">
         <label>status/Status.h</label>
@@ -505,7 +522,9 @@
         </childnode>
         <childnode refid="62" relation="include">
         </childnode>
-        <childnode refid="69" relation="include">
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -516,71 +535,71 @@
         <childnode refid="29" relation="include">
         </childnode>
       </node>
-      <node id="67">
+      <node id="70">
         <label>tdm/Computations.h</label>
         <link refid="Computations_8h"/>
-        <childnode refid="63" relation="include">
-        </childnode>
         <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="65" relation="include">
+        <childnode refid="69" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="66">
+      <node id="69">
         <label>tdm/Mat.h</label>
         <link refid="Mat_8h"/>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
-      </node>
-      <node id="62">
-        <label>tdm/TDM.h</label>
-        <link refid="TDM_8h"/>
-        <childnode refid="63" relation="include">
-        </childnode>
-        <childnode refid="65" relation="include">
-        </childnode>
         <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="68" relation="include">
         </childnode>
       </node>
-      <node id="68">
-        <label>tdm/Transforms.h</label>
-        <link refid="Transforms_8h"/>
-        <childnode refid="67" relation="include">
+      <node id="65">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="63" relation="include">
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="63">
+      <node id="71">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
         <label>tdm/Types.h</label>
         <link refid="Types_8h"/>
         <childnode refid="15" relation="include">
         </childnode>
         <childnode refid="16" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="67" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="53" relation="include">
         </childnode>
       </node>
-      <node id="65">
+      <node id="68">
         <label>tdm/Vec.h</label>
         <link refid="Vec_8h"/>
-        <childnode refid="63" relation="include">
+        <childnode refid="66" relation="include">
         </childnode>
       </node>
-      <node id="69">
+      <node id="72">
         <label>terse/types/DynArray.h</label>
         <link refid="DynArray_8h"/>
         <childnode refid="15" relation="include">
@@ -589,11 +608,11 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="70" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="71" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
-        <childnode refid="72" relation="include">
+        <childnode refid="75" relation="include">
         </childnode>
         <childnode refid="51" relation="include">
         </childnode>
@@ -603,10 +622,13 @@
       <node id="15">
         <label>algorithm</label>
       </node>
+      <node id="64">
+        <label>array</label>
+      </node>
       <node id="16">
         <label>cassert</label>
       </node>
-      <node id="64">
+      <node id="67">
         <label>cmath</label>
       </node>
       <node id="17">
@@ -615,13 +637,13 @@
       <node id="29">
         <label>cstdint</label>
       </node>
-      <node id="70">
+      <node id="73">
         <label>cstring</label>
       </node>
-      <node id="71">
+      <node id="74">
         <label>functional</label>
       </node>
-      <node id="72">
+      <node id="75">
         <label>iterator</label>
       </node>
       <node id="55">
@@ -638,6 +660,9 @@
       </node>
       <node id="57">
         <label>set</label>
+      </node>
+      <node id="63">
+        <label>stdio.h</label>
       </node>
       <node id="58">
         <label>string</label>
@@ -659,6 +684,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>DNACalibDNAReaderImpl.cpp</label>
+        <link refid="DNACalibDNAReaderImpl_8cpp"/>
+      </node>
       <node id="2">
         <label>AnimatedMapFilter.cpp</label>
         <link refid="alib_2dna_2filters_2AnimatedMapFilter_8cpp"/>
@@ -667,6 +696,8 @@
         <label>AnimatedMapFilter.h</label>
         <link refid="alib_2dna_2filters_2AnimatedMapFilter_8h"/>
         <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -687,23 +718,28 @@
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">RawDefinition;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="classdnac_1_1AnimatedMapFilter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1AnimatedMapFilter" kindref="compound">AnimatedMapFilter</ref><sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a9913e13ddca94522b2f72b64b001e09f" kindref="member">AnimatedMapFilter</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a2475f67ee55c60df12fa8f45194fa158" kindref="member">configure</ref>(std::uint16_t<sp/>animatedMapCount,<sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedAnimatedMapIndices);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1ab839b8f2a61ad104ac8277db83822cfd" kindref="member">apply</ref>(<ref refid="structdnac_1_1RawDefinition" kindref="compound">RawDefinition</ref>&amp;<sp/>dest);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a4f0e844e66f66b59a8751f27e4fc79d4" kindref="member">passes</ref>(std::uint16_t<sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="21" refid="classdnac_1_1AnimatedMapFilter_1a1e70a0c25f7232d670792732cef0b09a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a1e70a0c25f7232d670792732cef0b09a" kindref="member">memRes</ref>;</highlight></codeline>
-<codeline lineno="22" refid="classdnac_1_1AnimatedMapFilter_1ae6cd07ee7c2ad8ef1ff8661f48ef96e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1ae6cd07ee7c2ad8ef1ff8661f48ef96e5" kindref="member">passingIndices</ref>;</highlight></codeline>
-<codeline lineno="23" refid="classdnac_1_1AnimatedMapFilter_1af17a60f835f3a3d081a2a6701ff85888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" kindref="member">UnorderedMap&lt;std::uint16_t, std::uint16_t&gt;</ref><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1af17a60f835f3a3d081a2a6701ff85888" kindref="member">remappedIndices</ref>;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">RawBehavior;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">RawDefinition;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classdnac_1_1AnimatedMapFilter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdnac_1_1AnimatedMapFilter" kindref="compound">AnimatedMapFilter</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a9913e13ddca94522b2f72b64b001e09f" kindref="member">AnimatedMapFilter</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a1a864737f1891ff46c168dbb3bd46bdf" kindref="member">configure</ref>(std::uint16_t<sp/>animatedMapCount,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedAnimatedMapIndices,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a66acdf887e847cb2662b905e682b0132" kindref="member">Matrix&lt;std::uint16_t&gt;</ref><sp/>lodIndices);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1ab839b8f2a61ad104ac8277db83822cfd" kindref="member">apply</ref>(<ref refid="structdnac_1_1RawDefinition" kindref="compound">RawDefinition</ref>&amp;<sp/>dest);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1ab839b8f2a61ad104ac8277db83822cfd" kindref="member">apply</ref>(<ref refid="structdnac_1_1RawBehavior" kindref="compound">RawBehavior</ref>&amp;<sp/>dest);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a4f0e844e66f66b59a8751f27e4fc79d4" kindref="member">passes</ref>(std::uint16_t<sp/>index)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25" refid="classdnac_1_1AnimatedMapFilter_1a1e70a0c25f7232d670792732cef0b09a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a1e70a0c25f7232d670792732cef0b09a" kindref="member">memRes</ref>;</highlight></codeline>
+<codeline lineno="26" refid="classdnac_1_1AnimatedMapFilter_1ae6cd07ee7c2ad8ef1ff8661f48ef96e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1ae6cd07ee7c2ad8ef1ff8661f48ef96e5" kindref="member">passingIndices</ref>;</highlight></codeline>
+<codeline lineno="27" refid="classdnac_1_1AnimatedMapFilter_1af17a60f835f3a3d081a2a6701ff85888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1ada0fd0f9404c2e6f4bfcf09e36428621" kindref="member">UnorderedMap&lt;std::uint16_t, std::uint16_t&gt;</ref><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1af17a60f835f3a3d081a2a6701ff85888" kindref="member">remappedIndices</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classdnac_1_1AnimatedMapFilter_1a7e1d7ce53f3326cad8b72330b1e48840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a66acdf887e847cb2662b905e682b0132" kindref="member">Matrix&lt;std::uint16_t&gt;</ref><sp/><ref refid="classdnac_1_1AnimatedMapFilter_1a7e1d7ce53f3326cad8b72330b1e48840" kindref="member">animatedMapLODIndices</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/dna/filters/AnimatedMapFilter.h"/>
   </compounddef>

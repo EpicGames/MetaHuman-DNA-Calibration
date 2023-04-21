@@ -4,6 +4,8 @@
     <compoundname>DNACalibDNAReaderImpl.cpp</compoundname>
     <includes refid="DNACalibDNAReaderImpl_8h" local="yes">dnacalib/dna/DNACalibDNAReaderImpl.h</includes>
     <includes refid="src_2dnacalib_2TypeDefs_8h" local="yes">dnacalib/TypeDefs.h</includes>
+    <includes refid="alib_2dna_2filters_2AnimatedMapFilter_8h" local="yes">dnacalib/dna/filters/AnimatedMapFilter.h</includes>
+    <includes refid="alib_2dna_2filters_2BlendShapeFilter_8h" local="yes">dnacalib/dna/filters/BlendShapeFilter.h</includes>
     <includes refid="alib_2dna_2filters_2JointFilter_8h" local="yes">dnacalib/dna/filters/JointFilter.h</includes>
     <includes refid="alib_2dna_2filters_2MeshFilter_8h" local="yes">dnacalib/dna/filters/MeshFilter.h</includes>
     <includes refid="alib_2utils_2Extd_8h" local="yes">dnacalib/utils/Extd.h</includes>
@@ -311,6 +313,8 @@
         </childnode>
         <childnode refid="25" relation="include">
         </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
         <childnode refid="28" relation="include">
         </childnode>
         <childnode refid="34" relation="include">
@@ -415,6 +419,20 @@
       <node id="26">
         <label>status/Defs.h</label>
         <link refid="status_2Defs_8h"/>
+      </node>
+      <node id="66">
+        <label>status/Provider.h</label>
+        <link refid="Provider_8h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
       </node>
       <node id="25">
         <label>status/Status.h</label>
@@ -521,31 +539,33 @@
         </childnode>
         <childnode refid="66" relation="include">
         </childnode>
-        <childnode refid="73" relation="include">
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
         </childnode>
       </node>
-      <node id="77">
+      <node id="80">
         <label>dnacalib/dna/BaseImpl.h</label>
         <link refid="dnacalib_2dna_2BaseImpl_8h"/>
-        <childnode refid="78" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="78">
+      <node id="81">
         <label>dnacalib/dna/DNA.h</label>
         <link refid="dnacalib_2dna_2DNA_8h"/>
         <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="79" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
-        <childnode refid="80" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="81" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="82" relation="include">
+        <childnode refid="68" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
@@ -553,11 +573,11 @@
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="55" relation="include">
         </childnode>
-        <childnode refid="83" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -567,11 +587,15 @@
         </childnode>
         <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="89" relation="include">
+        <childnode refid="91" relation="include">
         </childnode>
-        <childnode refid="85" relation="include">
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
         </childnode>
       </node>
       <node id="2">
@@ -581,35 +605,35 @@
         </childnode>
         <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="87" relation="include">
+        <childnode refid="89" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="84">
+      <node id="86">
         <label>dnacalib/dna/DenormalizedData.h</label>
         <link refid="dnacalib_2dna_2DenormalizedData_8h"/>
-        <childnode refid="79" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="85" relation="include">
+        <childnode refid="87" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="79">
+      <node id="82">
         <label>dnacalib/dna/LODMapping.h</label>
         <link refid="dnacalib_2dna_2LODMapping_8h"/>
         <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="31" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
       </node>
       <node id="52">
@@ -617,46 +641,62 @@
         <link refid="dnacalib_2dna_2ReaderImpl_8h"/>
         <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-        <childnode refid="84" relation="include">
-        </childnode>
-        <childnode refid="19" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
         <childnode refid="86" relation="include">
         </childnode>
-        <childnode refid="83" relation="include">
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
         </childnode>
       </node>
-      <node id="80">
+      <node id="83">
         <label>dnacalib/dna/SurjectiveMapping.h</label>
         <link refid="dnacalib_2dna_2SurjectiveMapping_8h"/>
         <childnode refid="53" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
       </node>
-      <node id="87">
+      <node id="89">
         <label>dnacalib/dna/WriterImpl.h</label>
         <link refid="dnacalib_2dna_2WriterImpl_8h"/>
         <childnode refid="53" relation="include">
         </childnode>
-        <childnode refid="77" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="83" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="88">
+      <node id="90">
+        <label>dnacalib/dna/filters/AnimatedMapFilter.h</label>
+        <link refid="alib_2dna_2filters_2AnimatedMapFilter_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>dnacalib/dna/filters/BlendShapeFilter.h</label>
+        <link refid="alib_2dna_2filters_2BlendShapeFilter_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
         <label>dnacalib/dna/filters/JointFilter.h</label>
         <link refid="alib_2dna_2filters_2JointFilter_8h"/>
         <childnode refid="53" relation="include">
@@ -664,7 +704,7 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="89">
+      <node id="93">
         <label>dnacalib/dna/filters/MeshFilter.h</label>
         <link refid="alib_2dna_2filters_2MeshFilter_8h"/>
         <childnode refid="53" relation="include">
@@ -672,87 +712,87 @@
         <childnode refid="31" relation="include">
         </childnode>
       </node>
-      <node id="85">
+      <node id="87">
         <label>dnacalib/utils/Extd.h</label>
         <link refid="alib_2utils_2Extd_8h"/>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="61" relation="include">
         </childnode>
         <childnode refid="65" relation="include">
         </childnode>
       </node>
-      <node id="71">
+      <node id="74">
         <label>tdm/Computations.h</label>
         <link refid="Computations_8h"/>
-        <childnode refid="67" relation="include">
-        </childnode>
         <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="69" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
         </childnode>
         <childnode refid="24" relation="include">
         </childnode>
       </node>
-      <node id="70">
+      <node id="73">
         <label>tdm/Mat.h</label>
         <link refid="Mat_8h"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="66">
-        <label>tdm/TDM.h</label>
-        <link refid="TDM_8h"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-        <childnode refid="69" relation="include">
-        </childnode>
         <childnode refid="70" relation="include">
-        </childnode>
-        <childnode refid="71" relation="include">
         </childnode>
         <childnode refid="72" relation="include">
         </childnode>
       </node>
-      <node id="72">
-        <label>tdm/Transforms.h</label>
-        <link refid="Transforms_8h"/>
-        <childnode refid="71" relation="include">
+      <node id="69">
+        <label>tdm/TDM.h</label>
+        <link refid="TDM_8h"/>
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="67" relation="include">
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
         </childnode>
       </node>
-      <node id="67">
+      <node id="75">
+        <label>tdm/Transforms.h</label>
+        <link refid="Transforms_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
         <label>tdm/Types.h</label>
         <link refid="Types_8h"/>
         <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="18" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
         <childnode refid="57" relation="include">
         </childnode>
       </node>
-      <node id="69">
+      <node id="72">
         <label>tdm/Vec.h</label>
         <link refid="Vec_8h"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
       </node>
-      <node id="81">
+      <node id="84">
         <label>terse/types/ArchiveOffset.h</label>
         <link refid="ArchiveOffset_8h"/>
         <childnode refid="19" relation="include">
@@ -762,7 +802,7 @@
         <childnode refid="55" relation="include">
         </childnode>
       </node>
-      <node id="73">
+      <node id="76">
         <label>terse/types/DynArray.h</label>
         <link refid="DynArray_8h"/>
         <childnode refid="17" relation="include">
@@ -771,11 +811,11 @@
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="55" relation="include">
         </childnode>
@@ -785,13 +825,13 @@
       <node id="17">
         <label>algorithm</label>
       </node>
-      <node id="82">
+      <node id="68">
         <label>array</label>
       </node>
       <node id="18">
         <label>cassert</label>
       </node>
-      <node id="68">
+      <node id="71">
         <label>cmath</label>
       </node>
       <node id="19">
@@ -800,16 +840,16 @@
       <node id="31">
         <label>cstdint</label>
       </node>
-      <node id="74">
+      <node id="77">
         <label>cstring</label>
       </node>
-      <node id="75">
+      <node id="78">
         <label>functional</label>
       </node>
-      <node id="76">
+      <node id="79">
         <label>iterator</label>
       </node>
-      <node id="86">
+      <node id="88">
         <label>limits</label>
       </node>
       <node id="59">
@@ -827,10 +867,13 @@
       <node id="61">
         <label>set</label>
       </node>
+      <node id="67">
+        <label>stdio.h</label>
+      </node>
       <node id="62">
         <label>string</label>
       </node>
-      <node id="83">
+      <node id="85">
         <label>tuple</label>
       </node>
       <node id="57">
@@ -860,221 +903,286 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DNACalibDNAReaderImpl_8h" kindref="compound">dnacalib/dna/DNACalibDNAReaderImpl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="src_2dnacalib_2TypeDefs_8h" kindref="compound">dnacalib/TypeDefs.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2JointFilter_8h" kindref="compound">dnacalib/dna/filters/JointFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2MeshFilter_8h" kindref="compound">dnacalib/dna/filters/MeshFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2utils_2Extd_8h" kindref="compound">dnacalib/utils/Extd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2AnimatedMapFilter_8h" kindref="compound">dnacalib/dna/filters/AnimatedMapFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2BlendShapeFilter_8h" kindref="compound">dnacalib/dna/filters/BlendShapeFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2JointFilter_8h" kindref="compound">dnacalib/dna/filters/JointFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2dna_2filters_2MeshFilter_8h" kindref="compound">dnacalib/dna/filters/MeshFilter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="alib_2utils_2Extd_8h" kindref="compound">dnacalib/utils/Extd.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader_1ab091b8fe0aa6bf5c295de8dcea690293" kindref="member">DNACalibDNAReader::~DNACalibDNAReader</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacednac" kindref="compound">dnac</ref><sp/>{</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1add3105d6c0caf10ae0b40fde23084c72" kindref="member">DNACalibDNAReaderImpl::~DNACalibDNAReaderImpl</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader_1ab091b8fe0aa6bf5c295de8dcea690293" kindref="member">DNACalibDNAReader::~DNACalibDNAReader</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">DNACalibDNAReader::create</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;DNACalibDNAReaderImpl&gt;</ref><sp/>alloc{memRes};</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>alloc.newObject(memRes);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21" refid="classdnac_1_1DNACalibDNAReader_1a32959ad38241412ef0e128beb25ceb75" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">DNACalibDNAReader::create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref>*<sp/>reader,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>instance<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">create</ref>(memRes));</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>instance-&gt;<ref refid="classdna_1_1Writer_1a41e7a151c6dab14e702667b9e41e8a85" kindref="member">setFrom</ref>(reader,<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">dna::DataLayer::All</ref>,<sp/>memRes);</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>instance;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="classdnac_1_1DNACalibDNAReader_1a94dada25c7046d2f00e33a75c7f88748" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a94dada25c7046d2f00e33a75c7f88748" kindref="member">DNACalibDNAReader::destroy</ref>(<ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/>instance)<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(instance);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;DNACalibDNAReaderImpl&gt;</ref><sp/>alloc{ptr-&gt;getMemoryResource()};</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>alloc.deleteObject(ptr);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34" refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e42d8f51ceaeb5ec6b9b658ced2f28b" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e42d8f51ceaeb5ec6b9b658ced2f28b" kindref="member">DNACalibDNAReaderImpl::DNACalibDNAReaderImpl</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref>{memRes_},</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl" kindref="compound">ReaderImpl</ref>{memRes_},</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1WriterImpl" kindref="compound">WriterImpl</ref>{memRes_}<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40" refid="classdnac_1_1DNACalibDNAReaderImpl_1adb81b52459539d7685a547b417bdae61" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adb81b52459539d7685a547b417bdae61" kindref="member">DNACalibDNAReaderImpl::setLODCount</ref>(std::uint16_t<sp/>lodCount)<sp/>{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.descriptor.lodCount<sp/>=<sp/>lodCount;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44" refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52" refid="classdnac_1_1DNACalibDNAReaderImpl_1abbe738054fa8d75204f48ee8d19b21dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslations</ref>(<ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>translations)<sp/>{</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations<sp/>=<sp/>std::move(translations);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56" refid="classdnac_1_1DNACalibDNAReaderImpl_1a394cf09d72836689ead003b84d1403eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a394cf09d72836689ead003b84d1403eb" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslation</ref>(std::uint16_t<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>&amp;<sp/>translation)<sp/>{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.size())<sp/>{</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
-<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67" refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight></codeline>
-<codeline lineno="74" refid="classdnac_1_1DNACalibDNAReaderImpl_1a27967352c7738c70a22da8300034c32a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotations</ref>(<ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>rotations)<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations<sp/>=<sp/>std::move(rotations);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="78" refid="classdnac_1_1DNACalibDNAReaderImpl_1a4568f0ed8febb72c073dca6b4229866d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a4568f0ed8febb72c073dca6b4229866d" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotation</ref>(std::uint16_t<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>&amp;<sp/>rotation)<sp/>{</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.size())<sp/>{</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89" refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" kindref="member">DNACalibDNAReaderImpl::setJointGroupValues</ref>(std::uint16_t<sp/>jointGroupIndex,<sp/><ref refid="classterse_1_1DynArray" kindref="compound">AlignedDynArray&lt;float&gt;</ref>&amp;&amp;<sp/>values)<sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior.joints.jointGroups,<sp/>jointGroupIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.behavior.joints.jointGroups[jointGroupIndex].values<sp/>=<sp/>std::move(values);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94" refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">DNACalibDNAReaderImpl::setVertexPositions</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104" refid="classdnac_1_1DNACalibDNAReaderImpl_1a183951b665c4774045abaed49196c93e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">DNACalibDNAReaderImpl::setVertexPositions</ref>(std::uint16_t<sp/>meshIndex,<sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>positions)<sp/>{</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions<sp/>=<sp/>std::move(positions);</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109" refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">DNACalibDNAReaderImpl::setBlendShapeTargetDeltas</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets,<sp/>blendShapeTargetIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121" refid="classdnac_1_1DNACalibDNAReaderImpl_1adf703c3df3341779e57ecd5577a67b8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">DNACalibDNAReaderImpl::setBlendShapeTargetDeltas</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>deltas)<sp/>{</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets,<sp/>blendShapeTargetIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas<sp/>=<sp/>std::move(deltas);</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129" refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" kindref="member">DNACalibDNAReaderImpl::pruneBlendShapeTargets</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold)<sp/>{</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold2<sp/>=<sp/>threshold<sp/>*<sp/>threshold;</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes)<sp/>{</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>bst<sp/>:<sp/>mesh.blendShapeTargets)<sp/>{</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>di{};</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>si{};<sp/>si<sp/>&lt;<sp/>bst.deltas.size();<sp/>++si)<sp/>{</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magnitude2<sp/>=<sp/>(bst.deltas.xs[si]<sp/>*<sp/>bst.deltas.xs[si])<sp/>+</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(bst.deltas.ys[si]<sp/>*<sp/>bst.deltas.ys[si])<sp/>+</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(bst.deltas.zs[si]<sp/>*<sp/>bst.deltas.zs[si]);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(magnitude2<sp/>&gt;<sp/>threshold2)<sp/>{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.xs[di]<sp/>=<sp/>bst.deltas.xs[si];</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.ys[di]<sp/>=<sp/>bst.deltas.ys[si];</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.zs[di]<sp/>=<sp/>bst.deltas.zs[si];</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.vertexIndices[di]<sp/>=<sp/>bst.vertexIndices[si];</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++di;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.resize(di);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.vertexIndices.resize(di);</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152" refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" kindref="member">DNACalibDNAReaderImpl::removeMesh</ref>(std::uint16_t<sp/>meshIndex)<sp/>{</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>mesh<sp/>names<sp/>and<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodMeshMapping.filterIndices([meshIndex](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(value<sp/>!=<sp/>meshIndex);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>all<sp/>distinct<sp/>element<sp/>position<sp/>indices<sp/>that<sp/>are<sp/>referenced<sp/>by<sp/>the<sp/>present<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedMeshIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodMeshMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1MeshFilter" kindref="compound">MeshFilter</ref><sp/>meshFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>meshFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.meshNames.size()),<sp/>std::move(allowedMeshIndices));</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>meshFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>mesh<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>[&amp;meshFilter](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdnac_1_1RawMesh" kindref="compound">RawMesh</ref>&amp;<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">,<sp/>std::size_t<sp/>index)<sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>meshFilter.passes(static_cast&lt;std::uint16_t&gt;(index));</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Repopulate<sp/>cache<sp/>of<sp/>(mesh,<sp/>blend<sp/>shape)<sp/>mapping<sp/>per<sp/>LOD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl_1a09fef17ee0903729873d4d40e2ba7069" kindref="member">cache</ref>.<ref refid="structdnac_1_1DenormalizedData_1aaf91553bea741d2582e28ad5ce6d4eea" kindref="member">meshBlendShapeMappingIndices</ref>.<ref refid="classdnac_1_1LODMapping_1ae701f0ee4e73a8e0efb3ea4a41632038" kindref="member">reset</ref>();</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl_1a09fef17ee0903729873d4d40e2ba7069" kindref="member">cache</ref>.<ref refid="structdnac_1_1DenormalizedData_1a3979a30a74e1d8070373443c3e348927" kindref="member">populate</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1add3105d6c0caf10ae0b40fde23084c72" kindref="member">DNACalibDNAReaderImpl::~DNACalibDNAReaderImpl</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">DNACalibDNAReader::create</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;DNACalibDNAReaderImpl&gt;</ref><sp/>alloc{memRes};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>alloc.newObject(memRes);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classdnac_1_1DNACalibDNAReader_1a32959ad38241412ef0e128beb25ceb75" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">DNACalibDNAReader::create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classdna_1_1Reader" kindref="compound">dna::Reader</ref>*<sp/>reader,<sp/><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>instance<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classdnac_1_1DNACalibDNAReader_1a30a782954df3b6336e7bfd31a6833145" kindref="member">create</ref>(memRes));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>instance-&gt;<ref refid="classdna_1_1Writer_1a41e7a151c6dab14e702667b9e41e8a85" kindref="member">setFrom</ref>(reader,<sp/><ref refid="namespacedna_1a0ab7aa7faf3fc6bd0a6aa724c142769cab1c94ca2fbc3e78fc30069c8d0f01680" kindref="member">dna::DataLayer::All</ref>,<sp/>memRes);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>instance;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classdnac_1_1DNACalibDNAReader_1a94dada25c7046d2f00e33a75c7f88748" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReader_1a94dada25c7046d2f00e33a75c7f88748" kindref="member">DNACalibDNAReader::destroy</ref>(<ref refid="classdnac_1_1DNACalibDNAReader" kindref="compound">DNACalibDNAReader</ref>*<sp/>instance)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NOLINTNEXTLINE(cppcoreguidelines-pro-type-static-cast-downcast)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl" kindref="compound">DNACalibDNAReaderImpl</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(instance);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classpma_1_1PolyAllocator" kindref="compound">PolyAllocator&lt;DNACalibDNAReaderImpl&gt;</ref><sp/>alloc{ptr-&gt;getMemoryResource()};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>alloc.deleteObject(ptr);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e42d8f51ceaeb5ec6b9b658ced2f28b" refkind="member"><highlight class="normal"><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e42d8f51ceaeb5ec6b9b658ced2f28b" kindref="member">DNACalibDNAReaderImpl::DNACalibDNAReaderImpl</ref>(<ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref>*<sp/>memRes_)<sp/>:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1BaseImpl" kindref="compound">BaseImpl</ref>{memRes_},</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl" kindref="compound">ReaderImpl</ref>{memRes_},</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1WriterImpl" kindref="compound">WriterImpl</ref>{memRes_}<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classdnac_1_1DNACalibDNAReaderImpl_1adb81b52459539d7685a547b417bdae61" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adb81b52459539d7685a547b417bdae61" kindref="member">DNACalibDNAReaderImpl::setLODCount</ref>(std::uint16_t<sp/>lodCount)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.descriptor.lodCount<sp/>=<sp/>lodCount;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classdnac_1_1DNACalibDNAReaderImpl_1abbe738054fa8d75204f48ee8d19b21dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1adbac287ce9eede9c9e82a50c9455d5cf" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslations</ref>(<ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>translations)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations<sp/>=<sp/>std::move(translations);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classdnac_1_1DNACalibDNAReaderImpl_1a394cf09d72836689ead003b84d1403eb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a394cf09d72836689ead003b84d1403eb" kindref="member">DNACalibDNAReaderImpl::setNeutralJointTranslation</ref>(std::uint16_t<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>&amp;<sp/>translation)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.size())<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.xs[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.ys[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.zs[index]<sp/>=<sp/>translation.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,<sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classdnac_1_1DNACalibDNAReaderImpl_1a27967352c7738c70a22da8300034c32a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a97b6756a11db116c9476eb260825dcee" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotations</ref>(<ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>rotations)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations<sp/>=<sp/>std::move(rotations);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classdnac_1_1DNACalibDNAReaderImpl_1a4568f0ed8febb72c073dca6b4229866d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a4568f0ed8febb72c073dca6b4229866d" kindref="member">DNACalibDNAReaderImpl::setNeutralJointRotation</ref>(std::uint16_t<sp/>index,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdna_1_1Vector3" kindref="compound">Vector3</ref>&amp;<sp/>rotation)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointTranslations.size())<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs.resize(index<sp/>+<sp/>1ul,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.xs[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a174ac0385ec85c98e8e2927fb15973bd" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.ys[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a98dedbceccb88f1327056fdd511b884d" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.neutralJointRotations.zs[index]<sp/>=<sp/>rotation.<ref refid="structdna_1_1Vector3_1a82be7bbbcdabd8602c94ecd8deff5a03" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1ada98afe3be0c8dddabb0210872bbd775" kindref="member">DNACalibDNAReaderImpl::setJointGroupValues</ref>(std::uint16_t<sp/>jointGroupIndex,<sp/><ref refid="classterse_1_1DynArray" kindref="compound">AlignedDynArray&lt;float&gt;</ref>&amp;&amp;<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior.joints.jointGroups,<sp/>jointGroupIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.behavior.joints.jointGroups[jointGroupIndex].values<sp/>=<sp/>std::move(values);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">DNACalibDNAReaderImpl::setVertexPositions</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="classdnac_1_1DNACalibDNAReaderImpl_1a183951b665c4774045abaed49196c93e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a1af1f53aee10fbe9ed22453ce0455fa4" kindref="member">DNACalibDNAReaderImpl::setVertexPositions</ref>(std::uint16_t<sp/>meshIndex,<sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>positions)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].positions<sp/>=<sp/>std::move(positions);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">DNACalibDNAReaderImpl::setBlendShapeTargetDeltas</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>xs,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>ys,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;float&gt;</ref><sp/>zs)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets,<sp/>blendShapeTargetIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.xs.assign(xs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>xs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.ys.assign(ys.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>ys.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas.zs.assign(zs.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),<sp/>zs.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="classdnac_1_1DNACalibDNAReaderImpl_1adf703c3df3341779e57ecd5577a67b8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kindref="member">DNACalibDNAReaderImpl::setBlendShapeTargetDeltas</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structdnac_1_1RawVector3Vector" kindref="compound">RawVector3Vector</ref>&amp;&amp;<sp/>deltas)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets,<sp/>blendShapeTargetIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].deltas<sp/>=<sp/>std::move(deltas);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131" refid="classdnac_1_1DNACalibDNAReaderImpl_1a51d5d69dd682b2dfa2ee37c61109a442" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a51d5d69dd682b2dfa2ee37c61109a442" kindref="member">DNACalibDNAReaderImpl::setBlendShapeTargetVertexIndices</ref>(std::uint16_t<sp/>meshIndex,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::uint16_t<sp/>blendShapeTargetIndex,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint32_t&gt;</ref><sp/>vertexIndices)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>meshIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kindref="member">ensureHasSize</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets,<sp/>blendShapeTargetIndex<sp/>+<sp/>1ul,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes[meshIndex].blendShapeTargets[blendShapeTargetIndex].vertexIndices.assign(vertexIndices.<ref refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" kindref="member">begin</ref>(),</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertexIndices.<ref refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" kindref="member">end</ref>());</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" kindref="member">DNACalibDNAReaderImpl::pruneBlendShapeTargets</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>threshold2<sp/>=<sp/>threshold<sp/>*<sp/>threshold;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>bst<sp/>:<sp/>mesh.blendShapeTargets)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>di{};</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::size_t<sp/>si{};<sp/>si<sp/>&lt;<sp/>bst.deltas.size();<sp/>++si)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>magnitude2<sp/>=<sp/>(bst.deltas.xs[si]<sp/>*<sp/>bst.deltas.xs[si])<sp/>+</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(bst.deltas.ys[si]<sp/>*<sp/>bst.deltas.ys[si])<sp/>+</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(bst.deltas.zs[si]<sp/>*<sp/>bst.deltas.zs[si]);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(magnitude2<sp/>&gt;<sp/>threshold2)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.xs[di]<sp/>=<sp/>bst.deltas.xs[si];</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.ys[di]<sp/>=<sp/>bst.deltas.ys[si];</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.zs[di]<sp/>=<sp/>bst.deltas.zs[si];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.vertexIndices[di]<sp/>=<sp/>bst.vertexIndices[si];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++di;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.deltas.resize(di);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bst.vertexIndices.resize(di);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e75b3ab28e83736c2332fcaf8cfdd93" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e75b3ab28e83736c2332fcaf8cfdd93" kindref="member">DNACalibDNAReaderImpl::removeMeshes</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>meshIndices)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>mesh<sp/>names<sp/>and<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodMeshMapping.filterIndices([meshIndices](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(!<ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(meshIndices,<sp/>value));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>all<sp/>distinct<sp/>element<sp/>position<sp/>indices<sp/>that<sp/>are<sp/>referenced<sp/>by<sp/>the<sp/>present<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedMeshIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodMeshMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="172" refid="classdnac_1_1DNACalibDNAReaderImpl_1a18f789887ae48a774e7549823920a8a5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a18f789887ae48a774e7549823920a8a5" kindref="member">DNACalibDNAReaderImpl::removeJoint</ref>(std::uint16_t<sp/>jointIndex)<sp/>{</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>find<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>find<sp/>the<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>LOD<sp/>0<sp/>(the<sp/>current<sp/>max<sp/>LOD,<sp/>at<sp/>index<sp/>0),<sp/>as<sp/>it</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contains<sp/>joints<sp/>from<sp/>all<sp/>lower<sp/>LODs.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref><sp/>jointsNotInLOD0{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointIndicesForLOD0<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getIndices(0);</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size();<sp/>++idx)<sp/>{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>==<sp/>jointIndex)<sp/>{</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>not<sp/>add<sp/>the<sp/>joint<sp/>to<sp/>remove.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::find(jointIndicesForLOD0.begin(),<sp/>jointIndicesForLOD0.end(),<sp/>idx)<sp/>==<sp/>jointIndicesForLOD0.end())<sp/>{</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointsNotInLOD0.push_back(idx);</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>joint<sp/>names<sp/>and<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.filterIndices([jointIndex](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(value<sp/>!=<sp/>jointIndex);</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>all<sp/>distinct<sp/>element<sp/>position<sp/>indices<sp/>that<sp/>are<sp/>referenced<sp/>by<sp/>the<sp/>present<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedJointIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>order<sp/>to<sp/>keep<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>add<sp/>them<sp/>to<sp/>the<sp/>list<sp/>of<sp/>joints<sp/>to<sp/>keep<sp/>when<sp/>filtering.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>allowedJointIndices.insert(jointsNotInLOD0.begin(),<sp/>jointsNotInLOD0.end());</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"></highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter" kindref="compound">JointFilter</ref><sp/>jointFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size()),<sp/>std::move(allowedJointIndices));</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>related<sp/>joint<sp/>behavior<sp/>data</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>skin<sp/>weights<sp/>related<sp/>to<sp/>this<sp/>joint<sp/>and<sp/>normalize<sp/>them</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes)<sp/>{</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>skinWeights<sp/>:<sp/>mesh.skinWeights)<sp/>{</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointFilter.apply(skinWeights);</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209" refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" kindref="member">DNACalibDNAReaderImpl::removeJointAnimation</ref>(std::uint16_t<sp/>jointIndex)<sp/>{</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedJointIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>allowedJointIndices.erase(jointIndex);</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter" kindref="compound">JointFilter</ref><sp/>jointFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size()),</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(allowedJointIndices),</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ac4981bf6569acb0991807a641527cd6a" kindref="member">JointFilter::Option::AnimationOnly</ref>);</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
-<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1MeshFilter" kindref="compound">MeshFilter</ref><sp/>meshFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>meshFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.meshNames.size()),<sp/>std::move(allowedMeshIndices));</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>meshFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>mesh<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceextd_1af79bdbc746eeddf99379cbc5d4474e5b" kindref="member">extd::filter</ref>(<ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes,<sp/>[&amp;meshFilter](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structdnac_1_1RawMesh" kindref="compound">RawMesh</ref>&amp;<sp/><sp/></highlight><highlight class="comment">/*unused*/</highlight><highlight class="normal">,<sp/>std::size_t<sp/>index)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>meshFilter.passes(static_cast&lt;std::uint16_t&gt;(index));</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Repopulate<sp/>cache<sp/>of<sp/>(mesh,<sp/>blend<sp/>shape)<sp/>mapping<sp/>per<sp/>LOD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl_1a09fef17ee0903729873d4d40e2ba7069" kindref="member">cache</ref>.<ref refid="structdnac_1_1DenormalizedData_1aaf91553bea741d2582e28ad5ce6d4eea" kindref="member">meshBlendShapeMappingIndices</ref>.<ref refid="classdnac_1_1LODMapping_1ae701f0ee4e73a8e0efb3ea4a41632038" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1ReaderImpl_1a09fef17ee0903729873d4d40e2ba7069" kindref="member">cache</ref>.<ref refid="structdnac_1_1DenormalizedData_1a3979a30a74e1d8070373443c3e348927" kindref="member">populate</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classdnac_1_1DNACalibDNAReaderImpl_1a13faba4a20c3f6de5be7eefd3e61d2d6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a13faba4a20c3f6de5be7eefd3e61d2d6" kindref="member">DNACalibDNAReaderImpl::removeJoints</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>jointIndices)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>find<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>find<sp/>the<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>LOD<sp/>0<sp/>(the<sp/>current<sp/>max<sp/>LOD,<sp/>at<sp/>index<sp/>0),<sp/>as<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contains<sp/>joints<sp/>from<sp/>all<sp/>lower<sp/>LODs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref><sp/>jointsNotInLOD0{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointIndicesForLOD0<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getIndices(0);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size();<sp/>++idx)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(jointIndices,<sp/>idx))<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>not<sp/>add<sp/>the<sp/>joint<sp/>to<sp/>remove.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::find(jointIndicesForLOD0.begin(),<sp/>jointIndicesForLOD0.end(),<sp/>idx)<sp/>==<sp/>jointIndicesForLOD0.end())<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointsNotInLOD0.push_back(idx);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>joint<sp/>names<sp/>and<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.filterIndices([jointIndices](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(!<ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(jointIndices,<sp/>value));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>all<sp/>distinct<sp/>element<sp/>position<sp/>indices<sp/>that<sp/>are<sp/>referenced<sp/>by<sp/>the<sp/>present<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedJointIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>order<sp/>to<sp/>keep<sp/>joints<sp/>that<sp/>are<sp/>not<sp/>in<sp/>any<sp/>LOD,<sp/>add<sp/>them<sp/>to<sp/>the<sp/>list<sp/>of<sp/>joints<sp/>to<sp/>keep<sp/>when<sp/>filtering.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>allowedJointIndices.insert(jointsNotInLOD0.begin(),<sp/>jointsNotInLOD0.end());</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter" kindref="compound">JointFilter</ref><sp/>jointFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size()),<sp/>std::move(allowedJointIndices));</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>related<sp/>joint<sp/>behavior<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>skin<sp/>weights<sp/>related<sp/>to<sp/>this<sp/>joint<sp/>and<sp/>normalize<sp/>them</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes)<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>skinWeights<sp/>:<sp/>mesh.skinWeights)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jointFilter.apply(skinWeights);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="classdnac_1_1DNACalibDNAReaderImpl_1a999a34d2290f5c2040ad5ce24fde6849" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a999a34d2290f5c2040ad5ce24fde6849" kindref="member">DNACalibDNAReaderImpl::removeJointAnimations</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>jointIndices)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedJointIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodJointMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>jointIndex<sp/>:<sp/>jointIndices)<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allowedJointIndices.erase(jointIndex);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter" kindref="compound">JointFilter</ref><sp/>jointFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.jointNames.size()),</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(allowedJointIndices),</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1JointFilter_1a313ec82457a8edf3e516fde3093a3501ac4981bf6569acb0991807a641527cd6a" kindref="member">JointFilter::Option::AnimationOnly</ref>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>jointFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="classdnac_1_1DNACalibDNAReaderImpl_1a26b1756a69ac5113a6d6621c9d162064" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1a26b1756a69ac5113a6d6621c9d162064" kindref="member">DNACalibDNAReaderImpl::removeBlendShapes</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>blendShapeIndices)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>blend<sp/>shapes<sp/>from<sp/>LOD<sp/>blend<sp/>shape<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodBlendShapeMapping.filterIndices([blendShapeIndices](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(!<ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(blendShapeIndices,<sp/>value));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref><sp/>blendShapeLODs{<ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodBlendShapeMapping.getLODCount(),<sp/>0u,<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>lodIndex<sp/>=<sp/>0;<sp/>lodIndex<sp/>&lt;<sp/>blendShapeLODs.size();<sp/>++lodIndex)<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blendShapeLODs[lodIndex]<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodBlendShapeMapping.getIndices(lodIndex).size());</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedBlendShapeIndices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodBlendShapeMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1BlendShapeFilter" kindref="compound">BlendShapeFilter</ref><sp/>blendShapeFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>blendShapeFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.blendShapeChannelNames.size()),</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(allowedBlendShapeIndices),<sp/>std::move(blendShapeLODs));</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>blend<sp/>shape<sp/>from<sp/>definition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>blendShapeFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>blend<sp/>shape<sp/>from<sp/>behavior</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>blendShapeFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>blend<sp/>shape<sp/>from<sp/>geometry</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>mesh<sp/>:<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.geometry.meshes)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blendShapeFilter.apply(mesh);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="classdnac_1_1DNACalibDNAReaderImpl_1af4496c037cc3b6f0e32585a74c81be6b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdnac_1_1DNACalibDNAReaderImpl_1af4496c037cc3b6f0e32585a74c81be6b" kindref="member">DNACalibDNAReaderImpl::removeAnimatedMaps</ref>(<ref refid="classtrust_1_1ArrayView" kindref="compound">ConstArrayView&lt;std::uint16_t&gt;</ref><sp/>animatedMapIndices)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>track<sp/>of<sp/>animated<sp/>map<sp/>indices<sp/>per<sp/>LOD<sp/>before<sp/>filtering<sp/>and<sp/>remapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1a66acdf887e847cb2662b905e682b0132" kindref="member">Matrix&lt;std::uint16_t&gt;</ref><sp/>lodIndices{<ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodAnimatedMapMapping.getLODCount(),<sp/><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector&lt;std::uint16_t&gt;</ref>{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>},<sp/><ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::uint16_t<sp/>lodIndex<sp/>=<sp/>0;<sp/>lodIndex<sp/>&lt;<sp/>static_cast&lt;std::uint16_t&gt;(lodIndices.size());<sp/>++lodIndex)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>indices<sp/>=<sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodAnimatedMapMapping.getIndices(lodIndex);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lodIndices[lodIndex].assign(indices.begin(),<sp/>indices.end());</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Filter<sp/>and<sp/>remap<sp/>animated<sp/>map<sp/>names<sp/>and<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodAnimatedMapMapping.filterIndices([animatedMapIndices](std::uint16_t<sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(!<ref refid="namespaceextd_1a002ec342c016b4bc7cb2a886e13638c2" kindref="member">extd::contains</ref>(animatedMapIndices,<sp/>value));</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Collect<sp/>all<sp/>distinct<sp/>element<sp/>position<sp/>indices<sp/>that<sp/>are<sp/>referenced<sp/>by<sp/>the<sp/>present<sp/>LODs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacepma_1aa4a7d53c17b0073cbf7c83622dffcfd1" kindref="member">UnorderedSet&lt;std::uint16_t&gt;</ref><sp/>allowedAnimatedMapIndices<sp/>=</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacedna" kindref="compound">dna</ref>.definition.lodAnimatedMapMapping.getCombinedDistinctIndices(<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdnac_1_1AnimatedMapFilter" kindref="compound">AnimatedMapFilter</ref><sp/>animatedMapFilter{<ref refid="classdnac_1_1BaseImpl_1ac6106cd0ab7367c022025ffa03a392c7" kindref="member">memRes</ref>};</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>animatedMapFilter.configure(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">std::uint16_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="namespacedna" kindref="compound">dna</ref>.definition.animatedMapNames.size()),</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::move(allowedAnimatedMapIndices),<sp/>std::move(lodIndices));</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>animatedMapFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.definition);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>animatedMapFilter.apply(<ref refid="namespacedna" kindref="compound">dna</ref>.behavior);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>dnac</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/dna/DNACalibDNAReaderImpl.cpp"/>
   </compounddef>

@@ -18,10 +18,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="41" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" bodystart="41" bodyend="-1"/>
-        <referencedby refid="classdnac_1_1RemoveJointCommand_1a9c09b3455bd03440fb5f2ea9673da59b" compoundref="RemoveJointCommand_8cpp" startline="38" endline="42">RemoveJointCommand</referencedby>
-        <referencedby refid="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae" compoundref="RemoveJointCommand_8cpp" startline="52" endline="54">run</referencedby>
-        <referencedby refid="classdnac_1_1RemoveJointCommand_1a173f7f4e6eb7eb8e15b12dca57115cd0" compoundref="RemoveJointCommand_8cpp" startline="48" endline="50">setJointIndex</referencedby>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="50" column="19" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RemoveJointCommand_1a9c09b3455bd03440fb5f2ea9673da59b" compoundref="RemoveJointCommand_8cpp" startline="43" endline="47">RemoveJointCommand</referencedby>
+        <referencedby refid="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae" compoundref="RemoveJointCommand_8cpp" startline="67" endline="69">run</referencedby>
+        <referencedby refid="classdnac_1_1RemoveJointCommand_1a173f7f4e6eb7eb8e15b12dca57115cd0" compoundref="RemoveJointCommand_8cpp" startline="59" endline="61">setJointIndex</referencedby>
+        <referencedby refid="classdnac_1_1RemoveJointCommand_1aa2f66f7aa23b4fdc2d30bcf513630a3d" compoundref="RemoveJointCommand_8cpp" startline="63" endline="65">setJointIndices</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -42,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="20" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="35" bodyend="36"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="20" column="26" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="40" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a9c09b3455bd03440fb5f2ea9673da59b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
@@ -65,8 +66,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="21" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="38" bodyend="42"/>
-        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="41">pImpl</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="21" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="43" bodyend="47"/>
+        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a184eb38c7815693a76acfea9c76a246d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
+        <definition>dnac::RemoveJointCommand::RemoveJointCommand</definition>
+        <argsstring>(ConstArrayView&lt; std::uint16_t &gt; jointIndices, MemoryResource *memRes=nullptr)</argsstring>
+        <name>RemoveJointCommand</name>
+        <qualifiedname>dnac::RemoveJointCommand::RemoveJointCommand</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>jointIndices</declname>
+        </param>
+        <param>
+          <type><ref refid="classpma_1_1MemoryResource" kindref="compound">MemoryResource</ref> *</type>
+          <declname>memRes</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="22" column="17" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="49" bodyend="53"/>
+        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="50">pImpl</references>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a30ad4b9a2126b1bc80be69dd58de37cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
@@ -80,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="23" column="17"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="24" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1ab7ab91a3af90d995341caf7a365e8949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -97,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="25" column="9"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="26" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a8c2a44fe02ab0cd68ce2a00abda0b2e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classdnac_1_1RemoveJointCommand" kindref="compound">RemoveJointCommand</ref> &amp;</type>
@@ -114,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="26" column="28"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="27" column="28"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a9e1095219dadde92870a1604ebec38e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref></type>
@@ -131,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="28" column="17"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="29" column="17"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a3b625a593e76d3e66eb541d87e38b1a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> <ref refid="classdnac_1_1RemoveJointCommand" kindref="compound">RemoveJointCommand</ref> &amp;</type>
@@ -148,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="29" column="36"/>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="30" column="36"/>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1a173f7f4e6eb7eb8e15b12dca57115cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
@@ -173,12 +198,46 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
+<simplesect kind="note"><para>Call to either setter overwrites previous setter calls. When running the command, the last set joint(s) will be removed. </para>
+</simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="36" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="48" bodyend="50"/>
-        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="41">pImpl</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="38" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="59" bodyend="61"/>
+        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="50">pImpl</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1aa2f66f7aa23b4fdc2d30bcf513630a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
+        <definition>void dnac::RemoveJointCommand::setJointIndices</definition>
+        <argsstring>(ConstArrayView&lt; std::uint16_t &gt; jointIndices)</argsstring>
+        <name>setJointIndices</name>
+        <qualifiedname>dnac::RemoveJointCommand::setJointIndices</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>jointIndices</declname>
+        </param>
+        <briefdescription>
+<para>Method for setting the indices of joints to remove. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jointIndices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The joint indices. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Call to either setter overwrites previous setter calls. When running the command, the last set joint(s) will be removed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="45" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="63" bodyend="65"/>
+        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="50">pImpl</references>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="dnacalib_2Defs_8h_1a582ed0de52e12122ce3c978581df8113" kindref="member">DNACAPI</ref> void</type>
@@ -197,12 +256,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="37" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="52" bodyend="54"/>
-        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="41">pImpl</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="46" column="22" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveJointCommand.cpp" bodystart="67" bodyend="69"/>
+        <references refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" compoundref="RemoveJointCommand_8h" startline="50">pImpl</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para><ref refid="classdnac_1_1RemoveJointCommand" kindref="compound">RemoveJointCommand</ref> is used to remove a joint. </para>
+<para><ref refid="classdnac_1_1RemoveJointCommand" kindref="compound">RemoveJointCommand</ref> is used to remove joints. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -278,17 +337,19 @@
         <label>typename DefaultInstanceDestroyer&lt;dnac::RemoveJointCommand::Impl &gt;::type</label>
       </node>
     </collaborationgraph>
-    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="18" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" bodystart="18" bodyend="43"/>
+    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" line="18" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/include/dnacalib/commands/RemoveJointCommand.h" bodystart="18" bodyend="52"/>
     <listofallmembers>
       <member refid="classdnac_1_1RemoveJointCommand_1a8c2a44fe02ab0cd68ce2a00abda0b2e9" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>operator=</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1a3b625a593e76d3e66eb541d87e38b1a9" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>operator=</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" prot="private" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>pImpl</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1aafcfe032a3fc5eea9f5d444cf6d9a247" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>RemoveJointCommand</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1a9c09b3455bd03440fb5f2ea9673da59b" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>RemoveJointCommand</name></member>
+      <member refid="classdnac_1_1RemoveJointCommand_1a184eb38c7815693a76acfea9c76a246d" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>RemoveJointCommand</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1ab7ab91a3af90d995341caf7a365e8949" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>RemoveJointCommand</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1a9e1095219dadde92870a1604ebec38e4" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>RemoveJointCommand</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae" prot="public" virt="virtual"><scope>dnac::RemoveJointCommand</scope><name>run</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1a173f7f4e6eb7eb8e15b12dca57115cd0" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>setJointIndex</name></member>
+      <member refid="classdnac_1_1RemoveJointCommand_1aa2f66f7aa23b4fdc2d30bcf513630a3d" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>setJointIndices</name></member>
       <member refid="classdnac_1_1Command_1a61be18c56cbef51019c8f7b1f752518c" prot="public" virt="virtual"><scope>dnac::RemoveJointCommand</scope><name>~Command</name></member>
       <member refid="classdnac_1_1RemoveJointCommand_1a30ad4b9a2126b1bc80be69dd58de37cf" prot="public" virt="non-virtual"><scope>dnac::RemoveJointCommand</scope><name>~RemoveJointCommand</name></member>
     </listofallmembers>

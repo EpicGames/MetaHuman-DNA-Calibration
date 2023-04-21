@@ -31,9 +31,11 @@
     <member refid="classdnac_1_1AnimatedMapFilter_1a1e70a0c25f7232d670792732cef0b09a" kind="variable"><name>memRes</name></member>
     <member refid="classdnac_1_1AnimatedMapFilter_1ae6cd07ee7c2ad8ef1ff8661f48ef96e5" kind="variable"><name>passingIndices</name></member>
     <member refid="classdnac_1_1AnimatedMapFilter_1af17a60f835f3a3d081a2a6701ff85888" kind="variable"><name>remappedIndices</name></member>
+    <member refid="classdnac_1_1AnimatedMapFilter_1a7e1d7ce53f3326cad8b72330b1e48840" kind="variable"><name>animatedMapLODIndices</name></member>
     <member refid="classdnac_1_1AnimatedMapFilter_1a9913e13ddca94522b2f72b64b001e09f" kind="function"><name>AnimatedMapFilter</name></member>
-    <member refid="classdnac_1_1AnimatedMapFilter_1a2475f67ee55c60df12fa8f45194fa158" kind="function"><name>configure</name></member>
+    <member refid="classdnac_1_1AnimatedMapFilter_1a1a864737f1891ff46c168dbb3bd46bdf" kind="function"><name>configure</name></member>
     <member refid="classdnac_1_1AnimatedMapFilter_1ab839b8f2a61ad104ac8277db83822cfd" kind="function"><name>apply</name></member>
+    <member refid="classdnac_1_1AnimatedMapFilter_1a23e11325c37145f2fb8ff025a325c5df" kind="function"><name>apply</name></member>
     <member refid="classdnac_1_1AnimatedMapFilter_1a4f0e844e66f66b59a8751f27e4fc79d4" kind="function"><name>passes</name></member>
   </compound>
   <compound refid="classterse_1_1Archive" kind="class"><name>terse::Archive</name>
@@ -298,9 +300,12 @@
     <member refid="classdnac_1_1BlendShapeFilter_1a763277156656bd7baed317068002bb76" kind="variable"><name>memRes</name></member>
     <member refid="classdnac_1_1BlendShapeFilter_1ac1038db6f4415110cf608eea1ee05bf7" kind="variable"><name>passingIndices</name></member>
     <member refid="classdnac_1_1BlendShapeFilter_1a93d641876873717b97cbd4ca39db5963" kind="variable"><name>remappedIndices</name></member>
+    <member refid="classdnac_1_1BlendShapeFilter_1ae16c70d546606d2699977cb9cd5e9c52" kind="variable"><name>newBlendShapeLODs</name></member>
     <member refid="classdnac_1_1BlendShapeFilter_1a27fe9caab1967fadaa0c5049b34485e9" kind="function"><name>BlendShapeFilter</name></member>
-    <member refid="classdnac_1_1BlendShapeFilter_1a88e4b1112a1649d522be708b782744be" kind="function"><name>configure</name></member>
+    <member refid="classdnac_1_1BlendShapeFilter_1a48d27cfef5428eb34004c3d7ea715231" kind="function"><name>configure</name></member>
     <member refid="classdnac_1_1BlendShapeFilter_1a65c6692fb5526e376672756f673fd6de" kind="function"><name>apply</name></member>
+    <member refid="classdnac_1_1BlendShapeFilter_1a682151177d7ad7130103a3c39047d211" kind="function"><name>apply</name></member>
+    <member refid="classdnac_1_1BlendShapeFilter_1a0cc7491002081bc2d0c8e9c50dde3975" kind="function"><name>apply</name></member>
     <member refid="classdnac_1_1BlendShapeFilter_1a122ca7a2eb48eb9fabd69f05882765a6" kind="function"><name>passes</name></member>
   </compound>
   <compound refid="classterse_1_1Blob" kind="class"><name>terse::Blob</name>
@@ -707,10 +712,13 @@
     <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a183951b665c4774045abaed49196c93e" kind="function"><name>setVertexPositions</name></member>
     <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a393ec70bc0afd0516cc3afac007db03c" kind="function"><name>setBlendShapeTargetDeltas</name></member>
     <member refid="classdnac_1_1DNACalibDNAReaderImpl_1adf703c3df3341779e57ecd5577a67b8f" kind="function"><name>setBlendShapeTargetDeltas</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a51d5d69dd682b2dfa2ee37c61109a442" kind="function"><name>setBlendShapeTargetVertexIndices</name></member>
     <member refid="classdnac_1_1DNACalibDNAReaderImpl_1af1c66dda635b3310f5c61178a3153de1" kind="function"><name>pruneBlendShapeTargets</name></member>
-    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" kind="function"><name>removeMesh</name></member>
-    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a18f789887ae48a774e7549823920a8a5" kind="function"><name>removeJoint</name></member>
-    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a4c88caa0453a30f4a2abd8698624754b" kind="function"><name>removeJointAnimation</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e75b3ab28e83736c2332fcaf8cfdd93" kind="function"><name>removeMeshes</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a13faba4a20c3f6de5be7eefd3e61d2d6" kind="function"><name>removeJoints</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a999a34d2290f5c2040ad5ce24fde6849" kind="function"><name>removeJointAnimations</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1a26b1756a69ac5113a6d6621c9d162064" kind="function"><name>removeBlendShapes</name></member>
+    <member refid="classdnac_1_1DNACalibDNAReaderImpl_1af4496c037cc3b6f0e32585a74c81be6b" kind="function"><name>removeAnimatedMaps</name></member>
   </compound>
   <compound refid="classterse_1_1DynArray" kind="class"><name>terse::DynArray</name>
     <member refid="classterse_1_1DynArray_1ab721e585f71955867ef7b9bad660a6bd" kind="typedef"><name>value_type</name></member>
@@ -1085,25 +1093,44 @@
     <member refid="classdnac_1_1PruneBlendShapeTargetsCommand_1_1Impl_1a5f28eeea06905abf56af0bf162aac15f" kind="function"><name>setThreshold</name></member>
     <member refid="classdnac_1_1PruneBlendShapeTargetsCommand_1_1Impl_1aececbc85586a4c4b593284922a2f48af" kind="function"><name>run</name></member>
   </compound>
+  <compound refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl" kind="class"><name>dnac::RemoveAnimatedMapCommand::Impl</name>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1ae11da7b60aa70eefcbb36a0a2164bae9" kind="typedef"><name>Super</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1a14446ac720a1bf4dbb18188e5525311b" kind="variable"><name>animatedMapIndices</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1a5cb3913e11659675b0d08965878dffc6" kind="function"><name>Impl</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1aaf03f6756298beae8236b39bfe8e531d" kind="function"><name>setAnimatedMapIndex</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1a0c722b23d20433ed0578b13d3fe464ee" kind="function"><name>setAnimatedMapIndices</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1_1Impl_1a540bfb3f482b59a0db0f5a624e996393" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl" kind="class"><name>dnac::RemoveBlendShapeCommand::Impl</name>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1abb4fb5ac6918cc220d5cfa956a0ca73d" kind="typedef"><name>Super</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1a01eed4976ac83979eb86324b1da47608" kind="variable"><name>blendShapeIndices</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1aa96dcdd7b6a3d063836068c3d0dc5786" kind="function"><name>Impl</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1a5e4a2e5d61d52cd500dcdd87d591261d" kind="function"><name>setBlendShapeIndex</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1a3cfe506bc9a7173240534fe0a148ca51" kind="function"><name>setBlendShapeIndices</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1_1Impl_1aba123cc5d8356240e92c4d7d45958078" kind="function"><name>run</name></member>
+  </compound>
   <compound refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl" kind="class"><name>dnac::RemoveJointAnimationCommand::Impl</name>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a308e02b867b1e94c1bff51f84b5db017" kind="typedef"><name>Super</name></member>
-    <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ae56914a750d8e4a15ed78989e214603a" kind="variable"><name>jointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1abb6c9e5962364af6695bd74ce5dfe822" kind="variable"><name>jointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a4719c8fafb915b18c3bd4aedb427d30f" kind="function"><name>Impl</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a67b38503b44a524e9e9464c346c7a4fc" kind="function"><name>setJointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1ac4d0b0817324c66b085f499671a55107" kind="function"><name>setJointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1_1Impl_1a5e20943d1fc7f5329b5ce19e07f432b1" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RemoveJointCommand_1_1Impl" kind="class"><name>dnac::RemoveJointCommand::Impl</name>
     <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1ae0e72c2e6fc4d6e9ae5f646da854fc52" kind="typedef"><name>Super</name></member>
-    <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1ac162b3ad5d2d947a2bc0d85767612d2b" kind="variable"><name>jointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1ad716f2bb98415c12cae518cd3cfa0cfa" kind="variable"><name>jointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1acd875f9f10246f32bf3f40a78945b74c" kind="function"><name>Impl</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1ae8abf95195acee5b0c3c9d4a011d54cd" kind="function"><name>setJointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1a449c944b85c39c59566fc09c31c8f0cf" kind="function"><name>setJointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1_1Impl_1a87738737e710080f838237eecb83caa8" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RemoveMeshCommand_1_1Impl" kind="class"><name>dnac::RemoveMeshCommand::Impl</name>
     <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a45f486f2ac16e3ef7e0b4174d1069d40" kind="typedef"><name>Super</name></member>
-    <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1aa2bcd280f63fc45631e88b0e0f6bb314" kind="variable"><name>meshIndex</name></member>
+    <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" kind="variable"><name>meshIndices</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a69c679f7bd9d759c5b29082987d912eb" kind="function"><name>Impl</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a9a62c7459b564f4029c9942a18a95fe2" kind="function"><name>setMeshIndex</name></member>
+    <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1ad168f03e88fa57c5f1080669e0a2a100" kind="function"><name>setMeshIndices</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a614cf9d22dfefce07748273f245929db" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RenameAnimatedMapCommand_1_1Impl" kind="class"><name>dnac::RenameAnimatedMapCommand::Impl</name>
@@ -1145,6 +1172,7 @@
     <member refid="classdnac_1_1RotateCommand_1_1Impl_1aac499bdd104e817b693731604a70f8d9" kind="function"><name>getRotationTransformationMatrix</name></member>
     <member refid="classdnac_1_1RotateCommand_1_1Impl_1a4105b0c18c2d581429f6327246cc44fb" kind="function"><name>rotateNeutralJoints</name></member>
     <member refid="classdnac_1_1RotateCommand_1_1Impl_1a966194ee7b11f30b2fa41407d4624ea7" kind="function"><name>rotateVertexPositions</name></member>
+    <member refid="classdnac_1_1RotateCommand_1_1Impl_1aeb31c1e053dc376004709799a0a6c0c2" kind="function"><name>rotateBlendShapeTargetDeltas</name></member>
   </compound>
   <compound refid="classdnac_1_1ScaleCommand_1_1Impl" kind="class"><name>dnac::ScaleCommand::Impl</name>
     <member refid="classdnac_1_1ScaleCommand_1_1Impl_1a86e4a40d7d1fe5577a4ddaf0e342c095" kind="typedef"><name>Super</name></member>
@@ -1162,7 +1190,9 @@
   </compound>
   <compound refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl" kind="class"><name>dnac::SetBlendShapeTargetDeltasCommand::Impl</name>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a6c66c2dd9bf90118ff0220fcba5772e3" kind="typedef"><name>Super</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ab7a774bf46359986f12b28ca3cecdf89" kind="variable"><name>status</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3dbe33c4936735d38ff68c6f8a777426" kind="variable"><name>deltas</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a1d1e44597e1dc8c0429144fc7fd4517f" kind="variable"><name>vertexIndices</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a14572625b65eade9e7c547f516c511c8" kind="variable"><name>masks</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ae47cc7c082f35bc90e68aa2ed11dc25c" kind="variable"><name>operation</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aebe75617da1ad6781659afad9a1e20ed" kind="variable"><name>meshIndex</name></member>
@@ -1172,9 +1202,12 @@
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a5cccd9d38b246bab999b6990e551e359" kind="function"><name>setBlendShapeTargetIndex</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9ce596e1b1959617b5b7029f2bc99e21" kind="function"><name>setDeltas</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a6e5face5ebf34131fbeb1319a62fef0d" kind="function"><name>setDeltas</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9f04cf8034396526e1f897f17f6b32b1" kind="function"><name>setVertexIndices</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a4dfdb37edeb3bffa585633ed4eeabda2" kind="function"><name>setMasks</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1aa42f88c81da8538c67fcf00493d4b4de" kind="function"><name>setOperation</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a3a14e7b1ea95f57cd418aed7f0a64008" kind="function"><name>run</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1ace4b094ccd12412220e1407a9ce87bb4" kind="function"><name>densify</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a7aa135544c2c3cb4074f43acc7391a22" kind="function"><name>sparsify</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1_1Impl_1a9cd5c3a3a400e107a5280bed4cab5878" kind="function"><name>computeBlendShapeTargetDeltas</name></member>
   </compound>
   <compound refid="classdnac_1_1SetLODsCommand_1_1Impl" kind="class"><name>dnac::SetLODsCommand::Impl</name>
@@ -1215,6 +1248,7 @@
   </compound>
   <compound refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl" kind="class"><name>dnac::SetVertexPositionsCommand::Impl</name>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a04125b5cfce386a21a63002a32c004f0" kind="typedef"><name>Super</name></member>
+    <member refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a32cdb2776d5f917702dabe2d3244d8ff" kind="variable"><name>status</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a7df13fe7bc9af7f3f92dfc0bb9356719" kind="variable"><name>positions</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a12c82631209beb14ab81a00907189514" kind="variable"><name>masks</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1_1Impl_1a46b8bb71532d89a3cfd886d950fc31c1" kind="variable"><name>operation</name></member>
@@ -1257,12 +1291,12 @@
   </compound>
   <compound refid="structpma_1_1ScopedPtr_1_1inspect" kind="struct"><name>pma::ScopedPtr::inspect</name>
     <member refid="structpma_1_1ScopedPtr_1_1inspect_1a768cad4da332933a1f2c7858581679d7" kind="typedef"><name>element_type</name></member>
-    <member refid="structpma_1_1ScopedPtr_1_1inspect_1aa5319a705cfbf487ceb7afd337219eb4" kind="typedef"><name>pointer_type</name></member>
+    <member refid="structpma_1_1ScopedPtr_1_1inspect_1a65e0530eb035ca653cdcf06f6cca6303" kind="typedef"><name>pointer_type</name></member>
     <member refid="structpma_1_1ScopedPtr_1_1inspect_1a4b0d903c4ddd2525e232deee61b1f4e0" kind="typedef"><name>is_array</name></member>
   </compound>
   <compound refid="structpma_1_1ScopedPtr_1_1inspect_3_01U_0f_0e_4" kind="struct"><name>pma::ScopedPtr::inspect&lt; U[]&gt;</name>
     <member refid="structpma_1_1ScopedPtr_1_1inspect_3_01U_0f_0e_4_1a1fd1e03602efd1c81552b3c5878aec82" kind="typedef"><name>element_type</name></member>
-    <member refid="structpma_1_1ScopedPtr_1_1inspect_3_01U_0f_0e_4_1a8d1e76d0254fa084a10da6a0db3d1004" kind="typedef"><name>pointer_type</name></member>
+    <member refid="structpma_1_1ScopedPtr_1_1inspect_3_01U_0f_0e_4_1a112390d8b9e26ee3a1621744fce1279a" kind="typedef"><name>pointer_type</name></member>
     <member refid="structpma_1_1ScopedPtr_1_1inspect_3_01U_0f_0e_4_1addf3cf09337a87064e287733f5c03888" kind="typedef"><name>is_array</name></member>
   </compound>
   <compound refid="structterse_1_1traits_1_1is__pair" kind="struct"><name>terse::traits::is_pair</name>
@@ -2276,40 +2310,74 @@
   <compound refid="structpma_1_1PolyAllocator_1_1rebind" kind="struct"><name>pma::PolyAllocator::rebind</name>
     <member refid="structpma_1_1PolyAllocator_1_1rebind_1a3e74a3b4c2ae7168926877a25ea9df6b" kind="typedef"><name>other</name></member>
   </compound>
+  <compound refid="classdnac_1_1RemoveAnimatedMapCommand" kind="class"><name>dnac::RemoveAnimatedMapCommand</name>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a02ee88a6bb77d26834bb85b0e902e42a" kind="variable"><name>pImpl</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a64b519cda7c5605b201bc17e2087df9e" kind="function"><name>RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1afeb5e3745fbf19d0c0ed355a53626bc9" kind="function"><name>RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a21728a6d39da90fc0ec1f94f8ef9318e" kind="function"><name>RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a4b0691449eb48dec44f08255f7754ed2" kind="function"><name>~RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a2457f0526c2e7ad6bcd7e4af46e39d29" kind="function"><name>RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1ac371c0ced06bf3b6b935d0588496f3be" kind="function"><name>operator=</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a11f77125d451dd824e81413c0004528c" kind="function"><name>RemoveAnimatedMapCommand</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a7888385db222d264f5d644dd78081278" kind="function"><name>operator=</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1a21ad3c4f5c350eeaed5dc00d8a589414" kind="function"><name>setAnimatedMapIndex</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1ae1b1f7cd68f15361b41212a190c0bed5" kind="function"><name>setAnimatedMapIndices</name></member>
+    <member refid="classdnac_1_1RemoveAnimatedMapCommand_1ad70569697ad46e3404c45ebc9c6f8210" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classdnac_1_1RemoveBlendShapeCommand" kind="class"><name>dnac::RemoveBlendShapeCommand</name>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a0faca60cd4cd7731b6caf91beea4db64" kind="variable"><name>pImpl</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1af9f434b800c188fcd89376cb6e209026" kind="function"><name>RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a7af4ce8d69a52a0f1b44c05a7dbea26a" kind="function"><name>RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a9451f0056de930fe37635ee9d28f2777" kind="function"><name>RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1afd4835faedf421c2fb8f3c8a4dbba98c" kind="function"><name>~RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a4c28a803888c7a19ba3ca85e0f1005a1" kind="function"><name>RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a29412b12a5673c892241788c77a97c2a" kind="function"><name>operator=</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1abd3b98165dbe781201aedcb8bc7250c2" kind="function"><name>RemoveBlendShapeCommand</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1ad6dd0bbdbbe5ec0e8f37c92cb17ae816" kind="function"><name>operator=</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a4fd8c2f3ed07ce1af10a9e9277bf3d9d" kind="function"><name>setBlendShapeIndex</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a45ca2a080bee6630e48b89e4cdefbc19" kind="function"><name>setBlendShapeIndices</name></member>
+    <member refid="classdnac_1_1RemoveBlendShapeCommand_1a7555eb05e97f5d0adb0bfbd9906579ca" kind="function"><name>run</name></member>
+  </compound>
   <compound refid="classdnac_1_1RemoveJointAnimationCommand" kind="class"><name>dnac::RemoveJointAnimationCommand</name>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1a3ae7b088138a8840db75e9640c95a350" kind="variable"><name>pImpl</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1abefc7a5a221d08f77d71bef2fa309cbe" kind="function"><name>RemoveJointAnimationCommand</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1a1a854c30845035653f7569e4edb789bd" kind="function"><name>RemoveJointAnimationCommand</name></member>
+    <member refid="classdnac_1_1RemoveJointAnimationCommand_1a883b11c8ef53277d18ffba0a701b4b33" kind="function"><name>RemoveJointAnimationCommand</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1a0f672d2f7a92029c62410a0698dd75cc" kind="function"><name>~RemoveJointAnimationCommand</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1afbafe3ae0f523425e874a2da0b60a7dd" kind="function"><name>RemoveJointAnimationCommand</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1a6e9800687c394c985594b9670b6565b9" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1a5e0af5dc2dd73a5748950d9e0819f6ab" kind="function"><name>RemoveJointAnimationCommand</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1aa97fddd052f981b82c6d484bb2cedb30" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1abf014f439c121dfc08927d699b75ffaf" kind="function"><name>setJointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointAnimationCommand_1a98e532b4c151b145bea954b4208d3e6d" kind="function"><name>setJointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointAnimationCommand_1af97c76535800a9636174cf7bfe08cb13" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RemoveJointCommand" kind="class"><name>dnac::RemoveJointCommand</name>
     <member refid="classdnac_1_1RemoveJointCommand_1ac214810ee65523bf323f84e99d3ff600" kind="variable"><name>pImpl</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1aafcfe032a3fc5eea9f5d444cf6d9a247" kind="function"><name>RemoveJointCommand</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a9c09b3455bd03440fb5f2ea9673da59b" kind="function"><name>RemoveJointCommand</name></member>
+    <member refid="classdnac_1_1RemoveJointCommand_1a184eb38c7815693a76acfea9c76a246d" kind="function"><name>RemoveJointCommand</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a30ad4b9a2126b1bc80be69dd58de37cf" kind="function"><name>~RemoveJointCommand</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1ab7ab91a3af90d995341caf7a365e8949" kind="function"><name>RemoveJointCommand</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a8c2a44fe02ab0cd68ce2a00abda0b2e9" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a9e1095219dadde92870a1604ebec38e4" kind="function"><name>RemoveJointCommand</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a3b625a593e76d3e66eb541d87e38b1a9" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1a173f7f4e6eb7eb8e15b12dca57115cd0" kind="function"><name>setJointIndex</name></member>
+    <member refid="classdnac_1_1RemoveJointCommand_1aa2f66f7aa23b4fdc2d30bcf513630a3d" kind="function"><name>setJointIndices</name></member>
     <member refid="classdnac_1_1RemoveJointCommand_1ad6739f4b570e0703123de4cc25ef23ae" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RemoveMeshCommand" kind="class"><name>dnac::RemoveMeshCommand</name>
     <member refid="classdnac_1_1RemoveMeshCommand_1a88340b6ac7fb9cb93d5eae5532cde378" kind="variable"><name>pImpl</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a53dd444d8c6bc073bbc8671febec3103" kind="function"><name>RemoveMeshCommand</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a50ed08045e6a68245df88977e765692e" kind="function"><name>RemoveMeshCommand</name></member>
+    <member refid="classdnac_1_1RemoveMeshCommand_1adfb9837bd733edccb158a9818d33577b" kind="function"><name>RemoveMeshCommand</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1aad7a29ccb4862a718d8a96da879adc30" kind="function"><name>~RemoveMeshCommand</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a6fe71d7b9a0ecd38ec8611a8568b30a2" kind="function"><name>RemoveMeshCommand</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a35ec5a0c19e44830b9f6be95e1d6e945" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a29db5f7bff23fa4de66be3341ac7fa76" kind="function"><name>RemoveMeshCommand</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a80fcf07e97f2ee42c25b158a385efe3c" kind="function"><name>operator=</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1a3c4a53b4abb1fcb887c65469358fb062" kind="function"><name>setMeshIndex</name></member>
+    <member refid="classdnac_1_1RemoveMeshCommand_1aab95ab5114bd9333efbf4ea552511102" kind="function"><name>setMeshIndices</name></member>
     <member refid="classdnac_1_1RemoveMeshCommand_1ab8feb2fdf9499e52255bf759223e3dd8" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1RenameAnimatedMapCommand" kind="class"><name>dnac::RenameAnimatedMapCommand</name>
@@ -2489,12 +2557,16 @@
     <member refid="structterse_1_1ExtendableJSONOutputArchive_1_1SerializationState_1afd920476db287575dc8cf66abc3f5a0c" kind="variable"><name>transparent</name></member>
   </compound>
   <compound refid="classdnac_1_1SetBlendShapeTargetDeltasCommand" kind="class"><name>dnac::SetBlendShapeTargetDeltasCommand</name>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ade70eac725a671345e3f644dcaab3e53" kind="variable"><name>VertexIndicesOutOfBoundsError</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1abefd0bf1139f63d79574bb16002ec6f2" kind="variable"><name>NoVertexIndicesSetError</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1af624d916c3898b1a88260d23987f8d23" kind="variable"><name>DeltasVertexIndicesCountMismatch</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a017af9a3b90a9b0c6f0ad6ce39e948af" kind="variable"><name>DeltasMasksCountMismatch</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a8c0e4b27cfe8bc7a1ffafb819a422417" kind="variable"><name>pImpl</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a5b9fe6f3fabfb7d93e447c188c764fd8" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
-    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a90a706a493f9b2370cc71559bf8ca6b4" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
-    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a03a1db43bef81dc8b76a8d1d33e22657" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
-    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1abd630b5ab1b0668358961291028aa7be" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
-    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aab18ede21b193892ded674172feb8a98" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a9d6132f7ec1b4829754a004b60793a0f" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a634a9607b9da5022c2b7cb76385fa590" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a1d8a3f941e2851f1bb1c1cd10afe4b35" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aec198b71cf0eaeb7a944f18100259732" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a46ac5bc9a3c6bad238ac8b0a91865b85" kind="function"><name>~SetBlendShapeTargetDeltasCommand</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1acc536b1bcc8fe344c286e4e00fae0ef3" kind="function"><name>SetBlendShapeTargetDeltasCommand</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ab0997fadc1bebb62fcbb895777b38e67" kind="function"><name>operator=</name></member>
@@ -2504,6 +2576,7 @@
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ad181ea9f433b0f3fa99dbdfca29518eb" kind="function"><name>setBlendShapeTargetIndex</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa97592ce94a15b07231f1c750ad8fd4e" kind="function"><name>setDeltas</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1ae882276c09d955bc230baaf5f508111d" kind="function"><name>setDeltas</name></member>
+    <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a99779cd3c1129675927dce99b2004cce" kind="function"><name>setVertexIndices</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a276fe679159a33258d9d6d8fd497fe5e" kind="function"><name>setMasks</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1a48418ac293efdb7458ecc53e9c0c8963" kind="function"><name>setOperation</name></member>
     <member refid="classdnac_1_1SetBlendShapeTargetDeltasCommand_1aa929c4b449ec5d0e7fc42cfb7b8569fa" kind="function"><name>run</name></member>
@@ -2564,6 +2637,7 @@
     <member refid="classdnac_1_1SetSkinWeightsCommand_1a2a83baba612bc8df9676b9a938affffc" kind="function"><name>run</name></member>
   </compound>
   <compound refid="classdnac_1_1SetVertexPositionsCommand" kind="class"><name>dnac::SetVertexPositionsCommand</name>
+    <member refid="classdnac_1_1SetVertexPositionsCommand_1a575897d0c3baf439afbf20d01ad1c849" kind="variable"><name>PositionsMasksCountMismatch</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1aa6cb95d1c7ec5becd90af219e3029f61" kind="variable"><name>pImpl</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1a913e95a43c33c04097e5739759a7cab0" kind="function"><name>SetVertexPositionsCommand</name></member>
     <member refid="classdnac_1_1SetVertexPositionsCommand_1a9516f6e82fb0743f02d353bcfc99020f" kind="function"><name>SetVertexPositionsCommand</name></member>
@@ -3063,6 +3137,8 @@
   <compound refid="namespaceclear__blend__shapes" kind="namespace"><name>clear_blend_shapes</name>
     <member refid="namespaceclear__blend__shapes_1a9b3412680c62fffead7660aa5022a8b9" kind="function"><name>loadDNA</name></member>
     <member refid="namespaceclear__blend__shapes_1a3bdc1ceb8a109e88276f91c038c9909a" kind="function"><name>saveDNA</name></member>
+    <member refid="namespaceclear__blend__shapes_1a71051e30f69491e6f9d02cffd43c934c" kind="function"><name>validate_geometry</name></member>
+    <member refid="namespaceclear__blend__shapes_1af6923c99b98f0383dfba2fb501759919" kind="function"><name>validate_animation_data</name></member>
     <member refid="namespaceclear__blend__shapes_1abad99f1c4cfaa771bacda380a7abfb50" kind="function"><name>calibrateDNA</name></member>
     <member refid="namespaceclear__blend__shapes_1a0d3f4eaa4cffc4f1c598d720cb601804" kind="function"><name>main</name></member>
   </compound>
@@ -3177,8 +3253,6 @@
     <member refid="namespacednac_1a92531852da1cc0df2814156018d4d616" kind="typedef"><name>AlignedAllocator</name></member>
     <member refid="namespacednac_1ab7887c11e5cb2fe15854f4c432134342" kind="typedef"><name>DynArray</name></member>
     <member refid="namespacednac_1a5200fdf050bbe081932239f805cb2369" kind="typedef"><name>AlignedDynArray</name></member>
-    <member refid="namespacednac_1a402958209f5216b9b08a3c2b08d0d73c" kind="variable"><name>jointAttributeCount</name></member>
-    <member refid="namespacednac_1a7804d6177609c47b41b07722b0264719" kind="variable"><name>rotationOffset</name></member>
     <member refid="namespacednac_1aa44501c4141be5abbb3ef7633abc06e6" kind="function"><name>makeConditional</name></member>
     <member refid="namespacednac_1a00e9116a5d1ebd6f8353079449f53960" kind="function"><name>remap</name></member>
     <member refid="namespacednac_1a44837c77320a781ff936ae064a5f9d59" kind="function"><name>ensureHasSize</name></member>
@@ -3188,6 +3262,7 @@
     <member refid="namespacednac_1a30f0682d879e5cbc632ab6663cdde53e" kind="function"><name>extractRotationMatrix</name></member>
     <member refid="namespacednac_1a886581767877508fd8845b042fffaf5f" kind="function"><name>extractTranslationVector</name></member>
     <member refid="namespacednac_1aab3c105f2454303b836c591d0e676051" kind="function"><name>extractRotationVector</name></member>
+    <member refid="namespacednac_1a28b74df1b84e529ca37742636b66cd8b" kind="function"><name>formatString</name></member>
     <member refid="namespacednac_1a0e46c4d3be1bf2a3d2a364e07175d321" kind="function"><name>operator&amp;</name></member>
     <member refid="namespacednac_1a3e2a14f36ad814c1071fe983950688a3" kind="function"><name>operator|</name></member>
     <member refid="namespacednac_1a94452cfca710e121b2bbc1918c61b88e" kind="function"><name>operator^</name></member>
@@ -3475,7 +3550,7 @@
     <member refid="CMakeLists_8txt_1a1f219ff97402610682fde9fe14370acd" kind="function"><name>cmake_minimum_required</name></member>
   </compound>
   <compound refid="DNACalib_2CMakeLists_8txt" kind="file"><name>DNACalib/CMakeLists.txt</name>
-    <member refid="DNACalib_2CMakeLists_8txt_1a26b19e25a7c8e6176b6f8ae6f24a0203" kind="function"><name>cmake_minimum_required</name></member>
+    <member refid="DNACalib_2CMakeLists_8txt_1ae33c9b2f8509fd11c5be7163cf242895" kind="function"><name>cmake_minimum_required</name></member>
     <member refid="DNACalib_2CMakeLists_8txt_1a4e84c3f7a5b11f557db906b6c55601ed" kind="function"><name>set_property</name></member>
     <member refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kind="function"><name>list</name></member>
     <member refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kind="function"><name>set</name></member>
@@ -3501,7 +3576,7 @@
     <member refid="PyDNACalib_2python3_2CMakeLists_8txt_1ae643dd5a962efe08b50d1f35155831be" kind="function"><name>set_property</name></member>
   </compound>
   <compound refid="SPyUS_2CMakeLists_8txt" kind="file"><name>SPyUS/CMakeLists.txt</name>
-    <member refid="SPyUS_2CMakeLists_8txt_1af1643795dc5d0d7225540f800abff136" kind="function"><name>cmake_minimum_required</name></member>
+    <member refid="SPyUS_2CMakeLists_8txt_1a97fb33eb1f1c3c901a7f267d4a5f283f" kind="function"><name>cmake_minimum_required</name></member>
     <member refid="SPyUS_2CMakeLists_8txt_1a4e84c3f7a5b11f557db906b6c55601ed" kind="function"><name>set_property</name></member>
     <member refid="SPyUS_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kind="function"><name>list</name></member>
     <member refid="SPyUS_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kind="function"><name>set</name></member>
@@ -3636,6 +3711,10 @@
   <compound refid="ConditionalCommand_8h" kind="file"><name>ConditionalCommand.h</name>
   </compound>
   <compound refid="PruneBlendShapeTargetsCommand_8h" kind="file"><name>PruneBlendShapeTargetsCommand.h</name>
+  </compound>
+  <compound refid="RemoveAnimatedMapCommand_8h" kind="file"><name>RemoveAnimatedMapCommand.h</name>
+  </compound>
+  <compound refid="RemoveBlendShapeCommand_8h" kind="file"><name>RemoveBlendShapeCommand.h</name>
   </compound>
   <compound refid="RemoveJointAnimationCommand_8h" kind="file"><name>RemoveJointAnimationCommand.h</name>
   </compound>
@@ -3855,6 +3934,10 @@
   </compound>
   <compound refid="PruneBlendShapeTargetsCommand_8cpp" kind="file"><name>PruneBlendShapeTargetsCommand.cpp</name>
   </compound>
+  <compound refid="RemoveAnimatedMapCommand_8cpp" kind="file"><name>RemoveAnimatedMapCommand.cpp</name>
+  </compound>
+  <compound refid="RemoveBlendShapeCommand_8cpp" kind="file"><name>RemoveBlendShapeCommand.cpp</name>
+  </compound>
   <compound refid="RemoveJointAnimationCommand_8cpp" kind="file"><name>RemoveJointAnimationCommand.cpp</name>
   </compound>
   <compound refid="RemoveJointCommand_8cpp" kind="file"><name>RemoveJointCommand.cpp</name>
@@ -3906,6 +3989,8 @@
   <compound refid="UVBarycentricMapping_8h" kind="file"><name>UVBarycentricMapping.h</name>
   </compound>
   <compound refid="Algorithm_8h" kind="file"><name>Algorithm.h</name>
+  </compound>
+  <compound refid="FormatString_8h" kind="file"><name>FormatString.h</name>
   </compound>
   <compound refid="VersionInfo_8cpp" kind="file"><name>VersionInfo.cpp</name>
   </compound>

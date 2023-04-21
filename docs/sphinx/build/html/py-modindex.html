@@ -55,6 +55,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -65,11 +66,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -114,27 +118,17 @@
        <td><img src="_static/minus.png" class="toggler"
               id="toggle-1" style="display: none" alt="-" /></td>
        <td>
-       <a href="dna_viewer.html#module-dna_viewer"><code class="xref">dna_viewer</code></a></td><td>
+       <code class="xref">dna_viewer</code></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder"><code class="xref">dna_viewer.builder</code></a></td><td>
+       <a href="dna_viewer.builder.html#module-dna_viewer.builder.builder"><code class="xref">dna_viewer.builder.builder</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.analog_gui"><code class="xref">dna_viewer.builder.analog_gui</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.character"><code class="xref">dna_viewer.builder.character</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.gui"><code class="xref">dna_viewer.builder.gui</code></a></td><td>
+       <a href="dna_viewer.builder.html#module-dna_viewer.builder.config"><code class="xref">dna_viewer.builder.config</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
@@ -144,7 +138,17 @@
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.maya_mesh"><code class="xref">dna_viewer.builder.maya_mesh</code></a></td><td>
+       <a href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.mesh"><code class="xref">dna_viewer.builder.maya.mesh</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-1">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.skin_weights"><code class="xref">dna_viewer.builder.maya.skin_weights</code></a></td><td>
+       <em></em></td></tr>
+     <tr class="cg-1">
+       <td></td>
+       <td>&#160;&#160;&#160;
+       <a href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.util"><code class="xref">dna_viewer.builder.maya.util</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
@@ -154,302 +158,47 @@
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.rig_logic"><code class="xref">dna_viewer.builder.rig_logic</code></a></td><td>
+       <a href="dna_viewer.builder.html#module-dna_viewer.builder.rig_builder"><code class="xref">dna_viewer.builder.rig_builder</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.builder.html#module-dna_viewer.builder.scene"><code class="xref">dna_viewer.builder.scene</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.behavior"><code class="xref">dna_viewer.dnalib.behavior</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config"><code class="xref">dna_viewer.config</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.definition"><code class="xref">dna_viewer.dnalib.definition</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.aas"><code class="xref">dna_viewer.config.aas</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.descriptor"><code class="xref">dna_viewer.dnalib.descriptor</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.analog_gui"><code class="xref">dna_viewer.config.analog_gui</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.dnalib"><code class="xref">dna_viewer.dnalib.dnalib</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.character"><code class="xref">dna_viewer.config.character</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.geometry"><code class="xref">dna_viewer.dnalib.geometry</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.gui"><code class="xref">dna_viewer.config.gui</code></a></td><td>
+       <a href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.layer"><code class="xref">dna_viewer.dnalib.layer</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.mesh"><code class="xref">dna_viewer.config.mesh</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.rig_logic"><code class="xref">dna_viewer.config.rig_logic</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.config.html#module-dna_viewer.config.scene"><code class="xref">dna_viewer.config.scene</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const"><code class="xref">dna_viewer.const</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const.gui"><code class="xref">dna_viewer.const.gui</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const.naming"><code class="xref">dna_viewer.const.naming</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const.printing"><code class="xref">dna_viewer.const.printing</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const.space"><code class="xref">dna_viewer.const.space</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.const.html#module-dna_viewer.const.ui"><code class="xref">dna_viewer.const.ui</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model"><code class="xref">dna_viewer.model</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.behavior"><code class="xref">dna_viewer.model.behavior</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.definition"><code class="xref">dna_viewer.model.definition</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.descriptor"><code class="xref">dna_viewer.model.descriptor</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.dna"><code class="xref">dna_viewer.model.dna</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.face_vertex"><code class="xref">dna_viewer.model.face_vertex</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.geometry"><code class="xref">dna_viewer.model.geometry</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.joint"><code class="xref">dna_viewer.model.joint</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.model.html#module-dna_viewer.model.mesh"><code class="xref">dna_viewer.model.mesh</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader"><code class="xref">dna_viewer.reader</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader.behavior"><code class="xref">dna_viewer.reader.behavior</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader.definition"><code class="xref">dna_viewer.reader.definition</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader.descriptor"><code class="xref">dna_viewer.reader.descriptor</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader.dna"><code class="xref">dna_viewer.reader.dna</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.reader.html#module-dna_viewer.reader.geometry"><code class="xref">dna_viewer.reader.geometry</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui"><code class="xref">dna_viewer.ui</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.build_options_widget"><code class="xref">dna_viewer.ui.build_options_widget</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.dna_viewer_window"><code class="xref">dna_viewer.ui.dna_viewer_window</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.elements"><code class="xref">dna_viewer.ui.elements</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.elements_creator"><code class="xref">dna_viewer.ui.elements_creator</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.file_chooser"><code class="xref">dna_viewer.ui.file_chooser</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.ui.html#module-dna_viewer.ui.mesh_tree_list"><code class="xref">dna_viewer.ui.mesh_tree_list</code></a></td><td>
+       <a href="dna_viewer.ui.html#module-dna_viewer.ui.app"><code class="xref">dna_viewer.ui.app</code></a></td><td>
        <em></em></td></tr>
      <tr class="cg-1">
        <td></td>
        <td>&#160;&#160;&#160;
        <a href="dna_viewer.ui.html#module-dna_viewer.ui.widgets"><code class="xref">dna_viewer.ui.widgets</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util"><code class="xref">dna_viewer.util</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.additional_assembly_script"><code class="xref">dna_viewer.util.additional_assembly_script</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.assemble"><code class="xref">dna_viewer.util.assemble</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.character_creator"><code class="xref">dna_viewer.util.character_creator</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.conversion"><code class="xref">dna_viewer.util.conversion</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.error"><code class="xref">dna_viewer.util.error</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.import_util"><code class="xref">dna_viewer.util.import_util</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.maya_util"><code class="xref">dna_viewer.util.maya_util</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh"><code class="xref">dna_viewer.util.mesh</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh_blend_shape"><code class="xref">dna_viewer.util.mesh_blend_shape</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh_helper"><code class="xref">dna_viewer.util.mesh_helper</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh_neutral"><code class="xref">dna_viewer.util.mesh_neutral</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh_normals"><code class="xref">dna_viewer.util.mesh_normals</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.mesh_skin"><code class="xref">dna_viewer.util.mesh_skin</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.reader"><code class="xref">dna_viewer.util.reader</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.reference"><code class="xref">dna_viewer.util.reference</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.rig_logic"><code class="xref">dna_viewer.util.rig_logic</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.scene_builder"><code class="xref">dna_viewer.util.scene_builder</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.shader"><code class="xref">dna_viewer.util.shader</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.util.html#module-dna_viewer.util.skin_weights_maya"><code class="xref">dna_viewer.util.skin_weights_maya</code></a></td><td>
-       <em></em></td></tr>
-     <tr class="cg-1">
-       <td></td>
-       <td>&#160;&#160;&#160;
-       <a href="dna_viewer.html#module-dna_viewer.version"><code class="xref">dna_viewer.version</code></a></td><td>
        <em></em></td></tr>
    </table>
 
@@ -461,7 +210,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

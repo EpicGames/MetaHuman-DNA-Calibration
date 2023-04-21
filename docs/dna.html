@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dna &mdash; DNA Calibration  documentation</title>
+  <title>DNA &mdash; DNA Calibration  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -19,8 +19,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="dna_viewer" href="modules.html" />
-    <link rel="prev" title="dnac" href="dnac.html" /> 
+    <link rel="next" title="DNACalib" href="dnacalib.html" />
+    <link rel="prev" title="Build rig (build_rig)" href="dna_viewer_api_build_rig_md.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,6 +55,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -65,18 +66,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="dnacalib.html">dnacalib</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="dnacalib.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="dnac.html">dnac</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">dna</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">dna_viewer</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -97,8 +94,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="dnacalib.html">dnacalib</a> &raquo;</li>
-      <li>dna</li>
+      <li>DNA</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/dna.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -109,7 +105,7 @@
            <div itemprop="articleBody">
              
   <section id="dna">
-<h1>dna<a class="headerlink" href="#dna" title="Permalink to this headline"></a></h1>
+<h1>DNA<a class="headerlink" href="#dna" title="Permalink to this headline"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N3dna12StreamReaderE">
 <span id="_CPPv3N3dna12StreamReaderE"></span><span id="_CPPv2N3dna12StreamReaderE"></span><span id="dna::StreamReader"></span><span class="target" id="classdna_1_1StreamReader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">dna</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">StreamReader</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">dna</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N3dna6ReaderE" title="dna::Reader"><span class="n"><span class="pre">Reader</span></span></a><a class="headerlink" href="#_CPPv4N3dna12StreamReaderE" title="Permalink to this definition"></a><br /></dt>
@@ -270,7 +266,7 @@
 <p class="admonition-title">Note</p>
 <p>This class combines the various different reader interfaces into a single interface. The artificial separation into multiple interfaces mirrors the DNA file structure that is separated into matching layers under the same names. As these layers can be selectively loaded, it might be convenient to slice-off interfaces which layers were not loaded. </p>
 </div>
-<p>Subclassed by <a class="reference internal" href="#classdna_1_1StreamReader"><span class="std std-ref">dna::StreamReader</span></a>, <a class="reference internal" href="dnac.html#classdnac_1_1DNACalibDNAReader"><span class="std std-ref">dnac::DNACalibDNAReader</span></a></p>
+<p>Subclassed by <a class="reference internal" href="#classdna_1_1StreamReader"><span class="std std-ref">dna::StreamReader</span></a>, <a class="reference internal" href="dnacalib.html#classdnac_1_1DNACalibDNAReader"><span class="std std-ref">dnac::DNACalibDNAReader</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -362,11 +358,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader23getGUIToRawInputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader23getGUIToRawInputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader23getGUIToRawInputIndicesEv"></span><span id="dna::BehaviorReader::getGUIToRawInputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a6cf853f5d537e6b8e2634ebf3388b529"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawInputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader23getGUIToRawInputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used for mapping gui to raw controls. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of input indices. </p>
@@ -378,11 +369,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader24getGUIToRawOutputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader24getGUIToRawOutputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader24getGUIToRawOutputIndicesEv"></span><span id="dna::BehaviorReader::getGUIToRawOutputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a8e6d36a27afd3a08e565fb0fe55f22b4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawOutputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader24getGUIToRawOutputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices used for mapping gui to raw controls. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of output indices. </p>
@@ -394,11 +380,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader21getGUIToRawFromValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader21getGUIToRawFromValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader21getGUIToRawFromValuesEv"></span><span id="dna::BehaviorReader::getGUIToRawFromValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a4fd0213dcb2856b64280454228729855"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawFromValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader21getGUIToRawFromValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of filter values. </p>
@@ -410,11 +391,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader19getGUIToRawToValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader19getGUIToRawToValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader19getGUIToRawToValuesEv"></span><span id="dna::BehaviorReader::getGUIToRawToValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1abe4d1ce29676b07d805e685199a1ef0c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawToValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader19getGUIToRawToValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of filter values. </p>
@@ -426,11 +402,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader22getGUIToRawSlopeValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader22getGUIToRawSlopeValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader22getGUIToRawSlopeValuesEv"></span><span id="dna::BehaviorReader::getGUIToRawSlopeValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a05f06e0f08a8f2676f0286300d880d12"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawSlopeValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader22getGUIToRawSlopeValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(slope/gradient) used for calculating the output value during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of computational values. </p>
@@ -442,11 +413,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader20getGUIToRawCutValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader20getGUIToRawCutValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader20getGUIToRawCutValuesEv"></span><span id="dna::BehaviorReader::getGUIToRawCutValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a68f381f520ebfd68f02020ce8f5b0a69"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIToRawCutValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader20getGUIToRawCutValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(vertical intercept) used for calculating the output value during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of computational values. </p>
@@ -464,11 +430,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader16getPSDRowIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader16getPSDRowIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader16getPSDRowIndicesEv"></span><span id="dna::BehaviorReader::getPSDRowIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a09f89a0f76798571d7f619f19d19787e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPSDRowIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader16getPSDRowIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PSD(input) indices. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of PSD indices. </p>
@@ -480,11 +441,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader19getPSDColumnIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader19getPSDColumnIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader19getPSDColumnIndicesEv"></span><span id="dna::BehaviorReader::getPSDColumnIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a35f70e12a860c73d452e27fed9b75f42"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPSDColumnIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader19getPSDColumnIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Control(input) indices. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of control indices. </p>
@@ -496,11 +452,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader12getPSDValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader12getPSDValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader12getPSDValuesEv"></span><span id="dna::BehaviorReader::getPSDValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1ab177725a27c3664055a86aa8e9eaae3d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPSDValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader12getPSDValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Weights associated with each PSD row and column pair. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of weights. </p>
@@ -512,22 +463,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader16getJointRowCountEv">
 <span id="_CPPv3NK3dna14BehaviorReader16getJointRowCountEv"></span><span id="_CPPv2NK3dna14BehaviorReader16getJointRowCountEv"></span><span id="dna::BehaviorReader::getJointRowCountC"></span><span class="target" id="classdna_1_1BehaviorReader_1a6121d56124f208317bd3a719a5885da7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointRowCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader16getJointRowCountEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of rows in the entire, uncompressed joint matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader19getJointColumnCountEv">
 <span id="_CPPv3NK3dna14BehaviorReader19getJointColumnCountEv"></span><span id="_CPPv2NK3dna14BehaviorReader19getJointColumnCountEv"></span><span id="dna::BehaviorReader::getJointColumnCountC"></span><span class="target" id="classdna_1_1BehaviorReader_1ad8f0c4104ae71e2cae20de68ca7dac7e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointColumnCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader19getJointColumnCountEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of columns in the entire, uncompressed joint matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -545,22 +486,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader18getJointGroupCountEv">
 <span id="_CPPv3NK3dna14BehaviorReader18getJointGroupCountEv"></span><span id="_CPPv2NK3dna14BehaviorReader18getJointGroupCountEv"></span><span id="dna::BehaviorReader::getJointGroupCountC"></span><span class="target" id="classdna_1_1BehaviorReader_1ac543cf35eccf547b45d37c4c7abd0dc2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader18getJointGroupCountEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of joint groups present in the entire joint matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader17getJointGroupLODsENSt8uint16_tE">
 <span id="_CPPv3NK3dna14BehaviorReader17getJointGroupLODsENSt8uint16_tE"></span><span id="_CPPv2NK3dna14BehaviorReader17getJointGroupLODsENSt8uint16_tE"></span><span id="dna::BehaviorReader::getJointGroupLODs__std::uint16_tC"></span><span class="target" id="classdna_1_1BehaviorReader_1afe6a30955afbef5d10bb84b1f643bf43"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupLODs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader17getJointGroupLODsENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of rows per each level of detail for the requested joint group. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself, while the value denotes the number of rows within the joint group belonging to that level. e.g.: [12, 9, 3] | | + LOD-2 contains first 3 rows | + LOD-1 contains first 9 rows<ul class="simple">
@@ -586,11 +517,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader25getJointGroupInputIndicesENSt8uint16_tE">
 <span id="_CPPv3NK3dna14BehaviorReader25getJointGroupInputIndicesENSt8uint16_tE"></span><span id="_CPPv2NK3dna14BehaviorReader25getJointGroupInputIndicesENSt8uint16_tE"></span><span id="dna::BehaviorReader::getJointGroupInputIndices__std::uint16_tC"></span><span class="target" id="classdna_1_1BehaviorReader_1a028bfd1ba3ccbf52ef3cd1aedacaabfb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupInputIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader25getJointGroupInputIndicesENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Column indices that the requested joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The column indices point into the entire, uncompressed joint matrix. </p>
@@ -613,11 +539,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader26getJointGroupOutputIndicesENSt8uint16_tE">
 <span id="_CPPv3NK3dna14BehaviorReader26getJointGroupOutputIndicesENSt8uint16_tE"></span><span id="_CPPv2NK3dna14BehaviorReader26getJointGroupOutputIndicesENSt8uint16_tE"></span><span id="dna::BehaviorReader::getJointGroupOutputIndices__std::uint16_tC"></span><span class="target" id="classdna_1_1BehaviorReader_1a81721b4cb25b90c76458f7b42e93db2c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupOutputIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader26getJointGroupOutputIndicesENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Row indices that the requested joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The row indices point into the entire, uncompressed joint matrix. </p>
@@ -640,11 +561,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader19getJointGroupValuesENSt8uint16_tE">
 <span id="_CPPv3NK3dna14BehaviorReader19getJointGroupValuesENSt8uint16_tE"></span><span id="_CPPv2NK3dna14BehaviorReader19getJointGroupValuesENSt8uint16_tE"></span><span id="dna::BehaviorReader::getJointGroupValues__std::uint16_tC"></span><span class="target" id="classdna_1_1BehaviorReader_1add58838dd0bffad6ac9d66887e969e5e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupValues</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader19getJointGroupValuesENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Values that the requested joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>jointGroupIndex must be less than the value returned by getJointGroupCount. </p>
@@ -664,10 +580,6 @@
 <span id="_CPPv3NK3dna14BehaviorReader25getJointGroupJointIndicesENSt8uint16_tE"></span><span id="_CPPv2NK3dna14BehaviorReader25getJointGroupJointIndicesENSt8uint16_tE"></span><span id="dna::BehaviorReader::getJointGroupJointIndices__std::uint16_tC"></span><span class="target" id="classdna_1_1BehaviorReader_1af2c5860e22023c82b41ad7a36caae3c1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointGroupJointIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader25getJointGroupJointIndicesENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Joint indices that the requested joint group contains. </p>
 <p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-<div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#classdna_1_1DefinitionReader"><span class="std std-ref">DefinitionReader</span></a> </p>
 </div>
@@ -694,11 +606,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader24getBlendShapeChannelLODsEv">
 <span id="_CPPv3NK3dna14BehaviorReader24getBlendShapeChannelLODsEv"></span><span id="_CPPv2NK3dna14BehaviorReader24getBlendShapeChannelLODsEv"></span><span id="dna::BehaviorReader::getBlendShapeChannelLODsC"></span><span class="target" id="classdna_1_1BehaviorReader_1ad585141fe808b93db5479c8cb21b7e82"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBlendShapeChannelLODs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader24getBlendShapeChannelLODsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input index count per each level of detail for blend shape channels. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of input indices belonging to that level. </p>
@@ -718,11 +625,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader32getBlendShapeChannelInputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader32getBlendShapeChannelInputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader32getBlendShapeChannelInputIndicesEv"></span><span id="dna::BehaviorReader::getBlendShapeChannelInputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1ae34d90ae469e1080ff1cc93d5e1b6cad"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBlendShapeChannelInputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader32getBlendShapeChannelInputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used to index into the input vector. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of input indices. </p>
@@ -734,11 +636,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader33getBlendShapeChannelOutputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader33getBlendShapeChannelOutputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader33getBlendShapeChannelOutputIndicesEv"></span><span id="dna::BehaviorReader::getBlendShapeChannelOutputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a2cf4f15450f8589b29e240208748eb3b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBlendShapeChannelOutputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader33getBlendShapeChannelOutputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices specify the positions of blend shape channel output values. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of output indices. </p>
@@ -750,11 +647,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader18getAnimatedMapLODsEv">
 <span id="_CPPv3NK3dna14BehaviorReader18getAnimatedMapLODsEv"></span><span id="_CPPv2NK3dna14BehaviorReader18getAnimatedMapLODsEv"></span><span id="dna::BehaviorReader::getAnimatedMapLODsC"></span><span class="target" id="classdna_1_1BehaviorReader_1a50c651d7e7400e17ff7da31036b5c352"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapLODs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader18getAnimatedMapLODsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Row count per each level of detail for animated maps. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of rows (within the conditional table), belonging to that level. </p>
@@ -770,11 +662,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader26getAnimatedMapInputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader26getAnimatedMapInputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader26getAnimatedMapInputIndicesEv"></span><span id="dna::BehaviorReader::getAnimatedMapInputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a504220b3ead3f11ea5888d208f8055bc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapInputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader26getAnimatedMapInputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used to index into the array of input values. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of input indices. </p>
@@ -786,11 +673,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader27getAnimatedMapOutputIndicesEv">
 <span id="_CPPv3NK3dna14BehaviorReader27getAnimatedMapOutputIndicesEv"></span><span id="_CPPv2NK3dna14BehaviorReader27getAnimatedMapOutputIndicesEv"></span><span id="dna::BehaviorReader::getAnimatedMapOutputIndicesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a5ca7158ed4146d09935548ece05b7f94"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapOutputIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader27getAnimatedMapOutputIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices that specify the computed output value’s position. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of output indices. </p>
@@ -802,11 +684,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader24getAnimatedMapFromValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader24getAnimatedMapFromValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader24getAnimatedMapFromValuesEv"></span><span id="dna::BehaviorReader::getAnimatedMapFromValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1af7eb657428d974ccc5c1ae9c2516a772"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapFromValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader24getAnimatedMapFromValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of filter values. </p>
@@ -818,11 +695,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader22getAnimatedMapToValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader22getAnimatedMapToValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader22getAnimatedMapToValuesEv"></span><span id="dna::BehaviorReader::getAnimatedMapToValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a21057f6c94895629229021b20133c007"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapToValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader22getAnimatedMapToValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of filter values. </p>
@@ -834,11 +706,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader25getAnimatedMapSlopeValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader25getAnimatedMapSlopeValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader25getAnimatedMapSlopeValuesEv"></span><span id="dna::BehaviorReader::getAnimatedMapSlopeValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a59ef8f6885a33b102fb938b7a12da16b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapSlopeValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader25getAnimatedMapSlopeValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(slope/gradient) used for calculating the output value. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of computational values. </p>
@@ -850,11 +717,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna14BehaviorReader23getAnimatedMapCutValuesEv">
 <span id="_CPPv3NK3dna14BehaviorReader23getAnimatedMapCutValuesEv"></span><span id="_CPPv2NK3dna14BehaviorReader23getAnimatedMapCutValuesEv"></span><span id="dna::BehaviorReader::getAnimatedMapCutValuesC"></span><span class="target" id="classdna_1_1BehaviorReader_1a7ab5ba50c829ea9b5ef63495608fbffe"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">ConstArrayView</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">float</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapCutValues</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna14BehaviorReader23getAnimatedMapCutValuesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(vertical intercept) used for calculating the output value. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>View over the array of computational values. </p>
@@ -1560,7 +1422,7 @@
 <dd><p>The matching blend shape channel index of the requested blend shape target. </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>DefinitionReader::getBlendShapeName </p>
+<p><a class="reference internal" href="#classdna_1_1DefinitionReader_1a9162ea692bf3c45f65b7a569d5061623"><span class="std std-ref">DefinitionReader::getBlendShapeChannelName</span></a> </p>
 </div>
 </p>
 <div class="admonition warning">
@@ -1853,11 +1715,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DefinitionReader17getGUIControlNameENSt8uint16_tE">
 <span id="_CPPv3NK3dna16DefinitionReader17getGUIControlNameENSt8uint16_tE"></span><span id="_CPPv2NK3dna16DefinitionReader17getGUIControlNameENSt8uint16_tE"></span><span id="dna::DefinitionReader::getGUIControlName__std::uint16_tC"></span><span class="target" id="classdna_1_1DefinitionReader_1acc5b028b9f5d8d936b6d99682906c8b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getGUIControlName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DefinitionReader17getGUIControlNameENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the requested GUI control. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by getGUIControlCount. </p>
@@ -1881,11 +1738,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DefinitionReader17getRawControlNameENSt8uint16_tE">
 <span id="_CPPv3NK3dna16DefinitionReader17getRawControlNameENSt8uint16_tE"></span><span id="_CPPv2NK3dna16DefinitionReader17getRawControlNameENSt8uint16_tE"></span><span id="dna::DefinitionReader::getRawControlName__std::uint16_tC"></span><span class="target" id="classdna_1_1DefinitionReader_1a4c39e828758f6249408fca4fbc4b89c0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRawControlName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DefinitionReader17getRawControlNameENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the requested raw control. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by getRawControlCount. </p>
@@ -1909,11 +1761,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DefinitionReader12getJointNameENSt8uint16_tE">
 <span id="_CPPv3NK3dna16DefinitionReader12getJointNameENSt8uint16_tE"></span><span id="_CPPv2NK3dna16DefinitionReader12getJointNameENSt8uint16_tE"></span><span id="dna::DefinitionReader::getJointName__std::uint16_tC"></span><span class="target" id="classdna_1_1DefinitionReader_1aed66db160f6517e3ec4fda3f3e124c45"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJointName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DefinitionReader12getJointNameENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the requested joint. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by getJointCount. </p>
@@ -1999,11 +1846,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DefinitionReader24getBlendShapeChannelNameENSt8uint16_tE">
 <span id="_CPPv3NK3dna16DefinitionReader24getBlendShapeChannelNameENSt8uint16_tE"></span><span id="_CPPv2NK3dna16DefinitionReader24getBlendShapeChannelNameENSt8uint16_tE"></span><span id="dna::DefinitionReader::getBlendShapeChannelName__std::uint16_tC"></span><span class="target" id="classdna_1_1DefinitionReader_1a9162ea692bf3c45f65b7a569d5061623"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBlendShapeChannelName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DefinitionReader24getBlendShapeChannelNameENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the requested blend shape channel. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by BlendShapeChannelExtentReader::getBlendShapeChannelCount. </p>
@@ -2034,7 +1876,7 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dd><p>List of blend shape channel indices for the specified LOD. </p>
 <p><div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p>LODExtentReader::getLODCount </p>
+<p><a class="reference internal" href="#classdna_1_1DescriptorReader_1a5049f3e40b919fd15476ff24ea46ec32"><span class="std std-ref">getLODCount</span></a> </p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -2043,7 +1885,7 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>The lod index must be less than the value returned by LODExtentReader::getLODCount. </p>
+<p>The lod index must be less than the value returned by getLODCount. </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2068,11 +1910,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DefinitionReader18getAnimatedMapNameENSt8uint16_tE">
 <span id="_CPPv3NK3dna16DefinitionReader18getAnimatedMapNameENSt8uint16_tE"></span><span id="_CPPv2NK3dna16DefinitionReader18getAnimatedMapNameENSt8uint16_tE"></span><span id="dna::DefinitionReader::getAnimatedMapName__std::uint16_tC"></span><span class="target" id="classdna_1_1DefinitionReader_1a057aa04a10d076a1569995339d95533d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnimatedMapName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DefinitionReader18getAnimatedMapNameENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the requested animated map. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by getAnimatedMapCount. </p>
@@ -2461,10 +2298,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <p><a class="reference internal" href="#classdna_1_1Reader"><span class="std std-ref">Reader</span></a> </p>
 </div>
 </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The inherited LODExtentReader provides the interface to access the LOD count. </p>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Implementors should inherit from <a class="reference internal" href="#classdna_1_1Reader"><span class="std std-ref">Reader</span></a> itself and not this class. </p>
@@ -2500,12 +2333,7 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK3dna16DescriptorReader14getMetaDataKeyENSt8uint32_tE">
 <span id="_CPPv3NK3dna16DescriptorReader14getMetaDataKeyENSt8uint32_tE"></span><span id="_CPPv2NK3dna16DescriptorReader14getMetaDataKeyENSt8uint32_tE"></span><span id="dna::DescriptorReader::getMetaDataKey__std::uint32_tC"></span><span class="target" id="classdna_1_1DescriptorReader_1ac0a59511e545c660a9e5d1336ae6fc3c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N3dna10StringViewE" title="dna::StringView"><span class="n"><span class="pre">StringView</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMetaDataKey</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4NK3dna16DescriptorReader14getMetaDataKeyENSt8uint32_tE" title="Permalink to this definition"></a><br /></dt>
-<dd><p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>getMedaData </p>
-</div>
-</p>
-<div class="admonition warning">
+<dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The index must be less than the value returned by getMetaDataCount. </p>
 </div>
@@ -3442,7 +3270,7 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <p class="admonition-title">Note</p>
 <p>This class combines the various different writer interfaces into a single interface. The artificial separation into multiple interfaces in this case just mirrors the structure of the <a class="reference internal" href="#classdna_1_1Reader"><span class="std std-ref">Reader</span></a> hierarchy, as it’s not possible to selectively write only specific layers. </p>
 </div>
-<p>Subclassed by <a class="reference internal" href="dnac.html#classdnac_1_1WriterImpl"><span class="std std-ref">dnac::WriterImpl&lt; dna::Writer &gt;</span></a>, <a class="reference internal" href="#classdna_1_1StreamWriter"><span class="std std-ref">dna::StreamWriter</span></a></p>
+<p>Subclassed by <a class="reference internal" href="dnacalib.html#classdnac_1_1WriterImpl"><span class="std std-ref">dnac::WriterImpl&lt; dna::Writer &gt;</span></a>, <a class="reference internal" href="#classdna_1_1StreamWriter"><span class="std std-ref">dna::StreamWriter</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -3540,11 +3368,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter23setGUIToRawInputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter23setGUIToRawInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter23setGUIToRawInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawInputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a220225a3400609ea6ad701d82231fcd2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawInputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter23setGUIToRawInputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used for mapping gui to raw controls. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3559,11 +3382,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter24setGUIToRawOutputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter24setGUIToRawOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter24setGUIToRawOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawOutputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a8ff614803260b787dedf6c24f13d5d30"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawOutputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter24setGUIToRawOutputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices used for mapping gui to raw controls. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3578,11 +3396,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter21setGUIToRawFromValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter21setGUIToRawFromValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter21setGUIToRawFromValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawFromValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ac2c53991d953244d8d8d9cfef3814537"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawFromValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fromValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter21setGUIToRawFromValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3597,11 +3410,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter19setGUIToRawToValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter19setGUIToRawToValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter19setGUIToRawToValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawToValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a834af50cb5c8f1567ab474bb4dce9131"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawToValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">toValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter19setGUIToRawToValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3616,11 +3424,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter22setGUIToRawSlopeValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter22setGUIToRawSlopeValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter22setGUIToRawSlopeValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawSlopeValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a5b6f8d09f7e14f2d4aca12b03247fa55"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawSlopeValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">slopeValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter22setGUIToRawSlopeValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(slope/gradient) used for calculating the output value during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3635,11 +3438,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter20setGUIToRawCutValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter20setGUIToRawCutValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter20setGUIToRawCutValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setGUIToRawCutValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1adba15d24dd5998ea0bb9e16c8043f078"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIToRawCutValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cutValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter20setGUIToRawCutValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(vertical intercept) used for calculating the output value during gui to raw control mapping. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3660,11 +3458,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter16setPSDRowIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter16setPSDRowIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter16setPSDRowIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setPSDRowIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a8b9013b6c4f7fddc63bc3d540024366a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPSDRowIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">rowIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter16setPSDRowIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>PSD(input) indices which will become the rows of the PSD matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3679,11 +3472,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter19setPSDColumnIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter19setPSDColumnIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter19setPSDColumnIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setPSDColumnIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ae9c842c529475cd612097967b76bbbdc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPSDColumnIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">columnIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter19setPSDColumnIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Control(input) indices which will become the columns of the PSD matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3698,11 +3486,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter12setPSDValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter12setPSDValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter12setPSDValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setPSDValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ab0914f0c6d936da871ca3c494f78ae18"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPSDValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">weights</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter12setPSDValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Weights associated with each PSD row and column pair. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3717,22 +3500,12 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter16setJointRowCountENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter16setJointRowCountENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter16setJointRowCountENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointRowCount__std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a28cb22e4690d1921c71775c939652c80"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointRowCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rowCount</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter16setJointRowCountENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of rows in the entire, uncompressed joint matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter19setJointColumnCountENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter19setJointColumnCountENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter19setJointColumnCountENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointColumnCount__std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ae20b30d9f64ce34affae4c8bb8efa445"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointColumnCount</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">columnCount</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter19setJointColumnCountENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of columns in the entire, uncompressed joint matrix. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -3760,11 +3533,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter17setJointGroupLODsENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter17setJointGroupLODsENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter17setJointGroupLODsENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointGroupLODs__std::uint16_t.std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a0574869602e12d5d02c1140b51d8e96e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGroupLODs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">lods</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter17setJointGroupLODsENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of rows per each level of detail for the specified joint group. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself, while the value denotes the number of rows within the joint group belonging to that level. e.g.: [12, 9, 3] | | + LOD-2 contains first 3 rows | + LOD-1 contains first 9 rows<ul class="simple">
@@ -3791,11 +3559,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter25setJointGroupInputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter25setJointGroupInputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter25setJointGroupInputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointGroupInputIndices__std::uint16_t.std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1aa8d6031abc7c0b7a262054c7589719e8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGroupInputIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter25setJointGroupInputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Column indices that the specified joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The column indices point into the entire, uncompressed joint matrix. </p>
@@ -3819,11 +3582,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter26setJointGroupOutputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter26setJointGroupOutputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter26setJointGroupOutputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointGroupOutputIndices__std::uint16_t.std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a1587c7656d8010eae73723f5ebcc8df2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGroupOutputIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter26setJointGroupOutputIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Row indices that the specified joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The row indices point into the entire, uncompressed joint matrix. </p>
@@ -3847,11 +3605,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter19setJointGroupValuesENSt8uint16_tEPKfNSt8uint32_tE">
 <span id="_CPPv3N3dna14BehaviorWriter19setJointGroupValuesENSt8uint16_tEPKfNSt8uint32_tE"></span><span id="_CPPv2N3dna14BehaviorWriter19setJointGroupValuesENSt8uint16_tEPKfNSt8uint32_tE"></span><span id="dna::BehaviorWriter::setJointGroupValues__std::uint16_t.floatCP.std::uint32_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a9cd33855b41cf50fa38b40dd871f7b9f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGroupValues</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">values</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter19setJointGroupValuesENSt8uint16_tEPKfNSt8uint32_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Values that the specified joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </p>
@@ -3871,11 +3624,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter25setJointGroupJointIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter25setJointGroupJointIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter25setJointGroupJointIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setJointGroupJointIndices__std::uint16_t.std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1abc4bde60580a3f969b2c31694c5db4a2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointGroupJointIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jointGroupIndex</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">jointIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter25setJointGroupJointIndicesENSt8uint16_tEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Joint indices that the specified joint group contains. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The joint group storage will be implicitly resized (if needed) to provide storage for the number of joint groups that is inferred from the specified index. </p>
@@ -3895,11 +3643,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter24setBlendShapeChannelLODsEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter24setBlendShapeChannelLODsEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter24setBlendShapeChannelLODsEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setBlendShapeChannelLODs__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a9eac4730bc5b2d683f81be7d7abf942a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlendShapeChannelLODs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">lods</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter24setBlendShapeChannelLODsEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input index count per each level of detail for blend shapes. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of input indices belonging to that level. </p>
@@ -3922,11 +3665,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter32setBlendShapeChannelInputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter32setBlendShapeChannelInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter32setBlendShapeChannelInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setBlendShapeChannelInputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a1298ec717057270d5e29a4ce27352345"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlendShapeChannelInputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter32setBlendShapeChannelInputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used to index into the input vector. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3941,11 +3679,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter33setBlendShapeChannelOutputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter33setBlendShapeChannelOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter33setBlendShapeChannelOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setBlendShapeChannelOutputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ac10d5d4766d112140ba61be45bae15c7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlendShapeChannelOutputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter33setBlendShapeChannelOutputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices specify the positions of blend shape output values. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3960,11 +3693,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter18setAnimatedMapLODsEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter18setAnimatedMapLODsEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter18setAnimatedMapLODsEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapLODs__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a8794fb60023c7135a8e64df33f760ff8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapLODs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">lods</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter18setAnimatedMapLODsEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Row count per each level of detail for animated maps. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each element’s position represents the level itself (e.g. [0,1,2,3,4,5] Value 0 is LOD with highest of details, value 5 is LOD with lowest details), while the value denotes the number of rows (within the conditional table), belonging to that level. </p>
@@ -3983,11 +3711,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter26setAnimatedMapInputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter26setAnimatedMapInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter26setAnimatedMapInputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapInputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a76a88fe1ca13c58e88729846c68668c5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapInputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter26setAnimatedMapInputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Input indices used to index into the array of input values. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4002,11 +3725,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter27setAnimatedMapOutputIndicesEPKNSt8uint16_tENSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter27setAnimatedMapOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter27setAnimatedMapOutputIndicesEPKNSt8uint16_tENSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapOutputIndices__std::uint16_tCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1ac1300d462f548d4f1711b2d6c4553b99"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapOutputIndices</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputIndices</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter27setAnimatedMapOutputIndicesEPKNSt8uint16_tENSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Output indices that specify the computed output value’s position. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4021,11 +3739,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter24setAnimatedMapFromValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter24setAnimatedMapFromValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter24setAnimatedMapFromValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapFromValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1adcc2982bd1e9a7b014904f55382ea7f7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapFromValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">fromValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter24setAnimatedMapFromValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(lower-bounds) used to decide whether a particular entry should be evaluated or not. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4040,11 +3753,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter22setAnimatedMapToValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter22setAnimatedMapToValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter22setAnimatedMapToValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapToValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a4e360d3d0c2a1fe5f5fa500b879e8b27"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapToValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">toValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter22setAnimatedMapToValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Filter values(upper-bounds) used to decide whether a particular entry should be evaluated or not. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4059,11 +3767,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter25setAnimatedMapSlopeValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter25setAnimatedMapSlopeValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter25setAnimatedMapSlopeValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapSlopeValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a85b0b644ee45dbc4ef4ccc3299c4d43b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapSlopeValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">slopeValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter25setAnimatedMapSlopeValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(slope/gradient) used for calculating the output value. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4078,11 +3781,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna14BehaviorWriter23setAnimatedMapCutValuesEPKfNSt8uint16_tE">
 <span id="_CPPv3N3dna14BehaviorWriter23setAnimatedMapCutValuesEPKfNSt8uint16_tE"></span><span id="_CPPv2N3dna14BehaviorWriter23setAnimatedMapCutValuesEPKfNSt8uint16_tE"></span><span id="dna::BehaviorWriter::setAnimatedMapCutValues__floatCP.std::uint16_t"></span><span class="target" id="classdna_1_1BehaviorWriter_1a1b66c9c33eddeb21eae0ad734cecc343"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapCutValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cutValues</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">count</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna14BehaviorWriter23setAnimatedMapCutValuesEPKfNSt8uint16_tE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Computational values(vertical intercept) used for calculating the output value. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4548,11 +4246,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna16DefinitionWriter17setGUIControlNameENSt8uint16_tEPKc">
 <span id="_CPPv3N3dna16DefinitionWriter17setGUIControlNameENSt8uint16_tEPKc"></span><span id="_CPPv2N3dna16DefinitionWriter17setGUIControlNameENSt8uint16_tEPKc"></span><span id="dna::DefinitionWriter::setGUIControlName__std::uint16_t.cCP"></span><span class="target" id="classdna_1_1DefinitionWriter_1acbe167777c421076e740f9e775f1ca52"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGUIControlName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna16DefinitionWriter17setGUIControlNameENSt8uint16_tEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the specified GUI control. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The control name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </p>
@@ -4581,11 +4274,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna16DefinitionWriter17setRawControlNameENSt8uint16_tEPKc">
 <span id="_CPPv3N3dna16DefinitionWriter17setRawControlNameENSt8uint16_tEPKc"></span><span id="_CPPv2N3dna16DefinitionWriter17setRawControlNameENSt8uint16_tEPKc"></span><span id="dna::DefinitionWriter::setRawControlName__std::uint16_t.cCP"></span><span class="target" id="classdna_1_1DefinitionWriter_1a603d4b1155e298fc240c991c51a35057"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRawControlName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna16DefinitionWriter17setRawControlNameENSt8uint16_tEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the specified raw control. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Controls </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The control name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </p>
@@ -4614,11 +4302,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna16DefinitionWriter12setJointNameENSt8uint16_tEPKc">
 <span id="_CPPv3N3dna16DefinitionWriter12setJointNameENSt8uint16_tEPKc"></span><span id="_CPPv2N3dna16DefinitionWriter12setJointNameENSt8uint16_tEPKc"></span><span id="dna::DefinitionWriter::setJointName__std::uint16_t.cCP"></span><span class="target" id="classdna_1_1DefinitionWriter_1aaece7b99c2c0a9a91667920dc7ee489b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJointName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna16DefinitionWriter12setJointNameENSt8uint16_tEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the specified joint. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Joints </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The joint name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </p>
@@ -4705,11 +4388,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna16DefinitionWriter24setBlendShapeChannelNameENSt8uint16_tEPKc">
 <span id="_CPPv3N3dna16DefinitionWriter24setBlendShapeChannelNameENSt8uint16_tEPKc"></span><span id="_CPPv2N3dna16DefinitionWriter24setBlendShapeChannelNameENSt8uint16_tEPKc"></span><span id="dna::DefinitionWriter::setBlendShapeChannelName__std::uint16_t.cCP"></span><span class="target" id="classdna_1_1DefinitionWriter_1a16e68f1b1ec7a84ca03764c16a114b89"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBlendShapeChannelName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna16DefinitionWriter24setBlendShapeChannelNameENSt8uint16_tEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the specified blend shape channel. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>BlendShapes </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The blend shape channel name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </p>
@@ -4800,11 +4478,6 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
 <dt class="sig sig-object cpp" id="_CPPv4N3dna16DefinitionWriter18setAnimatedMapNameENSt8uint16_tEPKc">
 <span id="_CPPv3N3dna16DefinitionWriter18setAnimatedMapNameENSt8uint16_tEPKc"></span><span id="_CPPv2N3dna16DefinitionWriter18setAnimatedMapNameENSt8uint16_tEPKc"></span><span id="dna::DefinitionWriter::setAnimatedMapName__std::uint16_t.cCP"></span><span class="target" id="classdna_1_1DefinitionWriter_1a952b9e26982e07b7cff4118cb7e4b3d9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAnimatedMapName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N3dna16DefinitionWriter18setAnimatedMapNameENSt8uint16_tEPKc" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Name of the specified animated map. </p>
-<p><div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>AnimatedMaps </p>
-</div>
-</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The animated map name storage will be implicitly resized (if needed) to provide storage for the number of names that is inferred from the specified index. </p>
@@ -6896,14 +6569,14 @@ Requesting the parent index of joint 5 (joint name: F) would return 4 (joint nam
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dnac.html" class="btn btn-neutral float-left" title="dnac" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="modules.html" class="btn btn-neutral float-right" title="dna_viewer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dna_viewer_api_build_rig_md.html" class="btn btn-neutral float-left" title="Build rig (build_rig)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dnacalib.html" class="btn btn-neutral float-right" title="DNACalib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

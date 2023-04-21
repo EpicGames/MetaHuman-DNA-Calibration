@@ -3,10 +3,10 @@
   <compounddef id="DNACalib_2CMakeLists_8txt" kind="file" language="C++">
     <compoundname>DNACalib/CMakeLists.txt</compoundname>
       <sectiondef kind="func">
-      <memberdef kind="function" id="DNACalib_2CMakeLists_8txt_1a26b19e25a7c8e6176b6f8ae6f24a0203" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="DNACalib_2CMakeLists_8txt_1ae33c9b2f8509fd11c5be7163cf242895" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>cmake_minimum_required</definition>
-        <argsstring>(VERSION 3.13) set(DNAC dnacalib) set(DNAC_VERSION 6.6.0) set(CMAKE_DISABLE_IN_SOURCE_BUILD ON) set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL &quot;&quot; FORCE) project(DNACalib VERSION $</argsstring>
+        <argsstring>(VERSION 3.13) set(DNAC dnacalib) set(DNAC_VERSION 6.8.0) set(CMAKE_DISABLE_IN_SOURCE_BUILD ON) set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL &quot;&quot; FORCE) project(DNACalib VERSION $</argsstring>
         <name>cmake_minimum_required</name>
         <param>
           <type>VERSION 3.</type>
@@ -96,12 +96,12 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="DNACalib_2CMakeLists_8txt_1a26b19e25a7c8e6176b6f8ae6f24a0203" refkind="member"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a26b19e25a7c8e6176b6f8ae6f24a0203" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.13)</highlight></codeline>
+<codeline lineno="1" refid="DNACalib_2CMakeLists_8txt_1ae33c9b2f8509fd11c5be7163cf242895" refkind="member"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1ae33c9b2f8509fd11c5be7163cf242895" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.13)</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Project<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC<sp/>dnacalib)</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_VERSION<sp/>6.6.0)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_VERSION<sp/>6.8.0)</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Prevent<sp/>in-source-tree<sp/>builds</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CMAKE_DISABLE_IN_SOURCE_BUILD<sp/>ON)</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Create<sp/>compilation<sp/>database</highlight><highlight class="normal"></highlight></codeline>
@@ -166,208 +166,212 @@
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/CommandSequence.h</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/ConditionalCommand.h</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/PruneBlendShapeTargetsCommand.h</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveJointAnimationCommand.h</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveJointCommand.h</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveMeshCommand.h</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameAnimatedMapCommand.h</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameBlendShapeCommand.h</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameJointCommand.h</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameMeshCommand.h</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RotateCommand.h</highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/ScaleCommand.h</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetLODsCommand.h</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetNeutralJointRotationsCommand.h</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetNeutralJointTranslationsCommand.h</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetSkinWeightsCommand.h</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetVertexPositionsCommand.h</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/TranslateCommand.h</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/VectorOperations.h</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReader.h</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveAnimatedMapCommand.h</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveBlendShapeCommand.h</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveJointAnimationCommand.h</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveJointCommand.h</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RemoveMeshCommand.h</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameAnimatedMapCommand.h</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameBlendShapeCommand.h</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameJointCommand.h</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RenameMeshCommand.h</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/RotateCommand.h</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/ScaleCommand.h</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetBlendShapeTargetDeltasCommand.h</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetLODsCommand.h</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetNeutralJointRotationsCommand.h</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetNeutralJointTranslationsCommand.h</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetSkinWeightsCommand.h</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/SetVertexPositionsCommand.h</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/TranslateCommand.h</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/commands/VectorOperations.h</highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/types/Aliases.h</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReader.h</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/version/Version.h</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/version/VersionInfo.h)</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(SOURCES</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/Command.cpp</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/CommandImplBase.h</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/TypeDefs.h</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/CalculateMeshLowerLODsCommand.cpp</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/ClearBlendShapesCommand.cpp</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/CommandSequence.cpp</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/PruneBlendShapeTargetsCommand.cpp</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveJointAnimationCommand.cpp</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveJointCommand.cpp</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveMeshCommand.cpp</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameAnimatedMapCommand.cpp</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameBlendShapeCommand.cpp</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameJointCommand.cpp</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameMeshCommand.cpp</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameResourceCommand.h</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RotateCommand.cpp</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/ScaleCommand.cpp</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetBlendShapeTargetDeltasCommand.cpp</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetLODsCommand.cpp</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetNeutralJointRotationsCommand.cpp</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetNeutralJointTranslationsCommand.cpp</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetSkinWeightsCommand.cpp</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetVertexPositionsCommand.cpp</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/TranslateCommand.cpp</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SupportFactories.h</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReaderImpl.cpp</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReaderImpl.h</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/BaseImpl.h</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DenormalizedData.h</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNA.h</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODConstraint.cpp</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODConstraint.h</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODMapping.cpp</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODMapping.h</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/ReaderImpl.h</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/SurjectiveMapping.h</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/WriterImpl.h</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/AnimatedMapFilter.cpp</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/AnimatedMapFilter.h</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/BlendShapeFilter.cpp</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/BlendShapeFilter.h</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/JointFilter.cpp</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/JointFilter.h</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/MeshFilter.cpp</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/MeshFilter.h</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/Remap.h</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/BoundingBox.h</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/Triangle.cpp</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/Triangle.h</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/UVBarycentricMapping.cpp</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/UVBarycentricMapping.h</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/Algorithm.h</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/Extd.h</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/ScopedEnumEx.h</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/types/Aliases.h</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/version/Version.h</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>include/dnacalib/version/VersionInfo.h)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(SOURCES</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/Command.cpp</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/CommandImplBase.h</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/TypeDefs.h</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/CalculateMeshLowerLODsCommand.cpp</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/ClearBlendShapesCommand.cpp</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/CommandSequence.cpp</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/PruneBlendShapeTargetsCommand.cpp</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveAnimatedMapCommand.cpp</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveBlendShapeCommand.cpp</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveJointAnimationCommand.cpp</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveJointCommand.cpp</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RemoveMeshCommand.cpp</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameAnimatedMapCommand.cpp</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameBlendShapeCommand.cpp</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameJointCommand.cpp</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameMeshCommand.cpp</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RenameResourceCommand.h</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/RotateCommand.cpp</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/ScaleCommand.cpp</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetBlendShapeTargetDeltasCommand.cpp</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetLODsCommand.cpp</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetNeutralJointRotationsCommand.cpp</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetNeutralJointTranslationsCommand.cpp</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetSkinWeightsCommand.cpp</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SetVertexPositionsCommand.cpp</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/TranslateCommand.cpp</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/commands/SupportFactories.h</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReaderImpl.cpp</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNACalibDNAReaderImpl.h</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/BaseImpl.h</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DenormalizedData.h</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/DNA.h</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODConstraint.cpp</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODConstraint.h</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODMapping.cpp</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/LODMapping.h</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/ReaderImpl.h</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/SurjectiveMapping.h</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/WriterImpl.h</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/AnimatedMapFilter.cpp</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/AnimatedMapFilter.h</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/BlendShapeFilter.cpp</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/BlendShapeFilter.h</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/JointFilter.cpp</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/JointFilter.h</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/MeshFilter.cpp</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/MeshFilter.h</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/<ref refid="namespacedna" kindref="compound">dna</ref>/filters/Remap.h</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/BoundingBox.h</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/Triangle.cpp</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/Triangle.h</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/UVBarycentricMapping.cpp</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/types/UVBarycentricMapping.h</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/version/VersionInfo.cpp)</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Add<sp/>target<sp/>and<sp/>build<sp/>options</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(BUILD_SHARED_LIBS<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>shared<sp/>libraries&quot;</highlight><highlight class="normal"><sp/>OFF)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/Algorithm.h</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/Extd.h</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/utils/ScopedEnumEx.h</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>src/dnacalib/version/VersionInfo.cpp)</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_DEFAULT_LIBRARY_TYPE<sp/>STATIC)</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BUILD_SHARED_LIBS)</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_DEFAULT_LIBRARY_TYPE<sp/>SHARED)</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Add<sp/>target<sp/>and<sp/>build<sp/>options</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(BUILD_SHARED_LIBS<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>shared<sp/>libraries&quot;</highlight><highlight class="normal"><sp/>OFF)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_DEFAULT_LIBRARY_TYPE<sp/>STATIC)</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_LIBRARY_TYPE<sp/>${DNAC_DEFAULT_LIBRARY_TYPE}<sp/>CACHE<sp/>STRING<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>DNACalib<sp/>as<sp/>a<sp/>library<sp/>of<sp/>type&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a4e84c3f7a5b11f557db906b6c55601ed" kindref="member">set_property</ref>(CACHE<sp/>DNAC_LIBRARY_TYPE<sp/>PROPERTY<sp/>STRINGS<sp/>STATIC<sp/>SHARED<sp/>MODULE)</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Python<sp/>wrapper<sp/>builds<sp/>a<sp/>shared<sp/>object<sp/>(e.g.<sp/>.pyd,<sp/>.so),<sp/>so<sp/>DNACalib<sp/>library<sp/>has<sp/>to<sp/>be<sp/>built<sp/>with<sp/>-fPIC<sp/>flag.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(DNAC_BUILD_PIC<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>with<sp/>position<sp/>independent<sp/>code&quot;</highlight><highlight class="normal"><sp/>ON)</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight></codeline>
-<codeline lineno="173"><highlight class="normal">add_library(${DNAC}<sp/>${DNAC_LIBRARY_TYPE})</highlight></codeline>
-<codeline lineno="174"><highlight class="normal">add_library(DNACalib::dnacalib<sp/>ALIAS<sp/>${DNAC})</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal">set_target_properties(${DNAC}<sp/>PROPERTIES</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_STANDARD<sp/>11</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_STANDARD_REQUIRED<sp/>NO</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_EXTENSIONS<sp/>NO</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_VISIBILITY_PRESET<sp/>hidden</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>POSITION_INDEPENDENT_CODE<sp/>${DNAC_BUILD_PIC}</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>SOURCE_ROOT<sp/></highlight><highlight class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>SOVERSION<sp/>${PROJECT_VERSION_MAJOR}</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>VERSION<sp/>${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})</highlight></codeline>
-<codeline lineno="185"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>SHARED)</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_definitions(${DNAC}<sp/>PUBLIC<sp/>DNAC_SHARED<sp/>PRIVATE<sp/>DNAC_BUILD_SHARED)</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BUILD_SHARED_LIBS)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_DEFAULT_LIBRARY_TYPE<sp/>SHARED)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_LIBRARY_TYPE<sp/>${DNAC_DEFAULT_LIBRARY_TYPE}<sp/>CACHE<sp/>STRING<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>DNACalib<sp/>as<sp/>a<sp/>library<sp/>of<sp/>type&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a4e84c3f7a5b11f557db906b6c55601ed" kindref="member">set_property</ref>(CACHE<sp/>DNAC_LIBRARY_TYPE<sp/>PROPERTY<sp/>STRINGS<sp/>STATIC<sp/>SHARED<sp/>MODULE)</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Python<sp/>wrapper<sp/>builds<sp/>a<sp/>shared<sp/>object<sp/>(e.g.<sp/>.pyd,<sp/>.so),<sp/>so<sp/>DNACalib<sp/>library<sp/>has<sp/>to<sp/>be<sp/>built<sp/>with<sp/>-fPIC<sp/>flag.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(DNAC_BUILD_PIC<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>with<sp/>position<sp/>independent<sp/>code&quot;</highlight><highlight class="normal"><sp/>ON)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">add_library(${DNAC}<sp/>${DNAC_LIBRARY_TYPE})</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">add_library(DNACalib::dnacalib<sp/>ALIAS<sp/>${DNAC})</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">set_target_properties(${DNAC}<sp/>PROPERTIES</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_STANDARD<sp/>11</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_STANDARD_REQUIRED<sp/>NO</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_EXTENSIONS<sp/>NO</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>CXX_VISIBILITY_PRESET<sp/>hidden</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>POSITION_INDEPENDENT_CODE<sp/>${DNAC_BUILD_PIC}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>SOURCE_ROOT<sp/></highlight><highlight class="stringliteral">&quot;${CMAKE_CURRENT_SOURCE_DIR}/src&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>SOVERSION<sp/>${PROJECT_VERSION_MAJOR}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>VERSION<sp/>${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="190"><highlight class="normal">include(GNUInstallDirs)</highlight></codeline>
-<codeline lineno="191"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_PUBLIC_INCLUDE_DIRS</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>$&lt;BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include&gt;</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>$&lt;INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>SHARED)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>target_compile_definitions(${DNAC}<sp/>PUBLIC<sp/>DNAC_SHARED<sp/>PRIVATE<sp/>DNAC_BUILD_SHARED)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal">include(GNUInstallDirs)</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"></highlight></codeline>
-<codeline lineno="196"><highlight class="normal">target_include_directories(${DNAC}</highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>PUBLIC</highlight></codeline>
-<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${DNAC_PUBLIC_INCLUDE_DIRS}</highlight></codeline>
-<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>PRIVATE</highlight></codeline>
-<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_SOURCE_DIR}/src)</highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(TREAT_WARNINGS_AS_ERRORS<sp/></highlight><highlight class="stringliteral">&quot;Treat<sp/>warnings<sp/>as<sp/>errors&quot;</highlight><highlight class="normal"><sp/>OFF)</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(MSVC)</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_FLAGS<sp/>/W4<sp/>/w14061<sp/>/w14062<sp/>/w14121<sp/>/w14242<sp/>/w14245</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14254<sp/>/w14263<sp/>/w14265<sp/>/w14266<sp/>/w14287<sp/>/w14289<sp/>/w14296</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14302<sp/>/w14311<sp/>/w14365<sp/>/w14388<sp/>/w14545<sp/>/w14546<sp/>/w14547</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14549<sp/>/w14555<sp/>/w14619<sp/>/w14640<sp/>/w14826<sp/>/w14905<sp/>/w14906</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14928<sp/>/w14987<sp/>/w14946)</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(TREAT_WARNINGS_AS_ERRORS)</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>CXX_FLAGS<sp/>/WX)</highlight></codeline>
-<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_EXTRA_FLAGS<sp/>/permissive-)</highlight></codeline>
-<codeline lineno="213"><highlight class="normal">else()</highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_FLAGS<sp/>-Wall<sp/>-Wextra<sp/>-Wpedantic)</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>if(TREAT_WARNINGS_AS_ERRORS)</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>CXX_FLAGS<sp/>-Werror)</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_EXTRA_FLAGS<sp/>-Wcast-align<sp/>-Wconversion<sp/>-Wduplicated-branches</highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wduplicated-cond<sp/>-Wexit-time-destructors</highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wglobal-constructors<sp/>-Wlogical-op<sp/>-Wmissing-noreturn</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wnon-virtual-dtor<sp/>-Wnull-dereference<sp/>-Wold-style-cast</highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Woverloaded-virtual<sp/>-Wshadow<sp/>-Wsign-conversion<sp/>-Wunreachable-code</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wunused<sp/>-Wuseless-cast<sp/>-Wweak-vtables<sp/>-Wno-unknown-pragmas)</highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"></highlight></codeline>
-<codeline lineno="226"><highlight class="normal">target_compile_options(${DNAC}<sp/>PRIVATE<sp/></highlight><highlight class="stringliteral">&quot;${CXX_FLAGS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="227"><highlight class="normal">include(SupportedCompileOptions)</highlight></codeline>
-<codeline lineno="228"><highlight class="normal">target_supported_compile_options(${DNAC}<sp/>PRIVATE<sp/></highlight><highlight class="stringliteral">&quot;${CXX_EXTRA_FLAGS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(DNAC_PUBLIC_INCLUDE_DIRS</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>$&lt;BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include&gt;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>$&lt;INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}&gt;)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">target_include_directories(${DNAC}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>PUBLIC</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${DNAC_PUBLIC_INCLUDE_DIRS}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>PRIVATE</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>${CMAKE_CURRENT_SOURCE_DIR}/src)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(TREAT_WARNINGS_AS_ERRORS<sp/></highlight><highlight class="stringliteral">&quot;Treat<sp/>warnings<sp/>as<sp/>errors&quot;</highlight><highlight class="normal"><sp/>OFF)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(MSVC)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_FLAGS<sp/>/W4<sp/>/w14061<sp/>/w14062<sp/>/w14121<sp/>/w14242<sp/>/w14245</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14254<sp/>/w14263<sp/>/w14265<sp/>/w14266<sp/>/w14287<sp/>/w14289<sp/>/w14296</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14302<sp/>/w14311<sp/>/w14365<sp/>/w14388<sp/>/w14545<sp/>/w14546<sp/>/w14547</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14549<sp/>/w14555<sp/>/w14619<sp/>/w14640<sp/>/w14826<sp/>/w14905<sp/>/w14906</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/w14928<sp/>/w14987<sp/>/w14946)</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(TREAT_WARNINGS_AS_ERRORS)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>CXX_FLAGS<sp/>/WX)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_EXTRA_FLAGS<sp/>/permissive-)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">else()</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_FLAGS<sp/>-Wall<sp/>-Wextra<sp/>-Wpedantic)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>if(TREAT_WARNINGS_AS_ERRORS)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>CXX_FLAGS<sp/>-Werror)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(CXX_EXTRA_FLAGS<sp/>-Wcast-align<sp/>-Wconversion<sp/>-Wduplicated-branches</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wduplicated-cond<sp/>-Wexit-time-destructors</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wglobal-constructors<sp/>-Wlogical-op<sp/>-Wmissing-noreturn</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wnon-virtual-dtor<sp/>-Wnull-dereference<sp/>-Wold-style-cast</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Woverloaded-virtual<sp/>-Wshadow<sp/>-Wsign-conversion<sp/>-Wunreachable-code</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-Wunused<sp/>-Wuseless-cast<sp/>-Wweak-vtables<sp/>-Wno-unknown-pragmas)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"></highlight></codeline>
-<codeline lineno="230"><highlight class="normal"></highlight></codeline>
-<codeline lineno="231"><highlight class="normal">################################################</highlight></codeline>
-<codeline lineno="232"><highlight class="normal">#<sp/>Dependencies</highlight></codeline>
-<codeline lineno="233"><highlight class="normal">include(Dependencies)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal">target_compile_options(${DNAC}<sp/>PRIVATE<sp/></highlight><highlight class="stringliteral">&quot;${CXX_FLAGS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">include(SupportedCompileOptions)</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">target_supported_compile_options(${DNAC}<sp/>PRIVATE<sp/></highlight><highlight class="stringliteral">&quot;${CXX_EXTRA_FLAGS}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
 <codeline lineno="234"><highlight class="normal"></highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(ADAPTABLE_HEADERS)</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(hdr<sp/>IN<sp/>LISTS<sp/>HEADERS)</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>ADAPTABLE_HEADERS<sp/>$&lt;BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${hdr}&gt;<sp/>$&lt;INSTALL_INTERFACE:${hdr}&gt;)</highlight></codeline>
-<codeline lineno="238"><highlight class="normal">endforeach()</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight></codeline>
-<codeline lineno="240"><highlight class="normal">source_group(TREE<sp/>${CMAKE_CURRENT_SOURCE_DIR}<sp/>FILES<sp/>${HEADERS}<sp/>${SOURCES})</highlight></codeline>
-<codeline lineno="241"><highlight class="normal">target_sources(${DNAC}<sp/>PRIVATE<sp/>${SOURCES}<sp/>${OBJECT_SOURCES}<sp/>PUBLIC<sp/>${ADAPTABLE_HEADERS})</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" kindref="member">target_link_libraries</ref>(${DNAC}<sp/>PUBLIC<sp/>${DNAC_PUBLIC_DEPENDENCIES}<sp/>PRIVATE<sp/>${DNAC_PRIVATE_DEPENDENCIES})</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">################################################</highlight></codeline>
+<codeline lineno="236"><highlight class="normal">#<sp/>Dependencies</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">include(DNACDependencies)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(ADAPTABLE_HEADERS)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(hdr<sp/>IN<sp/>LISTS<sp/>HEADERS)</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a295733ec42441519c13cc7defd9c723b" kindref="member">list</ref>(APPEND<sp/>ADAPTABLE_HEADERS<sp/>$&lt;BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/${hdr}&gt;<sp/>$&lt;INSTALL_INTERFACE:${hdr}&gt;)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">endforeach()</highlight></codeline>
 <codeline lineno="243"><highlight class="normal"></highlight></codeline>
-<codeline lineno="244"><highlight class="normal">################################################</highlight></codeline>
-<codeline lineno="245"><highlight class="normal">#<sp/>VersionInfo</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(WIN32<sp/>AND<sp/>(DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>SHARED<sp/>OR<sp/>DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>MODULE))</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>include(VersionInfo)</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>add_version_info(${DNAC}</highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME<sp/>${PROJECT_NAME}</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILENAME<sp/></highlight><highlight class="stringliteral">&quot;${DNAC}.dll&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAJOR_VERSION<sp/>${PROJECT_VERSION_MAJOR}</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MINOR_VERSION<sp/>${PROJECT_VERSION_MINOR}</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PATCH_VERSION<sp/>${PROJECT_VERSION_PATCH}</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPANY_NAME<sp/></highlight><highlight class="stringliteral">&quot;Epic<sp/>Games&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COPYRIGHT<sp/></highlight><highlight class="stringliteral">&quot;Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.&quot;</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="256"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
-<codeline lineno="257"><highlight class="normal"></highlight></codeline>
-<codeline lineno="258"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Export<sp/>and<sp/>install<sp/>target</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="260"><highlight class="normal">include(InstallLibrary)</highlight></codeline>
-<codeline lineno="261"><highlight class="normal">install_library(${DNAC})</highlight></codeline>
-<codeline lineno="262"><highlight class="normal"></highlight></codeline>
-<codeline lineno="263"><highlight class="normal">################################################</highlight></codeline>
-<codeline lineno="264"><highlight class="normal">#<sp/>Examples</highlight></codeline>
-<codeline lineno="265"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(DNAC_BUILD_EXAMPLES<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>examples&quot;</highlight><highlight class="normal"><sp/>ON)</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(DNAC_BUILD_EXAMPLES)</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(COPY_LIB_TO_EXAMPLES<sp/>OFF)</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BUILD_SHARED_LIBS)</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(COPY_LIB_TO_EXAMPLES<sp/>ON)</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>add_subdirectory(examples)</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">source_group(TREE<sp/>${CMAKE_CURRENT_SOURCE_DIR}<sp/>FILES<sp/>${HEADERS}<sp/>${SOURCES})</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">target_sources(${DNAC}<sp/>PRIVATE<sp/>${SOURCES}<sp/>${OBJECT_SOURCES}<sp/>PUBLIC<sp/>${ADAPTABLE_HEADERS})</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1af8391e06cb2b6caf1c7f16cd11fc32ba" kindref="member">target_link_libraries</ref>(${DNAC}<sp/>PUBLIC<sp/>${DNAC_PUBLIC_DEPENDENCIES}<sp/>PRIVATE<sp/>${DNAC_PRIVATE_DEPENDENCIES})</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal">################################################</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">#<sp/>VersionInfo</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(WIN32<sp/>AND<sp/>(DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>SHARED<sp/>OR<sp/>DNAC_LIBRARY_TYPE<sp/>STREQUAL<sp/>MODULE))</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>include(VersionInfo)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>add_version_info(${DNAC}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NAME<sp/>${PROJECT_NAME}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FILENAME<sp/></highlight><highlight class="stringliteral">&quot;${DNAC}.dll&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MAJOR_VERSION<sp/>${PROJECT_VERSION_MAJOR}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MINOR_VERSION<sp/>${PROJECT_VERSION_MINOR}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PATCH_VERSION<sp/>${PROJECT_VERSION_PATCH}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COMPANY_NAME<sp/></highlight><highlight class="stringliteral">&quot;Epic<sp/>Games&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>COPYRIGHT<sp/></highlight><highlight class="stringliteral">&quot;Copyright<sp/>Epic<sp/>Games,<sp/>Inc.<sp/>All<sp/>Rights<sp/>Reserved.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>Export<sp/>and<sp/>install<sp/>target</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">include(InstallLibrary)</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">install_library(${DNAC})</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">################################################</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">#<sp/>Examples</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><ref refid="DNACalib_2CMakeLists_8txt_1a27e91820f505e06e2a1052837046c9dc" kindref="member">option</ref>(DNAC_BUILD_EXAMPLES<sp/></highlight><highlight class="stringliteral">&quot;Build<sp/>examples&quot;</highlight><highlight class="normal"><sp/>ON)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(DNAC_BUILD_EXAMPLES)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(COPY_LIB_TO_EXAMPLES<sp/>OFF)</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(BUILD_SHARED_LIBS)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DNACalib_2CMakeLists_8txt_1a9fa63f34e1c2ec405affa129fee88396" kindref="member">set</ref>(COPY_LIB_TO_EXAMPLES<sp/>ON)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>add_subdirectory(examples)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><ref refid="PyDNA_2python3_2CMakeLists_8txt_1abddf8536606ae31aa354b764d93a12c5" kindref="member">endif</ref>()</highlight></codeline>
     </programlisting>
     <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/CMakeLists.txt"/>
   </compounddef>

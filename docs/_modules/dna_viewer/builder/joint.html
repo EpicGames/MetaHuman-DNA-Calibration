@@ -52,6 +52,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -62,11 +63,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dna_viewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -102,7 +106,7 @@
 
 <span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span>
 
-<span class="kn">from</span> <span class="nn">..model.joint</span> <span class="kn">import</span> <span class="n">Joint</span> <span class="k">as</span> <span class="n">JointModel</span>
+<span class="kn">from</span> <span class="nn">..model</span> <span class="kn">import</span> <span class="n">Joint</span> <span class="k">as</span> <span class="n">JointModel</span>
 
 
 <div class="viewcode-block" id="Joint"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.joint.Joint">[docs]</a><span class="k">class</span> <span class="nc">Joint</span><span class="p">:</span>
@@ -114,22 +118,12 @@
 <span class="sd">    @type joints: List[JointModel]</span>
 <span class="sd">    @param joints: data representing the joints</span>
 
-<span class="sd">    @type linear_modifier: float</span>
-<span class="sd">    @param linear_modifier: The linear modifier that should be applied to the joints</span>
-
-<span class="sd">    @type angle_modifier: float</span>
-<span class="sd">    @param angle_modifier: The linear modifier that should be applied to the joints</span>
-
 <span class="sd">    @type joint_flags: Dict[str, bool]</span>
 <span class="sd">    @param joint_flags: A mapping used for setting flags that are used to avoid adding the same joint multiple times</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
-        <span class="bp">self</span><span class="p">,</span> <span class="n">joints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">JointModel</span><span class="p">],</span> <span class="n">linear_modifier</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">angle_modifier</span><span class="p">:</span> <span class="nb">float</span>
-    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">JointModel</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">joints</span> <span class="o">=</span> <span class="n">joints</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">=</span> <span class="n">linear_modifier</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">angle_modifier</span> <span class="o">=</span> <span class="n">angle_modifier</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">joint_flags</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
 
         <span class="k">for</span> <span class="n">joint</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">joints</span><span class="p">:</span>
@@ -162,14 +156,14 @@
                 <span class="n">in_parent_space</span> <span class="o">=</span> <span class="kc">False</span>
 
         <span class="n">position</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">linear_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">translation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">orientation</span> <span class="o">=</span> <span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">angle_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">angle_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">angle_modifier</span> <span class="o">*</span> <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">x</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">y</span><span class="p">,</span>
+            <span class="n">joint</span><span class="o">.</span><span class="n">orientation</span><span class="o">.</span><span class="n">z</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="n">cmds</span><span class="o">.</span><span class="n">joint</span><span class="p">(</span>
             <span class="n">p</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
@@ -177,6 +171,7 @@
             <span class="n">n</span><span class="o">=</span><span class="n">joint</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
             <span class="n">r</span><span class="o">=</span><span class="n">in_parent_space</span><span class="p">,</span>
             <span class="n">a</span><span class="o">=</span><span class="ow">not</span> <span class="n">in_parent_space</span><span class="p">,</span>
+            <span class="n">scaleCompensate</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">joint_flags</span><span class="p">[</span><span class="n">joint</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span></div>
 
@@ -194,7 +189,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

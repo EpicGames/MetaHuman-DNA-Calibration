@@ -126,40 +126,42 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   51</span>    <span class="comment"># ¯\_(ツ)_/¯</span></div>
 <div class="line"><span class="lineno">   52</span>    <span class="comment"># Deltas in [[x, y, z], [x, y, z], [x, y, z]] format</span></div>
 <div class="line"><span class="lineno">   53</span>    blendShapeTargetDeltas = [[0.0, 0.0, 2.0], [0.0, -1.0, 4.0], [3.0, -3.0, 8.0]]</div>
-<div class="line"><span class="lineno">   54</span>    <span class="comment"># Weights for interpolation between original deltas and above defined deltas</span></div>
-<div class="line"><span class="lineno">   55</span>    <span class="comment"># 1.0 == take the new value completely, 0.0 means keep the old value</span></div>
-<div class="line"><span class="lineno">   56</span>    <span class="comment"># Format: [Delta-0-Mask, Delta-1-Mask, Delta-2-Mask]</span></div>
-<div class="line"><span class="lineno">   57</span>    masks = [1.0, 0.0, 0.5]</div>
-<div class="line"><span class="lineno">   58</span>    setBlendShapesM0B0 = <a class="code hl_class" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html">dnac.SetBlendShapeTargetDeltasCommand</a>(0,  <span class="comment"># mesh index</span></div>
-<div class="line"><span class="lineno">   59</span>                                                             0,  <span class="comment"># blend shape target index</span></div>
-<div class="line"><span class="lineno">   60</span>                                                             blendShapeTargetDeltas,</div>
-<div class="line"><span class="lineno">   61</span>                                                             masks,</div>
-<div class="line"><span class="lineno">   62</span>                                                             dnac.VectorOperation_Interpolate)</div>
-<div class="line"><span class="lineno">   63</span>    commands.add(setBlendShapesM0B0)</div>
-<div class="line"><span class="lineno">   64</span>    print(<span class="stringliteral">&quot;Added command to change blend shape target deltas&quot;</span>)</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>    <span class="comment"># Add vertex position deltas onto existing vertex positions</span></div>
-<div class="line"><span class="lineno">   67</span>    <span class="comment"># Note the alternative data format, instead of using nested lists, separate all X, Y, Z</span></div>
-<div class="line"><span class="lineno">   68</span>    <span class="comment"># components into distinct lists (might also be faster)</span></div>
-<div class="line"><span class="lineno">   69</span>    positionXs = [1.0, -4.5, 7.2]</div>
-<div class="line"><span class="lineno">   70</span>    positionYs = [2.0, -5.5, -8.3]</div>
-<div class="line"><span class="lineno">   71</span>    positionZs = [3.0, -6.5, 9.7]</div>
-<div class="line"><span class="lineno">   72</span>    <span class="comment"># Weights to be multiplied with the above specified delta positions, before adding</span></div>
-<div class="line"><span class="lineno">   73</span>    <span class="comment"># them onto the original data</span></div>
-<div class="line"><span class="lineno">   74</span>    <span class="comment"># Format: [Delta-0-Weight, Delta-1-Weight, Delta-2-Weight]</span></div>
-<div class="line"><span class="lineno">   75</span>    masks = [1.0, 0.2, 0.4]</div>
-<div class="line"><span class="lineno">   76</span>    setVerticesM0 = <a class="code hl_class" href="classdnac_1_1SetVertexPositionsCommand.html">dnac.SetVertexPositionsCommand</a>(0,  <span class="comment"># mesh index</span></div>
-<div class="line"><span class="lineno">   77</span>                                                 positionXs,</div>
-<div class="line"><span class="lineno">   78</span>                                                 positionYs,</div>
-<div class="line"><span class="lineno">   79</span>                                                 positionZs,</div>
-<div class="line"><span class="lineno">   80</span>                                                 masks,</div>
-<div class="line"><span class="lineno">   81</span>                                                 dnac.VectorOperation_Add)</div>
-<div class="line"><span class="lineno">   82</span>    commands.add(setVerticesM0)</div>
-<div class="line"><span class="lineno">   83</span>    print(<span class="stringliteral">&quot;Added command to change vertex positions&quot;</span>)</div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">return</span> commands</div>
+<div class="line"><span class="lineno">   54</span>    vertexIndices = [0, 1, 2]</div>
+<div class="line"><span class="lineno">   55</span>    <span class="comment"># Weights for interpolation between original deltas and above defined deltas</span></div>
+<div class="line"><span class="lineno">   56</span>    <span class="comment"># 1.0 == take the new value completely, 0.0 means keep the old value</span></div>
+<div class="line"><span class="lineno">   57</span>    <span class="comment"># Format: [Delta-0-Mask, Delta-1-Mask, Delta-2-Mask]</span></div>
+<div class="line"><span class="lineno">   58</span>    masks = [1.0, 0.0, 0.5]</div>
+<div class="line"><span class="lineno">   59</span>    setBlendShapesM0B0 = <a class="code hl_class" href="classdnac_1_1SetBlendShapeTargetDeltasCommand.html">dnac.SetBlendShapeTargetDeltasCommand</a>(0,  <span class="comment"># mesh index</span></div>
+<div class="line"><span class="lineno">   60</span>                                                             0,  <span class="comment"># blend shape target index</span></div>
+<div class="line"><span class="lineno">   61</span>                                                             blendShapeTargetDeltas,</div>
+<div class="line"><span class="lineno">   62</span>                                                             vertexIndices,</div>
+<div class="line"><span class="lineno">   63</span>                                                             masks,</div>
+<div class="line"><span class="lineno">   64</span>                                                             dnac.VectorOperation_Interpolate)</div>
+<div class="line"><span class="lineno">   65</span>    commands.add(setBlendShapesM0B0)</div>
+<div class="line"><span class="lineno">   66</span>    print(<span class="stringliteral">&quot;Added command to change blend shape target deltas&quot;</span>)</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment"># Add vertex position deltas onto existing vertex positions</span></div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment"># Note the alternative data format, instead of using nested lists, separate all X, Y, Z</span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment"># components into distinct lists (might also be faster)</span></div>
+<div class="line"><span class="lineno">   71</span>    positionXs = [1.0, -4.5, 7.2]</div>
+<div class="line"><span class="lineno">   72</span>    positionYs = [2.0, -5.5, -8.3]</div>
+<div class="line"><span class="lineno">   73</span>    positionZs = [3.0, -6.5, 9.7]</div>
+<div class="line"><span class="lineno">   74</span>    <span class="comment"># Weights to be multiplied with the above specified delta positions, before adding</span></div>
+<div class="line"><span class="lineno">   75</span>    <span class="comment"># them onto the original data</span></div>
+<div class="line"><span class="lineno">   76</span>    <span class="comment"># Format: [Delta-0-Weight, Delta-1-Weight, Delta-2-Weight]</span></div>
+<div class="line"><span class="lineno">   77</span>    masks = [1.0, 0.2, 0.4]</div>
+<div class="line"><span class="lineno">   78</span>    setVerticesM0 = <a class="code hl_class" href="classdnac_1_1SetVertexPositionsCommand.html">dnac.SetVertexPositionsCommand</a>(0,  <span class="comment"># mesh index</span></div>
+<div class="line"><span class="lineno">   79</span>                                                 positionXs,</div>
+<div class="line"><span class="lineno">   80</span>                                                 positionYs,</div>
+<div class="line"><span class="lineno">   81</span>                                                 positionZs,</div>
+<div class="line"><span class="lineno">   82</span>                                                 masks,</div>
+<div class="line"><span class="lineno">   83</span>                                                 dnac.VectorOperation_Add)</div>
+<div class="line"><span class="lineno">   84</span>    commands.add(setVerticesM0)</div>
+<div class="line"><span class="lineno">   85</span>    print(<span class="stringliteral">&quot;Added command to change vertex positions&quot;</span>)</div>
 <div class="line"><span class="lineno">   86</span> </div>
-<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">return</span> commands</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span> </div>
 <div class="ttc" id="aclassdnac_1_1CommandSequence_html"><div class="ttname"><a href="classdnac_1_1CommandSequence.html">dnac::CommandSequence</a></div><div class="ttdoc">CommandSequence is used to run a sequence of commands on the same DNA.</div><div class="ttdef"><b>Definition:</b> CommandSequence.h:20</div></div>
 <div class="ttc" id="aclassdnac_1_1RenameJointCommand_html"><div class="ttname"><a href="classdnac_1_1RenameJointCommand.html">dnac::RenameJointCommand</a></div><div class="ttdoc">RenameJointCommand is used to rename a joint.</div><div class="ttdef"><b>Definition:</b> RenameJointCommand.h:18</div></div>
 <div class="ttc" id="aclassdnac_1_1ScaleCommand_html"><div class="ttname"><a href="classdnac_1_1ScaleCommand.html">dnac::ScaleCommand</a></div><div class="ttdoc">ScaleCommand is used to scale neutral joints, vertex positions and joint and blendshape deltas by a f...</div><div class="ttdef"><b>Definition:</b> ScaleCommand.h:18</div></div>
@@ -196,25 +198,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   88</span><span class="keyword">def </span><a class="code hl_function" href="namespacedemo.html#a678487ef78664f96baab3c22238251af">calibrateDNA</a>(inputPath, outputPath):</div>
-<div class="line"><span class="lineno">   89</span>    dna = <a class="code hl_function" href="namespacedemo.html#ab7c7972424f00cc063b6ad4aad722579">loadDNA</a>(inputPath)</div>
-<div class="line"><span class="lineno">   90</span> </div>
-<div class="line"><span class="lineno">   91</span>    <span class="comment"># Copies DNA contents and will serve as input/output parameter to commands</span></div>
-<div class="line"><span class="lineno">   92</span>    calibrated = <a class="code hl_class" href="classdnac_1_1DNACalibDNAReader.html">dnac.DNACalibDNAReader</a>(dna)</div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>    commands = <a class="code hl_function" href="namespacedemo.html#aadf38580dced3eb97e396267c636d6dc">buildCommandList</a>()</div>
+<div class="fragment"><div class="line"><span class="lineno">   90</span><span class="keyword">def </span><a class="code hl_function" href="namespacedemo.html#a678487ef78664f96baab3c22238251af">calibrateDNA</a>(inputPath, outputPath):</div>
+<div class="line"><span class="lineno">   91</span>    dna = <a class="code hl_function" href="namespacedemo.html#ab7c7972424f00cc063b6ad4aad722579">loadDNA</a>(inputPath)</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>    <span class="comment"># Copies DNA contents and will serve as input/output parameter to commands</span></div>
+<div class="line"><span class="lineno">   94</span>    calibrated = <a class="code hl_class" href="classdnac_1_1DNACalibDNAReader.html">dnac.DNACalibDNAReader</a>(dna)</div>
 <div class="line"><span class="lineno">   95</span> </div>
-<div class="line"><span class="lineno">   96</span>    print(<span class="stringliteral">&quot;Running command sequence...&quot;</span>)</div>
-<div class="line"><span class="lineno">   97</span>    <span class="comment"># Modifies calibrated DNA in-place</span></div>
-<div class="line"><span class="lineno">   98</span>    commands.run(calibrated)</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    print(<span class="stringliteral">&quot;Saving DNA...&quot;</span>)</div>
-<div class="line"><span class="lineno">  101</span>    <a class="code hl_function" href="namespacedemo.html#aacb48e99c2628919435e08bb7fc75aa8">saveDNA</a>(calibrated, outputPath)</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>    print(<span class="stringliteral">&quot;Done.&quot;</span>)</div>
+<div class="line"><span class="lineno">   96</span>    commands = <a class="code hl_function" href="namespacedemo.html#aadf38580dced3eb97e396267c636d6dc">buildCommandList</a>()</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    print(<span class="stringliteral">&quot;Running command sequence...&quot;</span>)</div>
+<div class="line"><span class="lineno">   99</span>    <span class="comment"># Modifies calibrated DNA in-place</span></div>
+<div class="line"><span class="lineno">  100</span>    commands.run(calibrated)</div>
+<div class="line"><span class="lineno">  101</span> </div>
+<div class="line"><span class="lineno">  102</span>    print(<span class="stringliteral">&quot;Saving DNA...&quot;</span>)</div>
+<div class="line"><span class="lineno">  103</span>    <a class="code hl_function" href="namespacedemo.html#aacb48e99c2628919435e08bb7fc75aa8">saveDNA</a>(calibrated, outputPath)</div>
 <div class="line"><span class="lineno">  104</span> </div>
+<div class="line"><span class="lineno">  105</span>    print(<span class="stringliteral">&quot;Done.&quot;</span>)</div>
+<div class="line"><span class="lineno">  106</span> </div>
 <div class="ttc" id="aclassdnac_1_1DNACalibDNAReader_html"><div class="ttname"><a href="classdnac_1_1DNACalibDNAReader.html">dnac::DNACalibDNAReader</a></div><div class="ttdef"><b>Definition:</b> DNACalibDNAReader.h:12</div></div>
-<div class="ttc" id="anamespacedemo_html_a678487ef78664f96baab3c22238251af"><div class="ttname"><a href="namespacedemo.html#a678487ef78664f96baab3c22238251af">demo.calibrateDNA</a></div><div class="ttdeci">def calibrateDNA(inputPath, outputPath)</div><div class="ttdef"><b>Definition:</b> alib/python3/examples/demo.py:88</div></div>
+<div class="ttc" id="anamespacedemo_html_a678487ef78664f96baab3c22238251af"><div class="ttname"><a href="namespacedemo.html#a678487ef78664f96baab3c22238251af">demo.calibrateDNA</a></div><div class="ttdeci">def calibrateDNA(inputPath, outputPath)</div><div class="ttdef"><b>Definition:</b> alib/python3/examples/demo.py:90</div></div>
 <div class="ttc" id="anamespacedemo_html_aacb48e99c2628919435e08bb7fc75aa8"><div class="ttname"><a href="namespacedemo.html#aacb48e99c2628919435e08bb7fc75aa8">demo.saveDNA</a></div><div class="ttdeci">def saveDNA(reader, path)</div><div class="ttdef"><b>Definition:</b> alib/python3/examples/demo.py:18</div></div>
 <div class="ttc" id="anamespacedemo_html_ab7c7972424f00cc063b6ad4aad722579"><div class="ttname"><a href="namespacedemo.html#ab7c7972424f00cc063b6ad4aad722579">demo.loadDNA</a></div><div class="ttdeci">def loadDNA(path)</div><div class="ttdef"><b>Definition:</b> python3/examples/demo.py:26</div></div>
 </div><!-- fragment -->

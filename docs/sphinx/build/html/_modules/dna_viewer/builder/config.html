@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.builder.config &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.builder.config</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.builder.config</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+
+<div class="viewcode-block" id="LinearUnit"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.LinearUnit">[docs]</a><span class="k">class</span> <span class="nc">LinearUnit</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An enum used to represent the unit used for linear representation.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @cm: using cm as unit</span>
+<span class="sd">    @m: using m as unit</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">cm</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="AngleUnit"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.AngleUnit">[docs]</a><span class="k">class</span> <span class="nc">AngleUnit</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An enum used to represent the unit used for angle representation.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @degree: using degree as unit</span>
+<span class="sd">    @radian: using radian as unit</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">degree</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">radian</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+<div class="viewcode-block" id="Config"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.Config">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">Config</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent the config for @Builder</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type mesh_filter: List[str]</span>
+<span class="sd">    @param mesh_filter: List of mesh names that should be filtered. Mash names can be just substrings. [&quot;head&quot;] will find all meshes that contins string &quot;head&quot; in its mash name.</span>
+
+
+<span class="sd">    @type lod_filter: List[int]</span>
+<span class="sd">    @param lod_filter: List of lods that should be filtered.</span>
+
+<span class="sd">    @type group_by_lod: bool</span>
+<span class="sd">    @param group_by_lod: A flag representing whether the character should be parented to a character transform node in the scene hierarchy</span>
+
+<span class="sd">    @type group_by_lod: bool</span>
+<span class="sd">    @param group_by_lod: A flag representing whether the character should be parented to a character transform node in rig hierarchy</span>
+
+<span class="sd">    @type top_level_group: str</span>
+<span class="sd">    @param top_level_group: Value that is going to be used when creating root group</span>
+
+<span class="sd">    @type geometry_group: str</span>
+<span class="sd">    @param geometry_group: Value that is going to be used when creating group that contains geometry</span>
+
+<span class="sd">    @type facial_root_joint_name: str</span>
+<span class="sd">    @param facial_root_joint_name: The name of the facial root joint</span>
+
+<span class="sd">    @type blend_shape_group_prefix: str</span>
+<span class="sd">    @param blend_shape_group_prefix: prefix string for blend shape group</span>
+
+<span class="sd">    @type blend_shape_name_postfix: str</span>
+<span class="sd">    @param blend_shape_name_postfix: postfix string for blend shape name</span>
+
+<span class="sd">    @type skin_cluster_suffix: str</span>
+<span class="sd">    @param skin_cluster_suffix: postfix string for skin cluster name</span>
+
+<span class="sd">    @type animated_map_attribute_multipliers_name: str</span>
+<span class="sd">    @param animated_map_attribute_multipliers_name: string for frame animated map attribute name</span>
+
+<span class="sd">    @type create_display_layers: bool</span>
+<span class="sd">    @param create_display_layers: A flag representing whether the created meshes should be assigned to a display layer</span>
+
+<span class="sd">    @type add_joints: bool</span>
+<span class="sd">    @param add_joints: A flag representing whether joints should be added</span>
+
+<span class="sd">    @type add_blend_shapes: bool</span>
+<span class="sd">    @param add_blend_shapes: A flag representing whether blend shapes should be added</span>
+
+<span class="sd">    @type add_skin_cluster: bool</span>
+<span class="sd">    @param add_skin_cluster: A flag representing whether skin should be added</span>
+
+<span class="sd">    @type add_ctrl_attributes_on_root_joint: bool</span>
+<span class="sd">    @param add_ctrl_attributes_on_root_joint: A flag representing whether control attributes should be added to the root joint</span>
+
+<span class="sd">    @type add_animated_map_attributes_on_root_joint: bool</span>
+<span class="sd">    @param add_animated_map_attributes_on_root_joint: A flag representing whether animated map attributes should be added to the root joint</span>
+
+<span class="sd">    @type add_key_frames: bool</span>
+<span class="sd">    @param add_key_frames: A flag representing whether key frames should be added</span>
+
+<span class="sd">    @type add_mesh_name_to_blend_shape_channel_name: bool</span>
+<span class="sd">    @param add_mesh_name_to_blend_shape_channel_name: A flag representing whether mesh name of blend shape channel is added to name when creating it</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">meshes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">mesh_filter</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">lod_filter</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+
+    <span class="n">group_by_lod</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">top_level_group</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;head&quot;</span>
+    <span class="n">geometry_group</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;geometry&quot;</span>
+
+    <span class="n">facial_root_joint_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FACIAL_C_FacialRoot&quot;</span>
+
+    <span class="n">blend_shape_group_prefix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;BlendshapeGroup_&quot;</span>
+    <span class="n">blend_shape_name_postfix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;_blendShapes&quot;</span>
+    <span class="n">skin_cluster_suffix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;skinCluster&quot;</span>
+
+    <span class="n">animated_map_attribute_multipliers_name</span> <span class="o">=</span> <span class="s2">&quot;FRM_WMmultipliers&quot;</span>
+
+    <span class="n">create_display_layers</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">add_joints</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_blend_shapes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_skin_cluster</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_ctrl_attributes_on_root_joint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_animated_map_attributes_on_root_joint</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_key_frames</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">add_mesh_name_to_blend_shape_channel_name</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Config.get_top_level_group"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.Config.get_top_level_group">[docs]</a>    <span class="k">def</span> <span class="nf">get_top_level_group</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">top_level_group</span><span class="si">}</span><span class="s2">_grp&quot;</span></div>
+
+<div class="viewcode-block" id="Config.get_geometry_group"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.Config.get_geometry_group">[docs]</a>    <span class="k">def</span> <span class="nf">get_geometry_group</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry_group</span><span class="si">}</span><span class="s2">_grp&quot;</span></div>
+
+<div class="viewcode-block" id="Config.get_rig_group"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.Config.get_rig_group">[docs]</a>    <span class="k">def</span> <span class="nf">get_rig_group</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">top_level_group</span><span class="si">}</span><span class="s2">Rig_grp&quot;</span></div></div>
+
+
+<div class="viewcode-block" id="RigConfig"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.config.RigConfig">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">RigConfig</span><span class="p">(</span><span class="n">Config</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A class used to represent the config for @RigBuilder</span>
+
+
+<span class="sd">    @type add_rig_logic: bool</span>
+<span class="sd">    @param add_rig_logic: A flag representing whether normals should be added</span>
+
+<span class="sd">    @type rig_logic_command: str</span>
+<span class="sd">    @param rig_logic_command: The command used to start creating the rig logic using the plugin</span>
+
+<span class="sd">    @type rig_logic_name: str</span>
+<span class="sd">    @param rig_logic_name: The name of the rig logic node</span>
+
+<span class="sd">    @type control_naming: str</span>
+<span class="sd">    @param control_naming: The naming pattern of controls</span>
+
+<span class="sd">    @type joint_naming: str</span>
+<span class="sd">    @param joint_naming: The naming pattern of joints</span>
+
+<span class="sd">    @type blend_shape_naming: str</span>
+<span class="sd">    @param blend_shape_naming: The naming pattern of blend shapes</span>
+
+<span class="sd">    @type animated_map_naming: str</span>
+<span class="sd">    @param animated_map_naming: The naming pattern of animated maps</span>
+
+<span class="sd">    @type gui_path: str</span>
+<span class="sd">    @param gui_path: The location of the gui file</span>
+
+<span class="sd">    @type left_eye_joint_name: str</span>
+<span class="sd">    @param left_eye_joint_name: The name of the left eye joint</span>
+
+<span class="sd">    @type eye_gui_name: str</span>
+<span class="sd">    @param eye_gui_name: The name of the control in the gui</span>
+
+<span class="sd">    @type gui_translate_x: float</span>
+<span class="sd">    @param gui_translate_x: Represents the value that the gui should be additionally translated on the X axis</span>
+
+<span class="sd">    @type analog_gui_path: str</span>
+<span class="sd">    @param analog_gui_path: The location of the analog gui file</span>
+
+<span class="sd">    @type left_eye_joint_name: str</span>
+<span class="sd">    @param left_eye_joint_name: The name of the left eye joint</span>
+
+<span class="sd">    @type right_eye_joint_name: str</span>
+<span class="sd">    @param right_eye_joint_name: The name of the right eye joint</span>
+
+<span class="sd">    @type central_driver_name: str</span>
+<span class="sd">    @param central_driver_name: The name of the central driver</span>
+
+<span class="sd">    @type left_eye_driver_name: str</span>
+<span class="sd">    @param left_eye_driver_name: The name of the left eye driver</span>
+
+<span class="sd">    @type right_eye_driver_name: str</span>
+<span class="sd">    @param right_eye_driver_name: The name of the right eye driver</span>
+
+<span class="sd">    @type central_aim: str</span>
+<span class="sd">    @param central_aim: The name of the central aim</span>
+
+<span class="sd">    @type le_aim: str</span>
+<span class="sd">    @param le_aim: The name of the left eye aim</span>
+
+<span class="sd">    @type re_aim: str</span>
+<span class="sd">    @param re_aim: The name of the right eye aim</span>
+
+<span class="sd">    @type aas_path: Optional[str]</span>
+<span class="sd">    @param aas_path: The location of the script file</span>
+
+<span class="sd">    @type aas_method: str</span>
+<span class="sd">    @param aas_method: The method that should be called</span>
+
+<span class="sd">    @type aas_parameter: Dict[Any, Any]</span>
+<span class="sd">    @param aas_parameter: The parameters that will be passed as the method arguments</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">add_rig_logic</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">rig_logic_command</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;createEmbeddedNodeRL4&quot;</span><span class="p">)</span>
+    <span class="n">rig_logic_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">control_naming</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&lt;objName&gt;.&lt;attrName&gt;&quot;</span><span class="p">)</span>
+    <span class="n">joint_naming</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&lt;objName&gt;.&lt;attrName&gt;&quot;</span><span class="p">)</span>
+    <span class="n">blend_shape_naming</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">animated_map_naming</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">gui_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">eye_gui_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;CTRL_C_eye&quot;</span>
+    <span class="n">gui_translate_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="n">analog_gui_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">left_eye_joint_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FACIAL_L_Eye&quot;</span>
+    <span class="n">right_eye_joint_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;FACIAL_R_Eye&quot;</span>
+
+    <span class="n">central_driver_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;LOC_C_eyeDriver&quot;</span>
+    <span class="n">left_eye_driver_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;LOC_L_eyeDriver&quot;</span>
+    <span class="n">right_eye_driver_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;LOC_R_eyeDriver&quot;</span>
+
+    <span class="n">left_eye_aim_up_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;LOC_L_eyeAimUp&quot;</span>
+    <span class="n">right_eye_aim_up_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;LOC_R_eyeAimUp&quot;</span>
+    <span class="n">central_aim</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;GRP_C_eyesAim&quot;</span>
+
+    <span class="n">le_aim</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;GRP_L_eyeAim&quot;</span>
+    <span class="n">re_aim</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;GRP_R_eyeAim&quot;</span>
+
+    <span class="n">aas_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">aas_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;run_after_assemble&quot;</span>
+    <span class="n">aas_parameter</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__post_init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_mesh_name_to_blend_shape_channel_name</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blend_shape_naming</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&lt;objName&gt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shape_name_postfix</span><span class="si">}</span><span class="s2">.&lt;objName&gt;__&lt;attrName&gt;&quot;</span>
+            <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blend_shape_naming</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;&lt;objName&gt;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">blend_shape_name_postfix</span><span class="si">}</span><span class="s2">.&lt;attrName&gt;&quot;</span>
+            <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">animated_map_naming</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">animated_map_attribute_multipliers_name</span><span class="si">}</span><span class="s2">.&lt;objName&gt;_&lt;attrName&gt;&quot;</span>
+        <span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

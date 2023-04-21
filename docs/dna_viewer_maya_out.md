@@ -4,6 +4,8 @@ creating a functional rig in a non-programmatic manner.
 
 ![image](img/ui.png)
 
+![image](img/ui_extra_options.png)
+
 During scene generation, the RigLogic4 plugin will be loaded automatically and you can expect to get the following message:
 
 ![image](img/maya_warn.png)

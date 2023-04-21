@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dna_viewer &mdash; DNA Calibration  documentation</title>
+  <title>dna_calibration &mdash; DNA Calibration  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -18,9 +18,7 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="dna_viewer package" href="dna_viewer.html" />
-    <link rel="prev" title="dna" href="dna.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,6 +53,7 @@
 <p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
 <ul>
@@ -65,14 +64,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">dnacalib</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">dna_viewer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dna_viewer.html">dna_viewer package</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -93,7 +92,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>dna_viewer</li>
+      <li>dna_calibration</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -103,110 +102,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="dna-viewer">
-<h1>dna_viewer<a class="headerlink" href="#dna-viewer" title="Permalink to this headline"></a></h1>
+  <section id="dna-calibration">
+<h1>dna_calibration<a class="headerlink" href="#dna-calibration" title="Permalink to this headline"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="dna_viewer.html">dna_viewer package</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer.html">DNAViewer package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dna_viewer.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.builder.html">dna_viewer.builder package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.builder.html">DNAViewer.builder package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.analog_gui">dna_viewer.builder.analog_gui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.character">dna_viewer.builder.character module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.gui">dna_viewer.builder.gui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.joint">dna_viewer.builder.joint module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.maya_mesh">dna_viewer.builder.maya_mesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.builder">dna_viewer.builder.builder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.config">dna_viewer.builder.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#dna-viewer-builder-joint-module">dna_viewer.builder.joint module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.mesh">dna_viewer.builder.mesh module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.rig_logic">dna_viewer.builder.rig_logic module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder.scene">dna_viewer.builder.scene module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#module-dna_viewer.builder">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.html#dna-viewer-builder-rig-builder-module">dna_viewer.builder.rig_builder module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.config.html">dna_viewer.config package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.aas">dna_viewer.config.aas module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.analog_gui">dna_viewer.config.analog_gui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.character">dna_viewer.config.character module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.gui">dna_viewer.config.gui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.mesh">dna_viewer.config.mesh module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.rig_logic">dna_viewer.config.rig_logic module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config.scene">dna_viewer.config.scene module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.config.html#module-dna_viewer.config">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.builder.maya.html">DNAViewer.builder.maya package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.maya.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.mesh">dna_viewer.builder.maya.mesh module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.skin_weights">dna_viewer.builder.maya.skin_weights module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.builder.maya.html#module-dna_viewer.builder.maya.util">dna_viewer.builder.maya.util module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.const.html">dna_viewer.const package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const.gui">dna_viewer.const.gui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const.naming">dna_viewer.const.naming module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const.printing">dna_viewer.const.printing module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const.space">dna_viewer.const.space module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const.ui">dna_viewer.const.ui module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.const.html#module-dna_viewer.const">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.dnalib.html">DNAViewer.dnalib package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.behavior">dna_viewer.dnalib.behavior module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.definition">dna_viewer.dnalib.definition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.descriptor">dna_viewer.dnalib.descriptor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.dnalib">dna_viewer.dnalib.dnalib module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.geometry">dna_viewer.dnalib.geometry module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.dnalib.html#module-dna_viewer.dnalib.layer">dna_viewer.dnalib.layer module</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.model.html">dna_viewer.model package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.behavior">dna_viewer.model.behavior module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.definition">dna_viewer.model.definition module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.descriptor">dna_viewer.model.descriptor module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.dna">dna_viewer.model.dna module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.face_vertex">dna_viewer.model.face_vertex module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.geometry">dna_viewer.model.geometry module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.joint">dna_viewer.model.joint module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model.mesh">dna_viewer.model.mesh module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.model.html#module-dna_viewer.model">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.reader.html">dna_viewer.reader package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader.behavior">dna_viewer.reader.behavior module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader.definition">dna_viewer.reader.definition module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader.descriptor">dna_viewer.reader.descriptor module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader.dna">dna_viewer.reader.dna module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader.geometry">dna_viewer.reader.geometry module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.reader.html#module-dna_viewer.reader">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.ui.html">dna_viewer.ui package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dna_viewer.ui.html">DNAViewer.ui package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.build_options_widget">dna_viewer.ui.build_options_widget module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.dna_viewer_window">dna_viewer.ui.dna_viewer_window module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.elements">dna_viewer.ui.elements module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.elements_creator">dna_viewer.ui.elements_creator module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.file_chooser">dna_viewer.ui.file_chooser module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.mesh_tree_list">dna_viewer.ui.mesh_tree_list module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.app">dna_viewer.ui.app module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui.widgets">dna_viewer.ui.widgets module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.ui.html#module-dna_viewer.ui">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="dna_viewer.util.html">dna_viewer.util package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.additional_assembly_script">dna_viewer.util.additional_assembly_script module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.assemble">dna_viewer.util.assemble module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.character_creator">dna_viewer.util.character_creator module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.conversion">dna_viewer.util.conversion module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.error">dna_viewer.util.error module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.import_util">dna_viewer.util.import_util module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.maya_util">dna_viewer.util.maya_util module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh">dna_viewer.util.mesh module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh_blend_shape">dna_viewer.util.mesh_blend_shape module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh_helper">dna_viewer.util.mesh_helper module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh_neutral">dna_viewer.util.mesh_neutral module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh_normals">dna_viewer.util.mesh_normals module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.mesh_skin">dna_viewer.util.mesh_skin module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.reader">dna_viewer.util.reader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.reference">dna_viewer.util.reference module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.rig_logic">dna_viewer.util.rig_logic module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.scene_builder">dna_viewer.util.scene_builder module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.shader">dna_viewer.util.shader module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util.skin_weights_maya">dna_viewer.util.skin_weights_maya module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="dna_viewer.util.html#module-dna_viewer.util">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="dna_viewer.html#module-dna_viewer.version">dna_viewer.version module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dna_viewer.html#module-dna_viewer">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -216,15 +151,12 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dna.html" class="btn btn-neutral float-left" title="dna" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="dna_viewer.html" class="btn btn-neutral float-right" title="dna_viewer package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, Epic Games.</p>
+    <p>&#169; Copyright 2023, Epic Games.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

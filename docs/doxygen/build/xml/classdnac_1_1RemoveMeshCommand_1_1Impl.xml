@@ -20,21 +20,22 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classdnac_1_1RemoveMeshCommand_1_1Impl_1aa2bcd280f63fc45631e88b0e0f6bb314" prot="private" static="no" mutable="no">
-        <type>std::uint16_t</type>
-        <definition>std::uint16_t dnac::RemoveMeshCommand::Impl::meshIndex</definition>
+      <memberdef kind="variable" id="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacepma_1a2d6fe21d674b98f7f9bc8dc3a2776cb9" kindref="member">Vector</ref>&lt; std::uint16_t &gt;</type>
+        <definition>Vector&lt;std::uint16_t&gt; dnac::RemoveMeshCommand::Impl::meshIndices</definition>
         <argsstring></argsstring>
-        <name>meshIndex</name>
-        <qualifiedname>dnac::RemoveMeshCommand::Impl::meshIndex</qualifiedname>
+        <name>meshIndices</name>
+        <qualifiedname>dnac::RemoveMeshCommand::Impl::meshIndices</qualifiedname>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="31" column="23" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="31" bodyend="-1"/>
-        <referencedby refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a614cf9d22dfefce07748273f245929db" compoundref="RemoveMeshCommand_8cpp" startline="26" endline="28">run</referencedby>
-        <referencedby refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a9a62c7459b564f4029c9942a18a95fe2" compoundref="RemoveMeshCommand_8cpp" startline="22" endline="24">setMeshIndex</referencedby>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="36" column="16" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a614cf9d22dfefce07748273f245929db" compoundref="RemoveMeshCommand_8cpp" startline="31" endline="33">run</referencedby>
+        <referencedby refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a9a62c7459b564f4029c9942a18a95fe2" compoundref="RemoveMeshCommand_8cpp" startline="22" endline="25">setMeshIndex</referencedby>
+        <referencedby refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1ad168f03e88fa57c5f1080669e0a2a100" compoundref="RemoveMeshCommand_8cpp" startline="27" endline="29">setMeshIndices</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -72,8 +73,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="22" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="22" bodyend="24"/>
-        <references refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1aa2bcd280f63fc45631e88b0e0f6bb314" compoundref="RemoveMeshCommand_8cpp" startline="31">meshIndex</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="22" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="22" bodyend="25"/>
+        <references refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" compoundref="RemoveMeshCommand_8cpp" startline="36">meshIndices</references>
+      </memberdef>
+      <memberdef kind="function" id="classdnac_1_1RemoveMeshCommand_1_1Impl_1ad168f03e88fa57c5f1080669e0a2a100" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dnac::RemoveMeshCommand::Impl::setMeshIndices</definition>
+        <argsstring>(ConstArrayView&lt; std::uint16_t &gt; meshIndices_)</argsstring>
+        <name>setMeshIndices</name>
+        <qualifiedname>dnac::RemoveMeshCommand::Impl::setMeshIndices</qualifiedname>
+        <param>
+          <type><ref refid="namespacednac_1ac2e07be60cd7438652d21feb096edce4" kindref="member">ConstArrayView</ref>&lt; std::uint16_t &gt;</type>
+          <declname>meshIndices_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="27" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="27" bodyend="29"/>
+        <references refid="classtrust_1_1ArrayView_1a9cac7104fbf6f9ee0c6c73a735417a55" compoundref="ArrayView_8h" startline="110" endline="112">trust::ArrayView&lt; T &gt;::begin</references>
+        <references refid="classtrust_1_1ArrayView_1a91f5a024a12d5056a30968c4033d63d9" compoundref="ArrayView_8h" startline="114" endline="116">trust::ArrayView&lt; T &gt;::end</references>
+        <references refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" compoundref="RemoveMeshCommand_8cpp" startline="36">meshIndices</references>
       </memberdef>
       <memberdef kind="function" id="classdnac_1_1RemoveMeshCommand_1_1Impl_1a614cf9d22dfefce07748273f245929db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -91,9 +113,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="26" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="26" bodyend="28"/>
-        <references refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1aa2bcd280f63fc45631e88b0e0f6bb314" compoundref="RemoveMeshCommand_8cpp" startline="31">meshIndex</references>
-        <references refid="classdnac_1_1DNACalibDNAReaderImpl_1a1e554d67e9524d37d84d52b72e091fc8" compoundref="DNACalibDNAReaderImpl_8cpp" startline="152" endline="170">dnac::DNACalibDNAReaderImpl::removeMesh</references>
+        <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="31" column="14" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="31" bodyend="33"/>
+        <references refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" compoundref="RemoveMeshCommand_8cpp" startline="36">meshIndices</references>
+        <references refid="classdnac_1_1DNACalibDNAReaderImpl_1a3e75b3ab28e83736c2332fcaf8cfdd93" compoundref="DNACalibDNAReaderImpl_8cpp" startline="163" endline="182">dnac::DNACalibDNAReaderImpl::removeMeshes</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -148,7 +170,7 @@
         <link refid="classpma_1_1MemoryResource"/>
       </node>
     </collaborationgraph>
-    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="12" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="12" bodyend="33"/>
+    <location file="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" line="12" column="1" bodyfile="C:/source/MetaHuman-DNA-Calibration_clean/dnacalib/DNACalib/src/dnacalib/commands/RemoveMeshCommand.cpp" bodystart="12" bodyend="38"/>
     <listofallmembers>
       <member refid="classdnac_1_1CommandImplBase_1a61e4c37cc64510fb8861247ae839939e" prot="protected" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>CommandImplBase</name></member>
       <member refid="classdnac_1_1CommandImplBase_1aaad21404fdc3816906b60a423ee526b4" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>create</name></member>
@@ -156,9 +178,10 @@
       <member refid="classdnac_1_1CommandImplBase_1a08756df6a2ac83827a17bf5511cb9fc3" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>getMemoryResource</name></member>
       <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a69c679f7bd9d759c5b29082987d912eb" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>Impl</name></member>
       <member refid="classdnac_1_1CommandImplBase_1aa6e089f0d257ef77e86370e1535196a3" prot="private" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>memRes</name></member>
-      <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1aa2bcd280f63fc45631e88b0e0f6bb314" prot="private" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>meshIndex</name></member>
+      <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a4d40a321e27b8b8f22200427d8fc1783" prot="private" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>meshIndices</name></member>
       <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a614cf9d22dfefce07748273f245929db" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>run</name></member>
       <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a9a62c7459b564f4029c9942a18a95fe2" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>setMeshIndex</name></member>
+      <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1ad168f03e88fa57c5f1080669e0a2a100" prot="public" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>setMeshIndices</name></member>
       <member refid="classdnac_1_1RemoveMeshCommand_1_1Impl_1a45f486f2ac16e3ef7e0b4174d1069d40" prot="private" virt="non-virtual"><scope>dnac::RemoveMeshCommand::Impl</scope><name>Super</name></member>
     </listofallmembers>
   </compounddef>
