@@ -49,8 +49,7 @@ ADD_COLOR_VERTEX = False
 DNA_DIR = f"{DATA_DIR}/dna_files"
 BODY_DIR = f"{DATA_DIR}/body"
 CHARACTER_DNA = f"{DNA_DIR}/{CHARACTER_NAME}.dna"
-ANALOG_GUI = f"{DATA_DIR}/analog_gui.ma"
-GUI = f"{DATA_DIR}/gui.ma"
+
 UP_AXIS = "z"
 if UP_AXIS not in ("z", "y"):
     raise ValueError("UP_AXIS can be 'z' or 'y'")
@@ -182,7 +181,7 @@ def create_head_and_body_scene(mesh_names):
 
     cmds.file(BODY_FILE, options="v=0", type="mayaAscii", i=True)
     if UP_AXIS == "y":
-        cmds.rotate("-90deg", 0, 0, "root")
+        cmds.joint("root", edit=True, orientation=[-90.0, 0.0, 0.0])
     for facial_joint, neck_joint in zip(FACIAL_ROOT_JOINTS, NECK_JOINTS):
         cmds.parent(facial_joint, neck_joint)
 
@@ -287,14 +286,14 @@ if __name__ == "__main__":
     # Loads the builtin plugin needed for FBX
     cmds.loadPlugin("fbxmaya.mll")
 
-    # this fixes warning when calling this script with headless maya Warning: line 1: Unknown object type: HIKCharacterNode
+    # This fixes warning when calling this script with headless maya Warning: line 1: Unknown object type: HIKCharacterNode
     mel.eval(f"HIKCharacterControlsTool;")
 
-    # generate workspace.mel
+    # Generate workspace.mel
     mel.eval(f'setProject "{OUTPUT_DIR}";')
 
     # Export FBX for each lod
-
+    cmds.upAxis(ax=UP_AXIS)
     dna = get_dna()
     for lod in range(dna.get_lod_count()):
         export_fbx_for_lod(dna, lod)

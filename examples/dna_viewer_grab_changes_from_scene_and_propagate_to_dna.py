@@ -49,7 +49,7 @@ from os import path as ospath
 
 CHARACTER_NAME = "Ada"
 
-# if you use Maya, use absolute path
+# If you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
 ROOT_LIB_DIR = f"{ROOT_DIR}/lib"
@@ -142,9 +142,9 @@ def run_joints_command(reader, calibrated):
         rotation = cmds.joint(joint_name, query=True, orientation=True)
         joint_rotations.append(rotation)
 
-    # this is step 5 sub-step a
+    # This is step 5 sub-step a
     set_new_joints_translations = SetNeutralJointTranslationsCommand(joint_translations)
-    # this is step 5 sub-step b
+    # This is step 5 sub-step b
     set_new_joints_rotations = SetNeutralJointRotationsCommand(joint_rotations)
 
     # Abstraction to collect all commands into a sequence, and run them with only one invocation
@@ -154,7 +154,7 @@ def run_joints_command(reader, calibrated):
     commands.add(set_new_joints_rotations)
 
     commands.run(calibrated)
-    # verify that everything went fine
+    # Verify that everything went fine
     if not Status.isOk():
         status = Status.get()
         raise RuntimeError(f"Error run_joints_command: {status.message}")
@@ -163,7 +163,7 @@ def run_joints_command(reader, calibrated):
 def run_vertices_command(
     calibrated, old_vertices_positions, new_vertices_positions, mesh_index
 ):
-    # making deltas between old vertices positions and new one
+    # Making deltas between old vertices positions and new one
     deltas = []
     for new_vertex, old_vertex in zip(new_vertices_positions, old_vertices_positions):
         delta = []
@@ -171,7 +171,7 @@ def run_vertices_command(
             delta.append(new - old)
         deltas.append(delta)
 
-    # this is step 5 sub-step c
+    # This is step 5 sub-step c
     new_neutral_mesh = SetVertexPositionsCommand(
         mesh_index, deltas, VectorOperation_Add
     )
@@ -180,7 +180,7 @@ def run_vertices_command(
     commands.add(new_neutral_mesh)
     commands.run(calibrated)
 
-    # verify that everything went fine
+    # Verify that everything went fine
     if not Status.isOk():
         status = Status.get()
         raise RuntimeError(f"Error run_vertices_command: {status.message}")
@@ -209,7 +209,7 @@ config = RigConfig(
 )
 build_rig(dna=dna, config=config)
 
-# this is step 3 sub-step a
+# This is step 3 sub-step a
 current_vertices_positions = {}
 mesh_indices = []
 for mesh_index, name in enumerate(dna.meshes.names):
@@ -217,15 +217,15 @@ for mesh_index, name in enumerate(dna.meshes.names):
         "mesh_index": mesh_index,
         "positions": get_mesh_vertex_positions_from_scene(name),
     }
-# loaded data - end of 3rd step
+# Loaded data - end of 3rd step
 ##################################
 
 ##################################
-# modify rig in maya, 4th step
+# Modify rig in maya, 4th step
 ##################################
 
 ##################################
-# propagate changes to dna, 5th step
+# Propagate changes to dna, 5th step
 reader = load_dna_reader(CHARACTER_DNA)
 calibrated = DNACalibDNAReader(reader)
 
