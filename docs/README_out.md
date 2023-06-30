@@ -129,8 +129,46 @@ Several Python examples are provided for reference and can be found in the **exa
 Note: Examples are grouped in three groups: DNA, DNACalib, and DNAViewer. These names are embedded as prefixes: dna_, dnacalib_, and dna_viewer_.   
 
 ## Example DNA files
-[Two demo DNA files](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/dna) are provided for easier testing of this tool. Any DNA generated with [MetaHumanCreator](https://www.unrealengine.com/en-US/metahuman)
+[Two demo DNA files](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/dna_files) are provided for easier testing of this tool. Any DNA generated with [MetaHumanCreator](https://www.unrealengine.com/en-US/metahuman)
 should work.
+
+The MHC 2023 spring release introduced changes to the rig definition (number of joints increased as well as the number of expressions).
+In order to accommodate those changes, we added several files to the repository in `/data/mh4` folder: new [gui scene](/data/mh4/gui.ma), updated [assemble script](/data/mh4/additional_assemble_script.py) and example of Ada’s [DNA file](https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/mh4/dna_files/Ada.dna).
+If a user wants to switch and use this new rig version it is necessary to update paths in their scripts:
+```python
+GUI = f"{DATA_DIR}/mh4/gui.ma"
+ADDITIONAL_ASSEMBLE_SCRIPT = f"{DATA_DIR}/mh4/additional_assemble_script.py"
+```
+
+In case character DNA is downloaded from [Quixel Bridge](https://quixel.com/bridge) and we are not sure which rig definition is used, it can be checked with following code:
+```python
+from dna import (
+    BinaryStreamReader,
+    DataLayer_All,
+    FileStream,
+    Status,
+)
+
+def load_dna_reader(dna_file):
+    stream = FileStream(
+        dna_file, FileStream.AccessMode_Read, FileStream.OpenMode_Binary
+    )
+    reader = BinaryStreamReader(stream, DataLayer_All)
+    reader.read()
+    if not Status.isOk():
+        status = Status.get()
+        raise RuntimeError(f"Error loading DNA: {status.message}")
+    return reader
+
+character_dna = "path_to/character.dna"
+reader = load_dna_reader(character_dna)
+if reader.getDBName() == "MH.4":
+  print("Use mh4 folder")
+elif reader.getDBName() == "DHI":
+  print("Use data folder")
+else:
+  print("Unsupported rig definition!")
+```
 
 # Notes
 If a user runs examples in Maya 2022, the value for `ROOT_DIR` should be changed and absolute paths must be used, 

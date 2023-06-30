@@ -159,6 +159,8 @@ sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so /usr/li
 sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libdnacalib.so.6 /usr/lib/libdnacalib.so.6
 
 sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/libembeddedRL4.so /usr/lib/embeddedRL4.mll
+
+sudo ln -s ~/MetaHuman-DNA-Calibration/lib/Maya2022/linux/MayaUERBFPlugin.mll /usr/lib/MayaUERBFPlugin.mll
 </pre></div>
 </div>
 <p>Note: Change the path <code class="docutils literal notranslate"><span class="pre">~/MetaHuman-DNA-Calibration</span></code> to where <code class="docutils literal notranslate"><span class="pre">MetaHuman-DNA-Calibration</span></code> is located.</p>
@@ -184,6 +186,9 @@ Maya scene assemble.
 Furthermore, <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/additional_assemble_script.py"><code class="docutils literal notranslate"><span class="pre">additional_assemble_script.py</span></code></a> is used to organize objects in scene and
 connect controls. The ideal setup looks like this:</p>
 <p><img alt="image" src="_images/aas.png" /></p>
+<p>The MHC 2023 spring release introduced changes to the rig definition (number of joints increased as well as the number of expressions).
+In order to accommodate those changes, we added several files to the repository in <code class="docutils literal notranslate"><span class="pre">/data/mh4</span></code> folder: new <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/mh4/gui.ma">gui scene</a>, updated <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/mh4/additional_assemble_script.py">assemble script</a> and example of Ada’s <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/mh4/dna_files/Ada.dna">DNA file</a>.
+Furthermore, in lib folder we added Maya RBF plugin which is used for controlling neck expressions. Neck setup has recently been improved and adding RBF plugin as well as new gui scene to use it, we get better neck deformations.</p>
 </section>
 </section>
 

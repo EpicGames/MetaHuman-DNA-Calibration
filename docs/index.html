@@ -241,8 +241,44 @@ If running on Linux, please make sure to append the LD_LIBRARY_PATH with absolut
 <p>Note: Examples are grouped in three groups: DNA, DNACalib, and DNAViewer. These names are embedded as prefixes: dna_, dnacalib_, and dna_viewer_.</p>
 <section id="example-dna-files">
 <h2>Example DNA files<a class="headerlink" href="#example-dna-files" title="Permalink to this headline"></a></h2>
-<p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/dna">Two demo DNA files</a> are provided for easier testing of this tool. Any DNA generated with <a class="reference external" href="https://www.unrealengine.com/en-US/metahuman">MetaHumanCreator</a>
+<p><a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/dna_files">Two demo DNA files</a> are provided for easier testing of this tool. Any DNA generated with <a class="reference external" href="https://www.unrealengine.com/en-US/metahuman">MetaHumanCreator</a>
 should work.</p>
+<p>The MHC 2023 spring release introduced changes to the rig definition (number of joints increased as well as the number of expressions).
+In order to accommodate those changes, we added several files to the repository in <code class="docutils literal notranslate"><span class="pre">/data/mh4</span></code> folder: new <span class="xref myst">gui scene</span>, updated <span class="xref myst">assemble script</span> and example of Ada’s <a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/data/mh4/dna_files/Ada.dna">DNA file</a>.
+If a user wants to switch and use this new rig version it is necessary to update paths in their scripts:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">GUI</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">DATA_DIR</span><span class="si">}</span><span class="s2">/mh4/gui.ma&quot;</span>
+<span class="n">ADDITIONAL_ASSEMBLE_SCRIPT</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">DATA_DIR</span><span class="si">}</span><span class="s2">/mh4/additional_assemble_script.py&quot;</span>
+</pre></div>
+</div>
+<p>In case character DNA is downloaded from <a class="reference external" href="https://quixel.com/bridge">Quixel Bridge</a> and we are not sure which rig definition is used, it can be checked with following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">BinaryStreamReader</span><span class="p">,</span>
+    <span class="n">DataLayer_All</span><span class="p">,</span>
+    <span class="n">FileStream</span><span class="p">,</span>
+    <span class="n">Status</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">load_dna_reader</span><span class="p">(</span><span class="n">dna_file</span><span class="p">):</span>
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">FileStream</span><span class="p">(</span>
+        <span class="n">dna_file</span><span class="p">,</span> <span class="n">FileStream</span><span class="o">.</span><span class="n">AccessMode_Read</span><span class="p">,</span> <span class="n">FileStream</span><span class="o">.</span><span class="n">OpenMode_Binary</span>
+    <span class="p">)</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">BinaryStreamReader</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">DataLayer_All</span><span class="p">)</span>
+    <span class="n">reader</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">Status</span><span class="o">.</span><span class="n">isOk</span><span class="p">():</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">Status</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error loading DNA: </span><span class="si">{</span><span class="n">status</span><span class="o">.</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">reader</span>
+
+<span class="n">character_dna</span> <span class="o">=</span> <span class="s2">&quot;path_to/character.dna&quot;</span>
+<span class="n">reader</span> <span class="o">=</span> <span class="n">load_dna_reader</span><span class="p">(</span><span class="n">character_dna</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">reader</span><span class="o">.</span><span class="n">getDBName</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;MH.4&quot;</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Use mh4 folder&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">reader</span><span class="o">.</span><span class="n">getDBName</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;DHI&quot;</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Use data folder&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unsupported rig definition!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 <section id="notes">
