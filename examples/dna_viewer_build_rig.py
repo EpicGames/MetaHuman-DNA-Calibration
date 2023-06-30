@@ -53,10 +53,10 @@ if __name__ == "__main__":
 
     makedirs(OUTPUT_DIR, exist_ok=True)
 
-    # this fixes warning when calling this script with headless maya Warning: line 1: Unknown object type: HIKCharacterNode
+    # This fixes warning when calling this script with headless maya Warning: line 1: Unknown object type: HIKCharacterNode
     mel.eval(f"HIKCharacterControlsTool;")
 
-    # generate workspace.mel
+    # Generate workspace.mel
     mel.eval(f'setProject "{OUTPUT_DIR}";')
 
     config = RigConfig(
@@ -70,5 +70,5 @@ if __name__ == "__main__":
     # Renames and saves the scene
     cmds.file(rename=f"{OUTPUT_DIR}/{CHARACTER_NAME}.mb")
     cmds.file(save=True)
-    # copy dna fila and workspace file alongside generated scene
+    # Copy dna file and workspace file alongside generated scene
     copyfile(CHARACTER_DNA, f"{OUTPUT_DIR}/{CHARACTER_NAME}.dna")

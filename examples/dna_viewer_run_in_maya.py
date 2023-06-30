@@ -10,7 +10,7 @@ IMPORTANT: You have to setup the environment before running this example. Please
 """
 
 
-# this example is intended to be used in Maya
+# This example is intended to be used in Maya
 
 import dna_viewer
 

@@ -20,7 +20,7 @@ NOTE: If OUTPUT_DIR does not exist, it will be created.
 from os import makedirs
 from os import path as ospath
 
-# if you use Maya, use absolute path
+# If you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 OUTPUT_DIR = f"{ROOT_DIR}/output"
 
