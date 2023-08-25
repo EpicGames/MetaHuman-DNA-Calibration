@@ -64,18 +64,20 @@ ConstArrayView<BoundingBox> UVBarycentricMapping::getBoundingBoxes() const {
     return {bBoxes.data(), bBoxes.size()};
 }
 
-UVBarycentricMapping::BarycentricPositionIndicesPair UVBarycentricMapping::getBarycentric(const fvec2& uv) const {
+UVBarycentricMapping::BarycentricPositionIndicesPair UVBarycentricMapping::getBarycentric(fvec2 uv) const {
     BarycentricPositionIndicesPair barycentricPositionsPair;
-    for (std::uint32_t i = 0u; i < bBoxes.size(); i++) {
-        if (bBoxes[i].contains(uv)) {
-            const auto barycentricWeights = triangles[i].first.getBarycentricCoords(uv);
-            // If we don't hit any triangle, we will use one whose bounding box we hit
-            barycentricPositionsPair = {barycentricWeights, ConstArrayView<std::uint32_t>{triangles[i].second}};
-            if ((barycentricWeights[0] >= 0.0f) && (barycentricWeights[0] <= 1.0f) &&
-                (barycentricWeights[1] >= 0.0f) && (barycentricWeights[1] <= 1.0f) &&
-                (barycentricWeights[2] >= 0.0f) && (barycentricWeights[2] <= 1.0f)) {
-                return barycentricPositionsPair;
-            }
+    auto it = std::min_element(bBoxes.begin(), bBoxes.end(), [uv](const BoundingBox& a, const BoundingBox& b) {
+        return a.distance(uv) < b.distance(uv);
+    });
+    if (it != bBoxes.end()) {
+        const auto i = static_cast<std::size_t>(std::distance(bBoxes.begin(), it));
+        const auto barycentricWeights = std::get<0>(triangles[i]).getBarycentricCoords(uv);
+        // If we don't hit any triangle, we will use one whose bounding box we hit
+        barycentricPositionsPair = BarycentricPositionIndicesPair(barycentricWeights, ConstArrayView<std::uint32_t>{std::get<1>(triangles[i])});
+        if ((barycentricWeights[0] >= 0.0f) && (barycentricWeights[0] <= 1.0f) &&
+            (barycentricWeights[1] >= 0.0f) && (barycentricWeights[1] <= 1.0f) &&
+            (barycentricWeights[2] >= 0.0f) && (barycentricWeights[2] <= 1.0f)) {
+            return barycentricPositionsPair;
         }
     }
     return barycentricPositionsPair;

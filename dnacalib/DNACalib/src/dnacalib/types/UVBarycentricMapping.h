@@ -11,8 +11,8 @@ namespace dnac {
 
 class UVBarycentricMapping {
     public:
-        using TrianglePositionIndicesPair = std::pair<Triangle, std::array<std::uint32_t, 3u> >;
-        using BarycentricPositionIndicesPair = std::pair<fvec3, ConstArrayView<std::uint32_t> >;
+        using TrianglePositionIndicesPair = std::tuple<Triangle, std::array<std::uint32_t, 3u> >;
+        using BarycentricPositionIndicesPair = std::tuple<fvec3, ConstArrayView<std::uint32_t> >;
 
     public:
         UVBarycentricMapping(const std::function<ConstArrayView<std::uint32_t>(std::uint32_t)>& faceGetter,
@@ -28,7 +28,7 @@ class UVBarycentricMapping {
         ConstArrayView<TrianglePositionIndicesPair> getTriangles() const;
         ConstArrayView<BoundingBox> getBoundingBoxes() const;
 
-        BarycentricPositionIndicesPair getBarycentric(const fvec2& uv) const;
+        BarycentricPositionIndicesPair getBarycentric(fvec2 uv) const;
 
     private:
         Vector<TrianglePositionIndicesPair> triangles;

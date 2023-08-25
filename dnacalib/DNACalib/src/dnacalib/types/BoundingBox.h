@@ -42,9 +42,15 @@ class BoundingBox {
             BoundingBox(std::begin(container), std::end(container), alpha) {
         }
 
-        bool contains(const fvec2& point) const {
+        bool contains(fvec2 point) const {
             return point[0] >= min[0] && point[0] <= max[0] &&
                    point[1] >= min[1] && point[1] <= max[1];
+        }
+
+        float distance(fvec2 point) const {
+            const float dx = std::max({min[0] - point[0], 0.0f, point[0] - max[0]});
+            const float dy = std::max({min[1] - point[1], 0.0f, point[1] - max[1]});
+            return std::sqrt(dx * dx + dy * dy);
         }
 
         fvec2 getMin() const {

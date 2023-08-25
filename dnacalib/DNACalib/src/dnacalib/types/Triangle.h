@@ -2,7 +2,6 @@
 
 #pragma once
 
-#include "dnacalib/types/Aliases.h"
 #include "dnacalib/TypeDefs.h"
 
 #include <array>
@@ -14,12 +13,6 @@ class Triangle {
     public:
         Triangle(const fvec2& a, const fvec2& b, const fvec2& c);
         explicit Triangle(const std::array<fvec2, 3>& vertices);
-
-        Triangle(const Triangle& triangle) = default;
-        Triangle& operator=(const Triangle& triangle) = default;
-
-        Triangle(Triangle&&) = default;
-        Triangle& operator=(Triangle&& triangle) = default;
 
         fvec3 getBarycentricCoords(const fvec2& point) const;
 

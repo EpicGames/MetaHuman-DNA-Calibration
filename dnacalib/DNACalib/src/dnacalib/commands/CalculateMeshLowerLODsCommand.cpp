@@ -49,8 +49,8 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
                     const std::uint32_t uvIndex = vertexLayoutTextureCoordinateIndices[i];
                     const fvec2 uvs = {us[uvIndex], vs[uvIndex]};
                     const auto weightsIndicesPair = mapping.getBarycentric(uvs);
-                    const fvec3& barycentric = weightsIndicesPair.first;
-                    auto srcVtxIndices = weightsIndicesPair.second;
+                    const fvec3& barycentric = std::get<0>(weightsIndicesPair);
+                    auto srcVtxIndices = std::get<1>(weightsIndicesPair);
 
                     if (srcVtxIndices.size() == 0) {
                         // We'll need to handle this case in the future?
