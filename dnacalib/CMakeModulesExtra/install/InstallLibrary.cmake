@@ -14,6 +14,14 @@
 set(INSTALL_LIBRARY_SOURCE_DIR "${CMAKE_CURRENT_LIST_DIR}")
 
 macro(install_library target_name)
+    # component_name is an optional argument, and will default to the given target_name
+    set(COMPONENT_NAME ${target_name})
+    set(extra_args ${ARGN})
+    list(LENGTH extra_args num_extra_args)
+    if(${num_extra_args} GREATER 0)
+        list(GET extra_args 0 COMPONENT_NAME)
+    endif()
+
     include(GNUInstallDirs)
     set(REPRESENTATIVE_TARGET_NAME ${target_name})
     set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME})
@@ -21,9 +29,20 @@ macro(install_library target_name)
     # Set install destinations and associate installed target files with an export
     install(TARGETS ${REPRESENTATIVE_TARGET_NAME}
         EXPORT ${PROJECT_NAME}-targets
-        RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+        COMPONENT ${COMPONENT_NAME}
+        RUNTIME
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            COMPONENT ${COMPONENT_NAME}
+        LIBRARY
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            COMPONENT ${COMPONENT_NAME}
+            NAMELINK_COMPONENT ${COMPONENT_NAME}
+        ARCHIVE
+            DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            COMPONENT ${COMPONENT_NAME}
+        PUBLIC_HEADER
+            DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+            COMPONENT ${COMPONENT_NAME}
         INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
     # Write build-tree targets
@@ -37,7 +56,8 @@ macro(install_library target_name)
     install(EXPORT ${PROJECT_NAME}-targets
         FILE ${PROJECT_NAME}Targets.cmake
         NAMESPACE ${PROJECT_NAME}::
-        DESTINATION ${INSTALL_CONFIGDIR})
+        DESTINATION ${INSTALL_CONFIGDIR}
+        COMPONENT ${COMPONENT_NAME})
 
     include(CMakePackageConfigHelpers)
 
@@ -68,13 +88,17 @@ macro(install_library target_name)
     install(FILES
         "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.install.cmake"
         DESTINATION ${INSTALL_CONFIGDIR}
-        RENAME "${PROJECT_NAME}Config.cmake")
+        RENAME "${PROJECT_NAME}Config.cmake"
+        COMPONENT ${COMPONENT_NAME})
 
     # Install package version file
     install(FILES
         "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
-        DESTINATION ${INSTALL_CONFIGDIR})
+        DESTINATION ${INSTALL_CONFIGDIR}
+        COMPONENT ${COMPONENT_NAME})
 
     # Install include files
-    install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+    install(DIRECTORY include/
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        COMPONENT ${COMPONENT_NAME})
 endmacro()

@@ -41,12 +41,19 @@ struct ArrayViewTraits<const T> {
     using difference_type = std::ptrdiff_t;
 };
 
+template<typename T, typename U>
+struct IsCompatible {
+    static constexpr bool value = std::is_same<typename std::remove_cv<T>::type, typename std::remove_cv<U>::type>::value &&
+        (std::is_const<typename std::remove_reference<T>::type>::value ||
+         !std::is_const<typename std::remove_reference<U>::type>::value);
+};
+
 /**
     @brief A view over a continuous sequence of objects.
     @tparam T element type
     Provides a view over a continuous sequence of objects owned by some other object.
     Contains a count of elements and a pointer to a location where they are stored.
-    ArrayView does not own the mmemory it points to - it does not perform any allocation
+    ArrayView does not own the memory it points to - it does not perform any allocation
     and deallocation. It can be constructed given a pointer and element count, or a container
     type argument. The class provides helper methods for creating subviews over the objects,
     and methods for by-value comparison with containers. ConstArrayView represents an immutable view.
@@ -76,23 +83,23 @@ class ArrayView {
             sz{size} {
         }
 
-        ArrayView(std::nullptr_t  /*unused*/, size_type  /*unused*/) : ArrayView{nullptr, {}} {
-        }
-
-        template<typename U>
+        template<typename U, typename std::enable_if<IsCompatible<T, U>::value, int>::type = 0>
         ArrayView(ArrayView<U>& src) : ArrayView{src.data(), src.size()} {
         }
 
-        template<typename U>
+        template<typename U, typename std::enable_if<IsCompatible<T, U>::value, int>::type = 0>
         ArrayView(const ArrayView<U>& src) : ArrayView{src.data(), src.size()} {
         }
 
-        template<typename U>
+        template<typename U, typename std::enable_if<IsCompatible<T, U>::value, int>::type = 0>
         ArrayView(ArrayView<U>&& src) : ArrayView{src.data(), src.size()} {
         }
 
-        template<typename U, typename std::enable_if<!std::is_rvalue_reference<U &&>::value, int>::type = 0>
-        explicit ArrayView(U&& src) : ArrayView{src.data(), src.size()} {
+        template<typename U,
+                 typename std::enable_if<!std::is_rvalue_reference<U &&>::value &&
+                                         IsCompatible<T, typename std::remove_reference<U>::type::value_type>::value,
+                                         int>::type = 0>
+        ArrayView(U&& src) : ArrayView{src.data(), static_cast<size_type>(src.size())} {
         }
 
         size_type size() const {
@@ -193,7 +200,8 @@ bool operator!=(const ArrayView<T>& lhs, const ArrayView<U>& rhs) {
 }
 
 template<typename T, typename TContainer>
-bool operator==(const ArrayView<T>& lhs, const TContainer& rhs) {
+typename std::enable_if<!std::is_base_of<ArrayView<T>, TContainer>::value, bool>::type operator==(const ArrayView<T>& lhs,
+                                                                                                  const TContainer& rhs) {
     if (lhs.size() != rhs.size()) {
         return false;
     }
@@ -207,17 +215,20 @@ bool operator==(const ArrayView<T>& lhs, const TContainer& rhs) {
 }
 
 template<typename T, typename TContainer>
-bool operator!=(const ArrayView<T>& lhs, const TContainer& rhs) {
+typename std::enable_if<!std::is_base_of<ArrayView<T>, TContainer>::value, bool>::type operator!=(const ArrayView<T>& lhs,
+                                                                                                  const TContainer& rhs) {
     return !(lhs == rhs);
 }
 
 template<typename T, typename TContainer>
-bool operator==(const TContainer& lhs, const ArrayView<T>& rhs) {
+typename std::enable_if<!std::is_base_of<ArrayView<T>, TContainer>::value, bool>::type operator==(const TContainer& lhs,
+                                                                                                  const ArrayView<T>& rhs) {
     return (rhs == lhs);
 }
 
 template<typename T, typename TContainer>
-bool operator!=(const TContainer& lhs, const ArrayView<T>& rhs) {
+typename std::enable_if<!std::is_base_of<ArrayView<T>, TContainer>::value, bool>::type operator!=(const TContainer& lhs,
+                                                                                                  const ArrayView<T>& rhs) {
     return !(lhs == rhs);
 }
 

@@ -93,6 +93,7 @@ def create_new_dna(dna_path):
     create_dna(dna_path)
     dna_reader = load_dna(dna_path)
     print_dna_summary(dna_reader)
+    print('Done.')
 
 
 if __name__ == "__main__":

@@ -3,11 +3,10 @@
 #pragma once
 
 #include "dnacalib/types/Aliases.h"
-#include "dnacalib/types/Triangle.h"
 #include "dnacalib/types/BoundingBox.h"
+#include "dnacalib/types/Triangle.h"
 
 namespace dnac {
-
 
 class UVBarycentricMapping {
     public:
@@ -23,16 +22,15 @@ class UVBarycentricMapping {
                              std::uint32_t faceCount,
                              MemoryResource* memRes);
 
-        explicit UVBarycentricMapping(const dna::Reader* reader, std::uint16_t meshIndex, MemoryResource* memRes);
-
-        ConstArrayView<TrianglePositionIndicesPair> getTriangles() const;
+        BarycentricPositionIndicesPair getBarycentric(fvec2 uv) const;
+        const Triangle& getTriangle(std::uint32_t index) const;
+        ConstArrayView<std::uint32_t> getTrianglePositionIndices(std::uint32_t index) const;
         ConstArrayView<BoundingBox> getBoundingBoxes() const;
 
-        BarycentricPositionIndicesPair getBarycentric(fvec2 uv) const;
-
     private:
-        Vector<TrianglePositionIndicesPair> triangles;
-        Vector<BoundingBox> bBoxes;
+        Vector<Triangle> triangles;
+        Vector<BoundingBox> boundingBoxes;
+        Vector<std::array<std::uint32_t, 3u> > trianglePositionIndices;
 };
 
 }  // namespace dnac

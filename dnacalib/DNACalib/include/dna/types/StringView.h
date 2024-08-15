@@ -32,12 +32,4 @@ class StringView : public trust::ConstArrayView<char> {
 
 };
 
-inline bool operator==(const StringView& lhs, const StringView& rhs) {
-    return (static_cast<const StringView::Base&>(lhs) == static_cast<const StringView::Base&>(rhs));
-}
-
-inline bool operator!=(const StringView& lhs, const StringView& rhs) {
-    return !(lhs == rhs);
-}
-
 }  // namespace dna
