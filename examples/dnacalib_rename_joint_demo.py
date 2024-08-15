@@ -71,3 +71,4 @@ if __name__ == "__main__":
     # Prints the new joint name
     print(calibrated.getJointName(10))
     save_dna(calibrated, OUTPUT_DNA)
+    print('Done.')

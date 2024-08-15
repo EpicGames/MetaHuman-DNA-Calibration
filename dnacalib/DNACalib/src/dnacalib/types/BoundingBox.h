@@ -53,6 +53,11 @@ class BoundingBox {
             return std::sqrt(dx * dx + dy * dy);
         }
 
+        bool overlaps(const BoundingBox& other) const {
+            return (max[0] >= other.min[0] && other.max[0] >= min[0]) &&
+                   (max[1] >= other.min[1] && other.max[1] >= min[1]);
+        }
+
         fvec2 getMin() const {
             return min;
         }

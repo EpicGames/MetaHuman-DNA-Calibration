@@ -3,10 +3,25 @@
 #include "dnacalib/commands/CalculateMeshLowerLODsCommand.h"
 
 #include "dnacalib/CommandImplBase.h"
+#include "dnacalib/commands/CalculateMeshLowerLODsCommandImpl.h"
 #include "dnacalib/dna/DNA.h"
 #include "dnacalib/dna/DNACalibDNAReaderImpl.h"
 #include "dnacalib/types/Aliases.h"
 #include "dnacalib/types/UVBarycentricMapping.h"
+
+#ifdef _MSC_VER
+    #pragma warning(push)
+    #pragma warning(disable : 4365 4987)
+#endif
+#include <algorithm>
+#include <cstddef>
+#include <cstdio>
+#include <iterator>
+#include <limits>
+#ifdef _MSC_VER
+    #pragma warning(pop)
+#endif
+
 
 namespace dnac {
 
@@ -25,7 +40,16 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
         }
 
         void run(DNACalibDNAReaderImpl* output) {
-            UVBarycentricMapping mapping{output, meshIndex, getMemoryResource()};
+            auto faceGetter = std::bind(&dna::Reader::getFaceVertexLayoutIndices, output, meshIndex, std::placeholders::_1);
+            const auto layoutPositions = output->getVertexLayoutPositionIndices(meshIndex);
+            const auto layoutTexCoords = output->getVertexLayoutTextureCoordinateIndices(meshIndex);
+            const auto origMappingUs = output->getVertexTextureCoordinateUs(meshIndex);
+            const auto mappingVs = output->getVertexTextureCoordinateVs(meshIndex);
+            const auto mappingUs = deduplicateTextureCoordinates(origMappingUs, mappingVs);
+            const auto faceCount = output->getFaceCount(meshIndex);
+
+            UVBarycentricMapping mapping{faceGetter, layoutPositions, layoutTexCoords, mappingUs, mappingVs, faceCount,
+                                         getMemoryResource()};
 
             auto srcMeshXs = output->getVertexPositionXs(meshIndex);
             auto srcMeshYs = output->getVertexPositionYs(meshIndex);
@@ -36,51 +60,83 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
                 };
 
             for (std::uint16_t mi : findIndicesOfMeshLowerLODs(output)) {
-                auto vertexLayoutPositionIndices = output->getVertexLayoutPositionIndices(mi);
-                auto vertexLayoutTextureCoordinateIndices = output->getVertexLayoutTextureCoordinateIndices(mi);
-                auto us = output->getVertexTextureCoordinateUs(mi);
-                auto vs = output->getVertexTextureCoordinateVs(mi);
+                const auto vertexLayoutPositionIndices = output->getVertexLayoutPositionIndices(mi);
+                const auto vertexLayoutTextureCoordinateIndices = output->getVertexLayoutTextureCoordinateIndices(mi);
+                const auto vs = output->getVertexTextureCoordinateVs(mi);
+                const auto us = deduplicateTextureCoordinates(output->getVertexTextureCoordinateUs(mi), vs);
                 const std::uint32_t positionCount = output->getVertexPositionCount(mi);
                 RawVector3Vector destVertexPositions {positionCount, {}, getMemoryResource()};
                 // As there can be multiple VertexLayout per each VertexPosition we will use arithmetic mean value.
-                Vector<uint8_t> vertexLayoutsPerPosition{positionCount, {}, getMemoryResource()};
+                Vector<std::uint8_t> vertexLayoutsPerPosition{positionCount, {}, getMemoryResource()};
 
-                for (std::size_t i = 0u; i < vertexLayoutPositionIndices.size(); ++i) {
-                    const std::uint32_t uvIndex = vertexLayoutTextureCoordinateIndices[i];
+                for (std::uint32_t vli = 0u; vli < vertexLayoutPositionIndices.size(); ++vli) {
+                    std::uint32_t uvIndex = vertexLayoutTextureCoordinateIndices[vli];
                     const fvec2 uvs = {us[uvIndex], vs[uvIndex]};
                     const auto weightsIndicesPair = mapping.getBarycentric(uvs);
-                    const fvec3& barycentric = std::get<0>(weightsIndicesPair);
+                    fvec3 barycentric = std::get<0>(weightsIndicesPair);
                     auto srcVtxIndices = std::get<1>(weightsIndicesPair);
 
                     if (srcVtxIndices.size() == 0) {
-                        // We'll need to handle this case in the future?
-                        assert(false && "Could not map a vertex, did not hit any triangle's bounding box.");
-                        continue;
+                        // We didn't hit any triangle. We aim to identify the nearest face to this UV, ensuring
+                        // that the selected face has an intersection with at least one of the adjacent faces of the vertex we are
+                        // projecting.
+                        float minDistance = std::numeric_limits<float>::max();
+                        std::uint32_t sourceTriangleIndex = std::numeric_limits<std::uint32_t>::max();
+                        // First we find all of the faces that are adjacent to this vertex
+                        for (std::uint32_t fi = 0u; fi < output->getFaceCount(mi); fi++) {
+                            const auto face = output->getFaceVertexLayoutIndices(mi, fi);
+                            if (std::find(face.begin(), face.end(), vli) == face.end()) {
+                                continue;
+                            }
+
+                            // Gather all vertex UVs from this face and create a bounding box from it
+                            Vector<fvec2> UVs{getMemoryResource()};
+                            for (const auto vertexLayoutIndex : face) {
+                                uvIndex = vertexLayoutTextureCoordinateIndices[vertexLayoutIndex];
+                                UVs.emplace_back(us[uvIndex], vs[uvIndex]);
+                            }
+                            const BoundingBox faceBoundingBox{UVs};
+
+                            // Find the closest triangle that has intersection with this face
+                            auto bBoxes = mapping.getBoundingBoxes();
+                            for (std::uint32_t bi = 0u; bi < bBoxes.size(); bi++) {
+                                const auto& bBox = bBoxes[bi];
+                                if (bBox.overlaps(faceBoundingBox)) {
+                                    const float distance = bBox.distance(uvs);
+                                    if (distance < minDistance) {
+                                        minDistance = distance;
+                                        sourceTriangleIndex = bi;
+                                    }
+                                }
+                            }
+                        }
+
+                        if (sourceTriangleIndex != std::numeric_limits<std::uint32_t>::max()) {
+                            barycentric = mapping.getTriangle(sourceTriangleIndex).getBarycentricCoords(uvs);
+                            srcVtxIndices = mapping.getTrianglePositionIndices(sourceTriangleIndex);
+                        } else {
+                            assert(false && "Could not map a vertex. It is not within a face of higher lod.");
+                            continue;
+                        }
                     }
                     const fvec3 src =
                         getSrcVertex(srcVtxIndices[0]) * barycentric[0] +
                         getSrcVertex(srcVtxIndices[1]) * barycentric[1] +
                         getSrcVertex(srcVtxIndices[2]) * barycentric[2];
 
-                    const uint32_t positionIndex = vertexLayoutPositionIndices[i];
+                    const uint32_t positionIndex = vertexLayoutPositionIndices[vli];
                     float& destX = destVertexPositions.xs[positionIndex];
                     float& destY = destVertexPositions.ys[positionIndex];
                     float& destZ = destVertexPositions.zs[positionIndex];
 
                     const auto vtxLayoutCount = ++vertexLayoutsPerPosition[positionIndex];
+                    // We require mean average, more than one vertexLayout for this vertex position
+                    const auto lastDenominator = static_cast<float>(vtxLayoutCount - 1u);
+                    const auto newDenominator = static_cast<float>(vtxLayoutCount);
+                    destX = (destX * lastDenominator + src[0]) / newDenominator;
+                    destY = (destY * lastDenominator + src[1]) / newDenominator;
+                    destZ = (destZ * lastDenominator + src[2]) / newDenominator;
 
-                    if (vtxLayoutCount == 1) {
-                        destX = src[0];
-                        destY = src[1];
-                        destZ = src[2];
-                    } else {
-                        // We require mean average, more than one vertexLayout for this vertex position
-                        const auto lastDenominator = static_cast<float>(vtxLayoutCount - 1u);
-                        const auto newDenominator = static_cast<float>(vtxLayoutCount);
-                        destX = (destX * lastDenominator + src[0]) / newDenominator;
-                        destY = (destY * lastDenominator + src[1]) / newDenominator;
-                        destZ = (destZ * lastDenominator + src[2]) / newDenominator;
-                    }
                 }
                 output->setVertexPositions(mi, std::move(destVertexPositions));
             }
@@ -113,10 +169,21 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
                         }
                     }
                 } else {
-                    isLowerLOD = std::find(lodMeshIndices.begin(), lodMeshIndices.end(), meshIndex) != lodMeshIndices.end();
+                    isLowerLOD =
+                        std::find(lodMeshIndices.begin(), lodMeshIndices.end(), meshIndex) != lodMeshIndices.end();
                 }
             }
             return lowerLODIndices;
+        }
+
+        Vector<float> deduplicateTextureCoordinates(ConstArrayView<float> us, ConstArrayView<float> vs) {
+            Vector<float> usCopy{us.begin(), us.end(), getMemoryResource()};
+            if (isUVMapOverlapping(us, vs)) {
+                // The offset function will not modify those given arrays for which the specified offset is 0.0
+                // So const_cast-ing here is just to satisfy the compiler, not for modifying the data sneakily.
+                offsetOverlappingUVMapRegion(usCopy, {const_cast<float*>(vs.data()), vs.size()}, 1.0f, 0.0f);
+            }
+            return usCopy;
         }
 
     private:

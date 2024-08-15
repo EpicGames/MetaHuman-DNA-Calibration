@@ -75,6 +75,7 @@ def save_dna(reader, path):
 def create_json_dna(input_path, output_path):
     dna_reader = load_dna(input_path)
     save_dna(dna_reader, output_path)
+    print('Done.')
 
 
 if __name__ == "__main__":

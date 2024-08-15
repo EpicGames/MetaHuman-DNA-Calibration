@@ -70,7 +70,7 @@ void JointFilter::apply(RawBehavior& dest) {
             }
         }
         // Collect row indices of removed output indices to be used for joint delta removal
-        Set<std::size_t> rowsToDelete{memRes};
+        UnorderedSet<std::size_t> rowsToDelete{memRes};
         // Remove output indices belonging to the deletable joint
         extd::filter(jointGroup.outputIndices, [this, &rowsToDelete](std::uint16_t outputIndex, std::size_t rowIndex) {
                 const auto jointIndex = static_cast<std::uint16_t>(outputIndex / jointAttributeCount);
