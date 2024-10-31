@@ -21,3 +21,9 @@ PYTHONPATH +:=
 PYTHONPATH +:= data
 PYTHONPATH +:= lib/Maya2023/linux
 MAYA_PLUG_IN_PATH +:= lib/Maya2023/linux
+
++ MAYAVERSION:2024 PLATFORM:win64 MetaHuman-DNA-Calibration any .
+PYTHONPATH +:=
+PYTHONPATH +:= data
+PYTHONPATH +:= lib/Maya2024/windows
+MAYA_PLUG_IN_PATH +:= lib/Maya2024/windows
