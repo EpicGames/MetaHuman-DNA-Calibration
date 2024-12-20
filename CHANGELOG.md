@@ -2,16 +2,21 @@
 
 All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.3.1] - 2024-12-20
+
+### Added
+- example script to assemble face rig in Maya with textures `dna_viewer_build_rig_with_textures.py`
+- added support for Maya 2024 in dna_calibration.mod file
 
 ## [1.3.0] - 2024-08-15
 
 ### Added
 - support for Maya 2024
-- support for Python 3.11
+- support for Python 3.10
 - added source code comments to python wrappers
 
 ### Fixed
-- `CalculateMeshLowerLODsCommand` was rewritten to address edge cases discovered with eyelashes and to handle some common cases of invalid UV data. 
+- `CalculateMeshLowerLODsCommand` was rewritten to address edge cases discovered with eye lashes and to handle some common cases of invalid UV data. 
 - `RotateCommand` to rotate blend shape target deltas as well.
 - `SetBlendShapeTargetDeltasCommand` to allow setting vertex indices as well.
 - Swig generated classes are now wrapped instead of being monkey-patched to invoke constructors and destructors (which allows building with newer Swig versions - 4.0.x and 4.1.x).
