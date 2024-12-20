@@ -125,6 +125,7 @@ Several Python examples are provided for reference and can be found in the **exa
 - [Generates rig](/examples/dna_viewer_build_rig.py)
 - [Export FBX per LOD](/examples/dna_viewer_export_fbx.py)
 - [Propagating changes from Maya scene to dna](/examples/dna_viewer_grab_changes_from_scene_and_propagate_to_dna.py)
+- [Generate face rig with textures](/examples/dna_viewer_build_rig_with_textures.py)
 
 Note: Examples are grouped in three groups: DNA, DNACalib, and DNAViewer. These names are embedded as prefixes: dna_, dnacalib_, and dna_viewer_.   
 
@@ -171,7 +172,7 @@ else:
 ```
 
 # Notes
-If a user runs examples in Maya 2022, the value for `ROOT_DIR` should be changed and absolute paths must be used, 
+If a user runs examples in Maya, the value for `ROOT_DIR` should be changed and absolute paths must be used, 
 e.g. `c:/MetaHuman-DNA-Calibration` in Windows or `/home/user/MetaHuman-DNA-Calibration` in Linux. Important: Use `/` (forward slash), Maya uses forward slashes in path.
 
 See the [FAQ guide](docs/faq.md) for additional specifications.
