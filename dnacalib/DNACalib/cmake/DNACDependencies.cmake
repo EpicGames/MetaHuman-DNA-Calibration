@@ -123,6 +123,8 @@ set(SOURCES
     src/dnacalib/CommandImplBase.h
     src/dnacalib/TypeDefs.h
     src/dnacalib/commands/CalculateMeshLowerLODsCommand.cpp
+    src/dnacalib/commands/CalculateMeshLowerLODsCommandImpl.cpp
+    src/dnacalib/commands/CalculateMeshLowerLODsCommandImpl.h
     src/dnacalib/commands/ClearBlendShapesCommand.cpp
     src/dnacalib/commands/CommandSequence.cpp
     src/dnacalib/commands/PruneBlendShapeTargetsCommand.cpp

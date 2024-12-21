@@ -1,5 +1,17 @@
 %module dna
 
+%pythonbegin
+%{
+import os
+if hasattr(os, 'add_dll_directory'):
+    for path in os.environ.get('PATH', '').split(';'):
+        try:
+            if path:
+                os.add_dll_directory(path)
+        except Exception:
+            pass
+%}
+
 %{
 #include <pma/Defs.h>
 #include <pma/MemoryResource.h>

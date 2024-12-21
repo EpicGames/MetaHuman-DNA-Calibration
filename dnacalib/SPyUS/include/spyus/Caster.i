@@ -171,28 +171,59 @@ class name(object):
 %enddef
 
 %pythoncode %{
-def __new_decorator(factory_func, original_new):
-    @staticmethod
-    def __new(cls, *args, **kwargs):
-        # FIXME: while this workaround solves the immediate issue with the set of classes we currently have,
-        # it will fail for classes that use a factory function but need no parameters at all, in which case
-        # the factory function will never be invoked, only the original __new__ function.
-        if args or kwargs:
-            return factory_func(*args, **kwargs)
-        return original_new(cls)
-    return __new
+def with_metaclass(meta, *bases):
+    class metaclass(type):
 
-def __managed_init(self, *args, **kwargs):
-    self._args = args
-    self._kwargs = kwargs
+        def __new__(cls, name, this_bases, d):
+            return meta(name, bases, d)
+
+        @classmethod
+        def __prepare__(cls, name, this_bases):
+            return meta.__prepare__(name, bases)
+    return type.__new__(metaclass, 'temporary_class', (), {})
 %}
 
-%define pythonize_unmanaged_type(type, creator, destroyer)
+%define pythonize_unmanaged_type(typename, creator, destroyer)
 %pythoncode %{
-type ## .__new__ = __new_decorator(type ## _ ## creator, type ## .__new__)
-type ## .__del__ = lambda instance: type ## _ ## destroyer ## (instance)
-type ## .__init__ = __managed_init
-del type ## .creator
-del type ## .destroyer
+typename ## Impl = typename
+
+class typename ## ImplReflectionMixin(type):
+
+    def __getattr__(cls, name):
+        return getattr(typename ## Impl, name)
+
+    def __dir__(cls):
+        return [name for name in dir(typename ## Impl) if name not in (#creator, #destroyer)]
+
+class typename(with_metaclass(typename ## ImplReflectionMixin, object)):
+    __slots__ = ('_args', '_kwargs', '_instance')
+
+    def __init__(self, *args, **kwargs):
+        self._args = args
+        self._kwargs = kwargs
+        self._instance = typename ## Impl. ## creator(*args, **kwargs)
+
+    def __del__(self):
+        typename ## Impl. ## destroyer(self._instance)
+
+    def _in_slots(self, attr):
+        for cls in type(self).__mro__:
+            if attr in getattr(cls, '__slots__', []):
+                return True
+        return False
+
+    def __getattr__(self, attr):
+        if self._in_slots(attr):
+            return object.__getattr__(self, attr)
+        return getattr(self._instance, attr)
+
+    def __setattr__(self, attr, value):
+        if self._in_slots(attr):
+            object.__setattr__(self, attr, value)
+        else:
+            setattr(self._instance, attr, value)
+
+    def __dir__(self):
+        return [name for name in self._instance.__dir__() if name not in (#creator, #destroyer)]
 %}
 %enddef

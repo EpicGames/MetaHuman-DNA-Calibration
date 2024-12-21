@@ -6,7 +6,7 @@ Follow the steps:
 
 1. Start Maya
 2. open maya scene (do 2.1 or 2.2)
-2.1. Open existing maya scene generated from dna or
+2.1. Generate new scene using build_meshes or
 2.2. start DNA Viewer GUI (dna_viewer_run_in_maya.py)
     - Select DNA file that you want to load and generate scene for
     - Select meshes that you want to change
@@ -79,7 +79,7 @@ from dnacalib import (
     VectorOperation_Add,
 )
 
-from dna_viewer import DNA, RigConfig, build_rig
+from dna_viewer import DNA, RigConfig, build_rig, build_meshes
 
 
 def load_dna_reader(path):
@@ -202,12 +202,18 @@ def assemble_maya_scene():
 makedirs(OUTPUT_DIR, exist_ok=True)
 
 dna = DNA(CHARACTER_DNA)
-config = RigConfig(
-    gui_path=f"{DATA_DIR}/gui.ma",
-    analog_gui_path=f"{DATA_DIR}/analog_gui.ma",
-    aas_path=ADDITIONAL_ASSEMBLE_SCRIPT,
-)
-build_rig(dna=dna, config=config)
+##################################
+# This is step 2 sub-step 1
+# use this block only if you need to assemble of scene from step 2.1
+# config = RigConfig(
+#     gui_path=f"{DATA_DIR}/gui.ma",
+#     analog_gui_path=f"{DATA_DIR}/analog_gui.ma",
+#     aas_path=ADDITIONAL_ASSEMBLE_SCRIPT,
+# )
+# build_meshes(dna=dna, config=config)
+# This is end of step 2 sub-step 1
+##################################
+
 
 # This is step 3 sub-step a
 current_vertices_positions = {}
