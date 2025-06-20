@@ -28,10 +28,10 @@ class Geometry(Definition):
 
         if not self.geometry_read and self.layer_enabled(Layer.geometry):
             self.geometry_read = True
-            self.geometry_meshes = []
-            for lod in range(self.get_lod_count()):
-                for mesh_index in self.get_mesh_indices_for_lod(lod):
-                    self.geometry_meshes.append(self.add_mesh(mesh_index))
+            self.geometry_meshes = [
+                self.add_mesh(mesh_index)
+                for mesh_index in range(self.get_mesh_count())
+            ]
 
     def get_maximum_influence_per_vertex(self, mesh_index: int) -> int:
         return cast(int, self.reader.getMaximumInfluencePerVertex(meshIndex=mesh_index))
