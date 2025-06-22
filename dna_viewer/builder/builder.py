@@ -148,7 +148,10 @@ class Builder:
             joints = self._add_joints()
 
             if self.config.group_by_lod and joints:
-                cmds.parent(joints[0].name, self.config.get_top_level_group())
+                for joint in joints:
+                    if joint.name == joint.parent_name:
+                        cmds.parent(joint.name, self.config.get_top_level_group())
+                        break
 
     def create_groups(self) -> None:
         """
