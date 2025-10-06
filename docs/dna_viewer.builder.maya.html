@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNAViewer.builder.maya package &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DNAViewer.dnalib package" href="dna_viewer.dnalib.html" />
+    <link rel="prev" title="DNAViewer.builder package" href="dna_viewer.builder.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="dna_viewer_modules.html">DNAViewer</a> &raquo;</li>
+          <li><a href="dna_viewer.html">DNAViewer package</a> &raquo;</li>
+      <li>DNAViewer.builder.maya package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer.builder.maya.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dnaviewer-builder-maya-package">
+<h1>DNAViewer.builder.maya package<a class="headerlink" href="#dnaviewer-builder-maya-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-dna_viewer.builder.maya.mesh">
+<span id="dna-viewer-builder-maya-mesh-module"></span><h2>dna_viewer.builder.maya.mesh module<a class="headerlink" href="#module-dna_viewer.builder.maya.mesh" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.mesh.</span></span><span class="sig-name descname"><span class="pre">MayaMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dna</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="dna_viewer.dnalib.html#dna_viewer.dnalib.dnalib.DNA" title="dna_viewer.dnalib.dnalib.DNA"><span class="pre">dna_viewer.dnalib.dnalib.DNA</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_shape_group_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_shape_name_postfix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_cluster_suffix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A builder class used for adding joints to the scene</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh_index</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>The index of the mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="dna_viewer.dnalib.html#dna_viewer.dnalib.dnalib.DNA" title="dna_viewer.dnalib.dnalib.DNA">DNA</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Instance of DNA</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">blend_shape_group_prefix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">blend_shape_group_prefix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>prefix string for blend shape group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">blend_shape_name_postfix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">blend_shape_name_postfix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>postfix string for blend shape name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">skin_cluster_suffix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">skin_cluster_suffix</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>postfix string for skin cluster name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">data</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#dna_viewer.builder.maya.mesh.Mesh" title="dna_viewer.builder.maya.mesh.Mesh">Mesh</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">data</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>mesh data used in the mesh creation process</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">fn_mesh</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>om.MFnMesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">fn_mesh</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>OpenMaya class used for creating the mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">mesh_object</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>om.MObject</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">mesh_object</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>the object representing the mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dag_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>om.MDagModifier</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dag_modifier</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>OpenMaya class used for naming the mesh</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.add_blend_shapes">
+<span class="sig-name descname"><span class="pre">add_blend_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.add_blend_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.add_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Adds blend shapes to the mesh</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.add_skin_cluster">
+<span class="sig-name descname"><span class="pre">add_skin_cluster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">joint_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.add_skin_cluster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.add_skin_cluster" title="Permalink to this definition"></a></dt>
+<dd><p>Adds skin cluster to the mesh</p>
+<p>&#64;type joint_names: List[str]
+&#64;param joint_names: Joint names needed for adding the skin cluster</p>
+<p>&#64;type joint_ids: List[int]
+&#64;param joint_ids: Joint indices needed for setting skin weights</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.add_texture_coordinates">
+<span class="sig-name descname"><span class="pre">add_texture_coordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.add_texture_coordinates"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.add_texture_coordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Method for adding texture coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shape">
+<span class="sig-name descname"><span class="pre">create_blend_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">blend_shape_target_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend_shape_channel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.create_blend_shape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shape" title="Permalink to this definition"></a></dt>
+<dd><p>Builds a single derived mesh using the provided mesh and the blend shape data of the DNA.</p>
+<p>&#64;type blend_shape_target_index: int
+&#64;param blend_shape_target_index: Used for getting a delta value representing the value change concerning the blend shape.</p>
+<p>&#64;type blend_shape_channel: int
+&#64;param blend_shape_channel: Used for getting the blend shape name from the DNA.</p>
+<p>&#64;type group: str
+&#64;param group: The transform the new meshes will be added to.</p>
+<p>&#64;type add_mesh_name_to_blend_shape_channel_name: bool
+&#64;param add_mesh_name_to_blend_shape_channel_name: A flag representing whether mesh name of blend shape channel is added to name when creating it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shape_node">
+<span class="sig-name descname"><span class="pre">create_blend_shape_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.create_blend_shape_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shape_node" title="Permalink to this definition"></a></dt>
+<dd><p>Creates a blend shape node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shapes">
+<span class="sig-name descname"><span class="pre">create_blend_shapes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">add_mesh_name_to_blend_shape_channel_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.create_blend_shapes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.create_blend_shapes" title="Permalink to this definition"></a></dt>
+<dd><p>Builds all the derived meshes using the provided mesh and the blend shapes data of the DNA.</p>
+<p>&#64;type add_mesh_name_to_blend_shape_channel_name: bool
+&#64;param add_mesh_name_to_blend_shape_channel_name: A flag representing whether mesh name of blend shape channel is added to name when creating it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.create_mesh_object">
+<span class="sig-name descname"><span class="pre">create_mesh_object</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OpenMaya.MObject</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.create_mesh_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.create_mesh_object" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of points that represent the vertex positions.</p>
+<p>&#64;rtype: MObject
+&#64;returns: Maya objects representing maya mesh functions and the created maya mesh object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.create_neutral_mesh">
+<span class="sig-name descname"><span class="pre">create_neutral_mesh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OpenMaya.MObject</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.create_neutral_mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.create_neutral_mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Creates the neutral mesh using the config provided for this builder class object</p>
+<p>&#64;rtype: om.MObject
+&#64;returns: the instance of the created mesh object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.get_texture_data">
+<span class="sig-name descname"><span class="pre">get_texture_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.get_texture_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.get_texture_data" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the data needed for the creation of textures.</p>
+<p>&#64;rtype: Tuple[List[float], List[float], List[int]] &#64;returns: The tuple containing the list of texture
+coordinate Us, the list of texture coordinate Vs and the list of texture coordinate indices.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.get_vertex_positions_from_dna_vertex_positions">
+<span class="sig-name descname"><span class="pre">get_vertex_positions_from_dna_vertex_positions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">OpenMaya.MPoint</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.get_vertex_positions_from_dna_vertex_positions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.get_vertex_positions_from_dna_vertex_positions" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of points that represent the vertex positions.</p>
+<p>&#64;rtype: List[MPoint]
+&#64;returns: List of maya point objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.prepare_mesh">
+<span class="sig-name descname"><span class="pre">prepare_mesh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.prepare_mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.prepare_mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of points that represent the vertex positions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.rename_mesh">
+<span class="sig-name descname"><span class="pre">rename_mesh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OpenMaya.MDagModifier</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.rename_mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.rename_mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Renames the initial mesh object that was created to the name from the configuration.</p>
+<p>&#64;rtype: Tuple[MDagModifier]
+&#64;returns: Maya object representing the dag modifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.MayaMesh.set_skin_weights">
+<span class="sig-name descname"><span class="pre">set_skin_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joint_ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#MayaMesh.set_skin_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.MayaMesh.set_skin_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the skin weights attributes.</p>
+<p>&#64;type mesh_name: str
+&#64;param mesh_name: The mesh name that is used for getting the skin cluster name.</p>
+<p>&#64;type joint_ids: List[int]
+&#64;param joint_ids: List of joint indices used for setting the skin weight attribute.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.mesh.</span></span><span class="sig-name descname"><span class="pre">Mesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dna_vertex_positions:</span> <span class="pre">typing.List[dna_viewer.model.Point3]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dna_vertex_layout_positions:</span> <span class="pre">typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polygon_faces:</span> <span class="pre">typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">polygon_connects:</span> <span class="pre">typing.List[int]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derived_mesh_names:</span> <span class="pre">typing.List[str]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/builder/maya/mesh.html#Mesh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A model class for holding data needed in the mesh building process</p>
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna_vertex_positions</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[Point3]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna_vertex_positions</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Data representing the positions of the vertices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">dna_vertex_layout_positions</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">dna_vertex_layout_positions</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>Data representing layout position indices of vertices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">polygon_faces</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">polygon_faces</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List of lengths of vertex layout indices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">polygon_connects</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">polygon_connects</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List of vertex layout position indices</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;type</span> <span class="pre">derived_mesh_names</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">&#64;param</span> <span class="pre">derived_mesh_names</span></span></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>List of mesh names</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh.derived_mesh_names">
+<span class="sig-name descname"><span class="pre">derived_mesh_names</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh.derived_mesh_names" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh.dna_vertex_layout_positions">
+<span class="sig-name descname"><span class="pre">dna_vertex_layout_positions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh.dna_vertex_layout_positions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh.dna_vertex_positions">
+<span class="sig-name descname"><span class="pre">dna_vertex_positions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">dna_viewer.model.Point3</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh.dna_vertex_positions" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh.polygon_connects">
+<span class="sig-name descname"><span class="pre">polygon_connects</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh.polygon_connects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.mesh.Mesh.polygon_faces">
+<span class="sig-name descname"><span class="pre">polygon_faces</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.mesh.Mesh.polygon_faces" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.builder.maya.skin_weights">
+<span id="dna-viewer-builder-maya-skin-weights-module"></span><h2>dna_viewer.builder.maya.skin_weights module<a class="headerlink" href="#module-dna_viewer.builder.maya.skin_weights" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">MayaSkinWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMayaAnim.MFnSkinCluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#MayaSkinWeights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class used for reading and storing skin weight related data needed for adding skin clusters</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.get_skin_cluster_influence">
+<span class="sig-name descname"><span class="pre">get_skin_cluster_influence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMayaAnim.MFnSkinCluster</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#MayaSkinWeights.get_skin_cluster_influence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.get_skin_cluster_influence" title="Permalink to this definition"></a></dt>
+<dd><p>Gets a list of joint names that are influences to the skin cluster.</p>
+<p>&#64;type skin_cluster: MFnSkinCluster
+&#64;param skin_cluster: The functionalities of a maya skin cluster object</p>
+<p>&#64;rtype: List[str]
+&#64;returns: The list if names of the joints that influence the skin cluster</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.get_skin_weights_for_mesh_name">
+<span class="sig-name descname"><span class="pre">get_skin_weights_for_mesh_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMayaAnim.MFnSkinCluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#MayaSkinWeights.get_skin_weights_for_mesh_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.get_skin_weights_for_mesh_name" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the skin weights concerning the given mesh.</p>
+<p>&#64;type skin_cluster: MFnSkinCluster
+&#64;param skin_cluster: The functionalities of a maya skin cluster object</p>
+<p>&#64;type mesh_name: str
+&#64;param mesh_name: The name of the mesh</p>
+<p>&#64;rtype: List[List[Union[int, float]]]
+&#64;returns: A list of list of weight indices and the weight values</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.joints">
+<span class="sig-name descname"><span class="pre">joints</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.joints" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.no_of_influences">
+<span class="sig-name descname"><span class="pre">no_of_influences</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.no_of_influences" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.skinning_method">
+<span class="sig-name descname"><span class="pre">skinning_method</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.skinning_method" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.MayaSkinWeights.vertices_info">
+<span class="sig-name descname"><span class="pre">vertices_info</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights.vertices_info" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.get_file_joint_mappings">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">get_file_joint_mappings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights" title="dna_viewer.builder.maya.skin_weights.MayaSkinWeights"><span class="pre">dna_viewer.builder.maya.skin_weights.MayaSkinWeights</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMayaAnim.MFnSkinCluster</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#get_file_joint_mappings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.get_file_joint_mappings" title="Permalink to this definition"></a></dt>
+<dd><p>Returns a list of object indices representing the influences concerning the joint names specified in the skin weight model.</p>
+<p>&#64;type skin_weights: MayaSkinWeights
+&#64;param skin_weights: The instance of the model storing data about skin weights</p>
+<p>&#64;type skin_cluster: MFnSkinCluster
+&#64;param skin_cluster: An object for working with functions concerning a skin cluster in maya</p>
+<p>&#64;rtype: List[int]
+&#64;returns: a list of indices representing the influences concerning the given joints</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.get_skin_weights_data">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">get_skin_weights_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">OpenMaya.MFnMesh</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OpenMayaAnim.MFnSkinCluster</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#get_skin_weights_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.get_skin_weights_data" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the maya objects that manipulate the mesh node and the skin cluster for a given mesh name.</p>
+<p>&#64;type mesh_name: str
+&#64;param mesh_name: The name of the mesh</p>
+<p>&#64;rtype: Tuple[MFnMesh, MFnSkinCluster]
+&#64;returns: The maya object that manipulate the mesh node and the skin cluster for a given mesh name.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.get_skin_weights_from_scene">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">get_skin_weights_from_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights" title="dna_viewer.builder.maya.skin_weights.MayaSkinWeights"><span class="pre">dna_viewer.builder.maya.skin_weights.MayaSkinWeights</span></a></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#get_skin_weights_from_scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.get_skin_weights_from_scene" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the instance of this class filled with data from the scene for a given mesh name.</p>
+<p>&#64;type mesh_name: str
+&#64;param mesh_name: The mesh name</p>
+<p>&#64;rtype: MayaSkinWeights
+&#64;returns: An instance of this class with the data from the scene</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.import_skin_weights">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">import_skin_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">skin_cluster</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMayaAnim.MFnSkinCluster</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh_node</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMaya.MFnMesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights" title="dna_viewer.builder.maya.skin_weights.MayaSkinWeights"><span class="pre">dna_viewer.builder.maya.skin_weights.MayaSkinWeights</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_joint_mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#import_skin_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.import_skin_weights" title="Permalink to this definition"></a></dt>
+<dd><p>Imports the skin weights to the scene using the joint mapping and the data provided in the model containing the weights.</p>
+<p>&#64;type skin_cluster: MFnSkinCluster
+&#64;param skin_cluster: An object for working with functions concerning a skin cluster in maya</p>
+<p>&#64;type mesh_node: MFnMesh
+&#64;param mesh_node: An object for working with functions concerning meshes in maya</p>
+<p>&#64;type skin_weights: MayaSkinWeights
+&#64;param skin_weights: The instance of the model storing data about skin weights</p>
+<p>&#64;type file_joint_mapping: List[int]
+&#64;param file_joint_mapping: a list of indices representing the influences concerning joints</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.skin_weights.set_skin_weights_to_scene">
+<span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.skin_weights.</span></span><span class="sig-name descname"><span class="pre">set_skin_weights_to_scene</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skin_weights</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#dna_viewer.builder.maya.skin_weights.MayaSkinWeights" title="dna_viewer.builder.maya.skin_weights.MayaSkinWeights"><span class="pre">dna_viewer.builder.maya.skin_weights.MayaSkinWeights</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/skin_weights.html#set_skin_weights_to_scene"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.skin_weights.set_skin_weights_to_scene" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the skin weights to the scene.</p>
+<p>&#64;type mesh_name: str
+&#64;param mesh_name: The mesh name</p>
+<p>&#64;type skin_weights: MayaSkinWeights
+&#64;param skin_weights: The object containing data that need to be set to the scene.</p>
+</dd></dl>
+
+</section>
+<section id="module-dna_viewer.builder.maya.util">
+<span id="dna-viewer-builder-maya-util-module"></span><h2>dna_viewer.builder.maya.util module<a class="headerlink" href="#module-dna_viewer.builder.maya.util" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.util.Maya">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">dna_viewer.builder.maya.util.</span></span><span class="sig-name descname"><span class="pre">Maya</span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/util.html#Maya"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.util.Maya" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A utility class used for interfacing with maya transforms</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.util.Maya.get_element">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">OpenMaya.MDagPath</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OpenMaya.MFnDagNode</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/util.html#Maya.get_element"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.util.Maya.get_element" title="Permalink to this definition"></a></dt>
+<dd><p>gets the Union[MDagPath, MFnDagNode] object of the element with the given name</p>
+<p>&#64;type name: str
+&#64;param name: The name of the element to be retrieved</p>
+<p>&#64;rtype: Union[MDagPath, MFnDagNode]
+&#64;returns: A OpenMaya object representing the given element</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.util.Maya.get_transform">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_transform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OpenMaya.MFnTransform</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/util.html#Maya.get_transform"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.util.Maya.get_transform" title="Permalink to this definition"></a></dt>
+<dd><p>gets the transform of the element with the given name</p>
+<p>&#64;type element: str
+&#64;param element: The element name that we want the transform of</p>
+<p>&#64;rtype: MFnTransform
+&#64;returns: A MFnTransform object representing the given elements transform</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.util.Maya.get_translation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">OpenMaya.MVector</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/util.html#Maya.get_translation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.util.Maya.get_translation" title="Permalink to this definition"></a></dt>
+<dd><p>gets the translation of the element with the given name</p>
+<p>&#64;type element: str
+&#64;param element: The element name that we want the translation of</p>
+<p>&#64;type space: str
+&#64;param space: A string value representing the translation space (default is “world”)</p>
+<p>&#64;rtype: MVector
+&#64;returns: A MVector object representing the given elements translation</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="dna_viewer.builder.maya.util.Maya.set_translation">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">set_translation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">translation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">OpenMaya.MVector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">space</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/dna_viewer/builder/maya/util.html#Maya.set_translation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#dna_viewer.builder.maya.util.Maya.set_translation" title="Permalink to this definition"></a></dt>
+<dd><p>sets the translation of the element with the given name</p>
+<p>&#64;type element: str
+&#64;param element: The element name that we want to set the translation of</p>
+<p>&#64;type translation: MVector
+&#64;param translation: The new translation value</p>
+<p>&#64;type space: str
+&#64;param space: A string value representing the translation space (default is “object”)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer.builder.html" class="btn btn-neutral float-left" title="DNAViewer.builder package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna_viewer.dnalib.html" class="btn btn-neutral float-right" title="DNAViewer.dnalib package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mesh Utilities &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Build rig (build_rig)" href="dna_viewer_api_build_rig_md.html" />
+    <link rel="prev" title="Environment Setup" href="dna_viewer_api_md.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mesh Utilities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing">Importing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-config-instance-config">Create Config Instance(<code class="docutils literal notranslate"><span class="pre">Config</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-meshes-build-meshes">Building the meshes (<code class="docutils literal notranslate"><span class="pre">build_meshes</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Mesh Utilities</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer_api_build_meshes_md.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mesh-utilities">
+<h1>Mesh Utilities<a class="headerlink" href="#mesh-utilities" title="Permalink to this headline"></a></h1>
+<p>The purpose of the following methods is to provide:</p>
+<ul class="simple">
+<li><p>a simple mechanism for building meshes from a given DNA file path</p></li>
+<li><p>return and print information about the meshes contained in the DNA file</p></li>
+</ul>
+<section id="importing">
+<h2>Importing<a class="headerlink" href="#importing" title="Permalink to this headline"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">build_meshes</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DNA_PATH_ADA</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/dna_files/Ada.dna&quot;</span>
+<span class="n">DNA_PATH_TARO</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/dna_files/Taro.dna&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="create-config-instance-config">
+<h2>Create Config Instance(<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/builder/config.py#35"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a>)<a class="headerlink" href="#create-config-instance-config" title="Permalink to this headline"></a></h2>
+<p>Create a configuration object that will be used in the mesh building process.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span>
+    <span class="n">add_joints</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_blend_shapes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_skin_cluster</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_ctrl_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_animated_map_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">lod_filter</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="n">mesh_filter</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;head&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>These are just some attributes of <code class="docutils literal notranslate"><span class="pre">Config</span></code> class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">add_joints:</span> <span class="pre">bool</span></code> - A flag representing if joints should be added, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_blend_shapes:</span> <span class="pre">bool</span></code> - A flag representing if blendshapes should be added, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_skin_cluster:</span> <span class="pre">bool</span></code> - A flag representing if skin clusters should be added, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_ctrl_attributes_on_root_joint:</span> <span class="pre">bool</span></code> - A flag representing if control attributes should be added to the root joint
+as attributes, defaults to <code class="docutils literal notranslate"><span class="pre">False</span></code>. They are used as animation curves for Rig Logic inputs in the engine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_animated_map_attributes_on_root_joint:</span> <span class="pre">bool</span></code> - A flag representing if animated map attributes should be added to
+the root joint as attributes, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>. They are used as animation curves for animated maps in the engine.</p></li>
+</ul>
+<p><strong>IMPORTANT</strong>: Some combinations of flag values can lead to an unusable rig or disable some features!</p>
+</section>
+<section id="building-the-meshes-build-meshes">
+<h2>Building the meshes (<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/api.py#L26"><code class="docutils literal notranslate"><span class="pre">build_meshes</span></code></a>)<a class="headerlink" href="#building-the-meshes-build-meshes" title="Permalink to this headline"></a></h2>
+<p>Used for building rig elements (joints, meshes, blendshapes and skin clusters) without Rig Logic.
+It returns long names of meshes that have been added to the scene.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span>
+    <span class="n">add_joints</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_blend_shapes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_skin_cluster</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_ctrl_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_animated_map_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">lod_filter</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="n">mesh_filter</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;head&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+<span class="n">mesh_names</span> <span class="o">=</span> <span class="n">build_meshes</span><span class="p">(</span>
+    <span class="n">dna</span><span class="o">=</span><span class="n">dna_ada</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This uses the following parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dna:</span> <span class="pre">DNA</span></code> - Instance of DNA got with <code class="docutils literal notranslate"><span class="pre">DNA</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config:</span> <span class="pre">Config</span></code> - Instance of configuration.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mesh_names</span> <span class="o">=</span> <span class="n">build_meshes</span><span class="p">(</span><span class="n">dna</span><span class="o">=</span><span class="n">dna_ada</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Which defaults to adding all the meshes within the DNA file.</p>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h3>
+<p><strong>Important</strong>: The <span class="xref myst">environment setup</span> provided above needs to be executed before running this example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">Config</span><span class="p">,</span> <span class="n">build_meshes</span>
+
+<span class="c1"># if you use Maya, use absolute path</span>
+<span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ospath</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ospath</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span><span class="si">}</span><span class="s2">/..&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="c1"># Sets DNA file path</span>
+<span class="n">DNA_PATH_ADA</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/dna_files/Ada.dna&quot;</span>
+<span class="n">dna_ada</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="n">DNA_PATH_ADA</span><span class="p">)</span>
+
+<span class="c1"># Starts the mesh build process with all the default values</span>
+<span class="n">build_meshes</span><span class="p">(</span><span class="n">dna</span><span class="o">=</span><span class="n">dna_ada</span><span class="p">)</span>
+
+<span class="c1"># Creates the options to be passed in `build_meshes`</span>
+<span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">(</span>
+    <span class="n">add_joints</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_blend_shapes</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_skin_cluster</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_ctrl_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">add_animated_map_attributes_on_root_joint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">lod_filter</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="n">mesh_filter</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;head&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Starts the mesh building process with the provided parameters</span>
+<span class="c1"># In this case it will create every mesh contained in LODs 0 and 1 with &#39;head` in it&#39;s name,</span>
+<span class="n">build_meshes</span><span class="p">(</span>
+    <span class="n">dna</span><span class="o">=</span><span class="n">dna_ada</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer_api_md.html" class="btn btn-neutral float-left" title="Environment Setup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna_viewer_api_build_rig_md.html" class="btn btn-neutral float-right" title="Build rig (build_rig)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

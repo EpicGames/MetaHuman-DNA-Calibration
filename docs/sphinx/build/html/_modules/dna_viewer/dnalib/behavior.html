@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.dnalib.behavior &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.dnalib.behavior</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.dnalib.behavior</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span> <span class="nn">dna</span> <span class="kn">import</span> <span class="n">BinaryStreamReader</span> <span class="k">as</span> <span class="n">DNAReader</span>
+
+<span class="kn">from</span> <span class="nn">.definition</span> <span class="kn">import</span> <span class="n">Definition</span>
+<span class="kn">from</span> <span class="nn">.layer</span> <span class="kn">import</span> <span class="n">Layer</span>
+
+
+<div class="viewcode-block" id="Behavior"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior">[docs]</a><span class="k">class</span> <span class="nc">Behavior</span><span class="p">(</span><span class="n">Definition</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @type reader: BinaryStreamReader</span>
+<span class="sd">    @param reader: The binary stream reader being used</span>
+
+<span class="sd">    @type gui_to_raw: ConditionalTable</span>
+<span class="sd">    @param gui_to_raw: Mapping data about gui to raw values</span>
+
+<span class="sd">    @type psd: PSDMatrix</span>
+<span class="sd">    @param psd: The data representing Pose Space Deformation</span>
+
+<span class="sd">    @type blend_shapes: BlendShapesData</span>
+<span class="sd">    @param blend_shapes: The data representing blend shapes</span>
+
+<span class="sd">    @type animated_maps: AnimatedMapsConditionalTable</span>
+<span class="sd">    @param animated_maps: The data representing animated maps</span>
+
+<span class="sd">    @type joints: JointGroups</span>
+<span class="sd">    @param joints: The data representing joints</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reader</span><span class="p">:</span> <span class="n">DNAReader</span><span class="p">,</span> <span class="n">layers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Layer</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">gui_to_raw</span> <span class="o">=</span> <span class="n">ConditionalTable</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">psd</span> <span class="o">=</span> <span class="n">PSDMatrix</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes</span> <span class="o">=</span> <span class="n">BlendShapesData</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">animated_maps_conditional_table</span> <span class="o">=</span> <span class="n">AnimatedMapsConditionalTable</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_groups</span> <span class="o">=</span> <span class="n">JointGroups</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behavior_read</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="Behavior.start_read"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.start_read">[docs]</a>    <span class="k">def</span> <span class="nf">start_read</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">start_read</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">behavior_read</span> <span class="o">=</span> <span class="kc">False</span></div>
+
+<div class="viewcode-block" id="Behavior.is_read"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.is_read">[docs]</a>    <span class="k">def</span> <span class="nf">is_read</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">is_read</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">behavior_read</span></div>
+
+<div class="viewcode-block" id="Behavior.read"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.read">[docs]</a>    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Starts reading in the behavior part of the DNA</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">behavior_read</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">layer_enabled</span><span class="p">(</span><span class="n">Layer</span><span class="o">.</span><span class="n">behavior</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">behavior_read</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_gui_to_raw</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_psd</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_joint_groups</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_blend_shapes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_animated_maps_conditional_table</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_lods"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_lods">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_lods</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapLODs</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_from_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_from_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_from_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapFromValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_to_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_to_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_to_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapToValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_slope_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_slope_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_slope_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapSlopeValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_cut_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_cut_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_cut_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapCutValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_input_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_input_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_input_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapInputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_animated_map_output_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_animated_map_output_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_animated_map_output_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getAnimatedMapOutputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_gui_to_raw_from_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_gui_to_raw_from_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_to_raw_from_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawFromValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_gui_to_raw_to_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_gui_to_raw_to_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_to_raw_to_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawToValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.gget_gui_to_raw_slope_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.gget_gui_to_raw_slope_values">[docs]</a>    <span class="k">def</span> <span class="nf">gget_gui_to_raw_slope_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawSlopeValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_gui_to_raw_cut_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_gui_to_raw_cut_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_to_raw_cut_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawCutValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_gui_to_raw_input_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_gui_to_raw_input_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_to_raw_input_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawInputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_gui_to_raw_output_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_gui_to_raw_output_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_gui_to_raw_output_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getGUIToRawOutputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_psd_count"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_psd_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_psd_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getPSDCount</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_psd_row_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_psd_row_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_psd_row_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getPSDRowIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_psd_column_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_psd_column_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_psd_column_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getPSDColumnIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_psd_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_psd_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_psd_values</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getPSDValues</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_blend_shape_channel_lods"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_blend_shape_channel_lods">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shape_channel_lods</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getBlendShapeChannelLODs</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_blend_shape_channel_input_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_blend_shape_channel_input_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shape_channel_input_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getBlendShapeChannelInputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_blend_shape_channel_output_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_blend_shape_channel_output_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_blend_shape_channel_output_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getBlendShapeChannelOutputIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_row_count"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_row_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_row_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointRowCount</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_column_count"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_column_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_column_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointColumnCount</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_variable_attribute_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_variable_attribute_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_variable_attribute_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointVariableAttributeIndices</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_count"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_count">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_count</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupCount</span><span class="p">())</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_logs"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_logs">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_logs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_group_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupLODs</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_input_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_input_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_input_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_group_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupInputIndices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_output_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_output_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_output_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_group_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupOutputIndices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">)</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_values"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_values">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_values</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_group_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupValues</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Behavior.get_joint_group_joint_indices"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.get_joint_group_joint_indices">[docs]</a>    <span class="k">def</span> <span class="nf">get_joint_group_joint_indices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">joint_group_index</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointGroupJointIndices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="Behavior.add_gui_to_raw"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.add_gui_to_raw">[docs]</a>    <span class="k">def</span> <span class="nf">add_gui_to_raw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the gui to raw mapping&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">gui_to_raw</span> <span class="o">=</span> <span class="n">ConditionalTable</span><span class="p">(</span>
+            <span class="n">inputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gui_to_raw_input_indices</span><span class="p">(),</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gui_to_raw_output_indices</span><span class="p">(),</span>
+            <span class="n">from_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gui_to_raw_from_values</span><span class="p">(),</span>
+            <span class="n">to_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gui_to_raw_to_values</span><span class="p">(),</span>
+            <span class="n">slope_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gget_gui_to_raw_slope_values</span><span class="p">(),</span>
+            <span class="n">cut_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_gui_to_raw_cut_values</span><span class="p">(),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Behavior.add_psd"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.add_psd">[docs]</a>    <span class="k">def</span> <span class="nf">add_psd</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the PSD part of the behavior&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">psd</span> <span class="o">=</span> <span class="n">PSDMatrix</span><span class="p">(</span>
+            <span class="n">count</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_psd_count</span><span class="p">(),</span>
+            <span class="n">rows</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_psd_row_indices</span><span class="p">(),</span>
+            <span class="n">columns</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_psd_column_indices</span><span class="p">(),</span>
+            <span class="n">values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_psd_values</span><span class="p">(),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Behavior.add_joint_groups"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.add_joint_groups">[docs]</a>    <span class="k">def</span> <span class="nf">add_joint_groups</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the joints part of the behavior&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_groups</span><span class="o">.</span><span class="n">joint_row_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointRowCount</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">joint_groups</span><span class="o">.</span><span class="n">joint_column_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointColumnCount</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">lod</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lod_count</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">joint_groups</span><span class="o">.</span><span class="n">joint_variable_attribute_indices</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">getJointVariableAttributeIndices</span><span class="p">(</span><span class="n">lod</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">for</span> <span class="n">joint_group_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_count</span><span class="p">()):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">joint_groups</span><span class="o">.</span><span class="n">joint_groups</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                <span class="n">JointGroup</span><span class="p">(</span>
+                    <span class="n">lods</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_logs</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">),</span>
+                    <span class="n">inputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_input_indices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">),</span>
+                    <span class="n">outputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_output_indices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">),</span>
+                    <span class="n">values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_values</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">),</span>
+                    <span class="n">joints</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_joint_group_joint_indices</span><span class="p">(</span><span class="n">joint_group_index</span><span class="p">),</span>
+                <span class="p">)</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Behavior.add_blend_shapes"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.add_blend_shapes">[docs]</a>    <span class="k">def</span> <span class="nf">add_blend_shapes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the blend shapes part of the behavior&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">blend_shapes</span> <span class="o">=</span> <span class="n">BlendShapesData</span><span class="p">(</span>
+            <span class="n">lods</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_blend_shape_channel_lods</span><span class="p">(),</span>
+            <span class="n">inputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_blend_shape_channel_input_indices</span><span class="p">(),</span>
+            <span class="n">outputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_blend_shape_channel_output_indices</span><span class="p">(),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="Behavior.add_animated_maps_conditional_table"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.Behavior.add_animated_maps_conditional_table">[docs]</a>    <span class="k">def</span> <span class="nf">add_animated_maps_conditional_table</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Reads in the animated maps part of the behavior&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">reader</span><span class="o">.</span><span class="n">animated_maps_conditional_table</span> <span class="o">=</span> <span class="n">AnimatedMapsConditionalTable</span><span class="p">(</span>
+            <span class="n">lods</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_lods</span><span class="p">(),</span>
+            <span class="n">conditional_table</span><span class="o">=</span><span class="n">ConditionalTable</span><span class="p">(</span>
+                <span class="n">from_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_from_values</span><span class="p">(),</span>
+                <span class="n">to_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_to_values</span><span class="p">(),</span>
+                <span class="n">slope_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_slope_values</span><span class="p">(),</span>
+                <span class="n">cut_values</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_cut_values</span><span class="p">(),</span>
+                <span class="n">inputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_input_indices</span><span class="p">(),</span>
+                <span class="n">outputs</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_animated_map_output_indices</span><span class="p">(),</span>
+            <span class="p">),</span>
+        <span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="ConditionalTable"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.ConditionalTable">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">ConditionalTable</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding various values</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type from_values: List[float]</span>
+<span class="sd">    @param from_values: The list of values</span>
+
+<span class="sd">    @type to_values: List[float]</span>
+<span class="sd">    @param to_values: The list of values</span>
+
+<span class="sd">    @type slope_values: List[float]</span>
+<span class="sd">    @param slope_values: The list of slope values</span>
+
+<span class="sd">    @type cut_values: List[float]</span>
+<span class="sd">    @param cut_values: The list of cut values</span>
+
+<span class="sd">    @type inputs: List[int]</span>
+<span class="sd">    @param inputs: The indices of inputs</span>
+
+<span class="sd">    @type outputs: List[int]</span>
+<span class="sd">    @param outputs: The indices of outputs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">from_values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">to_values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">slope_values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">cut_values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">outputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PSDMatrix"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.PSDMatrix">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">PSDMatrix</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding data about Pose Space Deformation</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type count: int</span>
+<span class="sd">    @param count: The list of values</span>
+
+<span class="sd">    @type rows: List[int]</span>
+<span class="sd">    @param rows: List of row indices used for storing values</span>
+
+<span class="sd">    @type columns: List[int]</span>
+<span class="sd">    @param columns: List of row indices used for storing values</span>
+
+<span class="sd">    @type values: List[float]</span>
+<span class="sd">    @param values: The list of values, that can be accessed from the row and column index</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">rows</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">columns</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="JointGroup"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.JointGroup">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">JointGroup</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding data about joint groups</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type lods: List[int]</span>
+<span class="sd">    @param lods: A list of lod indices that the joint group is contained within</span>
+
+<span class="sd">    @type values: List[float]</span>
+<span class="sd">    @param values: A list of values</span>
+
+<span class="sd">    @type joints: List[int]</span>
+<span class="sd">    @param joints: A list of joint indices</span>
+
+<span class="sd">    @type inputs: List[int]</span>
+<span class="sd">    @param inputs: The indices of inputs</span>
+
+<span class="sd">    @type outputs: List[int]</span>
+<span class="sd">    @param outputs: The indices of outputs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">lods</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">values</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">joints</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">outputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BlendShapesData"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.BlendShapesData">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">BlendShapesData</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding data about blend shapes</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type lods: List[int]</span>
+<span class="sd">    @param lods: A list of lod indices that the blend shapes are contained within</span>
+
+<span class="sd">    @type inputs: List[int]</span>
+<span class="sd">    @param inputs: The indices of inputs</span>
+
+<span class="sd">    @type outputs: List[int]</span>
+<span class="sd">    @param outputs: The indices of outputs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">lods</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">outputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="AnimatedMapsConditionalTable"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.AnimatedMapsConditionalTable">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">AnimatedMapsConditionalTable</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for holding data about animated maps</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type lods: List[int]</span>
+<span class="sd">    @param lods: A list of lod indices that the blend shapes are contained within</span>
+
+<span class="sd">    @type conditional_table: ConditionalTable</span>
+<span class="sd">    @param conditional_table: Data needed for animated maps</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">lods</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">conditional_table</span><span class="p">:</span> <span class="n">ConditionalTable</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="n">ConditionalTable</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="JointGroups"><a class="viewcode-back" href="../../../dna_viewer.dnalib.html#dna_viewer.dnalib.behavior.JointGroups">[docs]</a><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">JointGroups</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A model class for storing data about joints</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    @type joint_row_count: int</span>
+<span class="sd">    @param joint_row_count: The row count of the matrix that stores the joints data</span>
+
+<span class="sd">    @type joint_column_count: int</span>
+<span class="sd">    @param joint_column_count: The column count of the matrix that stores the joints data</span>
+
+<span class="sd">    @type joint_variable_attribute_indices: List[List[int]]</span>
+<span class="sd">    @param joint_variable_attribute_indices: List of joint variable attribute indices per LOD</span>
+
+<span class="sd">    @type joint_groups: List[JointGroup]</span>
+<span class="sd">    @param joint_groups: The list of joint groups</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">joint_row_count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">joint_column_count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">joint_variable_attribute_indices</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span>
+    <span class="n">joint_groups</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">JointGroup</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nb">list</span><span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dna_viewer.builder.rig_builder &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_api_build_rig_md.html">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+      <li>dna_viewer.builder.rig_builder</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for dna_viewer.builder.rig_builder</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">importlib.machinery</span> <span class="kn">import</span> <span class="n">SourceFileLoader</span>
+<span class="kn">from</span> <span class="nn">importlib.util</span> <span class="kn">import</span> <span class="n">module_from_spec</span><span class="p">,</span> <span class="n">spec_from_loader</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">types</span> <span class="kn">import</span> <span class="n">ModuleType</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">maya</span> <span class="kn">import</span> <span class="n">cmds</span><span class="p">,</span> <span class="n">mel</span>
+<span class="kn">from</span> <span class="nn">maya.api.OpenMaya</span> <span class="kn">import</span> <span class="n">MSpace</span><span class="p">,</span> <span class="n">MVector</span>
+
+<span class="kn">from</span> <span class="nn">..builder.maya.util</span> <span class="kn">import</span> <span class="n">Maya</span>
+<span class="kn">from</span> <span class="nn">..common</span> <span class="kn">import</span> <span class="n">ANALOG_GUI_HOLDER</span><span class="p">,</span> <span class="n">GUI_HOLDER</span><span class="p">,</span> <span class="n">RIG_LOGIC_PREFIX</span><span class="p">,</span> <span class="n">DNAViewerError</span>
+<span class="kn">from</span> <span class="nn">..dnalib.dnalib</span> <span class="kn">import</span> <span class="n">DNA</span>
+<span class="kn">from</span> <span class="nn">.builder</span> <span class="kn">import</span> <span class="n">Builder</span>
+<span class="kn">from</span> <span class="nn">.config</span> <span class="kn">import</span> <span class="n">RigConfig</span>
+
+
+<div class="viewcode-block" id="RigBuilder"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder">[docs]</a><span class="k">class</span> <span class="nc">RigBuilder</span><span class="p">(</span><span class="n">Builder</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A builder class used for building meshes</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dna</span><span class="p">:</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RigConfig</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">dna</span><span class="o">=</span><span class="n">dna</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">RigConfig</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">:</span> <span class="n">MVector</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">:</span> <span class="n">MVector</span>
+
+    <span class="k">def</span> <span class="nf">_build</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_build</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_gui</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_analog_gui</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_rig_logic</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">run_additional_assemble_script</span><span class="p">()</span>
+
+<div class="viewcode-block" id="RigBuilder.run_additional_assemble_script"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.run_additional_assemble_script">[docs]</a>    <span class="k">def</span> <span class="nf">run_additional_assemble_script</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Runs an additional assemble script if specified in the character configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_path</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;running additional assemble script...&quot;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">module_name</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_path</span><span class="p">)</span><span class="o">.</span><span class="n">stem</span>
+                <span class="n">script</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">source_py_file</span><span class="p">(</span><span class="n">module_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_path</span><span class="p">)</span>
+                <span class="n">script_method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">script</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_method</span><span class="p">)</span>
+                <span class="n">script_method</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_top_level_group</span><span class="p">(),</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_rig_group</span><span class="p">(),</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_parameter</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Can&#39;t run aas script. Reason: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_rig_logic"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_rig_logic">[docs]</a>    <span class="k">def</span> <span class="nf">add_rig_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates and adds a rig logic node specified in the character configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_rig_logic</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_joints</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_skin_cluster</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_blend_shapes</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">aas_path</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_path</span>
+            <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_path</span>
+        <span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding rig logic...&quot;</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">cmds</span><span class="o">.</span><span class="n">loadPlugin</span><span class="p">(</span><span class="s2">&quot;embeddedRL4.mll&quot;</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">rig_logic_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">RIG_LOGIC_PREFIX</span><span class="si">}{</span><span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="n">dna</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+
+                <span class="n">mel_command</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">rig_logic_command</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -n &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">rig_logic_name</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -dfp &quot;</span><span class="si">{</span><span class="n">dna</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -cn &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">control_naming</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -jn &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">joint_naming</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -bsn &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">blend_shape_naming</span><span class="si">}</span><span class="s1">&quot;&#39;</span>
+                <span class="n">mel_command</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39; -amn &quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">animated_map_naming</span><span class="si">}</span><span class="s1">&quot;; &#39;</span>
+
+                <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mel command: </span><span class="si">{</span><span class="n">mel_command</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">mel</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">mel_command</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                    <span class="s2">&quot;The procedure needed for assembling the rig logic was not found, the plugin needed for this might not be loaded.&quot;</span>
+                <span class="p">)</span>
+                <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Something went wrong, skipping adding the rig logic... Reason: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_gui"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_gui">[docs]</a>    <span class="k">def</span> <span class="nf">add_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a gui according to the specified gui options. If none is specified no gui will be added.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_path</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding gui...&quot;</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">import_gui</span><span class="p">(</span>
+                <span class="n">gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_path</span><span class="p">,</span>
+                <span class="n">group_name</span><span class="o">=</span><span class="n">GUI_HOLDER</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">position_gui</span><span class="p">(</span><span class="n">GUI_HOLDER</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_ctrl_attributes</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_animated_map_attributes</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_ctrl_attributes"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_ctrl_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">add_ctrl_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds and sets the raw gui control attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">gui_control_names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_raw_control_names</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">gui_control_names</span><span class="p">:</span>
+            <span class="n">ctrl_and_attr_names</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_attribute</span><span class="p">(</span>
+                <span class="n">control_name</span><span class="o">=</span><span class="n">ctrl_and_attr_names</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">long_name</span><span class="o">=</span><span class="n">ctrl_and_attr_names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+            <span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_animated_map_attributes"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_animated_map_attributes">[docs]</a>    <span class="k">def</span> <span class="nf">add_animated_map_attributes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds and sets the animated map attributes.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">names</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">get_animated_map_names</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <span class="n">long_name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_path</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_attribute</span><span class="p">(</span>
+                    <span class="n">control_name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">animated_map_attribute_multipliers_name</span><span class="p">,</span>
+                    <span class="n">long_name</span><span class="o">=</span><span class="n">long_name</span><span class="p">,</span>
+                <span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.position_gui"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.position_gui">[docs]</a>    <span class="k">def</span> <span class="nf">position_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Sets the gui position to align with the character eyes&quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">eye_gui_name</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">cmds</span><span class="o">.</span><span class="n">objExists</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_joint_name</span>
+        <span class="p">):</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                <span class="s2">&quot;could not find joints needed for positioning the gui, leaving it at its default position...&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">gui_y</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">Maya</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">eye_gui_name</span><span class="p">)</span><span class="o">.</span><span class="n">translation</span><span class="p">(</span><span class="n">MSpace</span><span class="o">.</span><span class="n">kObject</span><span class="p">)</span><span class="o">.</span><span class="n">y</span>
+        <span class="p">)</span>
+        <span class="n">eyes_y</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">Maya</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_joint_name</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">translation</span><span class="p">(</span><span class="n">MSpace</span><span class="o">.</span><span class="n">kObject</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">y</span>
+        <span class="p">)</span>
+        <span class="n">delta_y</span> <span class="o">=</span> <span class="n">eyes_y</span> <span class="o">-</span> <span class="n">gui_y</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_translate_x</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;gui_translate_x should be a float, trying to cast the value to float...&quot;</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_translate_x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_translate_x</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="n">logging</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;could not cast string value to float&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+
+        <span class="n">Maya</span><span class="o">.</span><span class="n">get_transform</span><span class="p">(</span><span class="n">group_name</span><span class="p">)</span><span class="o">.</span><span class="n">translateBy</span><span class="p">(</span>
+            <span class="n">MVector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gui_translate_x</span><span class="p">,</span> <span class="n">delta_y</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">MSpace</span><span class="o">.</span><span class="n">kObject</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_analog_gui"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_analog_gui">[docs]</a>    <span class="k">def</span> <span class="nf">add_analog_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds an analog gui according to the specified analog gui options. If none is specified no analog gui will be</span>
+<span class="sd">        added.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_path</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">add_joints</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;adding analog gui...&quot;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">import_gui</span><span class="p">(</span>
+                <span class="n">gui_path</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">analog_gui_path</span><span class="p">,</span>
+                <span class="n">group_name</span><span class="o">=</span><span class="n">ANALOG_GUI_HOLDER</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dna</span><span class="o">.</span><span class="n">joints</span><span class="o">.</span><span class="n">names</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_eyes</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_eye_locators</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_eyes"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_eyes">[docs]</a>    <span class="k">def</span> <span class="nf">add_eyes</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add eyes to the analog gui&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_joint_name</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">right_eye_joint_name</span><span class="p">)</span>
+
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">central_driver_name</span><span class="p">,</span>
+            <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">facial_root_joint_name</span><span class="p">),</span>
+        <span class="p">)</span>
+
+        <span class="n">delta_l</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_aim_up_name</span>
+        <span class="p">)</span> <span class="o">-</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_driver_name</span><span class="p">)</span>
+        <span class="n">delta_r</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">right_eye_aim_up_name</span>
+        <span class="p">)</span> <span class="o">-</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">right_eye_driver_name</span><span class="p">)</span>
+
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_driver_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">)</span>
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">right_eye_driver_name</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">left_eye_aim_up_name</span><span class="p">,</span>
+            <span class="n">MVector</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_l</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_l</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_l</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+            <span class="p">),</span>
+        <span class="p">)</span>
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">right_eye_aim_up_name</span><span class="p">,</span>
+            <span class="n">MVector</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_r</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_r</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta_r</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+            <span class="p">),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.add_eye_locators"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.add_eye_locators">[docs]</a>    <span class="k">def</span> <span class="nf">add_eye_locators</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Add eye locators to the analog gui&quot;&quot;&quot;</span>
+
+        <span class="n">eye_l_locator_pos</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">le_aim</span><span class="p">)</span>
+        <span class="n">eye_r_locator_pos</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">re_aim</span><span class="p">)</span>
+        <span class="n">central_aim_pos</span> <span class="o">=</span> <span class="n">Maya</span><span class="o">.</span><span class="n">get_translation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">central_aim</span><span class="p">)</span>
+
+        <span class="n">eye_middle_delta</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+        <span class="n">eye_middle</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span> <span class="o">+</span> <span class="n">eye_middle_delta</span>
+
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">central_aim</span><span class="p">,</span>
+            <span class="n">MVector</span><span class="p">(</span><span class="n">eye_middle</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">eye_middle</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">central_aim_pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+        <span class="p">)</span>
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">le_aim</span><span class="p">,</span>
+            <span class="n">MVector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">eye_l_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">eye_l_locator_pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+        <span class="p">)</span>
+        <span class="n">Maya</span><span class="o">.</span><span class="n">set_translation</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">re_aim</span><span class="p">,</span>
+            <span class="n">MVector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">eye_r_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">eye_r_locator_pos</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span>
+        <span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.source_py_file"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.source_py_file">[docs]</a>    <span class="k">def</span> <span class="nf">source_py_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ModuleType</span><span class="p">]:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Used for loading a python file, used for additional assemble script.</span>
+
+<span class="sd">        @type name: str</span>
+<span class="sd">        @param name: The name of the module.</span>
+
+<span class="sd">        @type path: str</span>
+<span class="sd">        @param path: The path of the python file.</span>
+
+<span class="sd">        @rtype: Optional[ModuleType]</span>
+<span class="sd">        @returns: The loaded module.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">path_obj</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="n">path</span>
+            <span class="ow">and</span> <span class="n">path_obj</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="n">path_obj</span><span class="o">.</span><span class="n">is_file</span><span class="p">()</span>
+            <span class="ow">and</span> <span class="n">path_obj</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s2">&quot;.py&quot;</span>
+        <span class="p">):</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="n">spec_from_loader</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">SourceFileLoader</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">path</span><span class="p">))</span>
+            <span class="n">module</span> <span class="o">=</span> <span class="n">module_from_spec</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+            <span class="n">spec</span><span class="o">.</span><span class="n">loader</span><span class="o">.</span><span class="n">exec_module</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">module</span>
+        <span class="k">raise</span> <span class="n">DNAViewerError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2"> is not found!&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="RigBuilder.import_gui"><a class="viewcode-back" href="../../../dna_viewer.builder.html#dna_viewer.builder.rig_builder.RigBuilder.import_gui">[docs]</a>    <span class="k">def</span> <span class="nf">import_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gui_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">group_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Imports a gui using the provided parameters.</span>
+
+<span class="sd">        @type gui_path: str</span>
+<span class="sd">        @param gui_path: The path of the gui file that needs to be imported.</span>
+
+<span class="sd">        @type group_name: str</span>
+<span class="sd">        @param group_name: The name of the transform that holds the imported asset.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">cmds</span><span class="o">.</span><span class="n">file</span><span class="p">(</span><span class="n">gui_path</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupReference</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">groupName</span><span class="o">=</span><span class="n">group_name</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

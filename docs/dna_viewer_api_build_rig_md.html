@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build rig (build_rig) &mdash; DNA Calibration  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DNA" href="dna.html" />
+    <link rel="prev" title="Mesh Utilities" href="dna_viewer_api_build_meshes_md.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> DNA Calibration
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index_.html">MetaHuman DNA Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#overview">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#examples">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#notes">Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#license">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index_.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Repository Organization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html">Repository Organization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository_organization_md.html#folder-structure">Folder structure</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNACalib</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_md.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib_api_md.html">API overview</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_md.html">DNAViewer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_maya_md.html">Usage in Maya</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">DNAViewer API</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html">Environment Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_md.html#dna">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_api_build_meshes_md.html">Mesh Utilities</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-rigconfig-instance-rigconfig">Create RigConfig Instance(<code class="docutils literal notranslate"><span class="pre">RigConfig</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Technical documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dna.html">DNA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dnacalib.html">DNACalib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dna_viewer_modules.html">DNAViewer</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq_md.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">DNA Calibration</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Build rig (<code class="docutils literal notranslate"><span class="pre">build_rig</span></code>)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/dna_viewer_api_build_rig_md.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="build-rig-build-rig">
+<h1>Build rig (<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/api.py#L9"><code class="docutils literal notranslate"><span class="pre">build_rig</span></code></a>)<a class="headerlink" href="#build-rig-build-rig" title="Permalink to this headline"></a></h1>
+<p>The build rig API is used for easy assembly of the character rig in a Maya scene from a given DNA file path.</p>
+<section id="create-rigconfig-instance-rigconfig">
+<h2>Create RigConfig Instance(<a class="reference external" href="https://github.com/EpicGames/MetaHuman-DNA-Calibration/tree/main/dna_viewer/builder/config.py#35"><code class="docutils literal notranslate"><span class="pre">RigConfig</span></code></a>)<a class="headerlink" href="#create-rigconfig-instance-rigconfig" title="Permalink to this headline"></a></h2>
+<p>Create a configuration object that will be used in the mesh building process.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">RigConfig</span>
+</pre></div>
+</div>
+<p>These are just some attributes of <code class="docutils literal notranslate"><span class="pre">RigConfig</span></code> class:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gui_path:</span> <span class="pre">str</span></code> - The GUI file path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analog_gui_path:</span> <span class="pre">str</span></code> - The analog GUI file path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aas_path:</span> <span class="pre">str</span></code> - The additional assemble script path.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aas_method:</span> <span class="pre">str</span></code> - The method name that should be called from the additional assemble script.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_ctrl_attributes_on_root_joint:</span> <span class="pre">bool</span></code> - A flag representing if attributes should be added on the root joint, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add_key_frames:</span> <span class="pre">bool</span></code> - A flag representing if keyframes should be added, defaults to <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<p><strong>Important</strong>: The <span class="xref myst">environment setup</span> provided above needs to be executed before running this example.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dna_viewer</span> <span class="kn">import</span> <span class="n">DNA</span><span class="p">,</span> <span class="n">RigConfig</span><span class="p">,</span> <span class="n">build_rig</span>
+
+<span class="c1"># if you use Maya, use absolute path</span>
+<span class="n">ROOT_DIR</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ospath</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">ospath</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span><span class="si">}</span><span class="s2">/..&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">)</span>
+
+<span class="c1"># Sets the values that will used</span>
+<span class="n">DNA_PATH_ADA</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/dna_files/Ada.dna&quot;</span>
+<span class="n">dna_ada</span> <span class="o">=</span> <span class="n">DNA</span><span class="p">(</span><span class="n">DNA_PATH_ADA</span><span class="p">)</span>
+
+<span class="n">config</span> <span class="o">=</span> <span class="n">RigConfig</span><span class="p">(</span>
+    <span class="n">gui_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/gui.ma&quot;</span><span class="p">,</span>
+    <span class="n">analog_gui_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/analog_gui.ma&quot;</span><span class="p">,</span>
+    <span class="n">aas_path</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ROOT_DIR</span><span class="si">}</span><span class="s2">/data/additional_assemble_script.py&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Creates the rig</span>
+<span class="n">build_rig</span><span class="p">(</span><span class="n">dna</span><span class="o">=</span><span class="n">dna_ada</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dna_viewer_api_build_meshes_md.html" class="btn btn-neutral float-left" title="Mesh Utilities" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dna.html" class="btn btn-neutral float-right" title="DNA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Epic Games.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
