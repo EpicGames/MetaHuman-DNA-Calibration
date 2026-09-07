@@ -302,7 +302,7 @@ Contains read-only accessors to the geometry data associated with a rig.
 - `getVertexNormalXs(meshIndex)`
     List of all normal X values for the referenced mesh.
 - `getVertexNormalYs(meshIndex)`
-    List of all normal Y value for the referenced meshs.
+    List of all normal Y values for the referenced mesh.
 - `getVertexNormalZs(meshIndex)`
     List of all normal Z values for the referenced mesh.
 - `getVertexLayoutCount(meshIndex)`

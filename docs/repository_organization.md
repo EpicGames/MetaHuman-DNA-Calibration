@@ -55,7 +55,7 @@ The [`data folder`](/data) contains example DNA files. We provided two MetaHuman
 |![image](img/metahuman_008.png)| ![image](img/metahuman_010.png) |
 
 Additionally, we added [`gui`](/data/gui.ma) and [`analog_gui`](/data/analog_gui.ma) Maya scenes which are used during
-Maya scene assemble.
+Maya scene assembly.
 Furthermore, [`additional_assemble_script.py`](/data/additional_assemble_script.py) is used to organize objects in scene and
 connect controls. The ideal setup looks like this:
 

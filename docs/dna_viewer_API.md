@@ -1,6 +1,6 @@
 # Environment Setup
 
-In order be able to import from dna_viewer, the environment needs to be set up. This is done by adding this code to the
+In order to be able to import from dna_viewer, the environment needs to be set up. This is done by adding this code to the
 beginning of any example mentioned below:
 
 ```
@@ -44,7 +44,7 @@ dna_taro = DNA(DNA_PATH_TARO)
 
 This uses the following parameters:
 - `dna_path: str` - The path of the DNA file that should be used.
-- `layers: Optional[List[Layer]]` - List of parts of DNA to be loaded. If noting is passed, whole DNA is going to be loaded. Same as passing Layer.all.
+- `layers: Optional[List[Layer]]` - List of parts of DNA to be loaded. If nothing is passed, whole DNA is going to be loaded. Same as passing Layer.all.
 
 ## Build Meshes
 

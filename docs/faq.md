@@ -14,7 +14,7 @@ Your scene should work out of the box if you include the following in the distri
 - DNA (`.dna` file)
 - Workspace (`workspace.mel` file)
 
-All of these files need to be distributed together. If those files are not bundled and you experience some issues with you rig in Maya, 
+All of these files need to be distributed together. If those files are not bundled and you experience some issues with your rig in Maya, 
 try the following steps:
 
 ### How do I share the generated files?

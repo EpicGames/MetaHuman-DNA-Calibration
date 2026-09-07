@@ -157,7 +157,7 @@ class DNAAPI GeometryReader : public virtual DefinitionReader {
         */
         virtual ConstArrayView<float> getVertexNormalXs(std::uint16_t meshIndex) const = 0;
         /**
-            @brief List of all normal Y value for the referenced meshs.
+            @brief List of all normal Y values for the referenced mesh.
             @note
                 This is an advanced API for performance critical access, for more convenient usage see getVertexNormal.
             @param meshIndex
