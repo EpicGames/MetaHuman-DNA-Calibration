@@ -105,7 +105,7 @@ config = Config(
 )
 
 # Starts the mesh building process with the provided parameters
-# In this case it will create every mesh contained in LODs 0 and 1 with 'head` in it's name,
+# In this case it will create every mesh contained in LODs 0 and 1 with 'head` in its name,
 build_meshes(
     dna=dna_ada,
     config=config,

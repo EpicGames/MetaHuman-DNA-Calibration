@@ -27,7 +27,7 @@ from dna_viewer import DNA, RigConfig, build_rig
 # if you use Maya, use absolute path
 ROOT_DIR = f"{ospath.dirname(ospath.abspath(__file__))}/..".replace("\\", "/")
 
-# Sets the values that will used
+# Sets the values that will be used
 DNA_PATH_ADA = f"{ROOT_DIR}/data/dna_files/Ada.dna"
 dna_ada = DNA(DNA_PATH_ADA)
 
