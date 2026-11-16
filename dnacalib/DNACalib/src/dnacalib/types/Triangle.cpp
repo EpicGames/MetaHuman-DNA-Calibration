@@ -2,6 +2,8 @@
 
 #include "dnacalib/types/Triangle.h"
 
+#include <cmath>
+
 namespace dnac {
 
 Triangle::Triangle(const fvec2& a_, const fvec2& b, const fvec2& c) :
@@ -30,7 +32,14 @@ fvec2 Triangle::C() const {
     return v1 + a;
 }
 
+bool Triangle::isDegenerate() const {
+    return std::abs(denom) <= 1e-9f;
+}
+
 fvec3 Triangle::getBarycentricCoords(const fvec2& point) const {
+    if (isDegenerate()) {
+        return {-1.0f, -1.0f, -1.0f};
+    }
     // Real-Time Collision Detection The Morgan Kaufmann Series, chapter 3.4 Barycentric Coordinates
     const fvec2 v2 = point - a;
 

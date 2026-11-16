@@ -14,6 +14,7 @@
     #pragma warning(disable : 4365 4987)
 #endif
 #include <algorithm>
+#include <cmath>
 #include <cstddef>
 #include <cstdio>
 #include <iterator>
@@ -114,6 +115,19 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
                         if (sourceTriangleIndex != std::numeric_limits<std::uint32_t>::max()) {
                             barycentric = mapping.getTriangle(sourceTriangleIndex).getBarycentricCoords(uvs);
                             srcVtxIndices = mapping.getTrianglePositionIndices(sourceTriangleIndex);
+
+                            // Clamp negative barycentrics and normalize to project onto closest point on triangle
+                            barycentric[0] = std::max(barycentric[0], 0.0f);
+                            barycentric[1] = std::max(barycentric[1], 0.0f);
+                            barycentric[2] = std::max(barycentric[2], 0.0f);
+                            const float sum = barycentric[0] + barycentric[1] + barycentric[2];
+                            if (sum > 0.0f) {
+                                barycentric[0] /= sum;
+                                barycentric[1] /= sum;
+                                barycentric[2] /= sum;
+                            } else {
+                                barycentric = {1.0f / 3.0f, 1.0f / 3.0f, 1.0f / 3.0f};
+                            }
                         } else {
                             assert(false && "Could not map a vertex. It is not within a face of higher lod.");
                             continue;
@@ -123,6 +137,10 @@ class CalculateMeshLowerLODsCommand::Impl : public CommandImplBase<Impl> {
                         getSrcVertex(srcVtxIndices[0]) * barycentric[0] +
                         getSrcVertex(srcVtxIndices[1]) * barycentric[1] +
                         getSrcVertex(srcVtxIndices[2]) * barycentric[2];
+
+                    if (std::isnan(src[0]) || std::isnan(src[1]) || std::isnan(src[2])) {
+                        continue;
+                    }
 
                     const uint32_t positionIndex = vertexLayoutPositionIndices[vli];
                     float& destX = destVertexPositions.xs[positionIndex];

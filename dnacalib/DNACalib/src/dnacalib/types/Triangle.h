@@ -15,6 +15,7 @@ class Triangle {
         explicit Triangle(const std::array<fvec2, 3>& vertices);
 
         fvec3 getBarycentricCoords(const fvec2& point) const;
+        bool isDegenerate() const;
 
         fvec2 A() const;
         fvec2 B() const;
