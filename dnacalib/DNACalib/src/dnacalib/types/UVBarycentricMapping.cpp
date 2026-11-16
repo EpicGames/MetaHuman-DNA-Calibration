@@ -2,6 +2,9 @@
 
 #include "dnacalib/types/UVBarycentricMapping.h"
 
+#include <algorithm>
+#include <cmath>
+
 namespace dnac {
 
 UVBarycentricMapping::UVBarycentricMapping(const std::function<ConstArrayView<std::uint32_t>(std::uint32_t)>& faceGetter,
@@ -39,7 +42,11 @@ UVBarycentricMapping::UVBarycentricMapping(const std::function<ConstArrayView<st
                         const std::array<fvec2, 3> UVs = {fvec2{Us[uvIndex0], Vs[uvIndex0]},
                                                           fvec2{Us[uvIndex1], Vs[uvIndex1]},
                                                           fvec2{Us[uvIndex2], Vs[uvIndex2]}};
-                        triangles.emplace_back(UVs);
+                        const Triangle tri{UVs};
+                        if (tri.isDegenerate()) {
+                            continue;
+                        }
+                        triangles.emplace_back(tri);
                         boundingBoxes.emplace_back(UVs);
                         trianglePositionIndices.emplace_back(positionIndices);
                     }
@@ -53,16 +60,33 @@ UVBarycentricMapping::UVBarycentricMapping(const std::function<ConstArrayView<st
 }
 
 UVBarycentricMapping::BarycentricPositionIndicesPair UVBarycentricMapping::getBarycentric(fvec2 uv) const {
-    const auto isPointInsideTriangle = [](const fvec3& barycentricPoint) {
-            return barycentricPoint[0] > 0.0f && barycentricPoint[1] > 0.0f && barycentricPoint[2] > 0.0f;
+    constexpr float epsilon = 1e-5f;
+    const auto isPointInsideTriangle = [epsilon](const fvec3& barycentricPoint) {
+            return !std::isnan(barycentricPoint[0]) &&
+                   !std::isnan(barycentricPoint[1]) &&
+                   !std::isnan(barycentricPoint[2]) &&
+                   barycentricPoint[0] >= -epsilon &&
+                   barycentricPoint[1] >= -epsilon &&
+                   barycentricPoint[2] >= -epsilon;
         };
     for (std::uint32_t i = 0; i < triangles.size(); i++) {
         const auto& triangle = triangles[i];
-        // we check if point is inside triangle (all barycentric coordinates are positive)
+        // we check if point is inside triangle (all barycentric coordinates are positive within tolerance)
         if (boundingBoxes[i].contains(uv)) {
             const auto barycentricPoint = triangle.getBarycentricCoords(uv);
             if (isPointInsideTriangle(barycentricPoint)) {
-                return BarycentricPositionIndicesPair{barycentricPoint,
+                fvec3 normalizedBarycentric{
+                    std::max(barycentricPoint[0], 0.0f),
+                    std::max(barycentricPoint[1], 0.0f),
+                    std::max(barycentricPoint[2], 0.0f)
+                };
+                const float sum = normalizedBarycentric[0] + normalizedBarycentric[1] + normalizedBarycentric[2];
+                if (sum > 0.0f) {
+                    normalizedBarycentric[0] /= sum;
+                    normalizedBarycentric[1] /= sum;
+                    normalizedBarycentric[2] /= sum;
+                }
+                return BarycentricPositionIndicesPair{normalizedBarycentric,
                                                       ConstArrayView<std::uint32_t>{trianglePositionIndices[i]}};
             }
         }

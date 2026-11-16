@@ -24,7 +24,7 @@ class BoundingBox {
                      std::is_same<unqualified_iter_value_type<TIter>, fvec2>::value, void>::type* = nullptr>
         BoundingBox(TIter begin, TIter end, float alpha)  :
             min{std::numeric_limits<float>::max(), std::numeric_limits<float>::max()},
-            max{std::numeric_limits<float>::min(), std::numeric_limits<float>::min()} {
+            max{std::numeric_limits<float>::lowest(), std::numeric_limits<float>::lowest()} {
 
             for (auto it = begin; it < end; it++) {
                 const auto& vertex = *it;
